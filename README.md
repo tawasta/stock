@@ -1,9 +1,9 @@
 Warehouse management
-================
+====================
 
 [//]: # (addons)
 
-Available addons
+Unported addons
 ----------------
 **Addon** | **Summary**
 --- | ---
