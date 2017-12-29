@@ -20,13 +20,16 @@ class StockInventory(models.Model):
     _inherit = 'stock.inventory'
 
     # 2. Fields declaration
+
+    # Get current user with browse instead of just self.env.uid: https://github.com/odoo/odoo/issues/4384
     user_id = fields.Many2one('res.users', 'Responsible',
-        default=lambda self: self.env.uid,
+        default=lambda self: self.env['res.users'].browse(self.env.uid),
         readonly=True,
         states={'draft': [('readonly', False)], 'confirm': [('readonly', False)] },
         domain=[('share', '=', False)])
 
     # 3. Default methods
+
 
     # 4. Compute and search fields, in the same order that fields declaration
 
