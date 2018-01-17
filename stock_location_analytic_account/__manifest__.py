@@ -20,8 +20,8 @@
 ##############################################################################
 
 {
-    'name': 'Project - Stock location integration',
-    'summary': 'Integrate stock location with project',
+    'name': 'Analytic account - Stock location relation',
+    'summary': 'Integrate stock location with analytic account',
     'version': '10.0.1.2.0',
     'category': 'Inventory',
     'website': 'http://www.tawasta.fi',

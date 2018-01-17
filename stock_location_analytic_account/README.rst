@@ -2,12 +2,12 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-====================================
-Project - Stock location integration
-====================================
+==========================================
+Analytic account - Stock location relation
+==========================================
 
-Integrate stock location with project.
-Autogenerates a stock location when creating a project.
+Integrate stock location with analytic account.
+Autogenerates a stock location when creating an analytic account.
 
 Configuration
 =============
