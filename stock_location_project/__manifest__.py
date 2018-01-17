@@ -22,7 +22,7 @@
 {
     'name': 'Project - Stock location integration',
     'summary': 'Integrate stock location with project',
-    'version': '10.0.1.1.0',
+    'version': '10.0.1.2.0',
     'category': 'Inventory',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -38,6 +38,7 @@
         'stock',
     ],
     'data': [
+        'views/analytic_account.xml',
         'views/project_project.xml',
         'views/stock_location.xml',
     ],
