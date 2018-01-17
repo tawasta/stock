@@ -6,8 +6,8 @@ class StockLocation(models.Model):
 
     _inherit = 'stock.location'
 
-    project_id = fields.Many2one(
-        comodel_name='project.project',
-        string='Project',
-        help='Belongs to a project'
+    analytic_account_id = fields.Many2one(
+        comodel_name='account.analytic.account',
+        string='Analytic account',
+        help='Belongs to an analytic account'
     )

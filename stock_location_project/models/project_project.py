@@ -6,12 +6,6 @@ class ProjectProject(models.Model):
 
     _inherit = 'project.project'
 
-    location_ids = fields.One2many(
-        comodel_name='stock.location',
-        inverse_name='project_id',
-        string='Inventory locations',
-    )
-
     @api.model
     def create(self, values):
         if 'location_ids' not in values or not values['location_ids']:
