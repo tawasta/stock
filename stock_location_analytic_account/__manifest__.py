@@ -22,7 +22,7 @@
 {
     'name': 'Analytic account - Stock location relation',
     'summary': 'Integrate stock location with analytic account',
-    'version': '10.0.1.2.1',
+    'version': '10.0.1.2.2',
     'category': 'Inventory',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

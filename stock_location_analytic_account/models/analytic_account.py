@@ -26,7 +26,7 @@ class AnalyticAccount(models.Model):
             location_values = {
                 'name': values['name'],
                 'usage': 'internal',
-                'location_id': warehouse.view_location_id.id,
+                'location_id': warehouse.lot_stock_id.id,
             }
 
             # Create a new location
