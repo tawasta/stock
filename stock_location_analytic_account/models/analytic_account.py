@@ -44,9 +44,7 @@ class AnalyticAccount(models.Model):
     @api.depends('location_ids')
     def _default_get_default_location(self):
         for record in self:
-            print record
             if record.location_ids and not record.default_location_id:
-                print record.location_ids
                 record.default_location_id = record.location_ids[0]
 
     @api.constrains('default_location_id')
