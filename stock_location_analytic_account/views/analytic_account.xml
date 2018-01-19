@@ -9,6 +9,8 @@
 
 			<field name="tag_ids" position="after">
 				<field name="location_ids" widget="many2many_tags"/>
+				<field name="default_location_id"
+					   attrs="{'required': [('location_ids', '!=', [])]}" />
 			</field>
 
 		</field>

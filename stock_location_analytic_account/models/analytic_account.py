@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-from odoo import models, fields, api
+from odoo import models, fields, api, _
+from odoo import exceptions
 
 
 class AnalyticAccount(models.Model):
@@ -10,6 +11,11 @@ class AnalyticAccount(models.Model):
         comodel_name='stock.location',
         inverse_name='analytic_account_id',
         string='Inventory locations',
+    )
+    default_location_id = fields.Many2one(
+        comodel_name='stock.location',
+        string='Default location',
+        default=lambda self: self._default_get_default_location(),
     )
 
     @api.model
@@ -33,3 +39,18 @@ class AnalyticAccount(models.Model):
             values['location_ids'] = [(0, False, location_values)]
 
         return super(AnalyticAccount, self).create(values)
+
+    @api.onchange('location_ids')
+    @api.depends('location_ids')
+    def _default_get_default_location(self):
+        for record in self:
+            print record
+            if record.location_ids and not record.default_location_id:
+                print record.location_ids
+                record.default_location_id = record.location_ids[0]
+
+    @api.constrains('default_location_id')
+    def _validate_default_location_id(self):
+        if self.default_location_id not in self.location_ids:
+            msg = _('Please use a location in the inventory locations.')
+            raise exceptions.ValidationError(msg)
