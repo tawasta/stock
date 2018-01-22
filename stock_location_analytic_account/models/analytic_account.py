@@ -34,9 +34,11 @@ class AnalyticAccount(models.Model):
                 'usage': 'internal',
                 'location_id': warehouse.lot_stock_id.id,
             }
+            location = self.env['stock.location'].create(location_values)
 
             # Create a new location
-            values['location_ids'] = [(0, False, location_values)]
+            values['default_location_id'] = location.id
+            values['location_ids'] = [(6, False, [location.id])]
 
         return super(AnalyticAccount, self).create(values)
 
@@ -49,6 +51,7 @@ class AnalyticAccount(models.Model):
 
     @api.constrains('default_location_id')
     def _validate_default_location_id(self):
-        if self.default_location_id not in self.location_ids:
+        if self.location_ids and \
+                        self.default_location_id not in self.location_ids:
             msg = _('Please use a location in the inventory locations.')
             raise exceptions.ValidationError(msg)
