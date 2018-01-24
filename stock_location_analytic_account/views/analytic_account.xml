@@ -7,8 +7,10 @@
 		<field name="inherit_id" ref="analytic.view_account_analytic_account_form" />
 		<field name="arch" type="xml">
 
-			<field name="tag_ids">
+			<field name="tag_ids" position="after">
 				<field name="location_ids" widget="many2many_tags"/>
+				<field name="default_location_id"
+					   attrs="{'required': [('location_ids', '!=', [])]}" />
 			</field>
 
 		</field>
