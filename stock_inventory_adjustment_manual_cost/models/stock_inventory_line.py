@@ -11,15 +11,7 @@ class StockInventoryLine(models.Model):
         help='Technical field used to set the product quant cost',
         # The digits-attribute is not provided,
         # as the stock.move price_unit won't have it either
-        default=lambda self: self._get_default_price_unit(),
     )
-
-    def _get_default_price_unit(self):
-        price_unit = 0
-        if self.product_id:
-            price_unit = self.product_id.standard_price
-
-        return price_unit
 
     @api.onchange('product_id')
     @api.depends('product_id')
@@ -30,6 +22,18 @@ class StockInventoryLine(models.Model):
 
     def _generate_moves(self):
         return super(StockInventoryLine, self)._generate_moves()
+
+    @api.model
+    def create(self, vals):
+        # Set the product price
+        if vals.get('product_id', False):
+            product = self.env['product.product'].search([
+                ('id', '=', vals.get('product_id'))
+            ])
+
+            vals['price_unit'] = product.standard_price
+
+        return super(StockInventoryLine, self).create(vals)
 
     def _get_move_values(self, qty, location_id, location_dest_id):
         # Add manual cost price to lines
