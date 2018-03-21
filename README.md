@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Tawasta/stock.svg?branch=10.0)](https://travis-ci.org/Tawasta/stock)
+
 Warehouse management
 ================
 
