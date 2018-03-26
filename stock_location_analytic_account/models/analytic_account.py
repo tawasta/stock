@@ -23,7 +23,6 @@ class AnalyticAccount(models.Model):
         if 'location_ids' not in values or not values['location_ids']:
             # Auto-generate a stock location
             warehouse_model = self.env['stock.warehouse']
-            stock_location_model = self.env['stock.location']
 
             # Get the first warehouse
             # TODO: allow selecting the default warehouse
@@ -51,7 +50,7 @@ class AnalyticAccount(models.Model):
 
     @api.constrains('default_location_id')
     def _validate_default_location_id(self):
-        if self.location_ids and \
-                        self.default_location_id not in self.location_ids:
+        if self.location_ids \
+                and self.default_location_id not in self.location_ids:
             msg = _('Please use a location in the inventory locations.')
             raise exceptions.ValidationError(msg)
