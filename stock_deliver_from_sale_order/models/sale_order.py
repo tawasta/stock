@@ -18,8 +18,8 @@ class SaleOrder(models.Model):
             [x for x in self.picking_ids if x.state not in ['cancel', 'done']]
 
         if len(incomplete_pickings) == 0:
-            msg = _('{} does not have a pending delivery order, '
-                    'please deliver the sale order manually.'.format(self.name))
+            msg = _('{} does not have a pending delivery order, please '
+                    'deliver the sale order manually.'.format(self.name))
             raise exceptions.ValidationError(msg)
 
         elif len(incomplete_pickings) > 1:
