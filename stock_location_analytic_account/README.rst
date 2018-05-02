@@ -19,7 +19,7 @@ Usage
 
 Known issues / Roadmap
 ======================
-- Does not allow selecting default location for project
+\-
 
 Credits
 =======
