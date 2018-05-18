@@ -26,12 +26,15 @@ class AnalyticAccount(models.Model):
 
             # Get the first warehouse
             # TODO: allow selecting the default warehouse
-            warehouse = warehouse_model.search([], limit=1)
+            warehouse = warehouse_model.search([
+                ('company_id', '=', values.get('company_id', False)),
+            ], limit=1)
 
             location_values = {
                 'name': values['name'],
                 'usage': 'internal',
                 'location_id': warehouse.lot_stock_id.id,
+                'company_id': warehouse.company_id.id,
             }
             location = self.env['stock.location'].create(location_values)
 
