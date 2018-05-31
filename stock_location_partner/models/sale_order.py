@@ -28,6 +28,9 @@ class SaleOrder(models.Model):
             }
 
             customer_location = StockLocation.create(location_values)
-            self.partner_id.property_stock_customer = customer_location
+
+            # Don't overwrite a custom location
+            if self.partner_id.property_stock_customer == default_location:
+                self.partner_id.property_stock_customer = customer_location
 
         return super(SaleOrder, self).action_confirm()
