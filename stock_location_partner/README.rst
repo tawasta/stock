@@ -6,7 +6,7 @@
 Partner - Stock location automation
 ===================================
 
-Auto-generates a stock location for partner when confirming a sale,
+Auto-generates a stock location for shipping partner when confirming a sale,
 if that partner hasn't got one yet.
 
 Configuration
