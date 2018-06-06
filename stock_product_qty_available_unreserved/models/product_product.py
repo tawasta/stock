@@ -14,9 +14,8 @@ class ProductProduct(models.Model):
         digits=dp.get_precision('Product Unit of Measure'))
 
     def _compute_quantities(self):
-        res = super(ProductProduct, self)._compute_quantities()
+        super(ProductProduct, self)._compute_quantities()
 
         for product in self:
             unreserved = product.qty_available - product.outgoing_qty
             product.qty_available_unreserved = unreserved
-
