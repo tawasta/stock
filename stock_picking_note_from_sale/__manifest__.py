@@ -20,8 +20,8 @@
 ##############################################################################
 
 {
-    'name': 'Add sale order note as created picking note',
-    'summary': 'Add sale order note as created picking note',
+    'name': 'Add sale order note as created picking order note',
+    'summary': 'Add sale order note as created picking order note',
     'version': '10.0.1.0.0',
     'category': 'Inventory',
     'website': 'http://www.tawasta.fi',
