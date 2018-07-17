@@ -11,6 +11,7 @@ class AnalyticAccount(models.Model):
         comodel_name='stock.location',
         inverse_name='analytic_account_id',
         string='Inventory locations',
+        domain=[('usage', 'not in', ['view'])],
     )
     default_location_id = fields.Many2one(
         comodel_name='stock.location',
