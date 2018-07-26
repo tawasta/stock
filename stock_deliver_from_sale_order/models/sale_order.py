@@ -45,9 +45,9 @@ class SaleOrder(models.Model):
                 # stock.backorder.confirmation wizard in
                 # do_new_transfer() instead
                 raise exceptions.except_orm(
-                    'Error',
-                    'Immediate transfer not possible, '
-                    'please deliver the sale order manually')
+                    _('Error'),
+                    _('Immediate transfer not possible, '
+                      'please deliver the sale order manually'))
             else:
                 self.env['stock.immediate.transfer'].browse(
                     res['res_id']
