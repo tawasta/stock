@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
-	<record id="edit_project" model="ir.ui.view">
-		<field name="name">edit.project.stock.location</field>
-		<field name="model">project.project</field>
-		<field name="inherit_id" ref="project.edit_project" />
-		<field name="arch" type="xml">
+    <record id="edit_project" model="ir.ui.view">
+        <field name="name">edit.project.stock.location</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
 
-			<group name="misc" position="before">
+            <group name="misc" position="before">
                 <group string="Inventory" name="inventory">
                     <field name="location_ids" widget="many2many_tags"/>
-					<field name="default_location_id"
-						   attrs="{'required': [('location_ids', '!=', [])]}" />
+                    <field name="default_location_id"
+                           attrs="{'required': [('location_ids', '!=', [])]}"/>
                 </group>
-			</group>
+            </group>
 
-		</field>
-	</record>
+        </field>
+    </record>
 
 </odoo>
