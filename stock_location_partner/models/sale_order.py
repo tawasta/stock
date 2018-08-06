@@ -15,6 +15,7 @@ class SaleOrder(models.Model):
         customer_location = StockLocation.search([
             ('partner_id', '=', self.partner_shipping_id.id),
             ('company_id', '=', self.company_id.id),
+            ('usage', '=', 'customer'),
         ], limit=1)
 
         if not customer_location:
