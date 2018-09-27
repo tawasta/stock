@@ -8,9 +8,13 @@
             <field name="date" position="after">
                 <field name="min_date"/>
             </field>
-            <xpath expr="//t[contains(@t-esc,'record.date.value')]" position="replace">
-                <span><strong>Date:</strong> <t t-esc="record.date.value and record.date.value.split(' ')[0] or False"/></span><br/>
-                <span><strong>Scheduled:</strong> <t t-esc="record.min_date.value and record.min_date.value.split(' ')[0] or False"/></span>
+            <xpath expr="//t[contains(@t-esc,'record.date.value')]/.." position="before">
+                <span class="pull-right text-right"><strong>Date:</strong></span><br/>
+            </xpath>
+            <xpath expr="//t[contains(@t-esc,'record.date.value')]/.." position="after">
+                <br/>
+                <span class="pull-right text-right"><strong>Scheduled:</strong></span><br/>
+                <span class="pull-right text-right"><t t-esc="record.min_date.value"/></span>
             </xpath>
         </field>
     </record>
