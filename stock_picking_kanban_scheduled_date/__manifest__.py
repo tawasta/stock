@@ -22,7 +22,7 @@
 {
     'name': 'Scheduled date in stock picking kanban view',
     'summary': 'Show scheduled date in picking kanban',
-    'version': '10.0.1.0.0',
+    'version': '10.0.1.0.1',
     'category': 'Inventory',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
