@@ -7,6 +7,7 @@ Scheduled date in stock picking kanban view
 ===========================================
 
 * Show scheduled date in the stock picking kanban
+* Sort kanban by scheduled date in descending order
 
 Configuration
 =============
