@@ -1,0 +1,44 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* stock_picking_weight
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-02 08:49+0000\n"
+"PO-Revision-Date: 2018-10-02 08:49+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_picking_weight
+#: model:ir.model,name:stock_picking_weight.model_stock_pack_operation
+msgid "Packing Operation"
+msgstr "Pakkaustoiminnot"
+
+#. module: stock_picking_weight
+#: code:addons/stock_picking_weight/models/stock_picking.py:27
+#: model:ir.model.fields,help:stock_picking_weight.field_stock_picking_weight_pack_operations
+#, python-format
+msgid "Total weight for \"To Do\" operations"
+msgstr "\"Tehtävät\" sarakkeen kokonaispaino"
+
+#. module: stock_picking_weight
+#: model:ir.model,name:stock_picking_weight.model_stock_picking
+msgid "Transfer"
+msgstr "Siirto"
+
+#. module: stock_picking_weight
+#: model:ir.model.fields,field_description:stock_picking_weight.field_stock_pack_operation_weight
+#: model:ir.model.fields,field_description:stock_picking_weight.field_stock_picking_weight_pack_operations
+msgid "Weight"
+msgstr "Paino"
+
+#. module: stock_picking_weight
+#: model:ir.ui.view,arch_db:stock_picking_weight.view_picking_form
+msgid "kg"
+msgstr "kg"
