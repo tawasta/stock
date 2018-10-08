@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import models, api
+from odoo import models, api, _
 
 
 class StockReturnPicking(models.TransientModel):
@@ -27,7 +27,14 @@ class StockReturnPicking(models.TransientModel):
                     # Create a new sale order
                     sale_order = SaleOrder.create(dict(
                         partner_id=picking_id.sale_id.partner_id.id,
+                        origin=picking_id.name,
                     ))
+
+                    msg = _("Created a sale order '%s'") % sale_order.name
+                    picking_id.message_post(msg)
+
+                    msg = _("Created from picking '%s'") % picking_id.name
+                    sale_order.message_post(msg)
 
                 for move in refund_moves:
                     SaleOrderLine.create(dict(
