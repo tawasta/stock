@@ -37,10 +37,22 @@ class StockReturnPicking(models.TransientModel):
                     sale_order.message_post(msg)
 
                 for move in refund_moves:
-                    SaleOrderLine.create(dict(
+                    line_values = dict(
                         order_id=sale_order.id,
                         product_id=move.product_id.id,
                         product_uom_qty=-move.quantity,
-                    ))
+                    )
+
+                    try:
+                        # Try to use the actual price, id we can access it
+                        price_unit = \
+                            move.move_id.procurement_id.sale_line_id.price_unit
+                        line_values['price_unit'] = price_unit
+                    except:
+                        # Couldn't find the corresponding line.
+                        # Use the default sale price
+                        pass
+
+                    SaleOrderLine.create(line_values)
 
         return res
