@@ -37,7 +37,7 @@ class StockPackOperation(models.Model):
                 record.product_uom_id,
             )
 
-            weight = record.product_qty * uom_weight
+            weight = abs(record.product_qty) * uom_weight
 
             record.weight = weight
 
