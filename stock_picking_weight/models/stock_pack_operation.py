@@ -37,7 +37,11 @@ class StockPackOperation(models.Model):
                 record.product_uom_id,
             )
 
-            weight = abs(record.product_qty) * uom_weight
+            # Negative quantity doesn't have a weight
+            uom_qty = record.product_uom_qty \
+                if record.product_uom_qty > 0 else 0
+
+            weight = uom_qty * uom_weight
 
             record.weight = weight
 
