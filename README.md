@@ -14,6 +14,7 @@ addon | version | summary
 [stock_deliver_from_sale_order](stock_deliver_from_sale_order/) | 10.0.1.0.1 | Quick Confirm & deliver from SO draft
 [stock_disable_invoice_shipping_on_delivery](stock_disable_invoice_shipping_on_delivery/) | 10.0.1.0.0 | Disable picking auto-generated delivery SO lines
 [stock_inventory_adjustment_manual_cost](stock_inventory_adjustment_manual_cost/) | 10.0.1.0.1 | Allow modifying inventory adjustment line costs manually
+[stock_inventory_details_manager_access](stock_inventory_details_manager_access/) | 10.0.1.0.0 | Inventory Managers can see the inventory details button
 [stock_location_analytic_account](stock_location_analytic_account/) | 10.0.1.4.1 | Integrate stock location with analytic account
 [stock_location_analytic_account_tags](stock_location_analytic_account_tags/) | 10.0.1.0.0 | Show AA tags on stock location form
 [stock_location_partner](stock_location_partner/) | 10.0.1.0.3 | Auto-create stock locations for partners
