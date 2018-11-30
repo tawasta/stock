@@ -27,7 +27,7 @@ addon | version | summary
 [stock_picking_note_from_sale](stock_picking_note_from_sale/) | 10.0.1.0.0 | Add sale order note as created picking order note
 [stock_picking_pack_operation_smartbutton](stock_picking_pack_operation_smartbutton/) | 10.0.1.0.0 | Adds a new button for listing picking's pack operations
 [stock_picking_return_create_sale](stock_picking_return_create_sale/) | 10.0.1.2.0 | When returning an invoiced picking, create a new sale order
-[stock_picking_show_source_destination](stock_picking_show_source_destination/) | 10.0.1.1.0 | Always show source and destination in stock pickings
+[stock_picking_show_source_destination](stock_picking_show_source_destination/) | 10.0.1.2.0 | Always show source and destination in stock pickings
 [stock_picking_weight](stock_picking_weight/) | 10.0.1.1.1 | Add weight on stock picking and operations
 [stock_product_qty_available_unreserved](stock_product_qty_available_unreserved/) | 10.0.1.0.0 | Add unreserved available (on hand - reserved)
 [stock_quant_parent_location](stock_quant_parent_location/) | 10.0.1.0.0 | New field for showing the parent of a quant's location
