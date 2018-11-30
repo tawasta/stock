@@ -8,10 +8,12 @@
 
             <field name="location_id" position="attributes">
                 <attribute name="attrs"></attribute>
+                <attribute name="domain">[('usage','!=','view')]</attribute>
             </field>
 
             <field name="location_dest_id" position="attributes">
                 <attribute name="attrs"></attribute>
+                <attribute name="domain">[('usage','!=','view')]</attribute>
             </field>
 
         </field>
