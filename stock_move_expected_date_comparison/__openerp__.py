@@ -22,7 +22,7 @@
 {
     'name': 'Stock Move Expected Date Comparison',
     'summary': 'Lists current and original expected date for moves',
-    'version': '8.0.1.0.0',
+    'version': '8.0.1.1.0',
     'category': 'Warehouse',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

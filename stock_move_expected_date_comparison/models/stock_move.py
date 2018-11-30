@@ -11,7 +11,8 @@ class StockMove(models.Model):
     @api.depends('date_expected')
     def _compute_date_expected_postponed(self):
         for move in self:
-            if move.date_expected > move.date_expected_original:
+            if move.date_expected_original \
+                    and move.date_expected > move.date_expected_original:
                 move.date_expected_postponed = True
             else:
                 move.date_expected_postponed = False
@@ -25,7 +26,8 @@ class StockMove(models.Model):
     date_expected_postponed = fields.Boolean(
         string='Date Expected Postponed',
         compute=_compute_date_expected_postponed,
-        store=True
+        store=True,
+        default=False,
     )
 
     date_expected_original = fields.Datetime(
