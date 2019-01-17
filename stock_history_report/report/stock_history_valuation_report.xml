@@ -79,7 +79,7 @@
                                 <td><span t-field="doc.product_id"/></td>
                                 <td><span t-field="doc.location_id"/></td>
                                 <td><span t-esc="row_qty"/></td>
-                                <td><span t-esc="row_value"/> <t t-esc="currency" /></td>
+                                <td><t t-if="row_qty != 0"><span t-esc="row_value"/> <t t-esc="currency" /></t><t t-else="">-</t></td>
                             </tr>
 
                             <!-- New product or location, reset row value-->
