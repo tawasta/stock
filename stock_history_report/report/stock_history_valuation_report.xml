@@ -42,12 +42,13 @@
                         <tr>
                             <th>Product</th>
                             <th>Location</th>
-                            <th>Quantity</th>
-                            <th>Inventory value</th>
+                            <th style="text-align: right;">Quantity</th>
+                            <th style="text-align: right;">Inventory value</th>
                         </tr>
                     </thead>
 
                     <tbody>
+                        <t t-set="total_value" t-value="0" />
                         <t t-set="row_qty" t-value="0" />
                         <t t-set="row_value" t-value="0" />
 
@@ -71,6 +72,7 @@
                             <t t-set="print_row" t-value="print_product or print_location" />
 
                             <!-- Increment row values -->
+                            <t t-set="total_value" t-value="total_value + doc.inventory_value" />
                             <t t-set="row_value" t-value="row_value + doc.inventory_value" />
                             <t t-set="row_qty" t-value="row_qty + doc.quantity" />
 
@@ -78,14 +80,24 @@
                             <tr t-if="print_row">
                                 <td><span t-field="doc.product_id"/> <t t-esc="doc.product_id."</td>
                                 <td><span t-field="doc.location_id"/></td>
-                                <td><span t-esc="row_qty"/></td>
-                                <td><span t-esc="row_value"/> <t t-esc="currency" /></td>
+                                <td style="text-align: right;"><span t-esc="row_qty"/></td>
+                                <td style="text-align: right;"><t t-if="row_qty != 0"><span t-esc="row_value"/> <t t-esc="currency" /></t><t t-else="">-</t></td>
                             </tr>
 
                             <!-- New product or location, reset row value-->
                             <t t-if="print_row" t-set="row_value" t-value="0" />
                             <t t-if="print_row" t-set="row_qty" t-value="0" />
                         </t>
+
+                        <!-- Show total value -->
+                        <tr>
+                            <tr>
+                                <th>Total</th>
+                                <th />
+                                <th />
+                                <th style="text-align: right;"><strong><t t-esc="total_value" /></strong></th>
+                            </tr>
+                        </tr>
                     </tbody>
                 </table>
 
