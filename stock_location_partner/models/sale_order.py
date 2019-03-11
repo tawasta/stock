@@ -29,7 +29,7 @@ class SaleOrder(models.Model):
                 'partner_id': self.partner_shipping_id.id,
             }
 
-            customer_location = StockLocation.create(location_values)
+            customer_location = StockLocation.sudo().create(location_values)
 
             # Don't overwrite a custom location
             if self.partner_shipping_id.property_stock_customer \
