@@ -18,16 +18,19 @@ addon | version | summary
 [stock_inventory_details_manager_access](stock_inventory_details_manager_access/) | 10.0.1.0.0 | Inventory Managers can see the inventory details button
 [stock_location_analytic_account](stock_location_analytic_account/) | 10.0.1.4.1 | Integrate stock location with analytic account
 [stock_location_analytic_account_tags](stock_location_analytic_account_tags/) | 10.0.1.0.0 | Show AA tags on stock location form
-[stock_location_partner](stock_location_partner/) | 10.0.1.0.3 | Auto-create stock locations for partners
+[stock_location_partner](stock_location_partner/) | 10.0.1.0.4 | Auto-create stock locations for partners
 [stock_location_route_warning](stock_location_route_warning/) | 10.0.1.1.0 | Allow using warnings on stock routes
 [stock_orderpoint_calculation_for_managers](stock_orderpoint_calculation_for_managers/) | 10.0.1.0.0 | Stock Managers see the 'Run reordering rules' menuitem
 [stock_pack_operation_running_number](stock_pack_operation_running_number/) | 10.0.1.0.0 | Simple running number for pack operations
 [stock_picking_carrier_in_tree](stock_picking_carrier_in_tree/) | 10.0.1.0.0 | Add carrier to stock picking tree view
 [stock_picking_editable_done_date](stock_picking_editable_done_date/) | 10.0.1.0.0 | Show the date when transfer was done and make it editable
 [stock_picking_kanban_scheduled_date](stock_picking_kanban_scheduled_date/) | 10.0.1.2.0 | Show scheduled date in picking kanban
+[stock_picking_no_operation_grouping](stock_picking_no_operation_grouping/) | 10.0.1.0.0 | Never group demand rows for same products
 [stock_picking_note_from_sale](stock_picking_note_from_sale/) | 10.0.1.0.0 | Add sale order note as created picking order note
 [stock_picking_pack_operation_smartbutton](stock_picking_pack_operation_smartbutton/) | 10.0.1.0.0 | Adds a new button for listing picking's pack operations
+[stock_picking_references_to_invoice_comment](stock_picking_references_to_invoice_comment/) | 10.0.1.0.0 | Add picking references to invoice comment
 [stock_picking_return_create_sale](stock_picking_return_create_sale/) | 10.0.1.2.0 | When returning an invoiced picking, create a new sale order
+[stock_picking_serials_to_invoice_lines](stock_picking_serials_to_invoice_lines/) | 10.0.1.0.0 | Stock picking serials to invoice lines
 [stock_picking_show_source_destination](stock_picking_show_source_destination/) | 10.0.1.2.0 | Always show source and destination in stock pickings
 [stock_picking_weight](stock_picking_weight/) | 10.0.1.1.1 | Add weight on stock picking and operations
 [stock_product_qty_available_unreserved](stock_product_qty_available_unreserved/) | 10.0.1.0.0 | Add unreserved available (on hand - reserved)
