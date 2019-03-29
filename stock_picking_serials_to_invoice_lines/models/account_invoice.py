@@ -18,12 +18,14 @@ class AccountInvoice(models.Model):
     def _add_picking_serials_to_line_name(self):
         self.ensure_one()
 
-        for line in self.invoice_line_ids:
-            description = line.name or ''
-            description += "\n" + _("Delivered lots: ")
+        if self.invoice_line_ids:
+            description = self.comment or ''
+            description += "\n" + _("Delivered serials/lots: ")
 
+        for line in self.invoice_line_ids:
             for move in line.move_line_ids:
                 for quant in move.quant_ids:
-                    description += "\n%s" % quant.lot_id.name
+                    if quant.lot_id:
+                        description += "\n%s" % quant.lot_id.name
 
-            line.name = description
+        self.comment = description

@@ -22,7 +22,7 @@
 {
     'name': 'Stock picking serials to invoice lines',
     'summary': 'Stock picking serials to invoice lines',
-    'version': '10.0.1.0.0',
+    'version': '10.0.1.1.0',
     'category': 'Inventory',
     'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
