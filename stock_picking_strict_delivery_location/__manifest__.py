@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
+#    Copyright 2019 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -20,11 +20,11 @@
 ##############################################################################
 
 {
-    'name': 'Partner - Stock location automation',
-    'summary': 'Auto-create stock locations for partners',
-    'version': '10.0.1.1.0',
+    'name': 'Strict picking delivery location',
+    'summary': 'Only allow selecting customers locations for delivery',
+    'version': '10.0.1.0.0',
     'category': 'Inventory',
-    'website': 'http://www.tawasta.fi',
+    'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
     'application': False,
@@ -34,7 +34,7 @@
         'bin': [],
     },
     'depends': [
-        'sale',
+        'base_view_inheritance_extension',
         'stock',
     ],
     'data': [
