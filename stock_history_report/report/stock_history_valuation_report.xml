@@ -52,7 +52,7 @@
                         <t t-set="row_qty" t-value="0" />
                         <t t-set="row_value" t-value="0" />
 
-                        <t t-set="docs_sorted" t-value="docs.sorted(key=lambda r: (r.product_id.name, r.location_id.name, r.date))" />
+                        <t t-set="docs_sorted" t-value="docs.sorted(key=lambda r: (r.product_id.default_code, r.location_id.id, r.date))" />
 
                         <t t-foreach="docs_sorted" t-as="doc">
 

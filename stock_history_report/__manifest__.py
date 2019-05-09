@@ -22,7 +22,7 @@
 {
     'name': 'Stock valuation history report',
     'summary': 'A QWeb report from stock history values (inventory valuation)',
-    'version': '10.0.1.1.0',
+    'version': '10.0.1.1.1',
     'category': 'Inventory',
     'website': 'http://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
