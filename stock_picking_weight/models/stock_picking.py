@@ -23,7 +23,7 @@ class StockPicking(models.Model):
     weight_pack_operations = fields.Float(
         'Weight', digits=dp.get_precision('Weight'),
         compute='_compute_weight',
-        help=_('Total weight for "To Do" operations')
+        help='Total weight for "To Do" operations'
     )
 
     # 3. Default methods
