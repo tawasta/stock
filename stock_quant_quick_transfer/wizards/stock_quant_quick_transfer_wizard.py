@@ -94,7 +94,6 @@ class StockQuantQuickTransferWizard(models.TransientModel):
 
         picking.do_new_transfer()
 
-
         # Refresh the original view
         return {
             'type': 'ir.actions.client',
