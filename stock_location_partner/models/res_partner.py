@@ -43,7 +43,6 @@ class ResPartner(models.Model):
                 'company_id': self.company_id.id,
                 'partner_id': self.id,
             }
-            print(location_values)
 
             customer_location = StockLocation.sudo().create(location_values)
 
