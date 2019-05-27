@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from collections import namedtuple
 from odoo import models, _
 from odoo.exceptions import UserError

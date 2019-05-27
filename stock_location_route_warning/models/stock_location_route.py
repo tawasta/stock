@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from odoo import models, fields
 from odoo.addons.base.res.res_partner import WARNING_MESSAGE, WARNING_HELP
 
