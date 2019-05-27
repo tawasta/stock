@@ -94,17 +94,6 @@ class StockQuantQuickTransferWizard(models.TransientModel):
 
         picking.do_new_transfer()
 
-        '''
-        return {
-            'name': _('Transfer'),
-            'view_type': 'form',
-            'view_mode': 'form,tree,calendar',
-            'res_model': 'stock.picking',
-            'res_id': picking.id,
-            'type': 'ir.actions.act_window',
-            'context': self.env.context,
-        }
-        '''
 
         # Refresh the original view
         return {
