@@ -13,8 +13,8 @@ class StockPicking(models.Model):
         # TDE CLEANME: oh dear ...
         valid_quants = quants.filtered(lambda quant: quant.qty > 0)
         _Mapping = namedtuple('Mapping', (
-        'product', 'package', 'owner', 'location', 'location_dst_id',
-        'quant_id'))
+            'product', 'package', 'owner', 'location', 'location_dst_id',
+            'quant_id'))
 
         all_products = valid_quants.mapped('product_id') | self.env[
             'product.product'].browse(
@@ -76,8 +76,8 @@ class StockPicking(models.Model):
             qtys_grouped.setdefault(key, 0.0)
             qtys_grouped[key] += quant.qty
             if quant.product_id.tracking != 'none' and quant.lot_id:
-                lots_grouped.setdefault(key, dict()).setdefault(quant.lot_id.id,
-                                                                0.0)
+                lots_grouped.setdefault(key, dict())\
+                    .setdefault(quant.lot_id.id, 0.0)
                 lots_grouped[key][quant.lot_id.id] += quant.qty
         # Do the same for the forced quantities
         # (in cases of force_assign or incomming shipment for example)
@@ -92,7 +92,7 @@ class StockPicking(models.Model):
 
         # Create the necessary operations
         # for the grouped quants and remaining qtys
-        Uom = self.env['product.uom']
+        # Uom = self.env['product.uom']
         # use it to create operations using the same order as the
         # picking stock moves
         product_id_to_vals = {}
