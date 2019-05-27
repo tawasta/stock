@@ -78,7 +78,7 @@
 
                             <!-- If product and/or location changes, print a line -->
                             <tr t-if="print_row">
-                                <td><span t-field="doc.product_id"/> <t t-esc="doc.product_id."</td>
+                                <td><span t-field="doc.product_id"/> <t t-esc="doc.product_id."/></td>
                                 <td><span t-field="doc.location_id"/></td>
                                 <td style="text-align: right;"><span t-esc="row_qty"/></td>
                                 <td style="text-align: right;"><t t-if="row_qty != 0"><span t-esc="row_value"/> <t t-esc="currency" /></t><t t-else="">-</t></td>
