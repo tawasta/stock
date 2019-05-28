@@ -16,7 +16,7 @@ class StockPackOperation(models.Model):
         for record in self:
             # Search pricelist items for line product
             supplierinfo = product_supplierinfo.search([
-                ('product_id', '=', record.product_id.product_tmpl_id.id),
+                ('product_tmpl_id', '=', record.product_id.product_tmpl_id.id),
                 ('name', '=', record.picking_id.partner_id.id),
             ], limit=1)
 
