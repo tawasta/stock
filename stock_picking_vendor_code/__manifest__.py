@@ -22,7 +22,7 @@
 {
     'name': 'Vendor code in stock picking',
     'summary': 'Add vendor code to stock picking form view',
-    'version': '10.0.1.0.0',
+    'version': '10.0.1.1.0',
     'category': 'Inventory',
     'website': 'https://github.com/Tawasta/stock',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -38,6 +38,7 @@
         'stock',
     ],
     'data': [
+        'views/stock_pack_operation_form.xml',
         'views/stock_picking_form.xml',
     ],
     'demo': [
