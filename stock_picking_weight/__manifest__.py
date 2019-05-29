@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
+#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -22,8 +22,8 @@
     'name': 'Weight on stock picking and pack operation lines',
     'summary': 'Add weight on stock picking and operations',
     'category': 'Warehouse',
-    'version': '10.0.1.1.1',
-    'website': 'http://www.tawasta.fi',
+    'version': '12.0.1.0.0',
+    'website': 'https://github.com/Tawasta/stock',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
     'application': False,

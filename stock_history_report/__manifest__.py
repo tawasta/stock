@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2019 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
+#    Copyright 2019 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -21,9 +21,9 @@
 {
     'name': 'Stock valuation history report',
     'summary': 'A QWeb report from stock history values (inventory valuation)',
-    'version': '10.0.1.1.1',
+    'version': '12.0.1.0.0',
     'category': 'Inventory',
-    'website': 'http://tawasta.fi',
+    'website': 'https://github.com/Tawasta/stock',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
     'application': False,

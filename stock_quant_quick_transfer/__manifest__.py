@@ -21,9 +21,9 @@
 {
     'name': 'Quant quick transfer',
     'summary': 'Quickly auto pre-fill internal transfer information',
-    'version': '10.0.1.0.0',
+    'version': '12.0.1.0.0',
     'category': 'Inventory',
-    'website': 'https://tawasta.fi',
+    'website': 'https://github.com/Tawasta/stock',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
     'application': False,
