@@ -2,9 +2,9 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-=================================================
+======================================
 Product Volume on Delivery Order Lines
-=================================================
+======================================
 
 This module adds volume-field for Delivery Order Lines.
 
