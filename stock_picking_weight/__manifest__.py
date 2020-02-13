@@ -29,6 +29,7 @@
     'application': False,
     'installable': True,
     'depends': [
+        'delivery',
         'uom_weight',
         'stock',
     ],
