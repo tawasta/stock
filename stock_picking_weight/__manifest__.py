@@ -29,7 +29,7 @@
     'application': False,
     'installable': True,
     'depends': [
-        'product_uom_weight',
+        'uom_weight',
         'stock',
     ],
     'data': [
