@@ -21,4 +21,3 @@ class StockPicking(models.Model):
                 weight += line.weight
 
             record.weight_pack_operations = weight
-
