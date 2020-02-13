@@ -14,10 +14,10 @@ from odoo.addons import decimal_precision as dp
 # 6. Unknown third party imports:
 
 
-class StockPackOperation(models.Model):
+class StockMoveLine(models.Model):
 
     # 1. Private attributes
-    _inherit = 'stock.pack.operation'
+    _inherit = 'stock.move.line'
 
     # 2. Fields declaration
     weight = fields.Float(
