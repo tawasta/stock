@@ -2,23 +2,23 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-================================================
-Weight on stock picking and pack operation lines
-================================================
+=============================
+Stock Picking Container Count
+=============================
 
-Add weight on stock picking and operations
+Adds Container count to stock picking.
 
 Configuration
 =============
-\-
+None.
 
 Usage
 =====
-\-
+Install from Apps.
 
 Known issues / Roadmap
 ======================
-\-
+None.
 
 Credits
 =======
@@ -26,9 +26,7 @@ Credits
 Contributors
 ------------
 
-* Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>
 * Timo Kekäläinen <timo.kekalainen@tawasta.fi>
-* Timo Talvitie <timo.talvitie@tawasta.fi>
 
 Maintainer
 ----------
