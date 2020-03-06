@@ -7,7 +7,7 @@
         </xpath>
     </template>
 
-    <template id="assets_report_elements"
+    <template id="assets_stock_report_elements"
               name="Assets to modify element sizes"
               inherit_id="web.report_assets_common" active="True"
               priority="1">
