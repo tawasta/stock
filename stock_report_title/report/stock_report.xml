@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template id="report_picking" inherit_id="stock_report_element_sizes.report_picking">
+        <div id="stock_picking_informations" position="inside">
+            <div t-if="o.name">
+                <span><strong>Stock picking / Delivery slip:</strong></span>
+                <p class="m-0" t-field="o.name"/>
+            </div>
+        </div>
+    </template>
+
+    <template id="report_picking_inherit" inherit_id="stock.report_picking">
+        <xpath expr="//div[@class='page']" position="before">
+            <t t-set="report_title">Stock picking / Delivery slip</t>
+        </xpath>
+    </template>
+</odoo>
