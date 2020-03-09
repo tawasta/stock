@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    'name': 'Stock Picking Report Scheduled Date as Date only',
-    'summary': 'Stock Picking Report Scheduled Date as Date only',
+    'name': 'Stock Picking and Delivery Slip Report Scheduled Date as Date only',
+    'summary': 'Stock Picking and Delivery Slip Report Scheduled Date as Date only',
     'version': '12.0.1.0.0',
     'category': 'Reporting',
     'website': 'https://tawasta.fi',
