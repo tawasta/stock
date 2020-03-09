@@ -19,8 +19,8 @@ msgstr ""
 
 #. module: stock_report_title
 #: model_terms:ir.ui.view,arch_db:stock_report_title.report_picking
-msgid "<span><strong>Stock picking / Delivery slip:</strong></span>"
-msgstr "<span><strong>Keräilylista / Lähete:</strong></span>"
+msgid "<span><strong>Stock picking:</strong></span>"
+msgstr "<span><strong>Keräilylista:</strong></span>"
 
 #. module: stock_report_title
 #: model_terms:ir.ui.view,arch_db:stock_report_title.report_deliveryslip_inherit
@@ -29,5 +29,5 @@ msgstr "Lähete"
 
 #. module: stock_report_title
 #: model_terms:ir.ui.view,arch_db:stock_report_title.report_picking_inherit
-msgid "Stock picking / Delivery slip"
-msgstr "Keräilylista / Lähete"
+msgid "Stock picking"
+msgstr "Keräilylista"
