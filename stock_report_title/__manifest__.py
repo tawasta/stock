@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    'name': 'Stock Picking Report Title',
-    'summary': 'Stock Picking Report Title',
+    'name': 'Stock Picking and Delivery Slip Report Title',
+    'summary': 'Stock Picking and Delivery Slip Report Title',
     'version': '12.0.1.0.0',
     'category': 'Reporting',
     'website': 'https://tawasta.fi',
