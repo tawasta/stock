@@ -15,8 +15,9 @@ Configuration
 Usage
 =====
 
-* Install this module to add new elements to Stock Picking report.
-* Element has to be inserted to div-element that has id = stock_picking_informations
+* Install this module to add new elements to Stock Picking and Delivery Slip report
+* Element has to be inserted to div-element that has id = stock_picking_informations on
+  Picking report and id = stock_deliveryslip_informations on Delivery Slip report
 * To work properly, the inserted element has to have class = col-auto mw-100 mb-2
 
 Known issues / Roadmap
