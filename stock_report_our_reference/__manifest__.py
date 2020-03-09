@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    'name': 'Stock Picking Report Our Reference',
-    'summary': 'Stock Picking Report Our Reference',
+    'name': 'Stock Picking and Delivery Slip Report Our Reference',
+    'summary': 'Stock Picking and Delivery Slip Report Our Reference',
     'version': '12.0.1.0.0',
     'category': 'Reporting',
     'website': 'https://tawasta.fi',
