@@ -2,11 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-==================================
-Stock Picking Report Our Reference
-==================================
+====================================================
+Stock Picking and Delivery Slip Report Our Reference
+====================================================
 
-Stock Picking Report Our Reference
+Stock Picking and Delivery Slip Report Our Reference
 
 Configuration
 =============
