@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template id="report_picking" inherit_id="stock.report_picking">
+        <xpath expr="//div[@class='page']//div[@class='row']" position="after">
+            <div class="row mt32 mb32" id="stock_picking_informations"/>
+        </xpath>
+    </template>
+
+    <template id="report_delivery_document" inherit_id="stock.report_delivery_document">
+        <xpath expr="//div[@class='page']" position="before">
+            <div class="row mt32 mb32" id="stock_deliveryslip_informations"/>
+        </xpath>
+    </template>
+
+    <template id="assets_stock_report_elements"
+              name="Assets to modify element sizes"
+              inherit_id="web.report_assets_common" active="True"
+              priority="1">
+
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/srcc"
+                  href='/stock_report_element_sizes/static/src/less/custom.less'/>
+        </xpath>
+
+    </template>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template id="report_picking" inherit_id="stock_report_element_sizes.report_picking">
+        <xpath expr="//span[@t-field='o.scheduled_date']" position="attributes">
+            <attribute name='t-options'>{'widget': 'date'}</attribute>
+        </xpath>
+    </template>
+
+    <template id="report_delivery_document" inherit_id="stock_report_element_sizes.report_delivery_document">
+        <xpath expr="//span[@t-field='o.scheduled_date']" position="attributes">
+            <attribute name='t-options'>{'widget': 'date'}</attribute>
+        </xpath>
+    </template>
+</odoo>
