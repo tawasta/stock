@@ -9,4 +9,13 @@
             </div>
         </div>
     </template>
+
+    <template id="report_delivery_document" inherit_id="stock_report_element_sizes.report_delivery_document">
+        <div id="stock_deliveryslip_informations" position="inside">
+            <div t-if="o.sale_id" class="col-auto mw-100 mb-2">
+                <span><strong>Our reference:</strong></span>
+                <p class="m-0" t-field="o.sale_id.name"/>
+            </div>
+        </div>
+    </template>
 </odoo>

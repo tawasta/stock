@@ -15,4 +15,10 @@
             <t t-set="report_title">Stock picking / Delivery slip</t>
         </xpath>
     </template>
+
+    <template id="report_deliveryslip_inherit" inherit_id="stock.report_delivery_document">
+        <xpath expr="//t[@t-set='o']" position="before">
+            <t t-set="report_title">Delivery Slip</t>
+        </xpath>
+    </template>
 </odoo>
