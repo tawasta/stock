@@ -2,9 +2,9 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-===========================================================
-UoM Decimals Precision on Picking and Delivery Slip reports
-===========================================================
+================================================================
+Quantity Decimals Precision on Picking and Delivery Slip reports
+================================================================
 
 Modifications to stock reports' Quantity decimals.
 
