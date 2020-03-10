@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template id="report_picking" inherit_id="stock.report_picking">
+        <xpath expr='//span[@t-if="o.state != &apos;done&apos;"]' position="attributes">
+            <attribute name="t-options">{'precision': 1}</attribute>
+        </xpath>
+
+        <xpath expr='//span[@t-if="o.state == &apos;done&apos;"]' position="attributes">
+            <attribute name="t-options">{'precision': 1}</attribute>
+        </xpath>
+    </template>
+</odoo>
