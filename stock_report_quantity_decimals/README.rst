@@ -6,7 +6,7 @@
 UoM Decimals Precision on Picking and Delivery Slip reports
 ===========================================================
 
-Modifications to stock reports' UoM Decimals.
+Modifications to stock reports' Quantity decimals.
 
 Configuration
 =============
