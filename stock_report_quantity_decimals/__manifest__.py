@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    'name': 'Stock Report UoM Decimals',
-    'summary': 'Stock Report UoM Decimals',
+    'name': 'Stock Report Quantity Decimals',
+    'summary': """Modifications to Stock Reports' decimal precision""",
     'version': '12.0.1.0.0',
     'category': 'Reporting',
     'website': 'https://tawasta.fi',
