@@ -10,11 +10,10 @@ class StockPicking(models.Model):
     )
 
     from_purchase_order = fields.Boolean(
-        compute="_picking_from_sale_order"
+        compute="_compute_picking_from_sale_order"
     )
 
-    def _picking_from_sale_order(self):
+    def _compute_picking_from_sale_order(self):
         for picking in self:
             picking_from = picking.group_id and picking.group_id.name or ''
             picking.from_purchase_order = picking_from.startswith('PO')
-
