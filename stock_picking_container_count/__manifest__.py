@@ -24,14 +24,16 @@
     'version': '12.0.1.0.0',
     'category': 'Stock',
     'website': 'https://tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
+    'author': 'Tawasta',
     'license': 'AGPL-3',
     'application': False,
     'installable': True,
     'depends': [
-        'stock',
+        "stock",
+        "stock_dispatch_note_report",
     ],
     'data': [
-        'views/stock_picking.xml',
+        "report/stock_picking_report.xml",
+        "views/stock_picking.xml",
     ],
 }
