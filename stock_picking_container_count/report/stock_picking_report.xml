@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <template id="report_dispatch_note" inherit_id="stock_dispatch_note_report.report_dispatch_note">
+        <xpath expr="//div[@id='after_lines']" position="inside">
+            <div id="stock_picking_container_count" class="container">
+                <strong>Number of containers: </strong><span t-field="doc.container_count"/>
+            </div>
+        </xpath>
+    </template>
+</odoo>
