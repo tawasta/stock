@@ -43,7 +43,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    <table id="move_line_not_done" class="table table-sm mt48" t-if="doc.state!='done'">
+                    <table id="move_line_not_done" class="table table-sm mt48" t-if="doc.state != 'done' and not doc.move_line_ids">
                         <thead id="move_line_not_done_thead">
                             <tr id="move_line_not_done_tr">
                                 <th id="move_line_not_done_product"><strong>Product</strong></th>
@@ -67,13 +67,13 @@
                                     <span t-field="move.weight"> kg</span>
                                 </td>
                                 <td id="move_line_not_done_td_product_uom">
-                                    <span t-field="move.product_uom_qty"/>
+                                    <span t-field="move.quantity_done"/>
                                     <span t-field="move.product_uom"/>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                    <table id="move_line_done" class="table table-sm mt48" t-if="doc.move_line_ids and doc.state=='done'">
+                    <table id="move_line_done" class="table table-sm mt48" t-if="doc.move_line_ids and (doc.state in ['assigned', 'done'])">
                         <t t-set="has_serial_number" t-value="doc.move_line_ids.mapped('lot_id')" />
                         <thead id="move_line_done_thead">
                             <tr>
