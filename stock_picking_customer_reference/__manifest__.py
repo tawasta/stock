@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    'name': 'Stock Picking Container Count',
-    'summary': 'Stock Picking Container Count',
+    'name': 'Stock Picking Customer Reference',
+    'summary': 'Stock Picking Customer Reference',
     'version': '12.0.1.0.0',
     'category': 'Stock',
     'website': 'https://tawasta.fi',
@@ -28,12 +28,8 @@
     'license': 'AGPL-3',
     'application': False,
     'installable': True,
-    'depends': [
-        "stock",
-        "stock_dispatch_note_report",
-    ],
+    'depends': ["stock"],
     'data': [
-        "report/stock_picking_report.xml",
-        "views/stock_picking.xml",
+        "views/stock_picking.xml"
     ],
 }

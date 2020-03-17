@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    'name': 'Stock Picking Container Count',
-    'summary': 'Stock Picking Container Count',
+    'name': 'Dispatch Note report Customer Reference',
+    'summary': 'Dispatch Note report Customer Reference',
     'version': '12.0.1.0.0',
     'category': 'Stock',
     'website': 'https://tawasta.fi',
@@ -31,9 +31,9 @@
     'depends': [
         "stock",
         "stock_dispatch_note_report",
+        "stock_picking_customer_reference"
     ],
     'data': [
-        "report/stock_picking_report.xml",
-        "views/stock_picking.xml",
+        "report/stock_picking_dispatch_report.xml",
     ],
 }

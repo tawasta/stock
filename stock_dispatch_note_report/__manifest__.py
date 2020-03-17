@@ -19,21 +19,22 @@
 ##############################################################################
 
 {
-    'name': 'Stock Picking Container Count',
-    'summary': 'Stock Picking Container Count',
+    'name': 'Stock Dispatch Note Template',
+    'summary': 'Stock Dispatch Note Template',
     'version': '12.0.1.0.0',
-    'category': 'Stock',
+    'category': 'Reporting',
     'website': 'https://tawasta.fi',
     'author': 'Tawasta',
     'license': 'AGPL-3',
     'application': False,
     'installable': True,
     'depends': [
-        "stock",
-        "stock_dispatch_note_report",
+        'stock',
+        'web',
+        'web_report_sfs',
     ],
     'data': [
-        "report/stock_picking_report.xml",
-        "views/stock_picking.xml",
+        'report/report_stock_dispatch_main.xml',
+        'report/stock_picking_dispatch_report.xml',
     ],
 }

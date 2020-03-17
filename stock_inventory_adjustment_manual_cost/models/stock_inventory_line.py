@@ -19,9 +19,6 @@ class StockInventoryLine(models.Model):
             if record.product_id:
                 record.price_unit = record.product_id.standard_price
 
-    def _generate_moves(self):
-        return super(StockInventoryLine, self)._generate_moves()
-
     @api.model
     def create(self, vals):
         # Set the product price
@@ -34,14 +31,10 @@ class StockInventoryLine(models.Model):
 
         return super(StockInventoryLine, self).create(vals)
 
-    def _get_move_values(self, qty, location_id, location_dest_id):
+    def _get_move_values(self, *args, **kwargs):
         # Add manual cost price to lines
 
-        res = super(StockInventoryLine, self)._get_move_values(
-            qty=qty,
-            location_id=location_id,
-            location_dest_id=location_dest_id
-        )
+        res = super(StockInventoryLine, self)._get_move_values(*args, **kwargs)
 
         res['price_unit'] = self.price_unit
 
