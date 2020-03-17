@@ -103,7 +103,7 @@
                                             <span t-field="pack.weight"/>
                                             <span>/</span>
                                             <span t-field="pack.shipping_weight"/>
-                                            <span>kg</span>
+                                            <span t-field="doc.weight_uom_id"/>
                                         </td>
                                         <tr t-foreach="pack.quant_ids" t-as="quant">
                                             <td id="pack_product_id">
@@ -116,7 +116,8 @@
                                                 <span/>
                                             </td>
                                             <td id="pack_quant_product_weight">
-                                                <span t-field="quant.product_id.weight"> kg</span>
+                                                <span t-field="quant.product_id.weight"/>
+                                                <span t-field="doc.weight_uom_id"/>
                                             </td>
                                             <td id="pack_quant_quantity_uom" class="text-center">
                                                 <span t-field="quant.quantity"/>
@@ -142,7 +143,8 @@
                                         <span t-field="move_l.lot_id.name"/>
                                     </td>
                                     <td id="move_l_done_product_id_weight">
-                                        <span t-field="move_l.product_id.weight"> kg</span>
+                                        <span t-field="move_l.product_id.weight"/>
+                                        <span t-field="doc.weight_uom_id"/>
                                     </td>
                                     <td id="move_l_done_qty_done" class="text-center">
                                         <span t-field="move_l.qty_done"/>
@@ -155,7 +157,8 @@
 
                     <div id="after_lines">
                         <div id="stock_picking_weight" class="container">
-                            <strong>Total weight: </strong><span t-field="doc.weight"/> kg
+                            <strong>Total weight: </strong><span t-field="doc.weight"/>
+                            <span t-field="doc.weight_uom_id"/>
                         </div>
                         <p>
                             <t t-if="doc.backorder_ids and doc.backorder_ids.filtered(lambda x: x.state not in ('done', 'cancel'))">
