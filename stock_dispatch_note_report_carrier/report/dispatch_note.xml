@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template id="report_dispatch_note" inherit_id="stock_dispatch_note_report.report_dispatch_note">
+        <xpath expr="//div[@id='dispatch_note_informations']" position="inside">
+            <t t-if="'carrier_id' in doc.fields_get()">
+                <div t-if="doc.carrier_id.name" class="col-auto mw-100 mb-2">
+                    <span><strong>MODE OF TRANSPORTATION:</strong></span>
+                    <p class="m-0" t-field="doc.carrier_id.name"/>
+                </div>
+            </t>
+        </xpath>
+    </template>
+</odoo>
