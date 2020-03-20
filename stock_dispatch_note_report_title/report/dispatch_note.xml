@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template id="report_dispatch_note" inherit_id="stock_dispatch_note_report.report_dispatch_note">
+        <xpath expr="//t[@t-set='doc']" position="before">
+            <t t-set="report_title">Dispatch Note</t>
+        </xpath>
+    </template>
+</odoo>
