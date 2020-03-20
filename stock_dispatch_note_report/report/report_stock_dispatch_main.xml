@@ -18,6 +18,7 @@
                     <h2 id="dispatch_note_name">
                         <span t-field="doc.name"/>
                     </h2>
+                    <div class="row mt32 mb32" id="dispatch_note_informations"/>
                     <table id="header_table" class="table table-sm">
                         <thead id="header_table_thead">
                             <tr id="header_table_thead_tr">
