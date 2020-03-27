@@ -82,77 +82,60 @@
                                 <th name="lot_serial" t-if="has_serial_number">
                                     Lot/Serial Number
                                 </th>
+                                <th name="not_lot_serial" t-if="not has_serial_number"/>
                                 <th id="move_line_done_weight"><strong>Weight</strong></th>
                                 <th class="text-center"><strong>Quantity</strong></th>
                             </tr>
                         </thead>
                         <tbody id="move_line_done_tbody_package">
-                            <tr t-foreach="doc.move_line_ids" t-as="move_l">
-                                <t t-if="move_l.result_package_id">
-                                    <tr t-foreach="move_l.result_package_id" t-as="pack">
-                                        <td id="pack_package">
-                                            <span>Package ID:</span>
-                                            <span t-field="pack.name"/>
-                                        </td>
-                                        <td id="pack_packaging_id">
-                                            <t t-if="pack.packaging_id">
-                                                <span>Type:</span>
-                                                <span t-field="pack.packaging_id"/>
-                                            </t>
-                                        </td>
-                                        <td id="pack_weight">
-                                            <span t-field="pack.weight"/>
-                                            <span>/</span>
-                                            <span t-field="pack.shipping_weight"/>
-                                            <span t-field="doc.weight_uom_id"/>
-                                        </td>
-                                        <tr t-foreach="pack.quant_ids" t-as="quant">
-                                            <td id="pack_product_id">
-                                                <span t-field="quant.product_id"/>
-                                            </td>
-                                            <td id="pack_quant_lot_id" t-if="quant.lot_id">
-                                                <span t-field="quant.lot_id.name"/>
-                                            </td>
-                                            <td id="pack_quant_not_lot_id" t-if="not quant.lot_id">
-                                                <span/>
-                                            </td>
-                                            <td id="pack_quant_product_weight">
-                                                <span t-field="quant.product_id.weight"/>
-                                                <span t-field="doc.weight_uom_id"/>
-                                            </td>
-                                            <td id="pack_quant_quantity_uom" class="text-center">
-                                                <span t-field="quant.quantity"/>
-                                                <span t-field="quant.product_id.uom_id.name"/>
-                                            </td>
-                                        </tr>
-                                    </tr>
-                                </t>
-                                <t t-if="not move_l.result_package_id">
-                                    <td id="move_l_done_product_id">
-                                        <span t-field="move_l.product_id"/>
-                                        <p t-if="doc.picking_type_code == 'outgoing'">
-                                            <span t-field="move_l.product_id.sudo().description_pickingout"/>
-                                        </p>
-                                        <p t-if="doc.picking_type_code == 'incoming'">
-                                            <span t-field="move_l.product_id.sudo().description_pickingin"/>
-                                        </p>
+                            <t t-set="package" t-value="[]"/>
+                            <t t-foreach="doc.move_line_ids" t-as="l">
+                                <t t-set="package" t-value="package+[l.result_package_id]"/>
+                            </t>
+                            <t t-foreach="set(package)" t-as="line_pack">
+                                <t t-if="line_pack">
+                                    <td id="package_name">
+                                        <strong>Package ID:</strong>
+                                        <strong t-esc="line_pack.name"/>
                                     </td>
-                                    <td id="move_l_done_serial_number" t-if="has_serial_number and move_l.lot_name">
-                                        <span t-field="move_l.lot_name"/>
+                                    <td id="pack_packaging_id">
+                                        <t t-if="line_pack.packaging_id">
+                                            <span>Type:</span>
+                                            <span t-field="line_pack.packaging_id"/>
+                                        </t>
                                     </td>
-                                    <td id="move_l_done_serial_number_name" t-elif="has_serial_number">
-                                        <span t-field="move_l.lot_id.name"/>
-                                    </td>
-                                    <td id="move_l_done_product_id_weight">
-                                        <span t-field="move_l.product_id.weight"/>
+                                    <td id="pack_weight">
+                                        <span t-field="line_pack.weight"/>
+                                        <span>/</span>
+                                        <span t-field="line_pack.shipping_weight"/>
                                         <span t-field="doc.weight_uom_id"/>
                                     </td>
-                                    <td id="move_l_done_qty_done" class="text-center">
-                                        <span t-field="move_l.qty_done"/>
-                                        <span t-field="move_l.product_uom_id"/>
-                                    </td>
+                                    <td id="empty_space"/>
                                 </t>
-                            </tr>
+                                <tr t-foreach="doc.move_line_ids" t-as="l">
+                                    <t t-if="line_pack.id == l.result_package_id.id">
+                                        <td id="pack_product_id">
+                                            <span t-field="l.product_id"/>
+                                        </td>
+                                        <t t-if="has_serial_number">
+                                            <td id="pack_lot_id">
+                                                <span t-field="l.lot_id.name"/>
+                                            </td>
+                                        </t>
+                                        <t t-elif="not has_serial_number">
+                                            <td id="no_serial_number"/>
+                                        </t>
+                                        <td id="pack_quant_product_weight">
+                                            <span t-field="l.product_id.weight"/>
+                                            <span t-field="doc.weight_uom_id"/>
+                                        </td>
+                                        <td id="pack_quant_quantity_uom" class="text-center">
+                                            <span t-field="l.qty_done"/>
+                                            <span t-field="l.product_id.uom_id.name"/>
+                                        </td>
+                                    </t>
+                                </tr>
+                            </t>
                         </tbody>
                     </table>
 
