@@ -17,7 +17,7 @@ class StockPicking(models.Model):
             img = urllib.request.urlopen(self.barcode_url).read()
             self.barcode = base64.b64encode(img)
 
-    def _barcode_url(self, code="Code128"):
+    def _barcode_url(self, code="EAN13"):
         if isinstance(self.name, str) and len(self.name) > 0:
             self.barcode_url = "{}{}{}{}{}".format(
                 http.request.env["ir.config_parameter"].get_param("web.base.url"),
