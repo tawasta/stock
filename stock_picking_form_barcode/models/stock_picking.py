@@ -26,6 +26,8 @@ class StockPicking(models.Model):
                 "/",
                 self.name,
             )
-            self.barcode_url = self.barcode_url.replace("//", "")
+            self.barcode_url = self.barcode_url.replace("//", "/")
+            self.barcode_url = self.barcode_url.replace("https:/", "https://")
+            self.barcode_url = self.barcode_url.replace("http:/", "http://")
         else:
             self.barcode__url = ""
