@@ -21,8 +21,8 @@ class StockPicking(models.Model):
         if isinstance(self.name, str) and len(self.name) > 0:
             self.barcode_url = "{}{}{}{}{}".format(
                 http.request.env["ir.config_parameter"]
-                .get_param("web.base.url")
-                .sudo(),
+                .sudo()
+                .get_param("web.base.url"),
                 "/report/barcode/",
                 code,
                 "/",
