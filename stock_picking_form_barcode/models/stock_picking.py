@@ -19,13 +19,12 @@ class StockPicking(models.Model):
 
     def _barcode_url(self, code="Code128"):
         if isinstance(self.name, str) and len(self.name) > 0:
-            url = "{}{}{}{}{}".format(
+            self.barcode_url = "{}{}{}{}{}".format(
                 http.request.env["ir.config_parameter"].get_param("web.base.url"),
                 "/report/barcode/",
                 code,
                 "/",
                 self.name,
             )
-            self.barcodeurl = url
         else:
-            self.barcodeurl = ""
+            self.barcode__url = ""
