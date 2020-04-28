@@ -1,4 +1,5 @@
 import base64
+import ssl
 import urllib.request
 
 from odoo import fields, http, models
@@ -8,9 +9,9 @@ class StockPicking(models.Model):
 
     _inherit = "stock.picking"
 
-    barcode = fields.Binary(string="Barcode URL", compute="_barcode",)
+    barcode = fields.Binary(string="Barcode URL", compute="_barcode")
 
-    barcode_url = fields.Char(string="Barcode URL", compute="_barcode_url",)
+    barcode_url = fields.Char(string="Barcode URL", compute="_barcode_url")
 
     def _barcode(self):
         if isinstance(self.barcode_url, str) and len(self.barcode_url) > 0:
@@ -18,6 +19,7 @@ class StockPicking(models.Model):
             self.barcode = base64.b64encode(img)
 
     def _barcode_url(self, code="EAN13"):
+        ssl._create_default_https_context = ssl._create_unverified_context
         if isinstance(self.name, str) and len(self.name) > 0:
             self.barcode_url = "{}{}{}{}{}".format(
                 http.request.env["ir.config_parameter"]
