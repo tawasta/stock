@@ -19,22 +19,18 @@
 ##############################################################################
 
 {
-    'name': 'Stock Dispatch Note Template',
-    'summary': 'Stock Dispatch Note Template',
-    'version': '12.0.1.0.0',
-    'category': 'Reporting',
-    'website': 'https://tawasta.fi',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': [
-        'stock',
-        'web',
-        'web_report_sfs',
-    ],
-    'data': [
-        'report/report_stock_dispatch_main.xml',
-        'report/stock_picking_dispatch_report.xml',
+    "name": "Stock Dispatch Note Template",
+    "summary": "Stock Dispatch Note Template",
+    "version": "12.0.1.0.0",
+    "category": "Reporting",
+    "website": "https://tawasta.fi",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": ["stock", "web", "web_report_sfs", "delivery"],
+    "data": [
+        "report/report_stock_dispatch_main.xml",
+        "report/stock_picking_dispatch_report.xml",
     ],
 }
