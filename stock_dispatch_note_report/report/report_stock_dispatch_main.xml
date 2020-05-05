@@ -90,11 +90,15 @@
                         </thead>
                         <tbody id="move_line_done_tbody_package">
                             <t t-set="package" t-value="[]"/>
-                            <t t-set="move_line_ids" t-value="doc.move_line_ids.sorted(key=lambda x: x.product_id.name)"></t>
+                            <t t-set="move_line_ids"
+                                t-value="doc.move_line_ids.sorted(key=lambda x: x.result_package_id.name)"></t>
                             <t t-foreach="move_line_ids" t-as="l">
-                                <t t-set="package" t-value="package+[l.result_package_id]"/>
+                                <t t-if="l not in package">
+                                    <t t-set="package" t-value="package+[l.result_package_id]"/>
+                                </t>
                             </t>
-                            <t t-foreach="set(package)" t-as="line_pack">
+                            <t t-esc="package"></t>
+                            <t t-foreach="package" t-as="line_pack">
                                 <t t-if="line_pack">
                                     <td id="package_name">
                                         <strong>Package ID:</strong>
@@ -114,29 +118,28 @@
                                     </td>
                                     <td id="empty_space"/>
                                 </t>
+                                <t t-set="move_line_ids" t-value="doc.move_line_ids.filtered(lambda x: x.result_package_id.id == line_pack.id)"></t>
                                 <t t-set="move_line_ids" t-value="doc.move_line_ids.sorted(key=lambda x: x.product_id.name)"></t>
                                 <tr t-foreach="move_line_ids" t-as="l">
-                                    <t t-if="line_pack.id == l.result_package_id.id">
-                                        <td id="pack_product_id">
-                                            <span t-field="l.product_id"/>
-                                        </td>
-                                        <t t-if="has_serial_number">
-                                            <td id="pack_lot_id">
-                                                <span t-field="l.lot_id.name"/>
-                                            </td>
-                                        </t>
-                                        <t t-elif="not has_serial_number">
-                                            <td id="no_serial_number"/>
-                                        </t>
-                                        <td id="pack_quant_product_weight">
-                                            <span t-field="l.product_id.weight"/>
-                                            <span t-field="doc.weight_uom_id"/>
-                                        </td>
-                                        <td id="pack_quant_quantity_uom" class="text-center">
-                                            <span t-field="l.qty_done"/>
-                                            <span t-field="l.product_id.uom_id.name"/>
+                                    <td id="pack_product_id">
+                                        <span t-field="l.product_id"/>
+                                    </td>
+                                    <t t-if="has_serial_number">
+                                        <td id="pack_lot_id">
+                                            <span t-field="l.lot_id.name"/>
                                         </td>
                                     </t>
+                                    <t t-elif="not has_serial_number">
+                                        <td id="no_serial_number"/>
+                                    </t>
+                                    <td id="pack_quant_product_weight">
+                                        <span t-field="l.product_id.weight"/>
+                                        <span t-field="doc.weight_uom_id"/>
+                                    </td>
+                                    <td id="pack_quant_quantity_uom" class="text-center">
+                                        <span t-field="l.qty_done"/>
+                                        <span t-field="l.product_id.uom_id.name"/>
+                                    </td>
                                 </tr>
                             </t>
                         </tbody>
