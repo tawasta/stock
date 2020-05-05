@@ -10,8 +10,8 @@
                 <t t-if="partner" name="partner_header">
                     <t t-set="address">
                         <div id="address_partner_information" t-esc="partner"
-                        t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True}'/>
-                   </t>
+                            t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True}'/>
+                    </t>
                 </t>
 
                 <div id="dispatch_note_page" class="page">
@@ -34,12 +34,12 @@
                                     <span t-field="doc.origin"/>
                                 </td>
                                 <td id="header_table_tr_td_date" name="td_sched_date">
-                                   <t id="doc_state_is_done" t-if="doc.state == 'done'">
+                                    <t id="doc_state_is_done" t-if="doc.state == 'done'">
                                         <span t-field="doc.date_done"/>
-                                   </t>
-                                   <t id="doc_state_is_note_done" t-if="doc.state != 'done'">
+                                    </t>
+                                    <t id="doc_state_is_note_done" t-if="doc.state != 'done'">
                                         <span t-field="doc.scheduled_date"/>
-                                   </t>
+                                    </t>
                                 </td>
                             </tr>
                         </tbody>
@@ -54,6 +54,7 @@
                         </thead>
                         <tbody id="move_line_not_done_tbody">
                             <t t-set="lines" t-value="doc.move_lines.filtered(lambda x: x.product_uom_qty)"/>
+                            <t t-set="lines" t-value="lines.sorted(key=lambda x: x.product_id.name)"></t>
                             <tr t-foreach="lines" t-as="move">
                                 <td id="move_line_not_done_td_product_id">
                                     <span t-field="move.product_id"/>
@@ -89,7 +90,8 @@
                         </thead>
                         <tbody id="move_line_done_tbody_package">
                             <t t-set="package" t-value="[]"/>
-                            <t t-foreach="doc.move_line_ids" t-as="l">
+                            <t t-set="move_line_ids" t-value="doc.move_line_ids.sorted(key=lambda x: x.product_id.name)"></t>
+                            <t t-foreach="move_line_ids" t-as="l">
                                 <t t-set="package" t-value="package+[l.result_package_id]"/>
                             </t>
                             <t t-foreach="set(package)" t-as="line_pack">
@@ -112,7 +114,8 @@
                                     </td>
                                     <td id="empty_space"/>
                                 </t>
-                                <tr t-foreach="doc.move_line_ids" t-as="l">
+                                <t t-set="move_line_ids" t-value="doc.move_line_ids.sorted(key=lambda x: x.product_id.name)"></t>
+                                <tr t-foreach="move_line_ids" t-as="l">
                                     <t t-if="line_pack.id == l.result_package_id.id">
                                         <td id="pack_product_id">
                                             <span t-field="l.product_id"/>
