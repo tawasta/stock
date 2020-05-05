@@ -97,7 +97,6 @@
                                     <t t-set="package" t-value="package+[l.result_package_id]"/>
                                 </t>
                             </t>
-                            <t t-esc="package"></t>
                             <t t-foreach="package" t-as="line_pack">
                                 <t t-if="line_pack">
                                     <td id="package_name">
