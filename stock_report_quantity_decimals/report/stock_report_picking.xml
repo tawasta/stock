@@ -2,12 +2,11 @@
 
 <odoo>
     <template id="report_picking" inherit_id="stock.report_picking">
-        <xpath expr='//span[@t-if="o.state != &apos;done&apos;"]' position="attributes">
+        <span t-if="o.state != 'done'" position="attributes">
             <attribute name="t-options">{'precision': 1}</attribute>
-        </xpath>
-
-        <xpath expr='//span[@t-if="o.state == &apos;done&apos;"]' position="attributes">
+        </span>
+        <span t-if="o.state == 'done'" position="attributes">
             <attribute name="t-options">{'precision': 1}</attribute>
-        </xpath>
+        </span>
     </template>
 </odoo>
