@@ -90,14 +90,10 @@
                         </thead>
                         <tbody id="move_line_done_tbody_package">
                             <t t-set="package" t-value="[]"/>
-                            <t t-set="move_line_ids"
-                                t-value="doc.move_line_ids.sorted(key=lambda x: x.result_package_id.name)"></t>
-                            <t t-foreach="move_line_ids" t-as="l">
-                                <t t-if="l not in package">
+                            <t t-foreach="doc.move_line_ids" t-as="l">
                                     <t t-set="package" t-value="package+[l.result_package_id]"/>
-                                </t>
                             </t>
-                            <t t-foreach="package" t-as="line_pack">
+                            <t t-foreach="list(set(package)).sort()" t-as="line_pack">
                                 <t t-if="line_pack">
                                     <td id="package_name">
                                         <strong>Package ID:</strong>
