@@ -150,7 +150,6 @@
                     <div id="after_lines">
                         <div id="stock_picking_weight" class="container">
                             <strong>Total weight: </strong><span t-field="doc.weight"/>
-                            <t t-esc="total_weight_pack_weight_shipping_weight"></t>
                             <span t-field="doc.weight_uom_id"/>
                         </div>
                         <p>
