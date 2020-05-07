@@ -13,7 +13,7 @@
                             t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True}'/>
                     </t>
                 </t>
-                <t t-set="total_weight_pack_weight_shipping_weight" t-value="0"></t>
+                <t t-set="total_weight_pack_weight_shipping_weight" t-value="float(0)"></t>
 
                 <div id="dispatch_note_page" class="page">
                     <h2 id="dispatch_note_name">
