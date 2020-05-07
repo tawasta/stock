@@ -13,6 +13,7 @@
                             t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True}'/>
                     </t>
                 </t>
+                <t t-set="total_weight_pack_weight_shipping_weight" t-value="0"></t>
 
                 <div id="dispatch_note_page" class="page">
                     <h2 id="dispatch_note_name">
@@ -114,6 +115,8 @@
                                             <span t-field="line_pack.shipping_weight"/>
                                             <span t-field="doc.weight_uom_id"/>
                                         </td>
+                                        <t t-set="total_weight_pack_weight_shipping_weight"
+                                            t-value="int(total_weight_pack_weight_shipping_weight) + int(line_pack.weight) + int(line_pack.shipping_weight)"></t>
                                         <td id="empty_space"/>
                                     </t>
                                     <tr t-foreach="doc.move_line_ids" t-as="l">
@@ -147,6 +150,7 @@
                     <div id="after_lines">
                         <div id="stock_picking_weight" class="container">
                             <strong>Total weight: </strong><span t-field="doc.weight"/>
+                            <t t-esc="total_weight_pack_weight_shipping_weight"></t>
                             <span t-field="doc.weight_uom_id"/>
                         </div>
                         <p>
