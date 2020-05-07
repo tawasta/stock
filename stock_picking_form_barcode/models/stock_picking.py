@@ -20,8 +20,9 @@ class StockPicking(models.Model):
                 record.barcode = base64.b64encode(img)
 
     def _barcode_url(self, code="EAN13"):
+        ssl._create_default_https_context = ssl._create_unverified_context
+
         for record in self:
-            ssl._create_default_https_context = ssl._create_unverified_context
             if isinstance(record.name, str) and len(record.name) > 0:
                 record.barcode_url = "{}{}{}{}{}".format(
                     http.request.env["ir.config_parameter"]
