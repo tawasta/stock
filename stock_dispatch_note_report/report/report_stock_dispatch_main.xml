@@ -116,7 +116,7 @@
                                             <span t-field="doc.weight_uom_id"/>
                                         </td>
                                         <t t-set="total_weight_pack_weight_shipping_weight"
-                                            t-value="int(total_weight_pack_weight_shipping_weight) + int(line_pack.weight) + int(line_pack.shipping_weight)"></t>
+                                            t-value="float(total_weight_pack_weight_shipping_weight) + float(line_pack.weight) + float(line_pack.shipping_weight)"></t>
                                         <td id="empty_space"/>
                                     </t>
                                     <tr t-foreach="doc.move_line_ids" t-as="l">
