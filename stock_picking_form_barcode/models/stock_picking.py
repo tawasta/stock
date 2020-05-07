@@ -10,28 +10,32 @@ class StockPicking(models.Model):
     _inherit = "stock.picking"
 
     barcode = fields.Binary(string="Barcode URL", compute="_barcode")
-
     barcode_url = fields.Char(string="Barcode URL", compute="_barcode_url")
 
     def _barcode(self):
-        if isinstance(self.barcode_url, str) and len(self.barcode_url) > 0:
-            img = urllib.request.urlopen(self.barcode_url).read()
-            self.barcode = base64.b64encode(img)
+        for record in self:
+            if isinstance(record.barcode_url, str) \
+                    and len(record.barcode_url) > 0:
+                img = urllib.request.urlopen(record.barcode_url).read()
+                record.barcode = base64.b64encode(img)
 
     def _barcode_url(self, code="EAN13"):
-        ssl._create_default_https_context = ssl._create_unverified_context
-        if isinstance(self.name, str) and len(self.name) > 0:
-            self.barcode_url = "{}{}{}{}{}".format(
-                http.request.env["ir.config_parameter"]
-                .sudo()
-                .get_param("web.base.url"),
-                "/report/barcode/",
-                code,
-                "/",
-                self.name,
-            )
-            self.barcode_url = self.barcode_url.replace("//", "/")
-            self.barcode_url = self.barcode_url.replace("https:/", "https://")
-            self.barcode_url = self.barcode_url.replace("http:/", "http://")
-        else:
-            self.barcode__url = ""
+        for record in self:
+            ssl._create_default_https_context = ssl._create_unverified_context
+            if isinstance(record.name, str) and len(record.name) > 0:
+                record.barcode_url = "{}{}{}{}{}".format(
+                    http.request.env["ir.config_parameter"]
+                    .sudo()
+                    .get_param("web.base.url"),
+                    "/report/barcode/",
+                    code,
+                    "/",
+                    record.name,
+                )
+                record.barcode_url = record.barcode_url.replace("//", "/")
+                record.barcode_url = \
+                    record.barcode_url.replace("https:/", "https://")
+                record.barcode_url = \
+                    record.barcode_url.replace("http:/", "http://")
+            else:
+                record.barcode__url = ""
