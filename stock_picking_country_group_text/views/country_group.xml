@@ -9,6 +9,7 @@
                 <group name="stock_pickings">
                     <field name="stock_picking_text"/>
                     <field name="delivery_slip_text"/>
+                    <field name="dispatch_note_text"/>
                 </group>
             </group>
         </field>

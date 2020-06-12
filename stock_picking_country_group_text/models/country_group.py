@@ -13,6 +13,12 @@ class CountryGroup(models.Model):
 
     delivery_slip_text = fields.Text(
         string="Delivery Slip Text",
-        help="Text to be added on stock pickings going to customers in this "
+        help="Text to be added on delivery slip going to customers in this "
+        + "country group.",
+    )
+
+    dispatch_note_text = fields.Text(
+        string="Dispatch Note Text",
+        help="Text to be added on dispatch note going to customers in this "
         + "country group.",
     )

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template id="dispatch_note_country_group_report"
+        inherit_id="stock_dispatch_note_report.report_dispatch_note">
+        <xpath expr="//div[@id='after_lines']"
+            position="after">
+            <t t-foreach="o.partner_id.country_id.country_group_ids" t-as="country_group">
+                <br/>
+                <t t-esc="country_group.dispatch_note_text"></t>
+            </t>
+        </xpath>
+    </template>
+</odoo>
