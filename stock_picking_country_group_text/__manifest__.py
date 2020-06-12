@@ -29,5 +29,5 @@
     "application": False,
     "installable": True,
     "depends": ["stock", "l10n_fi_country_groups", "stock_dispatch_note_report"],
-    "data": ["views/country_group.xml", "report/delivery_slip.xml", "report/stock_picking.xml", "views/menu.xml"],
+    "data": ["views/country_group.xml", "report/dispatch_note.xml", "report/delivery_slip.xml", "report/stock_picking.xml", "views/menu.xml"],
 }
