@@ -1,0 +1,33 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_order_week_of_shipment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-28 05:18+0000\n"
+"PO-Revision-Date: 2020-04-28 08:19+0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fi\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: sale_order_week_of_shipment
+#: model_terms:ir.ui.view,arch_db:sale_order_week_of_shipment.sale_order_customer_order_date_report_saleorder_document
+msgid "<strong>Week of Shipment:</strong>"
+msgstr "<strong>Toimitusviikko:</strong>"
+
+#. module: sale_order_week_of_shipment
+#: model:ir.model,name:sale_order_week_of_shipment.model_sale_order
+msgid "Sale Order"
+msgstr "Myyntitilaus"
+
+#. module: sale_order_week_of_shipment
+#: model:ir.model.fields,field_description:sale_order_week_of_shipment.field_sale_order__week_of_shipment
+msgid "Week of shipment"
+msgstr "Toimitusviikko"

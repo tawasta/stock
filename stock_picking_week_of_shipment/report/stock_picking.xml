@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template id="stock_picking_week_of_delivery_report"
+        inherit_id="stock.report_picking">
+        <xpath expr="//div[@id='informations']" position="inside">
+            <t t-if="doc.week_of_shipment and doc.week_of_shipment != 0">
+                <div t-if="doc.week_of_shipment" class="col-auto mw-100 mb-2">
+                    <strong>Week of Shipment:</strong>
+                    <p class="m-0" t-field="doc.week_of_shipment"/>
+                </div>
+            </t>
+        </xpath>
+    </template>
+</odoo>
