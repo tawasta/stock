@@ -18,4 +18,3 @@ class SaleOrder(models.Model):
             record.picking_ids.write(picking_values)
 
         return res
-
