@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="stock_picking_country_group_form_inherit" model="ir.ui.view">
+        <field name="name">country.group.form.inherit</field>
+        <field name="model">res.country.group</field>
+        <field name="inherit_id" ref="base.view_country_group_form"/>
+        <field name="arch" type="xml">
+            <group name="country_group" position="after">
+                <group name="stock_pickings">
+                    <field name="stock_picking_text"/>
+                    <field name="delivery_slip_text"/>
+                    <field name="dispatch_note_text"/>
+                </group>
+            </group>
+        </field>
+    </record>
+</odoo>
