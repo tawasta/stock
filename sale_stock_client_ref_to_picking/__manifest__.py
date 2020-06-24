@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2020- Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,20 +19,24 @@
 ##############################################################################
 
 {
-    "name": "Stock Picking- Report text by country group",
-    "summary": "Get stock picking report text from country groups setting",
-    "version": "12.0.1.0.0",
-    "category": "Stock",
-    "website": "https://github.com/Tawasta/stock",
-    "author": "Tawasta",
-    "license": "AGPL-3",
-    "application": False,
-    "installable": True,
-    "depends": ["stock", "l10n_fi_country_groups", "stock_dispatch_note_report"],
-    "data": [
-        "views/country_group.xml",
-        "report/dispatch_note.xml",
-        "report/delivery_slip.xml",
-        "report/stock_picking.xml", "views/menu.xml"
+    'name': 'Customer reference to stock pickings',
+    'summary': 'Move SO customer reference to created stock pickings',
+    'version': '12.0.1.0.0',
+    'category': 'Inventory',
+    'website': 'https://github.com/Tawasta/stock',
+    'author': 'Tawasta',
+    'license': 'AGPL-3',
+    'application': False,
+    'installable': True,
+    'external_dependencies': {
+        'python': [],
+        'bin': [],
+    },
+    'depends': [
+        'sale_stock',
+    ],
+    'data': [
+    ],
+    'demo': [
     ],
 }
