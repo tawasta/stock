@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template id="report_dispatch_note" inherit_id="stock_dispatch_note_report.report_dispatch_note">
+        <xpath expr="//table[@id='header_table']//thead"
+            position="inside">
+            <t t-if="o.sale_id">
+                <t t-if=".sale_id.week_of_shipment">
+                    <th name="td_week_of_shipment">
+                        <strong>Week of shipment</strong>
+                    </th>
+                </t>
+            </t>
+        </xpath>
+
+        <xpath expr="//table[@id='header_table']//tbody"
+            position="inside">
+            <t t-if="o.sale_id">
+                <t t-if=".sale_id.week_of_shipment">
+                    <td name="td_week_of_shipment">
+                        <t t-esc="o.sale_id.week_of_shipment"></t>
+                    </td>
+                </t>
+            </t>
+        </xpath>
+    </template>
+</odoo>
