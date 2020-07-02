@@ -5,7 +5,7 @@
         <xpath expr="//table[@id='header_table']//thead"
             position="inside">
             <t t-if="o.sale_id">
-                <t t-if=".sale_id.week_of_shipment">
+                <t t-if="o.sale_id.week_of_shipment">
                     <th name="td_week_of_shipment">
                         <strong>Week of shipment</strong>
                     </th>
@@ -16,7 +16,7 @@
         <xpath expr="//table[@id='header_table']//tbody"
             position="inside">
             <t t-if="o.sale_id">
-                <t t-if=".sale_id.week_of_shipment">
+                <t t-if="o.sale_id.week_of_shipment">
                     <td name="td_week_of_shipment">
                         <t t-esc="o.sale_id.week_of_shipment"></t>
                     </td>
