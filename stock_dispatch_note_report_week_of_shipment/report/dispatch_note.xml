@@ -2,7 +2,7 @@
 
 <odoo>
     <template id="report_dispatch_note" inherit_id="stock_dispatch_note_report.report_dispatch_note">
-        <xpath expr="//table[@id='header_table']//thead"
+        <xpath expr="//table[@id='header_table']//thead//tr[1]"
             position="inside">
             <t t-if="doc.sale_id">
                 <t t-if="doc.sale_id.week_of_shipment">
@@ -13,7 +13,7 @@
             </t>
         </xpath>
 
-        <xpath expr="//table[@id='header_table']//tbody"
+        <xpath expr="//table[@id='header_table']//tbody//tr[1]"
             position="inside">
             <t t-if="doc.sale_id">
                 <t t-if="doc.sale_id.week_of_shipment">
