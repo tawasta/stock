@@ -2,11 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-==========================
-Dispatch Note Report Title
-==========================
+=======================================================
+Stock dispatch note report - Internal reference barcode
+=======================================================
 
-Dispatch Note Report Title
+Show products internal reference barcode on stock picking report
 
 Configuration
 =============
@@ -14,7 +14,7 @@ Configuration
 
 Usage
 =====
-Just install the module
+\-
 
 Known issues / Roadmap
 ======================
@@ -26,7 +26,7 @@ Credits
 Contributors
 ------------
 
-* Timo Kekäläinen <timo.kekalainen@tawasta.fi>
+* Joona Isoaho <joona.isoaho@tawasta.fi>
 
 Maintainer
 ----------
