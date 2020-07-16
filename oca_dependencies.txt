@@ -1,1 +1,2 @@
 product https://github.com/tawasta/product
+manufacture https://github.com/OCA/manufacture
