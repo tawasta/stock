@@ -19,15 +19,15 @@
 ##############################################################################
 
 {
-    'name': 'Dispatch Note Report - Internal reference barcode',
-    'summary': 'Adds internal reference to dispatchh note as barcode',
-    'version': '12.0.1.0.0',
-    'category': 'Reporting',
-    'website': 'https://tawasta.fi',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': ["stock_dispatch_note_report"],
-    'data': ["report/dispatch_note.xml"],
+    "name": "Dispatch Note Report - Internal reference barcode",
+    "summary": "Adds internal reference to dispatchh note as barcode",
+    "version": "12.0.1.0.0",
+    "category": "Reporting",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": ["stock_dispatch_note_report"],
+    "data": ["report/dispatch_note.xml"],
 }

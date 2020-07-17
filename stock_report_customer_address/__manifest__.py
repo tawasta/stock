@@ -19,18 +19,15 @@
 ##############################################################################
 
 {
-    'name': 'Dispatch Note Carrier',
-    'summary': 'Dispatch Note Carrier',
-    'version': '12.0.1.0.0',
-    'category': 'Reporting',
-    'website': 'https://github.com/Tawasta/stock',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': [
-        "stock_dispatch_note_report",
-        "stock_dispatch_note_report_element_sizes"
-    ],
-    'data': ["report/dispatch_note.xml"],
+    "name": "Stock Report Customer address",
+    "summary": "Stock Report Customer address",
+    "version": "12.0.1.0.0",
+    "category": "Stock",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": ["stock"],
+    "data": ["report/stock_report.xml"],
 }

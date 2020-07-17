@@ -23,7 +23,7 @@
     'summary': 'Add payment terms to dispatch note report',
     'version': '12.0.1.0.0',
     'category': 'Reporting',
-    'website': 'https://tawasta.fi',
+    'website': 'https://github.com/Tawasta/stock',
     'author': 'Tawasta',
     'license': 'AGPL-3',
     'application': False,
