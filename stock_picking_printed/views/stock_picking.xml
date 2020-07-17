@@ -19,6 +19,7 @@
         <field name="arch" type="xml">
             <filter name="cancel" position="after">
                 <separator />
+                <filter name="picking_printed" string="Picking printed" domain="[('picking_printed','!=', False)]" />
                 <filter name="picking_not_printed" string="Picking not printed" domain="[('picking_printed','=', False)]" />
             </filter>
         </field>
