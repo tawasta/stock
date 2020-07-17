@@ -22,7 +22,7 @@
     "name": "Mark stock picking as printed",
     "summary": "Mark stock pickings as printed after printing picking list",
     "category": "Warehouse",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "website": "https://github.com/Tawasta/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
