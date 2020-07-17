@@ -29,5 +29,5 @@
     "application": False,
     "installable": True,
     "depends": ["stock"],
-    "data": ["report/stock_report_view.xml","report/report_file.xml"],
+    "data": ["report/stock_report_view.xml", "report/report_file.xml"],
 }
