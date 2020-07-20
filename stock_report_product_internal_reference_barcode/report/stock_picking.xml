@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template id="report_dispatch_note" inherit_id="stock.report_picking">
+        <xpath expr="//table[@t-if='o.move_line_ids']//thead//tr[1]" position="inside">
+            <th>
+                Internal reference
+            </th>
+        </xpath>
+
+        <xpath expr="//table[@t-if='o.move_line_ids']//td[@t-if='has_barcode']" position="replace">
+            <td width="15%" class="text-center">
+                <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('EAN13', ml.product_id.default_code, 600, 150)"
+                    style="width:100%;height:35px" alt="Barcode"/>
+            </td>
+        </xpath>
+    </template>
+</odoo>
