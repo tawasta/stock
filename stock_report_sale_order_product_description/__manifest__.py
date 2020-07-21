@@ -19,16 +19,15 @@
 ##############################################################################
 
 {
-    'name': 'Dispatch note report - Sale order product description',
-    'summary': """Use sale order porduct description on dispatch
-    note instead of stock picking product descriptions""",
+    'name': 'Stock report - Sale order product description',
+    'summary': 'Use sale order product description instead of stock picking',
     'version': '12.0.1.0.0',
     'category': 'Reporting',
-    'website': 'https://github.com/Tawasta/stock',
+    'website': 'https://tawasta.fi',
     'author': 'Tawasta',
     'license': 'AGPL-3',
     'application': False,
     'installable': True,
-    'depends': ["stock", "stock_dispatch_note_report"],
-    'data': ["report/dispatch_note.xml"],
+    'depends': ["stock"],
+    'data': ["report/stock_report.xml"],
 }
