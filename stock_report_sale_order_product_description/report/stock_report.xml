@@ -4,13 +4,16 @@
     <template id="report_picking_inherit"
         inherit_id="stock.report_picking">
 
-        <xpath expr="//span[@t-field='ml.product_id.display_name']"
-            position="replace">
+        <xpath expr="//span[@t-field='ml.product_id.display_name']" position="replace">
         </xpath>
 
         <xpath expr="//span[@t-field='ml.product_id.description_picking']"
             position="replace">
-            <span t-field="move.name"/>
+            <t t-foreach="o.sale_id.order_line" t-as="order_line">
+                <t t-if="order_line.product_id.id == ml.product_id.id">
+                    <span t-field="order_line.name"/>
+                </t>
+            </t>
         </xpath>
 
     </template>
