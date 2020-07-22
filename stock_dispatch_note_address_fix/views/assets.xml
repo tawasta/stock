@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="stock_dispatch_note_report_assets"
+        name="Stock Dispatch Note Report Assets"
+        inherit_id="web.report_assets_common">
+        <xpath expr="." position="inside">
+            <link href="/stock_dispatch_note_address_fix/static/src/scss/report.scss"
+                rel="stylesheet"
+                type="text/scss"/>
+        </xpath>
+    </template>
+</odoo>
