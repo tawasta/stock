@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    'name': 'Stock report - Sale order product description',
-    'summary': 'Use sale order product description instead of stock picking',
+    'name': 'Stock report - Move description',
+    'summary': 'Use move description instead of product name',
     'version': '12.0.1.0.0',
     'category': 'Reporting',
     'website': 'https://tawasta.fi',
