@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <odoo>
     <template id="report_picking_inherit"
         inherit_id="stock.report_picking">
 
-        <xpath expr="//span[@t-field='ml.product_id.display_name']" position="replace">
+        <xpath expr="//span[@t-field='ml.product_id.display_name']"
+            position="replace">
         </xpath>
 
         <xpath expr="//span[@t-field='ml.product_id.description_picking']"
