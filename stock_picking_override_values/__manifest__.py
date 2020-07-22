@@ -19,15 +19,15 @@
 ##############################################################################
 
 {
-    'name': 'Stock report - Sale order product description',
-    'summary': 'Use sale order product description instead of stock picking',
-    'version': '12.0.1.0.0',
-    'category': 'Reporting',
-    'website': 'https://tawasta.fi',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': ["stock"],
-    'data': ["report/stock_report.xml"],
+    "name": "Override new picking values",
+    "summary": "Allow overriding new picking values with system parameters",
+    "category": "Warehouse",
+    "version": "12.0.1.0.1",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": ["stock"],
+    "data": ["data/config_parameter.xml"],
 }
