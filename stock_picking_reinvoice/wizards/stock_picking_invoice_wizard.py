@@ -45,13 +45,17 @@ class StockPickingInvoiceWizard(models.TransientModel):
                     _("Picking is already invoiced: {}".format(picking.name))
                 )
 
+            partner = picking.partner_id
+            pricelist = partner.property_product_pricelist
+
             for move in picking.move_lines:
                 product = move.product_id
+                quantity = move.quantity_done
                 account = (
                     product.property_account_income_id
                     or product.categ_id.property_account_income_categ_id
                 )
-
+                price = pricelist.get_product_price(product, quantity, partner)
                 line_name = "{} - {}".format(move.name, move.picking_id.name)
 
                 self.env["account.invoice.line"].create(
@@ -59,9 +63,9 @@ class StockPickingInvoiceWizard(models.TransientModel):
                         "invoice_id": invoice.id,
                         "product_id": product.id,
                         "name": line_name,
-                        "quantity": move.quantity_done,
+                        "quantity": quantity,
                         "uom_id": move.product_uom.id,
-                        "price_unit": abs(move.price_unit),
+                        "price_unit": price,
                         "account_id": account.id,
                     }
                 )
