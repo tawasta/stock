@@ -6,7 +6,10 @@
 Reinvoice stock pickings
 ========================
 
-Allow making invoices from stock pickings
+Allow making invoices from stock pickings.
+
+You can invoice any customer and combine the new invoice to an existing invoice.
+Invoicing price will be determined using customer pricelist.
 
 Configuration
 =============
