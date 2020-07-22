@@ -3,6 +3,7 @@
 <odoo>
     <template id="stock_report_enable_translation_by_partner.report_picking">
         <t t-foreach="docs" t-as="o">
+            <t t-set="o" t-value="o.with_context(lang=o.partner_id.lang)"/>
             <t t-call="stock.report_picking" t-lang="o.partner_id.lang"/>
         </t>
     </template>
