@@ -6,7 +6,7 @@ from odoo.addons.web.controllers.main import ReportController
 
 
 class PickingReportController(ReportController):
-    @http.route(["/report/download"], type="http", auth="user")
+    @http.route()
     def report_download(self, data, token):
 
         res = super(PickingReportController, self).report_download(data, token)
@@ -18,9 +18,14 @@ class PickingReportController(ReportController):
 
         if "/" in reportname:
             reportname, docids = reportname.split("/")
-            ids = [int(x) for x in docids.split(",")]
 
-            if reportname == "stock.report_picking":
+            if "." in reportname:
+                # Just use the report name ending to allow overriding the print
+                module, reportname = reportname.split(".")
+
+            if reportname in ["stock.report_picking", "report_picking"]:
+                ids = [int(x) for x in docids.split(",")]
+
                 stock_picking_ids = request.env["stock.picking"].browse(ids)
                 stock_picking_ids.write({"picking_printed": fields.Datetime.now()})
 
