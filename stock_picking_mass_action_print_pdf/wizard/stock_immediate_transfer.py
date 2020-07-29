@@ -9,7 +9,7 @@ class StockImmediateTransfer(models.TransientModel):
     mass_transfer_done = fields.Boolean(default=False)
 
     def process(self):
-        res = super(StockImmediateTransfer, self).process()
+        super(StockImmediateTransfer, self).process()
         pickings = self.pick_ids.filtered(
             lambda x: x.mass_transfer_done).sorted(key=lambda t: t.id)
         picks = False
