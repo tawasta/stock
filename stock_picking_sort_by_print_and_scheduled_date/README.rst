@@ -2,13 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-=======================================
-Pack Operation Smartbutton for Pickings
-=======================================
+=========================================================
+Stock Picking sort by Printing printed and Scheduled Date
+=========================================================
 
-* Adds a new button for listing a picking's pack operations
-* Intended as an access point to the pack operation list view where the user
-  can do CSV exports of the pack operation data
+* Stock Picking sort by Printing printed and Scheduled Date
 
 Configuration
 =============
@@ -16,8 +14,7 @@ Configuration
 
 Usage
 =====
-* Open an Available or Done delivery order or receipt and click the 
-  "Details" button
+\-
 
 Known issues / Roadmap
 ======================
@@ -29,7 +26,7 @@ Credits
 Contributors
 ------------
 
-* Timo Talvitie <timo.talvitie@tawasta.fi>
+* Timo Kekäläinen <timo.kekalainen@tawasta.fi>
 
 Maintainer
 ----------

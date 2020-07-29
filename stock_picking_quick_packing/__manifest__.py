@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,26 +19,15 @@
 ##############################################################################
 
 {
-    'name': 'Pack Operation Smartbutton for Pickings',
-    'summary': "Adds a new button for listing picking's pack operations",
-    'version': '12.0.1.0.0',
-    'category': 'Inventory',
-    'website': 'https://github.com/Tawasta/stock',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'stock',
-    ],
-    'data': [
-        'views/stock_pack_operation.xml',
-        'views/stock_picking.xml',
-    ],
-    'demo': [
-    ],
+    "name": "Picking quick packing",
+    "summary": "A wizard for quickly making pseudo packages for pickings",
+    "category": "Warehouse",
+    "version": "12.0.1.0.0",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": ["delivery", "stock"],
+    "data": ["views/stock_picking.xml", "wizards/stock_picking_packing_wizard.xml"],
 }
