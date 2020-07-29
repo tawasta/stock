@@ -9,7 +9,7 @@ class StockBackorderConfirmation(models.TransientModel):
     mass_transfer_done = fields.Boolean(default=False)
 
     def process(self):
-        res = super(StockBackorderConfirmation, self).process()
+        super(StockBackorderConfirmation, self).process()
         pickings = self.pick_ids.filtered(lambda x: x.mass_transfer_done)
         picks = False
         if pickings:
@@ -19,7 +19,7 @@ class StockBackorderConfirmation(models.TransientModel):
         return picks
 
     def process_cancel_backorder(self):
-        res = super(StockBackorderConfirmation, self).process_cancel_backorder()
+        super(StockBackorderConfirmation, self).process_cancel_backorder()
         pickings = self.pick_ids.filtered(lambda x: x.mass_transfer_done)
         picks = False
         if pickings:
