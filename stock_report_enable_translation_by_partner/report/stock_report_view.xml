@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <odoo>
+    <template id="report_picking_lang" inherit_id="stock.report_picking">
+        <xpath expr="//t[@t-foreach='docs']" position="attributes">
+            <attribute name="t-as"></attribute>
+        </xpath>
+        <xpath expr="//t[@t-foreach='docs']" position="attributes">
+            <attribute name="t-foreach"></attribute>
+        </xpath>
+    </template>
+
     <template id="stock_report_enable_translation_by_partner.report_picking">
         <t t-foreach="docs" t-as="o">
             <t t-set="o" t-value="o.with_context(lang=o.partner_id.lang)"/>
@@ -8,3 +17,4 @@
         </t>
     </template>
 </odoo>
+
