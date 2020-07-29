@@ -1,5 +1,5 @@
 
-from odoo import api, models
+from odoo import api
 from odoo.models import TransientModel
 
 
