@@ -1,0 +1,156 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* stock_picking_quick_packing
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-29 12:37+0000\n"
+"PO-Revision-Date: 2020-07-29 12:37+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_picking_quick_packing
+#: model_terms:ir.ui.view,arch_db:stock_picking_quick_packing.stock_picking_pack_wizard_form
+msgid "Cancel"
+msgstr "Peruuta"
+
+#. module: stock_picking_quick_packing
+#: model_terms:ir.ui.view,arch_db:stock_picking_quick_packing.stock_picking_pack_wizard_form
+msgid "Confirm"
+msgstr "Vahvista"
+
+#. module: stock_picking_quick_packing
+#: model:ir.model.fields,field_description:stock_picking_quick_packing.field_stock_picking_packing_wizard__create_uid
+msgid "Created by"
+msgstr "Luonut"
+
+#. module: stock_picking_quick_packing
+#: model:ir.model.fields,field_description:stock_picking_quick_packing.field_stock_picking_packing_wizard__create_date
+msgid "Created on"
+msgstr "Luotu"
+
+#. module: stock_picking_quick_packing
+#: model:ir.model.fields,field_description:stock_picking_quick_packing.field_stock_picking_packing_wizard__delivery_packaging_id
+msgid "Delivery Packaging"
+msgstr "Toimituspakkaus"
+
+#. module: stock_picking_quick_packing
+#: model:ir.model.fields,field_description:stock_picking_quick_packing.field_stock_picking_packing_wizard__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: stock_picking_quick_packing
+#: selection:stock.picking.packing.wizard,package_logic:0
+msgid "Don't split lines"
+msgstr "Älä jaa rivejä"
+
+#. module: stock_picking_quick_packing
+#: model:ir.model.fields,field_description:stock_picking_quick_packing.field_stock_picking_packing_wizard__id
+msgid "ID"
+msgstr "Tunniste (ID)"
+
+#. module: stock_picking_quick_packing
+#: model:ir.model.fields,field_description:stock_picking_quick_packing.field_stock_picking_packing_wizard____last_update
+msgid "Last Modified on"
+msgstr "Viimeksi muokattu"
+
+#. module: stock_picking_quick_packing
+#: model:ir.model.fields,field_description:stock_picking_quick_packing.field_stock_picking_packing_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Viimeksi päivittänyt"
+
+#. module: stock_picking_quick_packing
+#: model:ir.model.fields,field_description:stock_picking_quick_packing.field_stock_picking_packing_wizard__write_date
+msgid "Last Updated on"
+msgstr "Viimeksi päivitetty"
+
+#. module: stock_picking_quick_packing
+#: model:ir.model,name:stock_picking_quick_packing.model_stock_picking_packing_wizard
+msgid "Pack picking quickly"
+msgstr "Pakkaa keräily nopeasti"
+
+#. module: stock_picking_quick_packing
+#: model:ir.model,name:stock_picking_quick_packing.model_stock_picking_pack_wizard
+msgid "Pack pickings quickly"
+msgstr "Pakkaa keräilyjä nopeasti"
+
+#. module: stock_picking_quick_packing
+#: model:ir.model.fields,field_description:stock_picking_quick_packing.field_stock_picking_packing_wizard__package_weight
+msgid "Package weight"
+msgstr "Pakkauksen paino"
+
+#. module: stock_picking_quick_packing
+#: model:ir.model.fields,field_description:stock_picking_quick_packing.field_stock_picking_packing_wizard__package_amount
+msgid "Packages"
+msgstr "Pakkaukset"
+
+#. module: stock_picking_quick_packing
+#: model:ir.model.fields,field_description:stock_picking_quick_packing.field_stock_picking_packing_wizard__package_logic
+msgid "Packaging logic"
+msgstr "Pakkauslogiikka"
+
+#. module: stock_picking_quick_packing
+#: model:ir.actions.act_window,name:stock_picking_quick_packing.action_stock_picking_packing_wizard
+msgid "Packing wizard"
+msgstr "Ohjattu pakkaus"
+
+#. module: stock_picking_quick_packing
+#: code:addons/stock_picking_quick_packing/wizards/stock_picking_packing_wizard.py:51
+#, python-format
+msgid "Picking already has packages. Please package rest of the products manually"
+msgstr "Keräilyllä on jo paketteja. Ole hyvä ja pakkaa loputkin tuotteet käsin"
+
+#. module: stock_picking_quick_packing
+#: code:addons/stock_picking_quick_packing/wizards/stock_picking_packing_wizard.py:61
+#, python-format
+msgid "Please try with fewer packages"
+msgstr "Yritä uudelleen vähemmillä paketeilla"
+
+#. module: stock_picking_quick_packing
+#: model_terms:ir.ui.view,arch_db:stock_picking_quick_packing.view_picking_form
+msgid "Put all in Pack"
+msgstr "Pakkaa kaikki"
+
+#. module: stock_picking_quick_packing
+#: model_terms:ir.ui.view,arch_db:stock_picking_quick_packing.stock_picking_pack_wizard_form
+msgid "Put in packs"
+msgstr "Laita paketteihin"
+
+#. module: stock_picking_quick_packing
+#: code:addons/stock_picking_quick_packing/wizards/stock_picking_packing_wizard.py:44
+#, python-format
+msgid "Selected packaging logic is not supported"
+msgstr "Valittu paketointilogiikka ei ole tuettu"
+
+#. module: stock_picking_quick_packing
+#: model:ir.model.fields,field_description:stock_picking_quick_packing.field_stock_picking_packing_wizard__shipping_weight
+msgid "Shipping weight"
+msgstr "Toimituspaino"
+
+#. module: stock_picking_quick_packing
+#: selection:stock.picking.packing.wizard,package_logic:0
+msgid "Split lines"
+msgstr "Jaa rivit"
+
+#. module: stock_picking_quick_packing
+#: code:addons/stock_picking_quick_packing/wizards/stock_picking_packing_wizard.py:60
+#, python-format
+msgid "Splitting one line to multiple packages is not supported."
+msgstr "Yhden rivin jakamista useaan pakkaukseen ei ole tuettu."
+
+#. module: stock_picking_quick_packing
+#: model:ir.model,name:stock_picking_quick_packing.model_stock_picking
+msgid "Transfer"
+msgstr "Siirto"
+
+#. module: stock_picking_quick_packing
+#: model_terms:ir.ui.view,arch_db:stock_picking_quick_packing.stock_picking_pack_wizard_form
+msgid "or"
+msgstr "tai"
+
