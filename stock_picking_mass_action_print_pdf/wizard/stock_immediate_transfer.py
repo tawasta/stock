@@ -15,6 +15,7 @@ class StockImmediateTransfer(models.TransientModel):
         picks = False
         if pickings:
             self.mass_transfer_done = True
-            picks = self.env.ref('stock.action_report_picking').\
+            picks = self.env.ref(
+                'stock_dispatch_note_report.stock_picking_dispatch_report').\
                 report_action(pickings)
         return picks
