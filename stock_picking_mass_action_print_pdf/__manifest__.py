@@ -28,7 +28,10 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["stock_picking_mass_action"],
+    "depends": [
+        "stock_dispatch_note_report",
+        "stock_picking_mass_action"
+    ],
     "data": [
         "wizard/stock_backorder_confirmation_view.xml",
         "wizard/stock_immediate_transfer_view.xml"
