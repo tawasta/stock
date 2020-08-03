@@ -10,7 +10,8 @@ class StockPickingMassAction(TransientModel):
     @api.multi
     def print_mass_pdf(self):
         pickings = self.picking_ids
-        picks = self.env.ref('stock.action_report_picking').\
+        picks = self.env.ref(
+            'stock_dispatch_note_report.stock_picking_dispatch_report').\
             report_action(pickings)
         return picks
 
