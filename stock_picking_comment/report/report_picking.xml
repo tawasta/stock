@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <odoo>
-    <template id="report_delivery_document" inherit_id="stock.report_delivery_document">
-        <xpath expr="//h2" position="after">
+    <template id="report_picking" inherit_id="stock.report_picking">
+        <xpath expr="//div[@class='clearfix']" position="after">
             <p t-if="o.comment" t-field="o.comment" />
         </xpath>
     </template>
