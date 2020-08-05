@@ -20,7 +20,8 @@
 
 {
     "name": "Stock picking comment",
-    "summary": "External comment for stock picking delivery slip",
+    "summary": """External comment for stock picking Dispatch note
+                  and Picking Operations""",
     "category": "Warehouse",
     "version": "12.0.1.0.0",
     "website": "https://github.com/Tawasta/stock",
@@ -28,6 +29,10 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["stock"],
-    "data": ["views/stock_picking.xml", "report/stock_picking.xml"],
+    "depends": ["stock_dispatch_note_report"],
+    "data": [
+        "views/stock_picking.xml",
+        "report/dispatch_note.xml",
+        "report/report_picking.xml",
+    ],
 }
