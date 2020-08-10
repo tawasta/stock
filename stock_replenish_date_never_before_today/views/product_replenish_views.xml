@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template id="product_replenish_view" inherit_id="stock.view_product_replenish">
+        <field name="date_planned"
+            position="before">
+            Any date before today sets the date to today
+        </field>
+    </template>
+</odoo>
