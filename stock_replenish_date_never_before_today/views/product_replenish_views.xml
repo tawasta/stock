@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <field name="date_planned" position="after">
                 <small>
-                    If before today, is reset to today
+                    If scheduled date is before today, is reset to today
                 </small>
             </field>
         </field>
