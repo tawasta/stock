@@ -29,5 +29,5 @@
     "application": False,
     "installable": True,
     "depends": ["stock"],
-    "data": [],
+    "data": ["views/product_replenish_views.xml"],
 }
