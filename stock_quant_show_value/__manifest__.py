@@ -29,5 +29,8 @@
     "application": False,
     "installable": True,
     "depends": ["stock"],
-    "data": ["views/stock_quant.xml"],
+    "data": [
+        "security/ir.model.access.csv",
+        "views/stock_quant.xml"
+    ],
 }
