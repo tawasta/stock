@@ -41,7 +41,7 @@ class StockPicking(models.Model):
                     origin
                 )
         elif origin.startswith("PO"):
-            self.source_document_link_sale_order = \
+            self.source_document_link_purchase_order = \
                 get_model_by_name_or_false(
                     'purchase.order',
                     origin
