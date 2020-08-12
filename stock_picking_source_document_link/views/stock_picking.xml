@@ -7,6 +7,9 @@
         <field name="inherit_id" ref="stock.view_picking_form"/>
         <field name="arch" type="xml">
             <field name="origin" position="after">
+                <strong style="width: 50%;" class="oe_left">
+                    Source document link
+                </strong>
                 <t t-if="source_document_link_sale_order">
                     <field name="source_document_link_sale_order"></field>
                 </t>
