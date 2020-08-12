@@ -33,7 +33,7 @@ class StockPicking(models.Model):
                 if len(links) >= 1:
                     return links[0]
                 else:
-                    return false
+                    return False
 
             if origin.startswith("so"):
                 pick.source_document_link_sale_order = \
