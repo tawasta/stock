@@ -25,31 +25,31 @@ class StockPicking(models.Model):
 
     @api.depends("origin")
     def _compute_source_document_link(self):
+        def get_model_by_name_or_false(model, name):
+            links = self.env[model].search([('name', '=', name)])
+            if len(links) >= 1:
+                return links[0]
+            else:
+                return False
+
         for pick in self:
             origin = str(pick.origin)
 
-            def get_model_by_name_or_false(model, name):
-                links = self.env[model].search([('name', '=', name)])
-                if len(links) >= 1:
-                    return links[0]
-                else:
-                    return False
-
-            if origin.startswith("so"):
+            if origin.startswith("SO"):
                 pick.source_document_link_sale_order = \
                     get_model_by_name_or_false(
                         'sale.order',
                         origin
                     )
-            elif origin.startswith("po"):
+            elif origin.startswith("PO"):
                 pick.source_document_link_purchase_order = \
                     get_model_by_name_or_false(
                         'purchase.order',
                         origin
                     )
-            elif origin.startswith("return of wh"):
+            elif origin.startswith("Return of WH"):
                 pick.source_document_link_stock_picking = \
                     get_model_by_name_or_false(
                         'stock.picking',
-                        origin.replace("return of ", ""),
+                        origin.replace("Return of ", ""),
                     )
