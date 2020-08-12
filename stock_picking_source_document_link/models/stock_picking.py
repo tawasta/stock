@@ -19,7 +19,7 @@ class StockPicking(models.Model):
 
     source_document_link_stock_picking = fields.Many2one(
         string="Source document link",
-        comodel_name="purchase.order",
+        comodel_name="stock.picking",
         compute="_compute_source_document_link",
     )
 
