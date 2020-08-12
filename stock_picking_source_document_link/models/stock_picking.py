@@ -51,5 +51,5 @@ class StockPicking(models.Model):
                 pick.source_document_link_stock_picking = \
                     get_model_by_name_or_false(
                         'stock.picking',
-                        origin.replace("return of ", ""),
+                        origin.replace("Return of ", ""),
                     )
