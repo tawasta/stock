@@ -6,16 +6,19 @@ class StockPicking(models.Model):
     _inherit = "stock.picking"
 
     source_document_link_sale_order = fields.Many2one(
+        string="Source document link",
         comodel_name="sale.order",
         compute="_compute_source_document_link",
     )
 
     source_document_link_purchase_order = fields.Many2one(
+        string="Source document link",
         comodel_name="purchase.order",
         compute="_compute_source_document_link",
     )
 
     source_document_link_stock_picking = fields.Many2one(
+        string="Source document link",
         comodel_name="stock.picking",
         compute="_compute_source_document_link",
     )
