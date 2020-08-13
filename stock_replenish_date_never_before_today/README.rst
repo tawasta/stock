@@ -3,10 +3,10 @@
    :alt: License: AGPL-3
 
 ============================================================
-Stock Report - Enable report translation by partner language
+Stock replenish - Date never before today
 ============================================================
 
-* Enable report translation by partner language
+If replenish day before today change it to today
 
 Configuration
 =============
@@ -14,7 +14,7 @@ Configuration
 
 Usage
 =====
-* Go to Apps to install this module
+\-
 
 Known issues / Roadmap
 ======================
@@ -26,7 +26,7 @@ Credits
 Contributors
 ------------
 
-* Timo Kekäläinen <timo.kekalainen@tawasta.fi>
+* Joona Isoaho <joona.isoaho@tawasta.fi>
 
 Maintainer
 ----------
