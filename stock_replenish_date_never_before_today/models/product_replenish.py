@@ -6,7 +6,8 @@ class ProductReplenish(models.TransientModel):
     _description = 'Product Replenish - Date never before today'
 
     def _prepare_run_values(self):
+        res = super(ProductReplenish, self)._prepare_run_values()
         if self.date_planned < fields.Datetime.now():
-            self.date_planned_checked = fields.Datetime.now()
+            res['date_planned'] = fields.Datetime.now()
 
-        return super(ProductReplenish, self)._prepare_run_values()
+        return res
