@@ -18,12 +18,20 @@ class StockPickingInvoiceWizard(models.TransientModel):
         help="Select this to combine new lines to an existing invoice",
     )
 
+    group_lines = fields.Boolean(
+        string="Group lines",
+        default=True,
+        help="If the invoice already has a line for product in this picking, "
+        "add quantity to the existing line",
+    )
+
     @api.multi
     def action_create_invoice(self):
 
         picking_ids = self.env["stock.picking"].browse(self._context.get("active_ids"))
 
         invoice = self.existing_invoice_id
+        ail = self.env["account.invoice.line"]
 
         if not invoice:
             invoice = self.env["account.invoice"].create(
@@ -58,16 +66,35 @@ class StockPickingInvoiceWizard(models.TransientModel):
                 price = pricelist.get_product_price(product, quantity, partner)
                 line_name = "{} - {}".format(move.name, move.picking_id.name)
 
-                self.env["account.invoice.line"].create(
-                    {
-                        "invoice_id": invoice.id,
-                        "product_id": product.id,
-                        "name": line_name,
-                        "quantity": quantity,
-                        "uom_id": move.product_uom.id,
-                        "price_unit": price,
-                        "account_id": account.id,
-                    }
-                )
+                if self.group_lines:
+                    # Try to find existing invoice line
+                    existing_line = ail.search(
+                        [
+                            ("product_id", "=", product.id),
+                            ("invoice_id", "=", invoice.id),
+                        ]
+                    )
+
+                if existing_line:
+                    existing_line.write(
+                        {
+                            "quantity": existing_line.quantity + quantity,
+                            "name": "{}, {}".format(
+                                existing_line.name, move.picking_id.name
+                            ),
+                        }
+                    )
+                else:
+                    ail.create(
+                        {
+                            "invoice_id": invoice.id,
+                            "product_id": product.id,
+                            "name": line_name,
+                            "quantity": quantity,
+                            "uom_id": move.product_uom.id,
+                            "price_unit": price,
+                            "account_id": account.id,
+                        }
+                    )
 
             picking.invoice_id = invoice.id
