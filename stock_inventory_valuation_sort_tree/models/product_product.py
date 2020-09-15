@@ -8,4 +8,3 @@ class ProductProduct(models.Model):
 
     stock_value = fields.Float(store=True)
     qty_at_date = fields.Float(store=True)
-    display_name = fields.Char(store=True)
