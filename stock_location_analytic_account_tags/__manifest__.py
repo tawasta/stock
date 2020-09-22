@@ -19,25 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Analytic Account Tags for Stock Location',
-    'summary': "Show AA tags on stock location form",
-    'version': '12.0.1.0.0',
-    'category': 'Inventory',
-    'website': 'https://github.com/Tawasta/stock',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'stock_location_analytic_account',
-    ],
-    'data': [
-        'views/stock_location.xml',
-    ],
-    'demo': [
-    ],
+    "name": "Analytic Account Tags for Stock Location",
+    "summary": "Show AA tags on stock location form",
+    "version": "12.0.1.0.0",
+    "category": "Inventory",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["stock_location_analytic_account"],
+    "data": ["views/stock_location.xml"],
+    "demo": [],
 }

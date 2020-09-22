@@ -5,7 +5,7 @@
         <field name="name">analytic.analytic.account.location.form</field>
         <field name="model">account.analytic.account</field>
         <field name="inherit_id"
-               ref="analytic.view_account_analytic_account_form"/>
+               ref="account_analytic_account_tags.view_account_analytic_account_form"/>
         <field name="arch" type="xml">
 
             <field name="tag_ids" position="after">
