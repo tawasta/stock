@@ -5,5 +5,4 @@ class StockPicking(models.Model):
 
     _inherit = 'stock.picking'
 
-    week_of_shipment = fields.Integer(
-        related="sale_id.week_of_shipment", store=True)
+    effective_date = fields.Date(related="sale_id.effective_date", store=True)
