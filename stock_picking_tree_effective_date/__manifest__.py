@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,17 +19,17 @@
 ##############################################################################
 
 {
-    "name": "Analytic Account Tags for Stock Location",
-    "summary": "Show AA tags on stock location form",
+    "name": "Stock Picking - Effective date",
+    "summary": "Adds Effective date from Sale Order to picking list view",
     "version": "12.0.1.0.0",
-    "category": "Inventory",
+    "category": "Stock",
     "website": "https://github.com/Tawasta/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "external_dependencies": {"python": [], "bin": []},
-    "depends": ["stock_location_analytic_account"],
-    "data": ["views/stock_location.xml"],
-    "demo": [],
+    "depends": ["sale", "stock"],
+    "data": [
+        "views/stock_picking.xml"
+    ],
 }

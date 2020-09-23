@@ -19,28 +19,21 @@
 ##############################################################################
 
 {
-    'name': 'Analytic account - Stock location relation',
-    'summary': 'Integrate stock location with analytic account',
-    'version': '12.0.1.0.0',
-    'category': 'Inventory',
-    'website': 'https://github.com/Tawasta/stock',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'project',
-        'stock',
+    "name": "Analytic account - Stock location relation",
+    "summary": "Integrate stock location with analytic account",
+    "version": "12.0.1.0.0",
+    "category": "Inventory",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["account_analytic_account_tags", "project", "stock"],
+    "data": [
+        "views/analytic_account.xml",
+        # "views/project_project.xml",
+        "views/stock_location.xml",
     ],
-    'data': [
-        'views/analytic_account.xml',
-        'views/project_project.xml',
-        'views/stock_location.xml',
-    ],
-    'demo': [
-    ],
+    "demo": [],
 }

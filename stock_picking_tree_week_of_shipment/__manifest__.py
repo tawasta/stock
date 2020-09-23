@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,21 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Weight on stock picking and pack operation lines',
-    'summary': 'Add weight on stock picking and operations',
-    'category': 'Warehouse',
-    'version': '12.0.1.0.0',
-    'website': 'https://github.com/Tawasta/stock',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': [
-        'delivery',
-        'uom_weight',
-        'stock',
-    ],
-    'data': [
-        'views/stock_picking.xml',
+    "name": "Stock Picking - Week of shipment",
+    "summary": "Stock Picking - Week of shipment on list view",
+    "version": "12.0.1.0.0",
+    "category": "Stock",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": ["stock", "sale_order_week_of_shipment"],
+    "data": [
+        "views/stock_picking.xml"
     ],
 }

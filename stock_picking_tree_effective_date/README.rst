@@ -2,11 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-================================================
-Weight on stock picking and pack operation lines
-================================================
+==============================
+Stock Picking - Effective date
+==============================
 
-Add weight on stock picking and operations
+Adds Effective date from Sale Order to picking list view
 
 Configuration
 =============
@@ -26,9 +26,7 @@ Credits
 Contributors
 ------------
 
-* Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>
 * Timo Kekäläinen <timo.kekalainen@tawasta.fi>
-* Timo Talvitie <timo.talvitie@tawasta.fi>
 
 Maintainer
 ----------
