@@ -19,25 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Partner - Stock location automation',
-    'summary': 'Auto-create stock locations for partners',
-    'version': '12.0.1.0.0',
-    'category': 'Inventory',
-    'website': 'https://github.com/Tawasta/stock',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'sale',
-        'stock',
-    ],
-    'data': [
-    ],
-    'demo': [
-    ],
+    "name": "Partner - Stock location automation",
+    "summary": "Auto-create stock locations for partners",
+    "version": "12.0.1.0.0",
+    "category": "Inventory",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": [],},
+    "depends": ["sale", "stock",],
+    "data": [],
+    "demo": [],
 }

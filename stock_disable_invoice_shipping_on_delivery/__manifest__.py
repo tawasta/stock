@@ -19,24 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Disable picking auto-generated delivery SO lines',
-    'summary': 'Disable picking auto-generated delivery SO lines',
-    'version': '12.0.1.0.0',
-    'category': 'Sales',
-    'website': 'https://github.com/Tawasta/stock',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'delivery',
-    ],
-    'data': [
-    ],
-    'demo': [
-    ],
+    "name": "Disable picking auto-generated delivery SO lines",
+    "summary": "Disable picking auto-generated delivery SO lines",
+    "version": "12.0.1.0.0",
+    "category": "Sales",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": [],},
+    "depends": ["delivery",],
+    "data": [],
+    "demo": [],
 }

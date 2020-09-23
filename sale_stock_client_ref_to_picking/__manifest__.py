@@ -19,24 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Customer reference to stock pickings',
-    'summary': 'Move SO customer reference to created stock pickings',
-    'version': '12.0.1.0.0',
-    'category': 'Inventory',
-    'website': 'https://github.com/Tawasta/stock',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'sale_stock',
-    ],
-    'data': [
-    ],
-    'demo': [
-    ],
+    "name": "Customer reference to stock pickings",
+    "summary": "Move SO customer reference to created stock pickings",
+    "version": "12.0.1.0.0",
+    "category": "Inventory",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": [],},
+    "depends": ["sale_stock",],
+    "data": [],
+    "demo": [],
 }

@@ -19,26 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Stock valuation history report',
-    'summary': 'A QWeb report from stock history values (inventory valuation)',
-    'version': '12.0.1.0.0',
-    'category': 'Inventory',
-    'website': 'https://github.com/Tawasta/stock',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'report',
-        'stock_account',
-    ],
-    'data': [
-        'report/stock_history_valuation_report.xml',
-    ],
-    'demo': [
-    ],
+    "name": "Stock valuation history report",
+    "summary": "A QWeb report from stock history values (inventory valuation)",
+    "version": "12.0.1.0.0",
+    "category": "Inventory",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Oy Tawasta Technologies Ltd.",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": [],},
+    "depends": ["report", "stock_account",],
+    "data": ["report/stock_history_valuation_report.xml",],
+    "demo": [],
 }

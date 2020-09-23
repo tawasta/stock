@@ -19,18 +19,15 @@
 ##############################################################################
 
 {
-    'name': 'Disable stock picking operation grouping',
-    'summary': 'Never group demand rows for same products',
-    'category': 'Warehouse',
-    'version': '12.0.1.0.0',
-    'website': 'https://github.com/Tawasta/stock',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': [
-        'stock',
-    ],
-    'data': [
-    ],
+    "name": "Disable stock picking operation grouping",
+    "summary": "Never group demand rows for same products",
+    "category": "Warehouse",
+    "version": "12.0.1.0.0",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": ["stock",],
+    "data": [],
 }

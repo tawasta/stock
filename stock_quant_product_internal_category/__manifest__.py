@@ -19,19 +19,15 @@
 ##############################################################################
 
 {
-    'name': 'Stock Quant internal category',
-    'summary': 'Show Stock Quant internal category',
-    'version': '12.0.1.0.0',
-    'category': 'Stock',
-    'website': 'https://tawasta.fi',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': [
-        'stock',
-    ],
-    'data': [
-        'views/stock_quant.xml',
-    ],
+    "name": "Stock Quant internal category",
+    "summary": "Show Stock Quant internal category",
+    "version": "12.0.1.0.0",
+    "category": "Stock",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": ["stock",],
+    "data": ["views/stock_quant.xml",],
 }

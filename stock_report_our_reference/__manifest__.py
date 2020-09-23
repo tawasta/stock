@@ -19,15 +19,15 @@
 ##############################################################################
 
 {
-    'name': 'Stock Picking and Delivery Slip Report Our Reference',
-    'summary': 'Stock Picking and Delivery Slip Report Our Reference',
-    'version': '12.0.1.0.0',
-    'category': 'Reporting',
-    'website': 'https://tawasta.fi',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': ["sale_stock", "stock", "stock_report_element_sizes"],
-    'data': ["report/stock_report.xml"],
+    "name": "Stock Picking and Delivery Slip Report Our Reference",
+    "summary": "Stock Picking and Delivery Slip Report Our Reference",
+    "version": "12.0.1.0.0",
+    "category": "Reporting",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": ["sale_stock", "stock", "stock_report_element_sizes"],
+    "data": ["report/stock_report.xml"],
 }

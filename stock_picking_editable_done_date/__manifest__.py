@@ -19,25 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Editable Date of Transfer for Pickings',
-    'summary': 'Show the date when transfer was done and make it editable',
-    'version': '12.0.1.0.0',
-    'category': 'Warehouse',
-    'website': 'https://github.com/Tawasta/stock',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'sale_stock',
-    ],
-    'data': [
-        'views/stock_picking.xml',
-    ],
-    'demo': [
-    ],
+    "name": "Editable Date of Transfer for Pickings",
+    "summary": "Show the date when transfer was done and make it editable",
+    "version": "12.0.1.0.0",
+    "category": "Warehouse",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": [],},
+    "depends": ["sale_stock",],
+    "data": ["views/stock_picking.xml",],
+    "demo": [],
 }

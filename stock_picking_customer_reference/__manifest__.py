@@ -19,17 +19,15 @@
 ##############################################################################
 
 {
-    'name': 'Stock Picking Customer Reference',
-    'summary': 'Stock Picking Customer Reference',
-    'version': '12.0.1.0.0',
-    'category': 'Stock',
-    'website': 'https://tawasta.fi',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': ["stock"],
-    'data': [
-        "views/stock_picking.xml"
-    ],
+    "name": "Stock Picking Customer Reference",
+    "summary": "Stock Picking Customer Reference",
+    "version": "12.0.1.0.0",
+    "category": "Stock",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": ["stock"],
+    "data": ["views/stock_picking.xml"],
 }

@@ -19,25 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Stock inventory adjustment manual cost',
-    'summary': 'Allow modifying inventory adjustment line costs manually',
-    'version': '12.0.1.0.0',
-    'category': 'Inventory',
-    'website': 'https://github.com/Tawasta/stock',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'stock',
-    ],
-    'data': [
-        'views/stock_inventory.xml',
-    ],
-    'demo': [
-    ],
+    "name": "Stock inventory adjustment manual cost",
+    "summary": "Allow modifying inventory adjustment line costs manually",
+    "version": "12.0.1.0.0",
+    "category": "Inventory",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": [],},
+    "depends": ["stock",],
+    "data": ["views/stock_inventory.xml",],
+    "demo": [],
 }

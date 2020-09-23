@@ -19,26 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Stock inventory line product tags',
-    'summary': 'Show product tags on inventory lines',
-    'version': '12.0.1.0.0',
-    'category': 'Inventory',
-    'website': 'https://tawasta.fi',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'product_template_tags',
-        'stock',
-    ],
-    'data': [
-        'views/stock_inventory_line.xml',
-    ],
-    'demo': [
-    ],
+    "name": "Stock inventory line product tags",
+    "summary": "Show product tags on inventory lines",
+    "version": "12.0.1.0.0",
+    "category": "Inventory",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": [],},
+    "depends": ["product_template_tags", "stock",],
+    "data": ["views/stock_inventory_line.xml",],
+    "demo": [],
 }

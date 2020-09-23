@@ -23,7 +23,7 @@
     "summary": "Adds customer order number to stock picking list and form views",
     "version": "12.0.1.0.0",
     "category": "Stock",
-    "website": "https://tawasta.fi",
+    "website": "https://github.com/Tawasta/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

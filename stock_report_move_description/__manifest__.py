@@ -19,15 +19,15 @@
 ##############################################################################
 
 {
-    'name': 'Stock report - Move description',
-    'summary': 'Use move description instead of product name',
-    'version': '12.0.1.0.0',
-    'category': 'Reporting',
-    'website': 'https://tawasta.fi',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': ["stock"],
-    'data': ["report/stock_report.xml"],
+    "name": "Stock report - Move description",
+    "summary": "Use move description instead of product name",
+    "version": "12.0.1.0.0",
+    "category": "Reporting",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": ["stock"],
+    "data": ["report/stock_report.xml"],
 }

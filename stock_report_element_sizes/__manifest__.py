@@ -19,15 +19,15 @@
 ##############################################################################
 
 {
-    'name': 'Stock Report Element Sizing',
-    'summary': 'Stock Report Element Sizing',
-    'version': '12.0.1.0.0',
-    'category': 'Reporting',
-    'website': 'https://tawasta.fi',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': ["stock", "web"],
-    'data': ["report/stock_report_template.xml"],
+    "name": "Stock Report Element Sizing",
+    "summary": "Stock Report Element Sizing",
+    "version": "12.0.1.0.0",
+    "category": "Reporting",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": ["stock", "web"],
+    "data": ["report/stock_report_template.xml"],
 }

@@ -19,19 +19,15 @@
 ##############################################################################
 
 {
-    'name': 'Orderpoint Calculation for Stock Managers',
-    'summary': "Stock Managers see the 'Run reordering rules' menuitem",
-    'category': 'Inventory',
-    'version': '12.0.1.0.0',
-    'website': 'https://github.com/Tawasta/stock',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': [
-        'stock',
-    ],
-    'data': [
-        'views/procurement_orderpoint_compute.xml',
-    ],
+    "name": "Orderpoint Calculation for Stock Managers",
+    "summary": "Stock Managers see the 'Run reordering rules' menuitem",
+    "category": "Inventory",
+    "version": "12.0.1.0.0",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": ["stock",],
+    "data": ["views/procurement_orderpoint_compute.xml",],
 }

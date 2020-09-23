@@ -19,15 +19,15 @@
 ##############################################################################
 
 {
-    'name': 'Dispatch Note Element Sizing',
-    'summary': 'Dispatch Note Element Sizing',
-    'version': '12.0.1.0.0',
-    'category': 'Reporting',
-    'website': 'https://github.com/Tawasta/stock',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': ["stock", "stock_dispatch_note_report", "web"],
-    'data': ["report/dispatch_note_template.xml"],
+    "name": "Dispatch Note Element Sizing",
+    "summary": "Dispatch Note Element Sizing",
+    "version": "12.0.1.0.0",
+    "category": "Reporting",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": ["stock", "stock_dispatch_note_report", "web"],
+    "data": ["report/dispatch_note_template.xml"],
 }

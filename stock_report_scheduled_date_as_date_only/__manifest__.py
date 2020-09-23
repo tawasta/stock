@@ -19,15 +19,15 @@
 ##############################################################################
 
 {
-    'name': 'Stock Picking and Delivery Slip Report Scheduled Date as Date only',
-    'summary': 'Stock Picking and Delivery Slip Report Scheduled Date as Date only',
-    'version': '12.0.1.0.0',
-    'category': 'Reporting',
-    'website': 'https://tawasta.fi',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': ["sale_stock", "stock"],
-    'data': ["report/stock_report.xml"],
+    "name": "Stock Picking and Delivery Slip Report Scheduled Date as Date only",
+    "summary": "Stock Picking and Delivery Slip Report Scheduled Date as Date only",
+    "version": "12.0.1.0.0",
+    "category": "Reporting",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": ["sale_stock", "stock"],
+    "data": ["report/stock_report.xml"],
 }
