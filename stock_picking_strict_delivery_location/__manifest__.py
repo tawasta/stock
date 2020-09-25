@@ -19,25 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Strict picking delivery location',
-    'summary': 'Only allow selecting customers locations for delivery',
-    'version': '12.0.1.0.0',
-    'category': 'Inventory',
-    'website': 'https://github.com/Tawasta/stock',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'base_view_inheritance_extension',
-        'stock',
-    ],
-    'data': [
-    ],
-    'demo': [
-    ],
+    "name": "Strict picking delivery location",
+    "summary": "Only allow selecting customers locations for delivery",
+    "version": "12.0.1.0.0",
+    "category": "Inventory",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": [],},
+    "depends": ["base_view_inheritance_extension", "stock",],
+    "data": [],
+    "demo": [],
 }

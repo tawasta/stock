@@ -19,21 +19,19 @@
 ##############################################################################
 
 {
-    'name': 'Dispatch Note report Customer Reference',
-    'summary': 'Dispatch Note report Customer Reference',
-    'version': '12.0.1.0.0',
-    'category': 'Stock',
-    'website': 'https://tawasta.fi',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': [
+    "name": "Dispatch Note report Customer Reference",
+    "summary": "Dispatch Note report Customer Reference",
+    "version": "12.0.1.0.0",
+    "category": "Stock",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": [
         "stock",
         "stock_dispatch_note_report",
-        "stock_picking_customer_reference"
+        "stock_picking_customer_reference",
     ],
-    'data': [
-        "report/stock_picking_dispatch_report.xml",
-    ],
+    "data": ["report/stock_picking_dispatch_report.xml",],
 }

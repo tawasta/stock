@@ -19,26 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Carrier in stock picking tree view',
-    'summary': 'Add carrier to stock picking tree view',
-    'version': '12.0.1.0.0',
-    'category': 'Inventory',
-    'website': 'https://github.com/Tawasta/stock',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'delivery',
-        'stock',
-    ],
-    'data': [
-        'views/stock_picking_tree.xml',
-    ],
-    'demo': [
-    ],
+    "name": "Carrier in stock picking tree view",
+    "summary": "Add carrier to stock picking tree view",
+    "version": "12.0.1.0.0",
+    "category": "Inventory",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": [],},
+    "depends": ["delivery", "stock",],
+    "data": ["views/stock_picking_tree.xml",],
+    "demo": [],
 }

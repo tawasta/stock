@@ -23,7 +23,7 @@
     "summary": "Adds Expected Date to Stock move tree view",
     "version": "12.0.1.0.0",
     "category": "Stock",
-    "website": "https://tawasta.fi",
+    "website": "https://github.com/Tawasta/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

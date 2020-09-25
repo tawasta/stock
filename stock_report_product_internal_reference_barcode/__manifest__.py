@@ -19,15 +19,15 @@
 ##############################################################################
 
 {
-    'name': 'Stock report - Internal reference barcode',
-    'summary': 'Adds internal reference to stock report',
-    'version': '12.0.1.0.0',
-    'category': 'Reporting',
-    'website': 'https://tawasta.fi',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': ["stock"],
-    'data': ["report/stock_picking.xml"],
+    "name": "Stock report - Internal reference barcode",
+    "summary": "Adds internal reference to stock report",
+    "version": "12.0.1.0.0",
+    "category": "Reporting",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": ["stock"],
+    "data": ["report/stock_picking.xml"],
 }

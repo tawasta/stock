@@ -19,24 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Auto-create new sale orders from returned pickings',
-    'summary': 'When returning an invoiced picking, create a new sale order',
-    'version': '12.0.1.0.0',
-    'category': 'Inventory',
-    'website': 'https://github.com/Tawasta/stock',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'sale_stock',
-    ],
-    'data': [
-    ],
-    'demo': [
-    ],
+    "name": "Auto-create new sale orders from returned pickings",
+    "summary": "When returning an invoiced picking, create a new sale order",
+    "version": "12.0.1.0.0",
+    "category": "Inventory",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": [],},
+    "depends": ["sale_stock",],
+    "data": [],
+    "demo": [],
 }

@@ -19,21 +19,15 @@
 ##############################################################################
 
 {
-    'name': 'Stock Picking Container Count',
-    'summary': 'Stock Picking Container Count',
-    'version': '12.0.1.0.0',
-    'category': 'Stock',
-    'website': 'https://tawasta.fi',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': [
-        "stock",
-        "stock_dispatch_note_report",
-    ],
-    'data': [
-        "report/stock_picking_report.xml",
-        "views/stock_picking.xml",
-    ],
+    "name": "Stock Picking Container Count",
+    "summary": "Stock Picking Container Count",
+    "version": "12.0.1.0.0",
+    "category": "Stock",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": ["stock", "stock_dispatch_note_report",],
+    "data": ["report/stock_picking_report.xml", "views/stock_picking.xml",],
 }

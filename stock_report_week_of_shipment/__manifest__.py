@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,17 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Partner - Stock location automation",
-    "summary": "Auto-create stock locations for partners",
+    "name": "Picking Report - Week of shipment",
+    "summary": "Add week of shipment to Picking report",
     "version": "12.0.1.0.0",
-    "category": "Inventory",
+    "category": "Reporting",
     "website": "https://github.com/Tawasta/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "external_dependencies": {"python": [], "bin": [],},
-    "depends": ["sale", "stock",],
-    "data": [],
-    "demo": [],
+    "depends": ["sale_order_week_of_shipment", "stock"],
+    "data": ["report/stock_report.xml"],
 }

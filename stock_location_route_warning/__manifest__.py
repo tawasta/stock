@@ -19,26 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Allow using warnings on stock routes',
-    'summary': 'Allow using warnings on stock routes',
-    'version': '12.0.1.0.0',
-    'category': 'Inventory',
-    'website': 'https://github.com/Tawasta/stock',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'stock',
-        'sale',
-    ],
-    'data': [
-        'views/stock_location_route.xml',
-    ],
-    'demo': [
-    ],
+    "name": "Allow using warnings on stock routes",
+    "summary": "Allow using warnings on stock routes",
+    "version": "12.0.1.0.0",
+    "category": "Inventory",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": [],},
+    "depends": ["stock", "sale",],
+    "data": ["views/stock_location_route.xml",],
+    "demo": [],
 }

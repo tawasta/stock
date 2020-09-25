@@ -19,15 +19,15 @@
 ##############################################################################
 
 {
-    'name': 'Dispatch Note Report - Payment terms',
-    'summary': 'Add payment terms to dispatch note report',
-    'version': '12.0.1.0.0',
-    'category': 'Reporting',
-    'website': 'https://github.com/Tawasta/stock',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': ["stock_dispatch_note_report"],
-    'data': ["report/dispatch_note.xml"],
+    "name": "Dispatch Note Report - Payment terms",
+    "summary": "Add payment terms to dispatch note report",
+    "version": "12.0.1.0.0",
+    "category": "Reporting",
+    "website": "https://github.com/Tawasta/stock",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": ["stock_dispatch_note_report"],
+    "data": ["report/dispatch_note.xml"],
 }
