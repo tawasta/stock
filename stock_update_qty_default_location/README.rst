@@ -15,12 +15,14 @@ Configuration
 
 Usage
 =====
-* Open a product form and click the "Update Qty On Hand" button as usual. The 
+* Open a product form and click the "Update Qty On Hand" button as usual. The
   configured stock location is suggested as the default.
 
 Known issues / Roadmap
 ======================
-\-
+* User should not be in "Manage Lots / Serial Numbers" and "Manage Multiple
+  Stock Locations" groups to view "Update Qty on Hand"-window. But viewing
+  this window preserved when user was added to these groups.
 
 Credits
 =======
@@ -29,6 +31,7 @@ Contributors
 ------------
 
 * Timo Talvitie <timo.talvitie@tawasta.fi>
+* Timo Kekäläinen <timo.kekalainen@tawasta.fi>
 
 Maintainer
 ----------

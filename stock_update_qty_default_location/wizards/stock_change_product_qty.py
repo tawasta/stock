@@ -9,8 +9,8 @@ class ProductChangeQuantity(models.TransientModel):
     def default_get(self, fields):
         res = super(ProductChangeQuantity, self).default_get(fields)
 
-        if self.env.user.company_id.default_stock_update_qty_location:
+        if self.env.user.company_id.stock_update_qty_location_default:
             res['location_id'] = self.env.user.company_id \
-                .default_stock_update_qty_location.id
+                .stock_update_qty_location_default.id
 
         return res
