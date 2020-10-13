@@ -5,7 +5,7 @@ class ResCompany(models.Model):
 
     _inherit = 'res.company'
 
-    default_stock_update_qty_location = fields.Many2one(
+    stock_update_qty_location_default = fields.Many2one(
         comodel_name='stock.location',
         domain=[('usage', '=', 'internal')],
         string='Default stock qty update location',
