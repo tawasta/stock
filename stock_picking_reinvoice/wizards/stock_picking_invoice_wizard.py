@@ -11,6 +11,10 @@ class StockPickingInvoiceWizard(models.TransientModel):
         string="Customer", comodel_name="res.partner", required=True
     )
 
+    pricelist_id = fields.Many2one(
+        string="Pricelist", comodel_name="product.pricelist", required=True,
+    )
+
     existing_invoice_id = fields.Many2one(
         string="Existing invoice",
         comodel_name="account.invoice",
@@ -24,6 +28,12 @@ class StockPickingInvoiceWizard(models.TransientModel):
         help="If the invoice already has a line for product in this picking, "
         "add quantity to the existing line",
     )
+
+    @api.onchange("partner_id")
+    def onchange_partner_id_update_pricelist(self):
+        for record in self:
+            if record.partner_id:
+                record.pricelist_id = record.partner_id.property_product_pricelist
 
     @api.multi
     def action_create_invoice(self):
@@ -54,7 +64,6 @@ class StockPickingInvoiceWizard(models.TransientModel):
                 )
 
             partner = picking.partner_id
-            pricelist = partner.property_product_pricelist
 
             for move in picking.move_lines:
                 product = move.product_id
@@ -63,7 +72,7 @@ class StockPickingInvoiceWizard(models.TransientModel):
                     product.property_account_income_id
                     or product.categ_id.property_account_income_categ_id
                 )
-                price = pricelist.get_product_price(product, quantity, partner)
+                price = self.pricelist_id.get_product_price(product, quantity, partner)
                 line_name = "{} - {}".format(move.name, move.picking_id.name)
 
                 if self.group_lines:

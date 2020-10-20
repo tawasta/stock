@@ -8,6 +8,7 @@
 
                 <group>
                     <field name="partner_id" />
+                    <field name="pricelist_id" />
                     <field name="existing_invoice_id"
                            domain="[('partner_id', '=', partner_id), ('state', '=', 'draft'), ('type', '=', 'out_invoice')]"/>
                     <field name="group_lines" attrs="{'invisible': [('existing_invoice_id', '=', False)]}" />
