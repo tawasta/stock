@@ -22,7 +22,7 @@
     "name": "Reinvoice stock pickings",
     "summary": "Allow making invoices from stock pickings",
     "category": "Warehouse",
-    "version": "12.0.1.2.0",
+    "version": "12.0.1.3.0",
     "website": "https://github.com/Tawasta/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
