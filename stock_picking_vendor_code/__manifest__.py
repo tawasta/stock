@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2019 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,16 +19,18 @@
 ##############################################################################
 
 {
-    "name": "Default stock location for product quantity updates",
-    "summary": "Configurable default location suggestion for the wizard",
-    "version": "12.0.1.0.1",
+    "name": "Vendor code in stock picking",
+    "summary": "Add vendor code to stock picking form view",
+    "version": "12.0.1.0.0",
     "category": "Inventory",
     "website": "https://github.com/Tawasta/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "external_dependencies": {"python": [], "bin": [],},
-    "depends": ["stock",],
-    "data": ["views/res_config_settings.xml",],
+    "depends": ["delivery", "stock"],
+    "data": [
+        "views/stock_move_line_form.xml",
+        "views/stock_picking_form.xml",
+    ],
 }
