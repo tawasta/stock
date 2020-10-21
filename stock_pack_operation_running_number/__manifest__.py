@@ -29,7 +29,7 @@
     "application": False,
     "installable": True,
     "external_dependencies": {"python": [], "bin": [],},
-    "depends": ["stock",],
-    "data": ["views/stock_picking.xml",],
+    "depends": ["stock"],
+    "data": ["views/stock_picking.xml"],
     "demo": [],
 }
