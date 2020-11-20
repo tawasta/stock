@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    "name": "Dispatch Note Report - Week of shipment",
-    "summary": "Add week of shipment to dispatch note report",
+    "name": "Dispatch Note Report - Year of shipment",
+    "summary": "Add year of shipment to dispatch note report",
     "version": "12.0.1.0.0",
     "category": "Reporting",
     "website": "https://github.com/Tawasta/stock",
@@ -28,6 +28,6 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["sale_order_week_of_shipment", "stock_dispatch_note_report"],
+    "depends": ["sale_order_year_of_shipment", "stock_dispatch_note_report"],
     "data": ["report/dispatch_note.xml"],
 }
