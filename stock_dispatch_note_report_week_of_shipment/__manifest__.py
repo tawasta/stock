@@ -28,6 +28,6 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["stock_dispatch_note_report"],
+    "depends": ["sale_order_week_of_shipment", "stock_dispatch_note_report"],
     "data": ["report/dispatch_note.xml"],
 }
