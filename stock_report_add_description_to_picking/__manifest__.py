@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    "name": "Stock Picking Report - Adds Description",
-    "summary": "Stock Picking Report - Adds Description",
+    "name": "Stock Picking Report - Adds Description column",
+    "summary": "Adds Description column to picking report",
     "version": "12.0.1.0.0",
     "category": "Reporting",
     "website": "https://github.com/Tawasta/stock",
