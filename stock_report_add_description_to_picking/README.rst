@@ -2,11 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-=======================================
-Stock Picking Report - Adds Description
-=======================================
+==============================================
+Stock Picking Report - Adds Description column
+==============================================
 
-* Stock Picking Report - Adds Description
+* Adds Description column Picking Operations report
 
 Configuration
 =============
