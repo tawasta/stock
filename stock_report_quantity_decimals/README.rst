@@ -6,19 +6,22 @@
 Quantity Decimals Precision on Picking and Delivery Slip reports
 ================================================================
 
-Modifications to stock reports' Quantity decimals.
+* Change the number of decimals shown on Stock reports' product quantities
 
 Configuration
 =============
-No special configuration necessary
+* Stock reports' decimals precision of product quantities can be set by going
+  to Inventory --> Configuration --> Settings and changing the value under the
+  stock_report_decimal_precision-field. The integer represents the number of
+  decimals shown on product quantities.
 
 Usage
 =====
-Install the module from Apps
+* Install the module from Apps
 
 Known issues / Roadmap
 ======================
-None
+* None and this module works with multi-companies also.
 
 Credits
 =======
