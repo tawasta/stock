@@ -19,19 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Stock Report Quantity Decimals",
-    "summary": "Modifications to Stock Reports' decimal precision",
-    "version": "12.0.1.0.1",
+    "name": "Stock Picking and Delivery Slip Report Salesperson",
+    "summary": "Stock Picking and Delivery Slip Report Salesperson",
+    "version": "12.0.1.0.0",
     "category": "Reporting",
-    "website": "https://github.com/Tawasta/stock",
+    "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["stock"],
-    "data": [
-        "report/stock_report_deliveryslip.xml",
-        "report/stock_report_picking.xml",
-        "views/res_config_settings.xml",
-    ],
+    "depends": ["sale_stock", "stock", "stock_report_element_sizes"],
+    "data": ["report/stock_report.xml"],
 }

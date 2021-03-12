@@ -19,19 +19,16 @@
 ##############################################################################
 
 {
-    "name": "Stock Report Quantity Decimals",
-    "summary": "Modifications to Stock Reports' decimal precision",
-    "version": "12.0.1.0.1",
+    "name": "Report Effective Date as Date only",
+    "summary": """Stock Picking and Delivery Slip Report Effective Date
+                  as Date only""",
+    "version": "12.0.1.0.0",
     "category": "Reporting",
     "website": "https://github.com/Tawasta/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["stock"],
-    "data": [
-        "report/stock_report_deliveryslip.xml",
-        "report/stock_report_picking.xml",
-        "views/res_config_settings.xml",
-    ],
+    "depends": ["sale_stock", "stock"],
+    "data": ["report/stock_report.xml"],
 }

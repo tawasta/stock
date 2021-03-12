@@ -19,19 +19,21 @@
 ##############################################################################
 
 {
-    "name": "Stock Report Quantity Decimals",
-    "summary": "Modifications to Stock Reports' decimal precision",
-    "version": "12.0.1.0.1",
-    "category": "Reporting",
-    "website": "https://github.com/Tawasta/stock",
-    "author": "Tawasta",
-    "license": "AGPL-3",
-    "application": False,
-    "installable": True,
-    "depends": ["stock"],
-    "data": [
-        "report/stock_report_deliveryslip.xml",
-        "report/stock_report_picking.xml",
-        "views/res_config_settings.xml",
+    'name': "Audit Log Rules - Stock",
+    'summary': "Adds audit log rules for stock.warehouse and stock.location",
+    'author': 'Tawasta',
+    'license': 'AGPL-3',
+    'website': "https://gitlab.com/tawasta/odoo/stock",
+    'category': 'Logging',
+    'application': False,
+    'installable': True,
+    'version': '12.0.1.0.0',
+    'depends': [
+        'stock',
+        'auditlog',
     ],
+    'data': [
+        'data/rules.xml'
+    ],
+    'demo': [],
 }
