@@ -3,7 +3,7 @@
 <odoo>
     <template id="report_picking" inherit_id="stock_report_element_sizes.report_picking">
         <div id="stock_picking_informations" position="inside">
-            <div t-if="o.name">
+            <div t-if="o.name" class="col-auto mw-100 mb-2">
                 <span><strong>Stock picking:</strong></span>
                 <p class="m-0" t-field="o.name"/>
             </div>
@@ -12,7 +12,7 @@
 
     <template id="report_deliveryslip" inherit_id="stock_report_element_sizes.report_delivery_document">
         <div id="stock_deliveryslip_informations" position="inside">
-            <div t-if="o.name">
+            <div t-if="o.name" class="col-auto mw-100 mb-2">
                 <span><strong>Delivery Slip:</strong></span>
                 <p class="m-0" t-field="o.name"/>
             </div>
