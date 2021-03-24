@@ -10,15 +10,31 @@
         </div>
     </template>
 
+    <template id="report_deliveryslip" inherit_id="stock_report_element_sizes.report_delivery_document">
+        <div id="stock_deliveryslip_informations" position="inside">
+            <div t-if="o.name">
+                <span><strong>Delivery Slip:</strong></span>
+                <p class="m-0" t-field="o.name"/>
+            </div>
+        </div>
+    </template>
+
     <template id="report_picking_inherit" inherit_id="stock.report_picking">
         <xpath expr="//div[@class='page']" position="before">
             <t t-set="report_title">Stock picking</t>
+        </xpath>
+
+        <xpath expr="//div[@class='page']//h1" position="replace">
         </xpath>
     </template>
 
     <template id="report_deliveryslip_inherit" inherit_id="stock.report_delivery_document">
         <xpath expr="//t[@t-set='o']" position="before">
             <t t-set="report_title">Delivery Slip</t>
+        </xpath>
+
+        <!-- expr="//h2" doesn't work for some reason -->
+        <xpath expr="//h2//span" position="replace">
         </xpath>
     </template>
 </odoo>
