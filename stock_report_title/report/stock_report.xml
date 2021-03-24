@@ -24,7 +24,8 @@
             <t t-set="report_title">Stock picking</t>
         </xpath>
 
-        <xpath expr="//div[@class='page']//h1" position="replace">
+        <xpath expr="//div[@class='page']//h1" position="attributes">
+            <attribute name="class">d-none</attribute>
         </xpath>
     </template>
 
@@ -34,7 +35,8 @@
         </xpath>
 
         <!-- expr="//h2" doesn't work for some reason -->
-        <xpath expr="//h2//span" position="replace">
+        <xpath expr="//h2//span" position="attributes">
+            <attribute name="class">d-none</attribute>
         </xpath>
     </template>
 </odoo>
