@@ -2,10 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-============================================
-Stock Picking and Delivery Slip Report Title
-============================================
-* Hides title and adds it on top of the page and in informations elements instead
+================================
+Delivery Slip - Customer contact
+================================
+
+* Delivery Slip - Customer contact
 
 Configuration
 =============
@@ -26,7 +27,6 @@ Contributors
 ------------
 
 * Timo Kekäläinen <timo.kekalainen@tawasta.fi>
-* Miika Nissi <miika.nissi@tawasta.fi>
 
 Maintainer
 ----------
