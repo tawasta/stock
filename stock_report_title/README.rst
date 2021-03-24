@@ -5,8 +5,7 @@
 ============================================
 Stock Picking and Delivery Slip Report Title
 ============================================
-
-Stock Picking and Delivery Slip Report Title
+* Hides title and adds it on top of the page and in informations elements instead
 
 Configuration
 =============
@@ -27,6 +26,7 @@ Contributors
 ------------
 
 * Timo Kekäläinen <timo.kekalainen@tawasta.fi>
+* Miika Nissi <miika.nissi@tawasta.fi>
 
 Maintainer
 ----------
