@@ -28,7 +28,6 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["sale_order_customer_contact", "stock",
-                "stock_report_element_sizes"],
+    "depends": ["sale_order_customer_contact", "stock", "stock_report_element_sizes"],
     "data": ["report/stock_report.xml"],
 }
