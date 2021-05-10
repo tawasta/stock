@@ -1,0 +1,85 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_picking_create_manufacturing_order_from_move
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-10 11:45+0000\n"
+"PO-Revision-Date: 2021-05-10 14:54+0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fi\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: stock_picking_create_manufacturing_order_from_move
+#: model:ir.model.fields,field_description:stock_picking_create_manufacturing_order_from_move.field_stock_move__has_bom
+msgid "BoMs"
+msgstr "BoMs"
+
+#. module: stock_picking_create_manufacturing_order_from_move
+#: model:ir.model.fields,field_description:stock_picking_create_manufacturing_order_from_move.field_stock_move__mo_to_complete
+msgid "Complete the MO"
+msgstr "Kuittaa valmistustilaus"
+
+#. module: stock_picking_create_manufacturing_order_from_move
+#: model_terms:ir.ui.view,arch_db:stock_picking_create_manufacturing_order_from_move.view_picking_form
+msgid "Create MO"
+msgstr "Luo valmistustilaus"
+
+#. module: stock_picking_create_manufacturing_order_from_move
+#: model:ir.model.fields,field_description:stock_picking_create_manufacturing_order_from_move.field_mrp_production__created_from_stock_move
+msgid "Created From Stock Move"
+msgstr "Luotu varastosiirrosta"
+
+#. module: stock_picking_create_manufacturing_order_from_move
+#: model:ir.model.fields,field_description:stock_picking_create_manufacturing_order_from_move.field_stock_move__mo_has_been_created
+msgid "MO has been created"
+msgstr "Valmistustilaus on luotu"
+
+#. module: stock_picking_create_manufacturing_order_from_move
+#: model:ir.model.fields,field_description:stock_picking_create_manufacturing_order_from_move.field_stock_move__manufacturing_order_id
+#: model_terms:ir.ui.view,arch_db:stock_picking_create_manufacturing_order_from_move.view_move_picking_form
+msgid "Manufacturing Order"
+msgstr "Valmistustilaus"
+
+#. module: stock_picking_create_manufacturing_order_from_move
+#: code:addons/stock_picking_create_manufacturing_order_from_move/models/stock_move.py:59
+#, python-format
+msgid "Not enough materials to complete production order."
+msgstr "Ei tarpeeksi materiaalia valmistustilauksen loppuun viemiseksi."
+
+#. module: stock_picking_create_manufacturing_order_from_move
+#: model_terms:ir.ui.view,arch_db:stock_picking_create_manufacturing_order_from_move.view_picking_form
+msgid "Produce"
+msgstr "Valmista"
+
+#. module: stock_picking_create_manufacturing_order_from_move
+#: model:ir.model,name:stock_picking_create_manufacturing_order_from_move.model_mrp_production
+msgid "Production Order"
+msgstr "Valmistustilaus"
+
+#. module: stock_picking_create_manufacturing_order_from_move
+#: model:ir.model.fields,field_description:stock_picking_create_manufacturing_order_from_move.field_stock_move__mo_state
+msgid "State"
+msgstr "Osavaltio/Maakunta"
+
+#. module: stock_picking_create_manufacturing_order_from_move
+#: model:ir.model,name:stock_picking_create_manufacturing_order_from_move.model_stock_move
+msgid "Stock Move"
+msgstr "Varastosiirto"
+
+#. module: stock_picking_create_manufacturing_order_from_move
+#: code:addons/stock_picking_create_manufacturing_order_from_move/models/stock_move.py:53
+#, python-format
+msgid ""
+"The Manufacturing Order %s has already been marked as Done. \n"
+"                Please refresh the page."
+msgstr ""
+"Valmistustilaus %s on jo kuitattu Valmiiksi. \n"
+"                Ole hyvä ja päivitä sivu."
