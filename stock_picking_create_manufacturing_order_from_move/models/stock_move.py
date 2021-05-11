@@ -37,6 +37,8 @@ class StockMove(models.Model):
                 'bom_id': bom.id,
                 'date_planned_start': fields.Datetime.now(),
                 'company_id': self.company_id.id,
+                'location_src_id': self.location_id.id,
+                'location_dest_id': self.location_id.id,
             }
             prod_order = manufacturing_order.create(values)
             self.manufacturing_order_id = prod_order.id
@@ -51,15 +53,15 @@ class StockMove(models.Model):
 
         if mo:
             msg_done = _(
-                """The Manufacturing Order %s has already been marked as Done. 
+                """The Manufacturing Order %s has already been marked as Done.
                 Please refresh the page.""" % mo.name)
             if mo.state == 'done':
                 raise UserError(msg_done)
 
-            msg_avail = _("Not enough materials to complete production order.")
-            if mo.availability in ['assigned', 'partially_available',
-                                   'waiting']:
-                raise UserError(msg_avail)
+#             msg_avail = _("Not enough materials to complete production order.")
+#             if mo.availability in ['assigned', 'partially_available',
+#                                    'waiting']:
+#                 raise UserError(msg_avail)
 
             mo.action_assign()
             if mo.state == 'confirmed' and mo.availability == 'assigned':

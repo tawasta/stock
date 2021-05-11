@@ -21,22 +21,14 @@
 {
     "name": "Create Manufacturing order from stock picking line",
     "summary": "Create Manufacturing order from stock picking line",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "category": "Stock",
     "website": "https://tawasta.fi",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "external_dependencies": {
-        "python": [],
-        "bin": [],
-    },
-    "depends": [
-        "mrp",
-        "stock",
-        "mrp_production_autoprocess_work_orders",
-    ],
+    "depends": ["mrp", "stock", "mrp_production_autoprocess_work_orders"],
     "data": [
         "views/mrp_production.xml",
         "views/stock_move.xml",

@@ -6,7 +6,9 @@
 Create Manufacturing order from stock picking line
 ==================================================
 
-Create Manufacturing order from stock picking line
+* Create and Complete production orders on Picking's lines.
+  Use "Create MO" to create new Manufacturing Order and press
+  "Produce" to complete it.
 
 Configuration
 =============
@@ -14,7 +16,7 @@ Configuration
 
 Usage
 =====
-\-
+* Install this module from Apps
 
 Known issues / Roadmap
 ======================
@@ -26,11 +28,7 @@ Credits
 Contributors
 ------------
 
-* Aleksi Savijoki <aleksi.savijoki@tawasta.fi>
-* Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>
-* Joona Isoaho <joona.isoaho@tawasta.fi>
 * Timo Kekäläinen <timo.kekalainen@tawasta.fi>
-* Valtteri Lattu <valtteri.lattu@tawasta.fi>
 
 Maintainer
 ----------
