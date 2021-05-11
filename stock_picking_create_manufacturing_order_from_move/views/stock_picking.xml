@@ -10,12 +10,12 @@
                 <button name="create_manufacturing_order"
                     type="object"
                     string="Create MO"
-                    attrs="{'invisible': ['|', '|', ('has_bom', '=', False), ('state', 'not in', ('waiting', 'confirmed', 'assigned')), ('mo_has_been_created', '=', True)]}"
+                    attrs="{'invisible': ['|', '|', '|', ('has_bom', '=', False), ('state', 'not in', ('waiting', 'confirmed', 'assigned')), ('mo_has_been_created', '=', True), ('manufacturing_order_id', '!=', False)]}"
                     class="oe_highlight"/>
                 <button name="validate_manufacturing_order"
                     type="object"
                     string="Produce"
-                    attrs="{'invisible': [('mo_to_complete', '=', False)]}"
+                    attrs="{'invisible': ['|', ('mo_to_complete', '=', False), ('manufacturing_order_id', '=', False)]}"
                     class="oe_highlight"/>
                 <field name="has_bom" invisible="1"/>
                 <field name="mo_has_been_created" invisible="1"/>
