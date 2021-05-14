@@ -22,12 +22,16 @@
     "name": "Reinvoice stock pickings",
     "summary": "Allow making invoices from stock pickings",
     "category": "Warehouse",
-    "version": "12.0.1.3.0",
+    "version": "12.0.1.4.0",
     "website": "https://github.com/Tawasta/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
     "depends": ["account", "stock"],
-    "data": ["views/stock_picking.xml", "wizards/stock_picking_invoice_wizard.xml"],
+    "data": [
+        "views/account_invoice.xml",
+        "views/stock_picking.xml",
+        "wizards/stock_picking_invoice_wizard.xml",
+    ],
 }
