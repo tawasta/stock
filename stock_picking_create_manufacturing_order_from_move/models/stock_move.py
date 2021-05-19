@@ -64,7 +64,8 @@ class StockMove(models.Model):
 #                 raise UserError(msg_avail)
 
             mo.action_assign()
-            if mo.state == 'confirmed' and mo.availability == 'assigned':
+            if mo.state == 'confirmed' and \
+                    mo.availability in ['assigned', 'partially_available']:
                 mo.button_plan()
             if mo.state == 'progress':
                 mo.button_mark_done()

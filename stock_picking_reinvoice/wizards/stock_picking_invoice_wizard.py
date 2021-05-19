@@ -58,7 +58,7 @@ class StockPickingInvoiceWizard(models.TransientModel):
                     )
                 )
 
-            if picking.invoice_id:
+            if picking.invoice_id and picking.invoice_id.state != "cancel":
                 raise UserError(
                     _("Picking is already invoiced: {}".format(picking.name))
                 )
