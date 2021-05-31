@@ -32,6 +32,8 @@ class MrpProduction(models.Model):
         stock_move = self.find_stock_move_product_with_bom(origin, product)
         res = super().create(vals)
         if stock_move:
+            # Not a great way to do this, but it avoids singleton error..
+            stock_move = stock_move[0]
             stock_move.manufacturing_order_id = res.id
             stock_move.mo_has_been_created = True
             stock_move.mo_to_complete = True
