@@ -7,15 +7,10 @@
         <field name="inherit_id" ref="stock.view_picking_form" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='move_ids_without_package']//tree//field[@name='product_uom']" position="after">
-                <button name="create_manufacturing_order"
+                <button name="create_and_validate_manufacturing_order"
                     type="object"
-                    string="Create MO"
-                    attrs="{'invisible': ['|', '|', '|', ('has_bom', '=', False), ('state', 'not in', ('waiting', 'confirmed', 'assigned')), ('mo_has_been_created', '=', True), ('manufacturing_order_id', '!=', False)]}"
-                    class="oe_highlight"/>
-                <button name="validate_manufacturing_order"
-                    type="object"
-                    string="Produce"
-                    attrs="{'invisible': ['|', ('mo_to_complete', '=', False), ('manufacturing_order_id', '=', False)]}"
+                    string="Produce product"
+                    attrs="{'invisible': ['|', '|', '|', '|', ('has_bom', '=', False), ('state', 'not in', ('waiting', 'confirmed', 'assigned')), ('reserved_availability', '=', 'product_uom_qty'), ('mo_to_complete', '=', False)]}"
                     class="oe_highlight"/>
                 <field name="has_bom" invisible="1"/>
                 <field name="mo_has_been_created" invisible="1"/>

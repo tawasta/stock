@@ -1,4 +1,4 @@
-from odoo import fields, models, _
+from odoo import api, fields, models, _
 from odoo.exceptions import UserError
 
 
@@ -19,7 +19,12 @@ class StockMove(models.Model):
     mo_has_been_created = fields.Boolean(string="MO has been created",
                                          default=False, copy=False)
     mo_to_complete = fields.Boolean(string="Complete the MO",
-                                    default=False, copy=False)
+                                    default=True, copy=False)
+
+    def create_and_validate_manufacturing_order(self):
+        if not self.manufacturing_order_id:
+            self.create_manufacturing_order()
+        self.validate_manufacturing_order()
 
     def create_manufacturing_order(self):
         self.ensure_one()
@@ -65,7 +70,7 @@ class StockMove(models.Model):
 
             mo.action_assign()
             if mo.state == 'confirmed' and \
-                    mo.availability in ['assigned', 'partially_available']:
+                    mo.availability in ['assigned', 'partially_available', 'waiting']:
                 mo.button_plan()
             if mo.state == 'progress':
                 mo.button_mark_done()
