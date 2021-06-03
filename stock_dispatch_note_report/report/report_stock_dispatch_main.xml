@@ -119,7 +119,7 @@
                                             t-value="float(total_weight_pack_weight_shipping_weight) + float(line_pack.weight) + float(line_pack.shipping_weight)"></t>
                                         <td id="empty_space"/>
                                     </t>
-                                    <tr t-foreach="doc.move_line_ids" t-as="l">
+                                    <tr t-foreach="doc.move_line_ids" t-as="l" id="move_line_ids_loop">
                                         <t t-if="line_pack.id == l.result_package_id.id">
                                             <td id="pack_product_id">
                                                 <span t-field="l.product_id"/>
