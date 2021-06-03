@@ -91,11 +91,11 @@
                         </thead>
                         <tbody id="move_line_done_tbody_package">
                             <t t-set="package" t-value="[]"/>
-                            <t t-foreach="doc.move_line_ids.sorted(key=lambda x: x.result_package_id.name)" t-as="l">
+                            <t t-foreach="doc.move_line_ids.sorted(key=lambda x: x.result_package_id.name)" t-as="l" id="move_line_loop">
                                 <t t-set="package" t-value="package+[l.result_package_id]"/>
                             </t>
                             <t t-set="done_packages" t-value="[]"></t>
-                            <t t-foreach="package" t-as="line_pack">
+                            <t t-foreach="package" t-as="line_pack" id="pack_loop">
                                 <t t-if="line_pack not in done_packages">
                                     <t t-set="done_packages" t-value="done_packages+[line_pack]"/>
                                     <t t-if="line_pack">
