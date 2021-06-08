@@ -74,6 +74,7 @@ class StockPickingInvoiceWizard(models.TransientModel):
                 )
                 price = self.pricelist_id.get_product_price(product, quantity, partner)
                 line_name = "{} - {}".format(move.name, move.picking_id.name)
+                tax = product.taxes_id and [(6, 0, [product.taxes_id[0].id])] or False
 
                 if self.group_lines:
                     # Try to find existing invoice line
@@ -103,7 +104,7 @@ class StockPickingInvoiceWizard(models.TransientModel):
                             "uom_id": move.product_uom.id,
                             "price_unit": price,
                             "account_id": account.id,
-                            "invoice_line_tax_ids": [(6, 0, product.taxes_id.ids)],
+                            "invoice_line_tax_ids": tax,
                         }
                     )
 
