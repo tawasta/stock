@@ -103,6 +103,7 @@ class StockPickingInvoiceWizard(models.TransientModel):
                             "uom_id": move.product_uom.id,
                             "price_unit": price,
                             "account_id": account.id,
+                            "invoice_line_tax_ids": [(6, 0, product.taxes_id.ids)],
                         }
                     )
 
