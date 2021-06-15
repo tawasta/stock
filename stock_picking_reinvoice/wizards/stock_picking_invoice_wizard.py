@@ -103,6 +103,10 @@ class StockPickingInvoiceWizard(models.TransientModel):
 
                     existing_line.write(new_line_values)
                 else:
+                    tax = (
+                        product.taxes_id and [(6, 0, [product.taxes_id[0].id])] or False
+                    )
+
                     ail.create(
                         {
                             "invoice_id": invoice.id,
@@ -112,6 +116,7 @@ class StockPickingInvoiceWizard(models.TransientModel):
                             "uom_id": move.product_uom.id,
                             "price_unit": price,
                             "account_id": account.id,
+                            "invoice_line_tax_ids": tax,
                         }
                     )
 
