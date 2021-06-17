@@ -1,4 +1,6 @@
 from odoo import api, models, _
+import logging
+_logger = logging.getLogger(__name__)
 
 
 class StockMoveCreateManufacturingOrder(models.TransientModel):
@@ -30,8 +32,7 @@ class StockMoveCreateManufacturingOrder(models.TransientModel):
                 picking.action_assign()
                 for move in picking.move_lines:
                     if move.has_bom and move.state not in \
-                            ('draft', 'cancel', 'assigned', 'done') \
-                            and move.mo_to_complete:
+                            ('draft', 'cancel', 'assigned', 'done'):
                         if not move.manufacturing_order_id:
                             mo = move.create_manufacturing_order()
                             created_mos.append(mo.name)
@@ -57,6 +58,12 @@ class StockMoveCreateManufacturingOrder(models.TransientModel):
             "The following Manufacturing Orders were validated:\
             \n%s\n\n" % '\n'.join(validated_mos) if validated_mos else '',
         ) or no_mos
+
+        # This could be useful for debugging
+        _logger.info("Mass creation of Manufacturing Orders from Stock Pickings"
+                     " has been initiated.")
+        _logger.info(mo_message)
+        _logger.info(deliv_message)
 
         message = self.env['stock.move.create.manufacturing.order.message'].\
             create({
