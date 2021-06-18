@@ -33,6 +33,9 @@ class StockMove(models.Model):
         product = self.product_id
         bom = product.bom_ids and product.bom_ids[0] or False
 
+        picking_type_id = self.env['stock.warehouse'].search([
+            ('company_id','=',self.company_id.id)], limit=1).manu_type_id.id
+
         # Subtracts the difference between reserved and ordered quantity
         qty_to_produce = self.product_uom_qty - self.reserved_availability
 
@@ -47,6 +50,7 @@ class StockMove(models.Model):
                 'company_id': self.company_id.id,
                 'location_src_id': self.location_id.id,
                 'location_dest_id': self.location_id.id,
+                'picking_type_id': picking_type_id,
             }
             prod_order = manufacturing_order.create(values)
             self.manufacturing_order_id = prod_order.id
