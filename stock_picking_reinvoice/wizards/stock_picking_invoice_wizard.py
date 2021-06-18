@@ -12,7 +12,9 @@ class StockPickingInvoiceWizard(models.TransientModel):
     )
 
     pricelist_id = fields.Many2one(
-        string="Pricelist", comodel_name="product.pricelist", required=True,
+        string="Pricelist",
+        comodel_name="product.pricelist",
+        required=True,
     )
 
     existing_invoice_id = fields.Many2one(
@@ -64,6 +66,9 @@ class StockPickingInvoiceWizard(models.TransientModel):
                 )
 
             partner = picking.partner_id
+            # Dummy variable, if we want to re-implement adding move names
+            # to invoice line description later
+            show_moves = False
 
             for move in picking.move_lines:
                 product = move.product_id
@@ -73,8 +78,10 @@ class StockPickingInvoiceWizard(models.TransientModel):
                     or product.categ_id.property_account_income_categ_id
                 )
                 price = self.pricelist_id.get_product_price(product, quantity, partner)
-                line_name = "{} - {}".format(move.name, move.picking_id.name)
-                tax = product.taxes_id and [(6, 0, [product.taxes_id[0].id])] or False
+                if show_moves:
+                    line_name = "{} - {}".format(move.name, move.picking_id.name)
+                else:
+                    line_name = product.name
 
                 if self.group_lines:
                     # Try to find existing invoice line
@@ -86,15 +93,20 @@ class StockPickingInvoiceWizard(models.TransientModel):
                     )
 
                 if existing_line:
-                    existing_line.write(
-                        {
-                            "quantity": existing_line.quantity + quantity,
-                            "name": "{}, {}".format(
-                                existing_line.name, move.picking_id.name
-                            ),
-                        }
-                    )
+                    new_line_values = {
+                        "quantity": existing_line.quantity + quantity,
+                    }
+                    if show_moves:
+                        new_line_values["name"] = (
+                            "{}, {}".format(existing_line.name, move.picking_id.name),
+                        )
+
+                    existing_line.write(new_line_values)
                 else:
+                    tax = (
+                        product.taxes_id and [(6, 0, [product.taxes_id[0].id])] or False
+                    )
+
                     ail.create(
                         {
                             "invoice_id": invoice.id,

@@ -91,11 +91,11 @@
                         </thead>
                         <tbody id="move_line_done_tbody_package">
                             <t t-set="package" t-value="[]"/>
-                            <t t-foreach="doc.move_line_ids.sorted(key=lambda x: x.result_package_id.name)" t-as="l" id="move_line_loop">
+                            <t t-foreach="doc.move_line_ids.sorted(key=lambda x: x.result_package_id.name)" t-as="l">
                                 <t t-set="package" t-value="package+[l.result_package_id]"/>
                             </t>
                             <t t-set="done_packages" t-value="[]"></t>
-                            <t t-foreach="package" t-as="line_pack" id="pack_loop">
+                            <t t-foreach="package" t-as="line_pack">
                                 <t t-if="line_pack not in done_packages">
                                     <t t-set="done_packages" t-value="done_packages+[line_pack]"/>
                                     <t t-if="line_pack">
@@ -119,7 +119,7 @@
                                             t-value="float(total_weight_pack_weight_shipping_weight) + float(line_pack.weight) + float(line_pack.shipping_weight)"></t>
                                         <td id="empty_space"/>
                                     </t>
-                                    <tr t-foreach="doc.move_line_ids" t-as="l" id="move_line_ids_loop">
+                                    <tr t-foreach="doc.move_line_ids" t-as="l">
                                         <t t-if="line_pack.id == l.result_package_id.id">
                                             <td id="pack_product_id">
                                                 <span t-field="l.product_id"/>

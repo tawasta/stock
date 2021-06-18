@@ -36,11 +36,14 @@ class StockMove(models.Model):
         picking_type_id = self.env['stock.warehouse'].search([
             ('company_id','=',self.company_id.id)], limit=1).manu_type_id.id
 
+        # Subtracts the difference between reserved and ordered quantity
+        qty_to_produce = self.product_uom_qty - self.reserved_availability
+
         if bom:
             values = {
                 'origin': self.picking_id.name,
                 'product_id': product.id,
-                'product_qty': self.product_uom_qty,
+                'product_qty': qty_to_produce,
                 'product_uom_id': self.product_uom.id,
                 'bom_id': bom.id,
                 'date_planned_start': fields.Datetime.now(),
@@ -66,11 +69,6 @@ class StockMove(models.Model):
                 Please refresh the page.""" % mo.name)
             if mo.state == 'done':
                 raise UserError(msg_done)
-
-#             msg_avail = _("Not enough materials to complete production order.")
-#             if mo.availability in ['assigned', 'partially_available',
-#                                    'waiting']:
-#                 raise UserError(msg_avail)
 
             mo.action_assign()
             if mo.state == 'confirmed' and \

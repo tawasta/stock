@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-31 11:27+0000\n"
-"PO-Revision-Date: 2021-05-31 14:29+0300\n"
+"POT-Creation-Date: 2021-06-17 06:48+0000\n"
+"PO-Revision-Date: 2021-06-17 09:50+0300\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -23,14 +23,81 @@ msgid "BoMs"
 msgstr "BoMs"
 
 #. module: stock_picking_create_manufacturing_order_from_move
+#: model_terms:ir.ui.view,arch_db:stock_picking_create_manufacturing_order_from_move.stock_move_create_manufacturing_order_wizard
+msgid "Cancel"
+msgstr "Peruuta"
+
+#. module: stock_picking_create_manufacturing_order_from_move
 #: model:ir.model.fields,field_description:stock_picking_create_manufacturing_order_from_move.field_stock_move__mo_to_complete
 msgid "Complete the MO"
 msgstr "Kuittaa valmistustilaus"
 
 #. module: stock_picking_create_manufacturing_order_from_move
+#: model:ir.actions.act_window,name:stock_picking_create_manufacturing_order_from_move.action_create_multiple_mo_orders
+msgid "Create Manufacturing Order"
+msgstr "Luo valmistustilaus"
+
+#. module: stock_picking_create_manufacturing_order_from_move
+#: model_terms:ir.ui.view,arch_db:stock_picking_create_manufacturing_order_from_move.stock_move_create_manufacturing_order_wizard
+msgid "Create Manufacturing orders"
+msgstr "Luo valmistustilauksia"
+
+#. module: stock_picking_create_manufacturing_order_from_move
 #: model:ir.model.fields,field_description:stock_picking_create_manufacturing_order_from_move.field_mrp_production__created_from_stock_move
 msgid "Created From Stock Move"
 msgstr "Luotu varastosiirrosta"
+
+#. module: stock_picking_create_manufacturing_order_from_move
+#: model:ir.model.fields,field_description:stock_picking_create_manufacturing_order_from_move.field_stock_move_create_manufacturing_order__create_uid
+#: model:ir.model.fields,field_description:stock_picking_create_manufacturing_order_from_move.field_stock_move_create_manufacturing_order_message__create_uid
+msgid "Created by"
+msgstr "Luonut"
+
+#. module: stock_picking_create_manufacturing_order_from_move
+#: model:ir.model.fields,field_description:stock_picking_create_manufacturing_order_from_move.field_stock_move_create_manufacturing_order__create_date
+#: model:ir.model.fields,field_description:stock_picking_create_manufacturing_order_from_move.field_stock_move_create_manufacturing_order_message__create_date
+msgid "Created on"
+msgstr "Luotu"
+
+#. module: stock_picking_create_manufacturing_order_from_move
+#: model:ir.model.fields,field_description:stock_picking_create_manufacturing_order_from_move.field_stock_move_create_manufacturing_order_message__delivery_message
+msgid "Delivery Message"
+msgstr "Toimituksen viesti"
+
+#. module: stock_picking_create_manufacturing_order_from_move
+#: model:ir.model.fields,field_description:stock_picking_create_manufacturing_order_from_move.field_stock_move_create_manufacturing_order__display_name
+#: model:ir.model.fields,field_description:stock_picking_create_manufacturing_order_from_move.field_stock_move_create_manufacturing_order_message__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: stock_picking_create_manufacturing_order_from_move
+#: model:ir.model.fields,field_description:stock_picking_create_manufacturing_order_from_move.field_stock_move_create_manufacturing_order__id
+#: model:ir.model.fields,field_description:stock_picking_create_manufacturing_order_from_move.field_stock_move_create_manufacturing_order_message__id
+msgid "ID"
+msgstr "Tunniste (ID)"
+
+#. module: stock_picking_create_manufacturing_order_from_move
+#: model:ir.model.fields,field_description:stock_picking_create_manufacturing_order_from_move.field_stock_move_create_manufacturing_order____last_update
+#: model:ir.model.fields,field_description:stock_picking_create_manufacturing_order_from_move.field_stock_move_create_manufacturing_order_message____last_update
+msgid "Last Modified on"
+msgstr "Viimeksi muokattu"
+
+#. module: stock_picking_create_manufacturing_order_from_move
+#: model:ir.model.fields,field_description:stock_picking_create_manufacturing_order_from_move.field_stock_move_create_manufacturing_order__write_uid
+#: model:ir.model.fields,field_description:stock_picking_create_manufacturing_order_from_move.field_stock_move_create_manufacturing_order_message__write_uid
+msgid "Last Updated by"
+msgstr "Viimeksi päivittänyt"
+
+#. module: stock_picking_create_manufacturing_order_from_move
+#: model:ir.model.fields,field_description:stock_picking_create_manufacturing_order_from_move.field_stock_move_create_manufacturing_order__write_date
+#: model:ir.model.fields,field_description:stock_picking_create_manufacturing_order_from_move.field_stock_move_create_manufacturing_order_message__write_date
+msgid "Last Updated on"
+msgstr "Viimeksi päivitetty"
+
+#. module: stock_picking_create_manufacturing_order_from_move
+#: model:ir.model.fields,field_description:stock_picking_create_manufacturing_order_from_move.field_stock_move_create_manufacturing_order_message__mo_message
+msgid "MO Message"
+msgstr "MO viesti"
 
 #. module: stock_picking_create_manufacturing_order_from_move
 #: model:ir.model.fields,field_description:stock_picking_create_manufacturing_order_from_move.field_stock_move__mo_has_been_created
@@ -42,6 +109,11 @@ msgstr "Valmistustilaus on luotu"
 #: model_terms:ir.ui.view,arch_db:stock_picking_create_manufacturing_order_from_move.view_move_picking_form
 msgid "Manufacturing Order"
 msgstr "Valmistustilaus"
+
+#. module: stock_picking_create_manufacturing_order_from_move
+#: model_terms:ir.ui.view,arch_db:stock_picking_create_manufacturing_order_from_move.stock_move_create_manufacturing_order_message_wizard
+msgid "OK"
+msgstr "OK"
 
 #. module: stock_picking_create_manufacturing_order_from_move
 #: model_terms:ir.ui.view,arch_db:stock_picking_create_manufacturing_order_from_move.view_picking_form
@@ -56,7 +128,7 @@ msgstr "Valmistustilaus"
 #. module: stock_picking_create_manufacturing_order_from_move
 #: model:ir.model.fields,field_description:stock_picking_create_manufacturing_order_from_move.field_stock_move__mo_state
 msgid "State"
-msgstr "Osavaltio/Maakunta"
+msgstr "Tila"
 
 #. module: stock_picking_create_manufacturing_order_from_move
 #: model:ir.model,name:stock_picking_create_manufacturing_order_from_move.model_stock_move
@@ -64,7 +136,7 @@ msgid "Stock Move"
 msgstr "Varastosiirto"
 
 #. module: stock_picking_create_manufacturing_order_from_move
-#: code:addons/stock_picking_create_manufacturing_order_from_move/models/stock_move.py:60
+#: code:addons/stock_picking_create_manufacturing_order_from_move/models/stock_move.py:63
 #, python-format
 msgid ""
 "The Manufacturing Order %s has already been marked as Done.\n"
@@ -72,3 +144,49 @@ msgid ""
 msgstr ""
 "Valmistustilaus %s on jo kuitattu Valmiiksi. \n"
 "                Ole hyvä ja päivitä sivu."
+
+#. module: stock_picking_create_manufacturing_order_from_move
+#: code:addons/stock_picking_create_manufacturing_order_from_move/wizard/stock_move_create_manufacturing_order.py:48
+#, python-format
+msgid ""
+"These deliveries were ignored because they are in Cancelled state: \n"
+"%s\n"
+"\n"
+msgstr ""
+"Nämä toimitukset jätettiin huomiotta, koska ne ovat Peruttu tilassa: \n"
+"%s\n"
+"\n"
+
+#. module: stock_picking_create_manufacturing_order_from_move
+#: code:addons/stock_picking_create_manufacturing_order_from_move/wizard/stock_move_create_manufacturing_order.py:46
+#, python-format
+msgid ""
+"These deliveries were ignored because they are in Done state:             \n"
+"%s\n"
+"\n"
+msgstr ""
+"Nämä toimitukset jätettiin huomiotta, koska ne ovat Valmis tilassa:             \n"
+"%s\n"
+"\n"
+
+#. module: stock_picking_create_manufacturing_order_from_move
+#: code:addons/stock_picking_create_manufacturing_order_from_move/wizard/stock_move_create_manufacturing_order.py:44
+#, python-format
+msgid ""
+"These deliveries were ignored because they are in Draft state:             \n"
+"%s\n"
+"\n"
+msgstr ""
+"Nämä toimitukset jätettiin huomiotta, koska ne ovat Luonnos tilassa:             \n"
+"%s\n"
+"\n"
+
+#. module: stock_picking_create_manufacturing_order_from_move
+#: model:ir.model,name:stock_picking_create_manufacturing_order_from_move.model_stock_move_create_manufacturing_order
+msgid "stock.move.create.manufacturing.order"
+msgstr "stock.move.create.manufacturing.order"
+
+#. module: stock_picking_create_manufacturing_order_from_move
+#: model:ir.model,name:stock_picking_create_manufacturing_order_from_move.model_stock_move_create_manufacturing_order_message
+msgid "stock.move.create.manufacturing.order.message"
+msgstr "stock.move.create.manufacturing.order.message"
