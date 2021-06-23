@@ -6,7 +6,12 @@
         <field eval="12" name="priority"/>
         <field name="inherit_id" ref="stock.view_picking_form"/>
         <field name="arch" type="xml">
-            <button name="put_in_pack" position="replace"/>
+            <xpath expr="//notebook//page[1]//button[@name='put_in_pack']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//notebook//page[2]//button[@name='put_in_pack']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
         </field>
     </record>
 </odoo>
