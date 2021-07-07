@@ -2,11 +2,11 @@ from odoo import api, fields, models
 
 
 class MrpProduction(models.Model):
-
-    _inherit = 'mrp.production'
+    _inherit = "mrp.production"
 
     created_from_stock_move = fields.One2many(
-        comodel_name='stock.move', inverse_name='manufacturing_order_id')
+        comodel_name="stock.move", inverse_name="manufacturing_order_id"
+    )
 
     @api.multi
     def button_mark_done(self):
@@ -19,16 +19,15 @@ class MrpProduction(models.Model):
 
     def find_stock_move_product_with_bom(self, origin, product):
         # This should be changed later on to use some id instead of origin
-        stock_move = self.env['stock.move'].search([
-            ('origin', '=', origin),
-            ('product_id', '=', product),
-        ])
+        stock_move = self.env["stock.move"].search(
+            [("origin", "=", origin), ("product_id", "=", product)]
+        )
         return stock_move
 
     @api.model
     def create(self, vals):
-        product = vals.get('product_id', False)
-        origin = vals.get('origin', False)
+        product = vals.get("product_id", False)
+        origin = vals.get("origin", False)
         stock_move = self.find_stock_move_product_with_bom(origin, product)
         res = super().create(vals)
         if stock_move:
