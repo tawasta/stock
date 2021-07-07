@@ -21,7 +21,7 @@
 {
     "name": "Create Manufacturing order from stock picking line",
     "summary": "Create Manufacturing order from stock picking line",
-    "version": "12.0.1.0.2",
+    "version": "12.0.1.0.3",
     "category": "Stock",
     "website": "https://tawasta.fi",
     "author": "Tawasta",

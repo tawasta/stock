@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <odoo>
     <record id="view_picking_form" model="ir.ui.view">
         <field name="name">stock.picking.form.show.name</field>
         <field name="model">stock.picking</field>
-        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field name="inherit_id" ref="stock.view_picking_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='move_ids_without_package']//tree//field[@name='product_uom']" position="after">
-                <button name="create_and_validate_manufacturing_order"
-                    type="object"
-                    string="Produce product"
-                    attrs="{'invisible': ['|', ('has_bom', '=', False), ('state', 'in', ('draft', 'cancel', 'assigned', 'done'))]}"
-                    class="oe_highlight"/>
+                <button name="create_and_validate_manufacturing_order" type="object" string="Produce product" attrs="{'invisible': ['|', ('has_bom', '=', False), ('state', 'in', ('draft', 'cancel', 'assigned', 'done'))]}" class="oe_highlight"/>
                 <field name="has_bom" invisible="1"/>
                 <field name="mo_has_been_created" invisible="1"/>
                 <field name="mo_to_complete" invisible="1"/>
