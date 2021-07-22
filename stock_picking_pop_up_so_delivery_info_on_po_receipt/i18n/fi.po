@@ -1,0 +1,89 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_picking_pop_up_so_delivery_info_on_po_receipt
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-22 07:38+0000\n"
+"PO-Revision-Date: 2021-07-22 10:38+0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fi\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: stock_picking_pop_up_so_delivery_info_on_po_receipt
+#: code:addons/stock_picking_pop_up_so_delivery_info_on_po_receipt/models/stock_picking.py:13
+#, python-format
+msgid ""
+"\n"
+"            A sale order delivery is linked to this Receipt.\n"
+"            Remember to finish that delivery.\n"
+"        "
+msgstr ""
+"\n"
+"            Myyntitilauksen toimitustilaus liittyy tähän vastaanottoon.\n"
+"            Muistathan toimittaa kyseisen toimitustilauksen.\n"
+"        "
+
+#. module: stock_picking_pop_up_so_delivery_info_on_po_receipt
+#: model:ir.model.fields,field_description:stock_picking_pop_up_so_delivery_info_on_po_receipt.field_stock_picking_sale_order_warning_create_uid
+msgid "Created by"
+msgstr "Luonut"
+
+#. module: stock_picking_pop_up_so_delivery_info_on_po_receipt
+#: model:ir.model.fields,field_description:stock_picking_pop_up_so_delivery_info_on_po_receipt.field_purchase_order_created_from_sale_order
+#: model:ir.model.fields,field_description:stock_picking_pop_up_so_delivery_info_on_po_receipt.field_stock_picking_warning_helper
+msgid "Created from sale order"
+msgstr "Luotu myyntitilauksesta"
+
+#. module: stock_picking_pop_up_so_delivery_info_on_po_receipt
+#: model:ir.model.fields,field_description:stock_picking_pop_up_so_delivery_info_on_po_receipt.field_stock_picking_sale_order_warning_create_date
+msgid "Created on"
+msgstr "Luotu"
+
+#. module: stock_picking_pop_up_so_delivery_info_on_po_receipt
+#: model:ir.model.fields,field_description:stock_picking_pop_up_so_delivery_info_on_po_receipt.field_stock_picking_sale_order_warning_write_uid
+msgid "Last Updated by"
+msgstr "Viimeksi päivittänyt"
+
+#. module: stock_picking_pop_up_so_delivery_info_on_po_receipt
+#: model:ir.model.fields,field_description:stock_picking_pop_up_so_delivery_info_on_po_receipt.field_stock_picking_sale_order_warning_write_date
+msgid "Last Updated on"
+msgstr "Viimeksi päivitetty"
+
+#. module: stock_picking_pop_up_so_delivery_info_on_po_receipt
+#: model:ir.actions.act_window,name:stock_picking_pop_up_so_delivery_info_on_po_receipt.action_picking_warning
+#: model:ir.ui.view,arch_db:stock_picking_pop_up_so_delivery_info_on_po_receipt.stock_picking_wizard_po_warning
+msgid "Note for Picking"
+msgstr "Huomio toimitukselle"
+
+#. module: stock_picking_pop_up_so_delivery_info_on_po_receipt
+#: model:ir.ui.view,arch_db:stock_picking_pop_up_so_delivery_info_on_po_receipt.stock_picking_wizard_po_warning
+msgid "OK"
+msgstr "OK"
+
+#. module: stock_picking_pop_up_so_delivery_info_on_po_receipt
+#: model:ir.model,name:stock_picking_pop_up_so_delivery_info_on_po_receipt.model_purchase_order
+msgid "Purchase Order"
+msgstr "Ostotilaus"
+
+#. module: stock_picking_pop_up_so_delivery_info_on_po_receipt
+#: model:ir.model,name:stock_picking_pop_up_so_delivery_info_on_po_receipt.model_stock_picking
+msgid "Transfer"
+msgstr "Siirto"
+
+#. module: stock_picking_pop_up_so_delivery_info_on_po_receipt
+#: model:ir.ui.view,arch_db:stock_picking_pop_up_so_delivery_info_on_po_receipt.view_picking_form
+msgid "Validate"
+msgstr "Vahvista"
+
+#. module: stock_picking_pop_up_so_delivery_info_on_po_receipt
+#: model:ir.model,name:stock_picking_pop_up_so_delivery_info_on_po_receipt.model_stock_picking_sale_order_warning
+msgid "stock.picking.sale.order.warning"
+msgstr "stock.picking.sale.order.warning"

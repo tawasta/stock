@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>>
+    <record id="stock_picking_wizard_po_warning" model="ir.ui.view">
+        <field name="name">stock.picking.sale.order.warning.form</field>
+        <field name="model">stock.picking.sale.order.warning</field>
+        <field name="arch" type="xml">
+            <form id="stock_picking_warning_form" string="Note for Picking">
+                <div id="stock_picking_warning">
+                    <p>
+                        <field name="text"/>
+                    </p>
+                </div>
+
+                <footer id="stock_picking_warning_footer">
+                    <button name="validate" type="object" string="OK" class="oe_highlight"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_picking_warning" model="ir.actions.act_window">
+        <field name="name">Note for Picking</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">stock.picking.sale.order.warning</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="stock_picking_wizard_po_warning"/>
+        <field name="target">new</field>
+    </record>
+</odoo>
