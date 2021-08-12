@@ -44,6 +44,7 @@ class StockPickingInvoiceWizard(models.TransientModel):
 
         invoice = self.existing_invoice_id
         ail = self.env["account.invoice.line"]
+        existing_line = False
 
         if not invoice:
             invoice = self.env["account.invoice"].create(
@@ -121,3 +122,4 @@ class StockPickingInvoiceWizard(models.TransientModel):
                     )
 
             picking.invoice_id = invoice.id
+        return invoice, picking_ids
