@@ -21,13 +21,13 @@
 {
     "name": "Stock Report Customer address",
     "summary": "Stock Report Customer address",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.1.0",
     "category": "Stock",
     "website": "https://github.com/Tawasta/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["stock"],
+    "depends": ["stock_report_element_sizes"],
     "data": ["report/stock_report.xml"],
 }
