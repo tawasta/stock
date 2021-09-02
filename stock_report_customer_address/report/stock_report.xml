@@ -12,26 +12,18 @@
         <xpath expr="//div[@id='stock_deliveryslip_informations']" position="before">
             <div class="row">
                 <div class="col-6">
-                    <div t-if="o.move_ids_without_package and o.move_ids_without_package[0].partner_id and o.move_ids_without_package[0].partner_id.id != o.partner_id.id">
+                </div>
+                <div class="col-5 offset-1">
+                    <div>
                         <span>
                             <strong>Delivery Address:</strong>
                         </span>
+                    </div>
+                    <div t-if="o.move_ids_without_package and o.move_ids_without_package[0].partner_id and o.move_ids_without_package[0].partner_id.id != o.partner_id.id">
                         <div t-field="o.move_ids_without_package[0].partner_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;], &quot;no_marker&quot;: True, &quot;phone_icons&quot;: True}"/>
                     </div>
-                </div>
-                <div class="col-5 offset-1">
-                    <div t-if="o.move_ids_without_package and o.move_ids_without_package[0].partner_id and o.move_ids_without_package[0].partner_id.id != o.partner_id.id">
-                        <span>
-                            <strong>Vendor Address:</strong>
-                        </span>
-                    </div>
-                    <div t-elif="partner">
-                        <span>
-                            <strong>Customer Address:</strong>
-                        </span>
-                    </div>
                     <div t-if="partner" name="partner_header">
-                        <div t-esc="partner" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;], &quot;no_marker&quot;: True, &quot;phone_icons&quot;: True}"/>
+                        <div t-esc="partner" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;], &quot;no_marker&quot;: True}"/>
                     </div>
                 </div>
             </div>
