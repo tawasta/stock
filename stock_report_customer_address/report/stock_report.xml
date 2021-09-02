@@ -20,19 +20,18 @@
                     </div>
                 </div>
                 <div class="col-5 offset-1">
-                    <div t-if="o.picking_type_id.code=='incoming' and o.partner_id">
+                    <div t-if="o.move_ids_without_package and o.move_ids_without_package[0].partner_id and o.move_ids_without_package[0].partner_id.id != o.partner_id.id">
                         <span>
                             <strong>Vendor Address:</strong>
                         </span>
                     </div>
-                    <div t-if="o.picking_type_id.code=='outgoing' and o.partner_id">
+                    <div t-elif="partner">
                         <span>
                             <strong>Customer Address:</strong>
                         </span>
                     </div>
-                    <div t-if="o.partner_id" name="partner_header">
-                        <div t-field="o.partner_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;], &quot;no_marker&quot;: True, &quot;phone_icons&quot;: True}"/>
-                        <p t-if="o.sudo().partner_id.vat"><t t-esc="o.company_id.country_id.vat_label or 'Tax ID'"/>: <span t-field="o.sudo().partner_id.vat"/></p>
+                    <div t-if="partner" name="partner_header">
+                        <div t-esc="partner" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;], &quot;no_marker&quot;: True, &quot;phone_icons&quot;: True}"/>
                     </div>
                 </div>
             </div>
