@@ -21,7 +21,7 @@
 {
     "name": "Stock Dispatch Note Template",
     "summary": "Stock Dispatch Note Template",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "category": "Reporting",
     "website": "https://github.com/Tawasta/stock",
     "author": "Tawasta",
