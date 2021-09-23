@@ -19,18 +19,6 @@ class StockInventoryLine(models.Model):
             if record.product_id:
                 record.price_unit = record.product_id.standard_price
 
-    @api.model
-    def create(self, vals):
-        # Set the product price
-        if vals.get('product_id', False):
-            product = self.env['product.product'].search([
-                ('id', '=', vals.get('product_id'))
-            ])
-
-            vals['price_unit'] = product.standard_price
-
-        return super(StockInventoryLine, self).create(vals)
-
     def _get_move_values(self, *args, **kwargs):
         # Add manual cost price to lines
 
