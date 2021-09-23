@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="stock_move_create_manufacturing_order_wizard" model="ir.ui.view">
+        <field name="model">stock.move.create.manufacturing.order</field>
+        <field name="arch" type="xml">
+            <form id="create_manufacturing_order_form">
+                <div id="create_manufacturing_order">
+                    <group>
+                        <button type="object" name="create_manufacturing_orders" string="Create Manufacturing orders" class="oe_highlight"/>
+                        <group>
+                            <separator/>
+                        </group>
+                        <button special="cancel" string="Cancel"/>
+                    </group>
+                </div>
+                <footer/>
+            </form>
+        </field>
+    </record>
+    <act_window name="Create Manufacturing Order" multi="False" res_model="stock.move.create.manufacturing.order" src_model="stock.picking" view_mode="form" target="new" key2="client_action_multi" id="action_create_multiple_mo_orders"/>
+</odoo>

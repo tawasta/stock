@@ -20,8 +20,8 @@
 
 {
     "name": "Stock Report Quantity Decimals",
-    "summary": """Modifications to Stock Reports' decimal precision""",
-    "version": "12.0.1.0.0",
+    "summary": "Modifications to Stock Reports' decimal precision",
+    "version": "12.0.1.0.1",
     "category": "Reporting",
     "website": "https://github.com/Tawasta/stock",
     "author": "Tawasta",
@@ -29,5 +29,9 @@
     "application": False,
     "installable": True,
     "depends": ["stock"],
-    "data": ["report/stock_report_deliveryslip.xml", "report/stock_report_picking.xml"],
+    "data": [
+        "report/stock_report_deliveryslip.xml",
+        "report/stock_report_picking.xml",
+        "views/res_config_settings.xml",
+    ],
 }

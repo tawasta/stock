@@ -6,7 +6,7 @@
 Stock Report Customer address
 =============================
 
-* Stock Report Customer address
+* Stock Report Customer address modifications for stock picking and delivery slip
 
 Configuration
 =============
@@ -27,6 +27,7 @@ Contributors
 ------------
 
 * Timo Kekäläinen <timo.kekalainen@tawasta.fi>
+* Miika Nissi <miika.nissi@tawasta.fi>
 
 Maintainer
 ----------
