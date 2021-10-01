@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<odoo>
-    <record id="stock.action_report_picking" model="ir.actions.report">
-        <field name="report_name">stock_report_enable_translation_by_partner.report_picking</field>
-    </record>
-</odoo>

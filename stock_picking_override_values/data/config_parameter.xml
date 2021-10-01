@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<odoo noupdate="1">
-
-    <record id="stock_picking_override_company_id" model="ir.config_parameter">
-        <field name="key">stock.picking.override.company_id</field>
-        <field name="value"></field>
-    </record>
-
-</odoo>
