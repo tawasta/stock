@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<odoo>
-    <template id="report_dispatch_note" inherit_id="stock_dispatch_note_report.report_dispatch_note">
-        <xpath expr="//h2" position="after">
-            <p t-if="doc.comment" t-field="doc.comment" />
-        </xpath>
-    </template>
-</odoo>

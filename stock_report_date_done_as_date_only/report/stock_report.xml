@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<odoo>
-    <template id="report_delivery_document" inherit_id="stock.report_delivery_document">
-        <xpath expr="//span[@t-field='o.date_done']" position="attributes">
-            <attribute name='t-options'>{'widget': 'date'}</attribute>
-        </xpath>
-    </template>
-</odoo>
