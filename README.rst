@@ -20,6 +20,18 @@ Addons
    * - `stock_product_qty_available_unreserved <stock_product_qty_available_unreserved/>`_
      - 14.0.1.0.0
      - Adds unreseved field (on hand - reserved)
+   * - `stock_report_customer_address <stock_report_customer_address/>`_
+     - 14.0.1.0.0
+     - Stock Report Customer Address
+   * - `stock_report_customer_reference <stock_report_customer_reference/>`_
+     - 14.0.1.0.0
+     - Stock Report Customer Reference
+   * - `stock_report_element_sizes <stock_report_element_sizes/>`_
+     - 14.0.1.0.0
+     - Stock Report Element Sizes
+   * - `stock_report_title <stock_report_title/>`_
+     - 14.0.1.0.0
+     - Stock Picking and Delivery Slip Report Title
 
 Configuration
 =============
