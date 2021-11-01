@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="report_picking_date_done" inherit_id="stock_report_element_sizes.report_picking_element_sizes">
+        <div id="stock_picking_informations" position="inside">
+            <div t-if="o.date_done" class="col-auto mw-100 mb-2">
+                <span>
+                    <strong>Delivery date:</strong>
+                </span>
+                <p class="m-0" t-field="o.date_done" t-options="{'widget': 'date'}"/>
+            </div>
+        </div>
+    </template>
+</odoo>
