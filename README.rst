@@ -17,6 +17,9 @@ Addons
    * - addon
      - version
      - summary
+   * - `stock_auditlog_rules <stock_auditlog_rules/>`_
+     - 14.0.1.0.0
+     - Auditlog rules for stock
    * - `stock_product_qty_available_unreserved <stock_product_qty_available_unreserved/>`_
      - 14.0.1.0.0
      - Adds unreseved field (on hand - reserved)
