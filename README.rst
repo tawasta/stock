@@ -29,9 +29,12 @@ Addons
    * - `stock_report_element_sizes <stock_report_element_sizes/>`_
      - 14.0.1.0.0
      - Stock Report Element Sizes
-   * - `stock_report_date_done <stock_report_report_date_done/>`_
+   * - `stock_report_date_done <stock_report_date_done/>`_
      - 14.0.1.0.0
      - Stock Report Date Done
+   * - `stock_report_our_reference <stock_report_our_reference/>`_
+     - 14.0.1.0.0
+     - Stock Report Our Reference
    * - `stock_report_scheduled_date_as_date_only <stock_report_scheduled_date_as_date_only/>`_
      - 14.0.1.0.0
      - Stock Report Scheduled Date as Date only
