@@ -5,8 +5,7 @@
 =========================
 Stock Picking Lines Limit
 =========================
-
-Stock Picking Lines Limit
+* Sets Stock Picking Lines Limit to 200.
 
 Configuration
 =============
@@ -27,6 +26,7 @@ Contributors
 ------------
 
 * Timo Kekäläinen <timo.kekalainen@tawasta.fi>
+* Miika Nissi <miika.nissi@tawasta.fi>
 
 Maintainer
 ----------
