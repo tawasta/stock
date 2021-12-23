@@ -9,16 +9,19 @@ class CountryGroup(models.Model):
         string="Stock Picking Text",
         help="Text to be added on stock pickings going to customers in this "
         + "country group.",
+        translate=True,
     )
 
     delivery_slip_text = fields.Text(
         string="Delivery Slip Text",
         help="Text to be added on delivery slip going to customers in this "
         + "country group.",
+        translate=True,
     )
 
     dispatch_note_text = fields.Text(
         string="Dispatch Note Text",
         help="Text to be added on dispatch note going to customers in this "
         + "country group.",
+        translate=True,
     )
