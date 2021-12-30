@@ -21,7 +21,7 @@
 {
     "name": "Archive stock valuation layer records (inventory valuation)",
     "summary": "Allows archiving inventory valuation records",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Inventory",
     "website": "https://github.com/Tawasta/stock",
     "author": "Tawasta",

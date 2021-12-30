@@ -17,7 +17,9 @@ class StockValuationLayer(models.Model):
             if record.account_move_id:
                 if not record.active and record.account_move_id.state == "posted":
                     record.account_move_id.button_draft()
-                elif record.active and record.account_move_id.state == "draft":
+                    record.account_move_id.button_cancel()
+                elif record.active and record.account_move_id.state == "cancel":
+                    record.account_move_id.button_draft()
                     record.account_move_id.action_post()
 
         return result
