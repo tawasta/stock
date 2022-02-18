@@ -3,7 +3,7 @@
 <odoo>
     <template id="report_dispatch_note" inherit_id="stock_dispatch_note_report.report_dispatch_note">
         <xpath expr="//th[@name='td_sched_date_h']" position="after">
-            <t t-if="doc.sale_id and doc.sale_id.week_of_shipment">
+            <t t-if="doc.sudo().sale_id and doc.sudo().sale_id.week_of_shipment">
                 <th name="td_week_of_shipment">
                     <strong>Week of shipment</strong>
                 </th>
@@ -11,9 +11,9 @@
         </xpath>
 
         <xpath expr="//td[@name='td_sched_date']" position="after">
-            <t t-if="doc.sale_id and doc.sale_id.week_of_shipment">
+            <t t-if="doc.sudo().sale_id and doc.sudo().sale_id.week_of_shipment">
                 <td name="td_week_of_shipment">
-                    <t t-esc="doc.sale_id.week_of_shipment"></t>
+                    <t t-esc="doc.sudo().sale_id.week_of_shipment"></t>
                 </td>
             </t>
         </xpath>
