@@ -15,21 +15,25 @@ class StockPicking(models.Model):
         for picking in self:
 
             backorder_force = picking.backorder_id and\
-                    picking.backorder_id.force_unreserve
+                    picking.backorder_id.force_unreserve or False
 
             # Check does a delivery have a backorder
             if picking.group_id.sale_id and picking.group_id.force_unreserve or\
                     backorder_force:
+
                 # Backorder's force_unreserve field is set to False
                 # which means that this order can now be reserved
                 if backorder_force:
                     picking.backorder_id.force_unreserve = False
                 picking.group_id.force_unreserve = False
-                picking.do_unreserve()
+
+                if picking.backorder_id and all([move for move
+                        in picking.move_lines if move.reserved_availability == 0]):
+                    picking.do_unreserve()
+
                 return True
             else:
                 if picking.group_id.sale_id:
-                    picking.group_id.force_unreserve = True
                     picking.force_unreserve = True
                 super(StockPicking, picking).action_assign()
 
@@ -41,4 +45,5 @@ class StockPicking(models.Model):
             # Check if a delivery is from sale order, just in case
             if picking.group_id.sale_id and picking.group_id.force_unreserve:
                 picking.group_id.force_unreserve = False
+            picking.force_unreserve = False
             super(StockPicking, picking).do_unreserve()
