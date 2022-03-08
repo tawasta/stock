@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2022- Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2022- Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,9 +19,9 @@
 ##############################################################################
 
 {
-    "name": "Stock Move Tree Expected Date",
-    "summary": "Adds Expected Date to Stock Move tree view",
-    "version": "12.0.1.0.1",
+    "name": "Stock Move Search",
+    "summary": "Additional Search options for Stock Move",
+    "version": "14.0.1.0.0",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
@@ -29,5 +29,5 @@
     "application": False,
     "installable": True,
     "depends": ["stock"],
-    "data": ["views/stock_move.xml"],
+    "data": ["views/stock_move_views.xml"],
 }

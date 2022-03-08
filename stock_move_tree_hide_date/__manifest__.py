@@ -19,9 +19,9 @@
 ##############################################################################
 
 {
-    "name": "Stock Move Tree Expected Date",
-    "summary": "Adds Expected Date to Stock Move tree view",
-    "version": "12.0.1.0.1",
+    "name": "Stock Move Tree Hide Date",
+    "summary": "Hides Date on Stock Move tree view",
+    "version": "12.0.1.0.0",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",

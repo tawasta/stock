@@ -18,16 +18,43 @@
 #
 ##############################################################################
 
-{
-    "name": "Stock Move Tree Expected Date",
-    "summary": "Adds Expected Date to Stock Move tree view",
-    "version": "12.0.1.0.1",
-    "category": "Stock",
-    "website": "https://gitlab.com/tawasta/odoo/stock",
-    "author": "Tawasta",
-    "license": "AGPL-3",
-    "application": False,
-    "installable": True,
-    "depends": ["stock"],
-    "data": ["views/stock_move.xml"],
-}
+# 1. Standard library imports:
+
+# 2. Known third party imports:
+
+# 3. Odoo imports (openerp):
+from odoo import fields, models
+
+# 4. Imports from Odoo modules:
+
+# 5. Local imports in the relative form:
+
+# 6. Unknown third party imports:
+
+
+class StockMove(models.Model):
+    # 1. Private attributes
+    _inherit = "stock.move"
+
+    # 2. Fields declaration
+    product_tmpl_id = fields.Many2one(store=True)
+    product_categ_id = fields.Many2one(
+        "product.category",
+        "Product Category",
+        related="product_id.categ_id",
+        readonly=True,
+        store=True,
+        help="Technical: used in views",
+    )
+
+    # 3. Default methods
+
+    # 4. Compute and search fields, in the same order that fields declaration
+
+    # 5. Constraints and onchanges
+
+    # 6. CRUD methods
+
+    # 7. Action methods
+
+    # 8. Business methods

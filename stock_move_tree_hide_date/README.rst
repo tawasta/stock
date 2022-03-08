@@ -2,10 +2,10 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-=============================
-Stock Move Tree Expected Date
-=============================
-Adds Expected Date to Stock Move tree view
+=========================
+Stock Move Tree Hide Date
+=========================
+Hides Date on Stock Move tree view
 
 Configuration
 =============
@@ -25,7 +25,6 @@ Credits
 Contributors
 ------------
 
-* Timo Kekäläinen <timo.kekalainen@tawasta.fi>
 * Miika Nissi <miika.nissi@tawasta.fi>
 
 Maintainer
