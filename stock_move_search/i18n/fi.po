@@ -1,0 +1,52 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* stock_move_search
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-08 15:13+0000\n"
+"PO-Revision-Date: 2022-03-08 15:13+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_move_search
+#: model_terms:ir.ui.view,arch_db:stock_move_search.view_move_search
+msgid "Partner"
+msgstr "Kumppani"
+
+#. module: stock_move_search
+#: model:ir.model.fields,field_description:stock_move_search.field_stock_move__partner_country_id
+#: model_terms:ir.ui.view,arch_db:stock_move_search.view_move_search
+msgid "Partner Country"
+msgstr "Kumppanin maa"
+
+#. module: stock_move_search
+#: model:ir.model.fields,field_description:stock_move_search.field_stock_move__product_categ_id
+#: model_terms:ir.ui.view,arch_db:stock_move_search.view_move_search
+msgid "Product Category"
+msgstr "Tuotekategoria"
+
+#. module: stock_move_search
+#: model:ir.model.fields,field_description:stock_move_search.field_stock_move__product_tmpl_id
+#: model_terms:ir.ui.view,arch_db:stock_move_search.view_move_search
+msgid "Product Template"
+msgstr "Tuotemalli"
+
+#. module: stock_move_search
+#: model:ir.model,name:stock_move_search.model_stock_move
+msgid "Stock Move"
+msgstr "Varastosiirto"
+
+#. module: stock_move_search
+#: model:ir.model.fields,help:stock_move_search.field_stock_move__partner_country_id
+#: model:ir.model.fields,help:stock_move_search.field_stock_move__product_categ_id
+#: model:ir.model.fields,help:stock_move_search.field_stock_move__product_tmpl_id
+msgid "Technical: used in views"
+msgstr "Tekninen: käytetään näkymissä"
+
