@@ -9,6 +9,9 @@
                 <field name="product_tmpl_id" />
                 <field name="product_categ_id" />
             </field>
+            <field name="partner_id" position="after">
+                <field name="partner_country_id" />
+            </field>
             <filter name="by_product" position="after">
                 <filter
           string="Product Template"
@@ -27,6 +30,12 @@
           name="by_partner"
           domain="[]"
           context="{'group_by':'partner_id'}"
+        />
+                <filter
+          string="Partner Country"
+          name="by_partner_country"
+          domain="[]"
+          context="{'group_by':'partner_country_id'}"
         />
             </filter>
         </field>

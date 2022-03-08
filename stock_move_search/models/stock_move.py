@@ -46,6 +46,14 @@ class StockMove(models.Model):
         store=True,
         help="Technical: used in views",
     )
+    partner_country_id = fields.Many2one(
+        "res.country",
+        "Partner Country",
+        related="partner_id.country_id",
+        readonly=True,
+        store=True,
+        help="Technical: used in views",
+    )
 
     # 3. Default methods
 
