@@ -82,7 +82,7 @@ class StockPickingInvoiceWizard(models.TransientModel):
                 if show_moves:
                     line_name = "{} - {}".format(move.name, move.picking_id.name)
                 else:
-                    line_name = product.name
+                    line_name = product.display_name
 
                 if self.group_lines:
                     # Try to find existing invoice line
