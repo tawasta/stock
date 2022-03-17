@@ -80,7 +80,6 @@ class StockMove(models.Model):
                 "waiting",
             ]:
                 mo.button_plan_start_work_orders()
-                mo.button_plan_process_work_orders()
             if mo.state == "progress":
                 mo.button_mark_done()
                 self.mo_to_complete = False
