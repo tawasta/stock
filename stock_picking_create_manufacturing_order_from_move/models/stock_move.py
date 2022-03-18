@@ -38,7 +38,8 @@ class StockMove(models.Model):
         )
 
         # Subtracts the difference between reserved and ordered quantity
-        qty_to_produce = self.product_uom_qty - self.reserved_availability
+        ml_qty = self.move_line_ids and self.move_line_ids[0].product_uom_qty or 0
+        qty_to_produce = self.product_uom_qty - ml_qty
 
         if bom:
             values = {

@@ -21,7 +21,7 @@
 {
     "name": "Create Manufacturing order from stock picking line",
     "summary": "Create Manufacturing order from stock picking line",
-    "version": "12.0.1.0.5",
+    "version": "12.0.1.0.6",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
