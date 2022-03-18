@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2021 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2022 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,24 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Create Manufacturing order from stock picking line",
-    "summary": "Create Manufacturing order from stock picking line",
-    "version": "12.0.1.0.6",
+    "name": "Reserve chosen moves",
+    "summary": "Select manually the moves to be reserved on deliveries",
+    "version": "12.0.1.0.0",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        "mrp", "stock",
-        "mrp_production_autoprocess_work_orders_two_steps"
-    ],
-    "data": [
-        "views/mrp_production.xml",
-        "views/stock_move.xml",
-        "views/stock_picking.xml",
-        "wizard/stock_move_create_manufacturing_order.xml",
-        "wizard/stock_move_create_manufacturing_order_message.xml",
-    ],
+    "depends": ["stock"],
+    "data": ["views/stock_picking.xml"],
 }
