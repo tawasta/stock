@@ -10,8 +10,7 @@ class StockPicking(models.Model):
     def do_unreserve(self):
         for picking in self:
             for move in picking.move_lines:
-                if move.product_uom_qty == move.reserved_availability:
-                    move.move_has_been_reserved = False
+                move.move_has_been_reserved = False
         super().do_unreserve()
 
     @api.multi
@@ -20,5 +19,6 @@ class StockPicking(models.Model):
         moves = self.mapped('move_lines').filtered(
                 lambda move: move.state not in ('draft', 'cancel', 'done'))
         for move in moves:
-            move.move_has_been_reserved = True
+            if move.product_uom_qty == move.reserved_availability:
+                move.move_has_been_reserved = True
         return res
