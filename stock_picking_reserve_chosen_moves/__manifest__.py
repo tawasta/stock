@@ -21,7 +21,7 @@
 {
     "name": "Reserve chosen moves",
     "summary": "Select manually the moves to be reserved on deliveries",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
