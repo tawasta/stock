@@ -9,5 +9,6 @@ class StockMove(models.Model):
     move_has_been_reserved = fields.Boolean(default=False)
 
     def reserve_this_move(self):
-        self.move_has_been_reserved = True
         self._action_assign()
+        if self.state in ('assigned', 'done'):
+            self.move_has_been_reserved = True
