@@ -21,7 +21,7 @@
 {
     "name": "Create Manufacturing order from stock picking line",
     "summary": "Create Manufacturing order from stock picking line",
-    "version": "12.0.1.0.6",
+    "version": "12.0.1.0.7",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
@@ -30,7 +30,8 @@
     "installable": True,
     "depends": [
         "mrp", "stock",
-        "mrp_production_autoprocess_work_orders_two_steps"
+        "mrp_production_autoprocess_work_orders_two_steps",
+        "stock_picking_reserve_chosen_moves"
     ],
     "data": [
         "views/mrp_production.xml",

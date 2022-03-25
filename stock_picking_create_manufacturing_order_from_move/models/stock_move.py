@@ -86,4 +86,5 @@ class StockMove(models.Model):
                 self.mo_to_complete = False
 
         # Check quantities which can be reserved
-        self.picking_id.action_assign()
+        self._action_assign()
+        self.move_has_been_reserved = True
