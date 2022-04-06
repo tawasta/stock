@@ -21,7 +21,7 @@
 {
     "name": "Stock inventory adjustment manual cost",
     "summary": "Allow modifying inventory adjustment line costs manually",
-    "version": "12.0.1.1.0",
+    "version": "12.0.1.1.1",
     "category": "Inventory",
     "website": "https://github.com/Tawasta/stock",
     "author": "Tawasta",
