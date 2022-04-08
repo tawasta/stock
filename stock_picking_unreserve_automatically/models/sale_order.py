@@ -19,6 +19,6 @@ class SaleOrder(models.Model):
             to True. This way the sale order's new transfer will not be
             reserved. """
         for order in self:
-            if order.group_id:
-                order.group_id.force_unreserve = True
+            if order.procurement_group_id:
+                order.procurement_group_id.force_unreserve = True
             return super(SaleOrder, order).action_cancel()
