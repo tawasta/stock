@@ -47,3 +47,13 @@ class StockPicking(models.Model):
                 picking.group_id.force_unreserve = False
             picking.force_unreserve = False
             super(StockPicking, picking).do_unreserve()
+
+    @api.multi
+    def action_cancel(self):
+        """ In case a sale order is canceled and confirmed again, it is
+            necessary to set a procurement group's force_unreserve-field
+            to True. This way the sale order's new transfer will not be
+            reserved. """
+        for picking in self:
+            picking.group_id.force_unreserve = True
+            return super(StockPicking, picking).action_cancel()
