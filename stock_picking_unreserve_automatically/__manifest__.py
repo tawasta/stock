@@ -21,14 +21,14 @@
 {
     "name": "Stock Picking - Unreserve automatically",
     "summary": "Set sale orders to automatically unreserve deliveries",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["sale", "stock",],
+    "depends": ["sale", "sale_stock", "stock",],
     "data": [
         "views/res_config_settings.xml",
         "views/sale_order.xml",
