@@ -21,7 +21,7 @@
 {
     "name": "Stock Picking - Unreserve automatically",
     "summary": "Set sale orders to automatically unreserve deliveries",
-    "version": "12.0.1.0.1",
+    "version": "12.0.1.0.2",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
