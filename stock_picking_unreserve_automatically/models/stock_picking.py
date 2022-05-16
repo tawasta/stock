@@ -41,6 +41,9 @@ class StockPicking(models.Model):
                     backorder.force_unreserve = False
                 picking.group_id.force_unreserve = False
 
+                # Picking can now be reserved
+                picking.force_unreserve = False
+
                 if backorder and all([move for move
                         in picking.move_lines if move.reserved_availability == 0]):
                     picking.do_unreserve()
