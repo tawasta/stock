@@ -6,8 +6,7 @@ class StockPicking(models.Model):
 
     _inherit = 'stock.picking'
 
-    force_unreserve = fields.Boolean(string="Force Unreserve",
-            default=lambda self: self._default_force_unreserve())
+    force_unreserve = fields.Boolean(string="Force Unreserve", default=False)
 
     @api.model
     def create(self, vals):
@@ -16,12 +15,6 @@ class StockPicking(models.Model):
             vals['force_unreserve'] = True
 
         return super().create(vals)
-
-    def _default_force_unreserve(self):
-        if self.sale_id:
-            return self.env.user.company_id.force_unreserve
-        else:
-            return False
 
     @api.multi
     def action_assign(self):
