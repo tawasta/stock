@@ -32,8 +32,8 @@ class StockPicking(models.Model):
 
             backorder_force = backorder and backorder.force_unreserve or False
 
-            if picking.group_id.sale_id and picking.group_id.force_unreserve or\
-                    picking.force_unreserve:
+            if picking.group_id.sale_id and (picking.group_id.force_unreserve or
+                    picking.force_unreserve):
 
                 # Backorder's force_unreserve field is set to False
                 # which means that this order can now be reserved
