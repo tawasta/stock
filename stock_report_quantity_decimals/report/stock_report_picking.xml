@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template id="report_picking" inherit_id="stock.report_picking">
+        <span t-if="o.state != 'done'" position="attributes">
+            <attribute name="t-options">{'precision': o.company_id.stock_report_decimal_precision}</attribute>
+        </span>
+        <span t-if="o.state == 'done'" position="attributes">
+            <attribute name="t-options">{'precision': o.company_id.stock_report_decimal_precision}</attribute>
+        </span>
+    </template>
+</odoo>
