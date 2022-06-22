@@ -23,7 +23,7 @@
     "summary": "Allows archiving inventory valuation records",
     "version": "14.0.1.0.1",
     "category": "Inventory",
-    "website": "https://github.com/Tawasta/stock",
+    "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

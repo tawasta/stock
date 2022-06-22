@@ -1,22 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <template id="report_picking_customer_address" inherit_id="stock.report_picking">
         <xpath expr="//div[@name='partner_header']/div" position="attributes">
-            <attribute name="t-options">{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}</attribute>
+            <attribute
+                name="t-options"
+            >{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}</attribute>
         </xpath>
     </template>
-    <template id="report_delivery_document_customer_address" inherit_id="stock_report_element_sizes.report_delivery_document_element_sizes">
+    <template
+        id="report_delivery_document_customer_address"
+        inherit_id="stock_report_element_sizes.report_delivery_document_element_sizes"
+    >
         <xpath expr="//t[@name='partner_header']//t//div" position="attributes">
             <attribute name="class">d-none</attribute>
         </xpath>
         <xpath expr="//div[@id='stock_deliveryslip_informations']" position="before">
             <div class="row">
                 <div class="col-6">
-                    <div t-if="o.move_ids_without_package and o.move_ids_without_package[0].partner_id and o.move_ids_without_package[0].partner_id.id != o.partner_id.id">
+                    <div
+                        t-if="o.move_ids_without_package and o.move_ids_without_package[0].partner_id and o.move_ids_without_package[0].partner_id.id != o.partner_id.id"
+                    >
                         <span>
                             <strong>Delivery Address:</strong>
                         </span>
-                        <div t-field="o.move_ids_without_package[0].partner_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;], &quot;no_marker&quot;: True, &quot;phone_icons&quot;: True}"/>
+                        <div
+                            t-field="o.move_ids_without_package[0].partner_id"
+                            t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;], &quot;no_marker&quot;: True, &quot;phone_icons&quot;: True}"
+                        />
                     </div>
                 </div>
                 <div class="col-5 offset-1">
@@ -36,7 +46,10 @@
                         </span>
                     </div>
                     <div t-if="o.partner_id" name="partner_header">
-                        <div t-field="o.partner_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;], &quot;no_marker&quot;: True, &quot;phone_icons&quot;: True}"/>
+                        <div
+                            t-field="o.partner_id"
+                            t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;], &quot;no_marker&quot;: True, &quot;phone_icons&quot;: True}"
+                        />
                     </div>
                 </div>
             </div>

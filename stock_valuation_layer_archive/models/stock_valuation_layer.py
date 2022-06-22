@@ -1,5 +1,4 @@
-from odoo import fields
-from odoo import models
+from odoo import fields, models
 
 
 class StockValuationLayer(models.Model):
@@ -10,7 +9,7 @@ class StockValuationLayer(models.Model):
     )
 
     def toggle_active(self):
-        """ Archiving valuation layer record will set any related account moves to draft """
+        """Archiving valuation layer record will set any related account moves to draft"""
         result = super().toggle_active()
 
         for record in self:

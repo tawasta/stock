@@ -1,4 +1,4 @@
-from odoo import api, models, fields, _
+from odoo import _, api, fields, models
 from odoo.exceptions import UserError
 
 
@@ -46,10 +46,12 @@ class StockPickingInvoiceWizard(models.TransientModel):
         existing_line = False
 
         if not invoice:
-            invoice = self.env["account.move"].create({
-                "partner_id": self.partner_id.id,
-                "move_type": "out_invoice",
-            })
+            invoice = self.env["account.move"].create(
+                {
+                    "partner_id": self.partner_id.id,
+                    "move_type": "out_invoice",
+                }
+            )
 
         for picking in picking_ids:
             if picking.state != "done":

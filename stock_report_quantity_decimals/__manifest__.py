@@ -23,7 +23,7 @@
     "summary": "Modifications to Stock Reports' decimal precision",
     "version": "14.0.1.0.0",
     "category": "Reporting",
-    "website": "https://github.com/Tawasta/stock",
+    "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

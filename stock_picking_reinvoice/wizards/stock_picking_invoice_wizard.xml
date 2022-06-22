@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
 
     <record id="stock_picking_invoice_wizard_form" model="ir.ui.view">
@@ -10,22 +10,23 @@
                 <group>
                     <field name="partner_id" />
                     <field name="pricelist_id" />
-                    <field name="existing_invoice_id"
-                           options="{'no_open': True, 'no_create': True}"
-                           domain="[('partner_id', '=', partner_id), ('state', '=', 'draft'), ('move_type', '=', 'out_invoice')]"
-                           />
+                    <field
+                        name="existing_invoice_id"
+                        options="{'no_open': True, 'no_create': True}"
+                        domain="[('partner_id', '=', partner_id), ('state', '=', 'draft'), ('move_type', '=', 'out_invoice')]"
+                    />
                     <field name="group_lines" />
                 </group>
 
                 <footer>
-                    <button string="Confirm"
+                    <button
+                        string="Confirm"
                         type="object"
                         class="oe_highlight"
-                        name="action_create_invoice"/>
+                        name="action_create_invoice"
+                    />
                     or
-                    <button string="Cancel"
-                        class="oe_link"
-                        special="cancel"/>
+                    <button string="Cancel" class="oe_link" special="cancel" />
                 </footer>
             </form>
         </field>
@@ -37,7 +38,7 @@
         <field name="res_model">stock.picking.invoice.wizard</field>
         <field name="view_mode">form</field>
         <field name="target">new</field>
-        <field name="binding_model_id" ref="stock.model_stock_picking"/>
+        <field name="binding_model_id" ref="stock.model_stock_picking" />
         <field name="binding_view_types">list</field>
     </record>
 

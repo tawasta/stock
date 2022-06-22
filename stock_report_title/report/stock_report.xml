@@ -1,22 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <template id="report_picking_informations_title" inherit_id="stock_report_element_sizes.report_picking_element_sizes">
+    <template
+        id="report_picking_informations_title"
+        inherit_id="stock_report_element_sizes.report_picking_element_sizes"
+    >
         <div id="stock_picking_informations" position="inside">
             <div t-if="o.name" class="col-auto mw-100 mb-2">
                 <span>
                     <strong>Stock picking:</strong>
                 </span>
-                <p class="m-0" t-field="o.name"/>
+                <p class="m-0" t-field="o.name" />
             </div>
         </div>
     </template>
-    <template id="report_deliveryslip_informations_title" inherit_id="stock_report_element_sizes.report_delivery_document_element_sizes">
+    <template
+        id="report_deliveryslip_informations_title"
+        inherit_id="stock_report_element_sizes.report_delivery_document_element_sizes"
+    >
         <div id="stock_deliveryslip_informations" position="inside">
             <div t-if="o.name" class="col-auto mw-100 mb-2">
                 <span>
                     <strong>Delivery Slip:</strong>
                 </span>
-                <p class="m-0" t-field="o.name"/>
+                <p class="m-0" t-field="o.name" />
             </div>
         </div>
     </template>
@@ -28,7 +34,10 @@
             <attribute name="class">d-none</attribute>
         </xpath>
     </template>
-    <template id="report_deliveryslip_title" inherit_id="stock.report_delivery_document">
+    <template
+        id="report_deliveryslip_title"
+        inherit_id="stock.report_delivery_document"
+    >
         <xpath expr="//t[@t-set='o']" position="before">
             <t t-set="report_title">Delivery Slip</t>
         </xpath>
