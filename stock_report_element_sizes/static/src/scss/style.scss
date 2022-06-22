@@ -1,14 +1,14 @@
 #stock_deliveryslip_informations {
     padding-top: 20px;
 }
-#stock_picking_informations > div.col-auto {
-    //     display: inline-block;
-    min-width: 24%;
-    //     vertical-align: text-top;
+#stock_picking_informations > div {
+    display: inline-block !important;
+    max-width: 24% !important;
+    min-width: 200px !important;
 }
 
 #stock_deliveryslip_informations > div.col-auto {
-    //     display: inline-block;
-    min-width: 24%;
-    //     vertical-align: text-top;
+    display: inline-block !important;
+    max-width: 24% !important;
+    min-width: 200px !important;
 }
