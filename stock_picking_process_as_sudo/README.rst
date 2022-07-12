@@ -1,0 +1,40 @@
+.. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
+   :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
+   :alt: License: AGPL-3
+
+====================================
+Process Stock Pickings as Admin user
+====================================
+
+* Bypass access restrictions of stock picking by installing this module.
+  It allows processing pickings as Admin user, so the delivery can be
+  processed even if its sale order belongs to an other company.
+
+Configuration
+=============
+\-
+
+Usage
+=====
+\-
+
+Known issues / Roadmap
+======================
+\-
+
+Credits
+=======
+
+Contributors
+------------
+
+* Timo Kekäläinen <timo.kekalainen@tawasta.fi>
+
+Maintainer
+----------
+
+.. image:: http://tawasta.fi/templates/tawastrap/images/logo.png
+   :alt: Oy Tawasta OS Technologies Ltd.
+   :target: http://tawasta.fi/
+
+This module is maintained by Oy Tawasta OS Technologies Ltd.
