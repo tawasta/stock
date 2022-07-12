@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_stock_return_picking_form" model="ir.ui.view">
+        <field name="name">stock.return.picking.sudo.return</field>
+        <field name="model">stock.return.picking</field>
+        <field name="inherit_id" ref="stock.view_stock_return_picking_form" />
+        <field name="arch" type="xml">
+            <button name="create_returns" position="after">
+                <button
+                    name="sudo_create_returns"
+                    string="Return"
+                    type="object"
+                    class="btn-primary"
+                />
+            </button>
+            <button name="create_returns" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </button>
+        </field>
+    </record>
+</odoo>
