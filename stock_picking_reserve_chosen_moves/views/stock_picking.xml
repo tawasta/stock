@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_picking_form" model="ir.ui.view">
+        <field name="name">stock.picking.form.reserve.this.move</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//field[@name='move_ids_without_package']/tree/field[@name='quantity_done']"
+                position="after"
+            >
+                <button
+                    name="reserve_this_move"
+                    type="object"
+                    string="Reserve"
+                    class="oe_highlight"
+                    attrs="{'invisible': [('move_has_been_reserved', '=', True)]}"
+                />
+                <field name="move_has_been_reserved" invisible="1" />
+            </xpath>
+        </field>
+    </record>
+</odoo>
