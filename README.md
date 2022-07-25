@@ -16,6 +16,7 @@ addon | version | maintainers | summary
 [stock_move_search](stock_move_search/) | 14.0.1.0.0 |  | Additional Search options for Stock Move
 [stock_picking_bypass_reservation](stock_picking_bypass_reservation/) | 14.0.1.0.0 |  | Stock Picking Bypass Reservation
 [stock_picking_customer_reference](stock_picking_customer_reference/) | 14.0.1.0.0 |  | Stock Picking Customer Reference
+[stock_picking_override_values](stock_picking_override_values/) | 14.0.1.0.0 |  | Allow overriding new picking values with system parameters
 [stock_picking_process_as_sudo](stock_picking_process_as_sudo/) | 14.0.1.0.0 |  | Process Stock Pickings as Admin user
 [stock_picking_reinvoice](stock_picking_reinvoice/) | 14.0.1.0.0 |  | Allow making invoices from stock pickings
 [stock_picking_reserve_chosen_moves](stock_picking_reserve_chosen_moves/) | 14.0.1.0.0 |  | Select manually the moves to be reserved on deliveries
