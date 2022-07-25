@@ -21,6 +21,7 @@ addon | version | maintainers | summary
 [stock_picking_process_as_sudo](stock_picking_process_as_sudo/) | 14.0.1.0.0 |  | Process Stock Pickings as Admin user
 [stock_picking_reinvoice](stock_picking_reinvoice/) | 14.0.1.0.0 |  | Allow making invoices from stock pickings
 [stock_picking_reserve_chosen_moves](stock_picking_reserve_chosen_moves/) | 14.0.1.0.0 |  | Select manually the moves to be reserved on deliveries
+[stock_picking_sort_by_print_and_scheduled_date](stock_picking_sort_by_print_and_scheduled_date/) | 14.0.1.0.0 |  | Stock Picking sort by printed and Scheduled Date
 [stock_picking_unreserve_automatically](stock_picking_unreserve_automatically/) | 14.0.1.0.0 |  | Set sale orders to automatically unreserve deliveries
 [stock_product_qty_available_unreserved](stock_product_qty_available_unreserved/) | 14.0.1.0.0 |  | Add unreserved available (on hand - reserved)
 [stock_report_add_description_to_picking](stock_report_add_description_to_picking/) | 14.0.1.0.0 |  | Adds Description column to picking report
