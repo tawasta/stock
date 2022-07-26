@@ -22,7 +22,7 @@
     "name": "Reinvoice stock pickings",
     "summary": "Allow making invoices from stock pickings",
     "category": "Warehouse",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
