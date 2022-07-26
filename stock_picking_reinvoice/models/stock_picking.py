@@ -14,13 +14,6 @@ class StockPicking(models.Model):
     )
 
     invoice_state = fields.Selection(
-        [
-            ("draft", "Draft"),
-            ("open", "Open"),
-            ("in_payment", "In Payment"),
-            ("paid", "Paid"),
-            ("cancel", "Cancelled"),
-        ],
-        string="Invoice status",
+        string="Invoice Status",
         related="invoice_id.state",
     )
