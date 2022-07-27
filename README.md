@@ -13,6 +13,7 @@ addon | version | maintainers | summary
 --- | --- | --- | ---
 [stock_auditlog_rules](stock_auditlog_rules/) | 14.0.1.0.0 |  | Adds audit log rules for stock.warehouse and stock.location
 [stock_disable_invoice_shipping_on_delivery](stock_disable_invoice_shipping_on_delivery/) | 14.0.1.0.0 |  | Disable picking auto-generated delivery SO lines
+[stock_hide_packing_buttons](stock_hide_packing_buttons/) | 14.0.1.0.0 |  | Hides "put in pack" buttons
 [stock_move_search](stock_move_search/) | 14.0.1.0.0 |  | Additional Search options for Stock Move
 [stock_picking_bypass_reservation](stock_picking_bypass_reservation/) | 14.0.1.0.0 |  | Stock Picking Bypass Reservation
 [stock_picking_customer_reference](stock_picking_customer_reference/) | 14.0.1.0.0 |  | Stock Picking Customer Reference
@@ -22,6 +23,7 @@ addon | version | maintainers | summary
 [stock_picking_reinvoice](stock_picking_reinvoice/) | 14.0.1.0.1 |  | Allow making invoices from stock pickings
 [stock_picking_reserve_chosen_moves](stock_picking_reserve_chosen_moves/) | 14.0.1.0.0 |  | Select manually the moves to be reserved on deliveries
 [stock_picking_sort_by_print_and_scheduled_date](stock_picking_sort_by_print_and_scheduled_date/) | 14.0.1.0.0 |  | Stock Picking sort by printed and Scheduled Date
+[stock_picking_tree_effective_date](stock_picking_tree_effective_date/) | 14.0.1.0.0 |  | Adds effective date from Sale Order to picking list view
 [stock_picking_unreserve_automatically](stock_picking_unreserve_automatically/) | 14.0.1.0.0 |  | Set sale orders to automatically unreserve deliveries
 [stock_product_qty_available_unreserved](stock_product_qty_available_unreserved/) | 14.0.1.0.0 |  | Add unreserved available (on hand - reserved)
 [stock_report_add_description_to_picking](stock_report_add_description_to_picking/) | 14.0.1.0.0 |  | Adds Description column to picking report
