@@ -35,6 +35,7 @@ addon | version | maintainers | summary
 [stock_report_customer_reference](stock_report_customer_reference/) | 14.0.1.0.0 |  | Stock Report Customer Reference
 [stock_report_date_done](stock_report_date_done/) | 14.0.1.0.0 |  | Stock Picking Report Date of Transfer
 [stock_report_element_sizes](stock_report_element_sizes/) | 14.0.1.0.0 |  | Stock Report element size changes
+[stock_report_invoice_and_delivery_address](stock_report_invoice_and_delivery_address/) | 14.0.1.0.0 |  | Adds Invoice and Delivery addresses to delivery slip
 [stock_report_our_reference](stock_report_our_reference/) | 14.0.1.0.0 |  | Stock Picking and Delivery Slip Report Our Reference
 [stock_report_quantity_decimals](stock_report_quantity_decimals/) | 14.0.1.0.0 |  | Modifications to Stock Reports' decimal precision
 [stock_report_scheduled_date_as_date_only](stock_report_scheduled_date_as_date_only/) | 14.0.1.0.0 |  | Stock Picking and Delivery Slip Report Scheduled Date as Date only
