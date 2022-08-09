@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    "name": "Stock Report Element Sizes",
-    "summary": "Stock Report element size changes",
+    "name": "Stock Report Element Sizing",
+    "summary": "Adds an element to be used to show header level information",
     "version": "14.0.1.0.0",
     "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/stock",

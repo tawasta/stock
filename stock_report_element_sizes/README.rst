@@ -2,10 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-==========================
-Stock Report Element Sizes
-==========================
-* Stock Report element size changes
+===========================
+Stock Report Element Sizing
+===========================
+
+* Adds an element to be used to show header level information
 
 Configuration
 =============
@@ -13,6 +14,7 @@ Configuration
 
 Usage
 =====
+
 * Install this module to add new elements to Stock Picking and Delivery Slip report
 * Element has to be inserted to div-element that has id = stock_picking_informations on
   Picking report and id = stock_deliveryslip_informations on Delivery Slip report
@@ -29,7 +31,6 @@ Contributors
 ------------
 
 * Timo Kekäläinen <timo.kekalainen@tawasta.fi>
-* Miika Nissi <miika.nissi@tawasta.fi>
 
 Maintainer
 ----------
