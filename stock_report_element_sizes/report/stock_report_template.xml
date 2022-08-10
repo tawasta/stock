@@ -9,12 +9,12 @@
         <xpath expr="//div[@class='row mt32 mb32']" position="attributes">
             <attribute name="id">stock_deliveryslip_informations</attribute>
         </xpath>
-        <h2 position="after">
+        <table name="stock_move_table" position="before">
             <table id="header_table" class="table table-sm">
                 <thead id="header_table_thead" />
                 <tbody id="header_table_tbody" />
             </table>
-        </h2>
+        </table>
     </template>
     <template
         id="assets_stock_report_elements"
