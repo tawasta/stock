@@ -42,6 +42,7 @@ addon | version | maintainers | summary
 [stock_report_scheduled_date_as_date_only](stock_report_scheduled_date_as_date_only/) | 14.0.1.0.0 |  | Stock Picking and Delivery Slip Report Scheduled Date as Date only
 [stock_report_title](stock_report_title/) | 14.0.1.0.0 |  | Stock Picking and Delivery Slip Report Title
 [stock_report_week_of_shipment](stock_report_week_of_shipment/) | 14.0.1.0.0 |  | Add week of shipment to Picking report
+[stock_report_year_of_shipment](stock_report_year_of_shipment/) | 14.0.1.0.0 |  | Add year of shipment to delivery slip
 [stock_valuation_layer_archive](stock_valuation_layer_archive/) | 14.0.1.0.1 |  | Allows archiving inventory valuation records
 
 [//]: # (end addons)
