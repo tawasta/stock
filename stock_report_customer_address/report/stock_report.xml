@@ -8,8 +8,8 @@
         </xpath>
     </template>
     <template
-        id="report_delivery_document_customer_address"
-        inherit_id="stock_report_element_sizes.report_delivery_document_element_sizes"
+        id="report_delivery_document"
+        inherit_id="stock_report_element_sizes.report_delivery_document"
     >
         <xpath expr="//t[@name='partner_header']//t//div" position="attributes">
             <attribute name="class">d-none</attribute>
