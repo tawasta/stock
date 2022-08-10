@@ -28,7 +28,13 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["stock", "web", "web_report_sfs", "delivery"],
+    "depends": [
+        "stock",
+        "web",
+        "web_report_sfs",
+        "delivery",
+        "stock_report_element_sizes",
+    ],
     "data": [
         "report/report_stock_dispatch_main.xml",
         "report/stock_picking_dispatch_report.xml",

@@ -1,7 +1,12 @@
 #stock_deliveryslip_informations {
     padding-top: 20px;
 }
-#stock_picking_informations > div {
+
+#header_table {
+    margin-top: 30px;
+}
+
+#stock_picking_informations > div.col-auto.mw-100.mb-2 {
     display: inline-block !important;
     max-width: 24% !important;
     min-width: 200px !important;
