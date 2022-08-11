@@ -29,5 +29,5 @@
     "application": False,
     "installable": True,
     "depends": ["stock", "stock_report_element_sizes"],
-    "data": ["report/stock_report.xml"],
+    "data": ["report/stock_report.xml", "views/res_config_settings.xml"],
 }
