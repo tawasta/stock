@@ -6,7 +6,7 @@
             position="before"
         >
             <div class="row pull-left col-7">
-                <div>
+                <div id="invoice_address">
                     <strong style="display: block;">INVOICE ADDRESS:</strong>
                     <t t-if="o.sudo().sale_id.partner_invoice_id">
                         <div
