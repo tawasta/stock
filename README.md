@@ -34,6 +34,7 @@ addon | version | maintainers | summary
 [stock_report_code_as_name_stock_picking](stock_report_code_as_name_stock_picking/) | 14.0.1.0.0 |  | Replace Product name with product code
 [stock_report_customer_address](stock_report_customer_address/) | 14.0.1.0.0 |  | Stock Report Customer Address
 [stock_report_customer_reference](stock_report_customer_reference/) | 14.0.1.0.0 |  | Stock Report Customer Reference
+[stock_report_customer_reference_under_address](stock_report_customer_reference_under_address/) | 14.0.1.0.0 |  | Customer Reference under address
 [stock_report_date_done](stock_report_date_done/) | 14.0.1.0.0 |  | Stock Picking Report Date of Transfer
 [stock_report_element_sizes](stock_report_element_sizes/) | 14.0.1.0.0 |  | Stock Report element size changes
 [stock_report_invoice_and_delivery_address](stock_report_invoice_and_delivery_address/) | 14.0.1.0.0 |  | Adds Invoice and Delivery addresses to delivery slip
