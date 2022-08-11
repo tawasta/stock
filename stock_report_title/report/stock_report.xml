@@ -18,7 +18,10 @@
         inherit_id="stock_report_element_sizes.report_delivery_document"
     >
         <div id="stock_deliveryslip_informations" position="inside">
-            <div t-if="o.name" class="col-auto mw-100 mb-2">
+            <div
+                t-if="o.name and o.company_id.show_delivery_slip_text"
+                class="col-auto mw-100 mb-2"
+            >
                 <span>
                     <strong>Delivery Slip:</strong>
                 </span>
@@ -39,7 +42,9 @@
         inherit_id="stock.report_delivery_document"
     >
         <xpath expr="//t[@t-set='o']" position="before">
-            <t t-set="report_title">Delivery Slip</t>
+            <t t-if="o.company_id.show_delivery_slip_text">
+                <t t-set="report_title">Delivery Slip</t>
+            </t>
         </xpath>
         <!-- expr="//h2" doesn't work for some reason -->
         <xpath expr="//h2//span" position="attributes">
