@@ -17,6 +17,20 @@
                         </div>
                     </div>
                 </div>
+                <div
+                    class="col-12 col-lg-6 o_setting_box"
+                    id="show_delivery_slip_report_name"
+                >
+                    <div class="o_setting_left_pane">
+                        <field name="show_delivery_slip_report_name" />
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <label for="show_delivery_slip_report_name" />
+                        <div class="text-muted">
+                            Show picking's name on Delivery Slip
+                        </div>
+                    </div>
+                </div>
             </div>
         </field>
     </record>
