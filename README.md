@@ -17,6 +17,7 @@ addon | version | maintainers | summary
 [stock_hide_packing_buttons](stock_hide_packing_buttons/) | 14.0.1.0.0 |  | Hides "put in pack" buttons
 [stock_move_search](stock_move_search/) | 14.0.1.0.0 |  | Additional Search options for Stock Move
 [stock_picking_bypass_reservation](stock_picking_bypass_reservation/) | 14.0.1.0.0 |  | Stock Picking Bypass Reservation
+[stock_picking_comment](stock_picking_comment/) | 14.0.1.0.0 |  | External comment for picking's Delivery Slip and Picking Operations
 [stock_picking_country_group_text](stock_picking_country_group_text/) | 14.0.1.0.0 |  | Get stock picking report text from country groups setting
 [stock_picking_create_manufacturing_order_from_move](stock_picking_create_manufacturing_order_from_move/) | 14.0.1.0.0 |  | Create Manufacturing order from stock picking move
 [stock_picking_customer_reference](stock_picking_customer_reference/) | 14.0.1.0.0 |  | Stock Picking Customer Reference
