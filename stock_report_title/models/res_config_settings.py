@@ -10,3 +10,8 @@ class ResConfigSettings(models.TransientModel):
         related="company_id.show_delivery_slip_text",
         readonly=False,
     )
+    show_delivery_slip_report_name = fields.Boolean(
+        string="Show delivery slip report name",
+        related="company_id.show_delivery_slip_report_name",
+        readonly=False,
+    )

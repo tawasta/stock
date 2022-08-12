@@ -1,14 +1,14 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* stock_dispatch_note_report
+# 	* stock_dispatch_note_report_template
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-27 06:25+0000\n"
-"PO-Revision-Date: 2020-03-27 08:27+0200\n"
-"Last-Translator: <>\n"
+"POT-Creation-Date: 2022-08-12 06:00+0000\n"
+"PO-Revision-Date: 2022-08-12 09:01+0300\n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,62 +17,47 @@ msgstr ""
 "Language: fi\n"
 "X-Generator: Poedit 2.0.6\n"
 
-#. module: stock_dispatch_note_report
-#: model_terms:ir.ui.view,arch_db:stock_dispatch_note_report.report_dispatch_note
-msgid "<span>Type:</span>"
-msgstr "<span>Tyyppi:</span>"
-
-#. module: stock_dispatch_note_report
-#: model_terms:ir.ui.view,arch_db:stock_dispatch_note_report.report_dispatch_note
+#. module: stock_dispatch_note_report_template
+#: model_terms:ir.ui.view,arch_db:stock_dispatch_note_report_template.report_delivery_document_header
 msgid "<strong>Date</strong>"
 msgstr "<strong>Pvm</strong>"
 
-#. module: stock_dispatch_note_report
-#: model_terms:ir.ui.view,arch_db:stock_dispatch_note_report.report_dispatch_note
+#. module: stock_dispatch_note_report_template
+#: model_terms:ir.ui.view,arch_db:stock_dispatch_note_report_template.report_delivery_document_header
 msgid "<strong>Order</strong>"
 msgstr "<strong>Tilaus</strong>"
 
-#. module: stock_dispatch_note_report
-#: model_terms:ir.ui.view,arch_db:stock_dispatch_note_report.report_dispatch_note
-msgid "<strong>Package ID:</strong>"
-msgstr "<strong>Pakkauksen ID:</strong>"
-
-#. module: stock_dispatch_note_report
-#: model_terms:ir.ui.view,arch_db:stock_dispatch_note_report.report_dispatch_note
-msgid "<strong>Product</strong>"
-msgstr "<strong>Tuote</strong>"
-
-#. module: stock_dispatch_note_report
-#: model_terms:ir.ui.view,arch_db:stock_dispatch_note_report.report_dispatch_note
-msgid "<strong>Quantity</strong>"
-msgstr "<strong>Määrä</strong>"
-
-#. module: stock_dispatch_note_report
-#: model_terms:ir.ui.view,arch_db:stock_dispatch_note_report.report_dispatch_note
+#. module: stock_dispatch_note_report_template
+#: model_terms:ir.ui.view,arch_db:stock_dispatch_note_report_template.report_delivery_document
 msgid "<strong>Total weight: </strong>"
 msgstr "<strong>Kokonaispaino: </strong>"
 
-#. module: stock_dispatch_note_report
-#: model_terms:ir.ui.view,arch_db:stock_dispatch_note_report.report_dispatch_note
+#. module: stock_dispatch_note_report_template
+#: model_terms:ir.ui.view,arch_db:stock_dispatch_note_report_template.report_delivery_document
 msgid "<strong>Weight</strong>"
 msgstr "<strong>Paino</strong>"
 
-#. module: stock_dispatch_note_report
-#: model_terms:ir.ui.view,arch_db:stock_dispatch_note_report.report_dispatch_note
-msgid "All items couldn't be shipped, the remaining ones will be shipped as soon as they become available."
-msgstr ""
-
-#. module: stock_dispatch_note_report
-#: model:ir.actions.report,name:stock_dispatch_note_report.stock_picking_dispatch_report
+#. module: stock_dispatch_note_report_template
+#: model_terms:ir.ui.view,arch_db:stock_dispatch_note_report_template.report_delivery_document
 msgid "Dispatch Note"
 msgstr "Rahtikirja"
 
-#. module: stock_dispatch_note_report
-#: model_terms:ir.ui.view,arch_db:stock_dispatch_note_report.report_dispatch_note
-msgid "Lot/Serial Number"
-msgstr "Erä/sarjanumero"
+#. module: stock_dispatch_note_report_template
+#: model:ir.model.fields,field_description:stock_dispatch_note_report_template.field_stock_move_line__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
 
-#. module: stock_dispatch_note_report
-#: model_terms:ir.ui.view,arch_db:stock_dispatch_note_report.report_dispatch_note
-msgid "kg"
-msgstr "kg"
+#. module: stock_dispatch_note_report_template
+#: model:ir.model.fields,field_description:stock_dispatch_note_report_template.field_stock_move_line__id
+msgid "ID"
+msgstr "Tunniste (ID)"
+
+#. module: stock_dispatch_note_report_template
+#: model:ir.model.fields,field_description:stock_dispatch_note_report_template.field_stock_move_line____last_update
+msgid "Last Modified on"
+msgstr "Viimeksi muokattu"
+
+#. module: stock_dispatch_note_report_template
+#: model:ir.model,name:stock_dispatch_note_report_template.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Tuotteiden siirrot (Stock Move Line)"

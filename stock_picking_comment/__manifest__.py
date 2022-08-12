@@ -19,24 +19,20 @@
 ##############################################################################
 
 {
-    "name": "Stock Dispatch Note Template",
-    "summary": "Stock Dispatch Note Template",
+    "name": "Stock picking comment",
+    "summary": """External comment for picking's Delivery Slip
+                  and Picking Operations""",
+    "category": "Warehouse",
     "version": "14.0.1.0.0",
-    "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        "stock",
-        "web",
-        "web_report_sfs",
-        "delivery",
-        "stock_report_element_sizes",
-    ],
+    "depends": ["stock"],
     "data": [
-        "report/report_stock_dispatch_main.xml",
-        "report/stock_report_view.xml",
+        "views/stock_picking.xml",
+        "report/delivery_slip.xml",
+        "report/report_picking.xml",
     ],
 }
