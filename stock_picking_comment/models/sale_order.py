@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2022- Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -18,20 +18,39 @@
 #
 ##############################################################################
 
-{
-    "name": "Stock Picking Comment",
-    "summary": "External comment for stock picking Delivery Slip and Picking Operations",
-    "category": "Warehouse",
-    "version": "14.0.1.0.0",
-    "website": "https://gitlab.com/tawasta/odoo/stock",
-    "author": "Tawasta",
-    "license": "AGPL-3",
-    "application": False,
-    "installable": True,
-    "depends": ["sale_stock"],
-    "data": [
-        "views/stock_picking.xml",
-        "report/report_picking.xml",
-        "report/delivery_slip.xml",
-    ],
-}
+# 1. Standard library imports:
+
+# 2. Known third party imports:
+
+# 3. Odoo imports (openerp):
+from odoo import models
+
+# 4. Imports from Odoo modules:
+
+# 5. Local imports in the relative form:
+
+# 6. Unknown third party imports:
+
+
+class SaleOrder(models.Model):
+    # 1. Private attributes
+    _inherit = "sale.order"
+
+    # 2. Fields declaration
+
+    # 3. Default methods
+
+    # 4. Compute and search fields, in the same order that fields declaration
+
+    # 5. Constraints and onchanges
+
+    # 6. CRUD methods
+
+    # 7. Action methods
+    def action_confirm(self):
+        res = super(SaleOrder, self).action_confirm()
+        for pick in self.picking_ids:
+            pick.write({"comment": self.note or ""})
+        return res
+
+    # 8. Business methods

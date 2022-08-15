@@ -3,10 +3,10 @@
    :alt: License: AGPL-3
 
 =====================
-Stock picking comment
+Stock Picking Comment
 =====================
 
-External comment for picking's Delivery Slip and Picking Operations
+* External comment for stock picking delivery slip
 
 Configuration
 =============
@@ -27,6 +27,7 @@ Contributors
 ------------
 
 * Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>
+* Miika Nissi <miika.nissi@tawasta.fi>
 
 Maintainer
 ----------
