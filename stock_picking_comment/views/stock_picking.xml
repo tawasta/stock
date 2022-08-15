@@ -9,7 +9,6 @@
             <field name="note" position="before">
                 <label for="note" />
             </field>
-
             <field name="note" position="after">
                 <label for="comment" />
                 <field
