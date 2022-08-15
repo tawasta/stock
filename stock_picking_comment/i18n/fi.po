@@ -1,14 +1,14 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* stock_picking_comment
+# 	* stock_picking_comment
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-27 13:26+0000\n"
-"PO-Revision-Date: 2020-07-27 13:26+0000\n"
-"Last-Translator: <>\n"
+"POT-Creation-Date: 2022-08-15 17:50+0000\n"
+"PO-Revision-Date: 2022-08-15 17:50+0000\n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,7 +18,7 @@ msgstr ""
 #. module: stock_picking_comment
 #: model:ir.model.fields,help:stock_picking_comment.field_stock_picking__comment
 #: model_terms:ir.ui.view,arch_db:stock_picking_comment.view_picking_form
-msgid "Add a comment that will be printed on the Dispatch Note"
+msgid "Add a comment that will be printed on the Delivery Slip"
 msgstr "Lisää kommentti joka näytetään lähetteellä"
 
 #. module: stock_picking_comment
@@ -27,7 +27,29 @@ msgid "Comment"
 msgstr "Kommentti"
 
 #. module: stock_picking_comment
+#: model:ir.model.fields,field_description:stock_picking_comment.field_sale_order__display_name
+#: model:ir.model.fields,field_description:stock_picking_comment.field_stock_picking__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: stock_picking_comment
+#: model:ir.model.fields,field_description:stock_picking_comment.field_sale_order__id
+#: model:ir.model.fields,field_description:stock_picking_comment.field_stock_picking__id
+msgid "ID"
+msgstr "Tunniste (ID)"
+
+#. module: stock_picking_comment
+#: model:ir.model.fields,field_description:stock_picking_comment.field_sale_order____last_update
+#: model:ir.model.fields,field_description:stock_picking_comment.field_stock_picking____last_update
+msgid "Last Modified on"
+msgstr "Viimeksi muokattu"
+
+#. module: stock_picking_comment
+#: model:ir.model,name:stock_picking_comment.model_sale_order
+msgid "Sales Order"
+msgstr "Myyntitilaus"
+
+#. module: stock_picking_comment
 #: model:ir.model,name:stock_picking_comment.model_stock_picking
 msgid "Transfer"
 msgstr "Siirto"
-
