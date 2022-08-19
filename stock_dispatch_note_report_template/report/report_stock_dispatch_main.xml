@@ -58,7 +58,7 @@
             </td>
         </xpath>
 
-        <th name="th_sm_product" position="after">
+        <th name="th_sm_quantity" position="before">
             <th id="th_sm_weight">
                 <strong>Weight</strong>
             </th>
