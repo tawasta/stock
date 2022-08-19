@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_backorder_confirmation" model="ir.ui.view">
+        <field name="name">stock.backorder.confirmation.print</field>
+        <field name="model">stock.backorder.confirmation</field>
+        <field name="inherit_id" ref="stock.view_backorder_confirmation" />
+        <field name="arch" type="xml">
+            <xpath expr="//button[@special='cancel']" position="after">
+                <field name="mass_transfer_done" invisible="1" />
+                <button
+                    string="Done!"
+                    class="oe_highlight"
+                    special="cancel"
+                    attrs="{'invisible': [('mass_transfer_done', '=', False)]}"
+                />
+            </xpath>
+            <xpath expr="//group" position="attributes">
+                <attribute
+                    name="attrs"
+                >{'invisible': [('mass_transfer_done', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//button[@name='process']" position="attributes">
+                <attribute
+                    name="attrs"
+                >{'invisible': [('mass_transfer_done', '=', True)]}</attribute>
+            </xpath>
+            <xpath
+                expr="//button[@name='process_cancel_backorder']"
+                position="attributes"
+            >
+                <attribute
+                    name="attrs"
+                >{'invisible': [('mass_transfer_done', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//button[@class='btn-secondary']" position="attributes">
+                <attribute
+                    name="attrs"
+                >{'invisible': [('mass_transfer_done', '=', True)]}</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
