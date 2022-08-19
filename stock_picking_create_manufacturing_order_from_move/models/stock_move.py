@@ -80,7 +80,7 @@ class StockMove(models.Model):
                 "product_uom_id": self.product_uom.id,
                 "bom_id": bom.id,
                 "date_planned_start": fields.Datetime.now(),
-                "company_id": self.company_id.id,
+                "company_id": self.env.user.company_id.id,
                 "location_src_id": self.location_id.id,
                 "location_dest_id": self.location_id.id,
                 "picking_type_id": picking_type_id,
