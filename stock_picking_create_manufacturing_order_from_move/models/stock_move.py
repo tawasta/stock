@@ -125,17 +125,16 @@ class StockMove(models.Model):
             # Raise an UserError if a production order is already done.
             if mo.state == "done":
                 raise UserError(msg_done)
-
             mo.action_confirm()
-            if (
-                mo.state == "confirmed"
-                and mo.components_availability_state == "available"
-            ):
-                mo.button_mark_done()
+            if mo.state == "confirmed":
 
                 # Create wizards and call process() function to complete
                 # the created production order.
-                prod_wiz = self.env["mrp.immediate.production"].create({})
+                prod_wiz = (
+                    self.env["mrp.immediate.production"]
+                    .with_context(button_mark_done_production_ids=mo.id)
+                    .create({"mo_ids": mo.ids})
+                )
 
                 prod_wiz_line = self.env["mrp.immediate.production.line"].create(
                     {
@@ -144,6 +143,7 @@ class StockMove(models.Model):
                         "to_immediate": True,
                     }
                 )
+                mo = mo.with_context(button_mark_done_production_ids=mo.id)
 
                 prod_wiz.immediate_production_line_ids = prod_wiz_line
                 prod_wiz.process()
