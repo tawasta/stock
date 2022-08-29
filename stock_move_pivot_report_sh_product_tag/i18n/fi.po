@@ -1,0 +1,41 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_move_pivot_report_sh_product_tag
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-29 19:05+0000\n"
+"PO-Revision-Date: 2022-08-29 22:07+0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: en\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: stock_move_pivot_report_sh_product_tag
+#: code:addons/stock_move_pivot_report_sh_product_tag/models/stock_move.py:57
+#, python-format
+msgid "Assign SH product tags to lines: {}"
+msgstr "Aseta SH tuotetunnisteet näille riveille: {}"
+
+#. module: stock_move_pivot_report_sh_product_tag
+#: model:ir.model,name:stock_move_pivot_report_sh_product_tag.model_stock_move
+msgid "Stock Move"
+msgstr "Varastosiirto"
+
+#. module: stock_move_pivot_report_sh_product_tag
+#: model:ir.model.fields,field_description:stock_move_pivot_report_sh_product_tag.field_stock_move__sh_product_tag_ids
+msgid "Tags"
+msgstr "Tunnisteet"
+
+#. module: stock_move_pivot_report_sh_product_tag
+#: model:ir.actions.server,name:stock_move_pivot_report_sh_product_tag.ir_cron_update_stock_move_tags_ir_actions_server
+#: model:ir.cron,cron_name:stock_move_pivot_report_sh_product_tag.ir_cron_update_stock_move_tags
+#: model:ir.cron,name:stock_move_pivot_report_sh_product_tag.ir_cron_update_stock_move_tags
+msgid "Update Stock move tags"
+msgstr "Päivitä varastosiirron tunnisteet"
