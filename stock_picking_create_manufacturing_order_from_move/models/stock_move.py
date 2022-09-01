@@ -63,7 +63,7 @@ class StockMove(models.Model):
 
         picking_type_id = (
             self.env["stock.warehouse"]
-            .search([("company_id", "=", self.company_id.id)], limit=1)
+            .search([("company_id", "=", self.env.user.company_id.id)], limit=1)
             .manu_type_id.id
         )
 
