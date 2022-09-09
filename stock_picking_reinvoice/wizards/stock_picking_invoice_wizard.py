@@ -50,8 +50,12 @@ class StockPickingInvoiceWizard(models.TransientModel):
                 {
                     "partner_id": self.partner_id.id,
                     "move_type": "out_invoice",
+                    "invoice_date": fields.Datetime.now(),
+                    "invoice_origin": ", ".join(picking_ids.mapped("name")),
                 }
             )
+
+        account_move_line = self.env["account.move.line"]
 
         for picking in picking_ids:
             if picking.state != "done":
@@ -81,6 +85,7 @@ class StockPickingInvoiceWizard(models.TransientModel):
                     or product.categ_id.property_account_income_categ_id
                 )
                 price = self.pricelist_id.get_product_price(product, quantity, partner)
+
                 if show_moves:
                     line_name = "{} - {}".format(move.name, move.picking_id.name)
                 else:
@@ -104,24 +109,32 @@ class StockPickingInvoiceWizard(models.TransientModel):
                             "{}, {}".format(existing_line.name, move.picking_id.name),
                         )
 
-                    existing_line.write(new_line_values)
+                    existing_line.with_context(check_move_validity=False).write(
+                        new_line_values
+                    )
                 else:
                     tax = (
                         product.taxes_id and [(6, 0, [product.taxes_id[0].id])] or False
                     )
 
-                    aml.create(
+                    vals = aml.default_get(aml.fields_get().keys())
+                    vals.update(
                         {
                             "name": line_name,
-                            "price_unit": price,
-                            "quantity": quantity,
-                            "move_id": invoice.id,
+                            "account_id": account.id,
                             "product_id": product.id,
                             "product_uom_id": move.product_uom.id,
+                            "quantity": quantity,
+                            "price_unit": price,
                             "tax_ids": tax,
-                            "account_id": account.id,
+                            "move_id": invoice.id,
                         }
                     )
 
-            picking.invoice_id = invoice.id
+                    lines = aml.with_context(check_move_validity=False).create(vals)
+                    account_move_line |= lines
+
+        picking.invoice_id = invoice.id
+        invoice.invoice_line_ids = account_move_line
+        invoice._onchange_invoice_line_ids()
         return invoice, picking_ids
