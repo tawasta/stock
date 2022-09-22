@@ -8,6 +8,7 @@ class ResConfigSettings(models.TransientModel):
     stock_report_decimal_precision = fields.Integer(
         related="company_id.stock_report_decimal_precision",
         readonly=False,
+        store=True,
     )
 
     @api.onchange("stock_report_decimal_precision")
