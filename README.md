@@ -13,7 +13,7 @@ addon | version | maintainers | summary
 --- | --- | --- | ---
 [stock_auditlog_rules](stock_auditlog_rules/) | 14.0.1.0.0 |  | Adds audit log rules for stock.warehouse and stock.location
 [stock_disable_invoice_shipping_on_delivery](stock_disable_invoice_shipping_on_delivery/) | 14.0.1.0.0 |  | Disable picking auto-generated delivery SO lines
-[stock_dispatch_note_report_template](stock_dispatch_note_report_template/) | 14.0.1.0.0 |  | Stock Dispatch Note Template
+[stock_dispatch_note_report_template](stock_dispatch_note_report_template/) | 14.0.1.0.1 |  | Stock Dispatch Note Template
 [stock_hide_packing_buttons](stock_hide_packing_buttons/) | 14.0.1.0.0 |  | Hides "put in pack" buttons
 [stock_move_pivot_report_sh_product_tag](stock_move_pivot_report_sh_product_tag/) | 14.0.1.0.0 |  | Group by SH product tags in Stock Move pivot view
 [stock_move_search](stock_move_search/) | 14.0.1.0.0 |  | Additional Search options for Stock Move
