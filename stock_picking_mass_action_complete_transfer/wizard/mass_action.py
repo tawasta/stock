@@ -7,7 +7,7 @@ class StockPickingMassAction(models.TransientModel):
 
     def mass_action(self):
         res = super().mass_action()
-        if res.get("res_model") == "stock.backorder.confirmation":
+        if res and res.get("res_model") == "stock.backorder.confirmation":
             picks = res.get("context") and res.get("context").get("active_ids")
             if picks:
                 picks = self.env["stock.picking"].search([("id", "in", picks)])
