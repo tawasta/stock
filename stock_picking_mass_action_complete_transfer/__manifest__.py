@@ -21,7 +21,7 @@
 {
     "name": "Stock Picking Mass action - complete transfer",
     "summary": "Stock Picking Mass action - complete transfer",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
