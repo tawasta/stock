@@ -5,12 +5,11 @@ class StockPicking(models.Model):
 
     _inherit = "stock.picking"
 
-    mass_transfer_done = fields.Boolean(default=False)
+    mass_transfer_done = fields.Boolean(copy=False, default=False)
 
     def print_delivery_slip(self):
-        pickings = self.filtered(lambda x: x.mass_transfer_done).sorted(
-            key=lambda t: t.id
-        )
+        pickings = self
+
         picks = False
         if pickings:
             for picking in pickings:
