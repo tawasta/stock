@@ -9,7 +9,8 @@ class StockImmediateTransfer(models.TransientModel):
 
     def process(self):
         super(StockImmediateTransfer, self).process()
-        pickings = self.pick_ids.print_delivery_slip()
+        pickings = self.pick_ids.sorted(key=lambda t: t.id).print_delivery_slip()
+
         if pickings:
             self.mass_transfer_done = True
             return pickings
