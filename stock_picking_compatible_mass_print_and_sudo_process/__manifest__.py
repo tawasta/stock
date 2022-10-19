@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2022 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,18 +19,21 @@
 ##############################################################################
 
 {
-    "name": "Stock Picking Mass action - Print PDF",
-    "summary": "Stock Picking Mass action - Print PDF",
-    "version": "14.0.1.0.1",
+    "name": "Make mass action print and process as sudo compatible",
+    "summary": "Make mass action print and process as sudo compatible",
+    "version": "14.0.1.0.0",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["purchase_stock", "stock", "stock_picking_mass_action"],
+    "depends": [
+        "stock_picking_mass_action_print_pdf",
+        "stock_picking_process_as_sudo",
+    ],
     "data": [
-        "wizard/stock_backorder_confirmation_view.xml",
+        "wizard/stock_backorder_confirmation.xml",
         "wizard/stock_immediate_transfer_view.xml",
     ],
 }
