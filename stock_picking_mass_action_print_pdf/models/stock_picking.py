@@ -8,7 +8,7 @@ class StockPicking(models.Model):
     mass_transfer_done = fields.Boolean(copy=False, default=False)
 
     def print_delivery_slip(self):
-        pickings = self
+        pickings = self.filtered(lambda x: not x.purchase_id)
 
         picks = False
         if pickings:

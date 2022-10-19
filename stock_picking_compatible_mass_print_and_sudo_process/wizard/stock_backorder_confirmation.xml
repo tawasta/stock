@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_backorder_confirmation" model="ir.ui.view">
+        <field name="name">stock_backorder_confirmation.sudo.mass.print</field>
+        <field name="model">stock.backorder.confirmation</field>
+        <field
+            name="inherit_id"
+            ref="stock_picking_process_as_sudo.view_backorder_confirmation"
+        />
+        <field name="arch" type="xml">
+            <button name="sudo_process" position="attributes">
+                <attribute
+                    name="attrs"
+                >{'invisible': [('mass_transfer_done', '=', True)]}</attribute>
+            </button>
+
+            <button name="sudo_process_cancel_backorder" position="attributes">
+                <attribute
+                    name="attrs"
+                >{'invisible': [('mass_transfer_done', '=', True)]}</attribute>
+            </button>
+        </field>
+    </record>
+</odoo>
