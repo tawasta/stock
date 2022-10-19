@@ -5,7 +5,7 @@
             expr="//t[@name='partner_header']//div[@t-esc='partner']"
             position="before"
         >
-            <div class="row pull-left col-6" style="float:right;">
+            <div class="row pull-left col-6" style="float:left;">
                 <div id="invoice_address">
                     <strong style="display: block;">INVOICE ADDRESS:</strong>
                     <t t-if="o.sudo().sale_id.partner_invoice_id">
@@ -23,7 +23,7 @@
             position="before"
         >
             <strong
-                style="display: block;"
+                style="display: block; float:right;"
                 class="row pull-right col-5 mr-1"
             >DELIVERY ADDRESS:</strong>
         </xpath>
@@ -35,10 +35,17 @@
             <attribute name="class">row pull-right col-6 mb-4 mr-1</attribute>
         </xpath>
 
+        <xpath
+            expr="//t[@name='partner_header']//div[@t-esc='partner']"
+            position="attributes"
+        >
+            <attribute name="style">float:right;</attribute>
+        </xpath>
+
         <xpath expr="//span[@t-field='o.name']" position="attributes">
             <attribute
                 name="style"
-            >display: inline-block; padding-top: 15px;</attribute>
+            >display: inline-block; padding-top: 25px;</attribute>
         </xpath>
 
         <xpath expr="//t[@t-set='address']" position="attributes">
