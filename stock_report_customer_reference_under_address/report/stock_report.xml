@@ -13,7 +13,10 @@
         inherit_id="stock_report_invoice_and_delivery_address.report_delivery_document"
     >
         <xpath expr="//div[@id='invoice_address']/t" position="after">
-            <div id="address_customer_reference">
+            <div
+                id="address_customer_reference"
+                style="float:left; padding-right: 20px;"
+            >
                 <t t-if="not o.from_purchase_order and o.customer_reference">
                     <span>Customer reference: </span><span
                         t-field="o.customer_reference"
