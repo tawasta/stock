@@ -50,7 +50,7 @@ addon | version | maintainers | summary
 [stock_report_date_done](stock_report_date_done/) | 14.0.1.0.0 |  | Stock Picking Report Date of Transfer
 [stock_report_element_sizes](stock_report_element_sizes/) | 14.0.1.0.1 |  | Stock Report element size changes
 [stock_report_enable_translation_by_partner](stock_report_enable_translation_by_partner/) | 14.0.1.0.0 |  | Enable report translation by partner language
-[stock_report_invoice_and_delivery_address](stock_report_invoice_and_delivery_address/) | 14.0.1.0.3 |  | Adds Invoice and Delivery addresses to delivery slip
+[stock_report_invoice_and_delivery_address](stock_report_invoice_and_delivery_address/) | 14.0.1.0.4 |  | Adds Invoice and Delivery addresses to delivery slip
 [stock_report_our_reference](stock_report_our_reference/) | 14.0.1.0.0 |  | Stock Picking and Delivery Slip Report Our Reference
 [stock_report_payment_terms](stock_report_payment_terms/) | 14.0.1.0.0 |  | Adds payment terms to Delivery Slip
 [stock_report_picking_hide_footer](stock_report_picking_hide_footer/) | 14.0.1.0.0 |  | Hide footer on Picking Operations
