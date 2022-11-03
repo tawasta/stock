@@ -17,6 +17,7 @@ addon | version | maintainers | summary
 [stock_hide_packing_buttons](stock_hide_packing_buttons/) | 14.0.1.0.0 |  | Hides "put in pack" buttons
 [stock_inventory_adjustment_domain_company](stock_inventory_adjustment_domain_company/) | 14.0.1.0.1 |  | Show stock locations without company in inventory adjustments
 [stock_move_pivot_report_sh_product_tag](stock_move_pivot_report_sh_product_tag/) | 14.0.1.0.0 |  | Group by SH product tags in Stock Move pivot view
+[stock_move_sale_kit](stock_move_sale_kit/) | 14.0.1.0.0 |  | Sale kits to stock move lines
 [stock_move_search](stock_move_search/) | 14.0.1.0.0 |  | Additional Search options for Stock Move
 [stock_picking_bypass_reservation](stock_picking_bypass_reservation/) | 14.0.1.0.0 |  | Stock Picking Bypass Reservation
 [stock_picking_comment](stock_picking_comment/) | 14.0.1.0.1 |  | External comment for stock picking Delivery Slip and Picking Operations
