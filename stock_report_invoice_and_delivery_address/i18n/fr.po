@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-28 07:48+0000\n"
-"PO-Revision-Date: 2022-09-28 10:51+0300\n"
+"POT-Creation-Date: 2022-11-03 11:15+0000\n"
+"PO-Revision-Date: 2022-11-03 13:16+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -18,16 +18,10 @@ msgstr ""
 
 #. module: stock_report_invoice_and_delivery_address
 #: model_terms:ir.ui.view,arch_db:stock_report_invoice_and_delivery_address.report_delivery_document
-msgid ""
-"<strong style=\"display: block;\" class=\"row pull-right col-5 "
-"mr-1\">DELIVERY ADDRESS:</strong>"
-msgstr ""
-"<strong style=\"display: block;\" class=\"row pull-right col-5 "
-"mr-1\">ADRESSE DE LIVRAISON:</strong>"
+msgid "<strong style=\"float:left;\" class=\"col-6\">DELIVERY ADDRESS:</strong>"
+msgstr "<strong style=\"float:left;\" class=\"col-6\">ADRESSE DE LIVRAISON:</strong>"
 
 #. module: stock_report_invoice_and_delivery_address
 #: model_terms:ir.ui.view,arch_db:stock_report_invoice_and_delivery_address.report_delivery_document
-msgid "<strong style=\"display: block;\">INVOICE ADDRESS:</strong>"
-msgstr ""
-"<strong style=\"display: block;\">ADRESSE DE FACTURATION:</"
-"strong>"
+msgid "<strong>INVOICE ADDRESS:</strong>"
+msgstr "<strong>ADRESSE DE FACTURATION:</strong>"
