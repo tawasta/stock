@@ -32,7 +32,7 @@ addon | version | maintainers | summary
 [stock_picking_printed](stock_picking_printed/) | 14.0.1.0.0 |  | Mark stock pickings as printed after printing picking list
 [stock_picking_process_as_sudo](stock_picking_process_as_sudo/) | 14.0.1.0.0 |  | Process Stock Pickings as Admin user
 [stock_picking_receipt_set_all_moves_done](stock_picking_receipt_set_all_moves_done/) | 14.0.1.0.0 |  | Use button to set all moves as done on receipt
-[stock_picking_reinvoice](stock_picking_reinvoice/) | 14.0.1.0.1 |  | Allow making invoices from stock pickings
+[stock_picking_reinvoice](stock_picking_reinvoice/) | 14.0.1.0.2 |  | Allow making invoices from stock pickings
 [stock_picking_reserve_chosen_moves](stock_picking_reserve_chosen_moves/) | 14.0.1.0.0 |  | Select manually the moves to be reserved on deliveries
 [stock_picking_sale_order_id](stock_picking_sale_order_id/) | 14.0.1.0.0 |  | Get Sale Order to Stock Picking from Purchase Order
 [stock_picking_sale_order_partner_id](stock_picking_sale_order_partner_id/) | 14.0.1.0.0 |  | Get Sale Order Partner to Stock Picking from Purchase Order
