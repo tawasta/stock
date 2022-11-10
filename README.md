@@ -16,6 +16,8 @@ addon | version | maintainers | summary
 [stock_dispatch_note_report_template](stock_dispatch_note_report_template/) | 14.0.1.0.1 |  | Stock Dispatch Note Template
 [stock_hide_packing_buttons](stock_hide_packing_buttons/) | 14.0.1.0.0 |  | Hides "put in pack" buttons
 [stock_inventory_adjustment_domain_company](stock_inventory_adjustment_domain_company/) | 14.0.1.0.1 |  | Show stock locations without company in inventory adjustments
+[stock_inventory_line_order](stock_inventory_line_order/) | 14.0.1.0.0 |  | Sort inventory lines by default code
+[stock_inventory_products_tree](stock_inventory_products_tree/) | 14.0.1.0.0 |  | Show products in stock inventory as tree view
 [stock_move_pivot_report_sh_product_tag](stock_move_pivot_report_sh_product_tag/) | 14.0.1.0.0 |  | Group by SH product tags in Stock Move pivot view
 [stock_move_sale_kit](stock_move_sale_kit/) | 14.0.1.0.0 |  | Sale kits to stock move lines
 [stock_move_search](stock_move_search/) | 14.0.1.0.0 |  | Additional Search options for Stock Move
@@ -32,7 +34,7 @@ addon | version | maintainers | summary
 [stock_picking_printed](stock_picking_printed/) | 14.0.1.0.0 |  | Mark stock pickings as printed after printing picking list
 [stock_picking_process_as_sudo](stock_picking_process_as_sudo/) | 14.0.1.0.0 |  | Process Stock Pickings as Admin user
 [stock_picking_receipt_set_all_moves_done](stock_picking_receipt_set_all_moves_done/) | 14.0.1.0.0 |  | Use button to set all moves as done on receipt
-[stock_picking_reinvoice](stock_picking_reinvoice/) | 14.0.1.0.1 |  | Allow making invoices from stock pickings
+[stock_picking_reinvoice](stock_picking_reinvoice/) | 14.0.1.0.2 |  | Allow making invoices from stock pickings
 [stock_picking_reserve_chosen_moves](stock_picking_reserve_chosen_moves/) | 14.0.1.0.0 |  | Select manually the moves to be reserved on deliveries
 [stock_picking_sale_order_id](stock_picking_sale_order_id/) | 14.0.1.0.0 |  | Get Sale Order to Stock Picking from Purchase Order
 [stock_picking_sale_order_partner_id](stock_picking_sale_order_partner_id/) | 14.0.1.0.0 |  | Get Sale Order Partner to Stock Picking from Purchase Order
