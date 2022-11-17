@@ -22,7 +22,7 @@
             expr="//t[@name='partner_header']//div[@t-esc='partner']"
             position="before"
         >
-            <strong style="float:left;" class="col-6">DELIVERY ADDRESS:</strong>
+            <strong style="float:left;" class="col-5">DELIVERY ADDRESS:</strong>
         </xpath>
 
         <xpath expr="//span[@t-field='o.name']" position="attributes">
@@ -42,7 +42,7 @@
             expr="//t[@name='partner_header']//div[@t-esc='partner']"
             position="attributes"
         >
-            <attribute name="class">col-6</attribute>
+            <attribute name="class">col-5</attribute>
         </xpath>
 
         <xpath expr="//t[@t-set='address']" position="attributes">
