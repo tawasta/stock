@@ -9,6 +9,9 @@
         <xpath expr="//div[@class='row mt32 mb32']" position="attributes">
             <attribute name="id">stock_deliveryslip_informations</attribute>
         </xpath>
+        <xpath expr="//div[@class='row mt32 mb32']" position="attributes">
+            <attribute name="style">float: left;</attribute>
+        </xpath>
         <table name="stock_move_table" position="before">
             <table id="header_table" class="table table-sm">
                 <thead id="header_table_thead" />
