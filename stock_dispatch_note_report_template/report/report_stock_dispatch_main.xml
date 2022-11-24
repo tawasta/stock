@@ -28,12 +28,10 @@
         </tbody>
     </template>
 
-<!--     <template id="report_dispatch_note"> -->
     <template id="report_delivery_document" inherit_id="stock.report_delivery_document">
         <t t-set='o' position="before">
             <t t-set="report_title">Dispatch Note</t>
         </t>
-
 <!--                 <t t-set="total_weight_pack_weight_shipping_weight" t-value="float(0)"/> -->
 
         <div name="div_origin" position="attributes">
@@ -63,136 +61,13 @@
                 <strong>Weight</strong>
             </th>
         </th>
-<!--                     <table id="move_line_not_done" class="table table-sm mt48" t-if="o.state != 'done' and not o.move_line_ids"> -->
-<!--                         <thead id="move_line_not_done_thead"> -->
-<!--                             <tr id="move_line_not_done_tr"> -->
-<!--                                 <th id="move_line_not_done_product"> -->
-<!--                                     <strong>Product</strong> -->
-<!--                                 </th> -->
-<!--                                 <th id="move_line_not_done_weight"> -->
-<!--                                     <strong>Weight</strong> -->
-<!--                                 </th> -->
-<!--                                 <th id="move_line_not_done_quantity"> -->
-<!--                                     <strong>Quantity</strong> -->
-<!--                                 </th> -->
-<!--                             </tr> -->
-<!--                         </thead> -->
-
-
-
-<!--                         <tbody id="move_line_not_done_tbody"> -->
-<!--                             <t t-set="lines" t-value="o.move_lines.filtered(lambda x: x.product_uom_qty)"/> -->
-<!--                             <t t-set="lines" t-value="lines.sorted(key=lambda x: x.product_id.name)"/> -->
-<!--                             <tr t-foreach="lines" t-as="move"> -->
-<!--                                 <td id="move_line_not_done_td_product_id"> -->
-<!--                                     <span t-field="move.product_id"/> -->
-<!--                                     <p t-if="o.picking_type_code == 'outgoing'"> -->
-<!--                                         <span t-field="move.product_id.sudo().description_pickingout"/> -->
-<!--                                     </p> -->
-<!--                                     <p t-if="o.picking_type_code == 'incoming'"> -->
-<!--                                         <span t-field="move.product_id.sudo().description_pickingin"/> -->
-<!--                                     </p> -->
-<!--                                 </td> -->
-<!--                                 <td id="move_line_not_done_td_weight"> -->
-<!--                                     <span t-field="move.weight"> kg</span> -->
-<!--                                 </td> -->
-<!--                                 <td id="move_line_not_done_td_product_uom"> -->
-<!--                                     <span t-field="move.quantity_done"/> -->
-<!--                                     <span t-field="move.product_uom"/> -->
-<!--                                 </td> -->
-<!--                             </tr> -->
-<!--                         </tbody> -->
-<!--                     </table> -->
-
-
-
-<!--                     <table id="move_line_done" class="table table-sm mt48" t-if="o.move_line_ids and (o.state in ['assigned', 'done'])"> -->
-<!--                         <t t-set="has_serial_number" t-value="o.move_line_ids.mapped('lot_id')"/> -->
-<!--                         <thead id="move_line_done_thead"> -->
-<!--                             <tr> -->
-<!--                                 <th id="move_line_done_product"> -->
-<!--                                     <strong>Product</strong> -->
-<!--                                 </th> -->
-<!--                                 <th name="lot_serial" t-if="has_serial_number"> -->
-<!--                                     Lot/Serial Number -->
-<!--                                 </th> -->
-<!--                                 <th name="not_lot_serial" t-if="not has_serial_number"/> -->
-<!--                                 <th id="move_line_done_weight"> -->
-<!--                                     <strong>Weight</strong> -->
-<!--                                 </th> -->
-<!--                                 <th class="text-center"> -->
-<!--                                     <strong>Quantity</strong> -->
-<!--                                 </th> -->
-<!--                             </tr> -->
-<!--                     </table> -->
-
-
-
-<!--                         </thead> -->
-<!--                         <tbody id="move_line_done_tbody_package"> -->
-<!--                             <t t-set="package" t-value="[]"/> -->
-<!--                             <t t-foreach="o.move_line_ids.sorted(key=lambda x: x.result_package_id.name)" t-as="l" id="move_line_loop"> -->
-<!--                                 <t t-set="package" t-value="package+[l.result_package_id]"/> -->
-<!--                             </t> -->
-<!--                             <t t-set="done_packages" t-value="[]"/> -->
-<!--                             <t t-foreach="package" t-as="line_pack" id="pack_loop"> -->
-<!--                                 <t t-if="line_pack not in done_packages"> -->
-<!--                                     <t t-set="done_packages" t-value="done_packages+[line_pack]"/> -->
-<!--                                     <t t-if="line_pack"> -->
-<!--                                         <td id="package_name"> -->
-<!--                                             <strong>Package ID:</strong> -->
-<!--                                             <strong t-esc="line_pack.name"/> -->
-<!--                                         </td> -->
-<!--                                         <td id="pack_packaging_id"> -->
-<!--                                             <t t-if="line_pack.packaging_id"> -->
-<!--                                                 <span>Type:</span> -->
-<!--                                                 <span t-field="line_pack.packaging_id"/> -->
-<!--                                             </t> -->
-<!--                                         </td> -->
-<!--                                         <td id="pack_weight"> -->
-<!--                                             <span t-field="line_pack.weight"/> -->
-<!--                                             <span>/</span> -->
-<!--                                             <span t-field="line_pack.shipping_weight"/> -->
-<!--                                             <span t-field="o.weight_uom_id"/> -->
-<!--                                         </td> -->
-<!--                                         <t t-set="total_weight_pack_weight_shipping_weight" t-value="float(total_weight_pack_weight_shipping_weight) + float(line_pack.weight) + float(line_pack.shipping_weight)"/> -->
-<!--                                         <td id="empty_space"/> -->
-<!--                                     </t> -->
-<!--                                     <tr t-foreach="o.move_line_ids" t-as="l" id="move_line_ids_loop"> -->
-<!--                                         <t t-if="line_pack.id == l.result_package_id.id"> -->
-<!--                                             <td id="pack_product_id"> -->
-<!--                                                 <span t-field="l.product_id"/> -->
-<!--                                             </td> -->
-<!--                                             <t t-if="has_serial_number"> -->
-<!--                                                 <td id="pack_lot_id"> -->
-<!--                                                     <span t-field="l.lot_id.name"/> -->
-<!--                                                 </td> -->
-<!--                                             </t> -->
-<!--                                             <t t-elif="not has_serial_number"> -->
-<!--                                                 <td id="no_serial_number"/> -->
-<!--                                             </t> -->
-<!--                                             <td id="pack_quant_product_weight"> -->
-<!--                                                 <span t-field="l.product_id.weight"/> -->
-<!--                                                 <span t-field="o.weight_uom_id"/> -->
-<!--                                             </td> -->
-<!--                                             <td id="pack_quant_quantity_uom" class="text-center"> -->
-<!--                                                 <span t-field="l.qty_done"/> -->
-<!--                                                 <span t-field="l.product_id.uom_id.name"/> -->
-<!--                                             </td> -->
-<!--                                         </t> -->
-<!--                                     </tr> -->
-<!--                                 </t> -->
-<!--                             </t> -->
-<!--                         </tbody> -->
-<!--                     <div id="after_lines"> -->
-
 
         <div t-if="o.signature" position="after">
             <div id="after_lines">
                 <div id="stock_picking_weight" class="container">
                     <strong>Total weight: </strong>
-                    <span t-field="o.weight" />
-                    <span t-field="o.weight_uom_name" />
+                    <t t-esc="o.weight" />
+                    <t t-esc="o.weight_uom_name" />
                 </div>
             </div>
         </div>
