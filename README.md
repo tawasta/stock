@@ -61,6 +61,7 @@ addon | version | maintainers | summary
 [stock_report_payment_terms](stock_report_payment_terms/) | 14.0.1.0.0 |  | Adds payment terms to Delivery Slip
 [stock_report_picking_customer_address](stock_report_picking_customer_address/) | 14.0.1.0.0 |  | Stock Report picking Customer Address details
 [stock_report_picking_hide_footer](stock_report_picking_hide_footer/) | 14.0.1.0.0 |  | Hide footer on Picking Operations
+[stock_report_picking_invoice_and_delivery_address](stock_report_picking_invoice_and_delivery_address/) | 14.0.1.0.5 |  | Adds Invoice and Delivery addresses to Picking list
 [stock_report_quantity_decimals](stock_report_quantity_decimals/) | 14.0.1.0.0 |  | Modifications to Stock Reports' decimal precision
 [stock_report_scheduled_date_as_date_only](stock_report_scheduled_date_as_date_only/) | 14.0.1.0.0 |  | Stock Picking and Delivery Slip Report Scheduled Date as Date only
 [stock_report_title](stock_report_title/) | 14.0.1.0.0 |  | Stock Picking and Delivery Slip Report Title
