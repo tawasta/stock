@@ -66,7 +66,10 @@
             <div id="after_lines">
                 <div id="stock_picking_weight" class="container">
                     <strong>Total weight: </strong>
-                    <t t-esc="o.weight" />
+                    <t
+                        t-esc="o.weight"
+                        t-options='{"widget": "float", "precision": 1}'
+                    />
                     <t t-esc="o.weight_uom_name" />
                 </div>
             </div>
