@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_delivery_document" inherit_id="stock.report_picking">
+        <th name="th_to" position="after">
+            <th id="th_rack">
+                <strong>Location</strong>
+            </th>
+        </th>
+
+        <td t-if="has_serial_number" position="before">
+            <td id="td_rack">
+                <span t-field="ml.product_id.loc_rack" />
+            </td>
+        </td>
+    </template>
+</odoo>
