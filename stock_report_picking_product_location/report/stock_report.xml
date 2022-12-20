@@ -3,13 +3,19 @@
     <template id="report_delivery_document" inherit_id="stock.report_picking">
         <th name="th_to" position="after">
             <th id="th_rack">
-                <strong>Location</strong>
+                <strong>Rack</strong>
+            </th>
+            <th id="th_row">
+                <strong>Row</strong>
             </th>
         </th>
 
         <td t-if="has_serial_number" position="before">
             <td id="td_rack">
                 <span t-field="ml.product_id.loc_rack" />
+            </td>
+            <td id="td_row">
+                <span t-field="ml.product_id.loc_row" />
             </td>
         </td>
     </template>
