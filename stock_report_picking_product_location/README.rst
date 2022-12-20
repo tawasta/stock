@@ -6,7 +6,7 @@
 Picking list - Product location
 ===============================
 
-* Adds Product's Rack field to picking list
+* Adds Product's Rack and Row fields to picking list
 
 Configuration
 =============

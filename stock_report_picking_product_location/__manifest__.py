@@ -20,8 +20,8 @@
 
 {
     "name": "Picking list - Product location",
-    "summary": "Picking list - Product location",
-    "version": "14.0.1.0.0",
+    "summary": "Rack and Row are shown on picking list",
+    "version": "14.0.1.0.1",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
@@ -30,6 +30,7 @@
     "installable": True,
     "depends": [
         "product_template_rack",
+        "product_template_row",
         "stock",
     ],
     "data": ["report/stock_report.xml"],
