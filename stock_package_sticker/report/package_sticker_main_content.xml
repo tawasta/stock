@@ -1,82 +1,88 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <template id="stock_package_sticker.report_package_sticker_content">
-        <div class="row">
+        <div class="" style="display: inline-block; margin-bottom: 2em;">
             <!-- Company logo -->
-            <div class="col-xs-6" style="padding: 0px;">
+            <div class="col-6" style="padding: 0px; float: left;">
                 <img
                     t-if="doc.company_id.logo"
-                    t-att-src="'data:image/png;base64,%s' % doc.company_id.logo"
-                    style="height: 150px;"
+                    t-att-src="image_data_uri(doc.company_id.logo)"
+                    alt="Logo"
                 />
             </div>
 
             <!-- Area for writing by hand -->
-            <div class="col-xs-6">
-                <div id="containers-area">
+            <div
+                class="col-6"
+                id="containers-area"
+                style="margin-left: 15em; float: right;"
+            >
+                <div
+                    style="width: 120px; height: 120px; border: 1px solid black; float: left;"
+                />
+                <div
+                    style="width: 120px; height: 120px; border: 1px solid black; float: left;"
+                >
                     <div
-                        class="container-area"
-                        style="width: 120px; height: 120px; border: 1px solid black; float: left;"
-                    />
-                    <div
-                        class="container-area"
-                        style="width: 120px; height: 120px; border: 1px solid black; float: left;"
-                    >
-                        <div
-                            id="container-header"
-                            style="width: 100px; margin-left: -50px; background: #eee; border: 1px solid #333; text-align: center;"
-                        >Containers</div>
-                    </div>
+                        id="container-header"
+                        style="width: 100px; margin-left: -50px; background: #eee; border: 1px solid #333; text-align: center;"
+                    >Containers</div>
                 </div>
             </div>
         </div>
 
-        <div class="row">
-            <h2>
-                <strong>Customer:</strong>
-            </h2>
-            <div
-                id="customer-address-area"
-                style="margin-bottom: 25px; font-size: 140%;"
-                t-field="doc.partner_id"
-                t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;], &quot;no_marker&quot;: true}"
-            />
-        </div>
-
-<!--         <div class="row"> -->
-<!--             <t t-if="doc.header_text"> -->
-<!--                 <h2> -->
-<!--                     <strong>Dispatch Note Header:</strong> -->
-<!--                 </h2> -->
-<!--             </t> -->
-<!--         </div> -->
-
-<!--         <div class="row"> -->
-<!--             <t t-if="doc.header_text"> -->
-<!--                 <h3> -->
-<!--                     <div t-field="doc.header_text" id="origin-area" style="margin-bottom: 25px; font-size: 140%;"/> -->
-<!--                 </h3> -->
-<!--             </t> -->
-<!--         </div> -->
-
-        <div class="row">
-            <t t-if="doc.origin">
+        <div style="display: block;">
+            <div>
                 <h2>
-                    <strong>Order number / Markings:</strong>
+                    <strong>Customer:</strong>
                 </h2>
-            </t>
-        </div>
+                <div
+                    id="customer-address-area"
+                    style="margin-bottom: 25px; font-size: 140%;"
+                    t-esc="doc.partner_id"
+                    t-options="{'widget': 'contact', 'fields': ['address', 'name'], 'no_marker': true}"
+                />
+            </div>
 
-        <div class="row">
-            <t t-if="doc.origin">
-                <h3>
-                    <div
-                        t-field="doc.origin"
-                        id="origin-area"
-                        style="margin-bottom: 25px; font-size: 140%;"
-                    />
-                </h3>
-            </t>
+            <div class="">
+                <t t-if="doc.header_text">
+                    <h2>
+                        <strong>Dispatch Note Header:</strong>
+                    </h2>
+                </t>
+            </div>
+
+            <div class="row">
+                <t t-if="doc.header_text">
+                    <h3>
+                        <div
+                            t-field="doc.header_text"
+                            id="origin-area"
+                            style="margin-bottom: 25px; font-size: 140%;"
+                        />
+                    </h3>
+                </t>
+            </div>
+
+            <div class="row">
+                <t t-if="doc.origin">
+                    <h2>
+                        <strong>Order number / Markings:</strong>
+                    </h2>
+                </t>
+            </div>
+
+            <div class="row">
+                <t t-if="doc.origin">
+                    <h3>
+                        <div
+                            t-field="doc.origin"
+                            id="origin-area"
+                            style="margin-bottom: 25px; font-size: 140%;"
+                        />
+                    </h3>
+                </t>
+            </div>
         </div>
     </template>
 </odoo>
