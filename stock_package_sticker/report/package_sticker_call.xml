@@ -28,7 +28,10 @@
         <t t-name="stock_package_sticker.report_package_sticker_page">
 
             <t t-call="stock_package_sticker.external_layout">
-                <div class="page" style="padding: 0px;">
+                <div
+                    class="page"
+                    style="padding: 0px; font-family: Open Sans; font-style: normal;"
+                >
                     <div class="oe_structure" />
                     <t t-call="stock_package_sticker.report_package_sticker_content" />
                 </div>
