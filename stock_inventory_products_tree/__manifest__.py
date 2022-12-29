@@ -19,7 +19,7 @@
 ##############################################################################
 {
     "name": "Stock Inventory Products Tree",
-    "version": "14.0.1.0.1",
+    "version": "14.0.1.1.0",
     "category": "Stock",
     "summary": "Show products in stock inventory as tree view",
     "website": "https://gitlab.com/tawasta/odoo/stock",
