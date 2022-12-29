@@ -8,6 +8,7 @@
         <field name="arch" type="xml">
             <xpath expr="//tree" position="attributes">
                 <attribute name="default_order">product_id</attribute>
+                <attribute name="limit">300</attribute>
             </xpath>
         </field>
     </record>
