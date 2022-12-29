@@ -16,17 +16,20 @@ addon | version | maintainers | summary
 [stock_dispatch_note_report_template](stock_dispatch_note_report_template/) | 14.0.1.0.3 |  | Stock Dispatch Note Template
 [stock_hide_packing_buttons](stock_hide_packing_buttons/) | 14.0.1.0.0 |  | Hides "put in pack" buttons
 [stock_inventory_adjustment_domain_company](stock_inventory_adjustment_domain_company/) | 14.0.1.0.1 |  | Show stock locations without company in inventory adjustments
+[stock_inventory_continue_inventory_tree_order](stock_inventory_continue_inventory_tree_order/) | 14.0.1.0.0 |  | Inventory list view - order by product_id
 [stock_inventory_line_order](stock_inventory_line_order/) | 14.0.1.0.0 |  | Sort inventory lines by default code
 [stock_inventory_products_tree](stock_inventory_products_tree/) | 14.0.1.0.0 |  | Show products in stock inventory as tree view
 [stock_move_pivot_report_sh_product_tag](stock_move_pivot_report_sh_product_tag/) | 14.0.1.0.0 |  | Group by SH product tags in Stock Move pivot view
 [stock_move_sale_kit](stock_move_sale_kit/) | 14.0.1.0.0 |  | Sale kits to stock move lines
 [stock_move_search](stock_move_search/) | 14.0.1.0.0 |  | Additional Search options for Stock Move
+[stock_package_sticker](stock_package_sticker/) | 14.0.1.0.1 |  | Stock Package Sticker
 [stock_picking_bypass_reservation](stock_picking_bypass_reservation/) | 14.0.1.0.0 |  | Stock Picking Bypass Reservation
 [stock_picking_comment](stock_picking_comment/) | 14.0.1.0.1 |  | External comment for stock picking Delivery Slip and Picking Operations
 [stock_picking_compatible_mass_print_and_sudo_process](stock_picking_compatible_mass_print_and_sudo_process/) | 14.0.1.0.0 |  | Make mass action print and process as sudo compatible
 [stock_picking_country_group_text](stock_picking_country_group_text/) | 14.0.1.0.0 |  | Get stock picking report text from country groups setting
 [stock_picking_create_manufacturing_order_from_move](stock_picking_create_manufacturing_order_from_move/) | 14.0.1.0.0 |  | Create Manufacturing order from stock picking move
 [stock_picking_customer_reference](stock_picking_customer_reference/) | 14.0.1.0.0 |  | Stock Picking Customer Reference
+[stock_picking_dispatch_fields](stock_picking_dispatch_fields/) | 14.0.1.0.0 |  | Stock Picking fields for Dispatch Note
 [stock_picking_mass_action_complete_transfer](stock_picking_mass_action_complete_transfer/) | 14.0.1.0.1 |  | Stock Picking Mass action - complete transfer
 [stock_picking_mass_action_print_pdf](stock_picking_mass_action_print_pdf/) | 14.0.1.0.1 |  | Stock Picking Mass action - Print PDF
 [stock_picking_operations_show_name](stock_picking_operations_show_name/) | 14.0.1.0.0 |  | Show name field on Stock Picking operations
