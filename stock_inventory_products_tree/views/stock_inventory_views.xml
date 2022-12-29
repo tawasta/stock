@@ -16,7 +16,7 @@
                             context="{'default_type': 'product'}"
                             options="{'no_quick_create':True,'no_create_edit':True, 'no_create': True}"
                         >
-                            <tree editable="bottom">
+                            <tree editable="bottom" limit="300">
                                 <field name="default_code" />
                                 <field name="name" />
                                 <field name="product_template_attribute_value_ids" />
