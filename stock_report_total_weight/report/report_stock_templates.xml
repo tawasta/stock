@@ -30,4 +30,15 @@
             </td>
         </xpath>
     </template>
+    <template
+        id="stock_report_delivery_aggregated_move_lines_total_weight"
+        inherit_id="stock_dispatch_note_report_template.stock_report_delivery_aggregated_move_lines"
+    >
+        <td name="move_line_aggregated_weight" position="before">
+            <td name="move_line_product_weight">
+                <span t-esc="aggregated_lines[line]['product'].weight" />
+                <span t-esc="aggregated_lines[line]['product'].weight_uom_name" />
+            </td>
+        </td>
+    </template>
 </odoo>
