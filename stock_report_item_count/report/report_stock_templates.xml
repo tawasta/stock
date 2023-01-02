@@ -95,6 +95,9 @@
         inherit_id="stock.stock_report_delivery_aggregated_move_lines"
         priority="10"
     >
+        <xpath expr="//tr[@t-as='line']" position="before">
+            <t t-set="current_item" t-value="0" />
+        </xpath>
         <xpath
             expr="//span[@t-esc=&quot;aggregated_lines[line]['name']&quot;]//.."
             position="before"
