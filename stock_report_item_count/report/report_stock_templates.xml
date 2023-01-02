@@ -44,18 +44,39 @@
         </xpath>
         <xpath
             expr="//t[@name='has_packages']//t[@t-as='package']//tr[@t-as='move_line']"
-            position="before"
+            position="replace"
         >
             <t t-set="current_item" t-value="0" />
+            <tr t-foreach="package_move_lines" t-as="move_line">
+                <t
+                    t-call="stock_report_item_count.stock_report_delivey_has_serial_move_line_item_count"
+                >
+                    <t t-set="current_item" t-value="current_item + 1" />
+                </t>
+            </tr>
         </xpath>
         <xpath
             expr="//t[@name='no_package_move_lines']//tr[@t-as='move_line']"
-            position="before"
+            position="replace"
         >
             <t t-set="current_item" t-value="0" />
+            <tr t-foreach="package_move_lines" t-as="move_line">
+                <t
+                    t-call="stock_report_item_count.stock_report_delivey_has_serial_move_line_item_count"
+                >
+                    <t t-set="current_item" t-value="current_item + 1" />
+                </t>
+            </tr>
         </xpath>
-        <xpath expr="//tr[@t-foreach='o.move_line_ids']" position="before">
+        <xpath expr="//tr[@t-foreach='o.move_line_ids']" position="replace">
             <t t-set="current_item" t-value="0" />
+            <tr t-foreach="o.move_line_ids" t-as="move_line">
+                <t
+                    t-call="stock_report_item_count.stock_report_delivey_has_serial_move_line_item_count"
+                >
+                    <t t-set="current_item" t-value="current_item + 1" />
+                </t>
+            </tr>
         </xpath>
     </template>
     <template
@@ -65,7 +86,6 @@
     >
         <xpath expr="//span[@t-field='move_line.product_id']//.." position="before">
             <td name="td_sml_item_count">
-                <t t-set="current_item" t-value="current_item + 1" />
                 <span t-esc="current_item" />
             </td>
         </xpath>
