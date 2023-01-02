@@ -46,7 +46,9 @@
             position="after"
         >
             <td name="move_weight">
-                <span t-field="move.weight" />
+                <span t-field="move.weight" /> <span
+                    t-field="move.product_id.weight_uom_name"
+                />
             </td>
         </xpath>
 
