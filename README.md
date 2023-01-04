@@ -11,6 +11,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
+[product_supplierinfo_for_customer_picking_filter_fix](product_supplierinfo_for_customer_picking_filter_fix/) | 14.0.1.0.0 |  | product_supplierinfo_for_customer_picking module's filter fix
 [stock_auditlog_rules](stock_auditlog_rules/) | 14.0.1.0.0 |  | Adds audit log rules for stock.warehouse and stock.location
 [stock_disable_invoice_shipping_on_delivery](stock_disable_invoice_shipping_on_delivery/) | 14.0.1.0.0 |  | Disable picking auto-generated delivery SO lines
 [stock_dispatch_note_report_template](stock_dispatch_note_report_template/) | 14.0.1.0.4 |  | Stock Dispatch Note Template
