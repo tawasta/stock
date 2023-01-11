@@ -48,6 +48,7 @@ addon | version | maintainers | summary
 [stock_picking_tree_effective_date](stock_picking_tree_effective_date/) | 14.0.1.0.0 |  | Adds effective date from Sale Order to picking list view
 [stock_picking_tree_scheduled_date_as_date](stock_picking_tree_scheduled_date_as_date/) | 14.0.1.0.0 |  | Show scheduled date as date in stock picking tree
 [stock_picking_unreserve_automatically](stock_picking_unreserve_automatically/) | 14.0.1.0.0 |  | Set sale orders to automatically unreserve deliveries
+[stock_picking_volume](stock_picking_volume/) | 14.0.1.0.0 |  | Press a button to calculate total volume of a picking
 [stock_product_qty_available_unreserved](stock_product_qty_available_unreserved/) | 14.0.1.0.0 |  | Add unreserved available (on hand - reserved)
 [stock_report_add_description_to_picking](stock_report_add_description_to_picking/) | 14.0.1.0.0 |  | Adds Description column to picking report
 [stock_report_carrier](stock_report_carrier/) | 14.0.1.0.1 |  | Delivery slip Carrier
