@@ -5,18 +5,16 @@ class StockPicking(models.Model):
 
     _inherit = "stock.picking"
 
-    #     dispatch_note_text = fields.Char(
-    #         string="Note", size=128, help="Text shown on the dispatch note"
-    #     )
+    dispatch_note_text = fields.Char(
+        string="Note", size=128, help="Text shown on the dispatch note"
+    )
 
     freight_payer = fields.Char(string="Freight paid by")
 
     contract_number = fields.Char(string="Customer / Contract number")
 
     customer_contact = fields.Many2one(
-        "res.partner",
-        related="sale_id.customer_contact_id"
-        #         string="Customer's contact"
+        "res.partner", related="sale_id.customer_contact_id"
     )
 
     container_count = fields.Integer(

@@ -31,7 +31,7 @@
             <xpath expr="//field[@name='picking_type_id']" position="after">
                 <field name="contract_number" />
                 <field name="container_count" />
-    <!-- 				<field name="dispatch_note_text"/> -->
+                <field name="dispatch_note_text" />
             </xpath>
         </field>
     </record>
