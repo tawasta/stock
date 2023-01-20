@@ -21,7 +21,7 @@
 {
     "name": "Stock Picking fields for Dispatch Note",
     "summary": "Stock Picking fields for Dispatch Note",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
