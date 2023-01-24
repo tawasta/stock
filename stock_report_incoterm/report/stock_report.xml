@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <template
-        id="report_picking_incoterm"
-        inherit_id="stock_report_element_sizes.report_picking_element_sizes"
+        id="report_delivery_document_incoterm"
+        inherit_id="stock_report_element_sizes.report_delivery_document"
     >
-        <div id="stock_picking_informations" position="inside">
+        <div id="stock_deliveryslip_informations" position="inside">
             <div
                 t-if="o.sudo().sale_id.incoterm"
                 class="col-auto mw-100 mb-2"
