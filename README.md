@@ -30,7 +30,7 @@ addon | version | maintainers | summary
 [stock_picking_country_group_text](stock_picking_country_group_text/) | 14.0.1.0.0 |  | Get stock picking report text from country groups setting
 [stock_picking_create_manufacturing_order_from_move](stock_picking_create_manufacturing_order_from_move/) | 14.0.1.0.0 |  | Create Manufacturing order from stock picking move
 [stock_picking_customer_reference](stock_picking_customer_reference/) | 14.0.1.0.0 |  | Stock Picking Customer Reference
-[stock_picking_dispatch_fields](stock_picking_dispatch_fields/) | 14.0.1.0.0 |  | Stock Picking fields for Dispatch Note
+[stock_picking_dispatch_fields](stock_picking_dispatch_fields/) | 14.0.1.0.1 |  | Stock Picking fields for Dispatch Note
 [stock_picking_mass_action_complete_transfer](stock_picking_mass_action_complete_transfer/) | 14.0.1.0.1 |  | Stock Picking Mass action - complete transfer
 [stock_picking_mass_action_print_pdf](stock_picking_mass_action_print_pdf/) | 14.0.1.0.1 |  | Stock Picking Mass action - Print PDF
 [stock_picking_move_lines_partner](stock_picking_move_lines_partner/) | 14.0.1.0.0 |  | Stock Picking Move Lines Partner
