@@ -6,6 +6,7 @@
 Stock Picking and Delivery Slip Report Title
 ============================================
 * Hides title and adds it on top of the page and in informations elements instead
+* Can be configured in res.config.settings
 
 Configuration
 =============

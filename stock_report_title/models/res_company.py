@@ -7,7 +7,17 @@ class ResCompany(models.Model):
 
     show_delivery_slip_text = fields.Boolean(
         string="Show delivery slip text",
+        default=True,
     )
     show_delivery_slip_report_name = fields.Boolean(
         string="Show delivery slip report name",
+        default=True,
+    )
+    show_picking_text = fields.Boolean(
+        string="Show picking text",
+        default=True,
+    )
+    show_picking_report_name = fields.Boolean(
+        string="Show picking report name",
+        default=True,
     )

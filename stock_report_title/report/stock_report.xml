@@ -5,9 +5,12 @@
         inherit_id="stock_report_element_sizes.report_picking_element_sizes"
     >
         <div id="stock_picking_informations" position="inside">
-            <div t-if="o.name" class="col-auto mw-100 mb-2">
+            <div
+                t-if="o.name and o.company_id.show_picking_report_name"
+                class="col-auto mw-100 mb-2"
+            >
                 <span>
-                    <strong>Stock picking:</strong>
+                    <strong>Stock Picking:</strong>
                 </span>
                 <p class="m-0" t-field="o.name" />
             </div>
@@ -19,7 +22,7 @@
     >
         <div id="stock_deliveryslip_informations" position="inside">
             <div
-                t-if="o.name and o.company_id.show_delivery_slip_text"
+                t-if="o.name and o.company_id.show_delivery_slip_report_name"
                 class="col-auto mw-100 mb-2"
             >
                 <span>
@@ -31,7 +34,9 @@
     </template>
     <template id="report_picking_title" inherit_id="stock.report_picking">
         <xpath expr="//div[@class='page']" position="before">
-            <t t-set="report_title">Stock picking</t>
+            <t t-if="o.company_id.show_picking_text">
+                <t t-set="report_title">Stock picking</t>
+            </t>
         </xpath>
         <xpath expr="//div[@class='page']//h1" position="attributes">
             <attribute name="class">d-none</attribute>
@@ -46,11 +51,8 @@
                 <t t-set="report_title">Delivery Slip</t>
             </t>
         </xpath>
-        <!-- expr="//h2" doesn't work for some reason -->
-        <xpath expr="//h2//span" position="attributes">
-            <attribute
-                name="t-att-class"
-            >'{}'.format('d-none' if not o.company_id.show_delivery_slip_report_name else '')</attribute>
+        <xpath expr="//div[@class='page']//h2" position="attributes">
+            <attribute name="class">d-none</attribute>
         </xpath>
     </template>
 </odoo>

@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0\n"
+"Project-Id-Version: Odoo Server 14.0-20221202\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-01 11:43+0000\n"
-"PO-Revision-Date: 2021-11-01 11:43+0000\n"
+"POT-Creation-Date: 2023-01-25 13:19+0000\n"
+"PO-Revision-Date: 2023-01-25 13:19+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: stock_report_title
-#: model_terms:ir.ui.view,arch_db:stock_report_title.report_deliveryslip_informations_title
+#: model_terms:ir.ui.view,arch_db:stock_report_title.report_delivery_document
 msgid ""
 "<span>\n"
 "                    <strong>Delivery Slip:</strong>\n"
@@ -30,7 +30,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:stock_report_title.report_picking_informations_title
 msgid ""
 "<span>\n"
-"                    <strong>Stock picking:</strong>\n"
+"                    <strong>Stock Picking:</strong>\n"
 "                </span>"
 msgstr ""
 "<span>\n"
@@ -38,9 +38,99 @@ msgstr ""
 "                </span>"
 
 #. module: stock_report_title
+#: model:ir.model,name:stock_report_title.model_res_company
+msgid "Companies"
+msgstr "Yritykset"
+
+#. module: stock_report_title
+#: model:ir.model,name:stock_report_title.model_base_document_layout
+msgid "Company Document Layout"
+msgstr "Yrityksen asiakirjan asettelu"
+
+#. module: stock_report_title
+#: model:ir.model,name:stock_report_title.model_res_config_settings
+msgid "Config Settings"
+msgstr "Konfiguraatioasetukset"
+
+#. module: stock_report_title
 #: model_terms:ir.ui.view,arch_db:stock_report_title.report_deliveryslip_title
 msgid "Delivery Slip"
 msgstr "Lähete"
+
+#. module: stock_report_title
+#: model:ir.model.fields,field_description:stock_report_title.field_base_document_layout__display_name
+#: model:ir.model.fields,field_description:stock_report_title.field_res_company__display_name
+#: model:ir.model.fields,field_description:stock_report_title.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: stock_report_title
+#: model:ir.model.fields,field_description:stock_report_title.field_base_document_layout__id
+#: model:ir.model.fields,field_description:stock_report_title.field_res_company__id
+#: model:ir.model.fields,field_description:stock_report_title.field_res_config_settings__id
+msgid "ID"
+msgstr "Tunniste (ID)"
+
+#. module: stock_report_title
+#: model:ir.model.fields,field_description:stock_report_title.field_base_document_layout____last_update
+#: model:ir.model.fields,field_description:stock_report_title.field_res_company____last_update
+#: model:ir.model.fields,field_description:stock_report_title.field_res_config_settings____last_update
+msgid "Last Modified on"
+msgstr "Viimeksi muokattu"
+
+#. module: stock_report_title
+#: model_terms:ir.ui.view,arch_db:stock_report_title.res_config_settings_view_form
+msgid "Show 'Delivery Slip' text on report"
+msgstr "Näytä 'Lähete' teksti raportilla"
+
+#. module: stock_report_title
+#: model_terms:ir.ui.view,arch_db:stock_report_title.res_config_settings_view_form
+msgid "Show 'Stock Picking' text on report"
+msgstr "Näytä 'Keräilylista' teksti raportilla"
+
+#. module: stock_report_title
+#: model:ir.model.fields,field_description:stock_report_title.field_res_config_settings__show_delivery_slip_text
+msgid "Show delivery slip header"
+msgstr "Näytä lähetteen otsikko"
+
+#. module: stock_report_title
+#: model:ir.model.fields,field_description:stock_report_title.field_base_document_layout__show_delivery_slip_report_name
+#: model:ir.model.fields,field_description:stock_report_title.field_res_company__show_delivery_slip_report_name
+#: model:ir.model.fields,field_description:stock_report_title.field_res_config_settings__show_delivery_slip_report_name
+msgid "Show delivery slip report name"
+msgstr "Näytä lähetteen raportin nimi"
+
+#. module: stock_report_title
+#: model:ir.model.fields,field_description:stock_report_title.field_res_company__show_delivery_slip_text
+msgid "Show delivery slip text"
+msgstr "Näytä lähetteen teksti"
+
+#. module: stock_report_title
+#: model:ir.model.fields,field_description:stock_report_title.field_res_config_settings__show_picking_text
+msgid "Show picking header"
+msgstr "Näytä keräilyn otsikko"
+
+#. module: stock_report_title
+#: model:ir.model.fields,field_description:stock_report_title.field_base_document_layout__show_picking_report_name
+#: model:ir.model.fields,field_description:stock_report_title.field_res_company__show_picking_report_name
+#: model:ir.model.fields,field_description:stock_report_title.field_res_config_settings__show_picking_report_name
+msgid "Show picking report name"
+msgstr "Näytä keräilyn raportin nimi"
+
+#. module: stock_report_title
+#: model:ir.model.fields,field_description:stock_report_title.field_res_company__show_picking_text
+msgid "Show picking text"
+msgstr "Näytä keräilyn teksti"
+
+#. module: stock_report_title
+#: model_terms:ir.ui.view,arch_db:stock_report_title.res_config_settings_view_form
+msgid "Show picking's name on Delivery Slip report"
+msgstr "Näytä keräilyn nimi lähetteellä"
+
+#. module: stock_report_title
+#: model_terms:ir.ui.view,arch_db:stock_report_title.res_config_settings_view_form
+msgid "Show picking's name on Stock Picking report"
+msgstr "Näytä keräilyn nimi keräilylistassa"
 
 #. module: stock_report_title
 #: model_terms:ir.ui.view,arch_db:stock_report_title.report_picking_title
