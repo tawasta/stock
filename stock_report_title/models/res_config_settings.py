@@ -15,3 +15,13 @@ class ResConfigSettings(models.TransientModel):
         related="company_id.show_delivery_slip_report_name",
         readonly=False,
     )
+    show_picking_text = fields.Boolean(
+        string="Show picking header",
+        related="company_id.show_picking_text",
+        readonly=False,
+    )
+    show_picking_report_name = fields.Boolean(
+        string="Show picking report name",
+        related="company_id.show_picking_report_name",
+        readonly=False,
+    )

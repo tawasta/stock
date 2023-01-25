@@ -13,7 +13,7 @@
                     <div class="o_setting_right_pane">
                         <label for="show_delivery_slip_text" />
                         <div class="text-muted">
-                            Show 'Delivery Slip' text on pdf print
+                            Show 'Delivery Slip' text on report
                         </div>
                     </div>
                 </div>
@@ -27,7 +27,32 @@
                     <div class="o_setting_right_pane">
                         <label for="show_delivery_slip_report_name" />
                         <div class="text-muted">
-                            Show picking's name on Delivery Slip
+                            Show picking's name on Delivery Slip report
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 o_setting_box" id="show_picking_text">
+                    <div class="o_setting_left_pane">
+                        <field name="show_picking_text" />
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <label for="show_picking_text" />
+                        <div class="text-muted">
+                            Show 'Stock Picking' text on report
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="col-12 col-lg-6 o_setting_box"
+                    id="show_picking_report_name"
+                >
+                    <div class="o_setting_left_pane">
+                        <field name="show_picking_report_name" />
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <label for="show_picking_report_name" />
+                        <div class="text-muted">
+                            Show picking's name on Stock Picking report
                         </div>
                     </div>
                 </div>
