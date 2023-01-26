@@ -51,8 +51,12 @@
                 <t t-set="report_title">Delivery Slip</t>
             </t>
         </xpath>
-        <xpath expr="//div[@class='page']//h2" position="attributes">
-            <attribute name="class">d-none</attribute>
+
+        <!-- expr="//h2" doesn't work for some reason -->
+        <xpath expr="//h2//span" position="attributes">
+            <attribute
+                name="t-att-class"
+            >'{}'.format('d-none' if not o.company_id.show_delivery_slip_report_name else '')</attribute>
         </xpath>
     </template>
 </odoo>
