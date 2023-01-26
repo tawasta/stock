@@ -21,7 +21,7 @@
 {
     "name": "Stock Picking and Delivery Slip Report Title",
     "summary": "Stock Picking and Delivery Slip Report Title",
-    "version": "14.0.2.0.0",
+    "version": "14.0.2.0.1",
     "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
