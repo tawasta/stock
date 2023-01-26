@@ -22,7 +22,7 @@
     >
         <div id="stock_deliveryslip_informations" position="inside">
             <div
-                t-if="o.name and o.company_id.show_delivery_slip_report_name"
+                t-if="o.name and o.company_id.show_delivery_slip_text"
                 class="col-auto mw-100 mb-2"
             >
                 <span>
