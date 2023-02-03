@@ -10,6 +10,9 @@
         <xpath expr="//div[@class='page']/h2" position="replace">
             <h2>Delivery note</h2>
         </xpath>
+        <t t-set='o' position="before">
+            <t t-set="report_title">Delivery Note</t>
+        </t>
 
     </template>
 </odoo>
