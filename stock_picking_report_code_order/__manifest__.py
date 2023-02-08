@@ -29,5 +29,5 @@
     "application": False,
     "installable": True,
     "depends": ["stock", "web"],
-    "data": ["report/report_menu.xml","report/report_stock_picking_code_order.xml"],
+    "data": ["report/report_menu.xml", "report/report_stock_picking_code_order.xml"],
 }
