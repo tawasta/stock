@@ -11,6 +11,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
+[packing_list_report_title_and_decimal](packing_list_report_title_and_decimal/) | 14.0.1.0.0 |  | Packing list report title and decimal
 [product_supplierinfo_for_customer_picking_filter_fix](product_supplierinfo_for_customer_picking_filter_fix/) | 14.0.1.0.0 |  | product_supplierinfo_for_customer_picking module's filter fix
 [stock_auditlog_rules](stock_auditlog_rules/) | 14.0.1.0.0 |  | Adds audit log rules for stock.warehouse and stock.location
 [stock_disable_invoice_shipping_on_delivery](stock_disable_invoice_shipping_on_delivery/) | 14.0.1.0.0 |  | Disable picking auto-generated delivery SO lines
@@ -40,6 +41,7 @@ addon | version | maintainers | summary
 [stock_picking_process_as_sudo](stock_picking_process_as_sudo/) | 14.0.1.0.0 |  | Process Stock Pickings as Admin user
 [stock_picking_receipt_set_all_moves_done](stock_picking_receipt_set_all_moves_done/) | 14.0.1.0.0 |  | Use button to set all moves as done on receipt
 [stock_picking_reinvoice](stock_picking_reinvoice/) | 14.0.1.0.2 |  | Allow making invoices from stock pickings
+[stock_picking_report_code_order](stock_picking_report_code_order/) | 14.0.1.0.0 |  | Stock Picking Report Code Order
 [stock_picking_reserve_chosen_moves](stock_picking_reserve_chosen_moves/) | 14.0.1.0.0 |  | Select manually the moves to be reserved on deliveries
 [stock_picking_sale_order_id](stock_picking_sale_order_id/) | 14.0.1.0.0 |  | Get Sale Order to Stock Picking from Purchase Order
 [stock_picking_sale_order_partner_id](stock_picking_sale_order_partner_id/) | 14.0.1.0.0 |  | Get Sale Order Partner to Stock Picking from Purchase Order

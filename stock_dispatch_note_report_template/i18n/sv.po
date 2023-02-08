@@ -1,0 +1,63 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_dispatch_note_report_template
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0-20221116\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-08 06:58+0000\n"
+"PO-Revision-Date: 2023-02-08 09:01+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: stock_dispatch_note_report_template
+#: model_terms:ir.ui.view,arch_db:stock_dispatch_note_report_template.report_delivery_document_header
+msgid "<strong>Date</strong>"
+msgstr "<strong>Datum</strong>"
+
+#. module: stock_dispatch_note_report_template
+#: model_terms:ir.ui.view,arch_db:stock_dispatch_note_report_template.report_delivery_document_header
+msgid "<strong>Order</strong>"
+msgstr "<strong>Order</strong>"
+
+#. module: stock_dispatch_note_report_template
+#: model_terms:ir.ui.view,arch_db:stock_dispatch_note_report_template.report_delivery_document
+msgid "<strong>Total weight: </strong>"
+msgstr "<strong>Totalvikt: </strong>"
+
+#. module: stock_dispatch_note_report_template
+#: model_terms:ir.ui.view,arch_db:stock_dispatch_note_report_template.report_delivery_document
+msgid "<strong>Weight</strong>"
+msgstr "<strong>Vikt</strong>"
+
+#. module: stock_dispatch_note_report_template
+#: model_terms:ir.ui.view,arch_db:stock_dispatch_note_report_template.report_delivery_document
+msgid "Dispatch Note"
+msgstr "Följesedel"
+
+#. module: stock_dispatch_note_report_template
+#: model:ir.model.fields,field_description:stock_dispatch_note_report_template.field_stock_move_line__display_name
+msgid "Display Name"
+msgstr "Visningsnamn"
+
+#. module: stock_dispatch_note_report_template
+#: model:ir.model.fields,field_description:stock_dispatch_note_report_template.field_stock_move_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: stock_dispatch_note_report_template
+#: model:ir.model.fields,field_description:stock_dispatch_note_report_template.field_stock_move_line____last_update
+msgid "Last Modified on"
+msgstr "Senast redigerad"
+
+#. module: stock_dispatch_note_report_template
+#: model:ir.model,name:stock_dispatch_note_report_template.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Produktflyttar (lagerflyttsrad)"
