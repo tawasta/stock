@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_picking" model="stock.report_picking">
+        <t t-set="has_barcode" options="attributes">
+            <attribute name="t-value">False</attribute>
+        </t>
+    </template>
+</odoo>
