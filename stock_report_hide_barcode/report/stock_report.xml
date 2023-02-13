@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <template id="report_picking" inherit_id="stock.report_picking">
-        <xpath expr="//t[@t-set='has_barcode']" options="attributes">
+        <xpath expr="//t[@t-set='has_barcode']" position="attributes">
             <attribute name="t-value">False</attribute>
         </xpath>
     </template>
