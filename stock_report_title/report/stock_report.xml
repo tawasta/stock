@@ -42,16 +42,23 @@
             <attribute name="class">d-none</attribute>
         </xpath>
     </template>
+    <template id="header" inherit_id="web_report_sfs.header">
+        <div name="report-title" position="inside">
+            <t t-if="company.show_delivery_slip_text">
+                <t t-if="company.delivery_slip_title">
+                    <strong t-field="company.delivery_slip_title" />
+                </t>
+                <t t-else="">
+                    <strong>Delivery Slip</strong>
+                </t>
+            </t>
+        </div>
+    </template>
+
     <template
         id="report_deliveryslip_title"
         inherit_id="stock.report_delivery_document"
     >
-        <xpath expr="//t[@t-set='o']" position="before">
-            <t t-if="o.company_id.show_delivery_slip_text">
-                <t t-set="report_title">Delivery Slip</t>
-            </t>
-        </xpath>
-
         <!-- expr="//h2" doesn't work for some reason -->
         <xpath expr="//h2//span" position="attributes">
             <attribute

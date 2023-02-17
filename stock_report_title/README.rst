@@ -5,8 +5,11 @@
 ============================================
 Stock Picking and Delivery Slip Report Title
 ============================================
+
 * Hides title and adds it on top of the page and in informations elements instead
 * Can be configured in res.config.settings
+* Change Delivery Slip title from the inventory settings. Many installations
+  want different titles, so this is a useful feature.
 
 Configuration
 =============
