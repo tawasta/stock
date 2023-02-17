@@ -5,6 +5,11 @@ class ResCompany(models.Model):
 
     _inherit = "res.company"
 
+    delivery_slip_title = fields.Char(
+        string="Delivery slip title",
+        default="",
+        translate=True,
+    )
     show_delivery_slip_text = fields.Boolean(
         string="Show delivery slip text",
         default=True,
