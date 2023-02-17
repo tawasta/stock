@@ -4,16 +4,18 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0-20221202\n"
+"Project-Id-Version: Odoo Server 14.0-20230109\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-25 13:19+0000\n"
-"PO-Revision-Date: 2023-01-25 13:19+0000\n"
+"POT-Creation-Date: 2023-02-17 08:02+0000\n"
+"PO-Revision-Date: 2023-02-17 10:06+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. module: stock_report_title
 #: model_terms:ir.ui.view,arch_db:stock_report_title.report_delivery_document
@@ -38,6 +40,11 @@ msgstr ""
 "                </span>"
 
 #. module: stock_report_title
+#: model_terms:ir.ui.view,arch_db:stock_report_title.header
+msgid "<strong>Delivery Slip</strong>"
+msgstr "<strong>Lähete</strong>"
+
+#. module: stock_report_title
 #: model:ir.model,name:stock_report_title.model_res_company
 msgid "Companies"
 msgstr "Yritykset"
@@ -48,14 +55,11 @@ msgid "Company Document Layout"
 msgstr "Yrityksen asiakirjan asettelu"
 
 #. module: stock_report_title
-#: model:ir.model,name:stock_report_title.model_res_config_settings
-msgid "Config Settings"
-msgstr "Konfiguraatioasetukset"
-
-#. module: stock_report_title
-#: model_terms:ir.ui.view,arch_db:stock_report_title.report_deliveryslip_title
-msgid "Delivery Slip"
-msgstr "Lähete"
+#: model:ir.model.fields,field_description:stock_report_title.field_base_document_layout__delivery_slip_title
+#: model:ir.model.fields,field_description:stock_report_title.field_res_company__delivery_slip_title
+#: model:ir.model.fields,field_description:stock_report_title.field_res_config_settings__delivery_slip_title
+msgid "Delivery slip title"
+msgstr "Lähetteen otsikko"
 
 #. module: stock_report_title
 #: model:ir.model.fields,field_description:stock_report_title.field_base_document_layout__display_name
@@ -77,6 +81,16 @@ msgstr "Tunniste (ID)"
 #: model:ir.model.fields,field_description:stock_report_title.field_res_config_settings____last_update
 msgid "Last Modified on"
 msgstr "Viimeksi muokattu"
+
+#. module: stock_report_title
+#: model:ir.model,name:stock_report_title.model_res_config_settings
+msgid "Procurement purchase grouping settings"
+msgstr ""
+
+#. module: stock_report_title
+#: model_terms:ir.ui.view,arch_db:stock_report_title.res_config_settings_view_form
+msgid "Set title for Delivery Slip print. Default is 'Delivery Slip'"
+msgstr "Aseta otsikko Lähetteelle. Oletus on 'Lähete'"
 
 #. module: stock_report_title
 #: model_terms:ir.ui.view,arch_db:stock_report_title.res_config_settings_view_form
