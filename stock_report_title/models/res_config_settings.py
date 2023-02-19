@@ -5,6 +5,12 @@ class ResConfigSettings(models.TransientModel):
 
     _inherit = "res.config.settings"
 
+    delivery_slip_title = fields.Char(
+        string="Delivery slip title",
+        related="company_id.delivery_slip_title",
+        readonly=False,
+        translate=True,
+    )
     show_delivery_slip_text = fields.Boolean(
         string="Show delivery slip header",
         related="company_id.show_delivery_slip_text",

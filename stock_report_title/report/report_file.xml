@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="stock.action_report_delivery" model="ir.actions.report">
+        <field name="report_name">stock_report_title.report_deliveryslip</field>
+    </record>
+</odoo>

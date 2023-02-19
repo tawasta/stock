@@ -6,6 +6,16 @@
         <field name="inherit_id" ref="stock.res_config_settings_view_form" />
         <field name="arch" type="xml">
             <div id="warning_info" position="after">
+                <div class="col-12 col-lg-6 o_setting_box" id="delivery_slip_title">
+                    <div class="o_setting_right_pane">
+                        <label for="delivery_slip_title" />
+                        <div class="text-muted">
+                            Set title for Delivery Slip print. Default is 'Delivery Slip'
+                        </div>
+                        <field name="delivery_slip_title" />
+                    </div>
+                </div>
+
                 <div class="col-12 col-lg-6 o_setting_box" id="show_delivery_slip_text">
                     <div class="o_setting_left_pane">
                         <field name="show_delivery_slip_text" />
@@ -17,6 +27,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div
                     class="col-12 col-lg-6 o_setting_box"
                     id="show_delivery_slip_report_name"
@@ -31,6 +42,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-12 col-lg-6 o_setting_box" id="show_picking_text">
                     <div class="o_setting_left_pane">
                         <field name="show_picking_text" />

@@ -15,7 +15,7 @@ addon | version | maintainers | summary
 [product_supplierinfo_for_customer_picking_filter_fix](product_supplierinfo_for_customer_picking_filter_fix/) | 14.0.1.0.0 |  | product_supplierinfo_for_customer_picking module's filter fix
 [stock_auditlog_rules](stock_auditlog_rules/) | 14.0.1.0.0 |  | Adds audit log rules for stock.warehouse and stock.location
 [stock_disable_invoice_shipping_on_delivery](stock_disable_invoice_shipping_on_delivery/) | 14.0.1.0.0 |  | Disable picking auto-generated delivery SO lines
-[stock_dispatch_note_report_template](stock_dispatch_note_report_template/) | 14.0.1.0.4 |  | Stock Dispatch Note Template
+[stock_dispatch_note_report_template](stock_dispatch_note_report_template/) | 14.0.1.0.5 |  | Stock Dispatch Note Template
 [stock_hide_packing_buttons](stock_hide_packing_buttons/) | 14.0.1.0.0 |  | Hides "put in pack" buttons
 [stock_inventory_adjustment_domain_company](stock_inventory_adjustment_domain_company/) | 14.0.1.0.1 |  | Show stock locations without company in inventory adjustments
 [stock_inventory_continue_inventory_tree_order](stock_inventory_continue_inventory_tree_order/) | 14.0.1.0.1 |  | Inventory list view - order by product_id
@@ -79,7 +79,7 @@ addon | version | maintainers | summary
 [stock_report_product_customer_code](stock_report_product_customer_code/) | 14.0.1.0.0 |  | Place Product Customer code to picking print
 [stock_report_quantity_decimals](stock_report_quantity_decimals/) | 14.0.1.0.0 |  | Modifications to Stock Reports' decimal precision
 [stock_report_scheduled_date_as_date_only](stock_report_scheduled_date_as_date_only/) | 14.0.1.0.0 |  | Stock Picking and Delivery Slip Report Scheduled Date as Date only
-[stock_report_title](stock_report_title/) | 14.0.2.0.1 |  | Stock Picking and Delivery Slip Report Title
+[stock_report_title](stock_report_title/) | 14.0.2.0.3 |  | Stock Picking and Delivery Slip Report Title
 [stock_report_total_weight](stock_report_total_weight/) | 14.0.1.0.1 |  | Add total weight to stock report lines
 [stock_report_week_of_shipment](stock_report_week_of_shipment/) | 14.0.1.0.0 |  | Add week of shipment to Picking report
 [stock_report_year_of_shipment](stock_report_year_of_shipment/) | 14.0.1.0.0 |  | Add year of shipment to delivery slip
