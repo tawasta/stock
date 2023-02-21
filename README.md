@@ -65,6 +65,7 @@ addon | version | maintainers | summary
 [stock_report_enable_translation_by_partner](stock_report_enable_translation_by_partner/) | 14.0.1.0.0 |  | Enable report translation by partner language
 [stock_report_handler](stock_report_handler/) | 14.0.0.1.0 |  | Delivery Slip - Handler
 [stock_report_hide_barcode](stock_report_hide_barcode/) | 14.0.1.0.1 |  | Picking list PDF print - hide barcode
+[stock_report_hide_uom](stock_report_hide_uom/) | 14.0.1.0.0 |  | Delivery Slip - hide UoM on all lines
 [stock_report_hs_code_local_code](stock_report_hs_code_local_code/) | 14.0.1.0.0 |  | Local code instead of HS code on report lines
 [stock_report_incoterm](stock_report_incoterm/) | 14.0.1.0.0 |  | Stock Report Incoterm
 [stock_report_invoice_and_delivery_address](stock_report_invoice_and_delivery_address/) | 14.0.1.0.5 |  | Adds Invoice and Delivery addresses to delivery slip
@@ -75,7 +76,11 @@ addon | version | maintainers | summary
 [stock_report_picking_customer_address](stock_report_picking_customer_address/) | 14.0.1.0.0 |  | Stock Report picking Customer Address details
 [stock_report_picking_hide_footer](stock_report_picking_hide_footer/) | 14.0.1.0.0 |  | Hide footer on Picking Operations
 [stock_report_picking_invoice_and_delivery_address](stock_report_picking_invoice_and_delivery_address/) | 14.0.1.0.5 |  | Adds Invoice and Delivery addresses to Picking list
-[stock_report_picking_product_location](stock_report_picking_product_location/) | 14.0.1.0.1 |  | Rack and Row are shown on picking list
+[stock_report_picking_product_code](stock_report_picking_product_code/) | 14.0.1.0.0 |  | Adds Product code to picking list
+[stock_report_picking_product_location](stock_report_picking_product_location/) | 14.0.1.0.2 |  | Rack and Row are shown on picking list
+[stock_report_picking_product_virtual_available](stock_report_picking_product_virtual_available/) | 14.0.1.0.0 |  | Adds Forecast Quantity to picking list
+[stock_report_picking_stock_available_quantity](stock_report_picking_stock_available_quantity/) | 14.0.1.0.0 |  | Adds Available Quantity to picking list
+[stock_report_picking_total_weight](stock_report_picking_total_weight/) | 14.0.1.0.0 |  | Picking list - Total Weight and Product weight
 [stock_report_product_customer_code](stock_report_product_customer_code/) | 14.0.1.0.0 |  | Place Product Customer code to picking print
 [stock_report_quantity_decimals](stock_report_quantity_decimals/) | 14.0.1.0.0 |  | Modifications to Stock Reports' decimal precision
 [stock_report_scheduled_date_as_date_only](stock_report_scheduled_date_as_date_only/) | 14.0.1.0.0 |  | Stock Picking and Delivery Slip Report Scheduled Date as Date only

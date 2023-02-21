@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2022 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2022- Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,19 +19,19 @@
 ##############################################################################
 
 {
-    "name": "Picking list - Product location",
-    "summary": "Rack and Row are shown on picking list",
-    "version": "14.0.1.0.2",
-    "category": "Stock",
+    "name": "Picking list - Total Weight and Product weight",
+    "summary": "Picking list - Total Weight and Product weight",
+    "version": "14.0.1.0.0",
+    "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
     "depends": [
-        "product_template_rack",
-        "product_template_row",
+        "delivery",
+        "product",
         "stock",
     ],
-    "data": ["report/stock_report.xml"],
+    "data": ["report/report_picking.xml"],
 }
