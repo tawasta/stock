@@ -75,6 +75,7 @@ addon | version | maintainers | summary
 [stock_report_payment_terms](stock_report_payment_terms/) | 14.0.1.0.0 |  | Adds payment terms to Delivery Slip
 [stock_report_picking_customer_address](stock_report_picking_customer_address/) | 14.0.1.0.0 |  | Stock Report picking Customer Address details
 [stock_report_picking_hide_footer](stock_report_picking_hide_footer/) | 14.0.1.0.0 |  | Hide footer on Picking Operations
+[stock_report_picking_hide_from](stock_report_picking_hide_from/) | 14.0.1.0.0 |  | Picking list - Hide 'From' column
 [stock_report_picking_invoice_and_delivery_address](stock_report_picking_invoice_and_delivery_address/) | 14.0.1.0.5 |  | Adds Invoice and Delivery addresses to Picking list
 [stock_report_picking_product_code](stock_report_picking_product_code/) | 14.0.1.0.0 |  | Adds Product code to picking list
 [stock_report_picking_product_location](stock_report_picking_product_location/) | 14.0.1.0.2 |  | Rack and Row are shown on picking list
