@@ -65,6 +65,7 @@ addon | version | maintainers | summary
 [stock_report_enable_translation_by_partner](stock_report_enable_translation_by_partner/) | 14.0.1.0.0 |  | Enable report translation by partner language
 [stock_report_handler](stock_report_handler/) | 14.0.0.1.0 |  | Delivery Slip - Handler
 [stock_report_hide_barcode](stock_report_hide_barcode/) | 14.0.1.0.1 |  | Picking list PDF print - hide barcode
+[stock_report_hide_uom](stock_report_hide_uom/) | 14.0.1.0.0 |  | Delivery Slip - hide UoM on all lines
 [stock_report_hs_code_local_code](stock_report_hs_code_local_code/) | 14.0.1.0.0 |  | Local code instead of HS code on report lines
 [stock_report_incoterm](stock_report_incoterm/) | 14.0.1.0.0 |  | Stock Report Incoterm
 [stock_report_invoice_and_delivery_address](stock_report_invoice_and_delivery_address/) | 14.0.1.0.5 |  | Adds Invoice and Delivery addresses to delivery slip
