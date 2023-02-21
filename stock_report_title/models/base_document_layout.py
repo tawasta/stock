@@ -8,8 +8,14 @@ class BaseDocumentLayoutInherit(models.TransientModel):
         related="company_id.delivery_slip_title",
         readonly=True,
     )
+    show_delivery_slip_text = fields.Boolean(
+        related="company_id.show_delivery_slip_text", readonly=True
+    )
     show_delivery_slip_report_name = fields.Boolean(
         related="company_id.show_delivery_slip_report_name", readonly=True
+    )
+    show_picking_text = fields.Boolean(
+        related="company_id.show_picking_text", readonly=True
     )
     show_picking_report_name = fields.Boolean(
         related="company_id.show_picking_report_name", readonly=True
