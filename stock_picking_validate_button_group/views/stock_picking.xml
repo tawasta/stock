@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_picking_form" model="ir.ui.view">
+        <field name="name">stock.picking.validate.button.group</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='button_validate'][1]" position="attributes">
+                <attribute
+                    name="groups"
+                >stock_picking_validate_button_group.group_validate_button</attribute>
+            </xpath>
+            <xpath expr="//button[@name='button_validate'][2]" position="attributes">
+                <attribute
+                    name="groups"
+                >stock_picking_validate_button_group.group_validate_button</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
