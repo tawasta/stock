@@ -46,6 +46,7 @@ addon | version | maintainers | summary
 [stock_picking_sale_order_id](stock_picking_sale_order_id/) | 14.0.1.0.0 |  | Get Sale Order to Stock Picking from Purchase Order
 [stock_picking_sale_order_partner_id](stock_picking_sale_order_partner_id/) | 14.0.1.0.0 |  | Get Sale Order Partner to Stock Picking from Purchase Order
 [stock_picking_sort_by_print_and_scheduled_date](stock_picking_sort_by_print_and_scheduled_date/) | 14.0.1.0.0 |  | Stock Picking sort by printed and Scheduled Date
+[stock_picking_source_document_link](stock_picking_source_document_link/) | 14.0.1.0.0 |  | Add link to source document
 [stock_picking_tree_date_deadline_as_date](stock_picking_tree_date_deadline_as_date/) | 14.0.1.0.0 |  | Show date deadline as date in stock picking tree
 [stock_picking_tree_date_done](stock_picking_tree_date_done/) | 14.0.1.0.0 |  | Stock Picking date done in tree view
 [stock_picking_tree_effective_date](stock_picking_tree_effective_date/) | 14.0.1.0.0 |  | Adds effective date from Sale Order to picking list view
