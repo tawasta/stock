@@ -4,7 +4,7 @@
         <xpath expr="//div[@class='page']" position="before">
             <t
                 t-set="company"
-                t-value="o.sale_id and o.sale_id.company_id or o.company_id"
+                t-value="o.sudo().sale_id and o.sudo().sale_id.company_id or o.company_id"
             />
         </xpath>
     </template>
@@ -13,7 +13,7 @@
         <xpath expr="//t[@t-set='o']" position="after">
             <t
                 t-set="company"
-                t-value="o.sale_id and o.sale_id.company_id or o.company_id"
+                t-value="o.sudo().sale_id and o.sudo().sale_id.company_id or o.company_id"
             />
         </xpath>
     </template>

@@ -21,7 +21,7 @@
 {
     "name": "Set Delivery Slip and Picking pdf company as SO company",
     "summary": "Set Delivery Slip and Picking pdf company as SO company",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
