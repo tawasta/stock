@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2022 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2023 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,20 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Process Stock Pickings as Admin user",
-    "summary": "Process Stock Pickings as Admin user",
-    "version": "14.0.1.0.1",
-    "category": "Stock",
+    "name": "Stock Picking Report Customer Reference",
+    "summary": "Stock Picking Report Customer Reference",
+    "version": "14.0.1.0.0",
+    "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
     "depends": ["stock"],
-    "data": [
-        "views/stock_picking.xml",
-        "wizards/stock_immediate_transfer.xml",
-        "wizards/stock_backorder_confirmation.xml",
-        "wizards/stock_return_picking.xml",
-    ],
+    "data": ["report/stock_report.xml"],
 }

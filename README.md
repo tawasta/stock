@@ -43,7 +43,7 @@ addon | version | maintainers | summary
 [stock_picking_operations_show_name](stock_picking_operations_show_name/) | 14.0.1.0.0 |  | Show name field on Stock Picking operations
 [stock_picking_override_values](stock_picking_override_values/) | 14.0.1.0.0 |  | Allow overriding new picking values with system parameters
 [stock_picking_printed](stock_picking_printed/) | 14.0.1.0.0 |  | Mark stock pickings as printed after printing picking list
-[stock_picking_process_as_sudo](stock_picking_process_as_sudo/) | 14.0.1.0.0 |  | Process Stock Pickings as Admin user
+[stock_picking_process_as_sudo](stock_picking_process_as_sudo/) | 14.0.1.0.1 |  | Process Stock Pickings as Admin user
 [stock_picking_receipt_set_all_moves_done](stock_picking_receipt_set_all_moves_done/) | 14.0.1.0.0 |  | Use button to set all moves as done on receipt
 [stock_picking_reinvoice](stock_picking_reinvoice/) | 14.0.1.0.2 |  | Allow making invoices from stock pickings
 [stock_picking_report_code_order](stock_picking_report_code_order/) | 14.0.1.0.1 |  | Stock Picking Report Code Order
@@ -81,6 +81,7 @@ addon | version | maintainers | summary
 [stock_report_our_reference](stock_report_our_reference/) | 14.0.1.0.0 |  | Stock Picking and Delivery Slip Report Our Reference
 [stock_report_payment_terms](stock_report_payment_terms/) | 14.0.1.0.0 |  | Adds payment terms to Delivery Slip
 [stock_report_picking_customer_address](stock_report_picking_customer_address/) | 14.0.1.0.0 |  | Stock Report picking Customer Address details
+[stock_report_picking_customer_reference](stock_report_picking_customer_reference/) | 14.0.1.0.0 |  | Stock Picking Report Customer Reference
 [stock_report_picking_hide_footer](stock_report_picking_hide_footer/) | 14.0.1.0.0 |  | Hide footer on Picking Operations
 [stock_report_picking_hide_from](stock_report_picking_hide_from/) | 14.0.1.0.0 |  | Picking list - Hide 'From' column
 [stock_report_picking_invoice_and_delivery_address](stock_report_picking_invoice_and_delivery_address/) | 14.0.1.0.5 |  | Adds Invoice and Delivery addresses to Picking list
