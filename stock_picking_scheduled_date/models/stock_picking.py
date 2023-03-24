@@ -1,4 +1,4 @@
-from odoo import fields, models, api
+from odoo import fields, models
 
 
 class Picking(models.Model):
@@ -6,8 +6,8 @@ class Picking(models.Model):
     _inherit = "stock.picking"
 
     stock_scheduled_date = fields.Datetime(
-        'Scheduled Date',  store=True,
-        states={'done': [('readonly', True)], 'cancel': [('readonly', True)]},
-        related='scheduled_date')
-
-
+        "Scheduled Date",
+        store=True,
+        states={"done": [("readonly", True)], "cancel": [("readonly", True)]},
+        related="scheduled_date",
+    )
