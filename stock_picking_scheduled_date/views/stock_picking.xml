@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="vpicktree" model="ir.ui.view">
+        <field name="name">stock.picking.tree.scheduled.date</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.vpicktree" />
+        <field name="arch" type="xml">
+            <field name="scheduled_date" position="after">
+                <field
+                    name="stock_scheduled_date"
+                    optional="show"
+                    attrs="{'invisible':[('state', 'in', ('done', 'cancel'))]}"
+                />
+            </field>
+        </field>
+    </record>
+
+</odoo>

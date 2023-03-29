@@ -36,6 +36,7 @@ addon | version | maintainers | summary
 [stock_picking_customer_reference](stock_picking_customer_reference/) | 14.0.1.0.0 |  | Stock Picking Customer Reference
 [stock_picking_detailed_operations_initial_demand](stock_picking_detailed_operations_initial_demand/) | 14.0.1.0.0 |  | Detailed Operations Initial Demand
 [stock_picking_dispatch_fields](stock_picking_dispatch_fields/) | 14.0.1.0.1 |  | Stock Picking fields for Dispatch Note
+[stock_picking_form_barcode](stock_picking_form_barcode/) | 14.0.1.0.0 |  | Shows barcode in stock picking form
 [stock_picking_lines_limit](stock_picking_lines_limit/) | 14.0.1.0.0 |  | Stock Picking Lines Limit
 [stock_picking_mass_action_complete_transfer](stock_picking_mass_action_complete_transfer/) | 14.0.1.0.1 |  | Stock Picking Mass action - complete transfer
 [stock_picking_mass_action_print_pdf](stock_picking_mass_action_print_pdf/) | 14.0.1.0.1 |  | Stock Picking Mass action - Print PDF
@@ -50,6 +51,7 @@ addon | version | maintainers | summary
 [stock_picking_reserve_chosen_moves](stock_picking_reserve_chosen_moves/) | 14.0.1.0.0 |  | Select manually the moves to be reserved on deliveries
 [stock_picking_sale_order_id](stock_picking_sale_order_id/) | 14.0.1.0.0 |  | Get Sale Order to Stock Picking from Purchase Order
 [stock_picking_sale_order_partner_id](stock_picking_sale_order_partner_id/) | 14.0.1.0.0 |  | Get Sale Order Partner to Stock Picking from Purchase Order
+[stock_picking_scheduled_date](stock_picking_scheduled_date/) | 14.0.1.0.0 |  | Stock picking scheduled date
 [stock_picking_sort_by_print_and_scheduled_date](stock_picking_sort_by_print_and_scheduled_date/) | 14.0.1.0.0 |  | Stock Picking sort by printed and Scheduled Date
 [stock_picking_source_document_link](stock_picking_source_document_link/) | 14.0.1.0.0 |  | Add link to source document
 [stock_picking_tree_date_deadline_as_date](stock_picking_tree_date_deadline_as_date/) | 14.0.1.0.0 |  | Show date deadline as date in stock picking tree
@@ -61,7 +63,7 @@ addon | version | maintainers | summary
 [stock_picking_volume](stock_picking_volume/) | 14.0.1.0.0 |  | Press a button to calculate total volume of a picking
 [stock_product_qty_available_unreserved](stock_product_qty_available_unreserved/) | 14.0.1.0.0 |  | Add unreserved available (on hand - reserved)
 [stock_report_add_description_to_picking](stock_report_add_description_to_picking/) | 14.0.1.0.0 |  | Adds Description column to picking report
-[stock_report_carrier](stock_report_carrier/) | 14.0.1.0.1 |  | Delivery slip Carrier
+[stock_report_carrier](stock_report_carrier/) | 14.0.1.0.2 |  | Delivery slip Carrier
 [stock_report_carrier_tracking_ref](stock_report_carrier_tracking_ref/) | 14.0.1.0.0 |  | Adds tracking reference to delivery slip
 [stock_report_code_as_name_stock_picking](stock_report_code_as_name_stock_picking/) | 14.0.1.0.0 |  | Replace Product name with product code
 [stock_report_customer_address](stock_report_customer_address/) | 14.0.1.0.0 |  | Stock Report Customer Address
