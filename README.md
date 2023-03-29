@@ -63,7 +63,7 @@ addon | version | maintainers | summary
 [stock_picking_volume](stock_picking_volume/) | 14.0.1.0.0 |  | Press a button to calculate total volume of a picking
 [stock_product_qty_available_unreserved](stock_product_qty_available_unreserved/) | 14.0.1.0.0 |  | Add unreserved available (on hand - reserved)
 [stock_report_add_description_to_picking](stock_report_add_description_to_picking/) | 14.0.1.0.0 |  | Adds Description column to picking report
-[stock_report_carrier](stock_report_carrier/) | 14.0.1.0.1 |  | Delivery slip Carrier
+[stock_report_carrier](stock_report_carrier/) | 14.0.1.0.2 |  | Delivery slip Carrier
 [stock_report_carrier_tracking_ref](stock_report_carrier_tracking_ref/) | 14.0.1.0.0 |  | Adds tracking reference to delivery slip
 [stock_report_code_as_name_stock_picking](stock_report_code_as_name_stock_picking/) | 14.0.1.0.0 |  | Replace Product name with product code
 [stock_report_customer_address](stock_report_customer_address/) | 14.0.1.0.0 |  | Stock Report Customer Address

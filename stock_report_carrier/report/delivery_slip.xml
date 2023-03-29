@@ -6,7 +6,7 @@
     >
         <div id='stock_deliveryslip_informations' position="inside">
             <t t-if="'carrier_id' in o.fields_get()">
-                <div t-if="o.carrier_id.name" class="col-auto mw-100 mb-2">
+                <div t-if="o.carrier_id.name">
                     <span><strong>MODE OF TRANSPORTATION:</strong></span>
                     <p class="m-0" t-field="o.carrier_id.name" />
                 </div>
