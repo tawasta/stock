@@ -31,7 +31,7 @@ addon | version | maintainers | summary
 [stock_picking_bypass_reservation](stock_picking_bypass_reservation/) | 14.0.1.0.0 |  | Stock Picking Bypass Reservation
 [stock_picking_comment](stock_picking_comment/) | 14.0.1.0.1 |  | External comment for stock picking Delivery Slip and Picking Operations
 [stock_picking_compatible_mass_print_and_sudo_process](stock_picking_compatible_mass_print_and_sudo_process/) | 14.0.1.0.0 |  | Make mass action print and process as sudo compatible
-[stock_picking_compute_volume](stock_picking_compute_volume/) | 14.0.1.0.1 |  | Picking's Volume is computed automatically
+[stock_picking_compute_volume](stock_picking_compute_volume/) | 14.0.1.0.2 |  | Picking's Volume is computed automatically
 [stock_picking_country_group_text](stock_picking_country_group_text/) | 14.0.1.0.0 |  | Get stock picking report text from country groups setting
 [stock_picking_create_manufacturing_order_from_move](stock_picking_create_manufacturing_order_from_move/) | 14.0.1.0.0 |  | Create Manufacturing order from stock picking move
 [stock_picking_customer_reference](stock_picking_customer_reference/) | 14.0.1.0.0 |  | Stock Picking Customer Reference
