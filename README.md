@@ -34,6 +34,7 @@ addon | version | maintainers | summary
 [stock_picking_compute_volume](stock_picking_compute_volume/) | 14.0.1.0.2 |  | Picking's Volume is computed automatically
 [stock_picking_country_group_text](stock_picking_country_group_text/) | 14.0.1.0.0 |  | Get stock picking report text from country groups setting
 [stock_picking_create_manufacturing_order_from_move](stock_picking_create_manufacturing_order_from_move/) | 14.0.1.0.0 |  | Create Manufacturing order from stock picking move
+[stock_picking_customer_order_number](stock_picking_customer_order_number/) | 14.0.1.0.0 |  | Adds customer order number to stock picking list and form views
 [stock_picking_customer_reference](stock_picking_customer_reference/) | 14.0.1.0.0 |  | Stock Picking Customer Reference
 [stock_picking_detailed_operations_initial_demand](stock_picking_detailed_operations_initial_demand/) | 14.0.1.0.0 |  | Detailed Operations Initial Demand
 [stock_picking_dispatch_fields](stock_picking_dispatch_fields/) | 14.0.1.0.1 |  | Stock Picking fields for Dispatch Note
@@ -71,6 +72,7 @@ addon | version | maintainers | summary
 [stock_report_customer_reference](stock_report_customer_reference/) | 14.0.1.0.0 |  | Stock Report Customer Reference
 [stock_report_customer_reference_under_address](stock_report_customer_reference_under_address/) | 14.0.1.0.1 |  | Customer Reference under address
 [stock_report_date_done](stock_report_date_done/) | 14.0.1.0.0 |  | Stock Picking Report Date of Transfer
+[stock_report_delivery_terms](stock_report_delivery_terms/) | 14.0.1.0.0 |  | Delivery Slip - delivery terms and place
 [stock_report_element_sizes](stock_report_element_sizes/) | 14.0.1.0.2 |  | Stock Report element size changes
 [stock_report_enable_translation_by_partner](stock_report_enable_translation_by_partner/) | 14.0.1.0.0 |  | Enable report translation by partner language
 [stock_report_handler](stock_report_handler/) | 14.0.0.1.0 |  | Delivery Slip - Handler
