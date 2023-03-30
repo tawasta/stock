@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_picking_form" model="ir.ui.view">
+        <field name="name">stock.picking.form.total.compute.volume</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field name="arch" type="xml">
+            <field name="origin" position="before">
+                <label for="total_compute_volume" />
+                <div class="o_row" name="volume">
+                    <field name="total_compute_volume" />
+                    <span><field name="volume_uom_name" /></span>
+                </div>
+            </field>
+        </field>
+    </record>
+
+    <record id="vpicktree" model="ir.ui.view">
+        <field name="name">stock.picking.tree.total.compute.volume</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.vpicktree" />
+        <field name="arch" type="xml">
+            <field name="origin" position="after">
+                <field name="total_compute_volume" optional="show" />
+            </field>
+        </field>
+    </record>
+</odoo>
