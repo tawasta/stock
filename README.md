@@ -71,6 +71,7 @@ addon | version | maintainers | summary
 [stock_report_customer_reference](stock_report_customer_reference/) | 14.0.1.0.0 |  | Stock Report Customer Reference
 [stock_report_customer_reference_under_address](stock_report_customer_reference_under_address/) | 14.0.1.0.1 |  | Customer Reference under address
 [stock_report_date_done](stock_report_date_done/) | 14.0.1.0.0 |  | Stock Picking Report Date of Transfer
+[stock_report_delivery_terms](stock_report_delivery_terms/) | 14.0.1.0.0 |  | Delivery Slip - delivery terms and place
 [stock_report_element_sizes](stock_report_element_sizes/) | 14.0.1.0.2 |  | Stock Report element size changes
 [stock_report_enable_translation_by_partner](stock_report_enable_translation_by_partner/) | 14.0.1.0.0 |  | Enable report translation by partner language
 [stock_report_handler](stock_report_handler/) | 14.0.0.1.0 |  | Delivery Slip - Handler
