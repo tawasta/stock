@@ -7,7 +7,10 @@
         <div id="stock_picking_weight" position="after">
             <div id="stock_picking_compute_volume" class="container">
                 <strong>Volume:</strong>
-                <span t-field="o.total_compute_volume" />
+                <span
+                    t-field="o.total_compute_volume"
+                    t-options="{'decimal_precision': 'Volume'}"
+                />
                 <span t-field="o.volume_uom_name" />
             </div>
         </div>
@@ -17,7 +20,10 @@
         <t t-set="no_reserved_product" position="before">
             <div id="stock_picking_compute_volume" class="container">
                 <strong>Volume:</strong>
-                <span t-field="o.total_compute_volume" />
+                <span
+                    t-field="o.total_compute_volume"
+                    t-options="{'decimal_precision': 'Volume'}"
+                />
                 <span t-field="o.volume_uom_name" />
             </div>
         </t>
