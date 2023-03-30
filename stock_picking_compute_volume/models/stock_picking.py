@@ -19,8 +19,9 @@ class StockPicking(models.Model):
         """Calculate the total volume for the whole
         picking by summing the line volumes"""
 
-        total = 0.0
-        for line in self.move_lines:
-            total += line.product_id.volume * line.product_uom_qty
+        for picking in self:
+            total = 0.0
+            for line in picking.move_lines:
+                total += line.product_id.volume * line.product_uom_qty
 
-        self.total_compute_volume = total
+            picking.total_compute_volume = total
