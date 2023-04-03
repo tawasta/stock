@@ -23,4 +23,25 @@
         </field>
     </record>
 
+    <record id="view_move_line_form" model="ir.ui.view">
+        <field name="name">stock.move.line.form.source.document.link</field>
+        <field name="model">stock.move.line</field>
+        <field name="inherit_id" ref="stock.view_move_line_form" />
+        <field name="arch" type="xml">
+            <field name="origin" position="after">
+                <field
+                    name="source_document_link_sale_order"
+                    attrs="{'invisible': [('source_document_link_sale_order', '=', False)]}"
+                />
+                <field
+                    name="source_document_link_purchase_order"
+                    attrs="{'invisible': [('source_document_link_purchase_order', '=', False)]}"
+                />
+                <field
+                    name="source_document_link_stock_picking"
+                    attrs="{'invisible': [('source_document_link_stock_picking', '=', False)]}"
+                />
+            </field>
+        </field>
+    </record>
 </odoo>
