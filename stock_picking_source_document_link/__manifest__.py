@@ -21,7 +21,7 @@
 {
     "name": "Stock picking - Source document link",
     "summary": "Add link to source document",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Inventory",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
