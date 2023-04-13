@@ -134,7 +134,7 @@ class StockPickingInvoiceWizard(models.TransientModel):
                     lines = aml.with_context(check_move_validity=False).create(vals)
                     account_move_line |= lines
 
-        picking.invoice_id = invoice.id
-        invoice.invoice_line_ids = account_move_line
+            picking.invoice_id = invoice.id
+        invoice.invoice_line_ids += account_move_line
         invoice._onchange_invoice_line_ids()
         return invoice, picking_ids
