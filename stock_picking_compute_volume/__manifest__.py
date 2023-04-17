@@ -21,7 +21,7 @@
 {
     "name": "Compute Volume field for Stock Pickings",
     "summary": "Picking's Volume is computed automatically",
-    "version": "14.0.1.0.2",
+    "version": "14.0.1.0.3",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
