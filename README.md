@@ -82,7 +82,7 @@ addon | version | maintainers | summary
 [stock_report_incoterm](stock_report_incoterm/) | 14.0.1.0.0 |  | Stock Report Incoterm
 [stock_report_invoice_and_delivery_address](stock_report_invoice_and_delivery_address/) | 14.0.1.0.5 |  | Adds Invoice and Delivery addresses to delivery slip
 [stock_report_item_count](stock_report_item_count/) | 14.0.1.0.1 |  | Add item count to stock report lines
-[stock_report_label_product](stock_report_label_product/) | 14.0.1.0.0 |  | Stock Picking - Product Label
+[stock_report_label_product](stock_report_label_product/) | 14.0.1.0.1 |  | Stock Picking - Product Label
 [stock_report_name_delivery_note](stock_report_name_delivery_note/) | 14.0.1.0.0 |  | Show Delivery Note instead of picking name
 [stock_report_our_reference](stock_report_our_reference/) | 14.0.1.0.0 |  | Stock Picking and Delivery Slip Report Our Reference
 [stock_report_payment_terms](stock_report_payment_terms/) | 14.0.1.0.0 |  | Adds payment terms to Delivery Slip
