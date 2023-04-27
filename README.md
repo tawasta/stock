@@ -25,6 +25,7 @@ addon | version | maintainers | summary
 [stock_move_line_qty_reserved_list](stock_move_line_qty_reserved_list/) | 14.0.1.0.0 |  | Stock move line qty reserved list
 [stock_move_line_reference](stock_move_line_reference/) | 14.0.1.0.1 |  | Renames Stock Picking field as Transfer Reference
 [stock_move_pivot_report_sh_product_tag](stock_move_pivot_report_sh_product_tag/) | 14.0.1.0.0 |  | Group by SH product tags in Stock Move pivot view
+[stock_move_po_line_delivery_date_to_move_scheduled_date](stock_move_po_line_delivery_date_to_move_scheduled_date/) | 14.0.1.0.0 |  | Changing Delivery Date affects Date Scheduled
 [stock_move_sale_kit](stock_move_sale_kit/) | 14.0.1.0.0 |  | Sale kits to stock move lines
 [stock_move_search](stock_move_search/) | 14.0.1.0.0 |  | Additional Search options for Stock Move
 [stock_package_sticker](stock_package_sticker/) | 14.0.1.0.1 |  | Stock Package Sticker
@@ -82,6 +83,7 @@ addon | version | maintainers | summary
 [stock_report_incoterm](stock_report_incoterm/) | 14.0.1.0.0 |  | Stock Report Incoterm
 [stock_report_invoice_and_delivery_address](stock_report_invoice_and_delivery_address/) | 14.0.1.0.5 |  | Adds Invoice and Delivery addresses to delivery slip
 [stock_report_item_count](stock_report_item_count/) | 14.0.1.0.1 |  | Add item count to stock report lines
+[stock_report_label_product](stock_report_label_product/) | 14.0.1.0.1 |  | Stock Picking - Product Label
 [stock_report_name_delivery_note](stock_report_name_delivery_note/) | 14.0.1.0.0 |  | Show Delivery Note instead of picking name
 [stock_report_our_reference](stock_report_our_reference/) | 14.0.1.0.0 |  | Stock Picking and Delivery Slip Report Our Reference
 [stock_report_payment_terms](stock_report_payment_terms/) | 14.0.1.0.0 |  | Adds payment terms to Delivery Slip
@@ -101,8 +103,8 @@ addon | version | maintainers | summary
 [stock_report_set_company_as_sale_order_company](stock_report_set_company_as_sale_order_company/) | 14.0.1.0.1 |  | Set Delivery Slip and Picking pdf company as SO company
 [stock_report_title](stock_report_title/) | 14.0.2.0.3 |  | Stock Picking and Delivery Slip Report Title
 [stock_report_total_weight](stock_report_total_weight/) | 14.0.1.0.1 |  | Add total weight to stock report lines
-[stock_report_week_of_shipment](stock_report_week_of_shipment/) | 14.0.1.0.0 |  | Add week of shipment to Picking report
-[stock_report_year_of_shipment](stock_report_year_of_shipment/) | 14.0.1.0.0 |  | Add year of shipment to delivery slip
+[stock_report_week_of_shipment](stock_report_week_of_shipment/) | 14.0.1.0.1 |  | Add week of shipment to Picking report
+[stock_report_year_of_shipment](stock_report_year_of_shipment/) | 14.0.1.0.1 |  | Add year of shipment to delivery slip
 [stock_valuation_layer_archive](stock_valuation_layer_archive/) | 14.0.1.0.1 |  | Allows archiving inventory valuation records
 
 [//]: # (end addons)
