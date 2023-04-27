@@ -20,4 +20,9 @@
             </t>
         </tbody>
     </template>
+
+    <record id="report_delivery_document" model="ir.ui.view">
+        <field name="priority">30</field>
+    </record>
+
 </odoo>

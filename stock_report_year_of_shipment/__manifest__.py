@@ -21,7 +21,7 @@
 {
     "name": "Delivery Slip - Year of shipment",
     "summary": "Add year of shipment to delivery slip",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
