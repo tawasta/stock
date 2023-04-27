@@ -25,6 +25,7 @@ addon | version | maintainers | summary
 [stock_move_line_qty_reserved_list](stock_move_line_qty_reserved_list/) | 14.0.1.0.0 |  | Stock move line qty reserved list
 [stock_move_line_reference](stock_move_line_reference/) | 14.0.1.0.1 |  | Renames Stock Picking field as Transfer Reference
 [stock_move_pivot_report_sh_product_tag](stock_move_pivot_report_sh_product_tag/) | 14.0.1.0.0 |  | Group by SH product tags in Stock Move pivot view
+[stock_move_po_line_delivery_date_to_move_scheduled_date](stock_move_po_line_delivery_date_to_move_scheduled_date/) | 14.0.1.0.0 |  | Changing Delivery Date affects Date Scheduled
 [stock_move_sale_kit](stock_move_sale_kit/) | 14.0.1.0.0 |  | Sale kits to stock move lines
 [stock_move_search](stock_move_search/) | 14.0.1.0.0 |  | Additional Search options for Stock Move
 [stock_package_sticker](stock_package_sticker/) | 14.0.1.0.1 |  | Stock Package Sticker
