@@ -97,6 +97,7 @@ addon | version | maintainers | summary
 [stock_report_picking_product_virtual_available](stock_report_picking_product_virtual_available/) | 14.0.1.0.0 |  | Adds Forecast Quantity to picking list
 [stock_report_picking_stock_available_quantity](stock_report_picking_stock_available_quantity/) | 14.0.1.0.0 |  | Adds Available Quantity to picking list
 [stock_report_picking_total_weight](stock_report_picking_total_weight/) | 14.0.1.0.0 |  | Picking list - Total Weight and Product weight
+[stock_report_picking_warning_text](stock_report_picking_warning_text/) | 14.0.1.0.0 |  | 'Warning on the Picking' on partner is shown on picking list
 [stock_report_product_customer_code](stock_report_product_customer_code/) | 14.0.1.0.0 |  | Place Product Customer code to picking print
 [stock_report_quantity_decimals](stock_report_quantity_decimals/) | 14.0.1.0.0 |  | Modifications to Stock Reports' decimal precision
 [stock_report_scheduled_date_as_date_only](stock_report_scheduled_date_as_date_only/) | 14.0.1.0.0 |  | Stock Picking and Delivery Slip Report Scheduled Date as Date only
