@@ -18,26 +18,31 @@
     </template>
 
     <template id="report_product_label_document">
-        <div style=" width: 100%; height: 51mm">
+      <table class="table table-bordered">
+          <tr>
             <div
-                class="text-center align-middle row"
-                style="height: 120px; background: lightgrey; margin-bottom: 30px; font-size: 20px;"
-            >
+                    class="text-center align-middle row"
+                    style="height: 120px; background: lightgrey; margin-bottom: 30px; font-size: 20px;"
+                >
                 <span t-esc="line.product_id.display_name" style="margin-left: 4px;" />
+
             </div>
+          </tr>
+          <tr>
             <div
-                class="text-center align-middle row"
-                style="height: 83px; font-size: 15px; width: 400px;"
-            >
+                    class="text-center align-middle row"
+                    style="height: 103px; font-size: 15px; width: 400px;"
+                >
                 <t t-if="line.product_id.barcode">
                     <img
-                        t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', line.product_id.barcode, 700, 150)"
-                        style="width:100%;height:4rem"
-                        alt="Barcode"
-                    />
+                            t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', line.product_id.barcode, 700, 150)"
+                            style="width:100%;height:4rem"
+                            alt="Barcode"
+                        />
                     <span t-esc="line.product_id.barcode" />
                 </t>
             </div>
-        </div>
+          </tr>
+      </table>
     </template>
 </odoo>
