@@ -21,7 +21,7 @@
 {
     "name": "Stock Picking - Product Label",
     "summary": "Stock Picking - Product Label",
-    "version": "14.0.1.0.1",
+    "version": "14.0.1.0.2",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
