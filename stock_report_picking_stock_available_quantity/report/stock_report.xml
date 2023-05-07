@@ -13,7 +13,7 @@
                     t-set="ava_qty"
                     t-value="ml.product_id.stock_quant_ids.filtered(lambda q: q.location_id == o.location_id)"
                 />
-                <span t-esc="ava_qty and ava_qty[0].available_quantity" />
+                <span t-esc="ava_qty and ava_qty[0].available_quantity or 0" />
             </td>
         </xpath>
     </template>
