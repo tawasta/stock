@@ -21,7 +21,7 @@
 {
     "name": "Stock Report - Enable report translation by partner language",
     "summary": "Enable report translation by partner language",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
@@ -29,5 +29,8 @@
     "application": False,
     "installable": True,
     "depends": ["stock"],
-    "data": ["report/stock_report_view.xml", "report/report_file.xml"],
+    "data": [
+        "report/stock_report_view.xml",
+        "report/report_file.xml",
+    ],
 }

@@ -46,16 +46,18 @@ class StockPickingInvoiceWizard(models.TransientModel):
         existing_line = False
 
         if not invoice:
-            invoice = self.env["account.move"].create(
-                {
-                    "partner_id": self.partner_id.id,
-                    "move_type": "out_invoice",
-                    "invoice_date": fields.Datetime.now(),
-                    "invoice_origin": ", ".join(picking_ids.mapped("name")),
-                }
-            )
+            invoice_values = {
+                "partner_id": self.partner_id.id,
+                "move_type": "out_invoice",
+                "invoice_date": fields.Datetime.now(),
+            }
 
-        account_move_line = self.env["account.move.line"]
+            # Dummy variable, if we want to implement showing picking numbers on origin
+            show_pickings = False
+            if show_pickings:
+                invoice_values["invoice_origin"] = ", ".join(picking_ids.mapped("name"))
+
+            invoice = self.env["account.move"].create(invoice_values)
 
         for picking in picking_ids:
             if picking.state != "done":
@@ -132,9 +134,16 @@ class StockPickingInvoiceWizard(models.TransientModel):
                     )
 
                     lines = aml.with_context(check_move_validity=False).create(vals)
-                    account_move_line |= lines
+
+                    aml |= lines
 
             picking.invoice_id = invoice.id
-        invoice.invoice_line_ids += account_move_line
+
+        # Skip checking move validity, the amount will be computed in the end
+        invoice = invoice.with_context(check_move_validity=False)
+
+        invoice.line_ids += aml
         invoice._onchange_invoice_line_ids()
+        invoice._compute_amount()
+
         return invoice, picking_ids
