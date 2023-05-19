@@ -8,7 +8,7 @@
                         <t t-if="line.product_id.ean_code">
                             <div class="page" id="product_label_page">
                                 <t
-                                    t-call="stock_report_label_product.report_product_label_document"
+                                    t-call="stock_report_label_product_ean_code.report_product_label_document_ean_code"
                                     t-lang="o.partner_id.lang"
                                 />
                             </div>
