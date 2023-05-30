@@ -119,7 +119,10 @@ class StockPickingInvoiceWizard(models.TransientModel):
                         product.taxes_id and [(6, 0, [product.taxes_id[0].id])] or False
                     )
 
-                    vals = aml.default_get(aml.fields_get().keys())
+                    # aml_model variable avoids singleton error
+                    aml_model = self.env["account.move.line"]
+                    vals = aml_model.default_get(aml_model.fields_get().keys())
+
                     vals.update(
                         {
                             "name": line_name,
