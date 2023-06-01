@@ -6,7 +6,7 @@
         </xpath>
 
         <xpath expr="//span[@t-field='o.name']/.." position="attributes">
-            <attribute name="class">col-6</attribute>
+            <attribute name="class">row col-6</attribute>
         </xpath>
 
         <xpath expr="//span[@t-field='o.name']" position="before">
