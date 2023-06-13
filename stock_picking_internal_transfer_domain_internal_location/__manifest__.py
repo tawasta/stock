@@ -19,9 +19,9 @@
 ##############################################################################
 
 {
-    "name": "Chatter attachments of pickings are visible",
-    "summary": "Attachments are visible on pickings",
-    "version": "14.0.1.0.1",
+    "name": "Use Internal location as domain for Internal transfers",
+    "summary": "Use Internal location as domain for Internal transfers",
+    "version": "14.0.1.0.0",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
@@ -29,10 +29,7 @@
     "application": False,
     "installable": True,
     "depends": [
-        "mail",
         "stock",
     ],
-    "qweb": [
-        "static/src/components/chatter/chatter.xml",
-    ],
+    "data": ["views/stock_picking.xml"],
 }

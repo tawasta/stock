@@ -29,7 +29,7 @@ addon | version | maintainers | summary
 [stock_move_search](stock_move_search/) | 14.0.1.0.0 |  | Additional Search options for Stock Move
 [stock_package_sticker](stock_package_sticker/) | 14.0.1.0.1 |  | Stock Package Sticker
 [stock_picking_bypass_reservation](stock_picking_bypass_reservation/) | 14.0.1.0.0 |  | Stock Picking Bypass Reservation
-[stock_picking_chatter_attachment_visible](stock_picking_chatter_attachment_visible/) | 14.0.1.0.0 |  | Attachments are visible on pickings
+[stock_picking_chatter_attachment_visible](stock_picking_chatter_attachment_visible/) | 14.0.1.0.1 |  | Attachments are visible on pickings
 [stock_picking_comment](stock_picking_comment/) | 14.0.1.0.1 |  | External comment for stock picking Delivery Slip and Picking Operations
 [stock_picking_compatible_mass_print_and_sudo_process](stock_picking_compatible_mass_print_and_sudo_process/) | 14.0.1.0.0 |  | Make mass action print and process as sudo compatible
 [stock_picking_compute_volume](stock_picking_compute_volume/) | 14.0.1.0.3 |  | Picking's Volume is computed automatically
@@ -40,6 +40,7 @@ addon | version | maintainers | summary
 [stock_picking_detailed_operations_initial_demand](stock_picking_detailed_operations_initial_demand/) | 14.0.1.0.0 |  | Detailed Operations Initial Demand
 [stock_picking_dispatch_fields](stock_picking_dispatch_fields/) | 14.0.1.0.1 |  | Stock Picking fields for Dispatch Note
 [stock_picking_form_barcode](stock_picking_form_barcode/) | 14.0.1.0.0 |  | Shows barcode in stock picking form
+[stock_picking_internal_transfer_domain_internal_location](stock_picking_internal_transfer_domain_internal_location/) | 14.0.1.0.0 |  | Use Internal location as domain for Internal transfers
 [stock_picking_lines_limit](stock_picking_lines_limit/) | 14.0.1.0.0 |  | Stock Picking Lines Limit
 [stock_picking_mass_action_complete_transfer](stock_picking_mass_action_complete_transfer/) | 14.0.1.0.1 |  | Stock Picking Mass action - complete transfer
 [stock_picking_mass_action_print_pdf](stock_picking_mass_action_print_pdf/) | 14.0.1.0.1 |  | Stock Picking Mass action - Print PDF
