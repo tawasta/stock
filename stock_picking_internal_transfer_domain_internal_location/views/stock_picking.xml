@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_picking_form" model="ir.ui.view">
+        <field name="name">stock.picking.form.internal.transfer.domain</field>
+        <field name="model">stock.picking</field>
+        <field name="priority" eval="60" />
+        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//group/group/field[@name='location_id']"
+                position="attributes"
+            >
+                <attribute
+                    name="attrs"
+                >{'invisible': [('internal_transfer', '=', True)]}</attribute>
+                <attribute name="domain">[('usage', '!=', 'internal')]</attribute>
+            </xpath>
+
+            <xpath expr="//group/group/field[@name='location_id']" position="after">
+                <field name="internal_transfer" invisible="1" />
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="view_picking_form_internal_transfer" model="ir.ui.view">
+        <field name="name">stock.picking.form.internal.transfer.domain</field>
+        <field name="model">stock.picking</field>
+        <field name="priority" eval="80" />
+        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group/group/field[@name='location_id']" position="after">
+                <field
+                    name="location_id"
+                    attrs="{'invisible': [('internal_transfer', '=', False)]}"
+                    domain="[('usage', '=', 'internal')]"
+                />
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>
