@@ -2,7 +2,9 @@
 <templates xml:space="preserve">
     <t t-inherit="mail.Chatter" t-inherit-mode="extension">
         <xpath expr="//t[@t-if='chatter.isAttachmentBoxVisible']" position="attributes">
-            <attribute name="t-if">chatter.threadModel == 'stock.picking'</attribute>
+            <attribute
+                name="t-if"
+            >(chatter.threadModel == 'stock.picking') or chatter.isAttachmentBoxVisible</attribute>
         </xpath>
     </t>
 </templates>
