@@ -21,7 +21,7 @@
 {
     "name": "Chatter attachments of pickings are visible",
     "summary": "Attachments are visible on pickings",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
