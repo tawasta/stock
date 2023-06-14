@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_picking" inherit_id="stock.report_picking">
+        <xpath expr="//div[@class='row mt48 mb32']" position="attributes">
+            <attribute name="style">font-size: 0.9rem;</attribute>
+        </xpath>
+    </template>
+</odoo>
