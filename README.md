@@ -29,6 +29,7 @@ addon | version | maintainers | summary
 [stock_move_search](stock_move_search/) | 14.0.1.0.0 |  | Additional Search options for Stock Move
 [stock_package_sticker](stock_package_sticker/) | 14.0.1.0.1 |  | Stock Package Sticker
 [stock_picking_bypass_reservation](stock_picking_bypass_reservation/) | 14.0.1.0.0 |  | Stock Picking Bypass Reservation
+[stock_picking_carrier_info_form_header](stock_picking_carrier_info_form_header/) | 14.0.1.0.0 |  | Moved Carrier info on picking form
 [stock_picking_chatter_attachment_visible](stock_picking_chatter_attachment_visible/) | 14.0.1.0.1 |  | Attachments are visible on pickings
 [stock_picking_comment](stock_picking_comment/) | 14.0.1.0.1 |  | External comment for stock picking Delivery Slip and Picking Operations
 [stock_picking_compatible_mass_print_and_sudo_process](stock_picking_compatible_mass_print_and_sudo_process/) | 14.0.1.0.0 |  | Make mass action print and process as sudo compatible
