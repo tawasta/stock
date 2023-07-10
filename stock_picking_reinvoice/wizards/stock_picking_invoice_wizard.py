@@ -133,6 +133,9 @@ class StockPickingInvoiceWizard(models.TransientModel):
                             "price_unit": price,
                             "tax_ids": tax,
                             "move_id": invoice.id,
+                            "currency_id": invoice.currency_id.id,
+                            "company_id": invoice.company_id.id,
+                            "recompute_tax_line": True,
                         }
                     )
 
@@ -145,8 +148,7 @@ class StockPickingInvoiceWizard(models.TransientModel):
         # Skip checking move validity, the amount will be computed in the end
         invoice = invoice.with_context(check_move_validity=False)
 
-        invoice.line_ids += aml
-        invoice._onchange_invoice_line_ids()
+        # invoice._onchange_invoice_line_ids()
         invoice._compute_amount()
 
         return invoice, picking_ids
