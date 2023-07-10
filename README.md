@@ -88,7 +88,7 @@ addon | version | maintainers | summary
 [stock_report_item_count](stock_report_item_count/) | 14.0.1.0.1 |  | Add item count to stock report lines
 [stock_report_label_product](stock_report_label_product/) | 14.0.1.0.2 |  | Stock Picking - Product Label
 [stock_report_label_product_ean_code](stock_report_label_product_ean_code/) | 14.0.1.0.1 |  | Stock Picking - Product Label with EAN code
-[stock_report_name_delivery_note](stock_report_name_delivery_note/) | 14.0.1.0.2 |  | Show Delivery Note instead of picking name
+[stock_report_name_delivery_note](stock_report_name_delivery_note/) | 14.0.1.0.3 |  | Show Delivery Note instead of picking name
 [stock_report_our_reference](stock_report_our_reference/) | 14.0.1.0.0 |  | Stock Picking and Delivery Slip Report Our Reference
 [stock_report_payment_terms](stock_report_payment_terms/) | 14.0.1.0.0 |  | Adds payment terms to Delivery Slip
 [stock_report_picking_customer_address](stock_report_picking_customer_address/) | 14.0.1.0.0 |  | Stock Report picking Customer Address details
