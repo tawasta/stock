@@ -107,7 +107,7 @@ addon | version | maintainers | summary
 [stock_report_quantity_decimals](stock_report_quantity_decimals/) | 14.0.1.0.0 |  | Modifications to Stock Reports' decimal precision
 [stock_report_scheduled_date_as_date_only](stock_report_scheduled_date_as_date_only/) | 14.0.1.0.0 |  | Stock Picking and Delivery Slip Report Scheduled Date as Date only
 [stock_report_set_company_as_sale_order_company](stock_report_set_company_as_sale_order_company/) | 14.0.1.0.1 |  | Set Delivery Slip and Picking pdf company as SO company
-[stock_report_title](stock_report_title/) | 14.0.2.0.4 |  | Stock Picking and Delivery Slip Report Title
+[stock_report_title](stock_report_title/) | 14.0.2.0.5 |  | Stock Picking and Delivery Slip Report Title
 [stock_report_total_weight](stock_report_total_weight/) | 14.0.1.0.1 |  | Add total weight to stock report lines
 [stock_report_week_of_shipment](stock_report_week_of_shipment/) | 14.0.1.0.1 |  | Add week of shipment to Picking report
 [stock_report_year_of_shipment](stock_report_year_of_shipment/) | 14.0.1.0.1 |  | Add year of shipment to delivery slip
