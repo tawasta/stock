@@ -78,7 +78,7 @@ addon | version | maintainers | summary
 [stock_report_date_done](stock_report_date_done/) | 14.0.1.0.0 |  | Stock Picking Report Date of Transfer
 [stock_report_delivery_terms](stock_report_delivery_terms/) | 14.0.1.0.0 |  | Delivery Slip - delivery terms and place
 [stock_report_element_sizes](stock_report_element_sizes/) | 14.0.1.0.2 |  | Stock Report element size changes
-[stock_report_enable_translation_by_partner](stock_report_enable_translation_by_partner/) | 14.0.1.0.1 |  | Enable report translation by partner language
+[stock_report_enable_translation_by_partner](stock_report_enable_translation_by_partner/) | 14.0.1.0.2 |  | Enable report translation by partner language
 [stock_report_handler](stock_report_handler/) | 14.0.0.1.0 |  | Delivery Slip - Handler
 [stock_report_hide_barcode](stock_report_hide_barcode/) | 14.0.1.0.1 |  | Picking list PDF print - hide barcode
 [stock_report_hide_uom](stock_report_hide_uom/) | 14.0.1.0.0 |  | Delivery Slip - hide UoM on all lines
