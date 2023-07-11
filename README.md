@@ -78,7 +78,7 @@ addon | version | maintainers | summary
 [stock_report_date_done](stock_report_date_done/) | 14.0.1.0.0 |  | Stock Picking Report Date of Transfer
 [stock_report_delivery_terms](stock_report_delivery_terms/) | 14.0.1.0.0 |  | Delivery Slip - delivery terms and place
 [stock_report_element_sizes](stock_report_element_sizes/) | 14.0.1.0.2 |  | Stock Report element size changes
-[stock_report_enable_translation_by_partner](stock_report_enable_translation_by_partner/) | 14.0.1.0.1 |  | Enable report translation by partner language
+[stock_report_enable_translation_by_partner](stock_report_enable_translation_by_partner/) | 14.0.1.0.2 |  | Enable report translation by partner language
 [stock_report_handler](stock_report_handler/) | 14.0.0.1.0 |  | Delivery Slip - Handler
 [stock_report_hide_barcode](stock_report_hide_barcode/) | 14.0.1.0.1 |  | Picking list PDF print - hide barcode
 [stock_report_hide_uom](stock_report_hide_uom/) | 14.0.1.0.0 |  | Delivery Slip - hide UoM on all lines
@@ -107,7 +107,7 @@ addon | version | maintainers | summary
 [stock_report_quantity_decimals](stock_report_quantity_decimals/) | 14.0.1.0.0 |  | Modifications to Stock Reports' decimal precision
 [stock_report_scheduled_date_as_date_only](stock_report_scheduled_date_as_date_only/) | 14.0.1.0.0 |  | Stock Picking and Delivery Slip Report Scheduled Date as Date only
 [stock_report_set_company_as_sale_order_company](stock_report_set_company_as_sale_order_company/) | 14.0.1.0.1 |  | Set Delivery Slip and Picking pdf company as SO company
-[stock_report_title](stock_report_title/) | 14.0.2.0.4 |  | Stock Picking and Delivery Slip Report Title
+[stock_report_title](stock_report_title/) | 14.0.2.0.5 |  | Stock Picking and Delivery Slip Report Title
 [stock_report_total_weight](stock_report_total_weight/) | 14.0.1.0.1 |  | Add total weight to stock report lines
 [stock_report_week_of_shipment](stock_report_week_of_shipment/) | 14.0.1.0.1 |  | Add week of shipment to Picking report
 [stock_report_year_of_shipment](stock_report_year_of_shipment/) | 14.0.1.0.1 |  | Add year of shipment to delivery slip
