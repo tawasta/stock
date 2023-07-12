@@ -21,7 +21,7 @@
 {
     "name": "Show Delivery Note instead of picking name",
     "summary": "Show Delivery Note instead of picking name",
-    "version": "14.0.1.0.2",
+    "version": "14.0.1.0.3",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
