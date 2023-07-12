@@ -28,14 +28,15 @@ class StockValuationLayer(models.Model):
     def _compute_unit_cost_discrepancy(self):
         for record in self:
             diff = record.unit_cost - record.product_id.standard_price
-            record.remaining_qty_discrepancy = diff
+            record.unit_cost_discrepancy = diff
 
     def action_sync_remaining_value(self):
         for record in self:
             if record.quantity < 0:
                 raise ValidationError(_("Remaining quantity can't be negative"))
+            elif record.quantity > record.remaining_qty:
+                raise ValidationError(_("Changing remaining quantity for consumed line not allowed"))
 
-            if record.remaining_qty_discrepancy and record.quantity >= 0:
-                record.remaining_qty = record.quantity
-
+            record.remaining_qty = record.quantity
+            record.remaining_value = record.quantity * record.unit_cost
             record._compute_remaining_qty_discrepancy()
