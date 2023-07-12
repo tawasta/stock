@@ -17,17 +17,31 @@
         <field name="inherit_id" ref="stock_account.stock_valuation_layer_tree" />
         <field name="arch" type="xml">
             <field name="quantity" position="after">
-                <field name="remaining_qty" optional="hide" groups="base.group_no_one" />
-                <field name="remaining_value" optional="hide" groups="base.group_no_one" />
+                <field
+                    name="remaining_qty"
+                    optional="hide"
+                    groups="base.group_no_one"
+                />
+                <field
+                    name="remaining_value"
+                    optional="hide"
+                    groups="base.group_no_one"
+                />
                 <field name="remaining_qty_discrepancy" optional="hide" />
-                <button name="action_sync_remaining_value"
-                        groups="base.group_no_one"
-                        string="Sync remaining"
-                        type="object"
-                        icon="fa-refresh text-success"
-                        attrs="{'invisible': [('remaining_qty_discrepancy', '=', False)]}"/>
-                <field name="unit_cost" optional="hide" groups="base.group_no_one"  />
-                <field name="unit_cost_discrepancy" optional="hide" groups="base.group_no_one"  />
+                <button
+                    name="action_sync_remaining_value"
+                    groups="base.group_no_one"
+                    string="Sync remaining"
+                    type="object"
+                    icon="fa-refresh text-success"
+                    attrs="{'invisible': [('remaining_qty_discrepancy', '=', False)]}"
+                />
+                <field name="unit_cost" optional="hide" groups="base.group_no_one" />
+                <field
+                    name="unit_cost_discrepancy"
+                    optional="hide"
+                    groups="base.group_no_one"
+                />
             </field>
         </field>
     </record>
@@ -38,8 +52,12 @@
         <field name="inherit_id" ref="stock_account.view_inventory_valuation_search" />
         <field name="arch" type="xml">
             <field name="product_tmpl_id" position="after">
-                <filter string="Quantity discrepancy" name="remaining_qty_discrepancy" domain="[('remaining_qty_discrepancy', '=', True)]"/>
-                <separator/>
+                <filter
+                    string="Quantity discrepancy"
+                    name="remaining_qty_discrepancy"
+                    domain="[('remaining_qty_discrepancy', '=', True)]"
+                />
+                <separator />
             </field>
         </field>
     </record>
