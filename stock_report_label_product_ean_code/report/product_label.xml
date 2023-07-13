@@ -4,14 +4,21 @@
         <t t-call="web.basic_layout">
             <t t-foreach="docs" t-as="o">
                 <div style="width:100%;">
-                    <t t-foreach="o.move_lines" t-as="line">
-                        <t t-if="line.product_id.ean_code">
-                            <div class="page" id="product_label_page">
-                                <t
-                                    t-call="stock_report_label_product_ean_code.report_product_label_document_ean_code"
-                                    t-lang="o.partner_id.lang"
-                                />
-                            </div>
+                    <t t-foreach="o.move_lines" t-as="move">
+                        <t t-if="move.product_id.ean_code">
+                            <t
+                                t-set="line_qty"
+                                t-value="[move] * int(move.product_uom_qty)"
+                            />
+
+                            <t t-foreach="line_qty" t-as="line">
+                                <div class="page" id="product_label_page">
+                                    <t
+                                        t-call="stock_report_label_product_ean_code.report_product_label_document_ean_code"
+                                        t-lang="o.partner_id.lang"
+                                    />
+                                </div>
+                            </t>
                         </t>
                     </t>
                 </div>
