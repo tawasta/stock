@@ -12,13 +12,15 @@ class Product(models.Model):
             layer0 = layers[0]
 
             qty = sum(layers.mapped("quantity"))
+            remaining_qty = sum(layers.mapped("remaining_qty"))
 
             if qty != record.qty_available:
                 new_qty = -(qty-record.qty_available)
+                new_remaining_qty = -(remaining_qty-record.qty_available)
                 values = {
                     "product_id": record.id,
                     "quantity": new_qty,
-                    "remaining_qty": new_qty,
+                    "remaining_qty": new_remaining_qty,
                     "uom_id": record.uom_id.id,
                     "company_id": layer0.company_id.id,
                     "unit_cost": record.standard_price,
