@@ -17,13 +17,15 @@ class Product(models.Model):
             if qty != record.qty_available:
                 new_qty = -(qty-record.qty_available)
                 new_remaining_qty = -(remaining_qty-record.qty_available)
+                unit_cost = record.standard_price
                 values = {
                     "product_id": record.id,
                     "quantity": new_qty,
                     "remaining_qty": new_remaining_qty,
                     "uom_id": record.uom_id.id,
                     "company_id": layer0.company_id.id,
-                    "unit_cost": record.standard_price,
+                    "unit_cost": unit_cost,
+                    "value": unit_cost * new_qty,
                     "description": "Valuation synchronization",
                 }
 
