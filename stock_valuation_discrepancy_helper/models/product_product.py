@@ -8,7 +8,8 @@ class Product(models.Model):
     def action_sync_with_on_hand(self):
         svl = self.env["stock.valuation.layer"]
         for record in self:
-            layers = svl.search([("product_id", "=", record.id)])
+            layers = svl.search([("product_id", "=", record.id)], order="create_date DESC")
+            layer0 = layers[0]
 
             qty = sum(layers.mapped("quantity"))
 
@@ -19,7 +20,7 @@ class Product(models.Model):
                     "quantity": new_qty,
                     "remaining_qty": new_qty,
                     "uom_id": record.uom_id.id,
-                    "company_id": record.company_id.id,
+                    "company_id": layer0.company_id.id,
                     "unit_cost": record.standard_price,
                     "description": "Valuation synchronization",
                 }
