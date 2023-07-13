@@ -66,6 +66,17 @@
                     groups="base.group_no_one"
                 />
             </field>
+            <xpath expr="//button[@name='action_revaluation']" position="after">
+                    <button
+                        name="action_sync_with_on_hand"
+                        groups="base.group_no_one"
+                        string="Sync on-hand"
+                        help="Sync value with on-hand value"
+                        type="object"
+                        icon="fa-warning text-warning"
+                    />
+            </xpath>
+
         </field>
     </record>
 
