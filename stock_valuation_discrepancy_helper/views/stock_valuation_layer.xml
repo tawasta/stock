@@ -23,12 +23,10 @@
                 <field
                     name="cumulative_quantity"
                     optional="hide"
-                    groups="base.group_no_one"
                 />
                 <field
                     name="remaining_qty"
                     optional="hide"
-                    groups="base.group_no_one"
                 />
                 <field
                     name="product_on_hand"
@@ -41,6 +39,7 @@
                     groups="base.group_no_one"
                 />
                 <field name="remaining_qty_discrepancy" optional="hide" />
+                <!--
                 <button
                     name="action_sync_remaining_qty"
                     groups="base.group_no_one"
@@ -59,13 +58,14 @@
                     icon="fa-eraser text-success"
                     attrs="{'invisible': [('remaining_qty', '=', 0)]}"
                 />
+                -->
                 <field name="unit_cost" optional="hide" groups="base.group_no_one" />
                 <field
                     name="unit_cost_discrepancy"
                     optional="hide"
-                    groups="base.group_no_one"
                 />
             </field>
+            <!--
             <xpath expr="//button[@name='action_revaluation']" position="after">
                     <button
                         name="action_sync_with_on_hand"
@@ -76,6 +76,7 @@
                         icon="fa-warning text-warning"
                     />
             </xpath>
+            -->
 
         </field>
     </record>

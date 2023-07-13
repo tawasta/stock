@@ -62,6 +62,7 @@ class StockValuationLayer(models.Model):
             record.product_on_hand = record.product_id.qty_available
 
     def action_sync_remaining_qty(self):
+        raise ValidationError(_("Disabled"))
         for record in self:
             if record.quantity < 0:
                 raise ValidationError(_("Remaining quantity can't be negative"))
@@ -75,4 +76,5 @@ class StockValuationLayer(models.Model):
             record._compute_remaining_qty_discrepancy()
 
     def action_clear_remaining_qty(self):
+        raise ValidationError(_("Disabled"))
         self.write({"remaining_qty": 0, "remaining_value": 0})

@@ -6,6 +6,7 @@ class Product(models.Model):
     _inherit = "product.product"
 
     def action_sync_with_on_hand(self):
+        raise ValidationError(_("Disabled"))
         svl = self.env["stock.valuation.layer"]
         for record in self:
             layers = svl.search([("product_id", "=", record.id)], order="create_date DESC")
