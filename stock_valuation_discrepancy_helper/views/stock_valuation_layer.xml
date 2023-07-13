@@ -8,6 +8,9 @@
             <field name="remaining_qty" position="after">
                 <field name="remaining_qty_discrepancy" />
             </field>
+            <field name="quantity" position="after">
+                <field name="cumulative_quantity" />
+            </field>
         </field>
     </record>
 
@@ -18,7 +21,17 @@
         <field name="arch" type="xml">
             <field name="quantity" position="after">
                 <field
+                    name="cumulative_quantity"
+                    optional="hide"
+                    groups="base.group_no_one"
+                />
+                <field
                     name="remaining_qty"
+                    optional="hide"
+                    groups="base.group_no_one"
+                />
+                <field
+                    name="product_on_hand"
                     optional="hide"
                     groups="base.group_no_one"
                 />
@@ -29,12 +42,22 @@
                 />
                 <field name="remaining_qty_discrepancy" optional="hide" />
                 <button
-                    name="action_sync_remaining_value"
+                    name="action_sync_remaining_qty"
                     groups="base.group_no_one"
                     string="Sync remaining"
+                    help="Set quantity as the remaining quantity"
                     type="object"
                     icon="fa-refresh text-success"
                     attrs="{'invisible': [('remaining_qty_discrepancy', '=', False)]}"
+                />
+                <button
+                    name="action_clear_remaining_qty"
+                    groups="base.group_no_one"
+                    string="Clear remaining"
+                    help="Remove all remaining quantities"
+                    type="object"
+                    icon="fa-eraser text-success"
+                    attrs="{'invisible': [('remaining_qty', '=', 0)]}"
                 />
                 <field name="unit_cost" optional="hide" groups="base.group_no_one" />
                 <field
