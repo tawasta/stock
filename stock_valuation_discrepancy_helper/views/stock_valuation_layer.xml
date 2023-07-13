@@ -20,14 +20,8 @@
         <field name="inherit_id" ref="stock_account.stock_valuation_layer_tree" />
         <field name="arch" type="xml">
             <field name="quantity" position="after">
-                <field
-                    name="cumulative_quantity"
-                    optional="hide"
-                />
-                <field
-                    name="remaining_qty"
-                    optional="hide"
-                />
+                <field name="cumulative_quantity" optional="hide" />
+                <field name="remaining_qty" optional="hide" />
                 <field
                     name="product_on_hand"
                     optional="hide"
@@ -60,10 +54,7 @@
                 />
                 -->
                 <field name="unit_cost" optional="hide" groups="base.group_no_one" />
-                <field
-                    name="unit_cost_discrepancy"
-                    optional="hide"
-                />
+                <field name="unit_cost_discrepancy" optional="hide" />
             </field>
             <!--
             <xpath expr="//button[@name='action_revaluation']" position="after">
