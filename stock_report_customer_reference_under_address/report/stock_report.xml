@@ -4,7 +4,10 @@
         id="report_delivery_document_client"
         inherit_id="sale_stock.report_delivery_document_inherit_sale_stock"
     >
-        <xpath expr="//div[@class='row justify-content-end']" position="attributes">
+        <xpath
+            expr="//div[@class='col-auto justify-content-end']"
+            position="attributes"
+        >
             <attribute name="t-if">1 == 0</attribute>
         </xpath>
     </template>
