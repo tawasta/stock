@@ -21,7 +21,7 @@
 {
     "name": "Process Stock Pickings as Admin user",
     "summary": "Process Stock Pickings as Admin user",
-    "version": "14.0.1.0.1",
+    "version": "14.0.1.0.3",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
