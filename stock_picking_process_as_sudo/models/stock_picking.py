@@ -19,3 +19,6 @@ class StockPicking(models.Model):
 
     def sudo_open_return_picking_view(self):
         return self.sudo().open_return_picking_view()
+
+    def sudo_button_validate(self):
+        return self.sudo().button_validate()
