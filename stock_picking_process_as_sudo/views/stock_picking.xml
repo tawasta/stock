@@ -11,6 +11,27 @@
             >
                 <attribute name="invisible">1</attribute>
             </xpath>
+
+            <xpath expr="//button[@name='button_validate'][1]" position="after">
+                <button
+                    name="sudo_button_validate"
+                    string="Validate"
+                    attrs="{'invisible': ['|', ('state', 'in', ('waiting','confirmed')), ('show_validate', '=', False)]}"
+                    type="object"
+                    groups="base.group_user"
+                    class="oe_highlight"
+                />
+
+                <button
+                    name="sudo_button_validate"
+                    string="Validate"
+                    attrs="{'invisible': ['|', ('state', 'not in', ('waiting', 'confirmed')), ('show_validate', '=', False)]}"
+                    type="object"
+                    groups="base.group_user"
+                    class="o_btn_validate"
+                />
+            </xpath>
+
             <xpath
                 expr="//button[@name='%(stock.act_stock_return_picking)d']"
                 position="after"
