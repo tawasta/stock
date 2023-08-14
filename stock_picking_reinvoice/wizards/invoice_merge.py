@@ -20,5 +20,6 @@ class InvoiceMerge(models.TransientModel):
                 old_invoice.invoiced_stock_picking_ids.write(
                     {"invoice_id": new_invoice[0]}
                 )
-                # Unlink old invoices to avoid having lots of cancelled junk
-                old_invoice.unlink()
+                # Unlink cancelled invoices to avoid having lots of cancelled junk
+                if old_invoice.state == 'cancel':
+                    old_invoice.unlink()
