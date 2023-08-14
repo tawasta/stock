@@ -41,23 +41,22 @@ class StockPickingInvoiceWizard(models.TransientModel):
 
         picking_ids = self.env["stock.picking"].browse(self._context.get("active_ids"))
 
-        invoice = self.existing_invoice_id
         aml = self.env["account.move.line"]
         existing_line = False
 
-        if not invoice:
-            invoice_values = {
-                "partner_id": self.partner_id.id,
-                "move_type": "out_invoice",
-                "invoice_date": fields.Datetime.now(),
-            }
+        # Create new invoice
+        invoice_values = {
+            "partner_id": self.partner_id.id,
+            "move_type": "out_invoice",
+            "invoice_date": fields.Datetime.now(),
+        }
 
-            # Dummy variable, if we want to implement showing picking numbers on origin
-            show_pickings = False
-            if show_pickings:
-                invoice_values["invoice_origin"] = ", ".join(picking_ids.mapped("name"))
+        # Dummy variable, if we want to implement showing picking numbers on origin
+        show_pickings = False
+        if show_pickings:
+            invoice_values["invoice_origin"] = ", ".join(picking_ids.mapped("name"))
 
-            invoice = self.env["account.move"].create(invoice_values)
+        invoice = self.env["account.move"].create(invoice_values)
 
         for picking in picking_ids:
             if picking.state != "done":
@@ -147,8 +146,14 @@ class StockPickingInvoiceWizard(models.TransientModel):
 
         # Skip checking move validity, the amount will be computed in the end
         invoice = invoice.with_context(check_move_validity=False)
-
-        # invoice._onchange_invoice_line_ids()
         invoice._compute_amount()
+        invoice._onchange_invoice_line_ids()
+
+        # If there is an existing invoice, merge with it
+        if self.existing_invoice_id:
+            vals = {"date_invoice": invoice.invoice_date}
+            invoice_merge = self.env["invoice.merge"].create(vals)
+            active_ids = [invoice.id, self.existing_invoice_id.id]
+            invoice_merge.with_context(active_ids=active_ids).merge_invoices()
 
         return invoice, picking_ids
