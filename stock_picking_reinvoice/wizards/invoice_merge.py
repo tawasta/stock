@@ -21,7 +21,7 @@ class InvoiceMerge(models.TransientModel):
                     {"invoice_id": new_invoice[0]}
                 )
                 # Unlink cancelled invoices to avoid having lots of cancelled junk
-                if old_invoice.state == 'cancel':
+                if old_invoice.state == "cancel":
                     # Automatic delete is disabled for now
                     # old_invoice.unlink()
                     pass
