@@ -29,6 +29,7 @@ addon | version | maintainers | summary
 [stock_move_search](stock_move_search/) | 14.0.1.0.0 |  | Additional Search options for Stock Move
 [stock_package_sticker](stock_package_sticker/) | 14.0.1.0.1 |  | Stock Package Sticker
 [stock_picking_bypass_reservation](stock_picking_bypass_reservation/) | 14.0.1.0.0 |  | Stock Picking Bypass Reservation
+[stock_picking_carrier_in_tree](stock_picking_carrier_in_tree/) | 14.0.1.0.0 |  | Add carrier to stock picking tree view
 [stock_picking_carrier_info_form_header](stock_picking_carrier_info_form_header/) | 14.0.1.0.0 |  | Moved Carrier info on picking form
 [stock_picking_chatter_attachment_visible](stock_picking_chatter_attachment_visible/) | 14.0.1.0.1 |  | Attachments are visible on pickings
 [stock_picking_comment](stock_picking_comment/) | 14.0.1.0.1 |  | External comment for stock picking Delivery Slip and Picking Operations
@@ -90,6 +91,7 @@ addon | version | maintainers | summary
 [stock_report_label_product_ean_code](stock_report_label_product_ean_code/) | 14.0.1.0.2 |  | Stock Picking - Product Label with EAN code
 [stock_report_name_delivery_note](stock_report_name_delivery_note/) | 14.0.1.0.3 |  | Show Delivery Note instead of picking name
 [stock_report_our_reference](stock_report_our_reference/) | 14.0.1.0.0 |  | Stock Picking and Delivery Slip Report Our Reference
+[stock_report_partner_email](stock_report_partner_email/) | 14.0.1.0.0 |  | Stock Report Partner Email
 [stock_report_payment_terms](stock_report_payment_terms/) | 14.0.1.0.0 |  | Adds payment terms to Delivery Slip
 [stock_report_picking_customer_address](stock_report_picking_customer_address/) | 14.0.1.0.0 |  | Stock Report picking Customer Address details
 [stock_report_picking_customer_reference](stock_report_picking_customer_reference/) | 14.0.1.0.0 |  | Stock Picking Report Customer Reference
