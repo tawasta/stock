@@ -43,12 +43,14 @@ class StockPickingInvoiceWizard(models.TransientModel):
 
         aml = self.env["account.move.line"]
         existing_line = False
+        fiscal_position = self.env["account.fiscal.position"]
 
         # Create new invoice
         invoice_values = {
             "partner_id": self.partner_id.id,
             "move_type": "out_invoice",
             "invoice_date": fields.Datetime.now(),
+            "fiscal_position_id": fiscal_position.get_fiscal_position(self.partner_id.id).id,
         }
 
         # Dummy variable, if we want to implement showing picking numbers on origin
