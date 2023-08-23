@@ -50,7 +50,9 @@ class StockPickingInvoiceWizard(models.TransientModel):
             "partner_id": self.partner_id.id,
             "move_type": "out_invoice",
             "invoice_date": fields.Datetime.now(),
-            "fiscal_position_id": fiscal_position.get_fiscal_position(self.partner_id.id).id,
+            "fiscal_position_id": fiscal_position.get_fiscal_position(
+                self.partner_id.id
+            ).id,
         }
 
         # Dummy variable, if we want to implement showing picking numbers on origin
