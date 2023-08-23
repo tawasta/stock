@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,20 +19,25 @@
 ##############################################################################
 
 {
-    "name": "Reinvoice stock pickings",
-    "summary": "Allow making invoices from stock pickings",
-    "category": "Warehouse",
-    "version": "14.0.1.1.0",
+    "name": "Carrier in stock picking tree view",
+    "summary": "Add carrier to stock picking tree view",
+    "version": "14.0.1.0.0",
+    "category": "Inventory",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["account", "account_invoice_merge", "stock"],
-    "data": [
-        "security/ir.model.access.csv",
-        "views/account_move.xml",
-        "views/stock_picking.xml",
-        "wizards/stock_picking_invoice_wizard.xml",
+    "external_dependencies": {
+        "python": [],
+        "bin": [],
+    },
+    "depends": [
+        "delivery",
+        "stock",
     ],
+    "data": [
+        "views/stock_picking_tree.xml",
+    ],
+    "demo": [],
 }

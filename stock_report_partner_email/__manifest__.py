@@ -19,20 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Reinvoice stock pickings",
-    "summary": "Allow making invoices from stock pickings",
-    "category": "Warehouse",
-    "version": "14.0.1.1.0",
+    "name": "Stock Report Partner Email",
+    "summary": "Stock Report Partner Email",
+    "version": "14.0.1.0.0",
+    "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["account", "account_invoice_merge", "stock"],
-    "data": [
-        "security/ir.model.access.csv",
-        "views/account_move.xml",
-        "views/stock_picking.xml",
-        "wizards/stock_picking_invoice_wizard.xml",
-    ],
+    "depends": ["stock", "web"],
+    "data": ["report/stock_report_template.xml"],
 }

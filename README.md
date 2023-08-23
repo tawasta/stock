@@ -29,6 +29,7 @@ addon | version | maintainers | summary
 [stock_move_search](stock_move_search/) | 14.0.1.0.0 |  | Additional Search options for Stock Move
 [stock_package_sticker](stock_package_sticker/) | 14.0.1.0.1 |  | Stock Package Sticker
 [stock_picking_bypass_reservation](stock_picking_bypass_reservation/) | 14.0.1.0.0 |  | Stock Picking Bypass Reservation
+[stock_picking_carrier_in_tree](stock_picking_carrier_in_tree/) | 14.0.1.0.0 |  | Add carrier to stock picking tree view
 [stock_picking_carrier_info_form_header](stock_picking_carrier_info_form_header/) | 14.0.1.0.0 |  | Moved Carrier info on picking form
 [stock_picking_chatter_attachment_visible](stock_picking_chatter_attachment_visible/) | 14.0.1.0.1 |  | Attachments are visible on pickings
 [stock_picking_comment](stock_picking_comment/) | 14.0.1.0.1 |  | External comment for stock picking Delivery Slip and Picking Operations
@@ -52,7 +53,8 @@ addon | version | maintainers | summary
 [stock_picking_printed](stock_picking_printed/) | 14.0.1.0.0 |  | Mark stock pickings as printed after printing picking list
 [stock_picking_process_as_sudo](stock_picking_process_as_sudo/) | 14.0.1.0.3 |  | Process Stock Pickings as Admin user
 [stock_picking_receipt_set_all_moves_done](stock_picking_receipt_set_all_moves_done/) | 14.0.1.0.0 |  | Use button to set all moves as done on receipt
-[stock_picking_reinvoice](stock_picking_reinvoice/) | 14.0.1.0.5 |  | Allow making invoices from stock pickings
+[stock_picking_references_to_invoice_comment](stock_picking_references_to_invoice_comment/) | 14.0.1.0.0 |  | Add picking references to invoice comment
+[stock_picking_reinvoice](stock_picking_reinvoice/) | 14.0.1.1.0 |  | Allow making invoices from stock pickings
 [stock_picking_report_code_order](stock_picking_report_code_order/) | 14.0.1.0.1 |  | Stock Picking Report Code Order
 [stock_picking_reserve_chosen_moves](stock_picking_reserve_chosen_moves/) | 14.0.1.0.0 |  | Select manually the moves to be reserved on deliveries
 [stock_picking_sale_order_id](stock_picking_sale_order_id/) | 14.0.1.0.0 |  | Get Sale Order to Stock Picking from Purchase Order
@@ -90,6 +92,7 @@ addon | version | maintainers | summary
 [stock_report_label_product_ean_code](stock_report_label_product_ean_code/) | 14.0.1.0.2 |  | Stock Picking - Product Label with EAN code
 [stock_report_name_delivery_note](stock_report_name_delivery_note/) | 14.0.1.0.3 |  | Show Delivery Note instead of picking name
 [stock_report_our_reference](stock_report_our_reference/) | 14.0.1.0.0 |  | Stock Picking and Delivery Slip Report Our Reference
+[stock_report_partner_email](stock_report_partner_email/) | 14.0.1.0.0 |  | Stock Report Partner Email
 [stock_report_payment_terms](stock_report_payment_terms/) | 14.0.1.0.0 |  | Adds payment terms to Delivery Slip
 [stock_report_picking_customer_address](stock_report_picking_customer_address/) | 14.0.1.0.0 |  | Stock Report picking Customer Address details
 [stock_report_picking_customer_reference](stock_report_picking_customer_reference/) | 14.0.1.0.0 |  | Stock Picking Report Customer Reference

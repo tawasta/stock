@@ -22,16 +22,8 @@
             <field name="quantity" position="after">
                 <field name="cumulative_quantity" optional="hide" />
                 <field name="remaining_qty" optional="hide" />
-                <field
-                    name="product_on_hand"
-                    optional="hide"
-                    groups="base.group_no_one"
-                />
-                <field
-                    name="remaining_value"
-                    optional="hide"
-                    groups="base.group_no_one"
-                />
+                <field name="product_on_hand" optional="hide" />
+                <field name="remaining_value" optional="hide" />
                 <field name="remaining_qty_discrepancy" optional="hide" />
                 <!--
                 <button
