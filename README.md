@@ -11,6 +11,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
+[packing_list_product_materials](packing_list_product_materials/) | 14.0.1.0.0 |  | Packing list product materials
 [packing_list_report_title_and_decimal](packing_list_report_title_and_decimal/) | 14.0.1.0.0 |  | Packing list report title and decimal
 [stock_auditlog_rules](stock_auditlog_rules/) | 14.0.1.0.0 |  | Adds audit log rules for stock.warehouse and stock.location
 [stock_disable_invoice_shipping_on_delivery](stock_disable_invoice_shipping_on_delivery/) | 14.0.1.0.0 |  | Disable picking auto-generated delivery SO lines
@@ -110,6 +111,7 @@ addon | version | maintainers | summary
 [stock_report_picking_warning_text](stock_report_picking_warning_text/) | 14.0.1.0.0 |  | 'Warning on the Picking' on partner is shown on picking list
 [stock_report_product_customer_code](stock_report_product_customer_code/) | 14.0.1.0.0 |  | Place Product Customer code to picking print
 [stock_report_quantity_decimals](stock_report_quantity_decimals/) | 14.0.1.0.0 |  | Modifications to Stock Reports' decimal precision
+[stock_report_salesperson](stock_report_salesperson/) | 14.0.1.0.0 |  | Stock Picking and Delivery Slip Report Salesperson
 [stock_report_scheduled_date_as_date_only](stock_report_scheduled_date_as_date_only/) | 14.0.1.0.0 |  | Stock Picking and Delivery Slip Report Scheduled Date as Date only
 [stock_report_set_company_as_sale_order_company](stock_report_set_company_as_sale_order_company/) | 14.0.1.0.1 |  | Set Delivery Slip and Picking pdf company as SO company
 [stock_report_title](stock_report_title/) | 14.0.2.0.5 |  | Stock Picking and Delivery Slip Report Title
