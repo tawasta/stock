@@ -92,6 +92,7 @@ addon | version | maintainers | summary
 [stock_report_label_product](stock_report_label_product/) | 14.0.1.0.2 |  | Stock Picking - Product Label
 [stock_report_label_product_ean_code](stock_report_label_product_ean_code/) | 14.0.1.0.2 |  | Stock Picking - Product Label with EAN code
 [stock_report_name_delivery_note](stock_report_name_delivery_note/) | 14.0.1.0.3 |  | Show Delivery Note instead of picking name
+[stock_report_ordered_qty_from_sale_line](stock_report_ordered_qty_from_sale_line/) | 14.0.1.0.0 |  | Delivery Slip - Ordered Quantity from Sale Order line
 [stock_report_our_reference](stock_report_our_reference/) | 14.0.1.0.0 |  | Stock Picking and Delivery Slip Report Our Reference
 [stock_report_partner_email](stock_report_partner_email/) | 14.0.1.0.0 |  | Stock Report Partner Email
 [stock_report_payment_terms](stock_report_payment_terms/) | 14.0.1.0.0 |  | Adds payment terms to Delivery Slip
