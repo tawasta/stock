@@ -11,6 +11,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
+[packing_list_product_materials](packing_list_product_materials/) | 14.0.1.0.0 |  | Packing list product materials
 [packing_list_report_title_and_decimal](packing_list_report_title_and_decimal/) | 14.0.1.0.0 |  | Packing list report title and decimal
 [stock_auditlog_rules](stock_auditlog_rules/) | 14.0.1.0.0 |  | Adds audit log rules for stock.warehouse and stock.location
 [stock_disable_invoice_shipping_on_delivery](stock_disable_invoice_shipping_on_delivery/) | 14.0.1.0.0 |  | Disable picking auto-generated delivery SO lines
@@ -75,6 +76,7 @@ addon | version | maintainers | summary
 [stock_report_carrier_tracking_ref](stock_report_carrier_tracking_ref/) | 14.0.1.0.0 |  | Adds tracking reference to delivery slip
 [stock_report_code_as_name_stock_picking](stock_report_code_as_name_stock_picking/) | 14.0.1.0.0 |  | Replace Product name with product code
 [stock_report_customer_address](stock_report_customer_address/) | 14.0.1.0.0 |  | Stock Report Customer Address
+[stock_report_customer_contact](stock_report_customer_contact/) | 14.0.1.0.0 |  | Delivery Slip - Customer contact
 [stock_report_customer_reference](stock_report_customer_reference/) | 14.0.1.0.0 |  | Stock Report Customer Reference
 [stock_report_customer_reference_under_address](stock_report_customer_reference_under_address/) | 14.0.1.0.2 |  | Customer Reference under address
 [stock_report_date_done](stock_report_date_done/) | 14.0.1.0.0 |  | Stock Picking Report Date of Transfer
@@ -91,6 +93,7 @@ addon | version | maintainers | summary
 [stock_report_label_product](stock_report_label_product/) | 14.0.1.0.2 |  | Stock Picking - Product Label
 [stock_report_label_product_ean_code](stock_report_label_product_ean_code/) | 14.0.1.0.2 |  | Stock Picking - Product Label with EAN code
 [stock_report_name_delivery_note](stock_report_name_delivery_note/) | 14.0.1.0.3 |  | Show Delivery Note instead of picking name
+[stock_report_ordered_qty_from_sale_line](stock_report_ordered_qty_from_sale_line/) | 14.0.1.0.0 |  | Delivery Slip - Ordered Quantity from Sale Order line
 [stock_report_our_reference](stock_report_our_reference/) | 14.0.1.0.0 |  | Stock Picking and Delivery Slip Report Our Reference
 [stock_report_partner_email](stock_report_partner_email/) | 14.0.1.0.0 |  | Stock Report Partner Email
 [stock_report_payment_terms](stock_report_payment_terms/) | 14.0.1.0.0 |  | Adds payment terms to Delivery Slip
@@ -108,9 +111,10 @@ addon | version | maintainers | summary
 [stock_report_picking_warning_text](stock_report_picking_warning_text/) | 14.0.1.0.0 |  | 'Warning on the Picking' on partner is shown on picking list
 [stock_report_product_customer_code](stock_report_product_customer_code/) | 14.0.1.0.0 |  | Place Product Customer code to picking print
 [stock_report_quantity_decimals](stock_report_quantity_decimals/) | 14.0.1.0.0 |  | Modifications to Stock Reports' decimal precision
+[stock_report_salesperson](stock_report_salesperson/) | 14.0.1.0.0 |  | Stock Picking and Delivery Slip Report Salesperson
 [stock_report_scheduled_date_as_date_only](stock_report_scheduled_date_as_date_only/) | 14.0.1.0.0 |  | Stock Picking and Delivery Slip Report Scheduled Date as Date only
 [stock_report_set_company_as_sale_order_company](stock_report_set_company_as_sale_order_company/) | 14.0.1.0.1 |  | Set Delivery Slip and Picking pdf company as SO company
-[stock_report_title](stock_report_title/) | 14.0.2.0.5 |  | Stock Picking and Delivery Slip Report Title
+[stock_report_title](stock_report_title/) | 14.0.2.0.6 |  | Stock Picking and Delivery Slip Report Title
 [stock_report_total_weight](stock_report_total_weight/) | 14.0.1.0.1 |  | Add total weight to stock report lines
 [stock_report_week_of_shipment](stock_report_week_of_shipment/) | 14.0.1.0.1 |  | Add week of shipment to Picking report
 [stock_report_year_of_shipment](stock_report_year_of_shipment/) | 14.0.1.0.1 |  | Add year of shipment to delivery slip

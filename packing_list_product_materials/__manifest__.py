@@ -19,20 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Stock Picking and Delivery Slip Report Title",
-    "summary": "Stock Picking and Delivery Slip Report Title",
-    "version": "14.0.2.0.6",
+    "name": "Packing list product materials",
+    "summary": "Packing list product materials",
+    "version": "14.0.1.0.0",
     "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["stock", "stock_report_element_sizes", "web_report_sfs"],
-    "data": [
-        "data/ir_cron.xml",
-        "report/stock_report.xml",
-        "report/report_file.xml",
-        "views/res_config_settings.xml",
-    ],
+    "depends": ["stock", "product_materials"],
+    "data": ["report/stock_report.xml"],
 }
