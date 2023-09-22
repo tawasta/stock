@@ -73,6 +73,7 @@ addon | version | maintainers | summary
 [stock_picking_volume](stock_picking_volume/) | 14.0.1.0.0 |  | Press a button to calculate total volume of a picking
 [stock_product_qty_available_unreserved](stock_product_qty_available_unreserved/) | 14.0.1.0.0 |  | Add unreserved available (on hand - reserved)
 [stock_quant_disable_manual_edit](stock_quant_disable_manual_edit/) | 14.0.1.0.0 |  | Disallow editing stock quant values in line view manually
+[stock_quant_product_internal_category](stock_quant_product_internal_category/) | 14.0.1.0.0 |  | Show Stock Quant internal category
 [stock_report_add_description_to_picking](stock_report_add_description_to_picking/) | 14.0.1.0.0 |  | Adds Description column to picking report
 [stock_report_carrier](stock_report_carrier/) | 14.0.1.0.2 |  | Delivery slip Carrier
 [stock_report_carrier_tracking_ref](stock_report_carrier_tracking_ref/) | 14.0.1.0.0 |  | Adds tracking reference to delivery slip
