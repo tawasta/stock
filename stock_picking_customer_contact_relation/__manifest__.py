@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2023 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,25 +19,17 @@
 ##############################################################################
 
 {
-    "name": "Stock inventory line product tags",
-    "summary": "Show product tags on inventory lines",
+    "name": "Customer Contact field on picking",
+    "summary": "Customer Contact relation-field on picking",
     "version": "14.0.1.0.0",
-    "category": "Inventory",
+    "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "external_dependencies": {
-        "python": [],
-        "bin": [],
-    },
-    "depends": [
-        "product_template_tags",
-        "stock",
-    ],
+    "depends": ["sale", "stock"],
     "data": [
-        "views/stock_inventory_line.xml",
+        "views/stock_picking.xml",
     ],
-    "demo": [],
 }
