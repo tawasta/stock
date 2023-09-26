@@ -21,7 +21,7 @@
 {
     "name": "Stock Dispatch Note Template",
     "summary": "Stock Dispatch Note Template",
-    "version": "14.0.1.0.5",
+    "version": "14.0.1.0.6",
     "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
@@ -29,10 +29,8 @@
     "application": False,
     "installable": True,
     "depends": [
-        "stock",
-        "web",
-        "web_report_sfs",
         "delivery",
+        "web_report_sfs",
         "stock_report_element_sizes",
         "stock_report_title",
     ],

@@ -32,7 +32,9 @@
     >
         <td name="move_line_aggregated_qty_done" position="before">
             <td name="move_line_aggregated_customer_code">
-                <span t-esc="aggregated_lines[line]['customer_code']" />
+                <t t-if="aggregated_lines[line].get('customer_code')">
+                    <span t-esc="aggregated_lines[line]['customer_code']" />
+                </t>
             </td>
         </td>
     </template>

@@ -18,11 +18,13 @@
         <td name="move_line_aggregated_qty_done" position="before">
             <t t-if="o.sale_id">
                 <td name="move_line_aggregated_sale_line_qty">
-                    <span
-                        t-esc="aggregated_lines[line]['sale_line_qty']"
-                        t-options="{'widget': 'float', 'decimal_precision': 'Product Unit of Measure'}"
-                    />
-                    <span t-esc="aggregated_lines[line]['product_uom']" />
+                    <t t-if="aggregated_lines[line].get('sale_line_qty')">
+                        <span
+                            t-esc="aggregated_lines[line]['sale_line_qty']"
+                            t-options="{'widget': 'float', 'decimal_precision': 'Product Unit of Measure'}"
+                        />
+                        <span t-esc="aggregated_lines[line]['product_uom']" />
+                    </t>
                 </td>
             </t>
         </td>
