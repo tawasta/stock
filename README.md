@@ -15,7 +15,7 @@ addon | version | maintainers | summary
 [packing_list_report_title_and_decimal](packing_list_report_title_and_decimal/) | 14.0.1.0.0 |  | Packing list report title and decimal
 [stock_auditlog_rules](stock_auditlog_rules/) | 14.0.1.0.0 |  | Adds audit log rules for stock.warehouse and stock.location
 [stock_disable_invoice_shipping_on_delivery](stock_disable_invoice_shipping_on_delivery/) | 14.0.1.0.0 |  | Disable picking auto-generated delivery SO lines
-[stock_dispatch_note_report_template](stock_dispatch_note_report_template/) | 14.0.1.0.5 |  | Stock Dispatch Note Template
+[stock_dispatch_note_report_template](stock_dispatch_note_report_template/) | 14.0.1.0.6 |  | Stock Dispatch Note Template
 [stock_hide_packing_buttons](stock_hide_packing_buttons/) | 14.0.1.0.0 |  | Hides "put in pack" buttons
 [stock_inventory_adjustment_domain_company](stock_inventory_adjustment_domain_company/) | 14.0.1.0.1 |  | Show stock locations without company in inventory adjustments
 [stock_inventory_continue_inventory_tree_order](stock_inventory_continue_inventory_tree_order/) | 14.0.1.0.1 |  | Inventory list view - order by product_id
@@ -98,7 +98,7 @@ addon | version | maintainers | summary
 [stock_report_label_product](stock_report_label_product/) | 14.0.1.0.2 |  | Stock Picking - Product Label
 [stock_report_label_product_ean_code](stock_report_label_product_ean_code/) | 14.0.1.0.3 |  | Stock Picking - Product Label with EAN code
 [stock_report_name_delivery_note](stock_report_name_delivery_note/) | 14.0.1.0.3 |  | Show Delivery Note instead of picking name
-[stock_report_ordered_qty_from_sale_line](stock_report_ordered_qty_from_sale_line/) | 14.0.1.0.0 |  | Delivery Slip - Ordered Quantity from Sale Order line
+[stock_report_ordered_qty_from_sale_line](stock_report_ordered_qty_from_sale_line/) | 14.0.1.0.1 |  | Delivery Slip - Ordered Quantity from Sale Order line
 [stock_report_our_reference](stock_report_our_reference/) | 14.0.1.0.0 |  | Stock Picking and Delivery Slip Report Our Reference
 [stock_report_partner_email](stock_report_partner_email/) | 14.0.1.0.0 |  | Stock Report Partner Email
 [stock_report_payment_terms](stock_report_payment_terms/) | 14.0.1.0.0 |  | Adds payment terms to Delivery Slip
