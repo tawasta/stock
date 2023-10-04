@@ -79,8 +79,12 @@
     >
         <td name="move_line_aggregated_qty_done" position="before">
             <td name="move_line_aggregated_weight">
-                <span t-esc="aggregated_lines[line]['weight']" />
-                <span t-esc="aggregated_lines[line]['product'].weight_uom_name" />
+                <t
+                    t-if="aggregated_lines[line].get('weight') or aggregated_lines[line].get('weight') == 0"
+                >
+                    <span t-esc="aggregated_lines[line]['weight']" />
+                    <span t-esc="aggregated_lines[line]['product'].weight_uom_name" />
+                </t>
             </td>
         </td>
     </template>

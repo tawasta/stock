@@ -15,11 +15,12 @@ addon | version | maintainers | summary
 [packing_list_report_title_and_decimal](packing_list_report_title_and_decimal/) | 14.0.1.0.0 |  | Packing list report title and decimal
 [stock_auditlog_rules](stock_auditlog_rules/) | 14.0.1.0.0 |  | Adds audit log rules for stock.warehouse and stock.location
 [stock_disable_invoice_shipping_on_delivery](stock_disable_invoice_shipping_on_delivery/) | 14.0.1.0.0 |  | Disable picking auto-generated delivery SO lines
-[stock_dispatch_note_report_template](stock_dispatch_note_report_template/) | 14.0.1.0.5 |  | Stock Dispatch Note Template
+[stock_dispatch_note_report_template](stock_dispatch_note_report_template/) | 14.0.1.0.6 |  | Stock Dispatch Note Template
 [stock_hide_packing_buttons](stock_hide_packing_buttons/) | 14.0.1.0.0 |  | Hides "put in pack" buttons
 [stock_inventory_adjustment_domain_company](stock_inventory_adjustment_domain_company/) | 14.0.1.0.1 |  | Show stock locations without company in inventory adjustments
 [stock_inventory_continue_inventory_tree_order](stock_inventory_continue_inventory_tree_order/) | 14.0.1.0.1 |  | Inventory list view - order by product_id
 [stock_inventory_line_order](stock_inventory_line_order/) | 14.0.1.0.0 |  | Sort inventory lines by default code
+[stock_inventory_line_product_tags](stock_inventory_line_product_tags/) | 14.0.1.0.0 |  | Show product tags on inventory lines
 [stock_inventory_products_tree](stock_inventory_products_tree/) | 14.0.1.1.0 |  | Show products in stock inventory as tree view
 [stock_move_line_picking_partner](stock_move_line_picking_partner/) | 14.0.1.0.0 |  | Adds Partner from picking to Product Moves view
 [stock_move_line_qty_reserved_list](stock_move_line_qty_reserved_list/) | 14.0.1.0.0 |  | Stock move line qty reserved list
@@ -38,6 +39,7 @@ addon | version | maintainers | summary
 [stock_picking_compute_volume](stock_picking_compute_volume/) | 14.0.1.0.3 |  | Picking's Volume is computed automatically
 [stock_picking_country_group_text](stock_picking_country_group_text/) | 14.0.1.0.0 |  | Get stock picking report text from country groups setting
 [stock_picking_create_manufacturing_order_from_move](stock_picking_create_manufacturing_order_from_move/) | 14.0.1.0.0 |  | Create Manufacturing order from stock picking move
+[stock_picking_customer_contact_relation](stock_picking_customer_contact_relation/) | 14.0.1.0.0 |  | Customer Contact relation-field on picking
 [stock_picking_customer_order_number](stock_picking_customer_order_number/) | 14.0.1.0.0 |  | Adds customer order number to stock picking list and form views
 [stock_picking_customer_reference](stock_picking_customer_reference/) | 14.0.1.0.0 |  | Stock Picking Customer Reference
 [stock_picking_detailed_operations_initial_demand](stock_picking_detailed_operations_initial_demand/) | 14.0.1.0.0 |  | Detailed Operations Initial Demand
@@ -49,6 +51,7 @@ addon | version | maintainers | summary
 [stock_picking_mass_action_print_pdf](stock_picking_mass_action_print_pdf/) | 14.0.1.0.1 |  | Stock Picking Mass action - Print PDF
 [stock_picking_move_lines_partner](stock_picking_move_lines_partner/) | 14.0.1.0.0 |  | Stock Picking Move Lines Partner
 [stock_picking_no_autofollow](stock_picking_no_autofollow/) | 14.0.1.0.0 |  | Don't set partner as a picking follower automatically
+[stock_picking_note_from_sale](stock_picking_note_from_sale/) | 14.0.1.0.0 |  | Add sale order note as created picking order note
 [stock_picking_operations_show_name](stock_picking_operations_show_name/) | 14.0.1.0.0 |  | Show name field on Stock Picking operations
 [stock_picking_override_values](stock_picking_override_values/) | 14.0.1.0.0 |  | Allow overriding new picking values with system parameters
 [stock_picking_printed](stock_picking_printed/) | 14.0.1.0.0 |  | Mark stock pickings as printed after printing picking list
@@ -72,6 +75,7 @@ addon | version | maintainers | summary
 [stock_picking_volume](stock_picking_volume/) | 14.0.1.0.0 |  | Press a button to calculate total volume of a picking
 [stock_product_qty_available_unreserved](stock_product_qty_available_unreserved/) | 14.0.1.0.0 |  | Add unreserved available (on hand - reserved)
 [stock_quant_disable_manual_edit](stock_quant_disable_manual_edit/) | 14.0.1.0.0 |  | Disallow editing stock quant values in line view manually
+[stock_quant_product_internal_category](stock_quant_product_internal_category/) | 14.0.1.0.0 |  | Show Stock Quant internal category
 [stock_report_add_description_to_picking](stock_report_add_description_to_picking/) | 14.0.1.0.0 |  | Adds Description column to picking report
 [stock_report_carrier](stock_report_carrier/) | 14.0.1.0.2 |  | Delivery slip Carrier
 [stock_report_carrier_tracking_ref](stock_report_carrier_tracking_ref/) | 14.0.1.0.0 |  | Adds tracking reference to delivery slip
@@ -94,7 +98,7 @@ addon | version | maintainers | summary
 [stock_report_label_product](stock_report_label_product/) | 14.0.1.0.2 |  | Stock Picking - Product Label
 [stock_report_label_product_ean_code](stock_report_label_product_ean_code/) | 14.0.1.0.3 |  | Stock Picking - Product Label with EAN code
 [stock_report_name_delivery_note](stock_report_name_delivery_note/) | 14.0.1.0.3 |  | Show Delivery Note instead of picking name
-[stock_report_ordered_qty_from_sale_line](stock_report_ordered_qty_from_sale_line/) | 14.0.1.0.0 |  | Delivery Slip - Ordered Quantity from Sale Order line
+[stock_report_ordered_qty_from_sale_line](stock_report_ordered_qty_from_sale_line/) | 14.0.1.0.1 |  | Delivery Slip - Ordered Quantity from Sale Order line
 [stock_report_our_reference](stock_report_our_reference/) | 14.0.1.0.0 |  | Stock Picking and Delivery Slip Report Our Reference
 [stock_report_partner_email](stock_report_partner_email/) | 14.0.1.0.0 |  | Stock Report Partner Email
 [stock_report_payment_terms](stock_report_payment_terms/) | 14.0.1.0.0 |  | Adds payment terms to Delivery Slip

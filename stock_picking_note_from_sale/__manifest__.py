@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,23 +19,23 @@
 ##############################################################################
 
 {
-    "name": "Stock Dispatch Note Template",
-    "summary": "Stock Dispatch Note Template",
-    "version": "14.0.1.0.6",
-    "category": "Reporting",
+    "name": "Add sale order note as created picking order note",
+    "summary": "Add sale order note as created picking order note",
+    "version": "14.0.1.0.0",
+    "category": "Inventory",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
+    "external_dependencies": {
+        "python": [],
+        "bin": [],
+    },
     "depends": [
-        "delivery",
-        "web_report_sfs",
-        "stock_report_element_sizes",
-        "stock_report_title",
+        "sale",
+        "stock",
     ],
-    "data": [
-        "report/report_stock_dispatch_main.xml",
-        "report/stock_report_view.xml",
-    ],
+    "data": [],
+    "demo": [],
 }

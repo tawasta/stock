@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2019 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,23 +19,19 @@
 ##############################################################################
 
 {
-    "name": "Stock Dispatch Note Template",
-    "summary": "Stock Dispatch Note Template",
-    "version": "14.0.1.0.6",
-    "category": "Reporting",
+    "name": "Stock Quant internal category",
+    "summary": "Show Stock Quant internal category",
+    "version": "14.0.1.0.0",
+    "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
     "depends": [
-        "delivery",
-        "web_report_sfs",
-        "stock_report_element_sizes",
-        "stock_report_title",
+        "stock",
     ],
     "data": [
-        "report/report_stock_dispatch_main.xml",
-        "report/stock_report_view.xml",
+        "views/stock_quant.xml",
     ],
 }
