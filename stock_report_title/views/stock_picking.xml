@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_picking_form" model="ir.ui.view">
+        <field name="name">stock.picking.form.print.button.change</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//button[@name='%(stock.action_report_delivery)d']"
+                position="attributes"
+            >
+                <attribute
+                    name="name"
+                >stock_report_title.action_report_delivery</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
