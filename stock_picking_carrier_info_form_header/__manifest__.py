@@ -21,7 +21,7 @@
 {
     "name": "Show Carrier info on form header",
     "summary": "Moved Carrier info on picking form",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
