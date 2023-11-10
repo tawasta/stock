@@ -12,7 +12,7 @@
                     so on.
                 </p>
                 <field name="location_names" />
-                <field name="location_ids" attrs="{'invisible': [(location_ids, '=', False)]}"/>
+                <field name="location_ids" />
                 <footer>
                     <button string="Confirm"
                         type="object"
