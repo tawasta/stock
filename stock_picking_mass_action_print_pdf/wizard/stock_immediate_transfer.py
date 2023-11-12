@@ -11,6 +11,7 @@ class StockImmediateTransfer(models.TransientModel):
         super(StockImmediateTransfer, self).process()
         pickings = self.pick_ids.sorted(key=lambda t: t.id).print_delivery_slip()
 
+        close_window = {"type": "ir.actions.act_window_close"}
+
         if pickings:
-            self.mass_transfer_done = True
-            return pickings
+            return {"type": "ir.actions.act_multi", "actions": [pickings, close_window]}

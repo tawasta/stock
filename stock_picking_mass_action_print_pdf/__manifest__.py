@@ -21,14 +21,19 @@
 {
     "name": "Stock Picking Mass action - Print PDF",
     "summary": "Stock Picking Mass action - Print PDF",
-    "version": "14.0.1.0.1",
+    "version": "14.0.1.0.2",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["purchase_stock", "stock", "stock_picking_mass_action"],
+    "depends": [
+        "purchase_stock",
+        "stock",
+        "stock_picking_mass_action",
+        "web_ir_actions_act_multi",
+    ],
     "data": [
         "wizard/stock_backorder_confirmation_view.xml",
         "wizard/stock_immediate_transfer_view.xml",

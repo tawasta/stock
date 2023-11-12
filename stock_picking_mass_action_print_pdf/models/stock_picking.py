@@ -12,7 +12,5 @@ class StockPicking(models.Model):
 
         picks = False
         if pickings:
-            for picking in pickings:
-                picking.mass_transfer_done = True
             picks = self.env.ref("stock.action_report_delivery").report_action(pickings)
         return picks
