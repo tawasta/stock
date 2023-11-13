@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <record id="empty_locations_wizard_form" model="ir.ui.view">
+        <field name="model">stock.empty.inventory.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Empty locations stock">
+                <p>Empty the stock of the selected locations.</p>
+                <p>
+                    Or you can do a new selection below. Paste the
+                    names in this format "name1 name2 name3" and
+                    so on.
+                </p>
+                <field name="location_names" />
+                <field name="location_ids" />
+                <footer>
+                    <button string="Confirm"
+                        type="object"
+                        class="oe_highlight"
+                        name="empty_inventory"/>
+                    or
+                    <button string="Cancel"
+                        class="oe_link"
+                        special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="action_empty_locations"
+            multi="True"
+            key2="client_action_multi" name="Empty locations"
+            res_model="stock.empty.inventory.wizard" src_model="stock.location"
+            view_mode="form" target="new" view_type="form"
+            groups="base.group_system"/>
+</odoo>
