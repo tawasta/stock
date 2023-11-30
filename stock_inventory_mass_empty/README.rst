@@ -6,7 +6,8 @@
 Empty stock locations en mass
 =============================
 
-Empty stock locations en mass
+* Empty stock locations en mass
+* Check if a product is archived
 
 Configuration
 =============
