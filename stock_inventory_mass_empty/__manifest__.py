@@ -21,7 +21,7 @@
 {
     "name": "Empty stock locations en mass",
     "summary": "Empty stock locations en mass",
-    "version": "12.0.1.0.1",
+    "version": "12.0.1.0.2",
     "category": "Inventory",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",

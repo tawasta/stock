@@ -29,6 +29,15 @@ class StockEmptyInventoryWizard(models.TransientModel):
 
         for location in locations:
 
+            quants_with_archived_products = self.env["stock.quant"].search([
+                ("location_id", "=", location.id)
+                ]).filtered(lambda q: q.product_id.active == False)
+
+            archived_products = quants_with_archived_products.mapped('product_id')
+
+            for product in archived_products:
+                product.active = True
+
             disp_name = location.display_name
             now_date = fields.Datetime.now().date()
 
@@ -46,3 +55,6 @@ class StockEmptyInventoryWizard(models.TransientModel):
                 adjustment.action_start()
                 adjustment.action_reset_product_qty()
                 adjustment.action_validate()
+
+            for product in archived_products:
+                product.active = False
