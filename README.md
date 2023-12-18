@@ -48,7 +48,7 @@ addon | version | maintainers | summary
 [stock_picking_internal_transfer_domain_internal_location](stock_picking_internal_transfer_domain_internal_location/) | 14.0.1.0.0 |  | Use Internal location as domain for Internal transfers
 [stock_picking_lines_limit](stock_picking_lines_limit/) | 14.0.1.0.0 |  | Stock Picking Lines Limit
 [stock_picking_mass_action_complete_transfer](stock_picking_mass_action_complete_transfer/) | 14.0.1.0.1 |  | Stock Picking Mass action - complete transfer
-[stock_picking_mass_action_print_pdf](stock_picking_mass_action_print_pdf/) | 14.0.1.0.2 |  | Stock Picking Mass action - Print PDF
+[stock_picking_mass_action_print_pdf](stock_picking_mass_action_print_pdf/) | 14.0.1.0.3 |  | Stock Picking Mass action - Print PDF
 [stock_picking_move_lines_partner](stock_picking_move_lines_partner/) | 14.0.1.0.0 |  | Stock Picking Move Lines Partner
 [stock_picking_no_autofollow](stock_picking_no_autofollow/) | 14.0.1.0.0 |  | Don't set partner as a picking follower automatically
 [stock_picking_note_from_sale](stock_picking_note_from_sale/) | 14.0.1.0.0 |  | Add sale order note as created picking order note
