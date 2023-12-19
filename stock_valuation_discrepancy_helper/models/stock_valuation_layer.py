@@ -16,7 +16,14 @@ class StockValuationLayer(models.Model):
         "Cumulative Quantity",
         digits=0,
         help="Quantity at this point, without considering consumed units",
-        compute="_compute_cumulative_quantity",
+        compute="_compute_cumulative",
+    )
+
+    cumulative_value = fields.Monetary(
+        "Cumulative Value",
+        digits=0,
+        help="Value at this point, without considering consumed units",
+        compute="_compute_cumulative",
     )
 
     unit_cost_discrepancy = fields.Monetary(
@@ -39,7 +46,7 @@ class StockValuationLayer(models.Model):
             discrepancy = 0 <= record.quantity < record.remaining_qty
             record.remaining_qty_discrepancy = discrepancy
 
-    def _compute_cumulative_quantity(self):
+    def _compute_cumulative(self):
         for record in self:
             layers = self.search(
                 [
@@ -48,7 +55,9 @@ class StockValuationLayer(models.Model):
                 ]
             )
             qty = sum(layers.mapped("quantity"))
+            val = sum(layers.mapped("value"))
             record.cumulative_quantity = qty
+            record.cumulative_value = val
 
     @api.depends("remaining_qty", "quantity", "unit_cost")
     def _compute_unit_cost_discrepancy(self):
@@ -76,3 +85,15 @@ class StockValuationLayer(models.Model):
 
     def action_clear_remaining_qty(self):
         self.write({"remaining_qty": 0, "remaining_value": 0})
+
+    def action_reset_unit_value(self):
+        # Get unit value from product
+        for record in self:
+            price = record.product_id.standard_price
+            record.write(
+                {
+                    "unit_cost": price,
+                    "value": price * record.quantity,
+                    "remaining_value": price * record.remaining_qty,
+                }
+            )

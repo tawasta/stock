@@ -21,6 +21,7 @@
         <field name="arch" type="xml">
             <field name="quantity" position="after">
                 <field name="cumulative_quantity" optional="hide" />
+                <field name="cumulative_value" optional="hide" />
                 <field name="remaining_qty" optional="hide" />
                 <field name="product_on_hand" optional="hide" />
                 <field name="remaining_value" optional="hide" />
@@ -34,6 +35,7 @@
                     type="object"
                     icon="fa-refresh text-success"
                     attrs="{'invisible': [('remaining_qty_discrepancy', '=', False)]}"
+                    confirm="Are you sure? This will overwrite remaining quantity with quantity"
                 />
                 <button
                     name="action_clear_remaining_qty"
@@ -43,6 +45,16 @@
                     type="object"
                     icon="fa-eraser text-success"
                     attrs="{'invisible': [('remaining_qty', '=', 0)]}"
+                    confirm="Are you sure? This will set remaining quantities as 0"
+                />
+                <button
+                    name="action_reset_unit_value"
+                    groups="base.group_no_one"
+                    string="Reset unit value"
+                    help="Get unit value from product standard price"
+                    type="object"
+                    icon="fa-coins text-success"
+                    confirm="Are you sure? This will forget quant-spesific prices"
                 />
                 -->
                 <field name="unit_cost" optional="hide" groups="base.group_no_one" />

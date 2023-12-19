@@ -21,14 +21,17 @@
 {
     "name": "Process Stock Pickings as Admin user",
     "summary": "Process Stock Pickings as Admin user",
-    "version": "14.0.1.0.3",
+    "version": "14.0.1.0.4",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["stock"],
+    "depends": [
+        "stock",
+        "web_ir_actions_act_multi",
+    ],
     "data": [
         "views/stock_picking.xml",
         "wizards/stock_immediate_transfer.xml",

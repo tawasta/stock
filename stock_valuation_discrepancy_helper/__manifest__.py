@@ -29,5 +29,8 @@
     "application": False,
     "installable": True,
     "depends": ["stock_account"],
-    "data": ["views/stock_valuation_layer.xml"],
+    "data": [
+        "data/ir_actions_server.xml",
+        "views/stock_valuation_layer.xml",
+    ],
 }
