@@ -8,5 +8,5 @@ class StockPicking(models.Model):
     customer_order_number = fields.Char(
         string="Customer Order Number",
         related="sale_id.customer_order_number",
-        stored=True,
+        store=True,
     )
