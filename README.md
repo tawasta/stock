@@ -66,13 +66,13 @@ addon | version | maintainers | summary
 [stock_picking_scheduled_date](stock_picking_scheduled_date/) | 14.0.1.0.0 |  | Stock picking scheduled date
 [stock_picking_sort_by_print_and_scheduled_date](stock_picking_sort_by_print_and_scheduled_date/) | 14.0.1.0.0 |  | Stock Picking sort by printed and Scheduled Date
 [stock_picking_source_document_link](stock_picking_source_document_link/) | 14.0.1.0.1 |  | Add link to source document
+[stock_picking_total_volume](stock_picking_total_volume/) | 14.0.1.0.0 |  | Press a button to calculate total volume of a picking
 [stock_picking_tree_date_deadline_as_date](stock_picking_tree_date_deadline_as_date/) | 14.0.1.0.0 |  | Show date deadline as date in stock picking tree
 [stock_picking_tree_date_done](stock_picking_tree_date_done/) | 14.0.1.0.0 |  | Stock Picking date done in tree view
 [stock_picking_tree_effective_date](stock_picking_tree_effective_date/) | 14.0.1.0.0 |  | Adds effective date from Sale Order to picking list view
 [stock_picking_tree_scheduled_date_as_date](stock_picking_tree_scheduled_date_as_date/) | 14.0.1.0.0 |  | Show scheduled date as date in stock picking tree
 [stock_picking_unreserve_automatically](stock_picking_unreserve_automatically/) | 14.0.1.0.0 |  | Set sale orders to automatically unreserve deliveries
 [stock_picking_validate_button_group](stock_picking_validate_button_group/) | 14.0.1.0.0 |  | Validate button group for Stock picking
-[stock_picking_volume](stock_picking_volume/) | 14.0.1.0.0 |  | Press a button to calculate total volume of a picking
 [stock_product_qty_available_unreserved](stock_product_qty_available_unreserved/) | 14.0.1.0.0 |  | Add unreserved available (on hand - reserved)
 [stock_quant_disable_manual_edit](stock_quant_disable_manual_edit/) | 14.0.1.0.0 |  | Disallow editing stock quant values in line view manually
 [stock_quant_product_internal_category](stock_quant_product_internal_category/) | 14.0.1.0.0 |  | Show Stock Quant internal category
