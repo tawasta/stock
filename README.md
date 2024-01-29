@@ -66,7 +66,6 @@ addon | version | maintainers | summary
 [stock_picking_scheduled_date](stock_picking_scheduled_date/) | 14.0.1.0.0 |  | Stock picking scheduled date
 [stock_picking_sort_by_print_and_scheduled_date](stock_picking_sort_by_print_and_scheduled_date/) | 14.0.1.0.0 |  | Stock Picking sort by printed and Scheduled Date
 [stock_picking_source_document_link](stock_picking_source_document_link/) | 14.0.1.0.1 |  | Add link to source document
-[stock_picking_total_volume](stock_picking_total_volume/) | 14.0.1.0.0 |  | Press a button to calculate total volume of a picking
 [stock_picking_tree_date_deadline_as_date](stock_picking_tree_date_deadline_as_date/) | 14.0.1.0.0 |  | Show date deadline as date in stock picking tree
 [stock_picking_tree_date_done](stock_picking_tree_date_done/) | 14.0.1.0.0 |  | Stock Picking date done in tree view
 [stock_picking_tree_effective_date](stock_picking_tree_effective_date/) | 14.0.1.0.0 |  | Adds effective date from Sale Order to picking list view
@@ -126,6 +125,8 @@ addon | version | maintainers | summary
 [stock_report_week_of_shipment](stock_report_week_of_shipment/) | 14.0.1.0.1 |  | Add week of shipment to Picking report
 [stock_report_year_of_shipment](stock_report_year_of_shipment/) | 14.0.1.0.1 |  | Add year of shipment to delivery slip
 [stock_valuation_discrepancy_helper](stock_valuation_discrepancy_helper/) | 14.0.1.0.0 |  | Adds helpers for finding and fixing discrepancies in valuation
+[stock_valuation_hide_archived_products](stock_valuation_hide_archived_products/) | 14.0.1.0.0 |  | Add a filter for stock valuation to hide archived products
+[stock_valuation_hide_kit_products](stock_valuation_hide_kit_products/) | 14.0.1.0.0 |  | Add a filter for stock valuation to hide Kit products
 [stock_valuation_layer_archive](stock_valuation_layer_archive/) | 14.0.1.0.1 |  | Allows archiving inventory valuation records
 
 [//]: # (end addons)

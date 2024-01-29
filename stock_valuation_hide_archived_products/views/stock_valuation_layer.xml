@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_inventory_valuation_search" model="ir.ui.view">
+        <field name="name">Inventory Valuation hide archived products</field>
+        <field name="model">stock.valuation.layer</field>
+        <field name="inherit_id" ref="stock_account.view_inventory_valuation_search" />
+        <field name="arch" type="xml">
+            <field name="product_tmpl_id" position="after">
+                <separator />
+                <filter
+                    name="active"
+                    string="Active products"
+                    domain="[('product_id.active', '=', True)]"
+                />
+                <filter
+                    name="inactive"
+                    string="Inactive products"
+                    domain="[('product_id.active', '=', False)]"
+                />
+            </field>
+        </field>
+    </record>
+</odoo>

@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2019 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2024 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,20 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Volume field for Stock Pickings",
-    "summary": "Press a button to calculate total volume of a picking",
+    "name": "Hide archived products from stock valuation",
+    "summary": "Add a filter for stock valuation to hide archived products",
     "version": "14.0.1.0.0",
-    "category": "Stock",
+    "category": "Inventory",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        "product",
-        "stock",
-    ],
-    "data": [
-        "views/stock_picking.xml",
-    ],
+    "depends": ["stock_account"],
+    "data": ["views/stock_valuation_layer.xml"],
 }
