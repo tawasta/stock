@@ -21,7 +21,7 @@
             ref="stock_account.model_stock_valuation_layer"
         />
         <field name="state">code</field>
-        <field name="code">records.action_sync_remaining_qty()</field>
+        <field name="code">records.action_clear_remaining_qty()</field>
     </record>
 
     <record id="action_reset_unit_value" model="ir.actions.server">
