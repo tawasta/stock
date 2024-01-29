@@ -126,6 +126,7 @@ addon | version | maintainers | summary
 [stock_report_year_of_shipment](stock_report_year_of_shipment/) | 14.0.1.0.1 |  | Add year of shipment to delivery slip
 [stock_valuation_discrepancy_helper](stock_valuation_discrepancy_helper/) | 14.0.1.0.0 |  | Adds helpers for finding and fixing discrepancies in valuation
 [stock_valuation_hide_archived_products](stock_valuation_hide_archived_products/) | 14.0.1.0.0 |  | Add a filter for stock valuation to hide archived products
+[stock_valuation_hide_kit_products](stock_valuation_hide_kit_products/) | 14.0.1.0.0 |  | Add a filter for stock valuation to hide Kit products
 [stock_valuation_layer_archive](stock_valuation_layer_archive/) | 14.0.1.0.1 |  | Allows archiving inventory valuation records
 
 [//]: # (end addons)
