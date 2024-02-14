@@ -21,7 +21,7 @@
 {
     "name": "Carrier info added to stock move list view and as a filter",
     "summary": "Carrier info added to stock move list view and as a filter",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
@@ -29,5 +29,8 @@
     "application": False,
     "installable": True,
     "depends": ["delivery", "stock"],
-    "data": ["views/stock_move.xml"],
+    "data": [
+        "data/ir_cron.xml",
+        "views/stock_move.xml",
+    ],
 }
