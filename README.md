@@ -22,6 +22,7 @@ addon | version | maintainers | summary
 [stock_inventory_line_order](stock_inventory_line_order/) | 14.0.1.0.0 |  | Sort inventory lines by default code
 [stock_inventory_line_product_tags](stock_inventory_line_product_tags/) | 14.0.1.0.0 |  | Show product tags on inventory lines
 [stock_inventory_products_tree](stock_inventory_products_tree/) | 14.0.1.1.0 |  | Show products in stock inventory as tree view
+[stock_move_carrier_in_view_and_filter](stock_move_carrier_in_view_and_filter/) | 14.0.1.0.1 |  | Carrier info added to stock move list view and as a filter
 [stock_move_line_picking_partner](stock_move_line_picking_partner/) | 14.0.1.0.0 |  | Adds Partner from picking to Product Moves view
 [stock_move_line_qty_reserved_list](stock_move_line_qty_reserved_list/) | 14.0.1.0.0 |  | Stock move line qty reserved list
 [stock_move_line_reference](stock_move_line_reference/) | 14.0.1.0.1 |  | Renames Stock Picking field as Transfer Reference
