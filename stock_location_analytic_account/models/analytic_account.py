@@ -2,7 +2,6 @@ from odoo import _, api, exceptions, fields, models
 
 
 class AnalyticAccount(models.Model):
-
     _inherit = "account.analytic.account"
 
     location_ids = fields.One2many(

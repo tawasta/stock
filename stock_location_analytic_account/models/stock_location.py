@@ -2,7 +2,6 @@ from odoo import fields, models
 
 
 class StockLocation(models.Model):
-
     _inherit = "stock.location"
 
     analytic_account_id = fields.Many2one(
