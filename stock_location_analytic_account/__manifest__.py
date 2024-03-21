@@ -21,7 +21,7 @@
 {
     "name": "Analytic account - Stock location relation",
     "summary": "Integrate stock location with analytic account",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Inventory",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
