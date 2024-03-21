@@ -16,34 +16,37 @@ class AnalyticAccount(models.Model):
         default=lambda self: self._default_get_default_location(),
     )
 
-    @api.model
-    def create(self, values):
-        if "location_ids" not in values or not values["location_ids"]:
-            # Auto-generate a stock location
-            warehouse_model = self.env["stock.warehouse"]
-
-            # Get the first warehouse
-            # TODO: allow selecting the default warehouse
-            warehouse = warehouse_model.search(
-                [
-                    ("company_id", "=", values.get("company_id", False)),
-                ],
-                limit=1,
-            )
-
-            location_values = {
-                "name": values["name"],
-                "usage": "internal",
-                "location_id": warehouse.lot_stock_id.id,
-                "company_id": warehouse.company_id.id,
-            }
-            location = self.env["stock.location"].create(location_values)
-
-            # Create a new location
-            values["default_location_id"] = location.id
-            values["location_ids"] = [(6, False, [location.id])]
-
-        return super(AnalyticAccount, self).create(values)
+    #    By Timo Kekäläinen:
+    #    DISABLED AUTOMATIC CREATION ON 21.3.2024 because it was requested
+    #
+    #    @api.model
+    #    def create(self, values):
+    #        if "location_ids" not in values or not values["location_ids"]:
+    #            # Auto-generate a stock location
+    #            warehouse_model = self.env["stock.warehouse"]
+    #
+    #            # Get the first warehouse
+    #            # TODO: allow selecting the default warehouse
+    #            warehouse = warehouse_model.search(
+    #                [
+    #                    ("company_id", "=", values.get("company_id", False)),
+    #                ],
+    #                limit=1,
+    #            )
+    #
+    #            location_values = {
+    #                "name": values["name"],
+    #                "usage": "internal",
+    #                "location_id": warehouse.lot_stock_id.id,
+    #                "company_id": warehouse.company_id.id,
+    #            }
+    #            location = self.env["stock.location"].create(location_values)
+    #
+    #            # Create a new location
+    #            values["default_location_id"] = location.id
+    #            values["location_ids"] = [(6, False, [location.id])]
+    #
+    #        return super(AnalyticAccount, self).create(values)
 
     @api.onchange("location_ids")
     @api.depends("location_ids")
