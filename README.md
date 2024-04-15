@@ -13,5 +13,7 @@ addon | version | maintainers | summary
 --- | --- | --- | ---
 [stock_location_analytic_account](stock_location_analytic_account/) | 17.0.1.0.1 |  | Integrate stock location with analytic account
 [stock_location_auditlog_rules](stock_location_auditlog_rules/) | 17.0.1.0.0 |  | Adds audit log rules for stock.warehouse and stock.location
+[stock_report_our_reference](stock_report_our_reference/) | 17.0.1.0.0 |  | Stock Picking and Delivery Slip Report Our Reference
+[stock_report_scheduled_date_as_date_only](stock_report_scheduled_date_as_date_only/) | 17.0.1.0 |  | Stock Picking and Delivery Slip Report Scheduled Date as Date only
 
 [//]: # (end addons)
