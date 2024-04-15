@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_picking_date_done" inherit_id="stock.report_picking">
+        <div class="row mt32 mb32" position="inside">
+            <div t-if="o.date_done" class="col-auto" name="div_delivery_date">
+                <strong>Delivery date:</strong>
+                <p t-field="o.date_done" t-options="{'widget': 'date'}" />
+            </div>
+        </div>
+    </template>
+</odoo>
