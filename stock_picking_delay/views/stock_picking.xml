@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_picking_form" model="ir.ui.view">
+        <field name="name">stock.picking.form.delay</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='date_done']" position="after">
+                <field
+                    name="delay"
+                    attrs="{'invisible': ['|', ('scheduled_date', '=', False), ('date_done', '=', False)]}"
+                />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="stock_picking_delay_list" model="ir.ui.view">
+        <field name="name">stock.picking.list.delay</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.vpicktree" />
+        <field name="arch" type="xml">
+
+            <field name="partner_id" position="after">
+                <field
+                    name="delay"
+                    optional="show"
+                    attrs="{'invisible':[('state', 'not in', ('done'))]}"
+                />
+            </field>
+
+        </field>
+    </record>
+</odoo>
