@@ -1,4 +1,5 @@
-from odoo import models, fields, api
+from odoo import fields, models
+
 
 class StockPicking(models.Model):
 
@@ -15,4 +16,3 @@ class StockPicking(models.Model):
                 record.delay = delay_days
             else:
                 record.delay = False
-            
