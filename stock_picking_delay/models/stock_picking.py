@@ -5,7 +5,7 @@ class StockPicking(models.Model):
 
     _inherit = "stock.picking"
 
-    delay = fields.Float(string="Delay", compute="_compute_delay")
+    delay = fields.Float(string="Delay", compute="_compute_delay", store=True)
 
     def _compute_delay(self):
         for record in self:
