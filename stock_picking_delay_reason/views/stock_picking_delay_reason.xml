@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id='delay_reason_act' model='ir.actions.act_window'>
+        <field name="name">Delay Reasons</field>
+        <field name="res_model">stock.picking.delay.reason</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Delay Reasons" id="delay_reason_menu"
+              parent="stock.menu_stock_config_settings" action="delay_reason_act"/>
+
+    <record id="delay_reason_view_form" model="ir.ui.view">
+        <field name="name">Delay Reasons</field>
+        <field name="model">stock.picking.delay.reason</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="delay_reason_view_tree" model="ir.ui.view">
+        <field name="name">Delay Reasons</field>
+        <field name="model">stock.picking.delay.reason</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
