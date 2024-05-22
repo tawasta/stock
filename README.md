@@ -45,6 +45,7 @@ addon | version | maintainers | summary
 [stock_picking_customer_order_number](stock_picking_customer_order_number/) | 14.0.1.0.1 |  | Adds customer order number to stock picking list and form views
 [stock_picking_customer_reference](stock_picking_customer_reference/) | 14.0.1.0.0 |  | Stock Picking Customer Reference
 [stock_picking_delay](stock_picking_delay/) | 14.0.1.0.0 |  | Adds a delay (effective date - scheduled date) field
+[stock_picking_delay_reason](stock_picking_delay_reason/) | 14.0.1.0.0 |  | Adds a delay.reason model under configuration menu and delay_reason field on stock.picking records
 [stock_picking_detailed_operations_initial_demand](stock_picking_detailed_operations_initial_demand/) | 14.0.1.0.0 |  | Detailed Operations Initial Demand
 [stock_picking_dispatch_fields](stock_picking_dispatch_fields/) | 14.0.1.0.1 |  | Stock Picking fields for Dispatch Note
 [stock_picking_form_barcode](stock_picking_form_barcode/) | 14.0.1.0.0 |  | Shows barcode in stock picking form
