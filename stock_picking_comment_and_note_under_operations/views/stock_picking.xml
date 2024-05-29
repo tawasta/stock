@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_picking_form" model="ir.ui.view">
+        <field name="name">stock.picking.form.comment</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field eval="101" name="priority" />
+        <field name="arch" type="xml">
+
+            <field name="note" position="replace" />
+            <field name="comment" position="replace" />
+
+            <page name="note" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </page>
+
+            <field name="move_ids_without_package" position="after">
+                <group string="Note (internal, for Picking Operations sheet)">
+                    <field
+                        name="note"
+                        nolabel="1"
+                        placeholder="Add an internal note that will be printed on the Picking Operations sheet"
+                    />
+                </group>
+                <group string="Comment (printed on the Delivery Slip)">
+                    <field
+                        name="comment"
+                        nolabel="1"
+                        placeholder="Add a comment that will be printed on the Delivery Slip"
+                    />
+                </group>
+            </field>
+
+        </field>
+    </record>
+
+</odoo>

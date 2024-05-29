@@ -37,6 +37,7 @@ addon | version | maintainers | summary
 [stock_picking_carrier_info_form_header](stock_picking_carrier_info_form_header/) | 14.0.1.0.1 |  | Moved Carrier info on picking form
 [stock_picking_chatter_attachment_visible](stock_picking_chatter_attachment_visible/) | 14.0.1.0.1 |  | Attachments are visible on pickings
 [stock_picking_comment](stock_picking_comment/) | 14.0.1.0.1 |  | External comment for stock picking Delivery Slip and Picking Operations
+[stock_picking_comment_and_note_under_operations](stock_picking_comment_and_note_under_operations/) | 14.0.1.0.0 |  | Moves the two freetext fields under the 'Operations' tab on the picking form
 [stock_picking_compatible_mass_print_and_sudo_process](stock_picking_compatible_mass_print_and_sudo_process/) | 14.0.1.0.0 |  | Make mass action print and process as sudo compatible
 [stock_picking_compute_volume](stock_picking_compute_volume/) | 14.0.1.0.3 |  | Picking's Volume is computed automatically
 [stock_picking_country_group_text](stock_picking_country_group_text/) | 14.0.1.0.0 |  | Get stock picking report text from country groups setting
@@ -45,6 +46,7 @@ addon | version | maintainers | summary
 [stock_picking_customer_order_number](stock_picking_customer_order_number/) | 14.0.1.0.1 |  | Adds customer order number to stock picking list and form views
 [stock_picking_customer_reference](stock_picking_customer_reference/) | 14.0.1.0.0 |  | Stock Picking Customer Reference
 [stock_picking_delay](stock_picking_delay/) | 14.0.1.0.0 |  | Adds a delay (effective date - scheduled date) field
+[stock_picking_delay_reason](stock_picking_delay_reason/) | 14.0.1.0.0 |  | Stock Picking Delay Reason
 [stock_picking_detailed_operations_initial_demand](stock_picking_detailed_operations_initial_demand/) | 14.0.1.0.0 |  | Detailed Operations Initial Demand
 [stock_picking_dispatch_fields](stock_picking_dispatch_fields/) | 14.0.1.0.1 |  | Stock Picking fields for Dispatch Note
 [stock_picking_form_barcode](stock_picking_form_barcode/) | 14.0.1.0.0 |  | Shows barcode in stock picking form
@@ -131,5 +133,6 @@ addon | version | maintainers | summary
 [stock_valuation_hide_archived_products](stock_valuation_hide_archived_products/) | 14.0.1.0.0 |  | Add a filter for stock valuation to hide archived products
 [stock_valuation_hide_kit_products](stock_valuation_hide_kit_products/) | 14.0.1.0.0 |  | Add a filter for stock valuation to hide Kit products
 [stock_valuation_layer_archive](stock_valuation_layer_archive/) | 14.0.1.0.1 |  | Allows archiving inventory valuation records
+[stock_warning_when_shipping_product](stock_warning_when_shipping_product/) | 14.0.1.0.0 |  | Warns or blocks user when shipping a product if warning has been set
 
 [//]: # (end addons)
