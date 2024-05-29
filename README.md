@@ -37,6 +37,7 @@ addon | version | maintainers | summary
 [stock_picking_carrier_info_form_header](stock_picking_carrier_info_form_header/) | 14.0.1.0.1 |  | Moved Carrier info on picking form
 [stock_picking_chatter_attachment_visible](stock_picking_chatter_attachment_visible/) | 14.0.1.0.1 |  | Attachments are visible on pickings
 [stock_picking_comment](stock_picking_comment/) | 14.0.1.0.1 |  | External comment for stock picking Delivery Slip and Picking Operations
+[stock_picking_comment_and_note_under_operations](stock_picking_comment_and_note_under_operations/) | 14.0.1.0.0 |  | Moves the two freetext fields under the 'Operations' tab on the picking form
 [stock_picking_compatible_mass_print_and_sudo_process](stock_picking_compatible_mass_print_and_sudo_process/) | 14.0.1.0.0 |  | Make mass action print and process as sudo compatible
 [stock_picking_compute_volume](stock_picking_compute_volume/) | 14.0.1.0.3 |  | Picking's Volume is computed automatically
 [stock_picking_country_group_text](stock_picking_country_group_text/) | 14.0.1.0.0 |  | Get stock picking report text from country groups setting
