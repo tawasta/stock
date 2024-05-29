@@ -20,7 +20,7 @@
 
 {
     "name": "Stock Picking Delay Reason",
-    "summary": "Adds a delay.reason model under configuration menu and delay_reason field on stock.picking records",
+    "summary": "Stock Picking Delay Reason",
     "version": "14.0.1.0.0",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
