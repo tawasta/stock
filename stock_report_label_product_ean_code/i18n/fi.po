@@ -55,4 +55,5 @@ msgstr "Tuote"
 #: model:ir.actions.report,name:stock_report_label_product_ean_code.action_report_product_label_product_product
 #: model:ir.actions.report,name:stock_report_label_product_ean_code.action_report_product_label_stock_picking
 msgid "Product label - EAN code"
-msgstr "Tuoterarra - EAN koodi"
+msgstr "Tuotetarra - EAN koodi"
+
