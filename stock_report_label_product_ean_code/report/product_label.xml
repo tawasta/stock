@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <template id="report_product_label_ean_code">
+
+    <!-- Calling via stock.picking: one page per product qty for each of the picking lines -->
+    <template id="report_product_label_ean_code_stock_picking">
         <t t-call="web.basic_layout">
             <t t-foreach="docs" t-as="o">
                 <div style="width:100%;">
@@ -12,6 +14,8 @@
                             />
 
                             <t t-foreach="line_qty" t-as="line">
+
+                                <t t-set="product_to_print" t-value="line.product_id" />
                                 <div class="page" id="product_label_page">
                                     <t
                                         t-call="stock_report_label_product_ean_code.report_product_label_document_ean_code"
@@ -26,6 +30,26 @@
         </t>
     </template>
 
+    <!-- Calling via product.product: one page per each of the selected products -->
+    <template id="report_product_label_ean_code_product_product">
+        <t t-call="web.basic_layout">
+            <t t-foreach="docs" t-as="product_to_print">
+                <div style="width:100%;">
+                    <t t-if="product_to_print.ean_code">
+                        <div class="page" id="product_label_page">
+                            <t
+                                t-call="stock_report_label_product_ean_code.report_product_label_document_ean_code"
+                                t-lang="en_US"
+                            />
+                        </div>
+                    </t>
+                </div>
+            </t>
+        </t>
+    </template>
+
+
+
     <template id="report_product_label_document_ean_code">
       <table class="table table-bordered">
           <tr>
@@ -33,7 +57,7 @@
                     class="text-center align-middle row"
                     style="height: 120px; background: lightgrey; margin-bottom: 30px; font-size: 20px; padding-top: 20px;"
                 >
-                <span t-esc="line.product_id.display_name" style="margin-left: 4px;" />
+                <span t-esc="product_to_print.display_name" style="margin-left: 4px;" />
 
             </div>
           </tr>
@@ -43,11 +67,11 @@
                     style="height: 103px; font-size: 15px; width: 400px;"
                 >
                 <img
-                        t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', line.product_id.ean_code, 700, 150)"
+                        t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', product_to_print.ean_code, 700, 150)"
                         style="width:100%;height:4rem"
                         alt="Barcode"
                     />
-                <span t-esc="line.product_id.ean_code" />
+                <span t-esc="product_to_print.ean_code" />
             </div>
           </tr>
       </table>
