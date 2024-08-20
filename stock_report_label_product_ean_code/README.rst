@@ -6,7 +6,10 @@
 Stock Picking - Product Label with EAN code
 ===========================================
 
-Stock Picking - Product Label with EAN code
+* Print Product Labels with EAN codes from either
+
+  * Stock Picking (one for each item on the picking lines)
+  * Product Variant
 
 Configuration
 =============
@@ -14,7 +17,7 @@ Configuration
 
 Usage
 =====
-\-
+* Open a picking or a product variant, and select Print --> "Product label - EAN code"
 
 Known issues / Roadmap
 ======================
@@ -27,6 +30,7 @@ Contributors
 ------------
 
 * Timo Kekäläinen <timo.kekalainen@tawasta.fi>
+* Timo Talvitie <timo.talvitie@tawasta.fi>
 
 Maintainer
 ----------

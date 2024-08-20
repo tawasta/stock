@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <record id="action_report_product_label" model="ir.actions.report">
+    <record id="action_report_product_label_stock_picking" model="ir.actions.report">
         <field name="name">Product label - EAN code</field>
         <field name="model">stock.picking</field>
         <field name="report_type">qweb-pdf</field>
         <field
             name="report_name"
-        >stock_report_label_product_ean_code.report_product_label_ean_code</field>
+        >stock_report_label_product_ean_code.report_product_label_ean_code_stock_picking</field>
         <field
             name="report_file"
-        >stock_report_label_product_ean_code.report_product_label_ean_code</field>
+        >stock_report_label_product_ean_code.report_product_label_ean_code_stock_picking</field>
         <field name="print_report_name">'Product label_%s' % (object.name)</field>
         <field
             name="paperformat_id"
