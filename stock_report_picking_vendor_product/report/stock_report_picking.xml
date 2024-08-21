@@ -15,12 +15,26 @@
             expr="//span[@t-esc='ml.lot_id.name or ml.lot_name']/.."
             position="before"
         >
+
+            <t
+                t-set="from_vendor"
+                t-value="ml.product_id.seller_ids.filtered(lambda s: s.partner_id == o.partner_id)"
+            />
+            <t
+                t-set="from_vendor_single"
+                t-value="from_vendor and from_vendor[0] or False"
+            />
+
             <td id="td_product_vendor_name" t-if="o.picking_type_id.code == 'incoming'">
-                <span t-field="ml.product_id.primary_vendor_id" />
+                <t t-if="from_vendor_single">
+                    <span t-esc="from_vendor_single.partner_id.name" />
+                </t>
             </td>
 
             <td id="td_product_vendor_code" t-if="o.picking_type_id.code == 'incoming'">
-                <span t-field="ml.product_id.primary_vendor_code" />
+                <t t-if="from_vendor_single">
+                    <span t-esc="from_vendor_single.product_code" />
+                </t>
             </td>
         </xpath>
     </template>
