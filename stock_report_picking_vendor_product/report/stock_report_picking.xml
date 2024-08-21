@@ -2,11 +2,19 @@
 <odoo>
     <template id="report_picking" inherit_id="stock.report_picking">
         <th name="th_barcode" position="before">
-            <th id="th_product_vendor_name" t-if="o.picking_type_id.code == 'incoming'">
+            <th
+                id="th_product_vendor_name"
+                t-if="o.picking_type_id.code == 'incoming'"
+                align="left"
+            >
                 <strong>Vendor product name</strong>
             </th>
 
-            <th id="th_product_vendor_code" t-if="o.picking_type_id.code == 'incoming'">
+            <th
+                id="th_product_vendor_code"
+                t-if="o.picking_type_id.code == 'incoming'"
+                align="left"
+            >
                 <strong>Vendor product code</strong>
             </th>
         </th>
@@ -27,7 +35,7 @@
 
             <td id="td_product_vendor_name" t-if="o.picking_type_id.code == 'incoming'">
                 <t t-if="from_vendor_single">
-                    <span t-esc="from_vendor_single.partner_id.name" />
+                    <span t-esc="from_vendor_single.product_name" />
                 </t>
             </td>
 
