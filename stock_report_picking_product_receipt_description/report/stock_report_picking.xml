@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_picking" inherit_id="stock.report_picking">
+        <span t-field="ml.product_id.description_picking" position="attributes">
+            <attribute name="t-if">o.picking_type_id.code != 'incoming'</attribute>
+	    </span>
+
+        <span t-field="ml.product_id.description_picking" position="after">
+            <span
+                t-field="ml.product_id.description_pickingin"
+                t-if="o.picking_type_id.code == 'incoming'"
+            />
+	    </span>
+	</template>
+</odoo>
