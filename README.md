@@ -17,6 +17,7 @@ addon | version | maintainers | summary
 [stock_picking_view_vendor_product](stock_picking_view_vendor_product/) | 17.0.1.0.0 |  | Vendor Product Name and Code are added to Picking form view
 [stock_report_date_done](stock_report_date_done/) | 17.0.1.0.0 |  | Stock Picking Report Date of Transfer
 [stock_report_our_reference](stock_report_our_reference/) | 17.0.1.0.0 |  | Stock Picking and Delivery Slip Report Our Reference
+[stock_report_picking_product_receipt_description](stock_report_picking_product_receipt_description/) | 17.0.1.0.0 |  | Show 'Description for receipts' text on Picking list
 [stock_report_picking_vendor_product](stock_report_picking_vendor_product/) | 17.0.1.1.1 |  | Vendor Product name and code for Picking list
 [stock_report_scheduled_date_as_date_only](stock_report_scheduled_date_as_date_only/) | 17.0.1.0 |  | Stock Picking and Delivery Slip Report Scheduled Date as Date only
 
