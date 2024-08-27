@@ -20,7 +20,7 @@
                 <separator />
                 <filter
                     name="is_excess_location"
-                    string="Is an Excess Location"
+                    string="Is an Asset Location"
                     domain="[('is_excess_location', '=', True)]"
                 />
 		    </filter>
