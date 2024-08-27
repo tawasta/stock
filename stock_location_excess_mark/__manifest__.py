@@ -21,7 +21,7 @@
 {
     "name": "Mark stock location as Excess type",
     "summary": "Select a stock location and mark it as of excess type",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.1.0",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
