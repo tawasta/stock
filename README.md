@@ -130,6 +130,7 @@ addon | version | maintainers | summary
 [stock_report_total_weight](stock_report_total_weight/) | 14.0.1.0.1 |  | Add total weight to stock report lines
 [stock_report_week_of_shipment](stock_report_week_of_shipment/) | 14.0.1.0.1 |  | Add week of shipment to Picking report
 [stock_report_year_of_shipment](stock_report_year_of_shipment/) | 14.0.1.0.1 |  | Add year of shipment to delivery slip
+[stock_see_product_forecasted_with_sudo](stock_see_product_forecasted_with_sudo/) | 14.0.1.0.0 |  | Product Forecast Report produced with sudo rights
 [stock_valuation_discrepancy_helper](stock_valuation_discrepancy_helper/) | 14.0.1.0.0 |  | Adds helpers for finding and fixing discrepancies in valuation
 [stock_valuation_hide_archived_products](stock_valuation_hide_archived_products/) | 14.0.1.0.0 |  | Add a filter for stock valuation to hide archived products
 [stock_valuation_hide_kit_products](stock_valuation_hide_kit_products/) | 14.0.1.0.0 |  | Add a filter for stock valuation to hide Kit products
