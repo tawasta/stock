@@ -27,5 +27,6 @@ addon | version | maintainers | summary
 [stock_report_picking_vendor_product](stock_report_picking_vendor_product/) | 17.0.1.1.1 |  | Vendor Product name and code for Picking list
 [stock_report_product_customer_code](stock_report_product_customer_code/) | 17.0.1.0.0 |  | Place Product Customer code to picking print
 [stock_report_scheduled_date_as_date_only](stock_report_scheduled_date_as_date_only/) | 17.0.1.0 |  | Stock Picking and Delivery Slip Report Scheduled Date as Date only
+[stock_valuation_layer_archive](stock_valuation_layer_archive/) | 17.0.1.0.0 |  | Allows archiving inventory valuation records
 
 [//]: # (end addons)
