@@ -1,0 +1,83 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_report_title
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20240126\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-25 05:56+0000\n"
+"PO-Revision-Date: 2024-09-25 09:00+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: stock_report_title
+#: model:ir.model,name:stock_report_title.model_res_company
+msgid "Companies"
+msgstr "Yritykset"
+
+#. module: stock_report_title
+#: model:ir.model,name:stock_report_title.model_res_config_settings
+msgid "Config Settings"
+msgstr "Asetukset"
+
+#. module: stock_report_title
+#: model:ir.model.fields,field_description:stock_report_title.field_res_company__delivery_slip_title
+#: model:ir.model.fields,field_description:stock_report_title.field_res_config_settings__delivery_slip_title
+msgid "Delivery slip title"
+msgstr "Lähetteen otsikko"
+
+#. module: stock_report_title
+#: model_terms:ir.ui.view,arch_db:stock_report_title.res_config_settings_view_form
+msgid "Hide 'Delivery Slip' title on print"
+msgstr "Piilota 'Lähete' otsikko tulosteella"
+
+#. module: stock_report_title
+#: model_terms:ir.ui.view,arch_db:stock_report_title.res_config_settings_view_form
+msgid "Hide 'Stock Picking' title on picking print"
+msgstr "Piilota 'Keräilylista' otsikko keräilylistalta"
+
+#. module: stock_report_title
+#: model:ir.model.fields,field_description:stock_report_title.field_res_company__hide_delivery_slip_report_name
+#: model:ir.model.fields,field_description:stock_report_title.field_res_config_settings__hide_delivery_slip_report_name
+msgid "Hide delivery slip report name"
+msgstr "Piilota lähetteen nimi tulosteella"
+
+#. module: stock_report_title
+#: model:ir.model.fields,field_description:stock_report_title.field_res_company__hide_delivery_slip_title
+#: model:ir.model.fields,field_description:stock_report_title.field_res_config_settings__hide_delivery_slip_title
+msgid "Hide delivery slip title"
+msgstr "Piilota lähetteen otsikko"
+
+#. module: stock_report_title
+#: model:ir.model.fields,field_description:stock_report_title.field_res_company__hide_picking_report_name
+#: model:ir.model.fields,field_description:stock_report_title.field_res_config_settings__hide_picking_report_name
+msgid "Hide picking report name"
+msgstr "Piilota keräilylistan nimi"
+
+#. module: stock_report_title
+#: model:ir.model.fields,field_description:stock_report_title.field_res_company__hide_picking_title
+#: model:ir.model.fields,field_description:stock_report_title.field_res_config_settings__hide_picking_title
+msgid "Hide picking title"
+msgstr "Piilota keräilylistan otsikko"
+
+#. module: stock_report_title
+#: model_terms:ir.ui.view,arch_db:stock_report_title.res_config_settings_view_form
+msgid "Hide picking's name on Delivery Slip print"
+msgstr "Piilota toimituksen nimi lähetteessä"
+
+#. module: stock_report_title
+#: model_terms:ir.ui.view,arch_db:stock_report_title.res_config_settings_view_form
+msgid "Hide picking's name on Stock Picking print"
+msgstr "Piilota toimituksen nimi keräilylistassa"
+
+#. module: stock_report_title
+#: model_terms:ir.ui.view,arch_db:stock_report_title.res_config_settings_view_form
+msgid "Set title for Delivery Slip print. Default is 'Delivery Slip'"
+msgstr "Aseta otsikko Lähetteelle. Oletus on 'Lähete'"
