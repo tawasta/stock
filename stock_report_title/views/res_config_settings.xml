@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <odoo>
     <record id="res_config_settings_view_form" model="ir.ui.view">
         <field name="name">res.config.view.form.report.delivery.slip.text</field>
@@ -7,28 +6,38 @@
         <field name="inherit_id" ref="stock.res_config_settings_view_form" />
         <field name="arch" type="xml">
             <setting id="warning_info" position="after">
-                <setting id="delivery_slip_title"
-                         help="Set title for Delivery Slip print. Default is 'Delivery Slip'">
+                <setting
+                    id="delivery_slip_title"
+                    help="Set title for Delivery Slip print. Default is 'Delivery Slip'"
+                >
                     <field name="delivery_slip_title" />
                 </setting>
 
-                <setting id="hide_delivery_slip_text"
-                         help="Hide 'Delivery Slip' title on print">
+                <setting
+                    id="hide_delivery_slip_text"
+                    help="Hide 'Delivery Slip' title on print"
+                >
                     <field name="hide_delivery_slip_title" />
                 </setting>
 
-                <setting id="hide_delivery_slip_report_name"
-                         help="Hide picking's name on Delivery Slip print">
+                <setting
+                    id="hide_delivery_slip_report_name"
+                    help="Hide picking's name on Delivery Slip print"
+                >
                     <field name="hide_delivery_slip_report_name" />
                 </setting>
 
-                <setting id="hide_picking_title"
-                         help="Hide 'Stock Picking' title on picking print">
+                <setting
+                    id="hide_picking_title"
+                    help="Hide 'Stock Picking' title on picking print"
+                >
                     <field name="hide_picking_title" />
                 </setting>
 
-                <setting id="hide_picking_report_name"
-                         help="Hide picking's name on Stock Picking print">
+                <setting
+                    id="hide_picking_report_name"
+                    help="Hide picking's name on Stock Picking print"
+                >
                     <field name="hide_picking_report_name" />
                 </setting>
             </setting>

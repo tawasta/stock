@@ -28,10 +28,7 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        "stock",
-        "web_report_sfs"
-    ],
+    "depends": ["stock", "web_report_sfs"],
     "data": [
         "report/stock_report.xml",
         "views/res_config_settings.xml",

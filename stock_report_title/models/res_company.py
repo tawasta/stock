@@ -2,7 +2,6 @@ from odoo import fields, models
 
 
 class ResCompany(models.Model):
-
     _inherit = "res.company"
 
     delivery_slip_title = fields.Char(
