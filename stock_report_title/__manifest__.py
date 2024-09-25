@@ -30,14 +30,10 @@
     "installable": True,
     "depends": [
         "stock",
-#        "stock_report_element_sizes",
         "web_report_sfs"
     ],
     "data": [
-#        "data/ir_cron.xml",
         "report/stock_report.xml",
-#        "report/report_file.xml",
         "views/res_config_settings.xml",
-#        "views/stock_picking.xml",
     ],
 }
