@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<record id="stock_picking_batch_form" model="ir.ui.view">
+		<field name="name">stock.picking.batch.form.delivery.and.contact</field>
+		<field name="model">stock.picking.batch</field>
+		<field name="inherit_id" ref="stock_picking_batch.stock_picking_batch_form" />
+		<field name="arch" type="xml">
+            <field name="user_id" position="before">
+                <field name="delivery_address_id" />
+                <field name="customer_contact_id" />
+		    </field>
+		</field>
+	</record>
+</odoo>
