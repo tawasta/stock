@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<record id="stock_picking_batch_form" model="ir.ui.view">
+		<field name="name">stock.picking.batch.form.carrier.tracking.ref</field>
+		<field name="model">stock.picking.batch</field>
+		<field name="inherit_id" ref="stock_picking_batch.stock_picking_batch_form" />
+		<field name="arch" type="xml">
+            <field name="scheduled_date" position="after">
+                <field name="carrier_id" options="{'no_create_edit': True}" />
+                <field name="carrier_tracking_ref" />
+		    </field>
+		</field>
+	</record>
+</odoo>
