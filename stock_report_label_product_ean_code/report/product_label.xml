@@ -15,11 +15,13 @@
 
                             <t t-foreach="line_qty" t-as="line">
 
-                                <t t-set="product_to_print" t-value="line.product_id" />
+                                <t
+                                    t-set="product_to_print"
+                                    t-value="line.product_id.with_context(lang='en_US')"
+                                />
                                 <div class="page" id="product_label_page">
                                     <t
                                         t-call="stock_report_label_product_ean_code.report_product_label_document_ean_code"
-                                        t-lang="en_US"
                                     />
                                 </div>
                             </t>
@@ -34,12 +36,15 @@
     <template id="report_product_label_ean_code_product_product">
         <t t-call="web.basic_layout">
             <t t-foreach="docs" t-as="product_to_print">
+                <t
+                    t-set="product_to_print"
+                    t-value="product_to_print.with_context(lang='en_US')"
+                />
                 <div style="width:100%;">
                     <t t-if="product_to_print.ean_code">
                         <div class="page" id="product_label_page">
                             <t
                                 t-call="stock_report_label_product_ean_code.report_product_label_document_ean_code"
-                                t-lang="en_US"
                             />
                         </div>
                     </t>
