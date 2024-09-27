@@ -21,7 +21,7 @@
 {
     "name": "Stock Picking - Product Label with EAN code",
     "summary": "Print Product Labels with EAN codes from either pickings or product variants",
-    "version": "14.0.1.1.0",
+    "version": "14.0.1.2.0",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
