@@ -13,6 +13,17 @@
 		</field>
 	</record>
 
+    <record id="stock_picking_batch_tree" model="ir.ui.view">
+		<field name="name">stock.picking.batch.tree.batch.ref</field>
+		<field name="model">stock.picking.batch</field>
+		<field name="inherit_id" ref="stock_picking_batch.stock_picking_batch_tree" />
+		<field name="arch" type="xml">
+            <field name="company_id" position="before">
+                <field name="batch_ref" optional="show" />
+		    </field>
+		</field>
+	</record>
+
     <record id="stock_picking_batch_filter" model="ir.ui.view">
 		<field name="name">stock.picking.batch.filter.carrier.tracking.ref</field>
 		<field name="model">stock.picking.batch</field>
