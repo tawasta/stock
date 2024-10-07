@@ -21,7 +21,7 @@
 {
     "name": "Batch Transfer – Carrier and Tracking reference",
     "summary": "Adds Carrier and Tracking reference to batch transfer",
-    "version": "17.0.1.0.1",
+    "version": "17.0.1.1.1",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
@@ -29,6 +29,7 @@
     "application": False,
     "installable": True,
     "depends": [
+        "delivery",
         "stock_picking_batch",
     ],
     "data": [
