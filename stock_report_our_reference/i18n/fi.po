@@ -4,25 +4,21 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 17.0\n"
+"Project-Id-Version: Odoo Server 17.0-20240126\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-01 13:53+0000\n"
-"PO-Revision-Date: 2021-11-01 13:53+0000\n"
+"POT-Creation-Date: 2024-10-15 10:55+0000\n"
+"PO-Revision-Date: 2024-10-15 13:56+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: fi_FI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. module: stock_report_our_reference
-#: model_terms:ir.ui.view,arch_db:stock_report_our_reference.report_delivery_document_our_reference
+#: model_terms:ir.ui.view,arch_db:stock_report_our_reference.report_delivery_document
 #: model_terms:ir.ui.view,arch_db:stock_report_our_reference.report_picking_our_reference
-msgid ""
-"<span>\n"
-"                    <strong>Our reference:</strong>\n"
-"                </span>"
-msgstr ""
-"<span>\n"
-"                    <strong>Viitteemme:</strong>\n"
-"                </span>"
+msgid "<strong>Our reference:</strong>"
+msgstr "<strong>Viitteemme:</strong>"
