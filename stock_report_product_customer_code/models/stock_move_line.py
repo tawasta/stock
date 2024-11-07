@@ -16,7 +16,7 @@ class StockMoveLine(models.Model):
             move = move_line.move_id
             line_key = (
                 f"{product.id}_{product.display_name}_"
-                f'{description or ""}_{uom.id}_{move.product_packaging_id or ""}'
+                f'{description or ""}_{uom.id}_{move.product_packaging_id or ""}_'
             )
             customer_code = move_line.move_id.product_customer_code
 

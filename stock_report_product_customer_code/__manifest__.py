@@ -21,7 +21,7 @@
 {
     "name": "Place Product Customer code to picking print",
     "summary": "Place Product Customer code to picking print",
-    "version": "17.0.2.0.0",
+    "version": "17.0.2.0.1",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
