@@ -12,15 +12,17 @@ class StockMoveLine(models.Model):
             if description == name or description == move_line.product_id.name:
                 description = False
             uom = move_line.product_uom_id
+            product = move_line.product_id
+            move = move_line.move_id
             line_key = (
-                str(move_line.product_id.id)
-                + "_"
-                + name
-                + (description or "")
-                + "uom "
-                + str(uom.id)
+                f"{product.id}_{product.display_name}_"
+                f'{description or ""}_{uom.id}_{move.product_packaging_id or ""}_'
             )
             customer_code = move_line.move_id.product_customer_code
+
+            if not customer_code:
+                customer_code = move_line.move_id.sale_line_id.product_customer_code
+
             if line_key in aggregated_move_lines:
                 aggregated_move_lines[line_key]["customer_code"] = customer_code
 

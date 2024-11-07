@@ -21,7 +21,7 @@
 {
     "name": "Place Product Customer code to picking print",
     "summary": "Place Product Customer code to picking print",
-    "version": "17.0.1.0.0",
+    "version": "17.0.2.0.1",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
@@ -30,6 +30,8 @@
     "installable": True,
     "depends": [
         "product_supplierinfo_for_customer_picking",
+        "product_supplierinfo_for_customer_sale",
+        "sale_stock",
     ],
     "data": [
         "report/stock_report.xml",
