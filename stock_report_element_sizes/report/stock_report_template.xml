@@ -6,10 +6,10 @@
         </xpath>
     </template>
     <template id="report_delivery_document" inherit_id="stock.report_delivery_document">
-        <xpath expr="//div[@class='row mt32 mb32']" position="attributes">
+        <xpath expr="//div[contains(@class, 'row mt32 mb32')]" position="attributes">
             <attribute name="id">stock_deliveryslip_informations</attribute>
         </xpath>
-        <xpath expr="//div[@class='row mt32 mb32']" position="attributes">
+        <xpath expr="//div[contains(@class, 'row mt32 mb32')]" position="attributes">
             <attribute name="style">float: left;</attribute>
         </xpath>
         <table name="stock_move_table" position="before">
