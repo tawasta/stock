@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template
+        id="stock_report_delivery_kit_sections"
+        inherit_id="mrp.stock_report_delivery_kit_sections"
+    >
+        <xpath expr="//t[@t-set='boms']" position="after">
+            <t
+                t-set="kit_sale_lines"
+                t-value="has_kits.mapped('move_id.sale_line_id')"
+            />
+            <t t-set="sale_line_number" t-value="0" />
+        </xpath>
+
+        <xpath expr="//span[@t-esc='kit_product.display_name']/.." position="after">
+            <td class="text-center">
+                <span t-esc="kit_sale_lines[sale_line_number].product_uom_qty" />
+                <span t-esc="kit_sale_lines[sale_line_number].product_uom.name" />
+            </td>
+
+            <td class="text-center">
+                <span t-esc="kit_sale_lines[sale_line_number].qty_delivered" />
+                <span t-esc="kit_sale_lines[sale_line_number].product_uom.name" />
+            </td>
+
+            <t t-set="sale_line_number" t-value="sale_line_number + 1" />
+        </xpath>
+    </template>
+</odoo>
