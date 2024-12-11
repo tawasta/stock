@@ -12,6 +12,13 @@
             <t t-set="sale_line_number" t-value="0" />
         </xpath>
 
+        <xpath
+            expr="//span[@t-esc='kit_product.display_name']/.."
+            position="attributes"
+        >
+            <attribute name="colspan">0</attribute>
+        </xpath>
+
         <xpath expr="//span[@t-esc='kit_product.display_name']/.." position="after">
             <td class="text-center">
                 <span t-esc="kit_sale_lines[sale_line_number].product_uom_qty" />
