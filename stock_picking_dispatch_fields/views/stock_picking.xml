@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_picking_withcarrier_out_form" model="ir.ui.view">
+        <field
+            name="name"
+        >delivery.stock.picking_withcarrier.form.view.container</field>
+        <field name="model">stock.picking</field>
+        <field
+            name="inherit_id"
+            ref="stock_delivery.view_picking_withcarrier_out_form"
+        />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='tracking']" position="after">
+                <field name="transport_company" />
+                <field name="freight_payer" />
+            </xpath>
+            <xpath expr="//field[@name='carrier_id']" position="attributes">
+                <attribute name="string">Delivery method (leave empty)</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_picking_form" model="ir.ui.view">
+        <field name="name">stock.picking.form.contact</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="customer_contact" />
+            </xpath>
+            <xpath expr="//field[@name='origin']" position="after">
+                <field name="header_text" />
+            </xpath>
+            <xpath expr="//field[@name='picking_type_id']" position="after">
+                <field name="contract_number" />
+                <field name="container_count" />
+                <field name="dispatch_note_text" />
+            </xpath>
+        </field>
+    </record>
+</odoo>
