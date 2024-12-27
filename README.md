@@ -17,6 +17,7 @@ addon | version | maintainers | summary
 [stock_location_analytic_account](stock_location_analytic_account/) | 17.0.1.0.1 |  | Integrate stock location with analytic account
 [stock_location_auditlog_rules](stock_location_auditlog_rules/) | 17.0.1.0.0 |  | Adds audit log rules for stock.warehouse and stock.location
 [stock_location_excess_mark](stock_location_excess_mark/) | 17.0.1.1.0 |  | Select a stock location and mark it as of excess type
+[stock_picking_dispatch_fields](stock_picking_dispatch_fields/) | 17.0.1.0.0 |  | Add different fields to picking for Dispatch Note
 [stock_picking_move_lines_partner](stock_picking_move_lines_partner/) | 17.0.1.0.0 |  | Stock Picking Move Lines Partner
 [stock_picking_purchase_related_sale_order_customer](stock_picking_purchase_related_sale_order_customer/) | 17.0.1.0.0 |  | Get Sale Order Partner to Stock Picking from Purchase Order
 [stock_picking_sale_order_id](stock_picking_sale_order_id/) | 17.0.1.0.0 |  | Get Sale Order to Stock Picking from Purchase Order
