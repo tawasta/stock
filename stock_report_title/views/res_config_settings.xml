@@ -14,10 +14,17 @@
                 </setting>
 
                 <setting
-                    id="hide_delivery_slip_text"
+                    id="hide_delivery_slip_title"
                     help="Hide 'Delivery Slip' title on print"
                 >
                     <field name="hide_delivery_slip_title" />
+                </setting>
+
+                <setting
+                    id="hide_delivery_slip_text"
+                    help="Hide 'Delivery Slip:' text on print"
+                >
+                    <field name="hide_delivery_slip_text" />
                 </setting>
 
                 <setting

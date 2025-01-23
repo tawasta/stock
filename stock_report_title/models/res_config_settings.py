@@ -15,6 +15,11 @@ class ResConfigSettings(models.TransientModel):
         related="company_id.hide_delivery_slip_title",
         readonly=False,
     )
+    hide_delivery_slip_text = fields.Boolean(
+        string="Hide delivery slip text",
+        related="company_id.hide_delivery_slip_text",
+        readonly=False,
+    )
     hide_delivery_slip_report_name = fields.Boolean(
         string="Hide delivery slip report name",
         related="company_id.hide_delivery_slip_report_name",
