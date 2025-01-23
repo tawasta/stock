@@ -13,6 +13,10 @@ class ResCompany(models.Model):
         string="Hide delivery slip title",
         default=False,
     )
+    hide_delivery_slip_text = fields.Boolean(
+        string="Hide delivery slip text",
+        default=True,
+    )
     hide_delivery_slip_report_name = fields.Boolean(
         string="Hide delivery slip report name",
         default=False,
