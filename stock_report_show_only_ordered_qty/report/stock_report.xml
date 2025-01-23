@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_delivery_document" inherit_id="stock.report_delivery_document">
+        <xpath expr="//th[@name='th_sm_quantity']" position="attributes">
+            <attribute name="t-if">1 == 0</attribute>
+        </xpath>
+
+        <xpath expr="//span[@t-field='move.quantity']/.." position="attributes">
+            <attribute name="t-if">1 == 0</attribute>
+        </xpath>
+
+        <xpath expr="//th[@name='th_sm_ordered']//strong" position="attributes">
+            <attribute name="t-if">1 == 0</attribute>
+        </xpath>
+
+        <xpath expr="//th[@name='th_sm_ordered']//strong" position="after">
+            <strong>Quantity</strong>
+        </xpath>
+    </template>
+</odoo>
