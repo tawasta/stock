@@ -37,7 +37,7 @@ addon | version | maintainers | summary
 [stock_report_product_customer_code](stock_report_product_customer_code/) | 17.0.2.0.1 |  | Place Product Customer code to picking print
 [stock_report_scheduled_date_as_date_only](stock_report_scheduled_date_as_date_only/) | 17.0.1.0 |  | Stock Picking and Delivery Slip Report Scheduled Date as Date only
 [stock_report_show_only_ordered_qty](stock_report_show_only_ordered_qty/) | 17.0.1.0.0 |  | Show only the ordered quantity in delivery slip as 'Quantity'
-[stock_report_title](stock_report_title/) | 17.0.1.1.0 |  | Stock Picking and Delivery Slip Report Title
+[stock_report_title](stock_report_title/) | 17.0.1.1.1 |  | Stock Picking and Delivery Slip Report Title
 [stock_valuation_layer_archive](stock_valuation_layer_archive/) | 17.0.1.0.0 |  | Allows archiving inventory valuation records
 
 [//]: # (end addons)
