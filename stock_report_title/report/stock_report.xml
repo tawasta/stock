@@ -19,7 +19,12 @@
                 name="t-att-class"
             >'{}'.format('d-none' if o.company_id.hide_delivery_slip_report_name else '')</attribute>
         </xpath>
+    </template>
 
+    <template
+        id="report_delivery_document_element"
+        inherit_id="stock_report_element_sizes.report_delivery_document"
+    >
         <div id="stock_deliveryslip_informations" position="inside">
             <div
                 t-if="o.name and not o.company_id.hide_delivery_slip_text"
