@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0-20240126\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-25 05:56+0000\n"
-"PO-Revision-Date: 2024-09-25 09:00+0300\n"
+"POT-Creation-Date: 2025-01-23 10:07+0000\n"
+"PO-Revision-Date: 2025-01-23 12:09+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -16,6 +16,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
 "X-Generator: Poedit 3.0.1\n"
+
+#. module: stock_report_title
+#: model_terms:ir.ui.view,arch_db:stock_report_title.report_deliveryslip_title
+msgid ""
+"<span>\n"
+"                    <strong>Delivery Slip:</strong>\n"
+"                </span>"
+msgstr ""
+"<span>\n"
+"                    <strong>Lähete:</strong>\n"
+"                </span>"
 
 #. module: stock_report_title
 #: model:ir.model,name:stock_report_title.model_res_company
@@ -40,6 +51,11 @@ msgstr "Piilota 'Lähete' otsikko tulosteella"
 
 #. module: stock_report_title
 #: model_terms:ir.ui.view,arch_db:stock_report_title.res_config_settings_view_form
+msgid "Hide 'Delivery Slip:' text on print"
+msgstr "Piilota 'Lähete:' teksti tulosteella"
+
+#. module: stock_report_title
+#: model_terms:ir.ui.view,arch_db:stock_report_title.res_config_settings_view_form
 msgid "Hide 'Stock Picking' title on picking print"
 msgstr "Piilota 'Keräilylista' otsikko keräilylistalta"
 
@@ -48,6 +64,12 @@ msgstr "Piilota 'Keräilylista' otsikko keräilylistalta"
 #: model:ir.model.fields,field_description:stock_report_title.field_res_config_settings__hide_delivery_slip_report_name
 msgid "Hide delivery slip report name"
 msgstr "Piilota lähetteen nimi tulosteella"
+
+#. module: stock_report_title
+#: model:ir.model.fields,field_description:stock_report_title.field_res_company__hide_delivery_slip_text
+#: model:ir.model.fields,field_description:stock_report_title.field_res_config_settings__hide_delivery_slip_text
+msgid "Hide delivery slip text"
+msgstr "Piilota lähete teksti tulosteella"
 
 #. module: stock_report_title
 #: model:ir.model.fields,field_description:stock_report_title.field_res_company__hide_delivery_slip_title
