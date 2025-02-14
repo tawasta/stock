@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="vpicktree_scheduled_date" model="ir.ui.view">
+        <field name="name">stock.picking.tree.scheduled.date</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.vpicktree" />
+        <field name="arch" type="xml">
+            <field name="scheduled_date" position="attributes">
+                <attribute name="widget" />
+            </field>
+        </field>
+    </record>
+</odoo>
