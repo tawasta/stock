@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template
+        id="report_delivery_document_client"
+        inherit_id="sale_stock.report_delivery_document_inherit_sale_stock"
+    >
+        <xpath
+            expr="//div[@class='col-auto justify-content-end']"
+            position="attributes"
+        >
+            <attribute name="t-if">1 == 0</attribute>
+        </xpath>
+    </template>
+    <template
+        id="report_delivery_document"
+        inherit_id="stock_report_invoice_and_delivery_address.report_delivery_document"
+    >
+        <xpath expr="//div[@name='invoice_address']/div" position="after">
+            <span>Customer reference: </span>
+            <span t-field="o.customer_reference" />
+        </xpath>
+    </template>
+
+</odoo>

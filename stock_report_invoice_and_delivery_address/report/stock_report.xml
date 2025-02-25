@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_delivery_document" inherit_id="stock.report_delivery_document">
+        <xpath expr="//div[@name='div_outgoing_address']" position="attributes">
+            <attribute name="class" add="row" />
+            <attribute name="style" add="margin-bottom:20px; text-align:left;" />
+        </xpath>
+
+        <xpath expr="//div[@name='div_outgoing_address']/*[1]" position="before">
+            <div class="col-6">
+                <div name="invoice_address">
+                    <span><strong>INVOICE ADDRESS:</strong></span>
+                    <t t-if="o.sudo().sale_id.partner_invoice_id">
+                        <div
+                            t-field="o.sudo().sale_id.partner_invoice_id"
+                            t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}'
+                        />
+                    </t>
+                </div>
+            </div>
+        </xpath>
+
+        <xpath
+            expr="//div[@name='outgoing_delivery_address']/span/strong"
+            position="attributes"
+        >
+            <attribute name="t-esc">'DELIVERY ADDRESS:'</attribute>
+        </xpath>
+
+    </template>
+</odoo>

@@ -10,7 +10,7 @@ class StockPicking(models.Model):
         carrier_id = vals.get("carrier_id", False)
         carrier_id = self.env["delivery.carrier"].browse(carrier_id)
 
-        for move in self.move_lines:
+        for move in self.move_ids:
             move.carrier_id = carrier_id
 
         return res
