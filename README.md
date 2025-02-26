@@ -21,6 +21,7 @@ addon | version | maintainers | summary
 [stock_move_carrier_in_view_and_filter](stock_move_carrier_in_view_and_filter/) | 17.0.1.0.0 |  | Carrier info added to stock move list view and as a filter
 [stock_package_sticker](stock_package_sticker/) | 17.0.1.0.0 |  | Print Package sticker from pickings
 [stock_picking_bypass_reservation](stock_picking_bypass_reservation/) | 17.0.1.0.0 |  | Stock Picking Bypass Reservation
+[stock_picking_customer_reference](stock_picking_customer_reference/) | 17.0.1.0.0 |  | Stock Picking Customer Reference
 [stock_picking_dispatch_fields](stock_picking_dispatch_fields/) | 17.0.1.0.0 |  | Add different fields to picking for Dispatch Note
 [stock_picking_move_lines_partner](stock_picking_move_lines_partner/) | 17.0.1.0.0 |  | Stock Picking Move Lines Partner
 [stock_picking_purchase_related_sale_order_customer](stock_picking_purchase_related_sale_order_customer/) | 17.0.1.0.0 |  | Get Sale Order Partner to Stock Picking from Purchase Order
@@ -32,8 +33,10 @@ addon | version | maintainers | summary
 [stock_product_qty_available_unreserved](stock_product_qty_available_unreserved/) | 17.0.1.0.0 |  | Add unreserved available (on hand - reserved)
 [stock_report_customer_address](stock_report_customer_address/) | 17.0.1.0.0 |  | Stock Report Customer Address
 [stock_report_customer_reference](stock_report_customer_reference/) | 17.0.1.0.0 |  | Stock Report Customer Reference
+[stock_report_customer_reference_under_address](stock_report_customer_reference_under_address/) | 17.0.1.0.0 |  | Customer Reference under address
 [stock_report_date_done](stock_report_date_done/) | 17.0.1.0.0 |  | Stock Picking Report Date of Transfer
 [stock_report_element_sizes](stock_report_element_sizes/) | 17.0.1.0.1 |  | Stock Report element size changes
+[stock_report_invoice_and_delivery_address](stock_report_invoice_and_delivery_address/) | 17.0.1.0.0 |  | Adds Invoice and Delivery addresses to delivery slip
 [stock_report_kit_quantity](stock_report_kit_quantity/) | 17.0.1.0.0 |  | Show ordered and delivered quantity of kits in Delivery slip
 [stock_report_our_reference](stock_report_our_reference/) | 17.0.1.0.2 |  | Stock Picking and Delivery Slip Report Our Reference
 [stock_report_picking_product_receipt_description](stock_report_picking_product_receipt_description/) | 17.0.1.0.0 |  | Show 'Description for receipts' text on Picking list
