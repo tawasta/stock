@@ -15,6 +15,7 @@ addon | version | maintainers | summary
 [stock_batch_transfer_carrier_and_tracking_ref](stock_batch_transfer_carrier_and_tracking_ref/) | 17.0.1.1.1 |  | Adds Carrier and Tracking reference to batch transfer
 [stock_batch_transfer_contact_and_delivery_address](stock_batch_transfer_contact_and_delivery_address/) | 17.0.1.0.0 |  | Adds a default delivery address and contact to batch transfer
 [stock_dispatch_note_report_template](stock_dispatch_note_report_template/) | 17.0.1.0.0 |  | Adds weights, dates and clickable print is shown as 'Dispatch Note'
+[stock_hide_packing_buttons](stock_hide_packing_buttons/) | 17.0.1.0.0 |  | Hides "put in pack" buttons
 [stock_location_analytic_account](stock_location_analytic_account/) | 17.0.1.0.1 |  | Integrate stock location with analytic account
 [stock_location_auditlog_rules](stock_location_auditlog_rules/) | 17.0.1.0.0 |  | Adds audit log rules for stock.warehouse and stock.location
 [stock_location_excess_mark](stock_location_excess_mark/) | 17.0.1.1.0 |  | Select a stock location and mark it as of excess type
@@ -27,7 +28,9 @@ addon | version | maintainers | summary
 [stock_picking_purchase_related_sale_order_customer](stock_picking_purchase_related_sale_order_customer/) | 17.0.1.0.0 |  | Get Sale Order Partner to Stock Picking from Purchase Order
 [stock_picking_sale_order_id](stock_picking_sale_order_id/) | 17.0.1.0.0 |  | Get Sale Order to Stock Picking from Purchase Order
 [stock_picking_source_document_link](stock_picking_source_document_link/) | 17.0.1.0.0 |  | Add link to source document
+[stock_picking_tree_date_deadline_as_date](stock_picking_tree_date_deadline_as_date/) | 17.0.1.0.0 |  | Show date deadline as date in stock picking tree
 [stock_picking_tree_date_done](stock_picking_tree_date_done/) | 17.0.1.0.0 |  | Stock Picking date done in tree view
+[stock_picking_tree_effective_date](stock_picking_tree_effective_date/) | 17.0.1.0.0 |  | Adds effective date from Sale Order to picking list view
 [stock_picking_tree_scheduled_date_as_date](stock_picking_tree_scheduled_date_as_date/) | 17.0.1.0.0 |  | Show scheduled date as date in stock picking tree
 [stock_picking_view_vendor_product](stock_picking_view_vendor_product/) | 17.0.1.0.0 |  | Vendor Product Name and Code are added to Picking form view
 [stock_product_qty_available_unreserved](stock_product_qty_available_unreserved/) | 17.0.1.0.0 |  | Add unreserved available (on hand - reserved)
