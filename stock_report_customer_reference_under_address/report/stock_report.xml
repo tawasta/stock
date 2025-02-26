@@ -11,14 +11,16 @@
             <attribute name="t-if">1 == 0</attribute>
         </xpath>
     </template>
+
     <template
         id="report_delivery_document"
         inherit_id="stock_report_invoice_and_delivery_address.report_delivery_document"
     >
-        <xpath expr="//div[@name='invoice_address']/div" position="after">
-            <span>Customer reference: </span>
-            <span t-field="o.customer_reference" />
+        <xpath expr="//div[@name='invoice_address']" position="inside">
+            <div>
+                <span>Customer reference: </span>
+                <span t-field="o.customer_reference" />
+            </div>
         </xpath>
     </template>
-
 </odoo>
