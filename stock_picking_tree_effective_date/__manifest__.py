@@ -19,23 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Stock Dispatch Note Template",
-    "summary": "Adds weights, dates and clickable print is shown as 'Dispatch Note'",
-    "version": "17.0.1.0.1",
-    "category": "Reporting",
+    "name": "Stock Picking - Effective Date",
+    "summary": "Adds effective date from Sale Order to picking list view",
+    "version": "17.0.1.0.0",
+    "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        "stock_delivery",
-        "web_report_sfs",
-        "stock_report_element_sizes",
-        "stock_report_title",
-    ],
-    "data": [
-        "report/report_stock_dispatch_main.xml",
-        "report/stock_report_view.xml",
-    ],
+    "depends": ["sale", "stock"],
+    "data": ["views/stock_picking.xml"],
 }

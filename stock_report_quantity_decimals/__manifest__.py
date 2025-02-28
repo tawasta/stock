@@ -19,23 +19,20 @@
 ##############################################################################
 
 {
-    "name": "Stock Dispatch Note Template",
-    "summary": "Adds weights, dates and clickable print is shown as 'Dispatch Note'",
-    "version": "17.0.1.0.1",
+    "name": "Stock Report Quantity Decimals",
+    "summary": "Modifications to Stock Reports' decimal precision",
+    "version": "17.0.1.0.0",
     "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        "stock_delivery",
-        "web_report_sfs",
-        "stock_report_element_sizes",
-        "stock_report_title",
-    ],
+    "depends": ["stock"],
     "data": [
-        "report/report_stock_dispatch_main.xml",
-        "report/stock_report_view.xml",
+        "data/decimal_precision.xml",
+        "report/stock_report_deliveryslip.xml",
+        "report/stock_report_picking.xml",
+        "views/res_config_settings.xml",
     ],
 }

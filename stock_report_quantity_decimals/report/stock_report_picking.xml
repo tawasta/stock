@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_picking" inherit_id="stock.report_picking">
+        <xpath expr="//td" position="inside">
+            <span
+                t-if="o.state != 'done'"
+                t-field="ml.quantity"
+                t-options="{'precision': o.company_id.stock_report_decimal_precision}"
+            />
+            <span
+                t-if="o.state == 'done'"
+                t-field="ml.quantity_done"
+                t-options="{'precision': o.company_id.stock_report_decimal_precision}"
+            />
+            <span t-field="ml.product_uom_id" groups="uom.group_uom">units</span>
+            <span t-if="ml.move_id.product_packaging_id">
+                <span t-if="o.state != 'done'">
+                    (<span
+                        t-field="ml.product_packaging_qty"
+                        t-options='{"widget": "integer"}'
+                    /> <span t-field="ml.move_id.product_packaging_id.name" />)
+                </span>
+                <span t-if="o.state == 'done'">
+                    (<span
+                        t-field="ml.product_packaging_qty"
+                        t-options='{"widget": "integer"}'
+                    /> <span t-field="ml.move_id.product_packaging_id.name" />)
+                </span>
+            </span>
+        </xpath>
+        <!--<span t-if="o.state != 'done'" position="attributes">
+            <attribute
+                name="t-options"
+            >{'precision': o.company_id.stock_report_decimal_precision}</attribute>
+        </span>
+        <span t-if="o.state == 'done'" position="attributes">
+            <attribute
+                name="t-options"
+            >{'precision': o.company_id.stock_report_decimal_precision}</attribute>
+        </span>-->
+    </template>
+</odoo>

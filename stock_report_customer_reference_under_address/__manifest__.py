@@ -19,9 +19,9 @@
 ##############################################################################
 
 {
-    "name": "Stock Dispatch Note Template",
-    "summary": "Adds weights, dates and clickable print is shown as 'Dispatch Note'",
-    "version": "17.0.1.0.1",
+    "name": "Stock Report Customer Reference",
+    "summary": "Customer Reference under address",
+    "version": "17.0.1.0.0",
     "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
@@ -29,13 +29,9 @@
     "application": False,
     "installable": True,
     "depends": [
-        "stock_delivery",
-        "web_report_sfs",
-        "stock_report_element_sizes",
-        "stock_report_title",
+        "sale_stock",
+        "stock_report_invoice_and_delivery_address",
+        "stock_picking_customer_reference",
     ],
-    "data": [
-        "report/report_stock_dispatch_main.xml",
-        "report/stock_report_view.xml",
-    ],
+    "data": ["report/stock_report.xml"],
 }

@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2024 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,23 +19,18 @@
 ##############################################################################
 
 {
-    "name": "Stock Dispatch Note Template",
-    "summary": "Adds weights, dates and clickable print is shown as 'Dispatch Note'",
-    "version": "17.0.1.0.1",
-    "category": "Reporting",
+    "name": "Carrier info added to stock move list view and as a filter",
+    "summary": "Carrier info added to stock move list view and as a filter",
+    "version": "17.0.1.0.0",
+    "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
-    "author": "Tawasta",
+    "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        "stock_delivery",
-        "web_report_sfs",
-        "stock_report_element_sizes",
-        "stock_report_title",
-    ],
+    "depends": ["delivery", "stock", "queue_job"],
     "data": [
-        "report/report_stock_dispatch_main.xml",
-        "report/stock_report_view.xml",
+        "data/ir_cron.xml",
+        "views/stock_move.xml",
     ],
 }

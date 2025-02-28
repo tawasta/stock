@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2021 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,23 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Stock Dispatch Note Template",
-    "summary": "Adds weights, dates and clickable print is shown as 'Dispatch Note'",
-    "version": "17.0.1.0.1",
-    "category": "Reporting",
+    "name": "Stock Picking - Date Done in Tree View",
+    "summary": "Stock Picking date done in tree view",
+    "version": "17.0.1.0.0",
+    "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
-    "author": "Tawasta",
+    "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        "stock_delivery",
-        "web_report_sfs",
-        "stock_report_element_sizes",
-        "stock_report_title",
-    ],
-    "data": [
-        "report/report_stock_dispatch_main.xml",
-        "report/stock_report_view.xml",
-    ],
+    "depends": ["stock"],
+    "data": ["views/stock_picking.xml"],
 }
