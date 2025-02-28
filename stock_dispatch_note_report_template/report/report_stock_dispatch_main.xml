@@ -17,11 +17,7 @@
             <td id="header_table_tr_td_origin" t-if="o.origin" class="text-center">
                 <span t-field="o.origin" />
             </td>
-            <td
-                id="header_table_tr_td_date"
-                name="td_sched_date"
-                class="text-center"
-            >
+            <td id="header_table_tr_td_date" name="td_sched_date" class="text-center">
                 <t id="doc_state_is_done" t-if="o.state == 'done'">
                     <span t-field="o.date_done" />
                 </t>

@@ -14,7 +14,7 @@ addon | version | maintainers | summary
 [stock_auditlog_rules](stock_auditlog_rules/) | 17.0.1.0.0 |  | Adds audit log rules for stock.warehouse and stock.location
 [stock_batch_transfer_carrier_and_tracking_ref](stock_batch_transfer_carrier_and_tracking_ref/) | 17.0.1.1.1 |  | Adds Carrier and Tracking reference to batch transfer
 [stock_batch_transfer_contact_and_delivery_address](stock_batch_transfer_contact_and_delivery_address/) | 17.0.1.0.0 |  | Adds a default delivery address and contact to batch transfer
-[stock_dispatch_note_report_template](stock_dispatch_note_report_template/) | 17.0.1.0.0 |  | Adds weights, dates and clickable print is shown as 'Dispatch Note'
+[stock_dispatch_note_report_template](stock_dispatch_note_report_template/) | 17.0.1.0.1 |  | Adds weights, dates and clickable print is shown as 'Dispatch Note'
 [stock_hide_packing_buttons](stock_hide_packing_buttons/) | 17.0.1.0.0 |  | Hides "put in pack" buttons
 [stock_location_analytic_account](stock_location_analytic_account/) | 17.0.1.0.1 |  | Integrate stock location with analytic account
 [stock_location_auditlog_rules](stock_location_auditlog_rules/) | 17.0.1.0.0 |  | Adds audit log rules for stock.warehouse and stock.location
@@ -49,6 +49,8 @@ addon | version | maintainers | summary
 [stock_report_scheduled_date_as_date_only](stock_report_scheduled_date_as_date_only/) | 17.0.1.0 |  | Stock Picking and Delivery Slip Report Scheduled Date as Date only
 [stock_report_show_only_ordered_qty](stock_report_show_only_ordered_qty/) | 17.0.1.0.0 |  | Show only the ordered quantity in delivery slip as 'Quantity'
 [stock_report_title](stock_report_title/) | 17.0.1.1.1 |  | Stock Picking and Delivery Slip Report Title
+[stock_report_week_of_shipment](stock_report_week_of_shipment/) | 17.0.1.0.0 |  | Add week of shipment to Picking report
+[stock_report_year_of_shipment](stock_report_year_of_shipment/) | 17.0.1.0.0 |  | Add year of shipment to delivery slip
 [stock_valuation_layer_archive](stock_valuation_layer_archive/) | 17.0.1.0.0 |  | Allows archiving inventory valuation records
 
 [//]: # (end addons)
