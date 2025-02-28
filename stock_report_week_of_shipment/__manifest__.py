@@ -19,23 +19,18 @@
 ##############################################################################
 
 {
-    "name": "Stock Dispatch Note Template",
-    "summary": "Adds weights, dates and clickable print is shown as 'Dispatch Note'",
-    "version": "17.0.1.0.1",
+    "name": "Picking Report - Week of Shipment",
+    "summary": "Add week of shipment to Picking report",
+    "version": "17.0.1.0.0",
     "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        "stock_delivery",
-        "web_report_sfs",
-        "stock_report_element_sizes",
-        "stock_report_title",
-    ],
+    "depends": ["sale_order_week_of_shipment", "stock_report_element_sizes"],
     "data": [
-        "report/report_stock_dispatch_main.xml",
-        "report/stock_report_view.xml",
+        "report/delivery_slip.xml",
+        "report/stock_report.xml",
     ],
 }
