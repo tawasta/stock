@@ -25,6 +25,7 @@ addon | version | maintainers | summary
 [stock_picking_customer_reference](stock_picking_customer_reference/) | 17.0.1.0.0 |  | Stock Picking Customer Reference
 [stock_picking_dispatch_fields](stock_picking_dispatch_fields/) | 17.0.1.0.0 |  | Add different fields to picking for Dispatch Note
 [stock_picking_move_lines_partner](stock_picking_move_lines_partner/) | 17.0.1.0.0 |  | Stock Picking Move Lines Partner
+[stock_picking_override_values](stock_picking_override_values/) | 17.0.1.0.0 |  | Allow overriding new picking values with system parameters
 [stock_picking_purchase_related_sale_order_customer](stock_picking_purchase_related_sale_order_customer/) | 17.0.1.0.0 |  | Get Sale Order Partner to Stock Picking from Purchase Order
 [stock_picking_sale_order_id](stock_picking_sale_order_id/) | 17.0.1.0.0 |  | Get Sale Order to Stock Picking from Purchase Order
 [stock_picking_source_document_link](stock_picking_source_document_link/) | 17.0.1.0.0 |  | Add link to source document
