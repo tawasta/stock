@@ -52,6 +52,7 @@ addon | version | maintainers | summary
 [stock_report_title](stock_report_title/) | 17.0.1.1.1 |  | Stock Picking and Delivery Slip Report Title
 [stock_report_week_of_shipment](stock_report_week_of_shipment/) | 17.0.1.0.0 |  | Add week of shipment to Picking report
 [stock_report_year_of_shipment](stock_report_year_of_shipment/) | 17.0.1.0.0 |  | Add year of shipment to delivery slip
+[stock_see_product_forecasted_with_sudo](stock_see_product_forecasted_with_sudo/) | 17.0.1.0.0 |  | Form the Product Forecast Report with sudo rights
 [stock_valuation_layer_archive](stock_valuation_layer_archive/) | 17.0.1.0.0 |  | Allows archiving inventory valuation records
 
 [//]: # (end addons)
