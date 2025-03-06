@@ -1,0 +1,53 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_report_label_product_barcode
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20241118\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-06 10:59+0000\n"
+"PO-Revision-Date: 2025-03-06 10:59+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_report_label_product_barcode
+#: model:ir.actions.report,print_report_name:stock_report_label_product_barcode.report_product_product_label_barcode_as_barcode
+msgid "'Products Labels - %s' % (object.name)"
+msgstr ""
+
+#. module: stock_report_label_product_barcode
+#: model:ir.model,name:stock_report_label_product_barcode.model_product_label_layout
+msgid "Choose the sheet layout to print the labels"
+msgstr "Valitse arkin asettelu tarrojen tulostamista varten"
+
+#. module: stock_report_label_product_barcode
+#: model:ir.model.fields,field_description:stock_report_label_product_barcode.field_product_label_layout__print_format
+msgid "Format"
+msgstr "Muotoilu"
+
+#. module: stock_report_label_product_barcode
+#: model:ir.actions.report,name:stock_report_label_product_barcode.report_product_product_label_barcode_as_barcode
+msgid "Product Label - Barcode field as Barcode"
+msgstr "Tuotetarra viivakoodikenttä viivakoodina"
+
+#. module: stock_report_label_product_barcode
+#: model:ir.model,name:stock_report_label_product_barcode.model_report_stock_report_label_product_barcode_barcode_as_barcode
+msgid "Product Label Report: Barcode as Barcode"
+msgstr "Tuotetarraraportti: viivakoodi-kenttä viivakoodina"
+
+#. module: stock_report_label_product_barcode
+#: model:ir.model.fields.selection,name:stock_report_label_product_barcode.selection__product_label_layout__print_format__barcode_as_barcode
+msgid "Product Sticker: Product Barcode"
+msgstr "Tuotetarra viivakoodilla"
+
+#. module: stock_report_label_product_barcode
+#. odoo-python
+#: code:addons/stock_report_label_product_barcode/reports/product_label_report.py:0
+#, python-format
+msgid "Product model not defined, Please contact your administrator."
+msgstr "Tuotemallia ei määritetty, ota yhteyttä järjestelmänvalvojaan."

@@ -1,0 +1,17 @@
+.o_label_sheet {
+    &.o_label_ean_as_barcode {
+        width: 76mm;
+        height: 51mm;
+    }
+
+    .o_label_ean_as_barcode_product_name_area {
+        height: 23mm;
+        padding-top: 3mm;
+        background-color: #d3d3d3;
+    }
+
+    .o_label_ean_as_barcode_barcode_area {
+        height: 28mm;
+        padding-top: 3mm;
+    }
+}
