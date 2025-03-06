@@ -2,13 +2,13 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-===================================
-Stock: Product Labels with EAN code
-===================================
+==================================
+Stock: Product Labels with Barcode
+==================================
 
-* Adds EAN Code field to product variants
-* Adds a new label type "Product EAN as Barcode" to the Print Label wizard
-  that prints a customized label with a name, EAN as barcode, and EAN as text.
+* Adds new label type "Product Sticker: Product Barcode" to the Print Label wizard
+  that prints a customized label with a name, barcode field contents as barcode, 
+  and barcode field contents as text
 
 Configuration
 =============

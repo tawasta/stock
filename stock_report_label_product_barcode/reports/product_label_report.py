@@ -7,9 +7,9 @@ import logging
 _logger = logging.getLogger(__name__)
 
 
-class ReportProductTemplateLabelEanAsBarcode(models.AbstractModel):
-    _name = "report.stock_report_label_product_ean_code.ean_as_barcode"
-    _description = "Product Label Report: EAN as Barcode"
+class ReportProductTemplateLabelBarcodeAsBarcode(models.AbstractModel):
+    _name = "report.stock_report_label_product_barcode.barcode_as_barcode"
+    _description = "Product Label Report: Barcode as Barcode"
 
     def _get_report_values(self, docids, data):
         """ """
@@ -18,7 +18,7 @@ class ReportProductTemplateLabelEanAsBarcode(models.AbstractModel):
             data.get("layout_wizard")
         )
 
-        # Only allow printing ean code labels for variants
+        # Only allow printing barcode labels for variants
         if data.get("active_model") == "product.product":
             Product = self.env["product.product"].with_context(
                 display_default_code=False
@@ -44,7 +44,10 @@ class ReportProductTemplateLabelEanAsBarcode(models.AbstractModel):
         quantity_by_product = defaultdict(list)
         for product in products:
             q = qty_by_product_in[str(product.id)]
-            quantity_by_product[product].append((product.ean_code, q))
+            quantity_by_product[product].append((product.barcode, q))
+
+        _logger.info("qty by product ================")
+        _logger.info(quantity_by_product)
 
         return {
             "quantity": quantity_by_product,
