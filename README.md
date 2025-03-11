@@ -45,6 +45,7 @@ addon | version | maintainers | summary
 [stock_report_label_product_barcode](stock_report_label_product_barcode/) | 17.0.1.0.0 |  | Print Product Labels with barcodes
 [stock_report_label_product_ean_code](stock_report_label_product_ean_code/) | 17.0.1.0.0 |  | Print Product Labels with EAN codes
 [stock_report_our_reference](stock_report_our_reference/) | 17.0.1.0.2 |  | Stock Picking and Delivery Slip Report Our Reference
+[stock_report_picking_header_shrink](stock_report_picking_header_shrink/) | 17.0.1.0.0 |  | Decrease font size of stock picking print header section
 [stock_report_picking_product_receipt_description](stock_report_picking_product_receipt_description/) | 17.0.1.0.0 |  | Show 'Description for receipts' text on Picking list
 [stock_report_picking_vendor_product](stock_report_picking_vendor_product/) | 17.0.1.1.1 |  | Vendor Product name and code for Picking list
 [stock_report_product_customer_code](stock_report_product_customer_code/) | 17.0.2.0.1 |  | Place Product Customer code to picking print
