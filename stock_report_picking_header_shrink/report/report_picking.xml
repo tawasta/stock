@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_picking" inherit_id="stock.report_picking">
+        <!-- targets the order + status + scheduled date sections-->
+        <xpath expr="//div[@name='div_origin']/parent::div" position="attributes">
+            <attribute name="style">font-size: 0.9rem;</attribute>
+        </xpath>
+    </template>
+</odoo>
