@@ -27,6 +27,7 @@ addon | version | maintainers | summary
 [stock_picking_move_lines_partner](stock_picking_move_lines_partner/) | 17.0.1.0.0 |  | Stock Picking Move Lines Partner
 [stock_picking_override_values](stock_picking_override_values/) | 17.0.1.0.0 |  | Allow overriding new picking values with system parameters
 [stock_picking_purchase_related_sale_order_customer](stock_picking_purchase_related_sale_order_customer/) | 17.0.1.0.0 |  | Get Sale Order Partner to Stock Picking from Purchase Order
+[stock_picking_reserve_chosen_moves](stock_picking_reserve_chosen_moves/) | 17.0.1.0.0 |  | Select manually the moves to be reserved on deliveries
 [stock_picking_sale_order_id](stock_picking_sale_order_id/) | 17.0.1.0.0 |  | Get Sale Order to Stock Picking from Purchase Order
 [stock_picking_source_document_link](stock_picking_source_document_link/) | 17.0.1.0.0 |  | Add link to source document
 [stock_picking_tree_date_deadline_as_date](stock_picking_tree_date_deadline_as_date/) | 17.0.1.0.0 |  | Show date deadline as date in stock picking tree
@@ -34,6 +35,7 @@ addon | version | maintainers | summary
 [stock_picking_tree_effective_date](stock_picking_tree_effective_date/) | 17.0.1.0.0 |  | Adds effective date from Sale Order to picking list view
 [stock_picking_tree_scheduled_date_as_date](stock_picking_tree_scheduled_date_as_date/) | 17.0.1.0.0 |  | Show scheduled date as date in stock picking tree
 [stock_picking_view_vendor_product](stock_picking_view_vendor_product/) | 17.0.1.0.0 |  | Vendor Product Name and Code are added to Picking form view
+[stock_picking_volume_in_tree_and_prints](stock_picking_volume_in_tree_and_prints/) | 17.0.1.0.0 |  | Picking's Volume is shown in list view and picking prints
 [stock_product_qty_available_unreserved](stock_product_qty_available_unreserved/) | 17.0.1.0.0 |  | Add unreserved available (on hand - reserved)
 [stock_report_customer_address](stock_report_customer_address/) | 17.0.1.0.0 |  | Stock Report Customer Address
 [stock_report_customer_reference](stock_report_customer_reference/) | 17.0.1.0.0 |  | Stock Report Customer Reference
