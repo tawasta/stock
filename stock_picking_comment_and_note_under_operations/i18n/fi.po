@@ -1,0 +1,37 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_picking_comment_and_note_under_operations
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0-20230925\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-29 11:54+0000\n"
+"PO-Revision-Date: 2024-05-29 11:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_picking_comment_and_note_under_operations
+#: model_terms:ir.ui.view,arch_db:stock_picking_comment_and_note_under_operations.view_picking_form
+msgid "Add a comment that will be printed on the Delivery Slip"
+msgstr "Lisää kommentti, joka näytetään lähetteellä"
+
+#. module: stock_picking_comment_and_note_under_operations
+#: model_terms:ir.ui.view,arch_db:stock_picking_comment_and_note_under_operations.view_picking_form
+msgid ""
+"Add an internal note that will be printed on the Picking Operations sheet"
+msgstr "Lisää sisäinen viesti, joka näytetään keräilylistalla"
+
+#. module: stock_picking_comment_and_note_under_operations
+#: model_terms:ir.ui.view,arch_db:stock_picking_comment_and_note_under_operations.view_picking_form
+msgid "Comment (printed on the Delivery Slip)"
+msgstr "Kommentti (näytetään lähetteellä)"
+
+#. module: stock_picking_comment_and_note_under_operations
+#: model_terms:ir.ui.view,arch_db:stock_picking_comment_and_note_under_operations.view_picking_form
+msgid "Note (internal, for Picking Operations sheet)"
+msgstr "Sisäinen viesti (näytetään keräilylistalla)"

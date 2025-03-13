@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_picking" inherit_id="stock.report_picking">
+        <h1 t-field="o.name" position="after">
+            <p t-if="o.comment" t-field="o.comment" />
+        </h1>
+    </template>
+</odoo>
