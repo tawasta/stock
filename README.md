@@ -20,6 +20,7 @@ addon | version | maintainers | summary
 [stock_location_auditlog_rules](stock_location_auditlog_rules/) | 17.0.1.0.0 |  | Adds audit log rules for stock.warehouse and stock.location
 [stock_location_excess_mark](stock_location_excess_mark/) | 17.0.1.1.0 |  | Select a stock location and mark it as of excess type
 [stock_move_carrier_in_view_and_filter](stock_move_carrier_in_view_and_filter/) | 17.0.1.0.0 |  | Carrier info added to stock move list view and as a filter
+[stock_move_search](stock_move_search/) | 17.0.1.0.0 |  | Additional Search options for Stock Move
 [stock_package_sticker](stock_package_sticker/) | 17.0.1.0.0 |  | Print Package sticker from pickings
 [stock_picking_bypass_reservation](stock_picking_bypass_reservation/) | 17.0.1.0.0 |  | Stock Picking Bypass Reservation
 [stock_picking_customer_reference](stock_picking_customer_reference/) | 17.0.1.0.0 |  | Stock Picking Customer Reference
