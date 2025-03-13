@@ -14,16 +14,19 @@ addon | version | maintainers | summary
 [stock_auditlog_rules](stock_auditlog_rules/) | 17.0.1.0.0 |  | Adds audit log rules for stock.warehouse and stock.location
 [stock_batch_transfer_carrier_and_tracking_ref](stock_batch_transfer_carrier_and_tracking_ref/) | 17.0.1.1.1 |  | Adds Carrier and Tracking reference to batch transfer
 [stock_batch_transfer_contact_and_delivery_address](stock_batch_transfer_contact_and_delivery_address/) | 17.0.1.0.0 |  | Adds a default delivery address and contact to batch transfer
+[stock_disable_invoice_shipping_on_delivery](stock_disable_invoice_shipping_on_delivery/) | 17.0.1.0.0 |  | Disable picking auto-generated delivery SO lines
 [stock_dispatch_note_report_template](stock_dispatch_note_report_template/) | 17.0.1.0.1 |  | Adds weights, dates and clickable print is shown as 'Dispatch Note'
 [stock_hide_packing_buttons](stock_hide_packing_buttons/) | 17.0.1.0.0 |  | Hides "put in pack" buttons
 [stock_location_analytic_account](stock_location_analytic_account/) | 17.0.1.0.1 |  | Integrate stock location with analytic account
 [stock_location_auditlog_rules](stock_location_auditlog_rules/) | 17.0.1.0.0 |  | Adds audit log rules for stock.warehouse and stock.location
 [stock_location_excess_mark](stock_location_excess_mark/) | 17.0.1.1.0 |  | Select a stock location and mark it as of excess type
 [stock_move_carrier_in_view_and_filter](stock_move_carrier_in_view_and_filter/) | 17.0.1.0.0 |  | Carrier info added to stock move list view and as a filter
+[stock_move_search](stock_move_search/) | 17.0.1.0.0 |  | Additional Search options for Stock Move
 [stock_package_sticker](stock_package_sticker/) | 17.0.1.0.0 |  | Print Package sticker from pickings
 [stock_picking_bypass_reservation](stock_picking_bypass_reservation/) | 17.0.1.0.0 |  | Stock Picking Bypass Reservation
 [stock_picking_comment](stock_picking_comment/) | 17.0.1.0.0 |  | External comment for stock picking Delivery Slip and Picking Operations
 [stock_picking_comment_and_note_under_operations](stock_picking_comment_and_note_under_operations/) | 17.0.1.0.0 |  | Moves the two freetext fields under the 'Operations' tab on the picking form
+[stock_picking_country_group_text](stock_picking_country_group_text/) | 17.0.1.0.0 |  | Get stock picking reports' text from country groups setting
 [stock_picking_customer_reference](stock_picking_customer_reference/) | 17.0.1.0.0 |  | Stock Picking Customer Reference
 [stock_picking_dispatch_fields](stock_picking_dispatch_fields/) | 17.0.1.0.0 |  | Add different fields to picking for Dispatch Note
 [stock_picking_move_lines_partner](stock_picking_move_lines_partner/) | 17.0.1.0.0 |  | Stock Picking Move Lines Partner
