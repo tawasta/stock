@@ -18,6 +18,6 @@ class StockPicking(models.Model):
             lambda move: move.state not in ("draft", "cancel", "done")
         )
         for move in moves:
-            if move.product_uom_qty == move.reserved_availability:
+            if move.product_uom_qty == move.quantity:
                 move.move_has_been_reserved = True
         return res
