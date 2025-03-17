@@ -4,7 +4,7 @@ from odoo import fields, models
 class StockMove(models.Model):
     _inherit = "stock.move"
 
-    move_has_been_reserved = fields.Boolean(default=False)
+    move_has_been_reserved = fields.Boolean(default=False, copy=False)
 
     def reserve_this_move(self):
         """Mark this move as reserved."""
