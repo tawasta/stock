@@ -20,18 +20,6 @@
                 <field name="mo_has_been_created" column_invisible="True" />
                 <field name="manufacturing_order_id" />
             </xpath>
-
-<!--             <xpath -->
-<!--                 expr="//field[@name='move_ids_without_package']//form//field[@name='description_picking']/.." -->
-<!--                 position="after" -->
-<!--             > -->
-<!--                 <group name="manufacturing_order"> -->
-<!--                     <group string="Manufacturing Order"> -->
-<!--                         <field name="manufacturing_order_id" /> -->
-<!--                         <field name="mo_state" /> -->
-<!--                     </group> -->
-<!--                 </group> -->
-<!--             </xpath> -->
         </field>
     </record>
 
