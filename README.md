@@ -27,6 +27,7 @@ addon | version | maintainers | summary
 [stock_picking_comment](stock_picking_comment/) | 17.0.1.0.0 |  | External comment for stock picking Delivery Slip and Picking Operations
 [stock_picking_comment_and_note_under_operations](stock_picking_comment_and_note_under_operations/) | 17.0.1.0.0 |  | Moves the two freetext fields under the 'Operations' tab on the picking form
 [stock_picking_country_group_text](stock_picking_country_group_text/) | 17.0.1.0.0 |  | Get stock picking reports' text from country groups setting
+[stock_picking_create_manufacturing_order_from_move](stock_picking_create_manufacturing_order_from_move/) | 17.0.1.0.0 |  | Create Manufacturing order from stock picking move
 [stock_picking_customer_reference](stock_picking_customer_reference/) | 17.0.1.0.0 |  | Stock Picking Customer Reference
 [stock_picking_dispatch_fields](stock_picking_dispatch_fields/) | 17.0.1.0.0 |  | Add different fields to picking for Dispatch Note
 [stock_picking_move_lines_partner](stock_picking_move_lines_partner/) | 17.0.1.0.0 |  | Stock Picking Move Lines Partner
