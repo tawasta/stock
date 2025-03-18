@@ -47,6 +47,7 @@ addon | version | maintainers | summary
 [stock_picking_view_vendor_product](stock_picking_view_vendor_product/) | 17.0.1.0.0 |  | Vendor Product Name and Code are added to Picking form view
 [stock_picking_volume_in_tree_and_prints](stock_picking_volume_in_tree_and_prints/) | 17.0.1.0.0 |  | Picking's Volume is shown in list view and picking prints
 [stock_product_qty_available_unreserved](stock_product_qty_available_unreserved/) | 17.0.1.0.0 |  | Add unreserved available (on hand - reserved)
+[stock_report_carrier_transportation_mode](stock_report_carrier_transportation_mode/) | 17.0.1.0.0 |  | Delivery slip Carrier – Mode of transportation
 [stock_report_customer_address](stock_report_customer_address/) | 17.0.1.0.0 |  | Stock Report Customer Address
 [stock_report_customer_reference](stock_report_customer_reference/) | 17.0.1.0.0 |  | Stock Report Customer Reference
 [stock_report_customer_reference_under_address](stock_report_customer_reference_under_address/) | 17.0.1.0.0 |  | Customer Reference under address
