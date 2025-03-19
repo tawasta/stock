@@ -17,6 +17,7 @@ addon | version | maintainers | summary
 [stock_disable_invoice_shipping_on_delivery](stock_disable_invoice_shipping_on_delivery/) | 17.0.1.0.0 |  | Disable picking auto-generated delivery SO lines
 [stock_dispatch_note_report_template](stock_dispatch_note_report_template/) | 17.0.1.0.1 |  | Adds weights, dates and clickable print is shown as 'Dispatch Note'
 [stock_hide_packing_buttons](stock_hide_packing_buttons/) | 17.0.1.0.0 |  | Hides "put in pack" buttons
+[stock_inventory_adjustment_domain_company](stock_inventory_adjustment_domain_company/) | 17.0.1.0.1 |  | Show stock locations without company in inventory adjustments
 [stock_location_analytic_account](stock_location_analytic_account/) | 17.0.1.0.1 |  | Integrate stock location with analytic account
 [stock_location_auditlog_rules](stock_location_auditlog_rules/) | 17.0.1.0.0 |  | Adds audit log rules for stock.warehouse and stock.location
 [stock_location_excess_mark](stock_location_excess_mark/) | 17.0.1.1.0 |  | Select a stock location and mark it as of excess type
@@ -47,12 +48,14 @@ addon | version | maintainers | summary
 [stock_picking_view_vendor_product](stock_picking_view_vendor_product/) | 17.0.1.0.0 |  | Vendor Product Name and Code are added to Picking form view
 [stock_picking_volume_in_tree_and_prints](stock_picking_volume_in_tree_and_prints/) | 17.0.1.0.0 |  | Picking's Volume is shown in list view and picking prints
 [stock_product_qty_available_unreserved](stock_product_qty_available_unreserved/) | 17.0.1.0.0 |  | Add unreserved available (on hand - reserved)
+[stock_report_add_description_to_picking](stock_report_add_description_to_picking/) | 17.0.1.0.0 |  | Adds Description column to picking report
 [stock_report_carrier_transportation_mode](stock_report_carrier_transportation_mode/) | 17.0.1.0.0 |  | Delivery slip Carrier – Mode of transportation
 [stock_report_customer_address](stock_report_customer_address/) | 17.0.1.0.0 |  | Stock Report Customer Address
 [stock_report_customer_reference](stock_report_customer_reference/) | 17.0.1.0.0 |  | Stock Report Customer Reference
 [stock_report_customer_reference_under_address](stock_report_customer_reference_under_address/) | 17.0.1.0.0 |  | Customer Reference under address
 [stock_report_date_done](stock_report_date_done/) | 17.0.1.0.0 |  | Stock Picking Report Date of Transfer
 [stock_report_element_sizes](stock_report_element_sizes/) | 17.0.1.0.1 |  | Stock Report element size changes
+[stock_report_enable_translation_by_partner](stock_report_enable_translation_by_partner/) | 17.0.1.0.0 |  | Use the language set for Delivery Address in Picking Operations PDF print
 [stock_report_invoice_and_delivery_address](stock_report_invoice_and_delivery_address/) | 17.0.1.0.0 |  | Adds Invoice and Delivery addresses to delivery slip
 [stock_report_kit_quantity](stock_report_kit_quantity/) | 17.0.1.0.0 |  | Show ordered and delivered quantity of kits in Delivery slip
 [stock_report_label_product_barcode](stock_report_label_product_barcode/) | 17.0.1.0.0 |  | Print Product Labels with barcodes
