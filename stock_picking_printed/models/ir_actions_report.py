@@ -15,7 +15,6 @@ class IrActionsReport(models.Model):
     def _render_qweb_pdf(self, report_ref, res_ids=None, data=None):
         """When printing picking, log the printing date"""
         if self._is_stock_picking_report(report_ref):
-            _logger.info("is picking report ")
             pickings = self.env["stock.picking"].browse(res_ids)
             pickings.write({"picking_printed": fields.Datetime.now()})
 
