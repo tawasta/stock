@@ -1,12 +1,16 @@
 from odoo import fields, models
 
 
-class StockInventory(models.Model):
+class StockQuant(models.Model):
+    _inherit = "stock.quant"
 
-    _inherit = "stock.inventory"
-
-    location_ids = fields.Many2many(
+    location_id = fields.Many2one(
         "stock.location",
+        "Parent Location",
+        index=True,
+        ondelete="cascade",
+        check_company=True,
         domain="[('company_id', 'in', [company_id, False]),"
         "('usage', 'in', ['internal', 'transit'])]",
+        help="The parent location that includes this location. Example : The 'Dispatch Zone' is the 'Gate 1' parent location.",
     )
