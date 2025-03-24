@@ -38,7 +38,7 @@ addon | version | maintainers | summary
 [stock_picking_operations_show_name](stock_picking_operations_show_name/) | 17.0.1.0.0 |  | Show name field on Stock Picking operations
 [stock_picking_override_values](stock_picking_override_values/) | 17.0.1.0.0 |  | Allow overriding new picking values with system parameters
 [stock_picking_printed](stock_picking_printed/) | 17.0.1.0.0 |  | Mark stock pickings as printed and log date after printing picking list
-[stock_picking_process_as_sudo](stock_picking_process_as_sudo/) | 17.0.1.0.0 |  | Process Stock Pickings as Admin user
+[stock_picking_process_as_sudo](stock_picking_process_as_sudo/) | 17.0.1.1.0 |  | Process Stock Pickings as Admin user
 [stock_picking_purchase_related_sale_order_customer](stock_picking_purchase_related_sale_order_customer/) | 17.0.1.0.0 |  | Get Sale Order Partner to Stock Picking from Purchase Order
 [stock_picking_reinvoice](stock_picking_reinvoice/) | 17.0.1.0.0 |  | Allow making invoices from stock pickings
 [stock_picking_reserve_chosen_moves](stock_picking_reserve_chosen_moves/) | 17.0.1.0.0 |  | Select manually the moves to be reserved on deliveries

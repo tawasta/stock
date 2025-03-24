@@ -21,7 +21,7 @@
 {
     "name": "Process Stock Pickings as Admin user",
     "summary": "Process Stock Pickings as Admin user",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.1.0",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
@@ -33,6 +33,7 @@
         "web_ir_actions_act_multi",
     ],
     "data": [
+        "data/ir_actions_server.xml",
         "views/stock_picking.xml",
         "wizards/stock_backorder_confirmation.xml",
         "wizards/stock_return_picking.xml",
