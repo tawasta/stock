@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="action_sudo_validate_picking" model="ir.actions.server">
+        <field name="name">Validate</field>
+        <field name="model_id" ref="stock.model_stock_picking" />
+        <field name="binding_model_id" ref="stock.model_stock_picking" />
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+        if records:
+            res = records.sudo_button_validate()
+            if isinstance(res, dict):
+                action = res
+        </field>
+    </record>
+
+    <record id="stock.action_validate_picking" model="ir.actions.server">
+        <field name="binding_model_id" ref="" />
+    </record>
+</odoo>
