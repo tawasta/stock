@@ -40,6 +40,7 @@ addon | version | maintainers | summary
 [stock_picking_printed](stock_picking_printed/) | 17.0.1.0.0 |  | Mark stock pickings as printed and log date after printing picking list
 [stock_picking_process_as_sudo](stock_picking_process_as_sudo/) | 17.0.1.1.0 |  | Process Stock Pickings as Admin user
 [stock_picking_purchase_related_sale_order_customer](stock_picking_purchase_related_sale_order_customer/) | 17.0.1.0.0 |  | Get Sale Order Partner to Stock Picking from Purchase Order
+[stock_picking_receipt_set_all_moves_done](stock_picking_receipt_set_all_moves_done/) | 17.0.1.0.0 |  | Use button to set all moves as done on receipt
 [stock_picking_reinvoice](stock_picking_reinvoice/) | 17.0.1.0.0 |  | Allow making invoices from stock pickings
 [stock_picking_reserve_chosen_moves](stock_picking_reserve_chosen_moves/) | 17.0.1.0.0 |  | Select manually the moves to be reserved on deliveries
 [stock_picking_sale_order_id](stock_picking_sale_order_id/) | 17.0.1.0.0 |  | Get Sale Order to Stock Picking from Purchase Order
@@ -54,6 +55,7 @@ addon | version | maintainers | summary
 [stock_product_qty_available_unreserved](stock_product_qty_available_unreserved/) | 17.0.1.0.0 |  | Add unreserved available (on hand - reserved)
 [stock_report_add_description_to_picking](stock_report_add_description_to_picking/) | 17.0.1.0.0 |  | Adds Description column to picking report
 [stock_report_carrier_transportation_mode](stock_report_carrier_transportation_mode/) | 17.0.1.0.0 |  | Delivery slip Carrier – Mode of transportation
+[stock_report_code_as_name_stock_picking](stock_report_code_as_name_stock_picking/) | 17.0.1.0.0 |  | Replace Product name with product code
 [stock_report_customer_address](stock_report_customer_address/) | 17.0.1.0.0 |  | Stock Report Customer Address
 [stock_report_customer_reference](stock_report_customer_reference/) | 17.0.1.0.0 |  | Stock Report Customer Reference
 [stock_report_customer_reference_under_address](stock_report_customer_reference_under_address/) | 17.0.1.0.0 |  | Customer Reference under address
@@ -65,7 +67,9 @@ addon | version | maintainers | summary
 [stock_report_label_product_barcode](stock_report_label_product_barcode/) | 17.0.1.0.0 |  | Print Product Labels with barcodes
 [stock_report_label_product_ean_code](stock_report_label_product_ean_code/) | 17.0.1.0.0 |  | Print Product Labels with EAN codes
 [stock_report_our_reference](stock_report_our_reference/) | 17.0.1.0.2 |  | Stock Picking and Delivery Slip Report Our Reference
+[stock_report_picking_customer_address](stock_report_picking_customer_address/) | 17.0.1.0.0 |  | Stock Report picking Customer Address details
 [stock_report_picking_header_shrink](stock_report_picking_header_shrink/) | 17.0.1.0.0 |  | Decrease font size of stock picking print header section
+[stock_report_picking_hide_footer](stock_report_picking_hide_footer/) | 17.0.1.0.0 |  | Hide footer on Picking Operations
 [stock_report_picking_product_receipt_description](stock_report_picking_product_receipt_description/) | 17.0.1.0.0 |  | Show 'Description for receipts' text on Picking list
 [stock_report_picking_vendor_product](stock_report_picking_vendor_product/) | 17.0.1.1.1 |  | Vendor Product name and code for Picking list
 [stock_report_picking_warning_text](stock_report_picking_warning_text/) | 17.0.1.0.0 |  | Show warning on picking list printout instead of a form popup
