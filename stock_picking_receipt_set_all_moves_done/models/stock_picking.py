@@ -8,6 +8,4 @@ class StockPicking(models.Model):
         # move_lines field's related model is stock.move
         for move in self.move_ids.filtered(lambda m: m.state not in ["done", "cancel"]):
             for move_line in move.move_line_ids:
-                # Tätä move_line.product_uom_qty ei enään ole
-                # Eikä myöskään tätä move_line.qty_done
-                move_line.qty_done = move_line.product_uom_qty
+                move_line.quantity = move_line.quantity_product_uom
