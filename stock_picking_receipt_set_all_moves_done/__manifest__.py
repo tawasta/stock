@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2022 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,19 +19,17 @@
 ##############################################################################
 
 {
-    "name": "Stock Picking Comment",
-    "summary": "External comment for stock picking Delivery Slip and Picking Operations",
-    "category": "Warehouse",
-    "version": "17.0.1.0.1",
+    "name": "Set all moves to Done on purchase's receipt",
+    "summary": "Use button to set all moves as done on receipt",
+    "version": "17.0.1.0.0",
+    "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
-    "author": "Tawasta",
+    "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["sale_stock"],
-    "data": [
-        "views/stock_picking.xml",
-        "report/report_picking.xml",
-        "report/delivery_slip.xml",
+    "depends": [
+        "stock",
     ],
+    "data": ["views/stock_picking.xml"],
 }

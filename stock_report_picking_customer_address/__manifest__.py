@@ -19,19 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Stock Picking Comment",
-    "summary": "External comment for stock picking Delivery Slip and Picking Operations",
-    "category": "Warehouse",
-    "version": "17.0.1.0.1",
+    "name": "Stock Report picking Customer Address details",
+    "summary": "Stock Report picking Customer Address details",
+    "version": "17.0.1.0.0",
+    "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/stock",
-    "author": "Tawasta",
+    "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["sale_stock"],
-    "data": [
-        "views/stock_picking.xml",
-        "report/report_picking.xml",
-        "report/delivery_slip.xml",
-    ],
+    "depends": ["stock"],
+    "data": ["report/stock_report.xml"],
 }
