@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    "name": "Stock Inventory: Adjustments Action Button Increased Quant Count",
-    "summary": "Increase the number of shown quants when using OCA's Inventory Adjustments view",
+    "name": "Stock: Increase Quant List View Record Limit",
+    "summary": "Increase the number of shown lines to 300",
     "version": "17.0.1.0.0",
     "category": "Inventory",
     "website": "https://gitlab.com/tawasta/odoo/stock",
