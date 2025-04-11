@@ -21,7 +21,7 @@
 {
     "name": "Stock Picking Bypass Reservation",
     "summary": "Stock Picking Bypass Reservation",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Futural",

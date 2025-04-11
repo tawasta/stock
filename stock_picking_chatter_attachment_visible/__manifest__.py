@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2022 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2023 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,9 +19,9 @@
 ##############################################################################
 
 {
-    "name": "Set all moves to Done on purchase's receipt",
-    "summary": "Use button to set all moves as done on receipt",
-    "version": "17.0.1.0.1",
+    "name": "Chatter attachments of pickings are visible",
+    "summary": "Attachments are visible on pickings",
+    "version": "17.0.1.0.0",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Futural",
@@ -29,7 +29,13 @@
     "application": False,
     "installable": True,
     "depends": [
+        "base",
+        "mail",
         "stock",
     ],
-    "data": ["views/stock_picking.xml"],
+    "assets": {
+        "web.assets_backend": [
+            "stock_picking_chatter_attachment_visible/static/src/js/stock_picking_chatter.esm.js",
+        ],
+    },
 }
