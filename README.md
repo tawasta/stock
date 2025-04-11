@@ -27,6 +27,7 @@ addon | version | maintainers | summary
 [stock_package_sticker](stock_package_sticker/) | 17.0.1.0.0 |  | Print Package sticker from pickings
 [stock_picking_bypass_reservation](stock_picking_bypass_reservation/) | 17.0.1.0.0 |  | Stock Picking Bypass Reservation
 [stock_picking_carrier_info_form_header](stock_picking_carrier_info_form_header/) | 17.0.1.0.0 |  | Reposition Carrier info on picking form
+[stock_picking_chatter_attachment_visible](stock_picking_chatter_attachment_visible/) | 17.0.1.0.0 |  | Attachments are visible on pickings
 [stock_picking_comment](stock_picking_comment/) | 17.0.1.0.1 |  | External comment for stock picking Delivery Slip and Picking Operations
 [stock_picking_comment_and_note_under_operations](stock_picking_comment_and_note_under_operations/) | 17.0.1.0.0 |  | Moves the two freetext fields under the 'Operations' tab on the picking form
 [stock_picking_country_group_text](stock_picking_country_group_text/) | 17.0.1.0.0 |  | Get stock picking reports' text from country groups setting
