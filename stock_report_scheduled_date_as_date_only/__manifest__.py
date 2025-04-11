@@ -21,7 +21,7 @@
 {
     "name": "Stock Picking and Delivery Slip Report Scheduled Date as Date only",
     "summary": "Stock Picking and Delivery Slip Report Scheduled Date as Date only",
-    "version": "17.0.1.0",
+    "version": "17.0.1.0.1",
     "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
