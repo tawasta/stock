@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0\n"
+"Project-Id-Version: Odoo Server 17.0-20250131\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-23 08:35+0000\n"
-"PO-Revision-Date: 2023-02-23 10:42+0200\n"
+"POT-Creation-Date: 2025-04-14 05:59+0000\n"
+"PO-Revision-Date: 2025-04-14 08:59+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.6\n"
 
 #. module: stock_report_customer_reference_under_address
 #: model_terms:ir.ui.view,arch_db:stock_report_customer_reference_under_address.report_delivery_document

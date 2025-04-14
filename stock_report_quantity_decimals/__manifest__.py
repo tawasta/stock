@@ -21,7 +21,7 @@
 {
     "name": "Stock Report Quantity Decimals",
     "summary": "Modifications to Stock Reports' decimal precision",
-    "version": "17.0.1.0.1",
+    "version": "17.0.1.0.2",
     "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",

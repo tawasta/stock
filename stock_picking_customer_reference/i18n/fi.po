@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0\n"
+"Project-Id-Version: Odoo Server 17.0-20250131\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-25 14:26+0000\n"
-"PO-Revision-Date: 2022-07-25 14:26+0000\n"
+"POT-Creation-Date: 2025-04-14 05:44+0000\n"
+"PO-Revision-Date: 2025-04-14 05:44+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,24 +21,9 @@ msgid "Customer Reference"
 msgstr "Asiakasviite"
 
 #. module: stock_picking_customer_reference
-#: model:ir.model.fields,field_description:stock_picking_customer_reference.field_stock_picking__display_name
-msgid "Display Name"
-msgstr "Näyttönimi"
-
-#. module: stock_picking_customer_reference
 #: model:ir.model.fields,field_description:stock_picking_customer_reference.field_stock_picking__from_purchase_order
 msgid "From Purchase Order"
 msgstr "Ostotilaukselta lähtöisin"
-
-#. module: stock_picking_customer_reference
-#: model:ir.model.fields,field_description:stock_picking_customer_reference.field_stock_picking__id
-msgid "ID"
-msgstr "Tunniste (ID)"
-
-#. module: stock_picking_customer_reference
-#: model:ir.model.fields,field_description:stock_picking_customer_reference.field_stock_picking____last_update
-msgid "Last Modified on"
-msgstr "Viimeksi muokattu"
 
 #. module: stock_picking_customer_reference
 #: model:ir.model,name:stock_picking_customer_reference.model_stock_picking
