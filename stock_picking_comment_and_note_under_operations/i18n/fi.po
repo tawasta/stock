@@ -4,34 +4,35 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0-20230925\n"
+"Project-Id-Version: Odoo Server 17.0-20250131\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-29 11:54+0000\n"
-"PO-Revision-Date: 2024-05-29 11:54+0000\n"
+"POT-Creation-Date: 2025-04-14 05:47+0000\n"
+"PO-Revision-Date: 2025-04-14 08:48+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: fi_FI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.6\n"
 
 #. module: stock_picking_comment_and_note_under_operations
 #: model_terms:ir.ui.view,arch_db:stock_picking_comment_and_note_under_operations.view_picking_form
-msgid "Add a comment that will be printed on the Delivery Slip"
-msgstr "Lisää kommentti, joka näytetään lähetteellä"
+msgid "Add a comment for the delivery slip."
+msgstr "Lisää kommentti, joka näytetään lähetteellä."
 
 #. module: stock_picking_comment_and_note_under_operations
 #: model_terms:ir.ui.view,arch_db:stock_picking_comment_and_note_under_operations.view_picking_form
-msgid ""
-"Add an internal note that will be printed on the Picking Operations sheet"
-msgstr "Lisää sisäinen viesti, joka näytetään keräilylistalla"
+msgid "Add an internal note for operations."
+msgstr "Lisää sisäinen viesti, joka näytetään keräilylistalla."
 
 #. module: stock_picking_comment_and_note_under_operations
 #: model_terms:ir.ui.view,arch_db:stock_picking_comment_and_note_under_operations.view_picking_form
-msgid "Comment (printed on the Delivery Slip)"
-msgstr "Kommentti (näytetään lähetteellä)"
+msgid "Delivery Slip Comment"
+msgstr "Kommentti lähetteelle"
 
 #. module: stock_picking_comment_and_note_under_operations
 #: model_terms:ir.ui.view,arch_db:stock_picking_comment_and_note_under_operations.view_picking_form
-msgid "Note (internal, for Picking Operations sheet)"
-msgstr "Sisäinen viesti (näytetään keräilylistalla)"
+msgid "Internal Note"
+msgstr "Sisäinen viesti"

@@ -19,7 +19,7 @@
 ##############################################################################
 {
     "name": "Stock Picking Sale Order",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Stock",
     "summary": "Get Sale Order to Stock Picking from Purchase Order",
     "website": "https://gitlab.com/tawasta/odoo/stock",
