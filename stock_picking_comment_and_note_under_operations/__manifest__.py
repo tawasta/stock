@@ -22,7 +22,7 @@
     "name": "Stock Picking Comment and Note Fields Under Operations",
     "summary": "Moves the two freetext fields under the 'Operations' tab on the picking form",
     "category": "Warehouse",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
     "license": "AGPL-3",

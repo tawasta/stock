@@ -21,7 +21,7 @@
 {
     "name": "Stock Picking - Effective Date",
     "summary": "Adds effective date from Sale Order to picking list view",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",

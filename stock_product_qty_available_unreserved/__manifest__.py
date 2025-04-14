@@ -21,7 +21,7 @@
 {
     "name": "Stock Product Qty Available Unreserved",
     "summary": "Add unreserved available (on hand - reserved)",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Inventory",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
