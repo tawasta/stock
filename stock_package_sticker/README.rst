@@ -6,19 +6,19 @@
 Stock Package Sticker
 =====================
 
-Install this module to add Stock Package Sticker to Delivery order.
+* Install this module to add Stock Package Sticker to Delivery order.
 
 Configuration
 =============
-No special configuration needed.
+* No special configuration needed.
 
 Usage
 =====
-Only an installation is required.
+* Print from stock picking document via Print -> Package Sticker
 
 Known issues / Roadmap
 ======================
-There are no known issues with this module.
+* There are no known issues with this module.
 
 Credits
 =======
@@ -27,6 +27,7 @@ Contributors
 ------------
 
 * Timo Kekäläinen <timo.kekalainen@tawasta.fi>
+* Timo Talvitie <timo.talvitie@futural.fi>
 
 Maintainer
 ----------

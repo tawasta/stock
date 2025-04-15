@@ -21,7 +21,7 @@
 {
     "name": "Stock Package Sticker",
     "summary": "Print Package sticker from pickings",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.1.0",
     "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
@@ -35,9 +35,7 @@
     ],
     "data": [
         "data/paperformat.xml",
-        "report/external_layout.xml",
-        "report/package_sticker_call.xml",
-        "report/package_sticker_main_content.xml",
-        "report/package_sticker_report.xml",
+        "report/package_sticker_report_templates.xml",
+        "report/package_sticker_report_action.xml",
     ],
 }
