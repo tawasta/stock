@@ -24,7 +24,7 @@
                 <button
                     name="sudo_button_validate"
                     string="Validate"
-                    invisible="state in ('waiting', 'confirmed')"
+                    invisible="state in ('draft', 'confirmed', 'done', 'cancel')"
                     type="object"
                     groups="base.group_user"
                     class="oe_highlight"
@@ -33,7 +33,7 @@
                 <button
                     name="sudo_button_validate"
                     string="Validate"
-                    invisible="state not in ('waiting', 'confirmed')"
+                    invisible="state in ('waiting', 'assigned', 'done', 'cancel')"
                     type="object"
                     groups="base.group_user"
                     class="o_btn_validate"
