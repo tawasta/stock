@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <template id="report_delivery_document" inherit_id="stock.report_delivery_document">
+    <template
+        id="report_delivery_document"
+        inherit_id="stock.report_delivery_document"
+        priority="100"
+    >
         <xpath expr="//div[@name='div_outgoing_address']" position="attributes">
             <attribute name="class" add="row" />
             <attribute name="style" add="margin-bottom:20px; text-align:left;" />
@@ -22,9 +26,9 @@
 
         <xpath
             expr="//div[@name='outgoing_delivery_address']/span/strong"
-            position="attributes"
+            position="replace"
         >
-            <attribute name="t-esc">'DELIVERY ADDRESS:'</attribute>
+            <strong>DELIVERY ADDRESS:</strong>
         </xpath>
 
     </template>
