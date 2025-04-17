@@ -24,6 +24,7 @@ addon | version | maintainers | summary
 [stock_move_carrier_in_view_and_filter](stock_move_carrier_in_view_and_filter/) | 17.0.1.0.1 |  | Carrier info added to stock move list view and as a filter
 [stock_move_pivot_disable_count_as_default](stock_move_pivot_disable_count_as_default/) | 17.0.1.0.0 |  | Disables the Count variable as default on stock move pivot.
 [stock_move_pivot_report_sh_product_tag](stock_move_pivot_report_sh_product_tag/) | 17.0.1.0.0 |  | Group by SH product tags in Stock Move pivot view
+[stock_move_recompute_state_scheduled](stock_move_recompute_state_scheduled/) | 17.0.1.0.0 |  | Scheduled action to recompute stock move statuses
 [stock_move_search](stock_move_search/) | 17.0.1.0.0 |  | Additional Search options for Stock Move
 [stock_package_sticker](stock_package_sticker/) | 17.0.1.1.0 |  | Print Package sticker from pickings
 [stock_picking_bypass_reservation](stock_picking_bypass_reservation/) | 17.0.1.0.1 |  | Stock Picking Bypass Reservation
