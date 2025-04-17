@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="stock.stock_move_action" model="ir.actions.act_window">
+        <field
+            name="context"
+            eval="{
+            'search_default_done': 1,
+            'pivot_measures': ['product_uom_qty'],
+        }"
+        />
+    </record>
+</odoo>
