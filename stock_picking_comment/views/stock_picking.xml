@@ -6,16 +6,29 @@
         <field name="model">stock.picking</field>
         <field name="inherit_id" ref="stock.view_picking_form" />
         <field name="arch" type="xml">
-            <field name="note" position="before">
-                <label for="note" />
+            <field name="note" position="attributes">
+                <attribute name="invisible">1</attribute>
             </field>
-            <field name="note" position="after">
-                <label for="comment" />
-                <field
-                    name="comment"
-                    placeholder="Add a comment that will be printed on the Delivery Slip"
-                />
-            </field>
+
+            <page name="note" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </page>
+
+            <page name="operations" position="inside">
+                <group string="Note (internal, for Picking Operations sheet)">
+                    <field
+                        name="note"
+                        placeholder="Add an internal note for operations."
+                    />
+                </group>
+                <group string="Comment (printed on the Delivery Slip)">
+                    <field
+                        name="comment"
+                        placeholder="Add a comment for the delivery slip."
+                    />
+                </group>
+            </page>
+
         </field>
     </record>
 
