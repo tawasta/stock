@@ -24,6 +24,7 @@
 
 # 3. Odoo imports (openerp):
 from odoo import models
+from odoo.tools import html2plaintext
 
 # 4. Imports from Odoo modules:
 
@@ -50,7 +51,8 @@ class SaleOrder(models.Model):
     def action_confirm(self):
         res = super(SaleOrder, self).action_confirm()
         for pick in self.picking_ids:
-            pick.write({"comment": self.note or ""})
+            note = html2plaintext(self.note) or ""
+            pick.write({"comment": note})
         return res
 
     # 8. Business methods
