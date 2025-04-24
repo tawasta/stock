@@ -10,7 +10,9 @@
             <attribute name="id">stock_deliveryslip_informations</attribute>
         </xpath>
         <xpath expr="//div[contains(@class, 'row mt32 mb32')]" position="attributes">
-            <attribute name="style">float: left;</attribute>
+            <attribute
+                name="style"
+            >float: left; padding: 0px; margin-top: 0px !important; margin-bottom: 0px !important;</attribute>
         </xpath>
         <table name="stock_move_table" position="before">
             <table id="header_table" class="table table-sm">
