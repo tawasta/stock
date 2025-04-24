@@ -66,7 +66,7 @@ addon | version | maintainers | summary
 [stock_report_date_done](stock_report_date_done/) | 17.0.1.0.0 |  | Stock Picking Report Date of Transfer
 [stock_report_element_sizes](stock_report_element_sizes/) | 17.0.1.0.2 |  | Stock Report element size changes
 [stock_report_enable_translation_by_partner](stock_report_enable_translation_by_partner/) | 17.0.1.0.0 |  | Use the language set for Delivery Address in Picking Operations PDF print
-[stock_report_invoice_and_delivery_address](stock_report_invoice_and_delivery_address/) | 17.0.1.0.0 |  | Adds Invoice and Delivery addresses to delivery slip
+[stock_report_invoice_and_delivery_address](stock_report_invoice_and_delivery_address/) | 17.0.1.1.0 |  | Adds Invoice and Delivery addresses to delivery slip
 [stock_report_kit_quantity](stock_report_kit_quantity/) | 17.0.1.0.0 |  | Show ordered and delivered quantity of kits in Delivery slip
 [stock_report_label_product_barcode](stock_report_label_product_barcode/) | 17.0.1.0.0 |  | Print Product Labels with barcodes
 [stock_report_label_product_ean_code](stock_report_label_product_ean_code/) | 17.0.1.0.0 |  | Print Product Labels with EAN codes

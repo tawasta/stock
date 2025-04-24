@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0-20221116\n"
+"Project-Id-Version: Odoo Server 17.0-20250131\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-08 06:44+0000\n"
-"PO-Revision-Date: 2023-02-08 08:48+0200\n"
+"POT-Creation-Date: 2025-04-24 07:26+0000\n"
+"PO-Revision-Date: 2025-04-24 10:27+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv\n"
@@ -15,14 +15,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.6\n"
 
 #. module: stock_report_invoice_and_delivery_address
 #: model_terms:ir.ui.view,arch_db:stock_report_invoice_and_delivery_address.report_delivery_document
-msgid "<strong style=\"float:left;\" class=\"col-5\">DELIVERY ADDRESS:</strong>"
-msgstr "<strong style=\"float:left;\" class=\"col-5\">LEVERANSADRESS:</strong>"
+msgid "<span><strong>DELIVERY ADDRESS:</strong></span>"
+msgstr "<span><strong>LEVERANSADRESS:</strong></span>"
 
 #. module: stock_report_invoice_and_delivery_address
 #: model_terms:ir.ui.view,arch_db:stock_report_invoice_and_delivery_address.report_delivery_document
-msgid "<strong>INVOICE ADDRESS:</strong>"
-msgstr "<strong>FAKTURAADRESS:</strong>"
+msgid "<span><strong>INVOICE ADDRESS:</strong></span>"
+msgstr "<span><strong>FAKTURAADRESS:</strong></span>"
