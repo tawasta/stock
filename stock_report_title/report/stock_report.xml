@@ -19,6 +19,11 @@
                 name="t-att-class"
             >'{}'.format('d-none' if o.company_id.hide_delivery_slip_report_name else '')</attribute>
         </xpath>
+
+        <xpath expr="//h2" position="attributes">
+            <attribute name="class">col-12</attribute>
+            <attribute name="style">float: left;</attribute>
+        </xpath>
     </template>
 
     <template
