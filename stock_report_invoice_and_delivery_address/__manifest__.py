@@ -21,7 +21,7 @@
 {
     "name": "Invoice and Delivery addresses to delivery slip",
     "summary": "Adds Invoice and Delivery addresses to delivery slip",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.1.0",
     "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
