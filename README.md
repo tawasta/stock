@@ -82,7 +82,7 @@ addon | version | maintainers | summary
 [stock_report_scheduled_date_as_date_only](stock_report_scheduled_date_as_date_only/) | 17.0.1.0.1 |  | Stock Picking and Delivery Slip Report Scheduled Date as Date only
 [stock_report_set_company_as_sale_order_company](stock_report_set_company_as_sale_order_company/) | 17.0.1.0.0 |  | Show related sale order's company on prints instead of the default picking company
 [stock_report_show_only_ordered_qty](stock_report_show_only_ordered_qty/) | 17.0.1.0.0 |  | Show only the ordered quantity in delivery slip as 'Quantity'
-[stock_report_title](stock_report_title/) | 17.0.1.2.1 |  | Stock Picking and Delivery Slip Report Title
+[stock_report_title](stock_report_title/) | 17.0.1.2.2 |  | Stock Picking and Delivery Slip Report Title
 [stock_report_week_of_shipment](stock_report_week_of_shipment/) | 17.0.1.0.0 |  | Add week of shipment to Picking report
 [stock_report_year_of_shipment](stock_report_year_of_shipment/) | 17.0.1.0.0 |  | Add year of shipment to delivery slip
 [stock_see_product_forecasted_with_sudo](stock_see_product_forecasted_with_sudo/) | 17.0.1.0.0 |  | Form the Product Forecast Report with sudo rights
