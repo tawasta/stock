@@ -35,3 +35,8 @@ class ResConfigSettings(models.TransientModel):
         related="company_id.hide_picking_report_name",
         readonly=False,
     )
+    hide_picking_name_in_header = fields.Boolean(
+        string="Hide picking name in header",
+        related="company_id.hide_picking_name_in_header",
+        readonly=False,
+    )
