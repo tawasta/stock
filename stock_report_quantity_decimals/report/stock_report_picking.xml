@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <template id="report_picking" inherit_id="stock.report_picking">
-        <xpath expr="//td" position="inside">
-            <span
-                t-if="o.state != 'done'"
-                t-field="ml.quantity"
-                t-options="{'precision': o.company_id.stock_report_decimal_precision}"
-            />
-            <span
-                t-if="o.state == 'done'"
-                t-field="ml.quantity"
-                t-options="{'precision': o.company_id.stock_report_decimal_precision}"
-            />
-        </xpath>
         <xpath expr="//span[@t-field='ml.quantity']" position="attributes">
             <attribute
                 name="t-options"
