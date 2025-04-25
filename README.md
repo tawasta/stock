@@ -79,7 +79,7 @@ addon | version | maintainers | summary
 [stock_report_picking_vendor_product](stock_report_picking_vendor_product/) | 17.0.1.1.1 |  | Vendor Product name and code for Picking list
 [stock_report_picking_warning_text](stock_report_picking_warning_text/) | 17.0.1.0.0 |  | Show warning on picking list printout instead of a form popup
 [stock_report_product_customer_code](stock_report_product_customer_code/) | 17.0.2.0.1 |  | Place Product Customer code to picking print
-[stock_report_quantity_decimals](stock_report_quantity_decimals/) | 17.0.1.0.2 |  | Modifications to Stock Reports' decimal precision
+[stock_report_quantity_decimals](stock_report_quantity_decimals/) | 17.0.1.0.3 |  | Modifications to Stock Reports' decimal precision
 [stock_report_scheduled_date_as_date_only](stock_report_scheduled_date_as_date_only/) | 17.0.1.0.1 |  | Stock Picking and Delivery Slip Report Scheduled Date as Date only
 [stock_report_set_company_as_sale_order_company](stock_report_set_company_as_sale_order_company/) | 17.0.1.0.0 |  | Show related sale order's company on prints instead of the default picking company
 [stock_report_show_only_ordered_qty](stock_report_show_only_ordered_qty/) | 17.0.1.0.0 |  | Show only the ordered quantity in delivery slip as 'Quantity'
