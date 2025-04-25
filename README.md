@@ -58,13 +58,13 @@ addon | version | maintainers | summary
 [stock_picking_volume_in_tree_and_prints](stock_picking_volume_in_tree_and_prints/) | 17.0.1.0.0 |  | Picking's Volume is shown in list view and picking prints
 [stock_product_qty_available_unreserved](stock_product_qty_available_unreserved/) | 17.0.1.0.1 |  | Add unreserved available (on hand - reserved)
 [stock_quant_list_view_increased_limit](stock_quant_list_view_increased_limit/) | 17.0.1.0.0 |  | Increase the number of shown lines to 300
-[stock_report_add_description_to_picking](stock_report_add_description_to_picking/) | 17.0.1.0.0 |  | Adds Description column to picking report
+[stock_report_add_description_to_picking](stock_report_add_description_to_picking/) | 17.0.1.0.1 |  | Adds Description column to picking report
 [stock_report_carrier_transportation_mode](stock_report_carrier_transportation_mode/) | 17.0.1.0.0 |  | Delivery slip Carrier – Mode of transportation
 [stock_report_code_as_name_stock_picking](stock_report_code_as_name_stock_picking/) | 17.0.1.0.0 |  | Replace Product name with product code
 [stock_report_customer_address](stock_report_customer_address/) | 17.0.1.0.0 |  | Stock Report Customer Address
 [stock_report_customer_reference](stock_report_customer_reference/) | 17.0.1.0.1 |  | Stock Report Customer Reference
 [stock_report_customer_reference_under_address](stock_report_customer_reference_under_address/) | 17.0.1.0.1 |  | Customer Reference under address
-[stock_report_date_done](stock_report_date_done/) | 17.0.1.0.0 |  | Stock Picking Report Date of Transfer
+[stock_report_date_done](stock_report_date_done/) | 17.0.1.0.1 |  | Stock Picking Report Date of Transfer
 [stock_report_element_sizes](stock_report_element_sizes/) | 17.0.1.0.3 |  | Stock Report element size changes
 [stock_report_enable_translation_by_partner](stock_report_enable_translation_by_partner/) | 17.0.1.0.0 |  | Use the language set for Delivery Address in Picking Operations PDF print
 [stock_report_invoice_and_delivery_address](stock_report_invoice_and_delivery_address/) | 17.0.1.1.0 |  | Adds Invoice and Delivery addresses to delivery slip
