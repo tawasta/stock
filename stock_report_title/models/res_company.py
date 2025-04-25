@@ -29,3 +29,7 @@ class ResCompany(models.Model):
         string="Hide picking report name",
         default=False,
     )
+    hide_picking_name_in_header = fields.Boolean(
+        string="Hide picking name in header",
+        default=False,
+    )

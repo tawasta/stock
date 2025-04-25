@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0-20250131\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-24 09:27+0000\n"
-"PO-Revision-Date: 2025-04-24 12:28+0300\n"
+"POT-Creation-Date: 2025-04-25 08:02+0000\n"
+"PO-Revision-Date: 2025-04-25 11:03+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -26,6 +26,17 @@ msgid ""
 msgstr ""
 "<span>\n"
 "                    <strong>Lähete:</strong>\n"
+"                </span>"
+
+#. module: stock_report_title
+#: model_terms:ir.ui.view,arch_db:stock_report_title.report_picking_element_sizes
+msgid ""
+"<span>\n"
+"                    <strong>Stock Picking:</strong>\n"
+"                </span>"
+msgstr ""
+"<span>\n"
+"                    <strong>Keräilylista:</strong>\n"
 "                </span>"
 
 #. module: stock_report_title
@@ -73,6 +84,12 @@ msgid "Hide delivery slip title"
 msgstr "Piilota lähetteen otsikko"
 
 #. module: stock_report_title
+#: model:ir.model.fields,field_description:stock_report_title.field_res_company__hide_picking_name_in_header
+#: model:ir.model.fields,field_description:stock_report_title.field_res_config_settings__hide_picking_name_in_header
+msgid "Hide picking name in header"
+msgstr "Piilota keräilylistan nimi otsikko-osiosta"
+
+#. module: stock_report_title
 #: model:ir.model.fields,field_description:stock_report_title.field_res_company__hide_picking_report_name
 #: model:ir.model.fields,field_description:stock_report_title.field_res_config_settings__hide_picking_report_name
 msgid "Hide picking report name"
@@ -83,6 +100,11 @@ msgstr "Piilota keräilylistan nimi"
 #: model:ir.model.fields,field_description:stock_report_title.field_res_config_settings__hide_picking_title
 msgid "Hide picking title"
 msgstr "Piilota keräilylistan otsikko"
+
+#. module: stock_report_title
+#: model_terms:ir.ui.view,arch_db:stock_report_title.res_config_settings_view_form
+msgid "Hide picking's name in Picking print's header"
+msgstr "Piilota keräilyn nimi keräilylistan otsikko-osiosta"
 
 #. module: stock_report_title
 #: model_terms:ir.ui.view,arch_db:stock_report_title.res_config_settings_view_form
