@@ -21,7 +21,7 @@
 {
     "name": "Stock Picking Report - Adds Description column",
     "summary": "Adds Description column to picking report",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Reporting",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
