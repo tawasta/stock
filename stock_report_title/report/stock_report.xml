@@ -65,6 +65,9 @@
             <t t-if="o.company_id.hide_picking_title">
                 <t t-set="report_title" t-value="''" />
             </t>
+            <t t-else="">
+                <t t-set="report_title">Stock picking</t>
+            </t>
         </xpath>
 
         <xpath expr="//h1" position="attributes">
