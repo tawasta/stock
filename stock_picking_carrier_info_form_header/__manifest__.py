@@ -21,7 +21,7 @@
 {
     "name": "Stock Picking: Show Carrier info on form header",
     "summary": "Reposition Carrier info on picking form",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
@@ -30,6 +30,7 @@
     "installable": True,
     "depends": [
         "delivery",
+        "stock_delivery",
     ],
     "data": [
         "views/stock_picking.xml",
