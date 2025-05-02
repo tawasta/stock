@@ -18,6 +18,7 @@ addon | version | maintainers | summary
 [stock_dispatch_note_report_template](stock_dispatch_note_report_template/) | 17.0.1.0.1 |  | Adds weights, dates and clickable print is shown as 'Dispatch Note'
 [stock_hide_packing_buttons](stock_hide_packing_buttons/) | 17.0.1.0.0 |  | Hides "put in pack" buttons
 [stock_inventory_adjustment_domain_company](stock_inventory_adjustment_domain_company/) | 17.0.1.0.1 |  | Show stock locations without company in inventory adjustments
+[stock_inventory_include_exhausted](stock_inventory_include_exhausted/) | 17.0.1.0.0 |  | Option to automatically add rows for exhausted products when doing inventory
 [stock_inventory_quantity_history_stock_inventory_link](stock_inventory_quantity_history_stock_inventory_link/) | 17.0.1.0.1 |  | Show the new qty fields also in list view provided by the another OCA inventory module
 [stock_location_analytic_account](stock_location_analytic_account/) | 17.0.1.0.1 |  | Integrate stock location with analytic account
 [stock_location_auditlog_rules](stock_location_auditlog_rules/) | 17.0.1.0.0 |  | Adds audit log rules for stock.warehouse and stock.location
