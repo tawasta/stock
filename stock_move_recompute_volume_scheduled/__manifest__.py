@@ -1,7 +1,7 @@
 ##############################################################################
 #
-#    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Author: Futural Oy
+#    Copyright 2025 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,15 +19,19 @@
 ##############################################################################
 
 {
-    "name": "Stock Picking Report - Adds Description column",
-    "summary": "Adds Description column to picking report",
-    "version": "17.0.1.0.1",
-    "category": "Reporting",
+    "name": "Cron to recompute stock move volume",
+    "summary": "Scheduled action to recompute stock move volumes",
+    "version": "17.0.1.0.0",
+    "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
-    "author": "Tawasta",
+    "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["stock"],
-    "data": ["report/stock_report.xml"],
+    "depends": [
+        "stock_picking_volume",
+    ],
+    "data": [
+        "data/ir_cron.xml",
+    ],
 }

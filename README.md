@@ -27,12 +27,13 @@ addon | version | maintainers | summary
 [stock_move_pivot_disable_count_as_default](stock_move_pivot_disable_count_as_default/) | 17.0.1.0.0 |  | Disables the Count variable as default on stock move pivot.
 [stock_move_pivot_report_sh_product_tag](stock_move_pivot_report_sh_product_tag/) | 17.0.1.0.0 |  | Group by SH product tags in Stock Move pivot view
 [stock_move_recompute_state_scheduled](stock_move_recompute_state_scheduled/) | 17.0.1.0.0 |  | Scheduled action to recompute stock move statuses
+[stock_move_recompute_volume_scheduled](stock_move_recompute_volume_scheduled/) | 17.0.1.0.0 |  | Scheduled action to recompute stock move volumes
 [stock_move_search](stock_move_search/) | 17.0.1.0.0 |  | Additional Search options for Stock Move
 [stock_package_sticker](stock_package_sticker/) | 17.0.1.1.0 |  | Print Package sticker from pickings
 [stock_picking_bypass_reservation](stock_picking_bypass_reservation/) | 17.0.1.0.1 |  | Stock Picking Bypass Reservation
-[stock_picking_carrier_info_form_header](stock_picking_carrier_info_form_header/) | 17.0.1.0.0 |  | Reposition Carrier info on picking form
+[stock_picking_carrier_info_form_header](stock_picking_carrier_info_form_header/) | 17.0.1.0.1 |  | Reposition Carrier info on picking form
 [stock_picking_chatter_attachment_visible](stock_picking_chatter_attachment_visible/) | 17.0.1.0.0 |  | Attachments are visible on pickings
-[stock_picking_comment](stock_picking_comment/) | 17.0.1.1.3 |  | External comment for stock picking Delivery Slip and Picking Operations
+[stock_picking_comment](stock_picking_comment/) | 17.0.1.1.4 |  | External comment for stock picking Delivery Slip and Picking Operations
 [stock_picking_country_group_text](stock_picking_country_group_text/) | 17.0.1.0.0 |  | Get stock picking reports' text from country groups setting
 [stock_picking_create_manufacturing_order_from_move](stock_picking_create_manufacturing_order_from_move/) | 17.0.1.0.0 |  | Create Manufacturing order from stock picking move
 [stock_picking_customer_reference](stock_picking_customer_reference/) | 17.0.1.0.1 |  | Stock Picking Customer Reference
@@ -59,13 +60,13 @@ addon | version | maintainers | summary
 [stock_picking_volume_in_tree_and_prints](stock_picking_volume_in_tree_and_prints/) | 17.0.1.0.0 |  | Picking's Volume is shown in list view and picking prints
 [stock_product_qty_available_unreserved](stock_product_qty_available_unreserved/) | 17.0.1.0.1 |  | Add unreserved available (on hand - reserved)
 [stock_quant_list_view_increased_limit](stock_quant_list_view_increased_limit/) | 17.0.1.0.0 |  | Increase the number of shown lines to 300
-[stock_report_add_description_to_picking](stock_report_add_description_to_picking/) | 17.0.1.0.0 |  | Adds Description column to picking report
+[stock_report_add_description_to_picking](stock_report_add_description_to_picking/) | 17.0.1.0.1 |  | Adds Description column to picking report
 [stock_report_carrier_transportation_mode](stock_report_carrier_transportation_mode/) | 17.0.1.0.0 |  | Delivery slip Carrier – Mode of transportation
 [stock_report_code_as_name_stock_picking](stock_report_code_as_name_stock_picking/) | 17.0.1.0.0 |  | Replace Product name with product code
 [stock_report_customer_address](stock_report_customer_address/) | 17.0.1.0.0 |  | Stock Report Customer Address
 [stock_report_customer_reference](stock_report_customer_reference/) | 17.0.1.0.1 |  | Stock Report Customer Reference
-[stock_report_customer_reference_under_address](stock_report_customer_reference_under_address/) | 17.0.1.0.1 |  | Customer Reference under address
-[stock_report_date_done](stock_report_date_done/) | 17.0.1.0.0 |  | Stock Picking Report Date of Transfer
+[stock_report_customer_reference_under_address](stock_report_customer_reference_under_address/) | 17.0.1.0.2 |  | Customer Reference under address
+[stock_report_date_done](stock_report_date_done/) | 17.0.1.0.1 |  | Stock Picking Report Date of Transfer
 [stock_report_element_sizes](stock_report_element_sizes/) | 17.0.1.0.3 |  | Stock Report element size changes
 [stock_report_enable_translation_by_partner](stock_report_enable_translation_by_partner/) | 17.0.1.0.0 |  | Use the language set for Delivery Address in Picking Operations PDF print
 [stock_report_invoice_and_delivery_address](stock_report_invoice_and_delivery_address/) | 17.0.1.1.0 |  | Adds Invoice and Delivery addresses to delivery slip
@@ -80,11 +81,11 @@ addon | version | maintainers | summary
 [stock_report_picking_vendor_product](stock_report_picking_vendor_product/) | 17.0.1.1.1 |  | Vendor Product name and code for Picking list
 [stock_report_picking_warning_text](stock_report_picking_warning_text/) | 17.0.1.0.0 |  | Show warning on picking list printout instead of a form popup
 [stock_report_product_customer_code](stock_report_product_customer_code/) | 17.0.2.0.1 |  | Place Product Customer code to picking print
-[stock_report_quantity_decimals](stock_report_quantity_decimals/) | 17.0.1.0.2 |  | Modifications to Stock Reports' decimal precision
+[stock_report_quantity_decimals](stock_report_quantity_decimals/) | 17.0.1.0.3 |  | Modifications to Stock Reports' decimal precision
 [stock_report_scheduled_date_as_date_only](stock_report_scheduled_date_as_date_only/) | 17.0.1.0.1 |  | Stock Picking and Delivery Slip Report Scheduled Date as Date only
 [stock_report_set_company_as_sale_order_company](stock_report_set_company_as_sale_order_company/) | 17.0.1.0.0 |  | Show related sale order's company on prints instead of the default picking company
 [stock_report_show_only_ordered_qty](stock_report_show_only_ordered_qty/) | 17.0.1.0.0 |  | Show only the ordered quantity in delivery slip as 'Quantity'
-[stock_report_title](stock_report_title/) | 17.0.1.2.1 |  | Stock Picking and Delivery Slip Report Title
+[stock_report_title](stock_report_title/) | 17.0.1.3.3 |  | Stock Picking and Delivery Slip Report Title
 [stock_report_week_of_shipment](stock_report_week_of_shipment/) | 17.0.1.0.0 |  | Add week of shipment to Picking report
 [stock_report_year_of_shipment](stock_report_year_of_shipment/) | 17.0.1.0.0 |  | Add year of shipment to delivery slip
 [stock_see_product_forecasted_with_sudo](stock_see_product_forecasted_with_sudo/) | 17.0.1.0.0 |  | Form the Product Forecast Report with sudo rights

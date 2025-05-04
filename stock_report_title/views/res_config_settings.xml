@@ -47,6 +47,13 @@
                 >
                     <field name="hide_picking_report_name" />
                 </setting>
+
+                <setting
+                    id="hide_picking_name_in_header"
+                    help="Hide picking's name in Picking print's header"
+                >
+                    <field name="hide_picking_name_in_header" />
+                </setting>
             </setting>
         </field>
     </record>

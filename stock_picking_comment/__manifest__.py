@@ -22,7 +22,7 @@
     "name": "Stock Picking Comment",
     "summary": "External comment for stock picking Delivery Slip and Picking Operations",
     "category": "Warehouse",
-    "version": "17.0.1.1.3",
+    "version": "17.0.1.1.4",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
