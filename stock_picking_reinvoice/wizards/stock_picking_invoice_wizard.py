@@ -75,7 +75,6 @@ class StockPickingInvoiceWizard(models.TransientModel):
                     _("Picking is already invoiced: {}".format(picking.name))
                 )
 
-            partner = picking.partner_id
             # Dummy variable, if we want to re-implement adding move names
             # to invoice line description later
             show_moves = False
@@ -87,7 +86,9 @@ class StockPickingInvoiceWizard(models.TransientModel):
                     product.property_account_income_id
                     or product.categ_id.property_account_income_categ_id
                 )
-                price = self.pricelist_id._get_product_price(product, quantity, partner)
+                price = self.pricelist_id._get_product_price(
+                    product, quantity, currency=invoice.currency_id
+                )
 
                 if show_moves:
                     line_name = "{} - {}".format(move.name, move.picking_id.name)
@@ -116,9 +117,10 @@ class StockPickingInvoiceWizard(models.TransientModel):
                         new_line_values
                     )
                 else:
-                    tax = (
-                        product.taxes_id and [(6, 0, [product.taxes_id[0].id])] or False
+                    taxes = product.taxes_id.filtered(
+                        lambda x: x.company_id == invoice.company_id
                     )
+                    tax = taxes and [(6, 0, [taxes[0].id])] or False
 
                     # aml_model variable avoids singleton error
                     aml_model = self.env["account.move.line"]
