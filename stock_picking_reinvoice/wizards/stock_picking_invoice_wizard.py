@@ -51,6 +51,10 @@ class StockPickingInvoiceWizard(models.TransientModel):
             "fiscal_position_id": fiscal_position._get_fiscal_position(
                 self.partner_id
             ).id,
+            "invoice_payment_term_id": self.partner_id.property_payment_term_id.id
+            or self.env["account.move"]
+            .default_get(["invoice_payment_term_id"])
+            .get("invoice_payment_term_id"),
         }
 
         # Dummy variable, if we want to implement showing picking numbers on origin
@@ -82,10 +86,7 @@ class StockPickingInvoiceWizard(models.TransientModel):
             for move in picking.move_ids:
                 product = move.product_id
                 quantity = move.quantity
-                account = (
-                    product.property_account_income_id
-                    or product.categ_id.property_account_income_categ_id
-                )
+
                 price = self.pricelist_id._get_product_price(
                     product, quantity, currency=invoice.currency_id
                 )
@@ -122,28 +123,15 @@ class StockPickingInvoiceWizard(models.TransientModel):
                     )
                     tax = taxes and [(6, 0, [taxes[0].id])] or False
 
-                    # aml_model variable avoids singleton error
-                    aml_model = self.env["account.move.line"]
-                    vals = aml_model.default_get(aml_model.fields_get().keys())
+                    vals = {
+                        "name": line_name,
+                        "product_id": product.id,
+                        "quantity": quantity,
+                        "price_unit": price,
+                        "tax_ids": tax,
+                    }
 
-                    vals.update(
-                        {
-                            "name": line_name,
-                            "account_id": account.id,
-                            "product_id": product.id,
-                            "product_uom_id": move.product_uom.id,
-                            "quantity": quantity,
-                            "price_unit": price,
-                            "tax_ids": tax,
-                            "move_id": invoice.id,
-                            "currency_id": invoice.currency_id.id,
-                            "company_id": invoice.company_id.id,
-                        }
-                    )
-
-                    lines = aml.with_context(check_move_validity=False).create(vals)
-
-                    aml |= lines
+                    invoice.write({"invoice_line_ids": [(0, 0, vals)]})
 
             picking.invoice_id = invoice.id
 
