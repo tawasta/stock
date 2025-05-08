@@ -21,7 +21,7 @@
 {
     "name": "Set all moves to Done on purchase's receipt",
     "summary": "Use button to set all moves as done on receipt",
-    "version": "17.0.1.0.1",
+    "version": "17.0.1.1.1",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Futural",
