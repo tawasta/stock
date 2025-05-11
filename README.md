@@ -15,7 +15,7 @@ addon | version | maintainers | summary
 [stock_batch_transfer_carrier_and_tracking_ref](stock_batch_transfer_carrier_and_tracking_ref/) | 17.0.1.1.1 |  | Adds Carrier and Tracking reference to batch transfer
 [stock_batch_transfer_contact_and_delivery_address](stock_batch_transfer_contact_and_delivery_address/) | 17.0.1.0.0 |  | Adds a default delivery address and contact to batch transfer
 [stock_disable_invoice_shipping_on_delivery](stock_disable_invoice_shipping_on_delivery/) | 17.0.1.0.0 |  | Disable picking auto-generated delivery SO lines
-[stock_dispatch_note_report_template](stock_dispatch_note_report_template/) | 17.0.1.0.1 |  | Adds weights, dates and clickable print is shown as 'Dispatch Note'
+[stock_dispatch_note_report_template](stock_dispatch_note_report_template/) | 17.0.1.0.2 |  | Adds weights, dates and clickable print is shown as 'Dispatch Note'
 [stock_hide_packing_buttons](stock_hide_packing_buttons/) | 17.0.1.0.0 |  | Hides "put in pack" buttons
 [stock_inventory_adjustment_domain_company](stock_inventory_adjustment_domain_company/) | 17.0.1.0.1 |  | Show stock locations without company in inventory adjustments
 [stock_inventory_include_exhausted](stock_inventory_include_exhausted/) | 17.0.1.0.0 |  | Option to automatically add rows for exhausted products when doing inventory
