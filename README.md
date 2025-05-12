@@ -43,7 +43,7 @@ addon | version | maintainers | summary
 [stock_picking_move_lines_partner](stock_picking_move_lines_partner/) | 17.0.1.0.0 |  | Stock Picking Move Lines Partner
 [stock_picking_operations_show_name](stock_picking_operations_show_name/) | 17.0.1.0.0 |  | Show name field on Stock Picking operations
 [stock_picking_override_values](stock_picking_override_values/) | 17.0.1.0.0 |  | Allow overriding new picking values with system parameters
-[stock_picking_printed](stock_picking_printed/) | 17.0.1.0.0 |  | Mark stock pickings as printed and log date after printing picking list
+[stock_picking_printed](stock_picking_printed/) | 17.0.1.0.1 |  | Mark stock pickings as printed and log date after printing picking list
 [stock_picking_process_as_sudo](stock_picking_process_as_sudo/) | 17.0.1.1.1 |  | Process Stock Pickings as Admin user
 [stock_picking_purchase_related_sale_order_customer](stock_picking_purchase_related_sale_order_customer/) | 17.0.1.0.0 |  | Get Sale Order Partner to Stock Picking from Purchase Order
 [stock_picking_receipt_set_all_moves_done](stock_picking_receipt_set_all_moves_done/) | 17.0.1.1.1 |  | Use button to set all moves as done on receipt
