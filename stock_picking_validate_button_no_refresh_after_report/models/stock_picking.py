@@ -7,7 +7,7 @@ class StockPicking(models.Model):
     def button_validate(self):
         res = super().button_validate()
 
-        if res.get("params", False):
+        if res and res.get("params", False):
             res["params"]["anotherAction"] = {
                 "type": "ir.actions.client",
                 "tag": "soft_reload",
