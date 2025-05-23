@@ -12,7 +12,7 @@
                 position="attributes"
             >
                 <attribute name="invisible">internal_transfer</attribute>
-                <attribute name="domain">[('usage', '!=', 'internal')]</attribute>
+                <attribute name="domain">[('usage', '=', 'internal')]</attribute>
             </xpath>
 
             <xpath expr="//group/group/field[@name='location_id'][2]" position="after">
