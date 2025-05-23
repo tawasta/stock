@@ -39,7 +39,7 @@ addon | version | maintainers | summary
 [stock_picking_customer_reference](stock_picking_customer_reference/) | 17.0.1.0.1 |  | Stock Picking Customer Reference
 [stock_picking_dispatch_fields](stock_picking_dispatch_fields/) | 17.0.1.0.0 |  | Add different fields to picking for Dispatch Note
 [stock_picking_dropshipping_move_description_from_product_name](stock_picking_dropshipping_move_description_from_product_name/) | 17.0.1.0.0 |  | Do not use product's 'description' field as move description
-[stock_picking_internal_transfer_domain_internal_location](stock_picking_internal_transfer_domain_internal_location/) | 17.0.1.0.0 |  | Use Internal location as domain for Internal transfers
+[stock_picking_internal_transfer_domain_internal_location](stock_picking_internal_transfer_domain_internal_location/) | 17.0.1.0.1 |  | Use Internal location as domain for Internal transfers
 [stock_picking_move_lines_partner](stock_picking_move_lines_partner/) | 17.0.1.0.0 |  | Stock Picking Move Lines Partner
 [stock_picking_operations_show_name](stock_picking_operations_show_name/) | 17.0.1.0.0 |  | Show name field on Stock Picking operations
 [stock_picking_override_values](stock_picking_override_values/) | 17.0.1.0.0 |  | Allow overriding new picking values with system parameters
