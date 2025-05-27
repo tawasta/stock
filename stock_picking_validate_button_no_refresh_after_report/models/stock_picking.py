@@ -5,9 +5,12 @@ class StockPicking(models.Model):
     _inherit = "stock.picking"
 
     def button_validate(self):
-        super().button_validate()
-
+        res = super().button_validate()
         pickings = self.filtered(lambda x: not x.purchase_id)
+
+        if not pickings:
+            return res
+
         act = True
         report_actions = self._get_autoprint_report_actions()
 
