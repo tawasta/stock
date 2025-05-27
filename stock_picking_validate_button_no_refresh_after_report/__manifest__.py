@@ -21,7 +21,7 @@
 {
     "name": "Do not refresh page after Button validate has printed reports",
     "summary": "Do not refresh page after Button validate has printed reports",
-    "version": "17.0.1.0.2",
+    "version": "17.0.1.1.2",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Futural",
