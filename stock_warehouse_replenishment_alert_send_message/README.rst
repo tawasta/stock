@@ -15,14 +15,12 @@ so that sending messages is possible.
 
 Usage
 =====
-Go to Replenishments to see their Quantities on hand. If this quantity
-drops below zero, the responsible of a product receives an alert message
-about this.
+Go to Replenishments to see their Quantities on hand. If this quantity drops below its
+minimium quantity, the responsible of a product receives an alert message about this.
 
 Known issues / Roadmap
 ======================
-This module works with onchange and it is possible that this won't always
-trigger and therefore send a message.
+This module works this a cron and it is inactive by default
 
 Credits
 =======
