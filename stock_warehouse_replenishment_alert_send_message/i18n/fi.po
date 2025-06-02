@@ -1,0 +1,169 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_warehouse_replenishment_alert_send_message
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20250131\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-02 12:00+0000\n"
+"PO-Revision-Date: 2025-06-02 15:01+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.6\n"
+
+#. module: stock_warehouse_replenishment_alert_send_message
+#. odoo-python
+#: code:addons/stock_warehouse_replenishment_alert_send_message/models/stock_warehouse_orderpoint.py:0
+#, python-format
+msgid ""
+"<div style=\"color: red;\">\n"
+"                    Replenishment for location: {}\n"
+"                    <br/>\n"
+"                    The quantity of {} product is below its minimium quantity ({}) and it is now {}\n"
+"                    </div>\n"
+"                    "
+msgstr ""
+"<div style=\"color: red;\">\n"
+"                    Täydennys varastopaikalle: {}\n"
+"                    <br/>\n"
+"                    Varastosaldo {} tuotteelle on alle hälytysrajan ({}) ja saldo on nyt {}\n"
+"                    </div>\n"
+"                    "
+
+#. module: stock_warehouse_replenishment_alert_send_message
+#: model:ir.model.fields,field_description:stock_warehouse_replenishment_alert_send_message.field_stock_warehouse_orderpoint__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: stock_warehouse_replenishment_alert_send_message
+#. odoo-python
+#: code:addons/stock_warehouse_replenishment_alert_send_message/models/stock_warehouse_orderpoint.py:0
+#, python-format
+msgid ""
+"Alert because the quantity on hand of product {} has dropped\n"
+"                       below its minimium quantity"
+msgstr ""
+"Ilmoitus {} tuotteen varastosaldosta, joka on tippunut\n"
+"                       hälytysrajan alapuolelle"
+
+#. module: stock_warehouse_replenishment_alert_send_message
+#: model:ir.model.fields,field_description:stock_warehouse_replenishment_alert_send_message.field_stock_warehouse_orderpoint__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: stock_warehouse_replenishment_alert_send_message
+#: model:ir.actions.server,name:stock_warehouse_replenishment_alert_send_message.ir_cron_check_orderpoint_alert_qty_ir_actions_server
+msgid "Check Replenishment alert quantity"
+msgstr ""
+
+#. module: stock_warehouse_replenishment_alert_send_message
+#: model:ir.model.fields,field_description:stock_warehouse_replenishment_alert_send_message.field_stock_warehouse_orderpoint__failed_message_ids
+msgid "Failed Messages"
+msgstr ""
+
+#. module: stock_warehouse_replenishment_alert_send_message
+#: model:ir.model.fields,field_description:stock_warehouse_replenishment_alert_send_message.field_stock_warehouse_orderpoint__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: stock_warehouse_replenishment_alert_send_message
+#: model:ir.model.fields,field_description:stock_warehouse_replenishment_alert_send_message.field_stock_warehouse_orderpoint__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: stock_warehouse_replenishment_alert_send_message
+#: model:ir.model.fields,field_description:stock_warehouse_replenishment_alert_send_message.field_stock_warehouse_orderpoint__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: stock_warehouse_replenishment_alert_send_message
+#: model:ir.model.fields,help:stock_warehouse_replenishment_alert_send_message.field_stock_warehouse_orderpoint__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: stock_warehouse_replenishment_alert_send_message
+#: model:ir.model.fields,help:stock_warehouse_replenishment_alert_send_message.field_stock_warehouse_orderpoint__message_has_error
+#: model:ir.model.fields,help:stock_warehouse_replenishment_alert_send_message.field_stock_warehouse_orderpoint__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: stock_warehouse_replenishment_alert_send_message
+#: model:ir.model.fields,field_description:stock_warehouse_replenishment_alert_send_message.field_stock_warehouse_orderpoint__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: stock_warehouse_replenishment_alert_send_message
+#: model:ir.model.fields,field_description:stock_warehouse_replenishment_alert_send_message.field_stock_warehouse_orderpoint__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: stock_warehouse_replenishment_alert_send_message
+#: model:ir.model.fields,field_description:stock_warehouse_replenishment_alert_send_message.field_stock_warehouse_orderpoint__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: stock_warehouse_replenishment_alert_send_message
+#: model:ir.model,name:stock_warehouse_replenishment_alert_send_message.model_stock_warehouse_orderpoint
+msgid "Minimum Inventory Rule"
+msgstr "Minimivarastosääntö"
+
+#. module: stock_warehouse_replenishment_alert_send_message
+#: model:ir.model.fields,field_description:stock_warehouse_replenishment_alert_send_message.field_stock_warehouse_orderpoint__non_conformity_ids
+msgid "Non Conformity"
+msgstr ""
+
+#. module: stock_warehouse_replenishment_alert_send_message
+#: model:ir.model.fields,field_description:stock_warehouse_replenishment_alert_send_message.field_stock_warehouse_orderpoint__non_conformity_count
+msgid "Non Conformity Count"
+msgstr ""
+
+#. module: stock_warehouse_replenishment_alert_send_message
+#: model:ir.model.fields,field_description:stock_warehouse_replenishment_alert_send_message.field_stock_warehouse_orderpoint__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: stock_warehouse_replenishment_alert_send_message
+#: model:ir.model.fields,field_description:stock_warehouse_replenishment_alert_send_message.field_stock_warehouse_orderpoint__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: stock_warehouse_replenishment_alert_send_message
+#: model:ir.model.fields,help:stock_warehouse_replenishment_alert_send_message.field_stock_warehouse_orderpoint__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: stock_warehouse_replenishment_alert_send_message
+#: model:ir.model.fields,help:stock_warehouse_replenishment_alert_send_message.field_stock_warehouse_orderpoint__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: stock_warehouse_replenishment_alert_send_message
+#: model:ir.model.fields,field_description:stock_warehouse_replenishment_alert_send_message.field_stock_warehouse_orderpoint__qty_on_hand_to_check
+msgid "Qty On Hand To Check"
+msgstr ""
+
+#. module: stock_warehouse_replenishment_alert_send_message
+#: model:ir.model.fields,field_description:stock_warehouse_replenishment_alert_send_message.field_stock_warehouse_orderpoint__rating_ids
+msgid "Ratings"
+msgstr ""
+
+#. module: stock_warehouse_replenishment_alert_send_message
+#: model:ir.model.fields,field_description:stock_warehouse_replenishment_alert_send_message.field_stock_warehouse_orderpoint__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: stock_warehouse_replenishment_alert_send_message
+#: model:ir.model.fields,field_description:stock_warehouse_replenishment_alert_send_message.field_stock_warehouse_orderpoint__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: stock_warehouse_replenishment_alert_send_message
+#: model:ir.model.fields,help:stock_warehouse_replenishment_alert_send_message.field_stock_warehouse_orderpoint__website_message_ids
+msgid "Website communication history"
+msgstr ""
