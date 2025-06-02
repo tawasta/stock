@@ -2,11 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-================================================================================
-Send a message if Qty On Hand drops below its minumum quantity in replenishments
-================================================================================
+=================================================================================
+Send a message if Qty On Hand drops below its minimium quantity in replenishments
+=================================================================================
 
-Send a message for the responsible if Quantity drops below zero in replenishments.
+Send a message for the responsible if Quantity drops below its minimium quantity in replenishments.
 
 Configuration
 =============

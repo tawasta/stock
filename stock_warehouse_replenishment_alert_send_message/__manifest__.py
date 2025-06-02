@@ -20,9 +20,9 @@
 
 {
     "name": """Replenishment: Send a message for the responsible if Quantity
-               drops below its minimum quantity""",
+               drops below its minimium quantity""",
     "summary": """Send a message for the responsible if Quantity drops below
-                  its minimum quantity in replenishments""",
+                  its minimium quantity in replenishments""",
     "version": "17.0.1.0.0",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",

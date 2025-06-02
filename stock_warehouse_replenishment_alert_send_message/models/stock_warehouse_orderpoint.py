@@ -55,7 +55,7 @@ class StockWarehouseOrderpoint(models.Model):
                     message_type="notification",
                     subject=_(
                         """Alert because the quantity on hand of product {} has dropped
-                       below its minimum quantity""".format(
+                       below its minimium quantity""".format(
                             orderpoint.product_id.display_name,
                         )
                     ),
