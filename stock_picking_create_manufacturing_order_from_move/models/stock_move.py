@@ -88,22 +88,6 @@ class StockMove(models.Model):
             prod = manufacturing_order_model.create(values)
             self.manufacturing_order_id = prod
 
-            # _get_moves_raw_values() returns values in a form
-            # of a dictionary inside a list. For example like
-            # this: [{'sequence': 1, 'name': 'WH/MO/00001', ..., etc.}]
-            raw_values = prod._get_moves_raw_values()
-            # _get_moves_finished_values() returns a same kind of list.
-            finished_values = prod._get_moves_finished_values()
-
-            raws = self.env["stock.move"].create(raw_values)
-            finished = self.env["stock.move"].create(finished_values)
-            # Avoid adding moves to a picking. This only seems to happen
-            # when clicking create_and_validate_manufacturing_order button.
-            self.picking_id.move_ids -= raws
-            self.picking_id.move_ids -= finished
-
-            prod.move_raw_ids = raws
-            prod.move_finished_ids = finished
             prod._plan_workorders()
 
             self.mo_has_been_created = True

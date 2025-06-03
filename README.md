@@ -35,7 +35,7 @@ addon | version | maintainers | summary
 [stock_picking_chatter_attachment_visible](stock_picking_chatter_attachment_visible/) | 17.0.1.0.0 |  | Attachments are visible on pickings
 [stock_picking_comment](stock_picking_comment/) | 17.0.1.1.4 |  | External comment for stock picking Delivery Slip and Picking Operations
 [stock_picking_country_group_text](stock_picking_country_group_text/) | 17.0.1.0.0 |  | Get stock picking reports' text from country groups setting
-[stock_picking_create_manufacturing_order_from_move](stock_picking_create_manufacturing_order_from_move/) | 17.0.1.0.0 |  | Create Manufacturing order from stock picking move
+[stock_picking_create_manufacturing_order_from_move](stock_picking_create_manufacturing_order_from_move/) | 17.0.1.1.0 |  | Create Manufacturing order from stock picking move
 [stock_picking_customer_reference](stock_picking_customer_reference/) | 17.0.1.0.1 |  | Stock Picking Customer Reference
 [stock_picking_dispatch_fields](stock_picking_dispatch_fields/) | 17.0.1.0.0 |  | Add different fields to picking for Dispatch Note
 [stock_picking_dropshipping_move_description_from_product_name](stock_picking_dropshipping_move_description_from_product_name/) | 17.0.1.0.0 |  | Do not use product's 'description' field as move description
