@@ -21,7 +21,7 @@
 {
     "name": "Adds Notes -field content to Delivery Slip",
     "summary": "Notes -field content is added to Delivery Slip",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Reporting",
     "website": "https://github.com/tawasta/stock",
     "author": "Tawasta",
