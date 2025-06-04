@@ -23,7 +23,7 @@
     "summary": "Show warning on picking list printout instead of a form popup",
     "version": "17.0.1.0.0",
     "category": "Stock",
-    "website": "https://github.com/tawasta/server-tools",
+    "website": "https://github.com/tawasta/stock",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,

@@ -21,10 +21,10 @@
 {
     "name": "Stock Picking Comment",
     "summary": "External comment for "
-               "stock picking Delivery Slip and Picking Operations",
+    "stock picking Delivery Slip and Picking Operations",
     "category": "Warehouse",
     "version": "17.0.1.1.4",
-    "website": "https://github.com/tawasta/server-tools",
+    "website": "https://github.com/tawasta/stock",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,

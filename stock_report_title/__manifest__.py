@@ -23,7 +23,7 @@
     "summary": "Stock Picking and Delivery Slip Report Title",
     "version": "17.0.1.3.3",
     "category": "Reporting",
-    "website": "https://github.com/tawasta/server-tools",
+    "website": "https://github.com/tawasta/stock",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,

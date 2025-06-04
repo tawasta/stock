@@ -23,7 +23,7 @@
     "summary": "Adds audit log rules for stock.warehouse and stock.location",
     "author": "Futural",
     "license": "AGPL-3",
-    "website": "https://github.com/tawasta/server-tools",
+    "website": "https://github.com/tawasta/stock",
     "category": "Logging",
     "application": False,
     "installable": True,

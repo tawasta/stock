@@ -22,7 +22,7 @@
     "version": "17.0.1.0.0",
     "category": "Stock",
     "summary": "Get Sale Order Partner to Stock Picking from Purchase Order",
-    "website": "https://github.com/tawasta/server-tools",
+    "website": "https://github.com/tawasta/stock",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,

@@ -23,7 +23,7 @@
     "summary": "Vendor Product name and code for Picking list",
     "version": "17.0.1.1.1",
     "category": "Stock",
-    "website": "https://github.com/tawasta/server-tools",
+    "website": "https://github.com/tawasta/stock",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,

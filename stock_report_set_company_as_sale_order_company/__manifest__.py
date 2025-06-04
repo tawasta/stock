@@ -23,7 +23,7 @@
     "summary": "Show related sale order's company on prints instead of the default picking company",
     "version": "17.0.1.0.0",
     "category": "Stock",
-    "website": "https://github.com/tawasta/server-tools",
+    "website": "https://github.com/tawasta/stock",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,

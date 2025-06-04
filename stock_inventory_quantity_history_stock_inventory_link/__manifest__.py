@@ -23,7 +23,7 @@
     "summary": "Show the new qty fields also in list view provided by the another OCA inventory module",
     "category": "Warehouse",
     "version": "17.0.1.0.1",
-    "website": "https://github.com/tawasta/server-tools",
+    "website": "https://github.com/tawasta/stock",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
