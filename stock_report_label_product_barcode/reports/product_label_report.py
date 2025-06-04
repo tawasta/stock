@@ -1,8 +1,8 @@
+import logging
 from collections import defaultdict
 
-from odoo import models, _
+from odoo import _, models
 from odoo.exceptions import UserError
-import logging
 
 _logger = logging.getLogger(__name__)
 

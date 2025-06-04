@@ -1,7 +1,7 @@
 ##############################################################################
 #
-#    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Author: Futural Oy
+#    Copyright 2020 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -20,11 +20,11 @@
 
 {
     "name": "Stock Picking: Mark Picking as Printed",
-    "summary": "Mark stock pickings as printed and log date after printing picking list",
+    "summary": "Mark pickings as printed and log date after printing picking list",
     "category": "Stock",
     "version": "17.0.1.0.1",
-    "website": "https://gitlab.com/tawasta/odoo/stock",
-    "author": "Tawasta",
+    "website": "https://github.com/tawasta/server-tools",
+    "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,

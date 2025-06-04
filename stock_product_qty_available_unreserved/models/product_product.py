@@ -1,7 +1,7 @@
 ##############################################################################
 #
-#    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2021- Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Author: Futural Oy
+#    Copyright 2021- Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -50,7 +50,7 @@ class ProductProduct(models.Model):
 
     # 4. Compute and search fields, in the same order that fields declaration
     def _compute_quantities(self):
-        super(ProductProduct, self)._compute_quantities()
+        super()._compute_quantities()
         for product in self:
             unreserved = product.qty_available - product.outgoing_qty
             product.qty_available_unreserved = unreserved

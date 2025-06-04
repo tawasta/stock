@@ -23,7 +23,7 @@
     "summary": "Integrate stock location with analytic account",
     "version": "17.0.1.0.1",
     "category": "Inventory",
-    "website": "https://gitlab.com/tawasta/odoo/stock",
+    "website": "https://github.com/tawasta/server-tools",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,

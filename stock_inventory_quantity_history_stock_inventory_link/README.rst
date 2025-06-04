@@ -7,7 +7,7 @@ Stock Inventory Theoretical Quantity History / Stock Inventory Adjustment Link
 ==============================================================================
 
 * Show the quantity fields provided by 'Stock Inventory Theoretical Quantity History'
-  OCA module also in the stock.move.line list view provided by 
+  OCA module also in the stock.move.line list view provided by
   'Stock Inventory Adjustment' module.
 
 Configuration
@@ -34,8 +34,8 @@ Contributors
 Maintainer
 ----------
 
-.. image:: https://tawasta.fi/templates/tawastrap/images/logo.png
-   :alt: Oy Tawasta OS Technologies Ltd.
-   :target: https://tawasta.fi/
+.. image:: https://futural.fi/templates/tawastrap/images/logo.png
+   :alt: Futural Oy
+   :target: https://futural.fi/
 
-This module is maintained by Oy Tawasta OS Technologies Ltd.
+This module is maintained by Futural Oy

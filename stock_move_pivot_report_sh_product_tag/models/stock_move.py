@@ -22,7 +22,7 @@ class StockMove(models.Model):
             prod = self.sudo().env["product.product"].search([("id", "=", product)])
             tags = prod.sh_product_tag_ids
             vals["sh_product_tag_ids"] = tags and tags[0].id or False
-        return super(StockMove, self).create(vals)
+        return super().create(vals)
 
     @api.onchange("product_id")
     def onchange_sh_product_tag_ids(self):
@@ -52,7 +52,7 @@ class StockMove(models.Model):
             batch_lines.append(lines[x : x + interval])
 
         for batch in batch_lines:
-            job_desc = _("Assign SH product tags to lines: {}".format(batch))
+            job_desc = _(f"Assign SH product tags to lines: {batch}")
             self.with_delay(description=job_desc)._cron_stock_move_sh_product_tags(
                 batch
             )

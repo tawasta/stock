@@ -1,8 +1,8 @@
-from odoo import fields, models, _
+import logging
+
+from odoo import _, fields, models
 from odoo.exceptions import ValidationError
 from odoo.osv import expression
-
-import logging
 
 _logger = logging.getLogger(__name__)
 
