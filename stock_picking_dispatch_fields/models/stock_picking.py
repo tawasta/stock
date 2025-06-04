@@ -21,6 +21,6 @@ class StockPicking(models.Model):
         default=1,
     )
 
-    transport_company = fields.Char(string="Transport Company")
+    transport_company = fields.Char()
 
     header_text = fields.Char(string="Dispatch Note Header")

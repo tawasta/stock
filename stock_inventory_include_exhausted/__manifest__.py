@@ -20,7 +20,8 @@
 
 {
     "name": "Stock Inventory Adjustment: Include Exhausted",
-    "summary": "Option to automatically add rows for exhausted products when doing inventory",
+    "summary": "Option to automatically add rows "
+    "for exhausted products when doing inventory",
     "category": "Warehouse",
     "version": "17.0.1.0.0",
     "website": "https://github.com/tawasta/stock",

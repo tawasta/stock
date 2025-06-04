@@ -20,7 +20,8 @@
 
 {
     "name": "Stock Inventory Theoretical Quantity History / Stock Inventory Link",
-    "summary": "Show the new qty fields also in list view provided by the another OCA inventory module",
+    "summary": "Show the new qty fields also in list view "
+    "provided by the another OCA inventory module",
     "category": "Warehouse",
     "version": "17.0.1.0.1",
     "website": "https://github.com/tawasta/stock",
