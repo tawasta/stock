@@ -1,7 +1,7 @@
 ##############################################################################
 #
-#    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Author: Futural Oy
+#    Copyright 2025 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,23 +19,17 @@
 ##############################################################################
 
 {
-    "name": "Stock Dispatch Note Template",
-    "summary": "Stock Dispatch Note Template",
-    "version": "14.0.1.0.7",
+    "name": "Adds Notes -field content to Delivery Slip",
+    "summary": "Notes -field content is added to Delivery Slip",
+    "version": "14.0.1.0.1",
     "category": "Reporting",
-    "website": "https://gitlab.com/tawasta/odoo/stock",
+    "website": "https://github.com/tawasta/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
     "depends": [
-        "delivery",
-        "web_report_sfs",
-        "stock_report_element_sizes",
-        "stock_report_title",
+        "stock",
     ],
-    "data": [
-        "report/report_stock_dispatch_main.xml",
-        "report/stock_report_view.xml",
-    ],
+    "data": ["report/stock_report.xml"],
 }

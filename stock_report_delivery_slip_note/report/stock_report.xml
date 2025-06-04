@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_delivery_document" inherit_id="stock.report_delivery_document">
+        <div name="signature" position="before">
+            <t t-if="o.note">
+                <br/>
+                <p t-field="o.note"/>
+            </t>
+        </div>
+    </template>
+</odoo>
