@@ -1,7 +1,7 @@
 ##############################################################################
 #
-#    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Author: Futural Oy
+#    Copyright 2020 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -20,11 +20,12 @@
 
 {
     "name": "Stock Picking Comment",
-    "summary": "External comment for stock picking Delivery Slip and Picking Operations",
+    "summary": "External comment for "
+    "stock picking Delivery Slip and Picking Operations",
     "category": "Warehouse",
     "version": "17.0.1.1.4",
-    "website": "https://gitlab.com/tawasta/odoo/stock",
-    "author": "Tawasta",
+    "website": "https://github.com/tawasta/stock",
+    "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,

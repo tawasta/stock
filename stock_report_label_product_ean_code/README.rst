@@ -20,7 +20,7 @@ Usage
 
 Known issues / Roadmap
 ======================
-* Currently always called in en_US to get english product names. Consider making this a 
+* Currently always called in en_US to get english product names. Consider making this a
   configurable option
 * Configured for a specific label printer - if sticker dimensions differ when using another printer,
   style changes are probably needed.
@@ -38,8 +38,8 @@ Contributors
 Maintainer
 ----------
 
-.. image:: http://tawasta.fi/templates/tawastrap/images/logo.png
-   :alt: Oy Tawasta OS Technologies Ltd.
-   :target: http://tawasta.fi/
+.. image:: https://futural.fi/templates/tawastrap/images/logo.png
+   :alt: Futural Oy
+   :target: https://futural.fi/
 
-This module is maintained by Oy Tawasta OS Technologies Ltd.
+This module is maintained by Futural Oy

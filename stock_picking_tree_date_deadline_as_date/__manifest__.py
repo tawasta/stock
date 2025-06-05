@@ -1,7 +1,7 @@
 ##############################################################################
 #
-#    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2021- Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
+#    Author: Futural Oy
+#    Copyright 2021- Futural Oy (http://www.futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -22,8 +22,8 @@
     "version": "17.0.1.0.0",
     "category": "Stock",
     "summary": "Show date deadline as date in stock picking tree",
-    "website": "https://gitlab.com/tawasta/odoo/stock",
-    "author": "Tawasta",
+    "website": "https://github.com/tawasta/stock",
+    "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,

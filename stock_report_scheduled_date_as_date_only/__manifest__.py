@@ -23,7 +23,7 @@
     "summary": "Stock Picking and Delivery Slip Report Scheduled Date as Date only",
     "version": "17.0.1.0.1",
     "category": "Reporting",
-    "website": "https://gitlab.com/tawasta/odoo/stock",
+    "website": "https://github.com/tawasta/stock",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,

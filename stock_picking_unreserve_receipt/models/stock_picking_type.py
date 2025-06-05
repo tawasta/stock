@@ -8,7 +8,8 @@ class StockPickingType(models.Model):
         string="Unreserve receipt automatically",
         copy=False,
         default=False,
-        help="Pickings created by this picking type will be unreserved automatically upon creating them.",
+        help="""Pickings created by this picking type will be unreserved
+                automatically upon creating them.""",
     )
     hide_unreserve_receipt = fields.Boolean(compute="_compute_hide_unreserve_receipt")
 

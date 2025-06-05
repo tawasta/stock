@@ -1,8 +1,8 @@
+import logging
 from collections import defaultdict
 
-from odoo import models, _
+from odoo import _, models
 from odoo.exceptions import UserError
-import logging
 
 _logger = logging.getLogger(__name__)
 
@@ -35,8 +35,9 @@ class ReportProductTemplateLabelBarcodeAsBarcode(models.AbstractModel):
         # Logic imitated from core.
 
         qty_by_product_in = data.get("quantity_by_product")
-        # search for products all at once, ordered by name desc since popitem() used in xml to print the labels
-        # is LIFO, which results in ordering by product name in the report
+        # search for products all at once, ordered by name desc since popitem() used
+        # in xml to print the labels # is LIFO, which results in ordering by product
+        # name in the report
         products = Product.search(
             [("id", "in", [int(p) for p in qty_by_product_in.keys()])],
             order="name desc",
