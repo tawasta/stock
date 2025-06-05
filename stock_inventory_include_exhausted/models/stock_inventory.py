@@ -1,8 +1,8 @@
-from odoo import fields, models, _
+import logging
+
+from odoo import _, fields, models
 from odoo.exceptions import ValidationError
 from odoo.osv import expression
-
-import logging
 
 _logger = logging.getLogger(__name__)
 
@@ -11,7 +11,6 @@ class StockInventory(models.Model):
     _inherit = "stock.inventory"
 
     include_exhausted = fields.Boolean(
-        string="Include Exhausted",
         help="Create inventory rows also for exhausted products",
     )
 
@@ -75,14 +74,17 @@ class StockInventory(models.Model):
             if len(self.location_ids) > 1:
                 raise ValidationError(
                     _(
-                        "'Include Exhausted' cannot be used when multiple locations are selected"
+                        "'Include Exhausted' "
+                        "cannot be used when multiple locations are selected"
                     )
                 )
 
             if self.product_selection == "lot":
                 raise ValidationError(
                     _(
-                        "'Include Exhausted' cannot be used when Product Selection is set to 'Lot/Serial Number'"
+                        "'Include Exhausted' "
+                        "cannot be used when Product Selection "
+                        "is set to 'Lot/Serial Number'"
                     )
                 )
 
@@ -137,7 +139,8 @@ class StockInventory(models.Model):
 
                     new_zero_stock_quant_ids.append(new_stock_quant_id.id)
                     _logger.debug(
-                        "Product %s did not yet have a quant, adding a zero quantity quant for it"
+                        "Product %s did not yet have a quant, "
+                        "adding a zero quantity quant for it"
                         % product.product_tmpl_id.name
                     )
                 else:

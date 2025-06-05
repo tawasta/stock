@@ -1,5 +1,6 @@
-from odoo import models
 import logging
+
+from odoo import models
 
 _logger = logging.getLogger(__name__)
 
@@ -32,7 +33,8 @@ class StockForecasted(models.AbstractModel):
                 ["id"],
             )
         ]
-        # any quantities in this location will be considered free stock, others are free stock in transit
+        # any quantities in this location will be considered free stock,
+        # others are free stock in transit
         wh_stock_location = warehouse.lot_stock_id
 
         res.update(
