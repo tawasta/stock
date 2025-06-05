@@ -36,13 +36,13 @@ addon | version | maintainers | summary
 [stock_picking_chatter_attachment_visible](stock_picking_chatter_attachment_visible/) | 17.0.1.0.0 |  | Attachments are visible on pickings
 [stock_picking_comment](stock_picking_comment/) | 17.0.1.1.4 |  | External comment for stock picking Delivery Slip and Picking Operations
 [stock_picking_country_group_text](stock_picking_country_group_text/) | 17.0.1.0.0 |  | Get stock picking reports' text from country groups setting
-[stock_picking_create_manufacturing_order_from_move](stock_picking_create_manufacturing_order_from_move/) | 17.0.1.1.0 |  | Create Manufacturing order from stock picking move
+[stock_picking_create_manufacturing_order_from_move](stock_picking_create_manufacturing_order_from_move/) | 17.0.1.1.1 |  | Create Manufacturing order from stock picking move
 [stock_picking_customer_reference](stock_picking_customer_reference/) | 17.0.1.0.1 |  | Stock Picking Customer Reference
 [stock_picking_dispatch_fields](stock_picking_dispatch_fields/) | 17.0.1.0.0 |  | Add different fields to picking for Dispatch Note
 [stock_picking_dropshipping_move_description_from_product_name](stock_picking_dropshipping_move_description_from_product_name/) | 17.0.1.0.0 |  | Do not use product's 'description' field as move description
 [stock_picking_internal_transfer_domain_internal_location](stock_picking_internal_transfer_domain_internal_location/) | 17.0.1.0.1 |  | Use Internal location as domain for Internal transfers
 [stock_picking_move_lines_partner](stock_picking_move_lines_partner/) | 17.0.1.0.0 |  | Stock Picking Move Lines Partner
-[stock_picking_operations_show_name](stock_picking_operations_show_name/) | 17.0.1.0.0 |  | Show name field on Stock Picking operations
+[stock_picking_operations_show_name](stock_picking_operations_show_name/) | 17.0.1.1.0 |  | Show name field on Stock Picking operations
 [stock_picking_override_values](stock_picking_override_values/) | 17.0.1.0.0 |  | Allow overriding new picking values with system parameters
 [stock_picking_printed](stock_picking_printed/) | 17.0.1.0.1 |  | Mark stock pickings as printed and log date after printing picking list
 [stock_picking_process_as_sudo](stock_picking_process_as_sudo/) | 17.0.1.1.2 |  | Process Stock Pickings as Admin user
