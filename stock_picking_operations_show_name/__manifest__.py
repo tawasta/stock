@@ -21,7 +21,7 @@
 {
     "name": "Stock Picking operations - Show name field",
     "summary": "Show name field on Stock Picking operations",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.1.0",
     "category": "Stock",
     "website": "https://gitlab.com/tawasta/odoo/stock",
     "author": "Tawasta",
