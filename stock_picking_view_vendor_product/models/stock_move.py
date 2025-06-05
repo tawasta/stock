@@ -8,7 +8,7 @@ class StockMove(models.Model):
         """Assigns Vendor Product Code based on the vendor of a picking."""
         for move in self:
             vendors = move.product_id.seller_ids.filtered(
-                lambda s: s.partner_id == move.picking_id.partner_id
+                lambda s, move=move: s.partner_id == move.picking_id.partner_id
             )
 
             vendor_info = vendors and vendors[0] or False

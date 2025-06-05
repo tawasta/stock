@@ -20,7 +20,8 @@
 
 {
     "name": "Stock: Set Delivery Slip and Picking PDF company as SO company",
-    "summary": "Show related sale order's company on prints instead of the default picking company",
+    "summary": """Show related sale order's company on prints instead
+                  of the default picking company""",
     "version": "17.0.1.0.0",
     "category": "Stock",
     "website": "https://github.com/tawasta/stock",

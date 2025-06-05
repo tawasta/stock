@@ -39,15 +39,18 @@ class StockWarehouseOrderpoint(models.Model):
             ):
                 display_msg = _(
                     """<div style="color: red;">
-                    Replenishment for location: {}
+                    Replenishment for location: {loc}
                     <br/>
-                    The quantity of {} product is below its minimium quantity ({}) and it is now {}
+                    The quantity of {qt} product is below its minimium quantity ({m_qt})
+                    and it is now {now_qty}
                     </div>
                     """.format(
-                        orderpoint.location_id and orderpoint.location_id.name or "",
-                        orderpoint.product_id.display_name,
-                        orderpoint.product_min_qty,
-                        orderpoint.qty_on_hand,
+                        loc=orderpoint.location_id
+                        and orderpoint.location_id.name
+                        or "",
+                        qt=orderpoint.product_id.display_name,
+                        m_qt=orderpoint.product_min_qty,
+                        now_qty=orderpoint.qty_on_hand,
                     )
                 )
 

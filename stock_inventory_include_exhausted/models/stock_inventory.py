@@ -83,7 +83,8 @@ class StockInventory(models.Model):
                 raise ValidationError(
                     _(
                         "'Include Exhausted' "
-                        "cannot be used when Product Selection is set to 'Lot/Serial Number'"
+                        "cannot be used when Product Selection "
+                        "is set to 'Lot/Serial Number'"
                     )
                 )
 
