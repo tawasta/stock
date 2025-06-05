@@ -9,7 +9,7 @@ class StockPicking(models.Model):
         for picking in self:
             for move in picking.move_ids:
                 move.move_has_been_reserved = False
-        super().do_unreserve()
+        return super().do_unreserve()
 
     def action_assign(self):
         """Mark all moves as reserved, which hides Reserve-button."""

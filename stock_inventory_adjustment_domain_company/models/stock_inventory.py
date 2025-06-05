@@ -12,5 +12,6 @@ class StockQuant(models.Model):
         check_company=True,
         domain="[('company_id', 'in', [company_id, False]),"
         "('usage', 'in', ['internal', 'transit'])]",
-        help="The parent location that includes this location. Example : The 'Dispatch Zone' is the 'Gate 1' parent location.",
+        help="The parent location that includes this location. "
+        "Example : The 'Dispatch Zone' is the 'Gate 1' parent location.",
     )

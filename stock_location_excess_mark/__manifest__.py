@@ -23,7 +23,7 @@
     "summary": "Select a stock location and mark it as of excess type",
     "version": "17.0.1.1.0",
     "category": "Stock",
-    "website": "https://gitlab.com/tawasta/odoo/stock",
+    "website": "https://github.com/tawasta/stock",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,

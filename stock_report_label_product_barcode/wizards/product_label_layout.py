@@ -1,6 +1,6 @@
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
 import logging
+
+from odoo import fields, models
 
 _logger = logging.getLogger(__name__)
 
@@ -21,6 +21,9 @@ class ProductLabelLayout(models.TransientModel):
         xml_id, data = super()._prepare_report_data()
 
         if self.print_format == "barcode_as_barcode":
-            xml_id = "stock_report_label_product_barcode.report_product_product_label_barcode_as_barcode"
+            xml_id = (
+                "stock_report_label_product_barcode."
+                "report_product_product_label_barcode_as_barcode"
+            )
 
         return xml_id, data
