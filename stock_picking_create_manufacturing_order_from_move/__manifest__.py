@@ -21,7 +21,7 @@
 {
     "name": "Create Manufacturing order from stock picking move",
     "summary": "Create Manufacturing order from stock picking move",
-    "version": "17.0.1.1.0",
+    "version": "17.0.1.1.1",
     "category": "Stock",
     "website": "https://github.com/tawasta/stock",
     "author": "Futural",
