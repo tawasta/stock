@@ -1,5 +1,5 @@
 from odoo import _, api, fields, models
-from odoo.tools import float_is_zero
+from odoo.tools import float_compare, float_is_zero
 
 
 class InventoryLine(models.Model):
@@ -80,6 +80,43 @@ class InventoryLine(models.Model):
     def _compute_difference(self):
         for line in self:
             line.difference_qty = line.product_qty - line.theoretical_qty
+
+    @api.depends(
+        "inventory_date",
+        "product_id.stock_move_ids",
+        "theoretical_qty",
+        "product_uom_id.rounding",
+    )
+    def _compute_outdated(self):
+        quants_by_inventory = {
+            inventory: inventory._get_quantities() for inventory in self.inventory_id
+        }
+        for line in self:
+            quants = quants_by_inventory[line.inventory_id]
+            if line.state == "done" or not line.id:
+                line.outdated = False
+                continue
+            qty = quants.get(
+                (
+                    line.product_id.id,
+                    line.location_id.id,
+                    line.prod_lot_id.id,
+                    line.package_id.id,
+                    line.partner_id.id,
+                ),
+                0,
+            )
+            if (
+                float_compare(
+                    qty,
+                    line.theoretical_qty,
+                    precision_rounding=line.product_uom_id.rounding,
+                )
+                != 0
+            ):
+                line.outdated = True
+            else:
+                line.outdated = False
 
     def _search_difference_qty(self, operator, value):
         if operator == "=":
