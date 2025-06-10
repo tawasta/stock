@@ -19,7 +19,7 @@ class InventoryLine(models.Model):
         "uom.uom", "Product Unit of Measure", readonly=True
     )
     product_qty = fields.Float(
-        "Counted Quantity", digits="Product Unit of Measure", default=0, readonly=True
+        "Counted Quantity", digits="Product Unit of Measure", readonly=True
     )
     categ_id = fields.Many2one(related="product_id.categ_id", store=True, readonly=True)
     location_id = fields.Many2one(
@@ -62,7 +62,6 @@ class InventoryLine(models.Model):
         readonly=True,
     )
     inventory_date = fields.Datetime(
-        default=fields.Datetime.now,
         help="Last date at which the On Hand Quantity has been computed.",
         readonly=True,
     )
