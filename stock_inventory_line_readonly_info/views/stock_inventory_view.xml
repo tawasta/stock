@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_inventory_group_form" model="ir.ui.view">
+        <field name="name">stock.inventory.form.open.inventory.lines</field>
+        <field name="model">stock.inventory</field>
+        <field name="inherit_id" ref="stock_inventory.view_inventory_group_form" />
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button
+                    string="Inventory Lines"
+                    type="object"
+                    name="action_validated_inventory_lines"
+                    class="oe_stat_button"
+                    icon="fa-list"
+                    invisible="count_inventory_lines == 0"
+                />
+                <field name="count_inventory_lines" invisible="1" />
+            </div>
+        </field>
+    </record>
+
+    <record id="stock_inventory_line_tree" model="ir.ui.view">
+        <field name="name">stock.inventory.line.tree</field>
+        <field name="model">stock.inventory.line</field>
+        <field name="arch" type="xml">
+            <tree
+                default_order="location_id,product_id"
+                create="0"
+                decoration-danger="product_qty != theoretical_qty"
+                decoration-muted="product_qty == theoretical_qty"
+                decoration-bf="is_editable"
+            >
+                <field name="company_id" invisible="1" />
+                <field name="product_tracking" invisible="1" />
+                <field name="is_editable" invisible="1" />
+                <field name="outdated" invisible="1" />
+                <field name="product_id" width="1.6" />
+                <field
+                    name="location_id"
+                    groups="stock.group_stock_multi_locations"
+                    options="{'no_create': True}"
+                    invisible="context.get('readonly_location_id', False)"
+                />
+                <field name="inventory_date" optional="hide" width="0.8" />
+                <field
+                    name="prod_lot_id"
+                    groups="stock.group_production_lot"
+                    width="0.8"
+                    optional="show"
+                />
+                <field
+                    name="package_id"
+                    groups="stock.group_tracking_lot"
+                    width="0.8"
+                    string="Package"
+                    optional="show"
+                />
+                <field name="partner_id" groups="stock.group_tracking_owner" />
+                <field
+                    name="theoretical_qty"
+                    string="On Hand"
+                    width="0.5"
+                    force_save="1"
+                    readonly="1"
+                    optional="show"
+                />
+                <field name="product_qty" width="0.5" string="Counted" />
+                <field name="difference_qty" optional="show" width="0.5" />
+                <field
+                    name="product_uom_id"
+                    string="UoM"
+                    groups="uom.group_uom"
+                    width="0.3"
+                    force_save="1"
+                />
+                <field name="inventory_id" invisible="1" />
+                <field name="state" invisible="1" />
+            </tree>
+        </field>
+    </record>
+</odoo>
