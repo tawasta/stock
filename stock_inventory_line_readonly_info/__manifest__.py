@@ -21,7 +21,7 @@
 {
     "name": "Stock Inventory Lines shown as readonly",
     "summary": "Show old inventory lines as readonly",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Inventory",
     "website": "https://github.com/tawasta/stock",
     "author": "Futural",
