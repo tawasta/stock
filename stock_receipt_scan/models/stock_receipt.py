@@ -43,7 +43,7 @@ class StockReceipt(models.Model):
         )
         if not product:
             return
-        moves = self.env['stock.move'].search([('product_id', '=', product.id)])
+        moves = self.env['stock.move'].search([('product_id', '=', product.id), ('state', '=', 'assigned')])
         if not moves:
             return
 
