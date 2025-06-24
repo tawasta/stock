@@ -14,8 +14,14 @@
                             <field name="barcode_input" placeholder="Scan or enter product barcode here..." class="o_input" options="{'no_create': True}"/>
                         </group>
                         <group>
-                            <field name="move_selection_ids" widget="many2many_tags" options="{'no_create': True}" placeholder="Select stock moves if multiple available"/>
+                            <field name="move_selection_ids" widget="many2many_tags" options="{'no_create': True}"/>
+                            
                         </group>
+                        <div class="o_text_warning" 
+                                 invisible="not move_selection_ids">
+                                Jos skannattu barcode vastaa useampaa varastosiirtoa, valitse täsmälleen yksi jatkaaksesi.
+                            </div>
+
                     </group>
 
                     <notebook>
