@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_stock_receipt_form" model="ir.ui.view">
+        <field name="model">stock.receipt</field>
+        <field name="arch" type="xml">
+            <form string="Stock Receipt" class="o_form_editable">
+                <sheet>
+                    <group string="Receipt Information" class="o_group o_group_column">
+                        <group>
+                            <field name="user_id" readonly="1" class="oe_inline"/>
+                            <field name="create_date" readonly="1" class="oe_inline"/>
+                        </group>
+                        <group>
+                            <field name="barcode_input" placeholder="Scan or enter product barcode here..." class="o_input" options="{'no_create': True}"/>
+                        </group>
+                        <group>
+                            <field name="move_selection_ids" widget="many2many_tags" options="{'no_create': True}" placeholder="Select stock moves if multiple available"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page string="Lines" class="o_notebook_page">
+                            <field name="line_ids" nolabel="1" editable="bottom">
+                                <tree editable="bottom" class="o_list_hover" colors="quantity: quantity &lt; 1 ? 'danger' : ''">
+                                    <field name="product_id" readonly="1"/>
+                                    <field name="barcode" readonly="1"/>
+                                    <field name="quantity" widget="float" options="{'digits': [16, 2]}"/>
+                                    <field name="stock_move_id" readonly="1"/>
+                                    <field name="stock_picking_id" readonly="1"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="view_stock_receipt_tree" model="ir.ui.view">
+        <field name="model">stock.receipt</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="user_id"/>
+                <field name="create_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_stock_receipt_line_tree" model="ir.ui.view">
+        <field name="model">stock.receipt.line</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="receipt_id"/>
+                <field name="product_id"/>
+                <field name="barcode"/>
+                <field name="quantity"/>
+                <field name="stock_move_id"/>
+                <field name="stock_picking_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Stock Receipt Line form view -->
+    <record id="view_stock_receipt_line_form" model="ir.ui.view">
+        <field name="model">stock.receipt.line</field>
+        <field name="arch" type="xml">
+            <form string="Stock Receipt Line">
+                <sheet>
+                    <group>
+                        <field name="receipt_id" readonly="1"/>
+                        <field name="product_id" readonly="1"/>
+                        <field name="barcode" readonly="1"/>
+                        <field name="quantity"/>
+                        <field name="stock_move_id" readonly="1"/>
+                        <field name="stock_picking_id" readonly="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_stock_receipt_line" model="ir.actions.act_window">
+        <field name="name">Stock Receipt Lines</field>
+        <field name="res_model">stock.receipt.line</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_stock_receipt" model="ir.actions.act_window">
+        <field name="name">Stock Receipts</field>
+        <field name="res_model">stock.receipt</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_stock_receipt_root" name="Stock Receipts" parent="stock.menu_stock_config_settings" sequence="50"/>
+    <menuitem id="menu_stock_receipt" parent="menu_stock_receipt_root" action="action_stock_receipt" sequence="10"/>
+
+    <!-- Menu for Stock Receipt Lines -->
+    <menuitem id="menu_stock_receipt_line"
+              name="Stock Receipt Lines"
+              parent="menu_stock_receipt_root"
+              action="action_stock_receipt_line"
+              sequence="20"/>
+</odoo>
