@@ -30,7 +30,8 @@
     "installable": True,
     "depends": ["stock"],
     "data": [
-        'security/ir.model.access.csv',
-        'views/stock_receipt_views.xml',
+        "security/ir.model.access.csv",
+        "wizard/stock_receipt_wizard_views.xml",
+        "views/stock_receipt_views.xml",
     ],
 }
