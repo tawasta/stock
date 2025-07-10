@@ -24,10 +24,7 @@ class StockMove(models.Model):
 
     def create_and_validate_manufacturing_order(self):
         """Create and validate a new manufacturing order"""
-        self.reserve_this_move()
-        move_lines = self.move_line_ids
-        ml_qty = move_lines and move_lines[0].quantity or 0
-        qty_to_produce = self.product_uom_qty - ml_qty
+        qty_to_produce = self.product_uom_qty
         # Return a pop-up window if a quantity to be produced is zero.
         if qty_to_produce == 0:
             msg = _(
@@ -66,9 +63,7 @@ class StockMove(models.Model):
             .manu_type_id.id
         )
 
-        # Subtracts the difference between reserved and ordered quantity
-        ml_qty = self.move_line_ids and self.move_line_ids[0].quantity or 0
-        qty_to_produce = self.product_uom_qty - ml_qty
+        qty_to_produce = self.product_uom_qty
 
         if bom:
             # Assign values
