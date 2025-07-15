@@ -1,4 +1,18 @@
 from odoo import api, fields, models
+import re
+from datetime import datetime
+import logging
+
+_logger = logging.getLogger(__name__)
+
+def parse_gs1_barcode(barcode_str):
+    pattern = r"\((\d{2})\)([^\(]+)"
+    matches = re.findall(pattern, barcode_str)
+
+    data = {}
+    for ai, value in matches:
+        data[ai] = value.strip()
+    return data
 
 
 class StockReceiptWizard(models.TransientModel):
@@ -8,16 +22,32 @@ class StockReceiptWizard(models.TransientModel):
     barcode_input = fields.Char(string="Scan Barcode")
     line_ids = fields.One2many("stock.receipt.wizard.line", "wizard_id", string="Lines")
 
+    lot_ids = fields.Many2many("stock.receipt.lot", string="Lots")
+
     @api.onchange("barcode_input")
     def _onchange_barcode_input(self):
         if not self.barcode_input:
             return
 
+        gs1_data = parse_gs1_barcode(self.barcode_input)
+
+        product_code = gs1_data.get("01")
+        expiration_raw = gs1_data.get("17")
+        lot_name = gs1_data.get("10")
+
+        if not product_code:
+            return {
+                "warning": {
+                    "title": "Barcode error",
+                    "message": "Barcode missing (01) product code.",
+                }
+            }
+
         product = self.env["product.product"].search(
             [
                 "|",
-                ("barcode", "=", self.barcode_input),
-                ("default_code", "=", self.barcode_input),
+                ("barcode", "=", product_code),
+                ("default_code", "=", product_code),
             ],
             limit=1,
         )
@@ -47,6 +77,21 @@ class StockReceiptWizard(models.TransientModel):
         )
         if existing_line:
             existing_line.quantity += 1.0
+
+            expiration_date = None
+            if expiration_raw and re.match(r"\d{6}", expiration_raw):
+                try:
+                    expiration_date = datetime.strptime(expiration_raw, "%y%m%d").date()
+                except ValueError:
+                    pass
+
+            self.lot_ids |= self.env["stock.receipt.lot"].create({
+                "product_id": product.id,
+                "stock_move_id": move.id,
+                "lot_name": lot_name,
+                "expiration_date": expiration_date,
+            })
+
         else:
             self.line_ids |= self.env["stock.receipt.wizard.line"].new(
                 {
@@ -56,6 +101,20 @@ class StockReceiptWizard(models.TransientModel):
                     "stock_move_id": move.id,
                 }
             )
+
+            expiration_date = None
+            if expiration_raw and re.match(r"\d{6}", expiration_raw):
+                try:
+                    expiration_date = datetime.strptime(expiration_raw, "%y%m%d").date()
+                except ValueError:
+                    pass
+
+            self.lot_ids |= self.env["stock.receipt.lot"].create({
+                "product_id": product.id,
+                "stock_move_id": move.id,
+                "lot_name": lot_name,
+                "expiration_date": expiration_date,
+            })
         self.barcode_input = False
 
     def validate_receipt_lines(self):
@@ -80,6 +139,23 @@ class StockReceiptWizard(models.TransientModel):
                     "stock_move_id": line.stock_move_id.id,
                 }
             )
+
+            for lot in self.lot_ids:
+                new_lot = self.env['stock.lot'].create({
+                    'name': lot.lot_name,
+                    'product_id': lot.product_id.id,
+                    'product_qty': 1,
+                    'expiration_date': lot.expiration_date if 'expiration_date' in lot else False,
+                })
+                move_line = self.env['stock.move.line'].search([
+                    ('move_id', '=', line.stock_move_id.id),
+                    ('product_id', '=', line.product_id.id),
+                ], order="lot_id desc", limit=1)
+
+                if move_line:
+                    move_line.write({
+                        'lot_id': new_lot.id,
+                    })
             # Kutsu tyhjää apufunktiota rivin luonnin jälkeen
             self.post_process_receipt_line(receipt_line)
 
@@ -119,3 +195,13 @@ class StockReceiptWizardLine(models.TransientModel):
     barcode = fields.Char()
     quantity = fields.Float(default=1.0)
     stock_move_id = fields.Many2one("stock.move")
+
+class StockReceiptLot(models.Model):
+    _name = "stock.receipt.lot"
+    _description = "Stock Receipt Lot"
+
+    lot_name = fields.Char(string="Lot Number",)
+    product_id = fields.Many2one("product.product", readonly=1)
+    expiration_date = fields.Date(string="Expiration Date")
+    stock_move_id = fields.Many2one("stock.move", string="Stock Move", readonly=1)
+
