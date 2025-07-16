@@ -155,14 +155,17 @@ class StockBarcodeTransferWizard(models.TransientModel):
 
             # Tallenna rivin tiedot viestiä varten
             lines_created.append(
-                _("- %(product)s (Lot: %(lot)s, Exp: %(exp)s)") % {
+                _("- %(product)s (Lot: %(lot)s, Exp: %(exp)s)")
+                % {
                     "product": line.product_id.display_name,
                 }
             )
 
         # Muodosta viesti ilman HTML-tageja
         body = _(
-            "Stock picking was created using the Barcode Transfer Wizard by %(user)s from source location '%(location)s'.\n\nScanned lines:\n%(lines)s"
+            "Stock picking was created using the Barcode Transfer Wizard by"
+            " %(user)s from source"
+            " location '%(location)s'.\n\nScanned lines:\n%(lines)s"
         ) % {
             "user": self.env.user.name,
             "location": self.location_id.display_name,
@@ -178,7 +181,6 @@ class StockBarcodeTransferWizard(models.TransientModel):
             "view_mode": "form",
             "target": "current",
         }
-
 
 
 class StockBarcodeTransferLine(models.TransientModel):
