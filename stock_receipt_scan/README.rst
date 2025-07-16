@@ -24,6 +24,10 @@ Features
 - Chatter integration for logging receipt confirmation messages.
 - Access rights configured for base user groups.
 
+- **Internal Transfer Barcode Wizard**:
+  
+  This feature provides a transient wizard model (`stock.barcode.transfer.wizard`) that allows scanning GS1 barcodes to create internal stock transfers. It parses GS1 barcodes to extract product codes, lot numbers, and expiration dates, validates stock availability in the selected source location, and creates stock moves for scanned products. The wizard interface includes a barcode input with real-time parsing and a tree view of scanned products and their details. It also restricts the location selection based on scanned lines and offers buttons to create the transfer or cancel.
+
 Configuration
 =============
 No special configuration is needed. The module uses default Odoo access groups and assumes
@@ -37,7 +41,8 @@ Usage
    - Scan product barcodes using GS1 format.
    - Automatically create stock move lines with lot and expiration data.
    - Review and save scanned data into the picking.
-4. Confirm the stock operation or receipt as usual.
+4. Use the **Internal Transfer Barcode Wizard** to scan barcodes and quickly create internal stock transfers by scanning GS1 barcodes that include product, lot, and expiration date information.
+5. Confirm the stock operation or receipt as usual.
 
 Known issues / Roadmap
 ======================
