@@ -14,10 +14,19 @@ Features
 ========
 
 - Stock Receipt and Stock Receipt Line models with user tracking and timestamps.
-- Barcode scanning wizard that automatically associates scanned products with stock moves.
-- Form and tree views for managing stock receipts and lines.
+- Two separate barcode scanning features:
+  
+  1. **Stock Receipt Wizard**: For creating new stock receipt records by scanning product barcodes.
+  2. **Picking Barcode Wizard**: Integrated into stock transfers, enabling barcode-based stock move line creation directly from a delivery/receipt.
+
+- GS1 barcode parsing including product code (01), lot number (10), and expiration date (17).
+- Form and tree views for managing stock receipts, lines, and scanned products.
 - Chatter integration for logging receipt confirmation messages.
 - Access rights configured for base user groups.
+
+- **Internal Transfer Barcode Wizard**:
+  
+  This feature provides a transient wizard model (`stock.barcode.transfer.wizard`) that allows scanning GS1 barcodes to create internal stock transfers. It parses GS1 barcodes to extract product codes, lot numbers, and expiration dates, validates stock availability in the selected source location, and creates stock moves for scanned products. The wizard interface includes a barcode input with real-time parsing and a tree view of scanned products and their details. It also restricts the location selection based on scanned lines and offers buttons to create the transfer or cancel.
 
 Configuration
 =============
@@ -27,9 +36,13 @@ products and stock moves exist with appropriate barcodes.
 Usage
 =====
 1. Install the module in your Odoo instance.
-2. Navigate to the "Stock Receipts" menu under Inventory settings.
-3. Use the "Create Stock Receipt" wizard to scan or enter product barcodes.
-4. Confirm the receipt to create stock receipt records and log the transaction.
+2. Navigate to the **"Stock Receipts"** menu under Inventory settings to use the traditional stock receipt scan wizard.
+3. Alternatively, go to an existing **Stock Picking (Delivery or Receipt)** and use the **"Scan Barcode"** button in the header to:
+   - Scan product barcodes using GS1 format.
+   - Automatically create stock move lines with lot and expiration data.
+   - Review and save scanned data into the picking.
+4. Use the **Internal Transfer Barcode Wizard** to scan barcodes and quickly create internal stock transfers by scanning GS1 barcodes that include product, lot, and expiration date information.
+5. Confirm the stock operation or receipt as usual.
 
 Known issues / Roadmap
 ======================

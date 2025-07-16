@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="action_create_stock_picking_wizard" model="ir.actions.act_window">
+        <field name="name">Create stock picking</field>
+        <field name="res_model">stock.barcode.transfer.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+
+    <menuitem
+        id="menu_create_picking"
+        name="Create stock picking"
+        parent="stock.menu_stock_root"
+        action="action_create_stock_picking_wizard"
+        sequence="10"
+    />
+
+</odoo>
