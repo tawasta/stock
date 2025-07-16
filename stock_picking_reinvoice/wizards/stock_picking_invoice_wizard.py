@@ -37,6 +37,10 @@ class StockPickingInvoiceWizard(models.TransientModel):
             if record.partner_id:
                 record.pricelist_id = record.partner_id.property_product_pricelist
 
+    def get_picking_moves(self, picking):
+        for move in picking.move_lines:
+            yield move.product_id, move
+
     def action_create_invoice(self):
 
         picking_ids = self.env["stock.picking"].browse(self._context.get("active_ids"))
@@ -82,8 +86,11 @@ class StockPickingInvoiceWizard(models.TransientModel):
             # to invoice line description later
             show_moves = False
 
-            for move in picking.move_lines:
-                product = move.product_id
+            products, moves = self.get_picking_moves(picking)
+
+            #for move in picking.move_lines:
+            for product, move in products, moves:
+                #product = move.product_id
                 quantity = move.quantity_done
                 account = (
                     product.property_account_income_id
