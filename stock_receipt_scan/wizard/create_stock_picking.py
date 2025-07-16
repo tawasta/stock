@@ -136,6 +136,8 @@ class StockBarcodeTransferWizard(models.TransientModel):
             }
         )
 
+        lines_created = []
+
         for line in self.scanned_line_ids.filtered(
             lambda li: li.location_id == self.location_id
         ):
@@ -151,6 +153,24 @@ class StockBarcodeTransferWizard(models.TransientModel):
                 }
             )
 
+            # Tallenna rivin tiedot viestiä varten
+            lines_created.append(
+                _("- %(product)s (Lot: %(lot)s, Exp: %(exp)s)") % {
+                    "product": line.product_id.display_name,
+                }
+            )
+
+        # Muodosta viesti ilman HTML-tageja
+        body = _(
+            "Stock picking was created using the Barcode Transfer Wizard by %(user)s from source location '%(location)s'.\n\nScanned lines:\n%(lines)s"
+        ) % {
+            "user": self.env.user.name,
+            "location": self.location_id.display_name,
+            "lines": "\n".join(lines_created),
+        }
+
+        picking.message_post(body=body, subtype_xmlid="mail.mt_comment")
+
         return {
             "type": "ir.actions.act_window",
             "res_model": "stock.picking",
@@ -158,6 +178,7 @@ class StockBarcodeTransferWizard(models.TransientModel):
             "view_mode": "form",
             "target": "current",
         }
+
 
 
 class StockBarcodeTransferLine(models.TransientModel):

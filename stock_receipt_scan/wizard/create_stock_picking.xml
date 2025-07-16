@@ -15,6 +15,9 @@
                             Internal Transfer Scanner
                         </h2>
                     </div>
+                    <div class="o_form_label text-info mb8">
+                        Scan products one by one using a barcode scanner. Ensure barcode includes GTIN, Lot and Exp. Then select source location and click 'Create Transfer'.
+                    </div>
 
                     <!-- Barcode Field -->
                     <div class="mt16 mb16">
@@ -27,11 +30,13 @@
                         </div>
                         <field
                             name="barcode"
-                            placeholder="Scan GS1 Barcode..."
+                            placeholder="Scan GS1 barcode (with GTIN + Lot + Exp)..."
+                            help="Use a GS1-128 barcode scanner. Barcode should include GTIN (01), Lot (10), and Expiration Date (17)."
                             class="o_input o_field_highlight"
                             style="font-size: 18px;"
                             options="{'no_quick_create': True}"
                         />
+
                     </div>
 
                     <!-- Scanned Lines -->
