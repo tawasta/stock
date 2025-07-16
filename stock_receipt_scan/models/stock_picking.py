@@ -19,12 +19,3 @@ class StockPicking(models.Model):
                 "default_picking_id": self.id,
             },
         }
-
-
-class StockMoveLineLog(models.Model):
-    _inherit = "stock.move.line"
-
-    @api.model
-    def create(self, vals):
-        _logger.info("Creating stock.move.line with values:\n%s", vals)
-        return super().create(vals)
