@@ -131,7 +131,7 @@ class StockBarcodeTransferWizard(models.TransientModel):
                 "partner_id": self.env.user.partner_id.id,
                 "picking_type_id": self.env.ref("stock.picking_type_internal").id,
                 "location_id": self.location_id.id,
-                "location_dest_id": self.location_id.id,
+                "location_dest_id": self.env.user.partner_id.property_stock_customer.id,
                 "move_type": "direct",
             }
         )
@@ -149,7 +149,7 @@ class StockBarcodeTransferWizard(models.TransientModel):
                     "product_uom_qty": 1.0,
                     "product_uom": line.product_id.uom_id.id,
                     "location_id": self.location_id.id,
-                    "location_dest_id": self.location_id.id,
+                    "location_dest_id": self.env.user.partner_id.property_stock_customer.id,
                 }
             )
 
