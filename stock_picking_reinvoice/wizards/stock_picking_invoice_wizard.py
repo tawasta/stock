@@ -67,17 +67,11 @@ class StockPickingInvoiceWizard(models.TransientModel):
         for picking in picking_ids:
             if picking.state != "done":
                 raise UserError(
-                    _(
-                        "You can't invoice a picking that is not done: {}".format(
-                            picking.name
-                        )
-                    )
+                    _(f"You can't invoice a picking that is not done: {picking.name}")
                 )
 
             if picking.invoice_id and picking.invoice_id.state != "cancel":
-                raise UserError(
-                    _("Picking is already invoiced: {}".format(picking.name))
-                )
+                raise UserError(_(f"Picking is already invoiced: {picking.name}"))
 
             partner = picking.partner_id
             # Dummy variable, if we want to re-implement adding move names
@@ -97,7 +91,7 @@ class StockPickingInvoiceWizard(models.TransientModel):
                 price = self.pricelist_id.get_product_price(product, quantity, partner)
 
                 if show_moves:
-                    line_name = "{} - {}".format(move.name, move.picking_id.name)
+                    line_name = f"{move.name} - {move.picking_id.name}"
                 else:
                     line_name = product.display_name
 
@@ -116,7 +110,7 @@ class StockPickingInvoiceWizard(models.TransientModel):
                     }
                     if show_moves:
                         new_line_values["name"] = (
-                            "{}, {}".format(existing_line.name, move.picking_id.name),
+                            f"{existing_line.name}, {move.picking_id.name}",
                         )
 
                     existing_line.with_context(check_move_validity=False).write(

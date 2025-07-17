@@ -7,7 +7,7 @@ class StockBackorderConfirmation(models.TransientModel):
     mass_transfer_done = fields.Boolean(default=False)
 
     def process(self):
-        res = super(StockBackorderConfirmation, self).process()
+        res = super().process()
         pickings = self.pick_ids.print_delivery_slip()
 
         close_window = {"type": "ir.actions.act_window_close"}
@@ -22,7 +22,7 @@ class StockBackorderConfirmation(models.TransientModel):
         }
 
     def process_cancel_backorder(self):
-        res = super(StockBackorderConfirmation, self).process_cancel_backorder()
+        res = super().process_cancel_backorder()
         pickings = self.pick_ids.print_delivery_slip()
 
         close_window = {"type": "ir.actions.act_window_close"}

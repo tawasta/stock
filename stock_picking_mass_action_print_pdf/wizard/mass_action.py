@@ -8,4 +8,4 @@ class StockPickingMassAction(TransientModel):
         if self.transfer:
             for pick in self.picking_ids:
                 pick.mass_transfer_done = True
-        return super(StockPickingMassAction, self).mass_action()
+        return super().mass_action()
