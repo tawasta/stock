@@ -24,11 +24,11 @@
     "category": "Warehouse",
     "version": "14.0.1.0.0",
     "website": "https://gitlab.com/tawasta/odoo/stock",
-    "author": "Futural",
+    "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["stock_picking_reinvoice", "stock_move_sale_kit"],
+    "depends": ["stock_picking_reinvoice", "mrp"],
     "data": [
         "wizards/stock_picking_invoice_wizard.xml",
     ],
