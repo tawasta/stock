@@ -3,7 +3,6 @@ from odoo.exceptions import UserError
 
 
 class StockPickingInvoiceWizard(models.TransientModel):
-
     _name = "stock.picking.invoice.wizard"
     _description = "Create invoice from pickings"
 
@@ -42,7 +41,6 @@ class StockPickingInvoiceWizard(models.TransientModel):
             yield (move.product_id, move, move.quantity_done)
 
     def action_create_invoice(self):
-
         picking_ids = self.env["stock.picking"].browse(self._context.get("active_ids"))
 
         aml = self.env["account.move.line"]

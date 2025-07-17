@@ -2,7 +2,6 @@ from odoo import _, models
 
 
 class StockPicking(models.Model):
-
     _inherit = "stock.picking"
 
     def open_return_picking_view(self):

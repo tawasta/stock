@@ -2,7 +2,6 @@ from odoo import models
 
 
 class StockMoveLine(models.Model):
-
     _inherit = "stock.move.line"
 
     def _get_aggregated_product_quantities(self, **kwargs):

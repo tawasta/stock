@@ -2,7 +2,6 @@ from odoo import models
 
 
 class StockPicking(models.Model):
-
     _inherit = "stock.picking"
 
     def set_moves_to_done(self):

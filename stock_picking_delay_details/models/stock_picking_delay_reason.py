@@ -2,7 +2,6 @@ from odoo import fields, models
 
 
 class StockPickingDelayReason(models.Model):
-
     _inherit = "stock.picking.delay.reason"
 
     delay_details = fields.One2many(

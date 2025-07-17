@@ -2,7 +2,6 @@ from odoo import fields, models
 
 
 class StockImmediateTransfer(models.TransientModel):
-
     _inherit = "stock.immediate.transfer"
 
     mass_transfer_done = fields.Boolean(default=False)

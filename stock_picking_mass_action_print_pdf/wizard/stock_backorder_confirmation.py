@@ -2,7 +2,6 @@ from odoo import fields, models
 
 
 class StockBackorderConfirmation(models.TransientModel):
-
     _inherit = "stock.backorder.confirmation"
 
     mass_transfer_done = fields.Boolean(default=False)

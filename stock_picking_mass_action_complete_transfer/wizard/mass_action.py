@@ -2,7 +2,6 @@ from odoo import models
 
 
 class StockPickingMassAction(models.TransientModel):
-
     _inherit = "stock.picking.mass.action"
 
     def mass_action(self):

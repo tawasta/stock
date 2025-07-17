@@ -2,7 +2,6 @@ from odoo import models
 
 
 class ReplenishmentReport(models.AbstractModel):
-
     _inherit = "report.stock.report_product_product_replenishment"
 
     def _get_report_data(self, product_template_ids=False, product_variant_ids=False):

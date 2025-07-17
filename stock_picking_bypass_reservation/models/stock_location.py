@@ -2,7 +2,6 @@ from odoo import fields, models
 
 
 class StockLocation(models.Model):
-
     _inherit = "stock.location"
 
     allow_bypass_reservation = fields.Boolean(

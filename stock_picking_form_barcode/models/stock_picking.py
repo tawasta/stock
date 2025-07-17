@@ -6,7 +6,6 @@ from odoo import fields, http, models
 
 
 class StockPicking(models.Model):
-
     _inherit = "stock.picking"
 
     barcode = fields.Binary(string="Barcode URL", compute="_compute_barcode")

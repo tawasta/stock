@@ -3,7 +3,6 @@ from odoo.exceptions import UserError
 
 
 class StockMove(models.Model):
-
     _inherit = "stock.move"
 
     def _compute_product_bom_ids(self):
@@ -127,7 +126,6 @@ class StockMove(models.Model):
                 raise UserError(msg_done)
             mo.action_confirm()
             if mo.state == "confirmed":
-
                 # Create wizards and call process() function to complete
                 # the created production order.
                 prod_wiz = (

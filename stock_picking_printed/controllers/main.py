@@ -9,7 +9,6 @@ from odoo.addons.web.controllers.main import ReportController
 class PickingReportController(ReportController):
     @http.route()
     def report_download(self, data, token):
-
         res = super(PickingReportController, self).report_download(data, token)
         requestcontent = json.loads(data)
         url, report_type = requestcontent[0], requestcontent[1]

@@ -4,7 +4,6 @@ from odoo.addons import decimal_precision as dp
 
 
 class StockPicking(models.Model):
-
     _inherit = "stock.picking"
 
     total_compute_volume = fields.Float(

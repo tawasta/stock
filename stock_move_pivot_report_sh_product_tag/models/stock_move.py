@@ -6,7 +6,6 @@ _logger = logging.getLogger(__name__)
 
 
 class StockMove(models.Model):
-
     _inherit = "stock.move"
 
     # Field needs to be stored so that SO lines can be grouped by it

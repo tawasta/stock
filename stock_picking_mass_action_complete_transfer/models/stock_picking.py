@@ -2,7 +2,6 @@ from odoo import models
 
 
 class StockPicking(models.Model):
-
     _inherit = "stock.picking"
 
     def action_immediate_transfer_wizard(self):

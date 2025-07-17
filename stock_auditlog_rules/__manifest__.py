@@ -23,7 +23,7 @@
     "summary": "Adds audit log rules for stock.warehouse and stock.location",
     "author": "Tawasta",
     "license": "AGPL-3",
-    "website": "https://gitlab.com/tawasta/odoo/stock",
+    "website": "https://github.com/tawasta/stock",
     "category": "Logging",
     "application": False,
     "installable": True,

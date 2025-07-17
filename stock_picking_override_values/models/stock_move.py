@@ -2,7 +2,6 @@ from odoo import models
 
 
 class StockMove(models.Model):
-
     _inherit = "stock.move"
 
     def _get_new_picking_values(self):

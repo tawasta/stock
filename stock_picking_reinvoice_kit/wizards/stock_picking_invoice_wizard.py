@@ -2,7 +2,6 @@ from odoo import fields, models
 
 
 class StockPickingInvoiceWizard(models.TransientModel):
-
     _inherit = "stock.picking.invoice.wizard"
 
     invoice_kit = fields.Boolean(string="Invoice kits", default=False)

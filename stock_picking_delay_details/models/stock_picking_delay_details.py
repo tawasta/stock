@@ -2,7 +2,6 @@ from odoo import fields, models
 
 
 class StockPickingDelayDetail(models.Model):
-
     _name = "stock.picking.delay.detail"
 
     name = fields.Char(string="Delay detail", required=True)
