@@ -46,6 +46,19 @@
                         />
                     </div>
 
+                    <field name="info_message" readonly="1" nolabel="1"
+                           invisible="not info_message"
+                           class="text-warning fw-bold" />
+
+                    <field name="scanned_barcodes" nolabel="1">
+                        <tree>
+                            <field name="barcode"/>
+                            <field name="ai_01"/>
+                            <field name="ai_10"/>
+                            <field name="ai_17"/>
+                        </tree>
+                    </field>
+
                     <separator string="Scanned Products" colspan="2" class="mt16" />
 
                     <field name="scanned_line_ids" nolabel="1">
