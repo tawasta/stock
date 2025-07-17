@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="view_quant_barcode_update_wizard_form" model="ir.ui.view">
+        <field name="name">quant.barcode.update.wizard.form</field>
+        <field name="model">quant.barcode.update.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Inventory Update by Barcode" class="o_form_view">
+                <sheet>
+                    <group>
+                        <group col="4">
+                            <field name="barcode" placeholder="Scan GS1 Barcode..."/>
+                        </group>
+                    </group>
+
+                    <separator string="Scanned Items"/>
+
+                    <field name="scanned_line_ids">
+                        <tree editable="bottom" string="Scanned Lines">
+                            <field name="product_id"/>
+                            <field name="lot_id"/>
+                            <field name="expiration_date"/>
+                            <field name="quantity"/>
+                        </tree>
+                    </field>
+
+                    <footer>
+                        <button name="action_apply" type="object" string="Apply Inventory Update" class="btn-primary"/>
+                        <button string="Close" special="cancel" class="btn-secondary"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- Toimintoikkuna -->
+    <record id="action_quant_barcode_update_wizard" model="ir.actions.act_window">
+        <field name="name">Inventory Barcode Wizard</field>
+        <field name="res_model">quant.barcode.update.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_quant_barcode_update_wizard_form"/>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="menu_quant_barcode_update_root"
+        name="Inventory Update"
+        parent="stock.menu_stock_root"
+        action="action_quant_barcode_update_wizard"
+        sequence="10"
+    />
+
+
+</odoo>
