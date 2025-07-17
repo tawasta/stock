@@ -18,8 +18,12 @@ class QuantBarcodeUpdateWizard(models.TransientModel):
     _description = "Quant Barcode Update Wizard"
 
     barcode = fields.Char(string="Scan Barcode")
+    info_message = fields.Text(string="Info", readonly=True)
     scanned_line_ids = fields.One2many(
         "quant.barcode.update.line", "wizard_id", string="Scanned Lines"
+    )
+    scanned_barcodes = fields.One2many(
+        "quant.barcode.temp.line", "wizard_id", string="Temporary Scanned Barcodes"
     )
 
     @api.onchange("barcode")
@@ -27,14 +31,54 @@ class QuantBarcodeUpdateWizard(models.TransientModel):
         if not self.barcode:
             return
 
-        gs1_data = parse_gs1_barcode(self.barcode)
-        product_code = gs1_data.get("01")
-        lot_name = gs1_data.get("10")
-        expiration_raw = gs1_data.get("17")
+        # Parsitaan ja tallennetaan viivakoodin GS1-osat
+        parsed = parse_gs1_barcode(self.barcode)
 
+        # Lisää uusi rivi väliaikaisiin
+        self.write(
+            {
+                "scanned_barcodes": [
+                    (
+                        0,
+                        0,
+                        {
+                            "barcode": self.barcode,
+                            "ai_01": parsed.get("01"),
+                            "ai_10": parsed.get("10"),
+                            "ai_17": parsed.get("17"),
+                        },
+                    )
+                ]
+            }
+        )
+
+        # Tyhjennä kenttä seuraavaa skannausta varten
+        self.barcode = ""
+
+        # Kokoa kaikki aiemmin skannatut GS1-data
+        all_gs1_data = {}
+        for line in self.scanned_barcodes:
+            gs1 = parse_gs1_barcode(line.barcode)
+            all_gs1_data.update(gs1)
+
+        product_code = all_gs1_data.get("01")
+        lot_name = all_gs1_data.get("10")
+        expiration_raw = all_gs1_data.get("17")
+
+        # Viestin muodostus
+        missing = []
         if not product_code:
-            raise UserError(_("Barcode does not contain a valid (01) product code."))
+            missing.append("(01) product code")
+        if not lot_name:
+            missing.append("(10) lot number")
 
+        if missing:
+            self.info_message = _("Waiting for: ") + ", ".join(missing)
+            return
+        else:
+            self.info_message = ""
+
+        # Käsitellään eräpäivä
         expiration_date = None
         if expiration_raw and re.match(r"^\d{6}$", expiration_raw):
             try:
@@ -64,21 +108,14 @@ class QuantBarcodeUpdateWizard(models.TransientModel):
                 % {"lot": lot_name, "product": product.display_name}
             )
 
-        # Tarkistetaan että quant löytyy kyseisestä sijainnista
         quant = Quant.search(
-            [
-                ("product_id", "=", product.id),
-                ("lot_id", "=", lot.id),
-            ],
-            limit=1,
+            [("product_id", "=", product.id), ("lot_id", "=", lot.id)], limit=1
         )
 
         if not quant:
             raise UserError(
                 _("No stock found for product '%(product)s'.")
-                % {
-                    "product": product.display_name,
-                }
+                % {"product": product.display_name}
             )
 
         already = self.scanned_line_ids.filtered(
@@ -90,6 +127,7 @@ class QuantBarcodeUpdateWizard(models.TransientModel):
                 % {"lot": lot.name, "product": product.display_name}
             )
 
+        # Lisää uusi rivi
         self.write(
             {
                 "scanned_line_ids": [
@@ -107,7 +145,8 @@ class QuantBarcodeUpdateWizard(models.TransientModel):
             }
         )
 
-        self.barcode = ""
+        # Tyhjennetään väliaikaiset
+        self.scanned_barcodes = [(5, 0, 0)]
 
     def action_apply(self):
         self.ensure_one()
@@ -128,10 +167,7 @@ class QuantBarcodeUpdateWizard(models.TransientModel):
                         "No stock quant found"
                         " for product '%(product)s' and lot '%(lot)s'."
                     )
-                    % {
-                        "product": line.product_id.display_name,
-                        "lot": line.lot_id.name,
-                    }
+                    % {"product": line.product_id.display_name, "lot": line.lot_id.name}
                 )
 
             quant.inventory_quantity = line.quantity
@@ -152,3 +188,14 @@ class QuantBarcodeUpdateLine(models.TransientModel):
     lot_name = fields.Char(readonly=True)
     expiration_date = fields.Date(readonly=True)
     quantity = fields.Float(required=True, default=1.0)
+
+
+class QuantBarcodeTempLine(models.TransientModel):
+    _name = "quant.barcode.temp.line"
+    _description = "Temporary Scanned Barcode"
+
+    wizard_id = fields.Many2one("quant.barcode.update.wizard", ondelete="cascade")
+    barcode = fields.Char(required=True)
+    ai_01 = fields.Char(string="GTIN (01)")
+    ai_10 = fields.Char(string="Lot (10)")
+    ai_17 = fields.Char(string="Expiry (17)")

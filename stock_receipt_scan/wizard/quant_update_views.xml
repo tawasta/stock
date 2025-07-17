@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-
     <record id="view_quant_barcode_update_wizard_form" model="ir.ui.view">
         <field name="name">quant.barcode.update.wizard.form</field>
         <field name="model">quant.barcode.update.wizard</field>
         <field name="arch" type="xml">
             <form string="Inventory Update by Barcode" class="o_form_view">
                 <sheet>
-                    <group>
-                        <group col="4">
                             <field name="barcode" placeholder="Scan GS1 Barcode..." />
-                        </group>
-                    </group>
+                            <field
+                        name="info_message"
+                        readonly="1"
+                        nolabel="1"
+                        class="text-danger fw-bold"
+                        invisible="not info_message"
+                    />
+
+                        <field name="scanned_barcodes" nolabel="1">
+                            <tree>
+                                <field name="barcode" />
+                                <field name="ai_01" />
+                                <field name="ai_10" />
+                                <field name="ai_17" />
+                            </tree>
+                        </field>
+
 
                     <separator string="Scanned Items" />
 
@@ -37,7 +49,7 @@
             </form>
         </field>
     </record>
-    <!-- Toimintoikkuna -->
+
     <record id="action_quant_barcode_update_wizard" model="ir.actions.act_window">
         <field name="name">Inventory Barcode Wizard</field>
         <field name="res_model">quant.barcode.update.wizard</field>
@@ -53,6 +65,4 @@
         action="action_quant_barcode_update_wizard"
         sequence="10"
     />
-
-
 </odoo>

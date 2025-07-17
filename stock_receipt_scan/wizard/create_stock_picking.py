@@ -26,6 +26,11 @@ class StockBarcodeTransferWizard(models.TransientModel):
         "stock.barcode.transfer.line", "wizard_id", string="Scanned Lines"
     )
 
+    info_message = fields.Text(string="Info", readonly=True)
+    scanned_barcodes = fields.One2many(
+        "stock.barcode.temp.line", "wizard_id", string="Temporary Scanned Barcodes"
+    )
+
     @api.depends("scanned_line_ids")
     def _compute_allowed_locations(self):
         for wizard in self:
@@ -38,13 +43,50 @@ class StockBarcodeTransferWizard(models.TransientModel):
         if not self.barcode:
             return
 
-        gs1_data = parse_gs1_barcode(self.barcode)
-        product_code = gs1_data.get("01")
-        lot_name = gs1_data.get("10")
-        expiration_raw = gs1_data.get("17")
+        parsed = parse_gs1_barcode(self.barcode)
 
+        # Lisää skannattu viivakoodi väliaikaisiin
+        self.write(
+            {
+                "scanned_barcodes": [
+                    (
+                        0,
+                        0,
+                        {
+                            "barcode": self.barcode,
+                            "ai_01": parsed.get("01"),
+                            "ai_10": parsed.get("10"),
+                            "ai_17": parsed.get("17"),
+                        },
+                    )
+                ]
+            }
+        )
+
+        self.barcode = ""
+
+        # Kokoa kaikki osat
+        all_data = {}
+        for line in self.scanned_barcodes:
+            gs1 = parse_gs1_barcode(line.barcode)
+            all_data.update(gs1)
+
+        product_code = all_data.get("01")
+        lot_name = all_data.get("10")
+        expiration_raw = all_data.get("17")
+
+        # Tarkista puuttuvat
+        missing = []
         if not product_code:
-            raise UserError(_("Barcode does not contain a valid (01) product code."))
+            missing.append("(01) product code")
+        if not lot_name:
+            missing.append("(10) lot number")
+
+        if missing:
+            self.info_message = _("Waiting for: ") + ", ".join(missing)
+            return
+        else:
+            self.info_message = ""
 
         expiration_date = None
         if expiration_raw and re.match(r"^\d{6}$", expiration_raw):
@@ -71,11 +113,8 @@ class StockBarcodeTransferWizard(models.TransientModel):
 
         if not lot:
             raise UserError(
-                _("No lot '%(lot)s' found for product '%(product)s.")
-                % {
-                    "lot": lot_name,
-                    "product": product.display_name,
-                }
+                _("Lot '%(lot)s' not found for product '%(product)s'.")
+                % {"lot": lot_name, "product": product.display_name}
             )
 
         quants = Quant.search(
@@ -88,7 +127,7 @@ class StockBarcodeTransferWizard(models.TransientModel):
 
         if not quants:
             raise UserError(
-                _("No stock available for product '%(product)s' lot '%(lot)s.")
+                _("No stock available for product '%(product)s' lot '%(lot)s'.")
                 % {
                     "product": product.display_name,
                     "lot": lot.name,
@@ -114,7 +153,8 @@ class StockBarcodeTransferWizard(models.TransientModel):
                 }
             )
 
-        self.barcode = ""
+        # Tyhjennä väliaikaiset
+        self.scanned_barcodes = [(5, 0, 0)]
 
     def action_create_picking(self):
         self.ensure_one()
@@ -199,3 +239,14 @@ class StockBarcodeTransferLine(models.TransientModel):
     location_id = fields.Many2one(
         "stock.location", required=True, domain=[("usage", "=", "internal")]
     )
+
+
+class StockBarcodeTempLine(models.TransientModel):
+    _name = "stock.barcode.temp.line"
+    _description = "Temporary Scanned Barcode for Transfer Wizard"
+
+    wizard_id = fields.Many2one("stock.barcode.transfer.wizard", ondelete="cascade")
+    barcode = fields.Char(required=True)
+    ai_01 = fields.Char(string="GTIN (01)")
+    ai_10 = fields.Char(string="Lot (10)")
+    ai_17 = fields.Char(string="Expiry (17)")
