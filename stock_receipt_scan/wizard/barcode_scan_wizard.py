@@ -38,14 +38,22 @@ class BarcodeScanWizard(models.TransientModel):
         gs1_data = parse_gs1_barcode(self.barcode)
 
         # Lisää skannattu viivakoodi väliaikaisiin tallennettavaksi
-        self.write({
-            'scanned_barcodes': [(0, 0, {
-                'barcode': self.barcode,
-                'ai_01': gs1_data.get("01"),
-                'ai_10': gs1_data.get("10"),
-                'ai_17': gs1_data.get("17"),
-            })]
-        })
+        self.write(
+            {
+                "scanned_barcodes": [
+                    (
+                        0,
+                        0,
+                        {
+                            "barcode": self.barcode,
+                            "ai_01": gs1_data.get("01"),
+                            "ai_10": gs1_data.get("10"),
+                            "ai_17": gs1_data.get("17"),
+                        },
+                    )
+                ]
+            }
+        )
 
         self.barcode = ""  # tyhjennä skannauskenttä
 
@@ -71,7 +79,6 @@ class BarcodeScanWizard(models.TransientModel):
             return
         else:
             self.info_message = ""
-
 
         if not product_code:
             raise UserError(
@@ -196,12 +203,13 @@ class BarcodeScanLine(models.TransientModel):
     lot_name = fields.Char(string="Lot/SN", readonly=True)
     expiration_date = fields.Date(string="Expiration", readonly=True)
 
+
 class BarcodeScanTempLine(models.TransientModel):
     _name = "barcode.scan.temp.line"
     _description = "Temporary Scanned Barcode for Transfer Wizard"
 
     wizard_id = fields.Many2one("barcode.scan.wizard", ondelete="cascade")
-    barcode = fields.Char(string="Barcode", required=True)
+    barcode = fields.Char(required=True)
     ai_01 = fields.Char(string="GTIN (01)")
     ai_10 = fields.Char(string="Lot (10)")
     ai_17 = fields.Char(string="Expiry (17)")
