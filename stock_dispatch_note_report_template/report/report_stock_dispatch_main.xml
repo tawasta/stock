@@ -59,7 +59,7 @@
             </th>
         </th>
 
-        <div t-if="o.signature" position="after">
+        <div t-if="o.signature" position="before">
             <div id="after_lines">
                 <div id="stock_picking_weight" class="container">
                     <strong>Total weight: </strong>
