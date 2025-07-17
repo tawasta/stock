@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
 
     <record id="view_quant_barcode_update_wizard_form" model="ir.ui.view">
@@ -9,24 +9,29 @@
                 <sheet>
                     <group>
                         <group col="4">
-                            <field name="barcode" placeholder="Scan GS1 Barcode..."/>
+                            <field name="barcode" placeholder="Scan GS1 Barcode..." />
                         </group>
                     </group>
 
-                    <separator string="Scanned Items"/>
+                    <separator string="Scanned Items" />
 
                     <field name="scanned_line_ids">
-                        <tree editable="bottom" string="Scanned Lines">
-                            <field name="product_id"/>
-                            <field name="lot_id"/>
-                            <field name="expiration_date"/>
-                            <field name="quantity"/>
+                        <tree editable="bottom">
+                            <field name="product_id" />
+                            <field name="lot_id" />
+                            <field name="expiration_date" />
+                            <field name="quantity" />
                         </tree>
                     </field>
 
                     <footer>
-                        <button name="action_apply" type="object" string="Apply Inventory Update" class="btn-primary"/>
-                        <button string="Close" special="cancel" class="btn-secondary"/>
+                        <button
+                            name="action_apply"
+                            type="object"
+                            string="Apply Inventory Update"
+                            class="btn-primary"
+                        />
+                        <button string="Close" special="cancel" class="btn-secondary" />
                     </footer>
                 </sheet>
             </form>
@@ -37,7 +42,7 @@
         <field name="name">Inventory Barcode Wizard</field>
         <field name="res_model">quant.barcode.update.wizard</field>
         <field name="view_mode">form</field>
-        <field name="view_id" ref="view_quant_barcode_update_wizard_form"/>
+        <field name="view_id" ref="view_quant_barcode_update_wizard_form" />
         <field name="target">new</field>
     </record>
 

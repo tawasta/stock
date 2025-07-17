@@ -1,6 +1,7 @@
+import logging
 import re
 from datetime import datetime
-import logging
+
 from odoo import _, api, fields, models
 from odoo.exceptions import UserError
 
@@ -15,7 +16,6 @@ def parse_gs1_barcode(barcode_str):
 class QuantBarcodeUpdateWizard(models.TransientModel):
     _name = "quant.barcode.update.wizard"
     _description = "Quant Barcode Update Wizard"
-
 
     barcode = fields.Char(string="Scan Barcode")
     scanned_line_ids = fields.One2many(
@@ -46,17 +46,17 @@ class QuantBarcodeUpdateWizard(models.TransientModel):
         Lot = self.env["stock.lot"]
         Quant = self.env["stock.quant"]
 
-        product = Product.search([
-            "|", ("barcode", "=", product_code), ("default_code", "=", product_code)
-        ], limit=1)
+        product = Product.search(
+            ["|", ("barcode", "=", product_code), ("default_code", "=", product_code)],
+            limit=1,
+        )
 
         if not product:
             raise UserError(_("No product found for barcode %s.") % product_code)
 
-        lot = Lot.search([
-            ("product_id", "=", product.id),
-            ("name", "=", lot_name)
-        ], limit=1)
+        lot = Lot.search(
+            [("product_id", "=", product.id), ("name", "=", lot_name)], limit=1
+        )
 
         if not lot:
             raise UserError(
@@ -65,10 +65,13 @@ class QuantBarcodeUpdateWizard(models.TransientModel):
             )
 
         # Tarkistetaan että quant löytyy kyseisestä sijainnista
-        quant = Quant.search([
-            ("product_id", "=", product.id),
-            ("lot_id", "=", lot.id),
-        ], limit=1)
+        quant = Quant.search(
+            [
+                ("product_id", "=", product.id),
+                ("lot_id", "=", lot.id),
+            ],
+            limit=1,
+        )
 
         if not quant:
             raise UserError(
@@ -79,7 +82,7 @@ class QuantBarcodeUpdateWizard(models.TransientModel):
             )
 
         already = self.scanned_line_ids.filtered(
-            lambda l: l.product_id == product and l.lot_id == lot
+            lambda li: li.product_id == product and li.lot_id == lot
         )
         if already:
             raise UserError(
@@ -87,14 +90,22 @@ class QuantBarcodeUpdateWizard(models.TransientModel):
                 % {"lot": lot.name, "product": product.display_name}
             )
 
-        self.write({
-            "scanned_line_ids": [(0, 0, {
-                "product_id": product.id,
-                "lot_name": lot.name,
-                "expiration_date": expiration_date,
-                "lot_id": lot.id,
-            })]
-        })
+        self.write(
+            {
+                "scanned_line_ids": [
+                    (
+                        0,
+                        0,
+                        {
+                            "product_id": product.id,
+                            "lot_name": lot.name,
+                            "expiration_date": expiration_date,
+                            "lot_id": lot.id,
+                        },
+                    )
+                ]
+            }
+        )
 
         self.barcode = ""
 
@@ -103,14 +114,20 @@ class QuantBarcodeUpdateWizard(models.TransientModel):
         Quant = self.env["stock.quant"]
 
         for line in self.scanned_line_ids:
-            quant = Quant.search([
-                ("product_id", "=", line.product_id.id),
-                ("lot_id", "=", line.lot_id.id),
-            ], limit=1)
+            quant = Quant.search(
+                [
+                    ("product_id", "=", line.product_id.id),
+                    ("lot_id", "=", line.lot_id.id),
+                ],
+                limit=1,
+            )
 
             if not quant:
                 raise UserError(
-                    _("No stock quant found for product '%(product)s' and lot '%(lot)s'.")
+                    _(
+                        "No stock quant found"
+                        " for product '%(product)s' and lot '%(lot)s'."
+                    )
                     % {
                         "product": line.product_id.display_name,
                         "lot": line.lot_id.name,
@@ -127,7 +144,9 @@ class QuantBarcodeUpdateLine(models.TransientModel):
     _name = "quant.barcode.update.line"
     _description = "Scanned Quant Line"
 
-    wizard_id = fields.Many2one("quant.barcode.update.wizard", required=True, ondelete="cascade")
+    wizard_id = fields.Many2one(
+        "quant.barcode.update.wizard", required=True, ondelete="cascade"
+    )
     product_id = fields.Many2one("product.product", required=True)
     lot_id = fields.Many2one("stock.lot", required=True)
     lot_name = fields.Char(readonly=True)
