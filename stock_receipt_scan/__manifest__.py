@@ -34,6 +34,7 @@
         "wizard/barcode_scan_wizard_view.xml",
         "wizard/create_stock_picking.xml",
         "wizard/stock_receipt_wizard_views.xml",
+        "wizard/quant_update_views.xml",
         "views/create_stock_picking.xml",
         "views/stock_receipt_views.xml",
         "views/stock_picking_view.xml",

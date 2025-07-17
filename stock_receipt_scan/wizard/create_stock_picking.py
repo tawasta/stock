@@ -157,7 +157,7 @@ class StockBarcodeTransferWizard(models.TransientModel):
 
             # Tallenna rivin tiedot viestiä varten
             lines_created.append(
-                _("- %(product)s (Lot: %(lot)s, Exp: %(exp)s)")
+                _("- %(product)s")
                 % {
                     "product": line.product_id.display_name,
                 }

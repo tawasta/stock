@@ -24,6 +24,16 @@ Features
 - Chatter integration for logging receipt confirmation messages.
 - Access rights configured for base user groups.
 
+- **Inventory Update by Barcode Wizard**:
+  
+  This new feature provides a transient wizard (`quant.barcode.update.wizard`) allowing users to scan GS1 barcodes and update existing stock inventory quantities quickly. It supports GS1 barcode parsing for:
+    - Product code (01)
+    - Lot number (10)
+    - Expiration date (17)
+
+  The wizard validates product and lot existence, prevents duplicate scanning of the same lot/product combination in the session, and allows updating the stock quantities directly on existing quants. The interface provides a barcode input, a dynamic list of scanned items, and buttons to apply changes or cancel.
+
+
 - **Internal Transfer Barcode Wizard**:
   
   This feature provides a transient wizard model (`stock.barcode.transfer.wizard`) that allows scanning GS1 barcodes to create internal stock transfers. It parses GS1 barcodes to extract product codes, lot numbers, and expiration dates, validates stock availability in the selected source location, and creates stock moves for scanned products. The wizard interface includes a barcode input with real-time parsing and a tree view of scanned products and their details. It also restricts the location selection based on scanned lines and offers buttons to create the transfer or cancel.
@@ -42,7 +52,12 @@ Usage
    - Automatically create stock move lines with lot and expiration data.
    - Review and save scanned data into the picking.
 4. Use the **Internal Transfer Barcode Wizard** to scan barcodes and quickly create internal stock transfers by scanning GS1 barcodes that include product, lot, and expiration date information.
-5. Confirm the stock operation or receipt as usual.
+5. Use the **Inventory Update by Barcode Wizard** from the Inventory Update menu to:
+   - Scan GS1 barcodes that include product, lot, and expiration data.
+   - Validate the scanned data against existing stock quants.
+   - Edit quantities of scanned lots inline.
+   - Apply inventory quantity updates directly to the stock quants.
+6. Confirm the stock operation or receipt as usual.
 
 Known issues / Roadmap
 ======================
