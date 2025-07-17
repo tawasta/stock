@@ -2,7 +2,6 @@ from odoo import fields, models
 
 
 class StockLocation(models.Model):
-
     _inherit = "stock.location"
 
     allow_bypass_reservation = fields.Boolean(
@@ -12,7 +11,7 @@ class StockLocation(models.Model):
     )
 
     def should_bypass_reservation(self):
-        res = super(StockLocation, self).should_bypass_reservation()
+        res = super().should_bypass_reservation()
         if self.allow_bypass_reservation:
             return True
         else:

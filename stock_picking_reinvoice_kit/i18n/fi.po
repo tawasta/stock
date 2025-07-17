@@ -1,0 +1,43 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_picking_reinvoice_kit
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-17 10:49+0000\n"
+"PO-Revision-Date: 2025-07-17 13:50+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: stock_picking_reinvoice_kit
+#: model:ir.model,name:stock_picking_reinvoice_kit.model_stock_picking_invoice_wizard
+msgid "Create invoice from pickings"
+msgstr "Luo lasku keräilyistä"
+
+#. module: stock_picking_reinvoice_kit
+#: model:ir.model.fields,field_description:stock_picking_reinvoice_kit.field_stock_picking_invoice_wizard__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: stock_picking_reinvoice_kit
+#: model:ir.model.fields,field_description:stock_picking_reinvoice_kit.field_stock_picking_invoice_wizard__id
+msgid "ID"
+msgstr "Tunniste (ID)"
+
+#. module: stock_picking_reinvoice_kit
+#: model:ir.model.fields,field_description:stock_picking_reinvoice_kit.field_stock_picking_invoice_wizard__invoice_kit
+msgid "Invoice kits"
+msgstr "Laskuta tuotesettejä"
+
+#. module: stock_picking_reinvoice_kit
+#: model:ir.model.fields,field_description:stock_picking_reinvoice_kit.field_stock_picking_invoice_wizard____last_update
+msgid "Last Modified on"
+msgstr "Viimeksi muokattu"

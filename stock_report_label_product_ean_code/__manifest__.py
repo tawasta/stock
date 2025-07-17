@@ -23,7 +23,7 @@
     "summary": "Print Product Labels with EAN codes from either pickings or product variants",
     "version": "14.0.1.2.0",
     "category": "Stock",
-    "website": "https://gitlab.com/tawasta/odoo/stock",
+    "website": "https://github.com/tawasta/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

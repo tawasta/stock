@@ -2,7 +2,6 @@ from odoo import fields, models
 
 
 class StockInventory(models.Model):
-
     _inherit = "stock.inventory"
 
     location_ids = fields.Many2many(

@@ -48,7 +48,7 @@ class SaleOrder(models.Model):
 
     # 7. Action methods
     def action_confirm(self):
-        res = super(SaleOrder, self).action_confirm()
+        res = super().action_confirm()
         for pick in self.picking_ids:
             pick.write({"comment": self.note or ""})
         return res

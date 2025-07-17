@@ -2,7 +2,6 @@ from odoo import fields, models
 
 
 class ResCompany(models.Model):
-
     _inherit = "res.company"
 
     stock_report_decimal_precision = fields.Integer(

@@ -2,7 +2,6 @@ from odoo import api, fields, models
 
 
 class StockPicking(models.Model):
-
     _inherit = "stock.picking"
 
     delay = fields.Integer(string="Delay", compute="_compute_delay", store=True)

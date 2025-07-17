@@ -9,7 +9,6 @@ _logger = logging.getLogger(__name__)
 
 
 class StockMove(models.Model):
-
     _inherit = "stock.move"
 
     carrier_id = fields.Many2one("delivery.carrier", store=True)

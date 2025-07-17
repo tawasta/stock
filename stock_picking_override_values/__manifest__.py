@@ -23,7 +23,7 @@
     "summary": "Allow overriding new picking values with system parameters",
     "category": "Stock",
     "version": "14.0.1.0.0",
-    "website": "https://gitlab.com/tawasta/odoo/stock",
+    "website": "https://github.com/tawasta/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

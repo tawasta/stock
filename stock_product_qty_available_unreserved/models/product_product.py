@@ -50,7 +50,7 @@ class ProductProduct(models.Model):
 
     # 4. Compute and search fields, in the same order that fields declaration
     def _compute_quantities(self):
-        super(ProductProduct, self)._compute_quantities()
+        super()._compute_quantities()
         for product in self:
             unreserved = product.qty_available - product.outgoing_qty
             product.qty_available_unreserved = unreserved
