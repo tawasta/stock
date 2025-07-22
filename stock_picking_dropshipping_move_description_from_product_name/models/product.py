@@ -17,4 +17,4 @@ class ProductProduct(models.Model):
         if picking_code == "dropship":
             return self.name
         else:
-            return super().get_description(picking_type_id=picking_type_id)
+            return super()._get_description(picking_type_id=picking_type_id)

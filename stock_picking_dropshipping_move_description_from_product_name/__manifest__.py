@@ -21,7 +21,7 @@
 {
     "name": "Stock Picking: Dropshipping Move Description from Product Name",
     "summary": "Do not use product's 'description' field as move description",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Stock",
     "website": "https://github.com/tawasta/stock",
     "author": "Futural",
