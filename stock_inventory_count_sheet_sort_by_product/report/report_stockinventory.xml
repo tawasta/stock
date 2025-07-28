@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_inventory" inherit_id="stock.report_inventory">
+        <tr
+            t-foreach="docs.filtered(lambda quant: quant.location_id.id == location.id)"
+            position="attributes"
+        >
+            <attribute name="t-if">False</attribute>
+        </tr>
+
+        <tr
+            t-foreach="docs.filtered(lambda quant: quant.location_id.id == location.id)"
+            position="after"
+        >
+            <t
+                t-set="docs"
+                t-value="docs.filtered(lambda quant: quant.location_id.id == location.id)"
+            />
+            <t
+                t-set="products"
+                t-value="env['product.product'].search([('stock_quant_ids.id', 'in', [q.id for q in docs]), ('active', 'in', [True, False])])"
+            />
+            <tr t-foreach="products" t-as="product">
+                <tr
+                    t-foreach="product.stock_quant_ids.filtered(lambda quant: quant.location_id.id == location.id)"
+                    t-as="line"
+                >
+                    <td groups="stock.group_stock_multi_locations" />
+                    <td><span t-field="line.product_id">Laptop</span></td>
+                    <td groups="stock.group_production_lot"><span
+                            t-field="line.lot_id"
+                        /></td>
+                    <td groups="stock.group_tracking_lot"><span
+                            t-field="line.package_id"
+                        /></td>
+                    <td class="text-end"><span
+                            t-field="line.available_quantity"
+                        >2</span> <span
+                            t-field="line.product_uom_id"
+                            groups="uom.group_uom"
+                        >Units</span></td>
+                    <td class="text-end"><span t-field="line.quantity">5</span> <span
+                            t-field="line.product_uom_id"
+                            groups="uom.group_uom"
+                        >Units</span></td>
+                    <td class="text-end">
+                        <t t-if="line.inventory_quantity == 0"><span /></t>
+                        <t t-else=""><span
+                                t-field="line.inventory_quantity"
+                            >7</span></t>
+                        <span
+                            t-field="line.product_uom_id"
+                            groups="uom.group_uom"
+                        >Units</span>
+                    </td>
+                </tr>
+            </tr>
+        </tr>
+    </template>
+</odoo>
