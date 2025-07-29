@@ -3,14 +3,7 @@
     <template id="report_inventory" inherit_id="stock.report_inventory">
         <tr
             t-foreach="docs.filtered(lambda quant: quant.location_id.id == location.id)"
-            position="attributes"
-        >
-            <attribute name="t-if">False</attribute>
-        </tr>
-
-        <tr
-            t-foreach="docs.filtered(lambda quant: quant.location_id.id == location.id)"
-            position="after"
+            position="before"
         >
             <t
                 t-set="docs"
@@ -20,41 +13,25 @@
                 t-set="products"
                 t-value="env['product.product'].search([('stock_quant_ids.id', 'in', [q.id for q in docs]), ('active', 'in', [True, False])])"
             />
+
+            <t t-set="quants" t-value="env['stock.quant']" />
+
             <tr t-foreach="products" t-as="product">
                 <tr
                     t-foreach="product.stock_quant_ids.filtered(lambda quant: quant.location_id.id == location.id)"
-                    t-as="line"
+                    t-as="quant_line"
                 >
-                    <td groups="stock.group_stock_multi_locations" />
-                    <td><span t-field="line.product_id">Laptop</span></td>
-                    <td groups="stock.group_production_lot"><span
-                            t-field="line.lot_id"
-                        /></td>
-                    <td groups="stock.group_tracking_lot"><span
-                            t-field="line.package_id"
-                        /></td>
-                    <td class="text-end"><span
-                            t-field="line.available_quantity"
-                        >2</span> <span
-                            t-field="line.product_uom_id"
-                            groups="uom.group_uom"
-                        >Units</span></td>
-                    <td class="text-end"><span t-field="line.quantity">5</span> <span
-                            t-field="line.product_uom_id"
-                            groups="uom.group_uom"
-                        >Units</span></td>
-                    <td class="text-end">
-                        <t t-if="line.inventory_quantity == 0"><span /></t>
-                        <t t-else=""><span
-                                t-field="line.inventory_quantity"
-                            >7</span></t>
-                        <span
-                            t-field="line.product_uom_id"
-                            groups="uom.group_uom"
-                        >Units</span>
-                    </td>
+                    <t t-set="quants" t-value="quants | quant_line" />
+
                 </tr>
             </tr>
+        </tr>
+
+        <tr
+            t-foreach="docs.filtered(lambda quant: quant.location_id.id == location.id)"
+            position="attributes"
+        >
+            <attribute name="t-foreach">quants</attribute>
         </tr>
     </template>
 </odoo>
