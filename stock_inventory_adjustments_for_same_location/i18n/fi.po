@@ -1,0 +1,39 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_inventory_adjustments_for_same_location
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20250131\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-29 10:44+0000\n"
+"PO-Revision-Date: 2025-07-29 13:50+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi_FI\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.6\n"
+
+#. module: stock_inventory_adjustments_for_same_location
+#: model:ir.model,name:stock_inventory_adjustments_for_same_location.model_stock_inventory
+msgid "Inventory Adjustment Group"
+msgstr "Varasto"
+
+#. module: stock_inventory_adjustments_for_same_location
+#: model:ir.model,name:stock_inventory_adjustments_for_same_location.model_stock_quant
+msgid "Quants"
+msgstr "Määrät"
+
+#. module: stock_inventory_adjustments_for_same_location
+#. odoo-python
+#: code:addons/stock_inventory_adjustments_for_same_location/models/stock_quant.py:0
+#, python-format
+msgid ""
+"There are already adjustments open for products \"{prod}\" in \"{union}\", "
+"you should rather modify this one instead of creating a new one."
+msgstr ""
+"On jo olemassa inventaarioita tuotteille \"{prod}\" inventaarioissa: "
+"\"{union}\". Muokkaa tätä inventaariota ennemmin kuin luot uuden."
