@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_inventory" inherit_id="stock.report_inventory">
+        <tr
+            t-foreach="docs.filtered(lambda quant: quant.location_id.id == location.id)"
+            position="before"
+        >
+            <t
+                t-set="docs"
+                t-value="docs.filtered(lambda quant: quant.location_id.id == location.id)"
+            />
+            <t
+                t-set="products"
+                t-value="env['product.product'].search([('stock_quant_ids.id', 'in', [q.id for q in docs]), ('active', 'in', [True, False])])"
+            />
+
+            <t t-set="quants" t-value="env['stock.quant']" />
+
+            <tr t-foreach="products" t-as="product">
+                <tr
+                    t-foreach="product.stock_quant_ids.filtered(lambda quant: quant.location_id.id == location.id)"
+                    t-as="quant_line"
+                >
+                    <t t-set="quants" t-value="quants | quant_line" />
+
+                </tr>
+            </tr>
+        </tr>
+
+        <tr
+            t-foreach="docs.filtered(lambda quant: quant.location_id.id == location.id)"
+            position="attributes"
+        >
+            <attribute name="t-foreach">quants</attribute>
+        </tr>
+    </template>
+</odoo>
