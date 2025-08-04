@@ -68,8 +68,11 @@ class StockInventory(models.Model):
     def action_state_to_in_progress(self):
         # Currently prevents using the exhausted option for multiple locations
         # and for lots, until support is implemented
+
+        res = super().action_state_to_in_progress()
         self.ensure_one()
 
+        # Build quants for exhausted products.
         if self.include_exhausted:
             if len(self.location_ids) > 1:
                 raise ValidationError(
@@ -88,15 +91,6 @@ class StockInventory(models.Model):
                     )
                 )
 
-        return super().action_state_to_in_progress()
-
-    def action_view_inventory_adjustment(self):
-        # Build quants for exhausted products. This needs to be done at this stage,
-        # since core's _unlink_zero_quants() would delete any pre-built quants.
-
-        res = super().action_view_inventory_adjustment()
-
-        if self.include_exhausted:
             current_stock_quants = self._get_quants(self.location_ids)
 
             # stock_quant_obj = self.env["stock.quant"]
@@ -150,9 +144,8 @@ class StockInventory(models.Model):
 
             # Update the domain with the fresh contents of stock_quant_ids field
             self.refresh_stock_quant_ids()
-            res["domain"] = [
-                ("id", "in", self.stock_quant_ids.ids),
-                ("current_inventory_id", "=", self.id),
-            ]
+        else:
+            # Remove zero quants if 'Include Exhausted' is not set
+            self.stock_quant_ids._quant_tasks()
 
         return res

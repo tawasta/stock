@@ -33,6 +33,7 @@ Contributors
 ------------
 
 * Timo Talvitie <timo.talvitie@futural.fi>
+* Timo Kekäläinen <timo.kekalainen@tawasta.fi>
 
 Maintainer
 ----------
