@@ -1,6 +1,6 @@
 import logging
 
-from odoo import fields, models
+from odoo import api, fields, models
 
 _logger = logging.getLogger(__name__)
 
@@ -13,3 +13,8 @@ class StockQuant(models.Model):
     zero_quant_from_inventory_adjustment = fields.Boolean(
         string="Zero quant originally created for inventory adjustments", default=False
     )
+
+    @api.model
+    def action_view_inventory(self):
+        self.env["ir.config_parameter"].sudo().set_param("stock.skip_quant_tasks", True)
+        return super().action_view_inventory()
