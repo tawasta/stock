@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_stock_barcode_transfer_wizard_form" model="ir.ui.view">
+        <field name="name">stock.barcode.transfer.wizard.form</field>
+        <field name="model">stock.barcode.transfer.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Scan to Create Transfer" version="7.0">
+                <sheet>
+                    <div class="oe_title">
+                        <h2>
+                            <i
+                                class="fa fa-random text-primary mr4"
+                                aria-hidden="true"
+                            />
+                            Internal Transfer Scanner
+                        </h2>
+                    </div>
+                    <div class="o_form_label text-info mb8">
+                        Scan products one by one using a barcode scanner. Ensure barcode includes GTIN, Lot and Exp. Then select source location and click 'Create Transfer'.
+                    </div>
+
+                    <!-- Barcode Field -->
+                    <div class="mt16 mb16">
+                        <div class="o_form_label">
+                            <i
+                                class="fa fa-camera text-success mr4"
+                                aria-hidden="true"
+                            />
+                            Scan Barcode
+                        </div>
+                        <field
+                            name="barcode"
+                            placeholder="Scan GS1 barcode (with GTIN + Lot + Exp)..."
+                            help="Use a GS1-128 barcode scanner. Barcode should include GTIN (01), Lot (10), and Expiration Date (17)."
+                            class="o_input o_field_highlight"
+                            style="font-size: 18px;"
+                            options="{'no_quick_create': True}"
+                        />
+
+                    </div>
+
+                    <field
+                        name="info_message"
+                        readonly="1"
+                        nolabel="1"
+                        invisible="not info_message"
+                        class="text-warning fw-bold"
+                    />
+
+                    <field name="scanned_barcodes" nolabel="1">
+                        <tree>
+                            <field name="barcode" />
+                            <field name="ai_01" />
+                            <field name="ai_10" />
+                            <field name="ai_17" />
+                        </tree>
+                    </field>
+
+
+                    <!-- Scanned Lines -->
+                    <separator string="Scanned Products" colspan="2" class="mt16" />
+
+                    <field name="scanned_line_ids" nolabel="1">
+                        <tree>
+                            <field name="product_id" />
+                            <field name="lot_name" />
+                            <field name="expiration_date" />
+                            <field name="location_id" options="{'no_create': True}" />
+                        </tree>
+                    </field>
+
+                    <!-- Location Selection -->
+                    <group class="mt16">
+                        <field name="allowed_location_ids" invisible="1" />
+                        <field
+                            name="location_id"
+                            class="o_input"
+                            domain="[('id', 'in', allowed_location_ids)]"
+                            options="{'no_open': True}"
+                        />
+                    </group>
+
+                    <!-- Footer Buttons -->
+                    <footer class="mt16">
+                        <button
+                            name="action_create_picking"
+                            string="Create Transfer"
+                            type="object"
+                            class="btn-primary"
+                            icon="fa-check"
+                        />
+                        <button
+                            string="Cancel"
+                            special="cancel"
+                            class="btn-secondary"
+                            icon="fa-times"
+                        />
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
