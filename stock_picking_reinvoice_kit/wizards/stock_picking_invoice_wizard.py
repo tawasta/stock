@@ -66,7 +66,8 @@ class StockPickingInvoiceWizard(models.TransientModel):
                     if kit[0] == line.sale_line_id:
                         kit_delivered = min_qty
 
-                yield (kit_product, line.move_id, kit_delivered)
+                if kit_product:
+                    yield (kit_product, line.move_id, kit_delivered)
         else:
             for move in picking.move_lines:
                 yield (move.product_id, move, move.quantity_done)
