@@ -2,7 +2,7 @@ import logging
 import re
 from datetime import datetime
 
-from odoo import _, api, fields, models
+from odoo import Command, _, api, fields, models
 from odoo.exceptions import UserError
 
 _logger = logging.getLogger(__name__)
@@ -134,34 +134,36 @@ class BarcodeScanWizard(models.TransientModel):
                 % {"lot": lot.name, "product": product.display_name}
             )
 
-        self.write(
-            {
-                "scanned_line_ids": [
-                    (
-                        0,
-                        0,
-                        {
-                            "product_id": product.id,
-                            "lot_id": lot.id,
-                            "lot_name": lot.name,
-                            "expiration_date": expiration_date,
-                        },
-                    )
-                ]
-            }
-        )
+        print("SCANNED LOT", lot.id)
 
-        self.scanned_barcodes = [(5, 0, 0)]
+        scanned_values = {
+            "product_id": product.id,
+            "lot_id": lot.id,
+            "lot_name": lot.name,
+            "expiration_date": expiration_date,
+        }
 
-        self.barcode = (
-            ""
-        )  # tyhjennetään kenttä automaattisesti seuraavaa skannausta varten
+        print("SCANNED VALUES", scanned_values)
+
+        self.write({
+            "scanned_line_ids": [Command.create(scanned_values)]
+            #"scanned_line_ids": Command.link(scanned_line.ids)
+        })
+
+        #self.scanned_barcodes = [(5, 0, 0)]
+        self.scanned_barcodes = [Command.clear()]
+
+        # tyhjennetään kenttä automaattisesti seuraavaa skannausta varten
+        self.barcode = ""
 
     def action_save_lines(self):
         self.ensure_one()
 
+        print("SCANNED LINE IDS", self.scanned_line_ids)
+
         for line in self.scanned_line_ids:
-            move = self.picking_id.move_ids_without_package.filtered(
+            #move = self.picking_id.move_ids_without_package.filtered(
+            move = self.picking_id.move_ids.filtered(
                 lambda mo, line=line: mo.product_id == line.product_id
             )
             if not move:
@@ -170,22 +172,51 @@ class BarcodeScanWizard(models.TransientModel):
                     % line.product_id.display_name
                 )
 
-            self.env["stock.move.line"].create(
-                {
-                    "picking_id": self.picking_id.id,
-                    "move_id": move.id,
-                    "company_id": self.picking_id.company_id.id,
-                    "product_id": line.product_id.id,
-                    "product_uom_id": move.product_uom.id,
-                    "quantity": 1.0,
-                    "lot_id": line.lot_id.id,
-                    "lot_name": line.lot_name,
-                    "expiration_date": line.expiration_date,
-                    "location_id": self.picking_id.location_id.id,
-                    "location_dest_id": self.picking_id.location_dest_id.id,
-                    "date": fields.Datetime.now(),
-                }
-            )
+            print("LINE PRODUCT ID", line.product_id)
+            print("LINE LOT NAME", line.lot_name)
+            print("LINE LOT ID", line.lot_id)
+            print("LINE LOT ID NAME", line.lot_id.name)
+
+            move_quantity = move.quantity + 1
+
+            move.update({
+                "quantity": move_quantity,
+                #"lot_ids": [Command.link(line.lot_id.id)],
+            })
+
+            #move._generate_serial_numbers(next_serial, next_serial_count=False, location_id=False)
+            #test = move._generate_serial_numbers(line.lot_id, next_serial_count=False, location_id=False)
+
+            #field_data = [{'lot_name': line.lot_name, 'quantity': 1} for lot_name in lot_names]
+            field_data = [{'lot_name': line.lot_name, 'quantity': 1}]
+            move_lines_commands = move._generate_serial_move_line_commands(field_data)
+
+            print("move_lines_commands", move_lines_commands)
+
+            move.move_line_ids = move_lines_commands
+
+            #print("TEST", test)
+
+            #self.env["stock.move"].create(
+            #self.env["stock.move.line"].create(
+            #    {
+            #        "picking_id": self.picking_id.id,
+            #        #"move_id": move.id,
+            #        #"name": line.product_id._get_description(move.picking_type_id),
+            #        "company_id": self.picking_id.company_id.id,
+            #        "product_id": line.product_id.id,
+            #        #"product_uom_id": move.product_uom.id,
+            #        "product_uom": move.product_uom.id,
+            #        "quantity": 1.0,
+            #        "lot_ids": [Command.set(line.lot_id.id)],
+            #        #"lot_id": line.lot_id.id,
+            #        #"lot_name": line.lot_name,
+            #        #"expiration_date": line.expiration_date,
+            #        "location_id": self.picking_id.location_id.id,
+            #        "location_dest_id": self.picking_id.location_dest_id.id,
+            #        "date": fields.Datetime.now(),
+            #    }
+            #)
 
 
 class BarcodeScanLine(models.TransientModel):
