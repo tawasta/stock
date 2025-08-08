@@ -15,7 +15,7 @@ Features
 
 - Stock Receipt and Stock Receipt Line models with user tracking and timestamps.
 - Two separate barcode scanning features:
-  
+
   1. **Stock Receipt Wizard**: For creating new stock receipt records by scanning product barcodes.
   2. **Picking Barcode Wizard**: Integrated into stock transfers, enabling barcode-based stock move line creation directly from a delivery/receipt.
 
@@ -25,7 +25,7 @@ Features
 - Access rights configured for base user groups.
 
 - **Inventory Update by Barcode Wizard**:
-  
+
   This new feature provides a transient wizard (`quant.barcode.update.wizard`) allowing users to scan GS1 barcodes and update existing stock inventory quantities quickly. It supports GS1 barcode parsing for:
     - Product code (01)
     - Lot number (10)
@@ -35,13 +35,16 @@ Features
 
 
 - **Internal Transfer Barcode Wizard**:
-  
+
   This feature provides a transient wizard model (`stock.barcode.transfer.wizard`) that allows scanning GS1 barcodes to create internal stock transfers. It parses GS1 barcodes to extract product codes, lot numbers, and expiration dates, validates stock availability in the selected source location, and creates stock moves for scanned products. The wizard interface includes a barcode input with real-time parsing and a tree view of scanned products and their details. It also restricts the location selection based on scanned lines and offers buttons to create the transfer or cancel.
+
+An information pop-up is shown if older stock is found for the same product when scanning a barcode for
+an internal transfer or a delivery.
 
 Configuration
 =============
-No special configuration is needed. The module uses default Odoo access groups and assumes
-products and stock moves exist with appropriate barcodes.
+"Lots & Serial Numbers" and "Expiration Dates" needs to be enabled from Inventory settings to use this module.
+The module uses default Odoo access groups and assumes products and stock moves exist with appropriate barcodes.
 
 Usage
 =====
@@ -70,6 +73,7 @@ Contributors
 ------------
 
 * Valtteri Lattu <valtteri.lattu@futural.fi>
+* Timo Kekäläinen <timo.kekalainen@tawasta.fi>
 
 Maintainer
 ----------

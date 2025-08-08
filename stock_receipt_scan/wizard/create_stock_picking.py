@@ -1,7 +1,7 @@
 import re
 from datetime import datetime
 
-from odoo import _, api, fields, models
+from odoo import Command, _, api, fields, models
 from odoo.exceptions import UserError
 
 
@@ -37,6 +37,23 @@ class StockBarcodeTransferWizard(models.TransientModel):
             wizard.allowed_location_ids = [
                 (6, 0, wizard.scanned_line_ids.mapped("location_id").ids)
             ]
+
+    def older_quants(self, product, quants):
+        other_quants = self.env["stock.quant"].search(
+            [
+                ("product_id", "=", product.id),
+                ("quantity", ">", 0),
+            ]
+        )
+
+        other_quants = other_quants - quants
+        found_quants = []
+
+        for quant in other_quants:
+            other_date = quant.lot_id.expiration_date
+            if any(q.lot_id.expiration_date > other_date for q in quants):
+                found_quants.append(quant)
+        return found_quants
 
     @api.onchange("barcode")
     def _onchange_barcode(self):
@@ -135,26 +152,41 @@ class StockBarcodeTransferWizard(models.TransientModel):
             )
 
         for quant in quants:
-            self.write(
-                {
-                    "scanned_line_ids": [
-                        (
-                            0,
-                            0,
-                            {
-                                "product_id": product.id,
-                                "lot_id": lot.id,
-                                "lot_name": lot.name,
-                                "expiration_date": expiration_date,
-                                "location_id": quant.location_id.id,
-                            },
-                        )
-                    ]
-                }
-            )
+            scanned_values = {
+                "product_id": product.id,
+                "lot_id": lot.id,
+                "lot_name": lot.name,
+                "expiration_date": expiration_date,
+                "location_id": quant.location_id.id,
+            }
+            self.write({"scanned_line_ids": [Command.create(scanned_values)]})
 
         # Tyhjennä väliaikaiset
         self.scanned_barcodes = [(5, 0, 0)]
+
+        older_quants = self.older_quants(product, quants)
+
+        bypass_check = (
+            self.env["ir.config_parameter"]
+            .sudo()
+            .get_param("bypass_older_quants_check")
+        )
+
+        if older_quants and not bypass_check:
+            locations = ", ".join([q.location_id.display_name for q in older_quants])
+            message = (
+                "The product {product} has stock in {location} that expires sooner. "
+                "Please use it first.".format(
+                    product=product.display_name,
+                    location=locations,
+                )
+            )
+            return {
+                "warning": {
+                    "title": "Older stock found",
+                    "message": message,
+                }
+            }
 
     def action_create_picking(self):
         self.ensure_one()
