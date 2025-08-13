@@ -190,6 +190,13 @@ class StockBarcodeTransferWizard(models.TransientModel):
 
     def action_create_picking(self):
         self.ensure_one()
+        if not self.scanned_line_ids:
+            raise UserError(
+                _(
+                    "No scanned lines to apply."
+                    " Please scan at least one product before saving."
+                )
+            )
         if not self.location_id:
             raise UserError(
                 _("Please select the source location before creating the transfer.")
