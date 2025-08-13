@@ -141,7 +141,10 @@ class StockReceiptWizard(models.TransientModel):
     def action_confirm(self):
         if not self.line_ids:
             raise UserError(
-                _("No receipt lines to confirm. Please scan at least one product before confirming.")
+                _(
+                    "No receipt lines to confirm."
+                    " Please scan at least one product before confirming."
+                )
             )
         receipt = self.env["stock.receipt"].create({"user_id": self.env.user.id})
         for line in self.line_ids:

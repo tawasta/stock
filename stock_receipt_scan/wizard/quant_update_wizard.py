@@ -103,13 +103,16 @@ class QuantBarcodeUpdateWizard(models.TransientModel):
         )
 
         if not lot:
-            available_lots = Lot.search([("product_id", "=", product.id)]).mapped("name")
+            available_lots = Lot.search([("product_id", "=", product.id)]).mapped(
+                "name"
+            )
 
             if available_lots:
                 lot_list_str = ", ".join(available_lots)
                 raise UserError(
                     _(
-                        "Product '%(product)s' was found in stock, but no lot with name '%(lot)s' exists.\n\n"
+                        "Product '%(product)s' was found in stock,"
+                        " but no lot with name '%(lot)s' exists.\n\n"
                         "Available lots for this product: %(lots)s"
                     )
                     % {
@@ -121,7 +124,8 @@ class QuantBarcodeUpdateWizard(models.TransientModel):
             else:
                 raise UserError(
                     _(
-                        "Product '%(product)s' was found in stock, but no lots exist in the system."
+                        "Product '%(product)s' was found in stock,"
+                        " but no lots exist in the system."
                     )
                     % {"product": product.display_name}
                 )
@@ -170,7 +174,10 @@ class QuantBarcodeUpdateWizard(models.TransientModel):
         self.ensure_one()
         if not self.scanned_line_ids:
             raise UserError(
-                _("No scanned lines to apply. Please scan at least one product before saving.")
+                _(
+                    "No scanned lines to apply."
+                    " Please scan at least one product before saving."
+                )
             )
         Quant = self.env["stock.quant"]
 

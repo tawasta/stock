@@ -120,15 +120,18 @@ class BarcodeScanWizard(models.TransientModel):
         )
 
         if not lot:
-            available_lots = self.env["stock.lot"].search(
-                [("product_id", "=", product.id)]
-            ).mapped("name")
+            available_lots = (
+                self.env["stock.lot"]
+                .search([("product_id", "=", product.id)])
+                .mapped("name")
+            )
 
             if available_lots:
                 lot_list_str = ", ".join(available_lots)
                 raise UserError(
                     _(
-                        "Product '%(product)s' was found in transfer, but no lot with name '%(lot)s' exists.\n\n"
+                        "Product '%(product)s' was found in transfer, "
+                        "but no lot with name '%(lot)s' exists.\n\n"
                         "Available lots for this product: %(lots)s"
                     )
                     % {
@@ -140,11 +143,11 @@ class BarcodeScanWizard(models.TransientModel):
             else:
                 raise UserError(
                     _(
-                        "Product '%(product)s' was found in transfer, but no lots exist in the system."
+                        "Product '%(product)s' was found in transfer,"
+                        " but no lots exist in the system."
                     )
                     % {"product": product.display_name}
                 )
-
 
         already_scanned = self.scanned_line_ids.filtered(
             lambda li: li.product_id == product and li.lot_id == lot
@@ -182,7 +185,10 @@ class BarcodeScanWizard(models.TransientModel):
         self.ensure_one()
         if not self.scanned_line_ids:
             raise UserError(
-                _("No scanned lines to apply. Please scan at least one product before saving.")
+                _(
+                    "No scanned lines to apply."
+                    " Please scan at least one product before saving."
+                )
             )
 
         for line in self.scanned_line_ids:

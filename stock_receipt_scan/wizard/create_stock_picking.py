@@ -192,7 +192,10 @@ class StockBarcodeTransferWizard(models.TransientModel):
         self.ensure_one()
         if not self.scanned_line_ids:
             raise UserError(
-                _("No scanned lines to apply. Please scan at least one product before saving.")
+                _(
+                    "No scanned lines to apply."
+                    " Please scan at least one product before saving."
+                )
             )
         if not self.location_id:
             raise UserError(
