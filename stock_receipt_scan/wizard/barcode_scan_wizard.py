@@ -120,10 +120,31 @@ class BarcodeScanWizard(models.TransientModel):
         )
 
         if not lot:
-            raise UserError(
-                _("Product found in transfer, but no lot with name '%s' was found.")
-                % lot_name
-            )
+            available_lots = self.env["stock.lot"].search(
+                [("product_id", "=", product.id)]
+            ).mapped("name")
+
+            if available_lots:
+                lot_list_str = ", ".join(available_lots)
+                raise UserError(
+                    _(
+                        "Product '%(product)s' was found in transfer, but no lot with name '%(lot)s' exists.\n\n"
+                        "Available lots for this product: %(lots)s"
+                    )
+                    % {
+                        "product": product.display_name,
+                        "lot": lot_name,
+                        "lots": lot_list_str,
+                    }
+                )
+            else:
+                raise UserError(
+                    _(
+                        "Product '%(product)s' was found in transfer, but no lots exist in the system."
+                    )
+                    % {"product": product.display_name}
+                )
+
 
         already_scanned = self.scanned_line_ids.filtered(
             lambda li: li.product_id == product and li.lot_id == lot

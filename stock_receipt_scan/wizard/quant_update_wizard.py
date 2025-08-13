@@ -103,10 +103,28 @@ class QuantBarcodeUpdateWizard(models.TransientModel):
         )
 
         if not lot:
-            raise UserError(
-                _("Lot '%(lot)s' not found for product '%(product)s'.")
-                % {"lot": lot_name, "product": product.display_name}
-            )
+            available_lots = Lot.search([("product_id", "=", product.id)]).mapped("name")
+
+            if available_lots:
+                lot_list_str = ", ".join(available_lots)
+                raise UserError(
+                    _(
+                        "Product '%(product)s' was found in stock, but no lot with name '%(lot)s' exists.\n\n"
+                        "Available lots for this product: %(lots)s"
+                    )
+                    % {
+                        "product": product.display_name,
+                        "lot": lot_name,
+                        "lots": lot_list_str,
+                    }
+                )
+            else:
+                raise UserError(
+                    _(
+                        "Product '%(product)s' was found in stock, but no lots exist in the system."
+                    )
+                    % {"product": product.display_name}
+                )
 
         quant = Quant.search(
             [("product_id", "=", product.id), ("lot_id", "=", lot.id)], limit=1
