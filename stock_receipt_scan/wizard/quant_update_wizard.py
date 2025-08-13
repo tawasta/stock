@@ -150,6 +150,10 @@ class QuantBarcodeUpdateWizard(models.TransientModel):
 
     def action_apply(self):
         self.ensure_one()
+        if not self.scanned_line_ids:
+            raise UserError(
+                _("No scanned lines to apply. Please scan at least one product before saving.")
+            )
         Quant = self.env["stock.quant"]
 
         for line in self.scanned_line_ids:

@@ -159,6 +159,10 @@ class BarcodeScanWizard(models.TransientModel):
 
     def action_save_lines(self):
         self.ensure_one()
+        if not self.scanned_line_ids:
+            raise UserError(
+                _("No scanned lines to apply. Please scan at least one product before saving.")
+            )
 
         for line in self.scanned_line_ids:
             move = self.picking_id.move_ids_without_package.filtered(
