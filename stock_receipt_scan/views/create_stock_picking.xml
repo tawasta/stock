@@ -2,7 +2,7 @@
 <odoo>
 
     <record id="action_create_stock_picking_wizard" model="ir.actions.act_window">
-        <field name="name">Receive products</field>
+        <field name="name">Transfer products</field>
         <field name="res_model">stock.barcode.transfer.wizard</field>
         <field name="view_mode">form</field>
         <field name="target">new</field>
@@ -11,7 +11,7 @@
 
     <menuitem
         id="menu_create_picking"
-        name="Receive products"
+        name="Transfer products"
         parent="stock.menu_stock_root"
         action="action_create_stock_picking_wizard"
         sequence="10"
