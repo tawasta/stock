@@ -31,12 +31,13 @@
     "depends": ["stock"],
     "data": [
         "security/ir.model.access.csv",
-        "wizard/barcode_scan_wizard_view.xml",
-        "wizard/create_stock_picking.xml",
-        "wizard/quant_update_views.xml",
-        "wizard/stock_receipt_wizard_views.xml",
         "views/create_stock_picking.xml",
         "views/stock_receipt_views.xml",
-        "views/stock_picking_view.xml",
+        "views/stock_picking_form.xml",
+        "views/stock_picking_type_kanban.xml",
+        "wizard/barcode_scan_wizard_view.xml",
+        "wizard/quant_update_views.xml",
+        "wizard/stock_barcode_transfer_wizard.xml",        
+        "wizard/stock_receipt_wizard_views.xml",        
     ],
 }
