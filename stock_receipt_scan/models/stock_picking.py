@@ -15,9 +15,9 @@ class StockPicking(models.Model):
                 "default_picking_id": self.id,
             },
         }
-    
+
     def action_open_barcode_scan_wizard(self):
-        raise Exception("Derecated")
+        raise Exception("Deprecated")
         return {
             "type": "ir.actions.act_window",
             "name": "Scan Barcode",

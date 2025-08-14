@@ -37,7 +37,7 @@
         "views/stock_picking_type_kanban.xml",
         "wizard/barcode_scan_wizard_view.xml",
         "wizard/quant_update_views.xml",
-        "wizard/stock_barcode_transfer_wizard.xml",        
-        "wizard/stock_receipt_wizard_views.xml",        
+        "wizard/stock_barcode_transfer_wizard.xml",
+        "wizard/stock_receipt_wizard_views.xml",
     ],
 }
