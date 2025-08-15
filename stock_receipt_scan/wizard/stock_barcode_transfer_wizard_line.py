@@ -16,3 +16,4 @@ class StockBarcodeTransferWizardLine(models.TransientModel):
     location_id = fields.Many2one(
         "stock.location", required=True, domain=[("usage", "=", "internal")]
     )
+    stock_move_id = fields.Many2one("stock.move")

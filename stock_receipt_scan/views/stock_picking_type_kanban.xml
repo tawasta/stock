@@ -6,15 +6,13 @@
         <field name="inherit_id" ref="stock.stock_picking_type_kanban" />
         <field name="arch" type="xml">
             <button name="get_action_picking_tree_ready" position="after">
-                <t t-if="record.code.raw_value == 'incoming'">
-                    <br/>
-                    <br/>
-                    <button class="btn btn-info"
+                <button
+                    class="btn btn-info mt8"
                     name="action_open_barcode_transfer_wizard"
                     type="object"
-                    icon="fa-barcode"><span>Receive</span>
-                    </button>
-                </t>
+                    icon="fa-barcode"
+                ><span>Scan barcodes</span>
+                </button>
             </button>
 
         </field>

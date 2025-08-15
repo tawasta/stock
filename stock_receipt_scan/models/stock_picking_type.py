@@ -12,6 +12,7 @@ class StockPickingType(models.Model):
             "view_mode": "form",
             "target": "new",
             "context": {
+                "default_wizard_mode": self.code,
                 "default_picking_type_id": self.id,
             },
         }
