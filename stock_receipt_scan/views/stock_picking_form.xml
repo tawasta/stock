@@ -7,9 +7,9 @@
         <field name="arch" type="xml">
             <header position="inside">
                 <button
-                    name="action_open_barcode_scan_wizard"
+                    name="action_open_barcode_transfer_wizard"
                     type="object"
-                    string="Scan Barcode"
+                    string="Scan barcodes"
                     class="btn-primary"
                     icon="fa-barcode"
                 />

@@ -1,0 +1,146 @@
+<odoo>
+    <record id="access_stock_receipt_user" model="ir.model.access">
+        <field name="name">access_stock_receipt_user</field>
+        <field name="model_id" ref="model_stock_receipt" />
+        <field name="group_id" ref="base.group_user" />
+        <field name="perm_read" eval="1" />
+        <field name="perm_write" eval="1" />
+        <field name="perm_create" eval="1" />
+        <field name="perm_unlink" eval="1" />
+    </record>
+    <record id="access_stock_receipt_line_user" model="ir.model.access">
+        <field name="name">access_stock_receipt_line_user</field>
+        <field name="model_id" ref="model_stock_receipt_line" />
+        <field name="group_id" ref="base.group_user" />
+        <field name="perm_read" eval="1" />
+        <field name="perm_write" eval="1" />
+        <field name="perm_create" eval="1" />
+        <field name="perm_unlink" eval="1" />
+    </record>
+    <!--
+    <record id="access_stock_receipt_wizard_user" model="ir.model.access">
+        <field name="name">access_stock_receipt_wizard_user</field>
+        <field name="model_id" ref="model_stock_receipt_wizard"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+    <record id="access_stock_receipt_wizard_line_user" model="ir.model.access">
+        <field name="name">access_stock_receipt_wizard_line_user</field>
+        <field name="model_id" ref="model_stock_receipt_wizard_line"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+    <record id="access_stock_receipt_lot_user" model="ir.model.access">
+        <field name="name">access_stock_receipt_lot_user</field>
+        <field name="model_id" ref="model_stock_receipt_lot"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+    <record id="access_barcode_scan_wizard_user" model="ir.model.access">
+        <field name="name">access_barcode_scan_wizard_user</field>
+        <field name="model_id" ref="model_barcode_scan_wizard"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+    <record id="access_barcode_scan_line_user" model="ir.model.access">
+        <field name="name">access_barcode_scan_line_user</field>
+        <field name="model_id" ref="model_barcode_scan_line"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+    -->
+    <record id="access_stock_barcode_transfer_wizard_user" model="ir.model.access">
+        <field name="name">access_stock_barcode_transfer_wizard_user</field>
+        <field name="model_id" ref="model_stock_barcode_transfer_wizard" />
+        <field name="group_id" ref="base.group_user" />
+        <field name="perm_read" eval="1" />
+        <field name="perm_write" eval="1" />
+        <field name="perm_create" eval="1" />
+        <field name="perm_unlink" eval="1" />
+    </record>
+    <record id="access_stock_barcode_transfer_wizard_line_user" model="ir.model.access">
+        <field name="name">access_stock_barcode_transfer_line_user</field>
+        <field name="model_id" ref="model_stock_barcode_transfer_wizard_line" />
+        <field name="group_id" ref="base.group_user" />
+        <field name="perm_read" eval="1" />
+        <field name="perm_write" eval="1" />
+        <field name="perm_create" eval="1" />
+        <field name="perm_unlink" eval="1" />
+    </record>
+    <record
+        id="access_stock_barcode_transfer_wizard_tmp_line_user"
+        model="ir.model.access"
+    >
+        <field name="name">access_stock_barcode_transfer_line_user</field>
+        <field name="model_id" ref="model_stock_barcode_transfer_wizard_tmp_line" />
+        <field name="group_id" ref="base.group_user" />
+        <field name="perm_read" eval="1" />
+        <field name="perm_write" eval="1" />
+        <field name="perm_create" eval="1" />
+        <field name="perm_unlink" eval="1" />
+    </record>
+
+    <!--
+    <record id="access_quant_barcode_update_wizard_user" model="ir.model.access">
+        <field name="name">access_quant_barcode_update_wizard_user</field>
+        <field name="model_id" ref="model_quant_barcode_update_wizard"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+    <record id="access_quant_barcode_update_line_user" model="ir.model.access">
+        <field name="name">access_quant_barcode_update_line_user</field>
+        <field name="model_id" ref="model_quant_barcode_update_line"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+    <record id="access_quant_barcode_temp_line_user" model="ir.model.access">
+        <field name="name">access_quant_barcode_temp_line_user</field>
+        <field name="model_id" ref="model_quant_barcode_temp_line"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="access_stock_barcode_temp_line_user" model="ir.model.access">
+        <field name="name">access_stock_barcode_temp_line_user</field>
+        <field name="model_id" ref="model_stock_barcode_transfer_wizard_tmp_line"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+    <record id="access_barcode_scan_temp_line_user" model="ir.model.access">
+        <field name="name">access_barcode_scan_temp_line_user</field>
+        <field name="model_id" ref="model_barcode_scan_temp_line"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+    -->
+</odoo>

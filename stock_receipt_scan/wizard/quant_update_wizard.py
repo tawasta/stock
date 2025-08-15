@@ -1,3 +1,4 @@
+# DEPRECATED. PLEASE USE stock_barcode_transfer_wizard
 import logging
 import re
 from datetime import datetime

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="stock_picking_type_kanban" model="ir.ui.view">
+        <field name="name">stock.picking.type.kanban.barcode</field>
+        <field name="model">stock.picking.type</field>
+        <field name="inherit_id" ref="stock.stock_picking_type_kanban" />
+        <field name="arch" type="xml">
+            <button name="get_action_picking_tree_ready" position="after">
+                <button
+                    class="btn btn-info mt8"
+                    name="action_open_barcode_transfer_wizard"
+                    type="object"
+                    icon="fa-barcode"
+                ><span>Scan barcodes</span>
+                </button>
+            </button>
+
+        </field>
+    </record>
+</odoo>
