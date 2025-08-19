@@ -2,7 +2,6 @@ from odoo import api, fields, models
 
 
 class StockPicking(models.Model):
-
     _inherit = "stock.picking"
 
     source_document_link_sale_order = fields.Many2one(

@@ -2,7 +2,6 @@ from odoo import models
 
 
 class StockMove(models.Model):
-
     _inherit = "stock.move"
 
     def _trigger_assign(self):

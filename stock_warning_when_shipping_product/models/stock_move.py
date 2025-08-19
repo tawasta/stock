@@ -2,7 +2,6 @@ from odoo import _, api, models
 
 
 class StockMove(models.Model):
-
     _inherit = "stock.move"
 
     @api.onchange("product_id")

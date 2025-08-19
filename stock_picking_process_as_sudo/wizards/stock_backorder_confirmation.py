@@ -2,7 +2,6 @@ from odoo import models
 
 
 class StockBackorderConfirmation(models.TransientModel):
-
     _inherit = "stock.backorder.confirmation"
 
     def sudo_process(self):

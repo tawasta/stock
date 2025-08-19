@@ -3,7 +3,6 @@ from odoo.exceptions import UserError
 
 
 class StockPickingInvoiceWizard(models.TransientModel):
-
     _name = "stock.picking.invoice.wizard"
     _description = "Create invoice from pickings"
 
@@ -37,8 +36,11 @@ class StockPickingInvoiceWizard(models.TransientModel):
             if record.partner_id:
                 record.pricelist_id = record.partner_id.property_product_pricelist
 
-    def action_create_invoice(self):
+    def get_picking_moves(self, picking):
+        for move in picking.move_lines:
+            yield (move.product_id, move, move.quantity_done)
 
+    def action_create_invoice(self):
         picking_ids = self.env["stock.picking"].browse(self._context.get("active_ids"))
 
         aml = self.env["account.move.line"]
@@ -65,26 +67,23 @@ class StockPickingInvoiceWizard(models.TransientModel):
         for picking in picking_ids:
             if picking.state != "done":
                 raise UserError(
-                    _(
-                        "You can't invoice a picking that is not done: {}".format(
-                            picking.name
-                        )
-                    )
+                    _(f"You can't invoice a picking that is not done: {picking.name}")
                 )
 
             if picking.invoice_id and picking.invoice_id.state != "cancel":
-                raise UserError(
-                    _("Picking is already invoiced: {}".format(picking.name))
-                )
+                raise UserError(_(f"Picking is already invoiced: {picking.name}"))
 
             partner = picking.partner_id
             # Dummy variable, if we want to re-implement adding move names
             # to invoice line description later
             show_moves = False
 
-            for move in picking.move_lines:
-                product = move.product_id
-                quantity = move.quantity_done
+            # tuple(products, moves, quantities) = self.get_picking_moves(picking)
+            # = self.get_picking_moves(picking)
+
+            # for product, move, quantity in products, moves, quantities:
+            for product, move, quantity in self.get_picking_moves(picking):
+                # quantity = move.quantity_done
                 account = (
                     product.property_account_income_id
                     or product.categ_id.property_account_income_categ_id
@@ -92,7 +91,7 @@ class StockPickingInvoiceWizard(models.TransientModel):
                 price = self.pricelist_id.get_product_price(product, quantity, partner)
 
                 if show_moves:
-                    line_name = "{} - {}".format(move.name, move.picking_id.name)
+                    line_name = f"{move.name} - {move.picking_id.name}"
                 else:
                     line_name = product.display_name
 
@@ -111,7 +110,7 @@ class StockPickingInvoiceWizard(models.TransientModel):
                     }
                     if show_moves:
                         new_line_values["name"] = (
-                            "{}, {}".format(existing_line.name, move.picking_id.name),
+                            f"{existing_line.name}, {move.picking_id.name}",
                         )
 
                     existing_line.with_context(check_move_validity=False).write(

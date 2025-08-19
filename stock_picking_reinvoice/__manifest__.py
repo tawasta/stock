@@ -23,7 +23,7 @@
     "summary": "Allow making invoices from stock pickings",
     "category": "Warehouse",
     "version": "14.0.1.1.0",
-    "website": "https://gitlab.com/tawasta/odoo/stock",
+    "website": "https://github.com/tawasta/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

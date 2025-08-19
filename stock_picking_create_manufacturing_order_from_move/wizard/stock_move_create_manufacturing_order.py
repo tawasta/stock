@@ -6,7 +6,6 @@ _logger = logging.getLogger(__name__)
 
 
 class StockMoveCreateManufacturingOrder(models.TransientModel):
-
     _name = "stock.move.create.manufacturing.order"
     _description = "Create MO from stock move"
 

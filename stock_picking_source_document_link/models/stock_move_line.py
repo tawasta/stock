@@ -2,7 +2,6 @@ from odoo import fields, models
 
 
 class StockMoveLine(models.Model):
-
     _inherit = "stock.move.line"
 
     source_document_link_sale_order = fields.Many2one(

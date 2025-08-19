@@ -2,7 +2,6 @@ from odoo import models
 
 
 class StockPicking(models.Model):
-
     _inherit = "stock.picking"
 
     def do_print_picking(self):

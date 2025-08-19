@@ -2,7 +2,6 @@ from odoo import api, models
 
 
 class StockPicking(models.Model):
-
     _inherit = "stock.picking"
 
     @api.model

@@ -2,7 +2,6 @@ from odoo import fields, models
 
 
 class StockQuant(models.Model):
-
     _inherit = "stock.quant"
 
     product_template_loc_rack = fields.Char(

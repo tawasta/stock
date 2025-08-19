@@ -4,7 +4,6 @@ from odoo.addons import decimal_precision as dp
 
 
 class StockPicking(models.Model):
-
     _inherit = "stock.picking"
 
     total_compute_volume = fields.Float(
@@ -30,7 +29,7 @@ class StockPicking(models.Model):
     def read_group(
         self, domain, fields, groupby, offset=0, limit=None, orderby=False, lazy=True
     ):
-        res = super(StockPicking, self).read_group(
+        res = super().read_group(
             domain,
             fields,
             groupby,

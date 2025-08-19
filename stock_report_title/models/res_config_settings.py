@@ -2,7 +2,6 @@ from odoo import fields, models
 
 
 class ResConfigSettings(models.TransientModel):
-
     _inherit = "res.config.settings"
 
     delivery_slip_title = fields.Char(

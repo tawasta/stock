@@ -2,13 +2,12 @@ from odoo import models
 
 
 class SaleOrderLine(models.Model):
-
     _inherit = "sale.order.line"
 
     def _action_launch_stock_rule(self, previous_product_uom_qty=False):
         """Check if an order has Force Unreserve set to True and make
         reservertations based on that value."""
-        res = super(SaleOrderLine, self)._action_launch_stock_rule(
+        res = super()._action_launch_stock_rule(
             previous_product_uom_qty=previous_product_uom_qty
         )
 
