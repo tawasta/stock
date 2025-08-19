@@ -24,6 +24,9 @@
                                 <span t-out="ean_code" />
                             </div>
                         </t>
+                        <div t-if="product.item_code">
+                            <span t-esc="product.item_code" />
+                        </div>
                     </div>
                 </div>
             </div>
