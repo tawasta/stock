@@ -7,6 +7,7 @@
         <field name="arch" type="xml">
             <field name="barcode" position="after">
                 <field name="ean_code" />
+                <field name="item_code" />
             </field>
         </field>
     </record>
