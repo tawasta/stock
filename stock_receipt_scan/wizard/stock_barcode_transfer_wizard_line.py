@@ -10,10 +10,9 @@ class StockBarcodeTransferWizardLine(models.TransientModel):
     )
     product_id = fields.Many2one("product.product", required=True)
     lot_id = fields.Many2one("stock.lot", readonly=True)
-    lot_name = fields.Char(readonly=True)
     quantity = fields.Float(default=1.0)
     expiration_date = fields.Date(readonly=True)
-    location_id = fields.Many2one(
-        "stock.location", required=True, domain=[("usage", "=", "internal")]
+    location_src_id = fields.Many2one(
+        "stock.location", string="Source Location", domain=[("usage", "=", "internal")]
     )
     stock_move_id = fields.Many2one("stock.move")

@@ -6,7 +6,11 @@
         <field name="arch" type="xml">
             <form string="Scan to Create Transfer" version="7.0">
                 <sheet>
-                    <h1><field name="wizard_mode" /></h1>
+                    <field name="wizard_mode" invisible="1" />
+                    <h1><field
+                            name="picking_type_id"
+                            options="{'no_create_edit':True}"
+                        /></h1>
                     <div class="alert alert-info mb-3" role="status">
                         <p>
                             <strong>Scan products using a barcode scanner.</strong>
@@ -108,10 +112,15 @@
                         <tree editable="top">
                             <field name="product_id" optional="show" />
                             <field name="quantity" optional="show" />
-                            <field name="lot_name" optional="show" />
+                            <field
+                                name="lot_id"
+                                optional="show"
+                                column_invisible="parent.wizard_mode == 'incoming'"
+                                force_save="1"
+                            />
                             <field name="expiration_date" optional="show" />
                             <field
-                                name="location_id"
+                                name="location_src_id"
                                 options="{'no_create': True}"
                                 optional="show"
                             />
@@ -132,21 +141,24 @@
                             class="o_input"
                             domain="[('id', 'in', allowed_location_src_ids)]"
                             options="{'no_open': True}"
-                            readonly="wizard_mode == 'receipt'"
+                            readonly="wizard_mode == 'incoming'"
+                            force_save="1"
                         />
                         <field
                             name="location_dest_id"
                             class="o_input"
                             domain="[('id', 'in', allowed_location_dest_ids)]"
                             options="{'no_open': True}"
-                            readonly="wizard_mode == 'delivery'"
+                            readonly="wizard_mode == 'outgoing'"
+                            force_save="1"
+                            required="1"
                         />
                     </group>
 
                     <!-- Footer Buttons -->
                     <footer class="mt16">
                         <button
-                            name="action_create_picking"
+                            name="action_confirm"
                             string="Confirm Transfer"
                             type="object"
                             class="btn-primary"
