@@ -13,7 +13,7 @@ class StockPicking(models.Model):
             # Tell the wizard to limit the picking to the current one
             "default_picking_id": self.id,
             # Tell the wizard what kind of move we are making
-            "default_wizard_mode": self.picking_type_id.code,
+            "default_picking_type_id": self.picking_type_id.id,
             # Tell the wizard the source and destination locations
             "default_location_src_id": self.location_id.id,
             "default_location_dest_id": self.location_dest_id.id,

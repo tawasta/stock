@@ -18,14 +18,8 @@ class StockBarcodeTransferWizard(models.TransientModel):
     _description = "Barcode Transfer Wizard"
 
     # region Field definitions
-    wizard_mode = fields.Selection(
-        [
-            ("incoming", "Receive products"),
-            ("outgoing", "Deliver or consume products"),
-            ("internal", "Internal move"),
-        ],
-        default="incoming",
-    )
+    picking_type_id = fields.Many2one(comodel_name="stock.picking.type")
+    wizard_mode = fields.Selection(related="picking_type_id.code")
 
     current_product_id = fields.Many2one("product.product", string="Current Product")
     current_lot_id = fields.Many2one("stock.lot", string="Current Lot")
@@ -85,7 +79,7 @@ class StockBarcodeTransferWizard(models.TransientModel):
     def _compute_allowed_src_locations(self):
         for wizard in self:
             wizard.allowed_location_src_ids = [
-                (6, 0, wizard.scanned_line_ids.mapped("location_id").ids)
+                (6, 0, wizard.scanned_line_ids.mapped("location_src_id").ids)
             ]
 
     @api.depends("scanned_line_ids")
@@ -94,7 +88,6 @@ class StockBarcodeTransferWizard(models.TransientModel):
         for wizard in self:
             if wizard.wizard_mode in ("incoming", "internal"):
                 locations = stock_location.search([("usage", "=", "internal")])
-
             elif wizard.wizard_mode == "outgoing":
                 locations = stock_location.search([("usage", "=", "customer")])
             else:
@@ -141,20 +134,21 @@ class StockBarcodeTransferWizard(models.TransientModel):
             scanned_values = {
                 "product_id": product.id,
                 "lot_id": lot and lot.id,
-                "lot_name": lot and lot.name,
                 "expiration_date": expiration_date,
-                "location_id": quant.location_id.id,
+                "location_src_id": quant.location_id.id,
             }
             self.write({"scanned_line_ids": [Command.create(scanned_values)]})
 
         # Set success message
-        self.success_message = _(
-            "Product '%(product_name)s' with lot '%(lot_name)s' added successfully.",
-            {
-                "product_name": product.display_name,
-                "lot_name": lot.name,
-            },
-        )
+        success_message = _(
+            "Product '%(product_name)s' with lot '%(lot_name)s' added successfully."
+        ) % {
+            "product_name": product.display_name,
+            "lot_name": lot.name if lot else "",
+        }
+        _logger.debug(success_message)
+        self.success_message = success_message
+
         # Clear current values
         self.write(
             {
@@ -295,8 +289,8 @@ class StockBarcodeTransferWizard(models.TransientModel):
         return missing
 
     # region Actions
-    def action_create_picking(self):
-        self.ensure_one()
+    def _check_missing_picking_values(self):
+        _logger.debug("Checking for missing wizard values")
         if not self.scanned_line_ids:
             raise UserError(
                 _(
@@ -305,42 +299,65 @@ class StockBarcodeTransferWizard(models.TransientModel):
                 )
             )
 
-        if not self.location_src_id:
-            raise UserError(
-                _("Please select the source location before creating the transfer.")
-            )
+        if self.wizard_mode == "incoming" and not self.location_src_id:
+            raise UserError(_("Please select the source location."))
 
-        Picking = self.env["stock.picking"]
-        Move = self.env["stock.move"]
+        if not self.location_dest_id:
+            raise UserError(_("Please select the destination location."))
 
-        picking = Picking.create(
-            {
-                "partner_id": self.env.user.partner_id.id,
-                "picking_type_id": self.env.ref("stock.picking_type_internal").id,
-                "location_id": self.location_src_id.id,
-                "location_dest_id": self.env.user.partner_id.property_stock_customer.id,
-                "move_type": "direct",
-            }
-        )
+    def action_create_picking(self):
+        _logger.debug("Creating stock picking from transfer wizard")
+        picking_values = {
+            "partner_id": self.env.user.partner_id.id,
+            "picking_type_id": self.picking_type_id.id,
+            "location_id": self.location_src_id.id,
+            "location_dest_id": self.location_dest_id.id,
+            "move_type": "direct",
+        }
+        _logger.debug("Creating stock picking with values: %s", picking_values)
 
+        return self.env["stock.picking"].create(picking_values)
+
+    def action_create_moves(self, picking):
+        _logger.debug("Creating stock moves from transfer wizard")
         lines_created = []
 
-        for line in self.scanned_line_ids.filtered(
-            lambda li: li.location_id == self.location_id
-        ):
-            Move.create(
-                {
-                    "picking_id": picking.id,
-                    "name": line.product_id.display_name,
-                    "product_id": line.product_id.id,
-                    "product_uom_qty": line.quantity,
-                    "product_uom": line.product_id.uom_id.id,
-                    "location_id": self.location_id.id,
-                    "location_dest_id": (
-                        self.env.user.partner_id.property_stock_customer.id
-                    ),
-                }
-            )
+        # TODO: filter only lines that have a matching location?
+        # scanned_line_ids = self.scanned_line_ids.filtered(
+        # lambda li: li.location_src_id == self.location_src_id)
+        scanned_line_ids = self.scanned_line_ids
+
+        for line in scanned_line_ids:
+            location_src_id = line.location_src_id or self.location_src_id
+
+            move_values = {
+                "picking_id": picking.id,
+                "name": line.product_id.display_name,
+                "product_id": line.product_id.id,
+                "product_uom_qty": line.quantity,
+                "product_uom": line.product_id.uom_id.id,
+                "location_id": location_src_id.id,
+                "location_dest_id": self.location_dest_id.id,
+            }
+            _logger.debug("Creating stock move with values: %s", move_values)
+            stock_move = self.env["stock.move"].create(move_values)
+
+            move_line_values = {
+                "picking_id": picking.id,
+                "move_id": stock_move.id,
+                "company_id": picking.company_id.id,
+                "product_id": line.product_id.id,
+                "product_uom_id": stock_move.product_uom.id,
+                "quantity": line.quantity,
+                "lot_id": line.lot_id.id,
+                "lot_name": line.lot_id.name,
+                "expiration_date": line.expiration_date,
+                "location_id": picking.location_id.id,
+                "location_dest_id": picking.location_dest_id.id,
+                "date": fields.Datetime.now(),
+            }
+            _logger.debug("Creating stock move line with values: %s", move_line_values)
+            self.env["stock.move.line"].create(move_line_values)
 
             # Tallenna rivin tiedot viestiä varten
             lines_created.append(
@@ -350,6 +367,22 @@ class StockBarcodeTransferWizard(models.TransientModel):
                 }
             )
 
+        return lines_created
+
+    def action_confirm(self):
+        _logger.debug("Confirming stock transfer from transfer wizard")
+        self.ensure_one()
+
+        self._check_missing_picking_values()
+
+        picking = self.action_create_picking()
+        move_ids = self.action_create_moves(picking)
+
+        # Confirm the picking
+        picking.action_confirm()
+
+        # Add quants
+
         # Muodosta viesti ilman HTML-tageja
         body = _(
             "Stock picking was created using the Barcode Transfer Wizard by"
@@ -357,8 +390,8 @@ class StockBarcodeTransferWizard(models.TransientModel):
             " location '%(location)s'.\n\nScanned lines:\n%(lines)s"
         ) % {
             "user": self.env.user.name,
-            "location": self.location_id.display_name,
-            "lines": "\n".join(lines_created),
+            "location": self.location_src_id.display_name,
+            "lines": "\n".join(move_ids),
         }
 
         picking.message_post(body=body, subtype_xmlid="mail.mt_comment")

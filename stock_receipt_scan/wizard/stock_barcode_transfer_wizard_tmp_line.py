@@ -2,6 +2,7 @@ from odoo import fields, models
 
 
 class StockBarcodeTransferWizardTmpLine(models.TransientModel):
+    # I don't think this model is needed anymore, but didn't remove it yet
     _name = "stock.barcode.transfer.wizard.tmp.line"
     _description = "Temporary Barcode transfer wizard line"
 
