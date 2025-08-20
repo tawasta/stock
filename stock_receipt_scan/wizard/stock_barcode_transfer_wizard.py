@@ -130,12 +130,12 @@ class StockBarcodeTransferWizard(models.TransientModel):
 
         quants = self._get_quants()
 
-        for quant in quants:
+        if quants:
             scanned_values = {
                 "product_id": product.id,
                 "lot_id": lot and lot.id,
                 "expiration_date": expiration_date,
-                "location_src_id": quant.location_id.id,
+                "location_src_id": quants[0].location_id.id,
             }
             self.write({"scanned_line_ids": [Command.create(scanned_values)]})
 
@@ -253,13 +253,10 @@ class StockBarcodeTransferWizard(models.TransientModel):
         product = self.current_product_id
         lot = self.current_lot_id
 
-        quants = self.env["stock.quant"].search(
-            [
-                ("product_id", "=", product.id),
-                ("lot_id", "=", lot.id),
-                ("quantity", ">", 0),
-            ]
+        quants = lot.quant_ids.filtered(
+            lambda q: q.quantity > 0 and q.location_id.usage == "internal"
         )
+        _logger.debug("Found quants: %s", quants)
 
         if not quants:
             raise UserError(
