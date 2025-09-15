@@ -370,6 +370,9 @@ class StockBarcodeTransferWizard(models.TransientModel):
         _logger.debug("Confirming stock transfer from transfer wizard")
         self.ensure_one()
 
+        if not self.location_src_id:
+            raise UserError(_("Select a source location to confirm the transfer."))
+
         self._check_missing_picking_values()
 
         picking = self.action_create_picking()
