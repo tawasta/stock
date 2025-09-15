@@ -74,17 +74,18 @@ class StockMoveLine(models.Model):
     # 4. Compute and search fields, in the same order that fields declaration
     def _compute_sale_line_kit(self):
         for line in self:
-            if line.sale_line_id:
+            sale_line = line.sale_line_id
+            if sale_line:
                 bom = (
                     self.env["mrp.bom"]
                     .sudo()
                     ._bom_find(
-                        product=line.sale_line_id.product_id,
+                        product=sale_line.product_id,
                         company_id=line.picking_id.company_id.id,
                     )
                 )
                 if bom.type == "phantom":
-                    line.sale_line_kit = line.sale_line_id.product_id
+                    line.sale_line_kit = sale_line.product_id
                 else:
                     line.sale_line_kit = None
             else:

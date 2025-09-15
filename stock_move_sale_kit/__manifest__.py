@@ -18,10 +18,10 @@
 #
 ##############################################################################
 {
-    "name": "Stock Move Sale Kit",
-    "version": "14.0.1.0.0",
+    "name": "Stock Move Sale Kit – information on SO deliveries",
+    "summary": "Sale kits to stock move lines from sale orders",
+    "version": "14.0.1.1.0",
     "category": "Stock",
-    "summary": "Sale kits to stock move lines",
     "website": "https://github.com/tawasta/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
