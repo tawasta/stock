@@ -87,6 +87,7 @@
         <field name="view_mode">tree,form</field>
     </record>
 
+    <!--
     <record id="action_stock_receipt_wizard" model="ir.actions.act_window">
         <field name="name">Create Stock Receipt</field>
         <field name="res_model">stock.receipt.wizard</field>
@@ -113,8 +114,10 @@
         action="action_stock_receipt_wizard"
         sequence="10"
     />
+    -->
 
     <!-- Menu for Stock Receipt Lines -->
+    <!--
     <menuitem
         id="menu_stock_receipt_line"
         name="Stock Receipt Lines"
@@ -122,4 +125,5 @@
         action="action_stock_receipt_line"
         sequence="20"
     />
+    -->
 </odoo>

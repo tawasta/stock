@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_stock_barcode_transfer_wizard_form" model="ir.ui.view">
+        <field name="name">stock.barcode.transfer.wizard.form</field>
+        <field name="model">stock.barcode.transfer.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Scan to Create Transfer" version="7.0">
+                <sheet>
+                    <field name="wizard_mode" invisible="1" />
+                    <h1><field
+                            name="picking_type_id"
+                            options="{'no_create_edit':True}"
+                        /></h1>
+                    <div class="alert alert-info mb-3" role="status">
+                        <p>
+                            <strong>Scan products using a barcode scanner.</strong>
+                        </p>
+                        <p>
+                            <i class="fa fa-info-circle" aria-hidden="true" />
+                            Please ensure the barcode includes GTIN, Lot, and Exp, then select the source
+                            location and click <em>'Confirm Transfer'</em>.
+                        </p>
+                    </div>
+
+                    <div class="mt16 mb8" invisible="not picking_id">
+                        <div class="o_form_label">
+                            <i
+                                class="fa fa-truck text-info mr4"
+                                aria-hidden="true"
+                            /> Picking
+                        </div>
+                        <field
+                            name="picking_id"
+                            class="o_input o_field_highlight"
+                            readonly="1"
+                        />
+                    </div>
+
+                    <!-- Barcode Field -->
+                    <div class="oe_title">
+                        <h2>
+                            <i
+                                class="fa fa-barcode text-success mr4"
+                                aria-hidden="true"
+                            />
+                            Scan Barcode
+                        </h2>
+
+                        <field
+                            colspan="2"
+                            name="barcode"
+                            placeholder="Scan GS1 barcode (with GTIN + Lot + Exp)..."
+                            help="Use a GS1-128 barcode scanner. Barcode should include GTIN (01), Lot (10), and Expiration Date (17)."
+                            class="o_input o_field_highlight"
+                            style="font-size: 18px;"
+                            options="{'no_quick_create': True}"
+                        />
+                    </div>
+
+                    <div
+                        class="alert alert-warning mb-3"
+                        role="status"
+                        invisible="not info_message"
+                    >
+                        <field name="info_message" readonly="1" nolabel="1" />
+                    </div>
+                    <div
+                        class="alert alert-success mb-3"
+                        role="status"
+                        invisible="not success_message"
+                    >
+                        <field name="success_message" readonly="1" nolabel="1" />
+                    </div>
+
+                    <div
+                        class="row"
+                        invisible="not current_product_id and not current_lot_id and not current_expiry_date"
+                    >
+                        <div class="col">
+                            <label for="current_product_id" />
+                            <field name="current_product_id" readonly="1" nolabel="1" />
+                        </div>
+                        <div class="col">
+                            <label for="current_lot_id" />
+                            <field name="current_lot_id" readonly="1" nolabel="1" />
+                        </div>
+                        <div class="col">
+                            <label for="current_expiry_date" />
+                            <field
+                                name="current_expiry_date"
+                                readonly="1"
+                                nolabel="1"
+                            />
+                        </div>
+                    </div>
+
+                    <!--
+                    <field name="scanned_barcodes" nolabel="1" >
+                        <tree editable="top">
+                            <field name="barcode" />
+                            <field name="ai_01" />
+                            <field name="ai_10" />
+                            <field name="ai_17" />
+                        </tree>
+                    </field>
+                    -->
+
+                    <!-- Scanned Lines -->
+                    <separator string="Scanned Products" colspan="2" class="mt16" />
+
+                    <field name="scanned_line_ids" nolabel="1">
+                        <tree editable="top">
+                            <field name="product_id" optional="show" />
+                            <field name="quantity" optional="show" />
+                            <field
+                                name="lot_id"
+                                optional="show"
+                                column_invisible="parent.wizard_mode == 'incoming'"
+                                force_save="1"
+                            />
+                            <field name="expiration_date" optional="show" />
+                            <field
+                                name="location_src_id"
+                                options="{'no_create': True}"
+                                optional="show"
+                            />
+                            <field
+                                name="stock_move_id"
+                                options="{'no_create': True}"
+                                optional="hide"
+                            />
+                        </tree>
+                    </field>
+
+                    <!-- Location Selection -->
+                    <group class="mt16">
+                        <field name="allowed_location_src_ids" invisible="1" />
+                        <field name="allowed_location_dest_ids" invisible="1" />
+                        <field
+                            name="location_src_id"
+                            class="o_input"
+                            domain="[('id', 'in', allowed_location_src_ids)]"
+                            options="{'no_open': True}"
+                            readonly="wizard_mode == 'incoming'"
+                            force_save="1"
+                        />
+                        <field
+                            name="location_dest_id"
+                            class="o_input"
+                            domain="[('id', 'in', allowed_location_dest_ids)]"
+                            options="{'no_open': True}"
+                            readonly="wizard_mode == 'outgoing'"
+                            force_save="1"
+                            required="1"
+                        />
+                    </group>
+
+                    <!-- Footer Buttons -->
+                    <footer class="mt16">
+                        <button
+                            name="action_confirm"
+                            string="Confirm Transfer"
+                            type="object"
+                            class="btn-primary"
+                            icon="fa-check"
+                        />
+                        <button
+                            string="Cancel"
+                            special="cancel"
+                            class="btn-secondary"
+                            icon="fa-times"
+                        />
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
