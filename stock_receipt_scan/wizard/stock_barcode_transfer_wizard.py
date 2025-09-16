@@ -131,11 +131,16 @@ class StockBarcodeTransferWizard(models.TransientModel):
         quants = self._get_quants()
 
         if quants:
+            if self.wizard_mode == "incoming":
+                source_loc = self.location_src_id
+            else:
+                source_loc = quants[0].location_id.id
+
             scanned_values = {
                 "product_id": product.id,
                 "lot_id": lot and lot.id,
                 "expiration_date": expiration_date,
-                "location_src_id": quants[0].location_id.id,
+                "location_src_id": source_loc,
             }
             self.write({"scanned_line_ids": [Command.create(scanned_values)]})
 
