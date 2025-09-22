@@ -21,7 +21,7 @@
 {
     "name": "Stock Receipt Scan",
     "summary": "Stock Receipt Scan",
-    "version": "17.0.2.0.3",
+    "version": "17.0.2.0.4",
     "category": "Stock",
     "website": "https://github.com/tawasta/stock",
     "author": "Futural",

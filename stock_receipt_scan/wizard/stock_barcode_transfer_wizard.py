@@ -82,6 +82,12 @@ class StockBarcodeTransferWizard(models.TransientModel):
                 (6, 0, wizard.scanned_line_ids.mapped("location_src_id").ids)
             ]
 
+    @api.onchange("location_src_id")
+    def _onchange_location_src_id(self):
+        if self.location_src_id:
+            for line in self.scanned_line_ids:
+                line.location_src_id = self.location_src_id
+
     @api.depends("scanned_line_ids")
     def _compute_allowed_dest_locations(self):
         stock_location = self.env["stock.location"]
