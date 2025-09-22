@@ -21,7 +21,7 @@
 {
     "name": "Stock Receipt Scan – Create pickings by scanning products",
     "summary": "Product scanner for picking creation",
-    "version": "17.0.2.0.5",
+    "version": "17.0.2.0.6",
     "category": "Stock",
     "website": "https://github.com/tawasta/stock",
     "author": "Futural",
@@ -31,6 +31,7 @@
     "depends": ["stock"],
     "data": [
         "security/ir_model_access.xml",
+        "views/res_config_settings.xml",
         "views/stock_receipt_views.xml",
         "views/stock_picking_form.xml",
         "views/stock_picking_type_kanban.xml",
