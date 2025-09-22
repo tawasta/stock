@@ -1,3 +1,4 @@
+import datetime as dtime
 import logging
 import re
 from datetime import datetime
@@ -99,6 +100,56 @@ class StockBarcodeTransferWizard(models.TransientModel):
 
             wizard.allowed_location_dest_ids = [(6, 0, locations.ids)]
 
+    def product_usable_dates_notification(self, product, lot):
+        """Check expiration, best before and remove date of a product"""
+        l_expiration_date, l_best_before, l_removal_date = (
+            lot.expiration_date,
+            lot.use_date,
+            lot.removal_date,
+        )
+        p_expiration_time, p_best_before, p_removal_time = (
+            product.expiration_time,
+            product.use_time,
+            product.removal_time,
+        )
+
+        today = fields.Datetime.today()
+        lot_message = ""
+        message = []
+
+        company = self.picking_type_id.company_id
+
+        if (
+            l_expiration_date < today + dtime.timedelta(days=p_expiration_time)
+            and company.scanner_exp_date_note
+        ):
+            message.append("expiration date")
+
+        if (
+            l_removal_date < today + dtime.timedelta(days=p_removal_time)
+            and company.scanner_rem_date_note
+        ):
+            message.append("removal date")
+
+        if (
+            l_best_before < today + dtime.timedelta(days=p_best_before)
+            and company.scanner_bes_date_note
+        ):
+            message.append("best before date")
+
+        if len(message) > 1:
+            message = "{} and {}".format(", ".join(message[:-1]), message[-1])
+        elif message:
+            message = f"{message[0]}"
+
+        if message:
+            lot_message = (
+                f"The scanned lot {lot.name} has reached its {message} "
+                f"for {product.display_name} product"
+            )
+
+        return lot_message
+
     @api.onchange("barcode")
     def _onchange_barcode(self):
         """When changing barcode, parse contents to scanned product lines"""
@@ -175,19 +226,30 @@ class StockBarcodeTransferWizard(models.TransientModel):
             .get_param("bypass_older_quants_check")
         )
 
+        lot_message = ""
+
         if older_quants and self.wizard_mode != "incoming" and not bypass_check:
             locations = ", ".join([q.location_id.display_name for q in older_quants])
-            message = (
+            lot_message = (
                 "The product {product} has stock in {location} that expires sooner. "
                 "Please use it first.".format(
                     product=product.display_name,
                     location=locations,
                 )
             )
+
+        if self.wizard_mode in ("incoming", "outgoing"):
+            dates_message = self.product_usable_dates_notification(product, lot)
+
+            if lot_message and dates_message:
+                lot_message += "\n\n\n"
+            lot_message += dates_message
+
+        if lot_message:
             return {
                 "warning": {
-                    "title": "Older stock found",
-                    "message": message,
+                    "title": "Lot date note",
+                    "message": lot_message,
                 }
             }
 
