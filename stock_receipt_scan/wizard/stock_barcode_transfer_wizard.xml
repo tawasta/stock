@@ -122,7 +122,13 @@
                             <field
                                 name="location_src_id"
                                 options="{'no_create': True}"
-                                optional="show"
+                                optional="hide"
+                                groups="base.group_system"
+                                force_save="1"
+                            />
+                            <field
+                                name="location_src_id"
+                                column_invisible="1"
                                 force_save="1"
                             />
                             <field
