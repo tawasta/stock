@@ -17,7 +17,6 @@ class StockBarcodeTransferWizard(models.TransientModel):
     _name = "stock.barcode.transfer.wizard"
     _description = "Barcode Transfer Wizard"
 
-    # region Field definitions
     picking_type_id = fields.Many2one(comodel_name="stock.picking.type")
     wizard_mode = fields.Selection(related="picking_type_id.code")
 
@@ -58,7 +57,6 @@ class StockBarcodeTransferWizard(models.TransientModel):
         "wizard_id",
         string="Temporary Scanned Barcodes",
     )
-    # endregion
 
     # region Onchange Handlers
     @api.onchange("wizard_mode")
@@ -177,7 +175,7 @@ class StockBarcodeTransferWizard(models.TransientModel):
             .get_param("bypass_older_quants_check")
         )
 
-        if older_quants and not bypass_check:
+        if older_quants and self.wizard_mode != "incoming" and not bypass_check:
             locations = ", ".join([q.location_id.display_name for q in older_quants])
             message = (
                 "The product {product} has stock in {location} that expires sooner. "
@@ -264,12 +262,14 @@ class StockBarcodeTransferWizard(models.TransientModel):
         product = self.current_product_id
         lot = self.current_lot_id
 
-        quants = lot.quant_ids.filtered(
-            lambda q: q.quantity > 0 and q.location_id.usage == "internal"
-        )
+        quants = lot.quant_ids.filtered(lambda q: q.location_id.usage == "internal")
+
+        if self.wizard_mode != "incoming":
+            quants = quants.filtered(lambda q: q.quantity > 0)
+
         _logger.debug("Found quants: %s", quants)
 
-        if not quants:
+        if not quants and self.wizard_mode != "incoming":
             raise UserError(
                 _("No stock available for product '%(product)s' lot '%(lot)s'.")
                 % {
@@ -282,7 +282,7 @@ class StockBarcodeTransferWizard(models.TransientModel):
     # endregion
 
     def _check_missing_values(self):
-        # Check for any missing values
+        """Check for any missing values"""
         missing = []
         if not self.current_product_id:
             missing.append("(01) product code")
@@ -367,7 +367,7 @@ class StockBarcodeTransferWizard(models.TransientModel):
             _logger.debug("Creating stock move line with values: %s", move_line_values)
             self.env["stock.move.line"].create(move_line_values)
 
-            # Tallenna rivin tiedot viestiä varten
+            # Adds line information for the message
             lines_created.append(
                 _("- %(product)s")
                 % {
@@ -378,6 +378,9 @@ class StockBarcodeTransferWizard(models.TransientModel):
         return lines_created
 
     def action_confirm(self):
+        """Creates a picking from scanned products.
+        This is the 'Confirm Transfer' -button"""
+
         _logger.debug("Confirming stock transfer from transfer wizard")
         self.ensure_one()
 
@@ -389,12 +392,9 @@ class StockBarcodeTransferWizard(models.TransientModel):
         picking = self.action_create_picking()
         move_ids = self.action_create_moves(picking)
 
-        # Confirm the picking
         picking.action_confirm()
 
-        # Add quants
-
-        # Muodosta viesti ilman HTML-tageja
+        # Compose a message without HTML-tags
         body = _(
             "Stock picking was created using the Barcode Transfer Wizard by"
             " %(user)s from source"
