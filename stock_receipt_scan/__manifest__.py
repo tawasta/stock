@@ -19,9 +19,9 @@
 ##############################################################################
 
 {
-    "name": "Stock Receipt Scan",
-    "summary": "Stock Receipt Scan",
-    "version": "17.0.2.0.4",
+    "name": "Stock Receipt Scan – Create pickings by scanning products",
+    "summary": "Product scanner for picking creation",
+    "version": "17.0.2.0.5",
     "category": "Stock",
     "website": "https://github.com/tawasta/stock",
     "author": "Futural",
