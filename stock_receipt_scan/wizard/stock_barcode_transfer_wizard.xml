@@ -118,7 +118,11 @@
                                 column_invisible="parent.wizard_mode == 'incoming'"
                                 force_save="1"
                             />
-                            <field name="expiration_date" optional="show" />
+                            <field
+                                name="expiration_date"
+                                optional="show"
+                                force_save="1"
+                            />
                             <field
                                 name="location_src_id"
                                 options="{'no_create': True}"

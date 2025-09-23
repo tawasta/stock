@@ -120,19 +120,22 @@ class StockBarcodeTransferWizard(models.TransientModel):
         company = self.picking_type_id.company_id
 
         if (
-            l_expiration_date < today + dtime.timedelta(days=p_expiration_time)
+            l_expiration_date
+            and l_expiration_date < today + dtime.timedelta(days=p_expiration_time)
             and company.scanner_exp_date_note
         ):
             message.append("expiration date")
 
         if (
-            l_removal_date < today + dtime.timedelta(days=p_removal_time)
+            l_removal_date
+            and l_removal_date < today + dtime.timedelta(days=p_removal_time)
             and company.scanner_rem_date_note
         ):
             message.append("removal date")
 
         if (
-            l_best_before < today + dtime.timedelta(days=p_best_before)
+            l_best_before
+            and l_best_before < today + dtime.timedelta(days=p_best_before)
             and company.scanner_bes_date_note
         ):
             message.append("best before date")
@@ -185,15 +188,69 @@ class StockBarcodeTransferWizard(models.TransientModel):
 
         quants = self._get_quants()
 
+        if self.wizard_mode == "incoming":
+            source_loc = self.location_src_id
+        else:
+            source_loc = quants[0].location_id.id
+
+        lot_message = ""
+
         if quants:
-            if self.wizard_mode == "incoming":
-                source_loc = self.location_src_id
-            else:
-                source_loc = quants[0].location_id.id
+            # See if there are old quants available
+            older_quants = self._get_older_quants(product, quants)
+
+            bypass_check = (
+                self.env["ir.config_parameter"]
+                .sudo()
+                .get_param("bypass_older_quants_check")
+            )
+
+            if older_quants and self.wizard_mode != "incoming" and not bypass_check:
+                locations = ", ".join(
+                    [q.location_id.display_name for q in older_quants]
+                )
+                lot_message = (
+                    "The product {prod} has stock in {loc} that expires sooner. "
+                    "Please use it first.".format(
+                        prod=product.display_name,
+                        loc=locations,
+                    )
+                )
 
             scanned_values = {
                 "product_id": product.id,
                 "lot_id": lot and lot.id,
+                "expiration_date": expiration_date,
+                "location_src_id": source_loc,
+            }
+            self.write({"scanned_line_ids": [Command.create(scanned_values)]})
+
+        elif not quants and self.wizard_mode == "incoming":
+            company = self.picking_type_id.company_id
+
+            if not lot_name:
+                raise UserError(
+                    f"No lot was scanned for product: {product.display_name}"
+                )
+
+            if not lot:
+                lot_vals = [
+                    {
+                        "name": lot_name,
+                        "product_id": product.id,
+                        "company_id": company.id,
+                        "expiration_date": expiration_date,
+                    }
+                ]
+
+                incoming_lot = self.env["stock.lot"].create(lot_vals)
+                _logger.debug("Created lot: %s", incoming_lot)
+            else:
+                incoming_lot = lot
+
+            scanned_values = {
+                "product_id": product.id,
+                "lot_id": incoming_lot and incoming_lot.id,
                 "expiration_date": expiration_date,
                 "location_src_id": source_loc,
             }
@@ -217,26 +274,6 @@ class StockBarcodeTransferWizard(models.TransientModel):
                 "current_expiry_date": False,
             }
         )
-
-        older_quants = self._get_older_quants(product, quants)
-
-        bypass_check = (
-            self.env["ir.config_parameter"]
-            .sudo()
-            .get_param("bypass_older_quants_check")
-        )
-
-        lot_message = ""
-
-        if older_quants and self.wizard_mode != "incoming" and not bypass_check:
-            locations = ", ".join([q.location_id.display_name for q in older_quants])
-            lot_message = (
-                "The product {product} has stock in {location} that expires sooner. "
-                "Please use it first.".format(
-                    product=product.display_name,
-                    location=locations,
-                )
-            )
 
         if self.wizard_mode in ("incoming", "outgoing"):
             dates_message = self.product_usable_dates_notification(product, lot)
@@ -269,7 +306,12 @@ class StockBarcodeTransferWizard(models.TransientModel):
 
         for quant in other_quants:
             other_date = quant.lot_id.expiration_date
-            if any(q.lot_id.expiration_date > other_date for q in quants):
+            if any(
+                q.lot_id.expiration_date
+                and other_date
+                and q.lot_id.expiration_date > other_date
+                for q in quants
+            ):
                 found_quants.append(quant)
         return found_quants
 
@@ -305,9 +347,6 @@ class StockBarcodeTransferWizard(models.TransientModel):
             [("product_id", "=", product.id), ("name", "=", lot_name)],
             limit=1,
         )
-
-        if not lot:
-            raise UserError(_("No lot found with name %s.") % lot_name)
 
         _logger.debug("Found lot: %s", lot)
 
@@ -348,7 +387,7 @@ class StockBarcodeTransferWizard(models.TransientModel):
         missing = []
         if not self.current_product_id:
             missing.append("(01) product code")
-        if not self.current_lot_id:
+        if not self.current_lot_id and self.wizard_mode != "incoming":
             missing.append("(10) lot number")
 
         if missing:
