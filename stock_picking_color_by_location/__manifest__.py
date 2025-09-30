@@ -21,7 +21,7 @@
 {
     "name": "Stock Picking colored by their locations",
     "summary": "Source and Destination locations color pickings in tree view",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Stock",
     "website": "https://github.com/tawasta/stock",
     "author": "Futural",
