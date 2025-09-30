@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<record id="vpicktree" model="ir.ui.view">
+		<field name="name">stock.picking.tree.location.color</field>
+		<field name="model">stock.picking</field>
+		<field name="inherit_id" ref="stock.vpicktree" />
+		<field name="arch" type="xml">
+            <field name="name" position="after">
+                <field
+                    name="use_source_color"
+                    groups="base.group_system"
+                    optional="hide"
+                />
+                <field
+                    name="use_destination_color"
+                    groups="base.group_system"
+                    optional="hide"
+                />
+		    </field>
+
+            <xpath expr="//tree//field[@name='name']" position="attributes">
+                <attribute name="options">
+                {"bg_color": "#CCD1FC: use_destination_color == True; #CCFCCC: use_source_color == True"}
+                </attribute>
+		    </xpath>
+            <xpath expr="//tree//field[@name='location_dest_id']" position="attributes">
+                <attribute name="options">
+                {"bg_color": "#CCD1FC: use_destination_color == True"}</attribute>
+		    </xpath>
+
+            <xpath expr="//tree//field[@name='location_id']" position="attributes">
+                <attribute name="options">
+                {"bg_color": "#CCFCCC: use_source_color == True"}
+                </attribute>
+		    </xpath>
+		</field>
+	</record>
+</odoo>
