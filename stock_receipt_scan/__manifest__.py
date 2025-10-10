@@ -28,7 +28,7 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["stock"],
+    "depends": ["product_expiry", "stock"],
     "data": [
         "security/ir_model_access.xml",
         "views/res_config_settings.xml",
