@@ -1,17 +1,10 @@
-import datetime as dtime
+import datetime
 import logging
-import re
-from datetime import datetime
 
 from odoo import Command, _, api, fields, models
 from odoo.exceptions import UserError
 
 _logger = logging.getLogger(__name__)
-
-
-def parse_gs1_barcode(barcode_str):
-    pattern = r"\((\d{2})\)([^\(]+)"
-    return {ai: value.strip() for ai, value in re.findall(pattern, barcode_str)}
 
 
 class StockBarcodeTransferWizard(models.TransientModel):
@@ -121,21 +114,21 @@ class StockBarcodeTransferWizard(models.TransientModel):
 
         if (
             l_expiration_date
-            and l_expiration_date < today + dtime.timedelta(days=p_expiration_time)
+            and l_expiration_date < today + datetime.timedelta(days=p_expiration_time)
             and company.scanner_exp_date_note
         ):
             message.append("expiration date")
 
         if (
             l_removal_date
-            and l_removal_date < today + dtime.timedelta(days=p_removal_time)
+            and l_removal_date < today + datetime.timedelta(days=p_removal_time)
             and company.scanner_rem_date_note
         ):
             message.append("removal date")
 
         if (
             l_best_before
-            and l_best_before < today + dtime.timedelta(days=p_best_before)
+            and l_best_before < today + datetime.timedelta(days=p_best_before)
             and company.scanner_bes_date_note
         ):
             message.append("best before date")
@@ -162,17 +155,15 @@ class StockBarcodeTransferWizard(models.TransientModel):
         if not self.barcode:
             return False
 
-        parsed_barcode = parse_gs1_barcode(self.barcode)
-        _logger.debug("Parsed barcode: %s", parsed_barcode)
+        parsed_barcode = self.env["product.template"].parse_gs1_barcode(self.barcode)
         self.barcode = False
 
-        product_code = parsed_barcode.get("01")
-        lot_name = parsed_barcode.get("10")
-        expiration_raw = parsed_barcode.get("17")
-
-        expiration_date = self._get_expiration_date(expiration_raw)
-        product = self._get_product(product_code)
+        product = self.current_product_id or self._get_product(
+            parsed_barcode.get("barcode"), parsed_barcode.get("product_code")
+        )
+        lot_name = parsed_barcode.get("lot_name")
         lot = self._get_lot(product, lot_name)
+        expiration_date = parsed_barcode.get("expiration_date")
 
         # Update the current values
         current_vals = {
@@ -184,18 +175,18 @@ class StockBarcodeTransferWizard(models.TransientModel):
         self.write(current_vals)
 
         if self._check_missing_values():
+            _logger.debug("Missing values, waiting for more scans")
+            # All required values not present yet
             return False
 
+        # All required values are present, proceed to add the scanned line
         quants = self._get_quants()
-
-        if self.wizard_mode == "incoming":
-            source_loc = self.location_src_id
-        else:
-            source_loc = quants[0].location_id.id
-
         lot_message = ""
 
+        source_loc = self.env["stock.location"]
         if quants:
+            source_loc = quants[0].location_id
+
             # See if there are old quants available
             older_quants = self._get_older_quants(product, quants)
 
@@ -217,44 +208,19 @@ class StockBarcodeTransferWizard(models.TransientModel):
                     )
                 )
 
-            scanned_values = {
-                "product_id": product.id,
-                "lot_id": lot and lot.id,
-                "expiration_date": expiration_date,
-                "location_src_id": source_loc,
-            }
-            self.write({"scanned_line_ids": [Command.create(scanned_values)]})
+        scanned_values = {
+            "product_id": product.id,
+            "lot_id": lot and lot.id,
+            "quant_id": quants and quants[0].id,
+            "expiration_date": expiration_date,
+            "location_src_id": source_loc.id,
+        }
+        values = {"scanned_line_ids": [Command.create(scanned_values)]}
 
-        elif not quants and self.wizard_mode == "incoming":
-            company = self.picking_type_id.company_id
+        if not self.location_src_id and self.wizard_mode == "outgoing":
+            values["location_src_id"] = source_loc.id
 
-            if not lot_name:
-                raise UserError(
-                    f"No lot was scanned for product: {product.display_name}"
-                )
-
-            if not lot:
-                lot_vals = [
-                    {
-                        "name": lot_name,
-                        "product_id": product.id,
-                        "company_id": company.id,
-                        "expiration_date": expiration_date,
-                    }
-                ]
-
-                incoming_lot = self.env["stock.lot"].create(lot_vals)
-                _logger.debug("Created lot: %s", incoming_lot)
-            else:
-                incoming_lot = lot
-
-            scanned_values = {
-                "product_id": product.id,
-                "lot_id": incoming_lot and incoming_lot.id,
-                "expiration_date": expiration_date,
-                "location_src_id": source_loc,
-            }
-            self.write({"scanned_line_ids": [Command.create(scanned_values)]})
+        self.write(values)
 
         # Set success message
         success_message = _(
@@ -315,22 +281,20 @@ class StockBarcodeTransferWizard(models.TransientModel):
                 found_quants.append(quant)
         return found_quants
 
-    def _get_expiration_date(self, expiration_raw):
-        if expiration_raw and re.match(r"^\d{6}$", expiration_raw):
-            try:
-                return datetime.strptime(expiration_raw, "%y%m%d").date()
-            except ValueError as err:
-                raise UserError(_("Invalid expiration date format.")) from err
-        return None
-
-    def _get_product(self, product_code):
+    def _get_product(self, barcode, product_code=False):
         product = self.env["product.product"].search(
-            ["|", ("barcode", "=", product_code), ("default_code", "=", product_code)],
+            ["|", ("barcode", "=", barcode), ("default_code", "=", product_code)],
             limit=1,
         )
 
         if not product:
-            raise UserError(_("No product found with code %s.") % product_code)
+            raise UserError(
+                _(
+                    "No product with barcode '%(barcode)s' or code '%(code)s'. "
+                    "Please create a matching product and try again."
+                )
+                % {"barcode": barcode, "code": product_code}
+            )
 
         if not product.tracking == "lot":
             raise UserError(_("Product is not tracked by lot."))
@@ -348,7 +312,21 @@ class StockBarcodeTransferWizard(models.TransientModel):
             limit=1,
         )
 
-        _logger.debug("Found lot: %s", lot)
+        if lot:
+            _logger.debug("Found lot: %s", lot)
+        elif self.wizard_mode == "incoming":
+            company = self.picking_type_id.company_id
+            lot_vals = [
+                {
+                    "name": lot_name,
+                    "product_id": product.id,
+                    "company_id": company.id,
+                    "expiration_date": self.current_expiry_date,
+                }
+            ]
+
+            lot = self.env["stock.lot"].create(lot_vals)
+            _logger.debug("Created a lot: %s", lot)
 
         # Outgoing moves need a lot
         if self.wizard_mode in ["outgoing", "internal"] and not lot:
@@ -365,12 +343,29 @@ class StockBarcodeTransferWizard(models.TransientModel):
 
         quants = lot.quant_ids.filtered(lambda q: q.location_id.usage == "internal")
 
-        if self.wizard_mode != "incoming":
+        if self.wizard_mode in ["outgoing", "internal"]:
+            # There has to be available quantity
             quants = quants.filtered(lambda q: q.quantity > 0)
+            _logger.info("Found quants with qty > 0: %s", quants)
 
-        _logger.debug("Found quants: %s", quants)
+            for quant in quants:
+                # Don't allow moving more products that are available
+                used_qty = sum(
+                    self.scanned_line_ids.filtered(
+                        lambda scanned_line, quant=quant: (
+                            scanned_line.product_id == product
+                            and scanned_line.quant_id == quant
+                        )
+                    ).mapped("quantity")
+                )
+                _logger.debug("Quant %s has %s used qty", quant, used_qty)
 
-        if not quants and self.wizard_mode != "incoming":
+                if quant.quantity <= used_qty:
+                    quants -= quant
+
+        _logger.debug("Applicable quants: %s", quants)
+
+        if not quants and self.wizard_mode in ["outgoing", "internal"]:
             raise UserError(
                 _("No stock available for product '%(product)s' lot '%(lot)s'.")
                 % {
@@ -387,7 +382,7 @@ class StockBarcodeTransferWizard(models.TransientModel):
         missing = []
         if not self.current_product_id:
             missing.append("(01) product code")
-        if not self.current_lot_id and self.wizard_mode != "incoming":
+        if not self.current_lot_id:
             missing.append("(10) lot number")
 
         if missing:
@@ -395,6 +390,7 @@ class StockBarcodeTransferWizard(models.TransientModel):
         else:
             self.info_message = ""
 
+        _logger.debug("Missing values: %s", missing)
         return missing
 
     # region Actions
@@ -461,7 +457,7 @@ class StockBarcodeTransferWizard(models.TransientModel):
                 "lot_id": line.lot_id.id,
                 "lot_name": line.lot_id.name,
                 "expiration_date": line.expiration_date,
-                "location_id": picking.location_id.id,
+                "location_id": location_src_id.id,
                 "location_dest_id": picking.location_dest_id.id,
                 "date": fields.Datetime.now(),
             }
