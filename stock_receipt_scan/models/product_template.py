@@ -1,8 +1,10 @@
-import re
 import logging
+import re
 from datetime import datetime
-from odoo import api, models, _
+
+from odoo import _, api, models
 from odoo.exceptions import UserError
+
 _logger = logging.getLogger(__name__)
 
 
@@ -24,8 +26,10 @@ class ProductTemplate(models.Model):
 
         # Regular expression to match (AI)(value) pairs
         pattern = r"\((\d{2,3})\)([^\(]+)"
-        parsed_barcode = {ai: value.strip() for ai, value in re.findall(pattern, barcode_str)}
-    
+        parsed_barcode = {
+            ai: value.strip() for ai, value in re.findall(pattern, barcode_str)
+        }
+
         barcode = parsed_barcode.get("01")
         lot_name = parsed_barcode.get("10")
         expiration_raw = parsed_barcode.get("17")

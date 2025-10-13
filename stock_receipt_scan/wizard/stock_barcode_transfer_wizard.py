@@ -181,10 +181,12 @@ class StockBarcodeTransferWizard(models.TransientModel):
 
         # All required values are present, proceed to add the scanned line
         quants = self._get_quants()
-        source_loc = quants[0].location_id
         lot_message = ""
 
+        source_loc = self.env["stock.location"]
         if quants:
+            source_loc = quants[0].location_id
+
             # See if there are old quants available
             older_quants = self._get_older_quants(product, quants)
 
@@ -288,10 +290,10 @@ class StockBarcodeTransferWizard(models.TransientModel):
         if not product:
             raise UserError(
                 _(
-                    "No product found with barcode '%s' or code '%s'. "
+                    "No product with barcode '%(barcode)s' or code '%(code)s'. "
                     "Please create a matching product and try again."
                 )
-                % (barcode, product_code)
+                % {"barcode": barcode, "code": product_code}
             )
 
         if not product.tracking == "lot":
@@ -350,8 +352,10 @@ class StockBarcodeTransferWizard(models.TransientModel):
                 # Don't allow moving more products that are available
                 used_qty = sum(
                     self.scanned_line_ids.filtered(
-                        lambda scanned_line: scanned_line.product_id == product
-                        and scanned_line.quant_id == quant
+                        lambda scanned_line, quant=quant: (
+                            scanned_line.product_id == product
+                            and scanned_line.quant_id == quant
+                        )
                     ).mapped("quantity")
                 )
                 _logger.debug("Quant %s has %s used qty", quant, used_qty)
