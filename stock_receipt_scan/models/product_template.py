@@ -39,7 +39,9 @@ class ProductTemplate(models.Model):
             try:
                 expiration_date = datetime.strptime(expiration_raw, "%y%m%d").date()
             except ValueError as err:
-                raise UserError(_("Invalid expiration date format.")) from err
+                raise UserError(
+                    _("Invalid expiration date format '%s'." % expiration_raw)
+                ) from err
         else:
             expiration_date = None
 

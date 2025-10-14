@@ -156,11 +156,17 @@ class StockBarcodeTransferWizard(models.TransientModel):
             return False
 
         parsed_barcode = self.env["product.template"].parse_gs1_barcode(self.barcode)
+
+        barcode = parsed_barcode.get("barcode")
+        product_code = parsed_barcode.get("product_code")
+
+        if not barcode and not product_code:
+            # Fallback to raw input
+            barcode = product_code = self.barcode
+
         self.barcode = False
 
-        product = self.current_product_id or self._get_product(
-            parsed_barcode.get("barcode"), parsed_barcode.get("product_code")
-        )
+        product = self.current_product_id or self._get_product(barcode, product_code)
         lot_name = parsed_barcode.get("lot_name")
         lot = self._get_lot(product, lot_name)
         expiration_date = parsed_barcode.get("expiration_date")
@@ -282,10 +288,21 @@ class StockBarcodeTransferWizard(models.TransientModel):
         return found_quants
 
     def _get_product(self, barcode, product_code=False):
-        product = self.env["product.product"].search(
-            ["|", ("barcode", "=", barcode), ("default_code", "=", product_code)],
-            limit=1,
-        )
+        if not barcode and not product_code:
+            raise UserError(_("No barcode or product code found in the scanned data."))
+
+        product_model = self.env["product.product"]
+        product = False
+
+        if barcode:
+            # Try to find product with barcode
+            product = product_model.search([("barcode", "=", barcode)], limit=1)
+
+        if product_code and not product:
+            # Try to find product with product code
+            product = product_model.search(
+                [("default_code", "=", product_code)], limit=1
+            )
 
         if not product:
             raise UserError(
@@ -409,6 +426,16 @@ class StockBarcodeTransferWizard(models.TransientModel):
 
         if not self.location_dest_id:
             raise UserError(_("Please select the destination location."))
+
+    def action_clear_current_values(self):
+        """Clear the temporary 'current' values from the wizard."""
+        self.write(
+            {
+                "current_product_id": False,
+                "current_lot_id": False,
+                "current_expiry_date": False,
+            }
+        )
 
     def action_create_picking(self):
         _logger.debug("Creating stock picking from transfer wizard")
