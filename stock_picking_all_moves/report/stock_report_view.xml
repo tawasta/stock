@@ -2,31 +2,37 @@
 <odoo>
     <template id="report_picking_all_moves">
         <t t-foreach="docs" t-as="o">
-            <!-- kytkin foreach-patchille -->
-            <t t-set="all_moves" t-value="True"/>
-            <!-- Syötä corelle docs = [o], jotta core EI looppaa koko docsia uudestaan -->
+            <t t-set="all_moves" t-value="True" />
             <t t-call="stock.report_picking">
-                <t t-set="docs" t-value="[o]"/>
+                <t t-set="docs" t-value="[o]" />
             </t>
         </t>
     </template>
 
-    <template id="report_picking_all_moves_foreach_only" inherit_id="stock.report_picking">
+    <template
+        id="report_picking_all_moves_foreach_only"
+        inherit_id="stock.report_picking"
+    >
     <!-- Piilota CORE-foreach, kun all_moves=True -->
-    <xpath expr="//tbody/tr[contains(@t-foreach, 'o.move_line_ids_without_package')]" position="attributes">
+    <xpath
+            expr="//tbody/tr[contains(@t-foreach, 'o.move_line_ids_without_package')]"
+            position="attributes"
+        >
       <attribute name="t-if">not all_moves</attribute>
     </xpath>
 
-    <!-- Oma foreach heti perään: vaihe 1 → näytä vain move_ids (display_name) -->
-    <xpath expr="//tbody/tr[contains(@t-foreach, 'o.move_line_ids_without_package')]" position="after">
+    <xpath
+            expr="//tbody/tr[contains(@t-foreach, 'o.move_line_ids_without_package')]"
+            position="after"
+        >
       <tr t-if="all_moves" t-foreach="o.move_ids" t-as="mv">
         <td>
-          <span t-field="mv.product_id.display_name"/>
+          <span t-field="mv.product_id.display_name" />
         </td>
         <td>
             <span t-field="mv.quantity">3.00</span>
         </td>
-        <td></td>
+        <td />
       </tr>
     </xpath>
   </template>
