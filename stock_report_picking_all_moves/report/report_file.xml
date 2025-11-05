@@ -6,10 +6,10 @@
         <field name="report_type">qweb-pdf</field>
         <field
             name="report_name"
-        >stock_picking_all_moves.report_picking_all_moves</field>
+        >stock_report_picking_all_moves.report_picking_all_moves</field>
         <field
             name="report_file"
-        >stock_picking_all_moves.report_picking_all_moves</field>
+        >stock_report_picking_all_moves.report_picking_all_moves</field>
         <field name="print_report_name">
             'Picking Operations (All Moves) - %s - %s' % (object.partner_id.name or '', object.name)
         </field>

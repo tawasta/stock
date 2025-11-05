@@ -19,9 +19,9 @@
 ##############################################################################
 
 {
-    "name": "Stock Report - All moves",
-    "summary": "Stock Report - All moves",
-    "version": "17.0.1.0.0",
+    "name": "Stock Picking PDF Report - Show all stock moves",
+    "summary": "Stock Picking PDF Report - Show all stock moves",
+    "version": "17.0.2.0.0",
     "category": "Stock",
     "website": "https://github.com/tawasta/stock",
     "author": "Futural",
