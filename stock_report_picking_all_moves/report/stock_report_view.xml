@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_picking_all_moves">
+        <t t-foreach="docs" t-as="o">
+            <t t-set="all_moves" t-value="True" />
+            <t t-call="stock.report_picking">
+                <t t-set="docs" t-value="o" />
+            </t>
+        </t>
+    </template>
+
+    <template
+        id="report_picking_all_moves_foreach_only"
+        inherit_id="stock.report_picking"
+    >
+        <!-- Piilota CORE-foreach, kun all_moves=True -->
+        <xpath expr="//tbody/tr[contains(@t-foreach, 'o.move_line_ids_without_package')]" position="attributes">
+          <attribute name="t-if" separator=" " add="not all_moves" />
+        </xpath>
+
+        <xpath expr="//table[@t-if='o.move_line_ids and o.move_ids_without_package']" position="attributes">
+            <attribute name="t-if" separator=" " add="or all_moves" />
+        </xpath>
+
+        <xpath expr="//th[@name='th_serial_number']" position="attributes">
+            <attribute name="t-if" separator=" " add="and not all_moves" />
+        </xpath>
+
+        <xpath expr="//tbody/tr[contains(@t-foreach, 'o.move_line_ids_without_package')]" position="after">
+            <tr t-if="all_moves" t-foreach="o.move_ids" t-as="mv">
+                <td name="product_name">
+                    <span t-field="mv.product_id.display_name" />
+                </td>
+
+                <td name="product_quantity">
+                    <span t-field="mv.product_uom_qty">3.00</span>
+                    <span t-field="mv.product_uom" groups="uom.group_uom">units</span>
+                    <span t-if="mv.product_packaging_id">
+                        <span t-if="o.state != 'done'">
+                            (<span t-field="mv.product_packaging_qty" t-options='{"widget": "integer"}'/> <span t-field="mv.product_packaging_id.name"/>)
+                        </span>
+                        <span t-if="o.state == 'done'">
+                            (<span t-field="mv.product_packaging_qty" t-options='{"widget": "integer"}'/> <span t-field="mv.product_packaging_id.name"/>)
+                        </span>
+                    </span>
+                </td>
+
+                <td t-if="o.picking_type_id.code != 'incoming'" groups="stock.group_stock_multi_locations" name="source_location">
+                    <span t-esc="mv.location_id.display_name">WH/Stock</span>
+                        <t t-if="mv.product_packaging_id">
+                            <span t-field="mv.product_packaging_id">Package A</span>
+                        </t>
+                </td>
+                <td t-if="o.picking_type_id.code != 'outgoing'" groups="stock.group_stock_multi_locations" name="dest_location">
+                    <div>
+                        <span t-field="mv.location_dest_id">WH/Outgoing</span>
+                    </div>
+                </td>
+
+                <td class="text-center" t-if="has_barcode">
+                    <t t-if="product_barcode != mv.product_id.barcode">
+                        <span t-if="mv.product_id and mv.product_id.barcode">
+                            <div t-field="mv.product_id.barcode" t-options="{'widget': 'barcode', 'symbology': 'auto', 'width': 400, 'height': 100, 'quiet': 0, 'img_style': 'height:35px;'}">
+                                <div class="bg-light border-1 rounded d-flex flex-column align-items-center justify-content-center px-1 py-2 opacity-75 text-muted text-center">
+                                    (product barcode)
+                                </div>
+                            </div>
+                        </span>
+                        <t t-set="product_barcode" t-value="mv.product_id.barcode"/>
+                    </t>
+                </td>
+            </tr>
+        </xpath>
+    </template>
+</odoo>
