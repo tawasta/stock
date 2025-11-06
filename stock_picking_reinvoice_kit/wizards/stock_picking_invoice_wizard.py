@@ -26,7 +26,6 @@ class StockPickingInvoiceWizard(models.TransientModel):
                             .sudo()
                             ._bom_find(
                                 product=kit[0].product_id,
-                                company_id=line.picking_id.company_id.id,
                             )
                         )
                         if bom:
@@ -47,7 +46,6 @@ class StockPickingInvoiceWizard(models.TransientModel):
                             ._bom_find(
                                 # product=line.sale_line_id.product_id,
                                 product=kit[0].product_id,
-                                company_id=line.picking_id.company_id.id,
                             )
                         )
                         if bom.type == "phantom":
