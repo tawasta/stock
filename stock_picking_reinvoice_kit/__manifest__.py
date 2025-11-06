@@ -22,7 +22,7 @@
     "name": "Reinvoice stock pickings by kit",
     "summary": "Make invoices based by picking kits",
     "category": "Warehouse",
-    "version": "14.0.1.0.1",
+    "version": "14.0.1.0.2",
     "website": "https://github.com/tawasta/stock",
     "author": "Tawasta",
     "license": "AGPL-3",
