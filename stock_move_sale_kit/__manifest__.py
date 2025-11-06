@@ -20,7 +20,7 @@
 {
     "name": "Stock Move Sale Kit – information on SO deliveries",
     "summary": "Sale kits to stock move lines from sale orders",
-    "version": "14.0.1.1.0",
+    "version": "14.0.1.1.1",
     "category": "Stock",
     "website": "https://github.com/tawasta/stock",
     "author": "Tawasta",
