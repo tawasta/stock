@@ -80,8 +80,7 @@ class StockMoveLine(models.Model):
                     self.env["mrp.bom"]
                     .sudo()
                     ._bom_find(
-                        product=sale_line.product_id,
-                        company_id=line.picking_id.company_id.id,
+                        product=sale_line.product_id
                     )
                 )
                 if bom.type == "phantom":
