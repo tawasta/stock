@@ -19,9 +19,9 @@
 ##############################################################################
 
 {
-    "name": "Do not refresh page after Button validate has printed reports",
-    "summary": "Do not refresh page after Button validate has printed reports",
-    "version": "17.0.1.1.2",
+    "name": "Do not hard refresh a page after Button validate has printed reports",
+    "summary": "Do not hard refresh a page after Button validate has printed reports",
+    "version": "17.0.2.1.2",
     "category": "Stock",
     "website": "https://github.com/tawasta/stock",
     "author": "Futural",
@@ -33,4 +33,9 @@
         "stock",
     ],
     "data": [],
+    "assets": {
+        "web.assets_backend": [
+            "stock_picking_validate_button_no_refresh_after_report/static/src/js/client_action.esm.js",
+        ]
+    },
 }
