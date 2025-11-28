@@ -21,14 +21,14 @@
 {
     "name": "Stock Receipt Scan – Create pickings by scanning products",
     "summary": "Product scanner for picking creation",
-    "version": "17.0.2.1.6",
+    "version": "17.0.2.1.7",
     "category": "Stock",
     "website": "https://github.com/tawasta/stock",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["product_expiry", "stock"],
+    "depends": ["product_expiry", "product_parse_gs1_barcode", "stock"],
     "data": [
         "security/ir_model_access.xml",
         "views/res_config_settings.xml",
