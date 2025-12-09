@@ -12,21 +12,24 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[stock_auditlog_rules](stock_auditlog_rules/) | 17.0.1.0.0 |  | Adds audit log rules for stock.warehouse and stock.location
+[stock_auditlog_rules](stock_auditlog_rules/) | 17.0.1.1.0 |  | Adds audit log rules for stock.warehouse and stock.location
 [stock_batch_transfer_carrier_and_tracking_ref](stock_batch_transfer_carrier_and_tracking_ref/) | 17.0.1.1.1 |  | Adds Carrier and Tracking reference to batch transfer
 [stock_batch_transfer_contact_and_delivery_address](stock_batch_transfer_contact_and_delivery_address/) | 17.0.1.0.0 |  | Adds a default delivery address and contact to batch transfer
 [stock_disable_invoice_shipping_on_delivery](stock_disable_invoice_shipping_on_delivery/) | 17.0.1.0.0 |  | Disable picking auto-generated delivery SO lines
 [stock_dispatch_note_report_template](stock_dispatch_note_report_template/) | 17.0.1.0.2 |  | Adds weights, dates and clickable print is shown as 'Dispatch Note'
 [stock_hide_packing_buttons](stock_hide_packing_buttons/) | 17.0.1.0.0 |  | Hides "put in pack" buttons
 [stock_inventory_adjustment_domain_company](stock_inventory_adjustment_domain_company/) | 17.0.1.0.1 |  | Show stock locations without company in inventory adjustments
-[stock_inventory_include_exhausted](stock_inventory_include_exhausted/) | 17.0.1.0.0 |  | Option to automatically add rows for exhausted products when doing inventory
+[stock_inventory_adjustments_for_same_location](stock_inventory_adjustments_for_same_location/) | 17.0.1.0.0 |  | Multiple open adjustments are enabled for a same location
+[stock_inventory_count_sheet_sort_by_product](stock_inventory_count_sheet_sort_by_product/) | 17.0.1.0.0 |  | Inventory Count Sheet – sort quants by their product _order -attribute
+[stock_inventory_include_exhausted](stock_inventory_include_exhausted/) | 17.0.1.1.0 |  | Option to automatically add rows for exhausted products when doing inventory
+[stock_inventory_line_readonly_info](stock_inventory_line_readonly_info/) | 17.0.1.0.5 |  | Show old inventory lines as readonly
 [stock_inventory_quantity_history_stock_inventory_link](stock_inventory_quantity_history_stock_inventory_link/) | 17.0.1.0.1 |  | Show the new qty fields also in list view provided by the another OCA inventory module
 [stock_location_analytic_account](stock_location_analytic_account/) | 17.0.1.0.1 |  | Integrate stock location with analytic account
-[stock_location_auditlog_rules](stock_location_auditlog_rules/) | 17.0.1.0.0 |  | Adds audit log rules for stock.warehouse and stock.location
 [stock_location_excess_mark](stock_location_excess_mark/) | 17.0.1.1.0 |  | Select a stock location and mark it as of excess type
 [stock_move_carrier_in_view_and_filter](stock_move_carrier_in_view_and_filter/) | 17.0.1.0.1 |  | Carrier info added to stock move list view and as a filter
 [stock_move_pivot_disable_count_as_default](stock_move_pivot_disable_count_as_default/) | 17.0.1.0.0 |  | Disables the Count variable as default on stock move pivot.
 [stock_move_pivot_report_sh_product_tag](stock_move_pivot_report_sh_product_tag/) | 17.0.1.0.0 |  | Group by SH product tags in Stock Move pivot view
+[stock_move_product_default_location](stock_move_product_default_location/) | 17.0.1.0.0 |  | Move a product in a picking using its default location
 [stock_move_recompute_state_scheduled](stock_move_recompute_state_scheduled/) | 17.0.1.0.0 |  | Scheduled action to recompute stock move statuses
 [stock_move_recompute_volume_scheduled](stock_move_recompute_volume_scheduled/) | 17.0.1.0.0 |  | Scheduled action to recompute stock move volumes
 [stock_move_search](stock_move_search/) | 17.0.1.0.0 |  | Additional Search options for Stock Move
@@ -34,17 +37,19 @@ addon | version | maintainers | summary
 [stock_picking_bypass_reservation](stock_picking_bypass_reservation/) | 17.0.1.0.1 |  | Stock Picking Bypass Reservation
 [stock_picking_carrier_info_form_header](stock_picking_carrier_info_form_header/) | 17.0.1.0.1 |  | Reposition Carrier info on picking form
 [stock_picking_chatter_attachment_visible](stock_picking_chatter_attachment_visible/) | 17.0.1.0.0 |  | Attachments are visible on pickings
+[stock_picking_color_by_location](stock_picking_color_by_location/) | 17.0.1.0.0 |  | Source and Destination locations color pickings in tree view
 [stock_picking_comment](stock_picking_comment/) | 17.0.1.1.4 |  | External comment for stock picking Delivery Slip and Picking Operations
 [stock_picking_country_group_text](stock_picking_country_group_text/) | 17.0.1.0.0 |  | Get stock picking reports' text from country groups setting
-[stock_picking_create_manufacturing_order_from_move](stock_picking_create_manufacturing_order_from_move/) | 17.0.1.1.1 |  | Create Manufacturing order from stock picking move
+[stock_picking_create_manufacturing_order_from_move](stock_picking_create_manufacturing_order_from_move/) | 17.0.1.2.1 |  | Create Manufacturing order from stock picking move
 [stock_picking_customer_reference](stock_picking_customer_reference/) | 17.0.1.0.1 |  | Stock Picking Customer Reference
 [stock_picking_dispatch_fields](stock_picking_dispatch_fields/) | 17.0.1.0.0 |  | Add different fields to picking for Dispatch Note
-[stock_picking_dropshipping_move_description_from_product_name](stock_picking_dropshipping_move_description_from_product_name/) | 17.0.1.0.0 |  | Do not use product's 'description' field as move description
+[stock_picking_done_filter](stock_picking_done_filter/) | 17.0.1.0.0 |  | Adds a 'Done' filter to the stock picking search view
+[stock_picking_dropshipping_move_description_from_product_name](stock_picking_dropshipping_move_description_from_product_name/) | 17.0.1.0.1 |  | Do not use product's 'description' field as move description
 [stock_picking_internal_transfer_domain_internal_location](stock_picking_internal_transfer_domain_internal_location/) | 17.0.1.0.1 |  | Use Internal location as domain for Internal transfers
 [stock_picking_move_lines_partner](stock_picking_move_lines_partner/) | 17.0.1.0.0 |  | Stock Picking Move Lines Partner
 [stock_picking_operations_show_name](stock_picking_operations_show_name/) | 17.0.1.1.0 |  | Show name field on Stock Picking operations
 [stock_picking_override_values](stock_picking_override_values/) | 17.0.1.0.0 |  | Allow overriding new picking values with system parameters
-[stock_picking_printed](stock_picking_printed/) | 17.0.1.0.1 |  | Mark stock pickings as printed and log date after printing picking list
+[stock_picking_printed](stock_picking_printed/) | 17.0.1.0.1 |  | Mark pickings as printed and log date after printing picking list
 [stock_picking_process_as_sudo](stock_picking_process_as_sudo/) | 17.0.1.1.2 |  | Process Stock Pickings as Admin user
 [stock_picking_purchase_related_sale_order_customer](stock_picking_purchase_related_sale_order_customer/) | 17.0.1.0.0 |  | Get Sale Order Partner to Stock Picking from Purchase Order
 [stock_picking_receipt_set_all_moves_done](stock_picking_receipt_set_all_moves_done/) | 17.0.1.1.1 |  | Use button to set all moves as done on receipt
@@ -59,11 +64,12 @@ addon | version | maintainers | summary
 [stock_picking_tree_effective_date](stock_picking_tree_effective_date/) | 17.0.1.0.1 |  | Adds effective date from Sale Order to picking list view
 [stock_picking_tree_scheduled_date_as_date](stock_picking_tree_scheduled_date_as_date/) | 17.0.1.0.0 |  | Show scheduled date as date in stock picking tree
 [stock_picking_unreserve_receipt](stock_picking_unreserve_receipt/) | 17.0.1.0.0 |  | Configure from Picking Type to automatically unreserve receipts
-[stock_picking_validate_button_no_refresh_after_report](stock_picking_validate_button_no_refresh_after_report/) | 17.0.1.1.2 |  | Do not refresh page after Button validate has printed reports
+[stock_picking_validate_button_no_refresh_after_report](stock_picking_validate_button_no_refresh_after_report/) | 17.0.2.1.2 |  | Do not hard refresh a page after Button validate has printed reports
 [stock_picking_view_vendor_product](stock_picking_view_vendor_product/) | 17.0.1.0.0 |  | Vendor Product Name and Code are added to Picking form view
 [stock_picking_volume_in_tree_and_prints](stock_picking_volume_in_tree_and_prints/) | 17.0.1.0.0 |  | Picking's Volume is shown in list view and picking prints
 [stock_product_qty_available_unreserved](stock_product_qty_available_unreserved/) | 17.0.1.0.1 |  | Add unreserved available (on hand - reserved)
 [stock_quant_list_view_increased_limit](stock_quant_list_view_increased_limit/) | 17.0.1.0.0 |  | Increase the number of shown lines to 300
+[stock_receipt_scan](stock_receipt_scan/) | 17.0.2.1.7 |  | Product scanner for picking creation
 [stock_report_add_description_to_picking](stock_report_add_description_to_picking/) | 17.0.1.0.1 |  | Adds Description column to picking report
 [stock_report_carrier_transportation_mode](stock_report_carrier_transportation_mode/) | 17.0.1.0.0 |  | Delivery slip Carrier – Mode of transportation
 [stock_report_code_as_name_stock_picking](stock_report_code_as_name_stock_picking/) | 17.0.1.0.0 |  | Replace Product name with product code
@@ -78,7 +84,9 @@ addon | version | maintainers | summary
 [stock_report_label_product_barcode](stock_report_label_product_barcode/) | 17.0.1.0.0 |  | Print Product Labels with barcodes
 [stock_report_label_product_ean_code](stock_report_label_product_ean_code/) | 17.0.1.0.0 |  | Print Product Labels with EAN codes
 [stock_report_our_reference](stock_report_our_reference/) | 17.0.1.0.2 |  | Stock Picking and Delivery Slip Report Our Reference
+[stock_report_picking_all_moves](stock_report_picking_all_moves/) | 17.0.2.0.0 |  | Stock Picking PDF Report - Show all stock moves
 [stock_report_picking_customer_address](stock_report_picking_customer_address/) | 17.0.1.0.0 |  | Stock Report picking Customer Address details
+[stock_report_picking_description_picking](stock_report_picking_description_picking/) | 17.0.1.0.0 |  | Adds Description column with description_picking to picking report
 [stock_report_picking_header_shrink](stock_report_picking_header_shrink/) | 17.0.1.0.0 |  | Decrease font size of stock picking print header section
 [stock_report_picking_hide_footer](stock_report_picking_hide_footer/) | 17.0.1.0.0 |  | Hide footer on Picking Operations
 [stock_report_picking_product_receipt_description](stock_report_picking_product_receipt_description/) | 17.0.1.0.0 |  | Show 'Description for receipts' text on Picking list
