@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="report_inventory" inherit_id="stock.report_inventory">
+        <xpath expr="//th[@groups='stock.group_tracking_lot']" position="attributes">
+            <attribute name="t-if">1 == 0</attribute>
+        </xpath>
+
+        <xpath expr="//th[@groups='stock.group_tracking_lot']" position="after">
+            <th class="text-start"><strong>Tags</strong></th>
+        </xpath>
+
+        <xpath
+            expr="//tr[@groups='stock.group_stock_multi_locations']//td[@groups='stock.group_tracking_lot']"
+            position="attributes"
+        >
+            <attribute name="t-if">1 == 0</attribute>
+        </xpath>
+
+        <xpath
+            expr="//tr[@t-as='line']//td[@groups='stock.group_tracking_lot']"
+            position="attributes"
+        >
+            <attribute name="t-if">1 == 0</attribute>
+        </xpath>
+
+        <xpath
+            expr="//tr[@t-as='line']//td[@groups='stock.group_tracking_lot']"
+            position="after"
+        >
+            <td class="text-middle"><span t-field="line.product_tag_ids" /></td>
+        </xpath>
+    </template>
+</odoo>
