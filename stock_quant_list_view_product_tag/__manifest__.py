@@ -21,7 +21,7 @@
 {
     "name": "Stock Quant list view – Show product tags",
     "summary": "Show product tags in stock quant tree view",
-    "version": "17.0.1.1.0",
+    "version": "17.0.1.1.1",
     "category": "Stock",
     "website": "https://github.com/tawasta/stock",
     "author": "Futural",
