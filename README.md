@@ -69,7 +69,7 @@ addon | version | maintainers | summary
 [stock_picking_volume_in_tree_and_prints](stock_picking_volume_in_tree_and_prints/) | 17.0.1.0.0 |  | Picking's Volume is shown in list view and picking prints
 [stock_product_qty_available_unreserved](stock_product_qty_available_unreserved/) | 17.0.1.0.1 |  | Add unreserved available (on hand - reserved)
 [stock_quant_list_view_increased_limit](stock_quant_list_view_increased_limit/) | 17.0.1.0.0 |  | Increase the number of shown lines to 300
-[stock_quant_list_view_product_tag](stock_quant_list_view_product_tag/) | 17.0.1.0.0 |  | Show product tags in stock quant tree view
+[stock_quant_list_view_product_tag](stock_quant_list_view_product_tag/) | 17.0.1.1.0 |  | Show product tags in stock quant tree view
 [stock_receipt_scan](stock_receipt_scan/) | 17.0.2.1.7 |  | Product scanner for picking creation
 [stock_report_add_description_to_picking](stock_report_add_description_to_picking/) | 17.0.1.0.1 |  | Adds Description column to picking report
 [stock_report_carrier_transportation_mode](stock_report_carrier_transportation_mode/) | 17.0.1.0.0 |  | Delivery slip Carrier – Mode of transportation
