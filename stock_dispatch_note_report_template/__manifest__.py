@@ -21,7 +21,7 @@
 {
     "name": "Stock Dispatch Note Template",
     "summary": "Adds weights, dates and clickable print is shown as 'Dispatch Note'",
-    "version": "17.0.1.0.2",
+    "version": "17.0.1.0.3",
     "category": "Reporting",
     "website": "https://github.com/tawasta/stock",
     "author": "Futural",
