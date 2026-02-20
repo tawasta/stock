@@ -34,6 +34,7 @@ Contributors
 
 * Timo Kekäläinen <timo.kekalainen@futural.fi>
 * Kalle Rantalainen <kalle.rantalainen@futural.fi>
+* Timo Talvitie <timo.talvitie@futural.fi>
 
 Maintainer
 ----------
