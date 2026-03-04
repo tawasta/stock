@@ -25,8 +25,8 @@ class ResConfigSettings(models.TransientModel):
         related="company_id.hide_delivery_slip_report_name",
         readonly=False,
     )
-    hide_picking_report_name = fields.Boolean(
-        string="Hide picking report name",
-        related="company_id.hide_picking_report_name",
+    hide_picking_name = fields.Boolean(
+        string="Hide picking name",
+        related="company_id.hide_picking_name",
         readonly=False,
     )
