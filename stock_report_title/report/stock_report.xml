@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template
+        id="report_deliveryslip_title"
+        inherit_id="stock.report_delivery_document"
+    >
+        <xpath expr="//t[@t-call='web.html_container']" position="before">
+            <t t-if="not o.company_id.hide_delivery_slip_title">
+                <t
+                    t-set="report_title"
+                    t-value="o.with_context(lang=o._get_report_lang()).company_id.delivery_slip_title or 'Delivery Slip'"
+                />
+            </t>
+        </xpath>
+
+        <!-- expr="//h2" doesn't work for some reason -->
+        <xpath expr="//h2//span" position="attributes">
+            <attribute
+                name="t-att-class"
+            >'{}'.format('d-none' if o.company_id.hide_delivery_slip_report_name else '')</attribute>
+        </xpath>
+
+        <xpath expr="//h2" position="attributes">
+            <attribute name="class">col-12</attribute>
+            <attribute name="style">float: left;</attribute>
+        </xpath>
+    </template>
+
+    <template
+        id="report_delivery_document_element"
+        inherit_id="stock_report_element_sizes.report_delivery_document"
+    >
+        <div id="stock_deliveryslip_informations" position="inside">
+            <div
+                t-if="o.name and not o.company_id.hide_delivery_slip_text"
+                class="col-auto mw-100 mb-2"
+            >
+                <span>
+                    <strong>Delivery Slip:</strong>
+                </span>
+                <p class="m-0" t-field="o.name" />
+            </div>
+        </div>
+    </template>
+
+    <template
+        id="report_picking_element_sizes"
+        inherit_id="stock_report_element_sizes.report_picking_element_sizes"
+    >
+        <div id="stock_picking_informations" position="inside">
+            <div
+                t-if="o.name and not o.company_id.hide_picking_name"
+                class="col-auto mw-100 mb-2"
+            >
+                <span>
+                    <strong>Stock Picking:</strong>
+                </span>
+                <p class="m-0" t-field="o.name" />
+            </div>
+        </div>
+    </template>
+
+    </template>
+</odoo>
