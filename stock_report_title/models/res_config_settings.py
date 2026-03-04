@@ -1,0 +1,32 @@
+from odoo import fields, models
+
+
+class ResConfigSettings(models.TransientModel):
+    _inherit = "res.config.settings"
+
+    delivery_slip_title = fields.Char(
+        string="Delivery slip title",
+        related="company_id.delivery_slip_title",
+        readonly=False,
+        translate=True,
+    )
+    hide_delivery_slip_title = fields.Boolean(
+        string="Hide delivery slip title",
+        related="company_id.hide_delivery_slip_title",
+        readonly=False,
+    )
+    hide_delivery_slip_text = fields.Boolean(
+        string="Hide delivery slip text",
+        related="company_id.hide_delivery_slip_text",
+        readonly=False,
+    )
+    hide_delivery_slip_report_name = fields.Boolean(
+        string="Hide delivery slip report name",
+        related="company_id.hide_delivery_slip_report_name",
+        readonly=False,
+    )
+    hide_picking_name = fields.Boolean(
+        string="Hide picking name",
+        related="company_id.hide_picking_name",
+        readonly=False,
+    )
