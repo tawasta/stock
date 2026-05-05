@@ -104,6 +104,7 @@ addon | version | maintainers | summary
 [stock_report_year_of_shipment](stock_report_year_of_shipment/) | 17.0.1.0.0 |  | Add year of shipment to delivery slip
 [stock_see_product_forecasted_with_sudo](stock_see_product_forecasted_with_sudo/) | 17.0.1.0.0 |  | Form the Product Forecast Report with sudo rights
 [stock_valuation_average_price_update_by_percentage](stock_valuation_average_price_update_by_percentage/) | 17.0.1.0.0 |  | Set a factor by which stock valuation is updated with average price
+[stock_valuation_discrepancy_helper](stock_valuation_discrepancy_helper/) | 17.0.1.0.0 |  | Adds helpers for finding and fixing discrepancies in valuation
 [stock_valuation_layer_archive](stock_valuation_layer_archive/) | 17.0.1.0.0 |  | Allows archiving inventory valuation records
 [stock_warehouse_replenishment_alert_send_message](stock_warehouse_replenishment_alert_send_message/) | 17.0.1.0.1 |  | Send a message for the responsible if Quantity drops below its minimium quantity in replenishments
 
