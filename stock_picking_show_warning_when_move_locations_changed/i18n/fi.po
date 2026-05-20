@@ -1,0 +1,48 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_picking_show_warning_when_move_locations_changed
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20250428\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-20 09:13+0000\n"
+"PO-Revision-Date: 2026-05-20 09:13+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_picking_show_warning_when_move_locations_changed
+#: model_terms:ir.ui.view,arch_db:stock_picking_show_warning_when_move_locations_changed.view_picking_form_inherit
+msgid ""
+"<i class=\"fa fa-exclamation-triangle me-2\"/>\n"
+"                    Some Operations have custom source or destination locations set.\n"
+"                    Changing the top-level Source Location or Destination Location\n"
+"                    will overwrite those per-line values."
+msgstr ""
+"<i class=\"fa fa-exclamation-triangle me-2\"/>\n"
+"                    Joillekin Toiminnot-välilehden riveille on asetettu käsin Lähtö- tai Kohdepaikka. \n"
+"                    Huomaa, että jos vaihdat ylätason Lähtöpaikka tai Kohdepaikka -kenttää tämän jälkeen, "
+"                    rivitason paikkavalinnat ylikirjoitetaan."
+
+#. module: stock_picking_show_warning_when_move_locations_changed
+#: model:ir.model.fields,help:stock_picking_show_warning_when_move_locations_changed.field_stock_picking__has_custom_line_locations
+msgid ""
+"Do any of the picking's moves have a source or destination location that "
+"differs from the picking's location."
+msgstr ""
+"Onko Siirron toimintoriveillä asetettu lähtö- tai kohdepaikkaa, joka poikkeaa Siirron ylätason "
+"lähtö- ja kohdepaikkatiedosta."
+
+#. module: stock_picking_show_warning_when_move_locations_changed
+#: model:ir.model.fields,field_description:stock_picking_show_warning_when_move_locations_changed.field_stock_picking__has_custom_line_locations
+msgid "Has Custom Line Locations"
+msgstr "Sisältää käsin asetettuja paikkatietoja riveillä"
+
+#. module: stock_picking_show_warning_when_move_locations_changed
+#: model:ir.model,name:stock_picking_show_warning_when_move_locations_changed.model_stock_picking
+msgid "Transfer"
+msgstr "Siirto"

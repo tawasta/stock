@@ -58,6 +58,8 @@ addon | version | maintainers | summary
 [stock_picking_reinvoice](stock_picking_reinvoice/) | 17.0.1.0.2 |  | Allow making invoices from stock pickings
 [stock_picking_reserve_chosen_moves](stock_picking_reserve_chosen_moves/) | 17.0.1.0.0 |  | Select manually the moves to be reserved on deliveries
 [stock_picking_sale_order_id](stock_picking_sale_order_id/) | 17.0.1.0.1 |  | Get Sale Order to Stock Picking from Purchase Order
+[stock_picking_show_move_destination_location_column](stock_picking_show_move_destination_location_column/) | 17.0.1.0.0 |  | Enables destination location editing per stock move
+[stock_picking_show_warning_when_move_locations_changed](stock_picking_show_warning_when_move_locations_changed/) | 17.0.1.0.0 |  | Warn the user about changing picking-level locations if move-level locations have already been changed
 [stock_picking_sort_by_print_and_scheduled_date](stock_picking_sort_by_print_and_scheduled_date/) | 17.0.1.0.0 |  | Stock Picking sort by printed and Scheduled Date
 [stock_picking_source_document_link](stock_picking_source_document_link/) | 17.0.1.0.0 |  | Add link to source document
 [stock_picking_tree_date_deadline_as_date](stock_picking_tree_date_deadline_as_date/) | 17.0.1.0.0 |  | Show date deadline as date in stock picking tree
