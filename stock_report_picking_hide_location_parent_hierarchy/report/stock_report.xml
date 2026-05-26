@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_picking" inherit_id="stock.report_picking">
+
+        <!-- replace display_name with just name, to hide the parent hierarchy -->
+        <xpath
+            expr="//tr[@t-as='ml']//span[@t-esc='ml.location_id.display_name']"
+            position="attributes"
+        >
+            <attribute name="t-esc">ml.location_id.name</attribute>
+
+        </xpath>
+    </template>
+</odoo>

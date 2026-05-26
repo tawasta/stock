@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_picking" inherit_id="stock.report_picking">
+
+        <xpath
+            expr="//div[@name='div_outgoing_address']/div[@t-if='o.should_print_delivery_address()']"
+            position="before"
+        >
+
+            <div t-if="o.sudo().sale_id">
+                <span><strong>Ordered By:</strong></span>
+                <div
+                    t-out="o.sudo().sale_id.partner_id"
+                    t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'
+                    class="mb-2"
+                >
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>
