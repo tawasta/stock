@@ -8,9 +8,9 @@ class StockMove(models.Model):
         product_id = vals.get("product_id", False)
 
         picking_type = self.picking_type_id
-        code = picking_type and picking_type.code == "outgoing" or False
+        use_default = picking_type and picking_type.use_default_location or False
 
-        if product_id and code:
+        if product_id and use_default:
             product = self.env["product.product"].browse(product_id)
             default_location = product.default_stock_move_location_id or False
             if default_location:
@@ -25,9 +25,10 @@ class StockMove(models.Model):
 
             picking_type_id = vals.get("picking_type_id", False)
             picking_type = self.env["stock.picking.type"].browse(picking_type_id)
-            code = picking_type and picking_type.code == "outgoing" or False
 
-            if product_id and code:
+            use_default = picking_type and picking_type.use_default_location or False
+
+            if product_id and use_default:
                 product = self.env["product.product"].browse(product_id)
                 default_location = product.default_stock_move_location_id or False
                 if default_location:
