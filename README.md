@@ -97,6 +97,7 @@ addon | version | maintainers | summary
 [stock_report_picking_hide_location_parent_hierarchy](stock_report_picking_hide_location_parent_hierarchy/) | 17.0.1.0.0 |  | Only show the location name, without parents' names
 [stock_report_picking_product_receipt_description](stock_report_picking_product_receipt_description/) | 17.0.1.0.0 |  | Show 'Description for receipts' text on Picking list
 [stock_report_picking_sale_order_client_order_ref](stock_report_picking_sale_order_client_order_ref/) | 17.0.1.0.0 |  | Show the customer reference of the related sale on picking print
+[stock_report_picking_sale_order_customer_marking](stock_report_picking_sale_order_customer_marking/) | 17.0.1.0.0 |  | Show the customer marking of the related sale on picking print
 [stock_report_picking_sale_order_partner](stock_report_picking_sale_order_partner/) | 17.0.1.0.0 |  | Show the partner of the related sale on picking print
 [stock_report_picking_vendor_product](stock_report_picking_vendor_product/) | 17.0.1.1.1 |  | Vendor Product name and code for Picking list
 [stock_report_picking_warning_text](stock_report_picking_warning_text/) | 17.0.1.0.0 |  | Show warning on picking list printout instead of a form popup
