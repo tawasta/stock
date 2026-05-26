@@ -94,6 +94,7 @@ addon | version | maintainers | summary
 [stock_report_picking_description_picking](stock_report_picking_description_picking/) | 17.0.1.0.0 |  | Adds Description column with description_picking to picking report
 [stock_report_picking_header_shrink](stock_report_picking_header_shrink/) | 17.0.1.0.0 |  | Decrease font size of stock picking print header section
 [stock_report_picking_hide_footer](stock_report_picking_hide_footer/) | 17.0.1.0.0 |  | Hide footer on Picking Operations
+[stock_report_picking_hide_location_parent_hierarchy](stock_report_picking_hide_location_parent_hierarchy/) | 17.0.1.0.0 |  | Only show the location name, without parents' names
 [stock_report_picking_product_receipt_description](stock_report_picking_product_receipt_description/) | 17.0.1.0.0 |  | Show 'Description for receipts' text on Picking list
 [stock_report_picking_sale_order_partner](stock_report_picking_sale_order_partner/) | 17.0.1.0.0 |  | Show the partner of the related sale on picking print
 [stock_report_picking_vendor_product](stock_report_picking_vendor_product/) | 17.0.1.1.1 |  | Vendor Product name and code for Picking list
