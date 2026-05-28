@@ -7,10 +7,20 @@
 		<field name="arch" type="xml">
             <xpath
                 expr="//field[@name='move_ids_without_package']//tree//field[@name='location_dest_id']"
+                position="after"
+            >
+                <field name="dest_location_domain_ids" column_invivible="True" />
+		    </xpath>
+
+            <xpath
+                expr="//field[@name='move_ids_without_package']//tree//field[@name='location_dest_id']"
                 position="attributes"
             >
                 <attribute name="column_invisible">False</attribute>
                 <attribute name="optional">show</attribute>
+                <attribute
+                    name="domain"
+                >[('id', 'in', dest_location_domain_ids)]</attribute>
 		    </xpath>
 		</field>
 	</record>
