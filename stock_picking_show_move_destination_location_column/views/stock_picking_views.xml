@@ -9,7 +9,7 @@
                 expr="//field[@name='move_ids_without_package']//tree//field[@name='location_dest_id']"
                 position="after"
             >
-                <field name="dest_location_domain_ids" column_invivible="True" />
+                <field name="dest_location_domain_ids" column_invisible="True" />
 		    </xpath>
 
             <xpath
