@@ -21,7 +21,7 @@
 {
     "name": "Stock Picking: Show 'Destination Location' in Operations List",
     "summary": "Enables destination location editing per stock move",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Stock",
     "website": "https://github.com/tawasta/stock",
     "author": "Futural",
