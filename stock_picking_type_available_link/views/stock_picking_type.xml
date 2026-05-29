@@ -1,19 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <record id="stock_picking_type_kanban_available_link" model="ir.ui.view">
         <field name="name">stock.picking.type.kanban.available.link</field>
         <field name="model">stock.picking.type</field>
-        <field name="inherit_id" ref="stock.stock_picking_type_kanban"/>
+        <field name="inherit_id" ref="stock.stock_picking_type_kanban" />
         <field name="arch" type="xml">
 
             <xpath expr="//kanban" position="inside">
-                <field name="count_picking_available"/>
+                <field name="count_picking_available" />
             </xpath>
 
-            <xpath expr="//div[contains(@class, 'o_kanban_primary_right')]" position="inside">
-                <div t-if="record.code.raw_value == 'outgoing' and record.count_picking_available.raw_value > 0">
+            <xpath
+                expr="//div[contains(@class, 'o_kanban_primary_right')]"
+                position="inside"
+            >
+                <div
+                    t-if="record.code.raw_value == 'outgoing' and record.count_picking_available.raw_value > 0"
+                >
                     <a type="object" name="get_action_picking_tree_available">
-                        <field name="count_picking_available"/>
+                        <field name="count_picking_available" />
                         <span> Available</span>
                     </a>
                 </div>

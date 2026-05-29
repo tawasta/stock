@@ -12,7 +12,9 @@ class StockPicking(models.Model):
 
     def _compute_is_products_available(self):
         for picking in self:
-            picking.is_products_available = picking._is_products_available_for_dashboard()
+            picking.is_products_available = (
+                picking._is_products_available_for_dashboard()
+            )
 
     def _is_products_available_for_dashboard(self):
         self.ensure_one()
@@ -26,18 +28,19 @@ class StockPicking(models.Model):
         if operator not in ("=", "!="):
             return [("id", "=", 0)]
 
-        candidates = self.search([
-            ("picking_type_code", "=", "outgoing"),
-            ("state", "in", ["confirmed", "waiting", "assigned"]),
-        ])
+        candidates = self.search(
+            [
+                ("picking_type_code", "=", "outgoing"),
+                ("state", "in", ["confirmed", "waiting", "assigned"]),
+            ]
+        )
 
         available_ids = candidates.filtered(
             lambda picking: picking._is_products_available_for_dashboard()
         ).ids
 
-        positive = (
-            (operator == "=" and bool(value))
-            or (operator == "!=" and not bool(value))
+        positive = (operator == "=" and bool(value)) or (
+            operator == "!=" and not bool(value)
         )
 
         if positive:
