@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_config_settings_view_form_stock_left_align" model="ir.ui.view">
+        <field
+            name="name"
+        >res.config.settings.form.inherit.stock.left.align.headings</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="stock.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//app[@name='stock']" position="inside">
+                <block
+                    title="Report's Table Header Alignment"
+                    id="stock_report_left_align_block"
+                >
+                    <setting
+                        id="force_left_align_picking_report_setting"
+                        string="Left-align Picking Report Headings"
+                        help="Force every &lt;th&gt; on the Picking Operations PDF report to be left-aligned."
+                    >
+                        <field name="force_left_align_picking_report" />
+                    </setting>
+                    <setting
+                        id="force_left_align_delivery_report_setting"
+                        string="Left-align Delivery Slip Headings"
+                        help="Force every &lt;th&gt; on the Delivery Slip PDF report to be left-aligned."
+                    >
+                        <field name="force_left_align_delivery_report" />
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>
