@@ -24,9 +24,9 @@ class StockPickingType(models.Model):
                 picking_type.count_picking_available = 0
                 continue
 
-            picking_type.count_picking_available = self.env["stock.picking"].search_count(
-                picking_type._get_available_picking_domain()
-            )
+            picking_type.count_picking_available = self.env[
+                "stock.picking"
+            ].search_count(picking_type._get_available_picking_domain())
 
     def get_action_picking_tree_available(self):
         self.ensure_one()
