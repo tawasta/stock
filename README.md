@@ -68,6 +68,7 @@ addon | version | maintainers | summary
 [stock_picking_tree_date_done](stock_picking_tree_date_done/) | 17.0.1.0.0 |  | Stock Picking date done in tree view
 [stock_picking_tree_effective_date](stock_picking_tree_effective_date/) | 17.0.1.0.1 |  | Adds effective date from Sale Order to picking list view
 [stock_picking_tree_scheduled_date_as_date](stock_picking_tree_scheduled_date_as_date/) | 17.0.1.0.0 |  | Show scheduled date as date in stock picking tree
+[stock_picking_type_available_link](stock_picking_type_available_link/) | 17.0.1.0.0 |  | Adds an Available delivery orders link to the Inventory dashboard
 [stock_picking_unreserve_receipt](stock_picking_unreserve_receipt/) | 17.0.1.0.0 |  | Configure from Picking Type to automatically unreserve receipts
 [stock_picking_validate_button_no_refresh_after_report](stock_picking_validate_button_no_refresh_after_report/) | 17.0.2.1.2 |  | Do not hard refresh a page after Button validate has printed reports
 [stock_picking_view_vendor_product](stock_picking_view_vendor_product/) | 17.0.1.0.0 |  | Vendor Product Name and Code are added to Picking form view
