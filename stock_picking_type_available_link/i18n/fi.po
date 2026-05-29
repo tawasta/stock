@@ -1,13 +1,13 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* stock_picking_note_indicator
+# 	* stock_picking_type_available_link
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 17.0-20260513\n"
+"Project-Id-Version: Odoo Server 17.0-20251021\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-28 11:42+0000\n"
-"PO-Revision-Date: 2026-05-28 11:42+0000\n"
+"POT-Creation-Date: 2026-05-29 05:45+0000\n"
+"PO-Revision-Date: 2026-05-29 05:45+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,31 +15,27 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
-#. module: stock_picking_note_indicator
-#: model_terms:ir.ui.view,arch_db:stock_picking_note_indicator.view_picking_form_note_indicator
-msgid "<i class=\"fa fa-exclamation-triangle\" role=\"img\" aria-label=\"Warning\"/>"
-msgstr "<i class=\"fa fa-exclamation-triangle\" role=\"img\" aria-label=\"Warning\"/>"
+#. module: stock_picking_type_available_link
+#: model_terms:ir.ui.view,arch_db:stock_picking_type_available_link.stock_picking_type_kanban_available_link
+msgid "<span> Available</span>"
+msgstr "<span> Kaikki toimitettavissa</span>"
 
-#. module: stock_picking_note_indicator
-#: model_terms:ir.ui.view,arch_db:stock_picking_note_indicator.view_picking_form_note_indicator
-msgid ""
-"<strong>Internal note added.</strong>\n"
-"                        Please review the Note tab before validating or processing this transfer."
-msgstr ""
-"<strong>Sisäinen muistiinpano lisätty.</strong>\n"
-"                        Tarkista Muistiinpano-välilehti ennen tämän siirron käsittelyä tai validointia."
+#. module: stock_picking_type_available_link
+#: model:ir.model.fields,field_description:stock_picking_type_available_link.field_stock_picking_type__count_picking_available
+msgid "Available"
+msgstr "Kaikki toimitettavissa"
 
-#. module: stock_picking_note_indicator
-#: model:ir.model.fields,field_description:stock_picking_note_indicator.field_stock_picking__has_note_text
-msgid "Has note text"
-msgstr "Sisältää muistiinpanon"
+#. module: stock_picking_type_available_link
+#: model:ir.model,name:stock_picking_type_available_link.model_stock_picking_type
+msgid "Picking Type"
+msgstr "Keräilyn tyyppi"
 
-#. module: stock_picking_note_indicator
-#: model_terms:ir.ui.view,arch_db:stock_picking_note_indicator.view_picking_form_note_indicator
-msgid "Note"
-msgstr "Muistiinpano"
+#. module: stock_picking_type_available_link
+#: model:ir.model.fields,field_description:stock_picking_type_available_link.field_stock_picking__is_products_available
+msgid "Products Available"
+msgstr "Tuotteet saatavilla"
 
-#. module: stock_picking_note_indicator
-#: model:ir.model,name:stock_picking_note_indicator.model_stock_picking
+#. module: stock_picking_type_available_link
+#: model:ir.model,name:stock_picking_type_available_link.model_stock_picking
 msgid "Transfer"
 msgstr "Siirto"
