@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <record id="param_picking_enabled" model="ir.config_parameter">
+        <field name="key">stock_report_force_left_align_headings.picking_enabled</field>
+        <field name="value">True</field>
+    </record>
+    <record id="param_delivery_enabled" model="ir.config_parameter">
+        <field
+            name="key"
+        >stock_report_force_left_align_headings.delivery_enabled</field>
+        <field name="value">True</field>
+    </record>
+</odoo>

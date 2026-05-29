@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Use data attributes to hold info whether the left alignment should be enforced.
+     Done for both stock prints. Styling itself is done in CSS -->
+    <template id="report_picking_left_align_headings" inherit_id="stock.report_picking">
+        <xpath expr="//div[hasclass('page')]" position="attributes">
+            <attribute name="t-att-data-stock-left-align-headings">
+                env['ir.config_parameter'].sudo().get_param('stock_report_force_left_align_headings.picking_enabled') == 'True'
+            </attribute>
+        </xpath>
+    </template>
+
+    <template
+        id="report_delivery_document_left_align_headings"
+        inherit_id="stock.report_delivery_document"
+    >
+        <xpath expr="//div[hasclass('page')]" position="attributes">
+            <attribute name="t-att-data-stock-left-align-headings">
+                env['ir.config_parameter'].sudo().get_param('stock_report_force_left_align_headings.picking_enabled') == 'True'
+            </attribute>
+        </xpath>
+    </template>
+</odoo>
