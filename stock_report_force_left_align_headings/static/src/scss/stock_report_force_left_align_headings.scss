@@ -1,0 +1,5 @@
+// Applied only when the inherited template adds the data attribute,
+// which happens only when the corresponding setting is enabled.
+div.page[data-stock-left-align-headings] th {
+    text-align: left !important;
+}
