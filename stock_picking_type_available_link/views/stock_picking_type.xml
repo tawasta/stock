@@ -7,7 +7,6 @@
         <field name="arch" type="xml">
 
             <xpath expr="//kanban" position="inside">
-                <field name="code" />
                 <field name="count_picking_available" />
             </xpath>
 
