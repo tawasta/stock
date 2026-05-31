@@ -84,6 +84,9 @@ addon | version | maintainers | summary
 [stock_report_customer_reference](stock_report_customer_reference/) | 17.0.1.0.1 |  | Stock Report Customer Reference
 [stock_report_customer_reference_under_address](stock_report_customer_reference_under_address/) | 17.0.1.0.2 |  | Customer Reference under address
 [stock_report_date_done](stock_report_date_done/) | 17.0.1.0.1 |  | Stock Picking Report Date of Transfer
+[stock_report_delivery_slip_product_barcode](stock_report_delivery_slip_product_barcode/) | 17.0.1.0.0 |  | Show products' barcodes in numeric format
+[stock_report_delivery_slip_sale_order_customer_marking](stock_report_delivery_slip_sale_order_customer_marking/) | 17.0.1.0.0 |  | Show the customer marking of the related sale on delivery slip print
+[stock_report_delivery_slip_sale_order_partner](stock_report_delivery_slip_sale_order_partner/) | 17.0.1.0.0 |  | Show the partner of the related sale on delivery slip print
 [stock_report_element_sizes](stock_report_element_sizes/) | 17.0.1.0.3 |  | Stock Report element size changes
 [stock_report_enable_translation_by_partner](stock_report_enable_translation_by_partner/) | 17.0.1.0.0 |  | Use the language set for Delivery Address in Picking Operations PDF print
 [stock_report_force_left_align_headings](stock_report_force_left_align_headings/) | 17.0.1.0.0 |  | Adds separate toggles for reports to enforce th element alignment
