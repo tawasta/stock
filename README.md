@@ -30,7 +30,7 @@ addon | version | maintainers | summary
 [stock_move_line_expiry_date_existing_lot](stock_move_line_expiry_date_existing_lot/) | 17.0.1.0.0 |  | Expiration Date of lot can be set when receiving a product
 [stock_move_pivot_disable_count_as_default](stock_move_pivot_disable_count_as_default/) | 17.0.1.0.0 |  | Disables the Count variable as default on stock move pivot.
 [stock_move_pivot_report_sh_product_tag](stock_move_pivot_report_sh_product_tag/) | 17.0.1.0.0 |  | Group by SH product tags in Stock Move pivot view
-[stock_move_product_default_location](stock_move_product_default_location/) | 17.0.1.2.0 |  | Move a product in a picking using its default location
+[stock_move_product_default_location](stock_move_product_default_location/) | 17.0.1.2.1 |  | Move a product in a picking using its default location
 [stock_move_recompute_state_scheduled](stock_move_recompute_state_scheduled/) | 17.0.1.0.0 |  | Scheduled action to recompute stock move statuses
 [stock_move_recompute_volume_scheduled](stock_move_recompute_volume_scheduled/) | 17.0.1.0.0 |  | Scheduled action to recompute stock move volumes
 [stock_move_search](stock_move_search/) | 17.0.1.0.0 |  | Additional Search options for Stock Move
