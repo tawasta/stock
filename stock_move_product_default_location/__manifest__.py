@@ -21,7 +21,7 @@
 {
     "name": "Default location for products to be used with stock moves",
     "summary": "Move a product in a picking using its default location",
-    "version": "17.0.1.2.0",
+    "version": "17.0.1.2.1",
     "category": "Stock",
     "website": "https://github.com/tawasta/stock",
     "author": "Futural",
