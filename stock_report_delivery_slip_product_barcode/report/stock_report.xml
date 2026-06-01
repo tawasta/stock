@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_delivery_document" inherit_id="stock.report_delivery_document">
+
+
+        <!-- State != Done, heading and lines -->
+        <xpath
+            expr="//table[@name='stock_move_table']/thead//th[@name='th_sm_product']"
+            position="before"
+        >
+            <th name="th_sm_barcode"><strong>EAN</strong></th>
+        </xpath>
+
+        <xpath
+            expr="//table[@name='stock_move_table']/tbody/tr/td[1]"
+            position="before"
+        >
+            <td name="td_sm_barcode">
+                <span t-esc="move.product_id.barcode" />
+            </td>
+        </xpath>
+
+        <!-- State == Done, heading -->
+        <xpath
+            expr="//table[@name='stock_move_line_table']/thead//th[@name='th_sml_product']"
+            position="before"
+        >
+            <th name="th_sml_barcode"><strong>EAN</strong></th>
+        </xpath>
+
+
+    </template>
+
+    <!-- State == Done, lines -->
+    <template
+        id="stock_report_delivery_aggregated_move_lines"
+        inherit_id="stock.stock_report_delivery_aggregated_move_lines"
+    >
+        <xpath expr='//tr[@t-as="line"]/td[1]' position="before">
+            <td>
+                <t t-if="aggregated_lines[line].get('barcode')">
+                    <span t-esc="aggregated_lines[line]['barcode']" />
+                </t>
+            </td>
+        </xpath>
+
+    </template>
+
+</odoo>

@@ -5,16 +5,17 @@ class StockMove(models.Model):
     _inherit = "stock.move"
 
     def write(self, vals):
-        product_id = vals.get("product_id", False)
+        for move in self:
+            product_id = vals.get("product_id", False)
 
-        picking_type = self.picking_type_id
-        use_default = picking_type and picking_type.use_default_location or False
+            picking_type = move.picking_type_id
+            use_default = picking_type and picking_type.use_default_location or False
 
-        if product_id and use_default:
-            product = self.env["product.product"].browse(product_id)
-            default_location = product.default_stock_move_location_id or False
-            if default_location:
-                vals["location_id"] = default_location.id
+            if product_id and use_default:
+                product = self.env["product.product"].browse(product_id)
+                default_location = product.default_stock_move_location_id or False
+                if default_location:
+                    vals["location_id"] = default_location.id
 
         return super().write(vals)
 

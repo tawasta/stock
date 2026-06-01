@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Futural Oy
-#    Copyright 2025 Futural Oy (https://futural.fi)
+#    Copyright 2026- Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,21 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Default location for products to be used with stock moves",
-    "summary": "Move a product in a picking using its default location",
-    "version": "17.0.1.2.1",
-    "category": "Stock",
+    "name": "Stock Picking: Show Sale Order Partner on Delivery Slip Print",
+    "summary": "Show the partner of the related sale on delivery slip print",
+    "version": "17.0.1.0.0",
+    "category": "Reporting",
     "website": "https://github.com/tawasta/stock",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        "stock",
-    ],
-    "data": [
-        "views/product_view.xml",
-        "views/stock_picking_type.xml",
-        "views/stock_view.xml",
-    ],
+    "depends": ["stock"],
+    "data": ["report/stock_report.xml"],
 }
