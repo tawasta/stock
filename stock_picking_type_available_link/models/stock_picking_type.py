@@ -20,7 +20,7 @@ class StockPicking(models.Model):
         self.ensure_one()
         return (
             self.picking_type_code == "outgoing"
-            and self.state in ("confirmed", "waiting", "assigned")
+            and self.state == "assigned"
             and self.products_availability_state == "available"
         )
 
@@ -31,7 +31,7 @@ class StockPicking(models.Model):
         candidates = self.search(
             [
                 ("picking_type_code", "=", "outgoing"),
-                ("state", "in", ["confirmed", "waiting", "assigned"]),
+                ("state", "=", "assigned"),
             ]
         )
 
