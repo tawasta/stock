@@ -32,6 +32,5 @@
         "stock",
         "stock_move_product_default_location",
     ],
-    "data": [
-    ],
+    "data": [],
 }

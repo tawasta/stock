@@ -30,7 +30,9 @@ class StockMove(models.Model):
         """
         self.ensure_one()
 
-        default_location = self.product_id.product_tmpl_id.default_stock_move_location_id
+        default_location = (
+            self.product_id.product_tmpl_id.default_stock_move_location_id
+        )
 
         if not (
             self.picking_type_id.use_default_location
@@ -56,11 +58,14 @@ class StockMove(models.Model):
             strict=True,
         )
 
-        if float_compare(
-            available_qty,
-            0.0,
-            precision_rounding=self.product_id.uom_id.rounding,
-        ) <= 0:
+        if (
+            float_compare(
+                available_qty,
+                0.0,
+                precision_rounding=self.product_id.uom_id.rounding,
+            )
+            <= 0
+        ):
             return super()._update_reserved_quantity(
                 need,
                 location_id,
@@ -83,11 +88,14 @@ class StockMove(models.Model):
 
         remaining_qty = need - reserved_qty
 
-        if float_compare(
-            remaining_qty,
-            0.0,
-            precision_rounding=self.product_id.uom_id.rounding,
-        ) > 0:
+        if (
+            float_compare(
+                remaining_qty,
+                0.0,
+                precision_rounding=self.product_id.uom_id.rounding,
+            )
+            > 0
+        ):
             reserved_qty += super()._update_reserved_quantity(
                 remaining_qty,
                 location_id,
