@@ -16,6 +16,7 @@ addon | version | maintainers | summary
 [stock_batch_transfer_carrier_and_tracking_ref](stock_batch_transfer_carrier_and_tracking_ref/) | 17.0.1.1.1 |  | Adds Carrier and Tracking reference to batch transfer
 [stock_batch_transfer_contact_and_delivery_address](stock_batch_transfer_contact_and_delivery_address/) | 17.0.1.0.0 |  | Adds a default delivery address and contact to batch transfer
 [stock_default_reservation_location](stock_default_reservation_location/) | 17.0.1.0.0 |  | Reserve stock first from product default stock move location
+[stock_delivery_report_custom_terms](stock_delivery_report_custom_terms/) | 17.0.1.0.0 |  | Stock Delivery Report Terms
 [stock_disable_invoice_shipping_on_delivery](stock_disable_invoice_shipping_on_delivery/) | 17.0.1.0.0 |  | Disable picking auto-generated delivery SO lines
 [stock_dispatch_note_report_template](stock_dispatch_note_report_template/) | 17.0.1.0.3 |  | Adds weights, dates and clickable print is shown as 'Dispatch Note'
 [stock_hide_packing_buttons](stock_hide_packing_buttons/) | 17.0.1.0.0 |  | Hides "put in pack" buttons
