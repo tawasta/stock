@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_delivery_report_terms" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.delivery.report.terms</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="stock.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//block[@name='shipping_setting_container']" position="inside">
+                <setting id="delivery_report_terms"
+                         string="Delivery Report Terms"
+                         help="Configure delivery slip column terms.">
+                    <div class="content-group">
+                        <div class="row mt16">
+                            <label for="delivery_report_ordered_term" class="col-lg-4"/>
+                            <field name="delivery_report_ordered_term"/>
+                        </div>
+                        <div class="row">
+                            <label for="delivery_report_delivered_term" class="col-lg-4"/>
+                            <field name="delivery_report_delivered_term"/>
+                        </div>
+                    </div>
+                </setting>
+            </xpath>
+        </field>
+    </record>
+</odoo>
