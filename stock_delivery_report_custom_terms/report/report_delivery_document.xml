@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <template id="report_delivery_document_custom_terms"
-              inherit_id="stock.report_delivery_document">
+    <template
+        id="report_delivery_document_custom_terms"
+        inherit_id="stock.report_delivery_document"
+        priority="101"
+    >
 
         <xpath expr="//th[@name='th_sm_ordered']/strong" position="replace">
-            <strong t-field="o.company_id.delivery_report_ordered_term"/>
+            <strong t-field="o.company_id.delivery_report_ordered_term" />
         </xpath>
 
         <xpath expr="//th[@name='th_sm_quantity']/strong" position="replace">
-            <strong t-field="o.company_id.delivery_report_delivered_term"/>
+            <strong t-field="o.company_id.delivery_report_delivered_term" />
         </xpath>
 
         <xpath expr="//th[@name='th_sml_qty_ordered']/strong" position="replace">
-            <strong t-field="o.company_id.delivery_report_ordered_term"/>
+            <strong t-field="o.company_id.delivery_report_ordered_term" />
         </xpath>
 
         <xpath expr="//th[@name='th_sml_quantity']/strong" position="replace">
-            <strong t-field="o.company_id.delivery_report_delivered_term"/>
+            <strong t-field="o.company_id.delivery_report_delivered_term" />
         </xpath>
 
     </template>
