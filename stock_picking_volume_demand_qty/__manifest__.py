@@ -36,7 +36,6 @@
         "stock",
         "stock_picking_volume",
     ],
-    "data": [
-    ],
+    "data": [],
     "demo": [],
 }
