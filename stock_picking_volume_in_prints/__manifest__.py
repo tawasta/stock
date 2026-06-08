@@ -35,6 +35,5 @@
     ],
     "data": [
         "report/stock_report.xml",
-        "views/stock_picking.xml",
     ],
 }

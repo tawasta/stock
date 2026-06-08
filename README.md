@@ -74,7 +74,7 @@ addon | version | maintainers | summary
 [stock_picking_unreserve_receipt](stock_picking_unreserve_receipt/) | 17.0.1.0.0 |  | Configure from Picking Type to automatically unreserve receipts
 [stock_picking_validate_button_no_refresh_after_report](stock_picking_validate_button_no_refresh_after_report/) | 17.0.2.1.2 |  | Do not hard refresh a page after Button validate has printed reports
 [stock_picking_view_vendor_product](stock_picking_view_vendor_product/) | 17.0.1.0.0 |  | Vendor Product Name and Code are added to Picking form view
-[stock_picking_volume_in_tree_and_prints](stock_picking_volume_in_tree_and_prints/) | 17.0.1.0.0 |  | Picking's Volume is shown in list view and picking prints
+[stock_picking_volume_in_prints](stock_picking_volume_in_prints/) | 17.0.1.0.0 |  | Picking's Volume is shown in list view and picking prints
 [stock_product_qty_available_unreserved](stock_product_qty_available_unreserved/) | 17.0.1.0.1 |  | Add unreserved available (on hand - reserved)
 [stock_quant_list_view_increased_limit](stock_quant_list_view_increased_limit/) | 17.0.1.0.0 |  | Increase the number of shown lines to 300
 [stock_quant_list_view_product_tag](stock_quant_list_view_product_tag/) | 17.0.1.1.1 |  | Show product tags in stock quant tree view
