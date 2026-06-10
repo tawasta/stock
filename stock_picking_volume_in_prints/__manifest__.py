@@ -19,9 +19,9 @@
 ##############################################################################
 
 {
-    "name": "Show Volume field of Stock Pickings in tree view and picking prints",
-    "summary": "Picking's Volume is shown in list view and picking prints",
-    "version": "17.0.1.0.0",
+    "name": "Show Volume field of Stock Pickings in picking prints",
+    "summary": "Picking's Volume is shown in picking prints",
+    "version": "17.0.2.0.0",
     "category": "Stock",
     "website": "https://github.com/tawasta/stock",
     "author": "Futural",
@@ -35,6 +35,5 @@
     ],
     "data": [
         "report/stock_report.xml",
-        "views/stock_picking.xml",
     ],
 }

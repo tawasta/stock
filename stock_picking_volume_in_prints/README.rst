@@ -2,11 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-===================================================================
-Show Volume field of Stock Pickings in tree view and picking prints
-===================================================================
+=====================================================
+Show Volume field of Stock Pickings in picking prints
+=====================================================
 
-Picking's Volume is shown in list view and picking prints
+Picking's Volume is shown in picking prints
 
 Configuration
 =============
