@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Futural Oy
-#    Copyright 2023 Futural Oy (https://futural.fi)
+#    Copyright 2019 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,22 +19,23 @@
 ##############################################################################
 
 {
-    "name": "Show Volume field of Stock Pickings in tree view and picking prints",
-    "summary": "Picking's Volume is shown in list view and picking prints",
+    "name": "Stock Picking Volume Demand Qty",
+    "summary": "Stock Picking Volume Demand Qty",
     "version": "17.0.1.0.0",
-    "category": "Stock",
+    "category": "Inventory",
     "website": "https://github.com/tawasta/stock",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
+    "external_dependencies": {
+        "python": [],
+        "bin": [],
+    },
     "depends": [
-        "product",
-        "stock_dispatch_note_report_template",
+        "stock",
         "stock_picking_volume",
     ],
-    "data": [
-        "report/stock_report.xml",
-        "views/stock_picking.xml",
-    ],
+    "data": [],
+    "demo": [],
 }
