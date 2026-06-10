@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!--
+        Inherit the standard delivery document template and make the
+        address blocks conditional on the hide_recipient context flag.
+    -->
+    <template
+        id="report_delivery_document_hide_recipient_inherit"
+        inherit_id="stock.report_delivery_document"
+    >
+
+        <xpath expr="//t[@t-set='address']" position="attributes">
+            <attribute name="t-if">not o.env.context.get('hide_recipient')</attribute>
+        </xpath>
+
+        <xpath expr="//div[@name='div_incoming_address']" position="attributes">
+            <attribute name="t-if">not o.env.context.get('hide_recipient')</attribute>
+        </xpath>
+
+    </template>
+
+    <!--
+        Wrapper template for the new report action. Calls the
+        standard stock.report_delivery_document template but injects
+        `hide_recipient=True` into the context
+    -->
+    <template id="report_deliveryslip_without_recipient">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-set="o" t-value="o.with_context(hide_recipient=True)" />
+                <t
+                    t-call="stock.report_delivery_document"
+                    t-lang="o.partner_id.lang or o.company_id.partner_id.lang"
+                />
+            </t>
+        </t>
+    </template>
+
+    <!--
+        New report action that appears in the print dropdown of stock.picking
+        alongside the standard "Delivery Slip" entry.
+    -->
+    <record id="action_report_delivery_without_recipient" model="ir.actions.report">
+        <field name="name">Delivery Slip (without Recipient Info)</field>
+        <field name="model">stock.picking</field>
+        <field name="report_type">qweb-pdf</field>
+        <field
+            name="report_name"
+        >stock_report_delivery_slip_without_recipient.report_deliveryslip_without_recipient</field>
+        <field
+            name="report_file"
+        >stock_report_delivery_slip_without_recipient.report_deliveryslip_without_recipient</field>
+        <field name="print_report_name">'Delivery Slip - %s' % (object.name)</field>
+        <field name="binding_model_id" ref="stock.model_stock_picking" />
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

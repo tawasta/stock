@@ -74,7 +74,7 @@ addon | version | maintainers | summary
 [stock_picking_unreserve_receipt](stock_picking_unreserve_receipt/) | 17.0.1.0.0 |  | Configure from Picking Type to automatically unreserve receipts
 [stock_picking_validate_button_no_refresh_after_report](stock_picking_validate_button_no_refresh_after_report/) | 17.0.2.1.2 |  | Do not hard refresh a page after Button validate has printed reports
 [stock_picking_view_vendor_product](stock_picking_view_vendor_product/) | 17.0.1.0.0 |  | Vendor Product Name and Code are added to Picking form view
-[stock_picking_volume_demand_qty](stock_picking_volume_demand_qty/) | 17.0.1.0.0 |  | Stock Picking Volume Demand Qty
+[stock_picking_volume_in_prints](stock_picking_volume_in_prints/) | 17.0.2.0.0 |  | Picking's Volume is shown in picking prints
 [stock_picking_volume_in_tree_and_prints](stock_picking_volume_in_tree_and_prints/) | 17.0.1.0.0 |  | Picking's Volume is shown in list view and picking prints
 [stock_product_qty_available_unreserved](stock_product_qty_available_unreserved/) | 17.0.1.0.1 |  | Add unreserved available (on hand - reserved)
 [stock_quant_list_view_increased_limit](stock_quant_list_view_increased_limit/) | 17.0.1.0.0 |  | Increase the number of shown lines to 300
@@ -88,9 +88,11 @@ addon | version | maintainers | summary
 [stock_report_customer_reference_under_address](stock_report_customer_reference_under_address/) | 17.0.1.0.2 |  | Customer Reference under address
 [stock_report_date_done](stock_report_date_done/) | 17.0.1.0.1 |  | Stock Picking Report Date of Transfer
 [stock_report_delivery_slip_product_barcode](stock_report_delivery_slip_product_barcode/) | 17.0.1.0.0 |  | Show products' barcodes in numeric format
+[stock_report_delivery_slip_product_hide_hs_code](stock_report_delivery_slip_product_hide_hs_code/) | 17.0.1.0.0 |  | Don't show products' HS Codes
 [stock_report_delivery_slip_sale_order_customer_contact](stock_report_delivery_slip_sale_order_customer_contact/) | 17.0.1.0.0 |  | Show the customer contact of the related sale on delivery slip print
 [stock_report_delivery_slip_sale_order_customer_marking](stock_report_delivery_slip_sale_order_customer_marking/) | 17.0.1.0.0 |  | Show the customer marking of the related sale on delivery slip print
 [stock_report_delivery_slip_sale_order_partner](stock_report_delivery_slip_sale_order_partner/) | 17.0.1.0.0 |  | Show the partner of the related sale on delivery slip print
+[stock_report_delivery_slip_without_recipient](stock_report_delivery_slip_without_recipient/) | 17.0.1.0.0 |  | Adds a second delivery slip that hides all address info from PDF header
 [stock_report_element_sizes](stock_report_element_sizes/) | 17.0.1.0.3 |  | Stock Report element size changes
 [stock_report_enable_translation_by_partner](stock_report_enable_translation_by_partner/) | 17.0.1.0.0 |  | Use the language set for Delivery Address in Picking Operations PDF print
 [stock_report_force_left_align_headings](stock_report_force_left_align_headings/) | 17.0.1.0.0 |  | Adds separate toggles for reports to enforce th element alignment
