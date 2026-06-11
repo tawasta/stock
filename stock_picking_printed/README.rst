@@ -14,6 +14,10 @@ Configuration
 
 Usage
 =====
+* Go to Action Report record and select picking print that is meant to
+  represent Picking Operations (or some other print, why not). Then
+  select "Is Picking Report" field on this record. This will rule if
+  printing the report will mark it as printed.
 * Print the Picking Operations printout, and a new "Picking Printed" field
   will appear on the picking form.
 
@@ -30,6 +34,7 @@ Contributors
 * Jarmo Kortetjärvi <jarmo.kortetjarvi@futural.fi>
 * Miika Nissi <miika.nissi@futural.fi>
 * Timo Talvitie <timo.talvitie@futural.fi>
+* Timo Kekäläinen <timo.kekalainen@tawasta.fi>
 
 Maintainer
 ----------
