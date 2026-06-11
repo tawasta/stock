@@ -8,12 +8,11 @@ _logger = logging.getLogger(__name__)
 class IrActionsReport(models.Model):
     _inherit = "ir.actions.report"
 
+    is_picking_report = fields.Boolean(copy=False)
+
     def _is_stock_picking_report(self, report_ref):
         """Check if the stock picking report is being printed"""
-        return (
-            self._get_report(report_ref).report_name
-            == "stock_report_enable_translation_by_partner.report_picking"
-        )
+        return self._get_report(report_ref).is_picking_report
 
     def _render_qweb_pdf(self, report_ref, res_ids=None, data=None):
         """When printing picking, log the printing date"""
