@@ -28,6 +28,9 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["stock_report_enable_translation_by_partner", "stock", "web"],
-    "data": ["views/stock_picking.xml"],
+    "depends": ["stock", "web"],
+    "data": [
+        "views/actions_report_view.xml",
+        "views/stock_picking.xml",
+    ],
 }
