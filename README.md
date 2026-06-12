@@ -87,6 +87,7 @@ addon | version | maintainers | summary
 [stock_report_customer_reference](stock_report_customer_reference/) | 17.0.1.0.1 |  | Stock Report Customer Reference
 [stock_report_customer_reference_under_address](stock_report_customer_reference_under_address/) | 17.0.1.0.2 |  | Customer Reference under address
 [stock_report_date_done](stock_report_date_done/) | 17.0.1.0.1 |  | Stock Picking Report Date of Transfer
+[stock_report_delivery_slip_move_up_lines](stock_report_delivery_slip_move_up_lines/) | 17.0.1.0.0 |  | Delivery Slip – Move lines up a bit
 [stock_report_delivery_slip_product_barcode](stock_report_delivery_slip_product_barcode/) | 17.0.1.0.0 |  | Show products' barcodes in numeric format
 [stock_report_delivery_slip_product_hide_hs_code](stock_report_delivery_slip_product_hide_hs_code/) | 17.0.1.0.0 |  | Don't show products' HS Codes
 [stock_report_delivery_slip_sale_order_customer_contact](stock_report_delivery_slip_sale_order_customer_contact/) | 17.0.1.0.0 |  | Show the customer contact of the related sale on delivery slip print
