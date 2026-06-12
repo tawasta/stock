@@ -6,7 +6,7 @@
 Stock Picking: Show Sale Order Partner on Delivery Slip Print
 =============================================================
 
-* If picking operation is related to a Sale Order, show 
+* If picking operation is related to a Sale Order, show
   the SO's partner on the Delivery Slip print
 
 Configuration
@@ -30,6 +30,7 @@ Contributors
 ------------
 
 * Timo Talvitie <timo.talvitie@futural.fi>
+* Timo Kekäläinen <timo.kekalainen@tawasta.fi>
 
 Maintainer
 ----------
