@@ -91,7 +91,7 @@ addon | version | maintainers | summary
 [stock_report_delivery_slip_product_hide_hs_code](stock_report_delivery_slip_product_hide_hs_code/) | 17.0.1.0.0 |  | Don't show products' HS Codes
 [stock_report_delivery_slip_sale_order_customer_contact](stock_report_delivery_slip_sale_order_customer_contact/) | 17.0.1.0.0 |  | Show the customer contact of the related sale on delivery slip print
 [stock_report_delivery_slip_sale_order_customer_marking](stock_report_delivery_slip_sale_order_customer_marking/) | 17.0.1.0.0 |  | Show the customer marking of the related sale on delivery slip print
-[stock_report_delivery_slip_sale_order_partner](stock_report_delivery_slip_sale_order_partner/) | 17.0.1.0.1 |  | Show the partner of the related sale on delivery slip print
+[stock_report_delivery_slip_sale_order_partner](stock_report_delivery_slip_sale_order_partner/) | 17.0.1.0.2 |  | Show the partner of the related sale on delivery slip print
 [stock_report_delivery_slip_without_recipient](stock_report_delivery_slip_without_recipient/) | 17.0.1.0.0 |  | Adds a second delivery slip that hides all address info from PDF header
 [stock_report_element_sizes](stock_report_element_sizes/) | 17.0.1.0.3 |  | Stock Report element size changes
 [stock_report_enable_translation_by_partner](stock_report_enable_translation_by_partner/) | 17.0.1.0.0 |  | Use the language set for Delivery Address in Picking Operations PDF print
