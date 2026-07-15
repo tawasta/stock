@@ -1,0 +1,123 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_location_name_options
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20260630\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-15 05:40+0000\n"
+"PO-Revision-Date: 2026-07-15 05:40+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_location_name_options
+#: model:ir.model.fields,help:stock_location_name_options.field_res_company__location_name_report_style
+#: model:ir.model.fields,help:stock_location_name_options.field_res_config_settings__location_name_report_style
+#: model_terms:ir.ui.view,arch_db:stock_location_name_options.res_config_settings_view_form_inherit_stock_location_name_options
+msgid ""
+"Choose whether location names in printed reports and barcode labels display "
+"the full hierarchical path (e.g. WH/Stock/Shelf A) or the short name (e.g. "
+"Shelf A)."
+msgstr ""
+"Valitse, näytetäänkö tulostetuissa raporteissa ja viivakooditarroissa sijannin nimi "
+"koko hierarkkisena polkuna (esim. VAR/Varasto/Hylly A) vai lyhyenä nimenä "
+"(esim. Hylly A)."
+
+#. module: stock_location_name_options
+#: model:ir.model,name:stock_location_name_options.model_res_company
+msgid "Companies"
+msgstr "Yritykset"
+
+#. module: stock_location_name_options
+#: model:ir.model,name:stock_location_name_options.model_res_config_settings
+msgid "Config Settings"
+msgstr "Asetukset"
+
+#. module: stock_location_name_options
+#: model:ir.model.fields,field_description:stock_location_name_options.field_stock_picking__location_dest_id_short_name
+msgid "Destination Location (Short)"
+msgstr "Kohdesijainti (lyhyt)"
+
+#. module: stock_location_name_options
+#: model:ir.model.fields,field_description:stock_location_name_options.field_stock_move__location_id_short_name
+#: model:ir.model.fields,field_description:stock_location_name_options.field_stock_move_line__location_id_short_name
+msgid "From (Short)"
+msgstr "Lähtöpaikka (lyhyt)"
+
+#. module: stock_location_name_options
+#: model:ir.model.fields.selection,name:stock_location_name_options.selection__res_company__location_name_report_style__full
+msgid "Full Path"
+msgstr "Koko sijainti"
+
+#. module: stock_location_name_options
+#: model:ir.model.fields,field_description:stock_location_name_options.field_stock_quant__location_id_short_name
+msgid "Location (Short)"
+msgstr "Sijainti (lyhyt)"
+
+#. module: stock_location_name_options
+#: model:ir.model.fields,field_description:stock_location_name_options.field_res_company__location_name_report_style
+#: model:ir.model.fields,field_description:stock_location_name_options.field_res_config_settings__location_name_report_style
+msgid "Location Name Report Style"
+msgstr "Sijainnin nimen esitystapa raporteissa"
+
+#. module: stock_location_name_options
+#: model_terms:ir.ui.view,arch_db:stock_location_name_options.res_config_settings_view_form_inherit_stock_location_name_options
+msgid "Location Name Style"
+msgstr "Sijainnin nimen esitystapa"
+
+#. module: stock_location_name_options
+#: model:ir.model,name:stock_location_name_options.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Tuotteiden siirrot (Stock Move Line)"
+
+#. module: stock_location_name_options
+#: model:ir.model,name:stock_location_name_options.model_stock_quant
+msgid "Quants"
+msgstr "Määrät"
+
+#. module: stock_location_name_options
+#: model_terms:ir.ui.view,arch_db:stock_location_name_options.report_inventory_inherit_location
+msgid "Shelf A"
+msgstr ""
+
+#. module: stock_location_name_options
+#: model:ir.model.fields.selection,name:stock_location_name_options.selection__res_company__location_name_report_style__short
+msgid "Short Name"
+msgstr "Lyhyt nimi"
+
+#. module: stock_location_name_options
+#: model:ir.model.fields,field_description:stock_location_name_options.field_stock_picking__location_id_short_name
+msgid "Source Location (Short)"
+msgstr "Lähtösijainti (lyhyt)"
+
+#. module: stock_location_name_options
+#: model:ir.model,name:stock_location_name_options.model_stock_move
+msgid "Stock Move"
+msgstr "Varastosiirto"
+
+#. module: stock_location_name_options
+#: model:ir.model.fields,field_description:stock_location_name_options.field_stock_move__location_dest_id_short_name
+#: model:ir.model.fields,field_description:stock_location_name_options.field_stock_move_line__location_dest_id_short_name
+msgid "To (Short)"
+msgstr "Kohdepaikka (lyhyt)"
+
+#. module: stock_location_name_options
+#: model:ir.model,name:stock_location_name_options.model_stock_picking
+msgid "Transfer"
+msgstr "Siirto"
+
+#. module: stock_location_name_options
+#: model_terms:ir.ui.view,arch_db:stock_location_name_options.report_picking_inherit_location_to
+msgid "WH/Outgoing"
+msgstr ""
+
+#. module: stock_location_name_options
+#: model_terms:ir.ui.view,arch_db:stock_location_name_options.report_generic_barcode_inherit
+#: model_terms:ir.ui.view,arch_db:stock_location_name_options.report_picking_inherit_location_from
+msgid "WH/Stock"
+msgstr ""

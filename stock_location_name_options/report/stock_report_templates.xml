@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Picking Operations: From location (move lines) -->
+    <template
+        id="report_picking_inherit_location_from"
+        inherit_id="stock.report_picking"
+    >
+        <xpath
+            expr="//td[@groups='stock.group_stock_multi_locations']/span[@t-esc='ml.location_id.display_name']"
+            position="attributes"
+        >
+            <attribute name="t-if">False</attribute>
+        </xpath>
+        <xpath
+            expr="//td[@groups='stock.group_stock_multi_locations']/span[@t-esc='ml.location_id.display_name']"
+            position="after"
+        >
+            <t t-if="o.company_id.location_name_report_style == 'short'">
+                <span t-esc="ml.location_id.name">WH/Stock</span>
+            </t>
+            <t t-else="">
+                <span t-esc="ml.location_id.display_name">WH/Stock</span>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Picking Operations: To location (move lines) -->
+    <template id="report_picking_inherit_location_to" inherit_id="stock.report_picking">
+        <xpath
+            expr="//td[@groups='stock.group_stock_multi_locations']/div/span[@t-field='ml.location_dest_id']"
+            position="attributes"
+        >
+            <attribute name="t-if">False</attribute>
+        </xpath>
+        <xpath
+            expr="//td[@groups='stock.group_stock_multi_locations']/div/span[@t-field='ml.location_dest_id']"
+            position="after"
+        >
+            <t t-if="o.company_id.location_name_report_style == 'short'">
+                <span t-field="ml.location_dest_id.name">WH/Outgoing</span>
+            </t>
+            <t t-else="">
+                <span t-field="ml.location_dest_id">WH/Outgoing</span>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Picking Operations: Package From location -->
+    <template
+        id="report_picking_inherit_package_from"
+        inherit_id="stock.report_picking"
+    >
+        <xpath
+            expr="//td[@groups='stock.group_stock_multi_locations']/span[@t-field='package.location_id']"
+            position="attributes"
+        >
+            <attribute name="t-if">False</attribute>
+        </xpath>
+        <xpath
+            expr="//td[@groups='stock.group_stock_multi_locations']/span[@t-field='package.location_id']"
+            position="after"
+        >
+            <t t-if="o.company_id.location_name_report_style == 'short'">
+                <span t-field="package.location_id.name" />
+            </t>
+            <t t-else="">
+                <span t-field="package.location_id" />
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Picking Operations: Package To location -->
+    <template id="report_picking_inherit_package_to" inherit_id="stock.report_picking">
+        <xpath
+            expr="//td[@groups='stock.group_stock_multi_locations']/span[@t-field='package.location_dest_id']"
+            position="attributes"
+        >
+            <attribute name="t-if">False</attribute>
+        </xpath>
+        <xpath
+            expr="//td[@groups='stock.group_stock_multi_locations']/span[@t-field='package.location_dest_id']"
+            position="after"
+        >
+            <t t-if="o.company_id.location_name_report_style == 'short'">
+                <span t-field="package.location_dest_id.name" />
+            </t>
+            <t t-else="">
+                <span t-field="package.location_dest_id" />
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Inventory Count Sheet: location header -->
+    <template
+        id="report_inventory_inherit_location"
+        inherit_id="stock.report_inventory"
+    >
+        <xpath expr="//span[@t-out='location.display_name']" position="attributes">
+            <attribute name="t-if">False</attribute>
+        </xpath>
+        <xpath expr="//span[@t-out='location.display_name']" position="after">
+            <t t-if="docs[:1].company_id.location_name_report_style == 'short'">
+                <span t-out="location.name">Shelf A</span>
+            </t>
+            <t t-else="">
+                <span t-out="location.display_name">Shelf A</span>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Location Barcode: set flag before calling generic template -->
+    <template
+        id="report_location_barcode_inherit"
+        inherit_id="stock.report_location_barcode"
+    >
+        <xpath expr="//t[@t-call='stock.report_generic_barcode']" position="before">
+            <t t-set="is_location_barcode" t-value="True" />
+        </xpath>
+    </template>
+
+    <!-- Generic Barcode: conditional location name display -->
+    <template
+        id="report_generic_barcode_inherit"
+        inherit_id="stock.report_generic_barcode"
+    >
+        <xpath
+            expr="//div[hasclass('o_label_name')]//strong/span[@t-field='o.name']"
+            position="attributes"
+        >
+            <attribute name="t-if">False</attribute>
+        </xpath>
+        <xpath
+            expr="//div[hasclass('o_label_name')]//strong/span[@t-field='o.name']"
+            position="after"
+        >
+            <t t-if="is_location_barcode">
+                <t t-if="o.company_id.location_name_report_style == 'short'">
+                    <span t-field="o.name" style="font-size: 0.85em; display: block;" />
+                </t>
+                <t t-else="">
+                    <span
+                        t-field="o.display_name"
+                        style="font-size: 0.85em; display: block;"
+                    />
+                </t>
+            </t>
+            <t t-else="">
+                <span t-field="o.name">WH/Stock</span>
+            </t>
+        </xpath>
+    </template>
+</odoo>

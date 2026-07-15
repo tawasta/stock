@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record
+        id="res_config_settings_view_form_inherit_stock_location_name_options"
+        model="ir.ui.view"
+    >
+        <field
+            name="name"
+        >res.config.settings.view.form.inherit.stock.location.name.options</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="stock.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//block[@name='warehouse_setting_container']"
+                position="inside"
+            >
+                <setting
+                    id="location_name_report_style"
+                    string="Location Name Style"
+                    help="Choose whether location names in printed reports and barcode labels display the full hierarchical path (e.g. WH/Stock/Shelf A) or the short name (e.g. Shelf A)."
+                >
+                    <field name="location_name_report_style" widget="radio" />
+                </setting>
+            </xpath>
+        </field>
+    </record>
+</odoo>
