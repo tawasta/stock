@@ -59,8 +59,6 @@
             ref="stock.view_stock_move_line_detailed_operation_tree"
         />
         <field name="arch" type="xml">
-            <!-- location_id is column_invisible=True upstream by design (restricted
-                 field used in quant_id domain). We only add the short-name column. -->
             <field name="location_id" position="after">
                 <field
                     name="location_id_short_name"
@@ -68,14 +66,12 @@
                     groups="stock.group_stock_multi_locations"
                 />
             </field>
-            <!-- Make Pick From optional so users can toggle it. -->
             <xpath
                 expr="//field[@name='quant_id' and @widget='pick_from']"
                 position="attributes"
             >
                 <attribute name="optional">show</attribute>
             </xpath>
-            <!-- Make the visible location_dest_id optional so users can toggle it. -->
             <xpath
                 expr="//field[@name='location_dest_id' and @options]"
                 position="attributes"
