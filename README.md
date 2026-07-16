@@ -28,6 +28,7 @@ addon | version | maintainers | summary
 [stock_inventory_quantity_history_stock_inventory_link](stock_inventory_quantity_history_stock_inventory_link/) | 17.0.1.0.1 |  | Show the new qty fields also in list view provided by the another OCA inventory module
 [stock_location_analytic_account](stock_location_analytic_account/) | 17.0.1.0.1 |  | Integrate stock location with analytic account
 [stock_location_excess_mark](stock_location_excess_mark/) | 17.0.1.1.0 |  | Select a stock location and mark it as of excess type
+[stock_location_name_options](stock_location_name_options/) | 17.0.2.0.0 |  | Adds optional short-name columns for stock locations in all views and reports
 [stock_move_carrier_in_view_and_filter](stock_move_carrier_in_view_and_filter/) | 17.0.1.0.1 |  | Carrier info added to stock move list view and as a filter
 [stock_move_line_expiry_date_existing_lot](stock_move_line_expiry_date_existing_lot/) | 17.0.1.0.0 |  | Expiration Date of lot can be set when receiving a product
 [stock_move_pivot_disable_count_as_default](stock_move_pivot_disable_count_as_default/) | 17.0.1.0.0 |  | Disables the Count variable as default on stock move pivot.
