@@ -6,7 +6,8 @@
 		<field name="inherit_id" ref="stock.view_picking_type_form" />
 		<field name="arch" type="xml">
             <field name="reservation_method" position="after">
-                <field name="use_default_location" />
+                <field name="use_default_location" help="Used for stock.move.line" />
+                <field name="use_default_location_on_move" help="Used for stock.move" />
 		    </field>
 		</field>
 	</record>

@@ -15,7 +15,7 @@ addon | version | maintainers | summary
 [stock_auditlog_rules](stock_auditlog_rules/) | 17.0.1.1.0 |  | Adds audit log rules for stock.warehouse and stock.location
 [stock_batch_transfer_carrier_and_tracking_ref](stock_batch_transfer_carrier_and_tracking_ref/) | 17.0.1.1.1 |  | Adds Carrier and Tracking reference to batch transfer
 [stock_batch_transfer_contact_and_delivery_address](stock_batch_transfer_contact_and_delivery_address/) | 17.0.1.0.0 |  | Adds a default delivery address and contact to batch transfer
-[stock_default_reservation_location](stock_default_reservation_location/) | 17.0.1.0.0 |  | Reserve stock first from product default stock move location
+[stock_default_reservation_location](stock_default_reservation_location/) | 17.0.1.1.0 |  | Reserve stock first from product default stock move location
 [stock_delivery_report_custom_terms](stock_delivery_report_custom_terms/) | 17.0.1.0.0 |  | Stock Delivery Report Terms
 [stock_disable_invoice_shipping_on_delivery](stock_disable_invoice_shipping_on_delivery/) | 17.0.1.0.0 |  | Disable picking auto-generated delivery SO lines
 [stock_dispatch_note_report_template](stock_dispatch_note_report_template/) | 17.0.1.0.3 |  | Adds weights, dates and clickable print is shown as 'Dispatch Note'
@@ -32,7 +32,7 @@ addon | version | maintainers | summary
 [stock_move_line_expiry_date_existing_lot](stock_move_line_expiry_date_existing_lot/) | 17.0.1.0.0 |  | Expiration Date of lot can be set when receiving a product
 [stock_move_pivot_disable_count_as_default](stock_move_pivot_disable_count_as_default/) | 17.0.1.0.0 |  | Disables the Count variable as default on stock move pivot.
 [stock_move_pivot_report_sh_product_tag](stock_move_pivot_report_sh_product_tag/) | 17.0.1.0.0 |  | Group by SH product tags in Stock Move pivot view
-[stock_move_product_default_location](stock_move_product_default_location/) | 17.0.1.2.1 |  | Move a product in a picking using its default location
+[stock_move_product_default_location](stock_move_product_default_location/) | 17.0.1.2.2 |  | Move a product in a picking using its default location
 [stock_move_recompute_state_scheduled](stock_move_recompute_state_scheduled/) | 17.0.1.0.0 |  | Scheduled action to recompute stock move statuses
 [stock_move_recompute_volume_scheduled](stock_move_recompute_volume_scheduled/) | 17.0.1.0.0 |  | Scheduled action to recompute stock move volumes
 [stock_move_search](stock_move_search/) | 17.0.1.0.0 |  | Additional Search options for Stock Move
