@@ -6,13 +6,13 @@
         inherit_id="stock.report_picking"
     >
         <xpath
-            expr="//td[@groups='stock.group_stock_multi_locations']/span[@t-esc='ml.location_id.display_name']"
+            expr="//td[@groups='stock.group_stock_multi_locations']/span[@t-esc='ml.location_id.display_name' or @t-esc='ml.location_id.name']"
             position="attributes"
         >
             <attribute name="t-if">False</attribute>
         </xpath>
         <xpath
-            expr="//td[@groups='stock.group_stock_multi_locations']/span[@t-esc='ml.location_id.display_name']"
+            expr="//td[@groups='stock.group_stock_multi_locations']/span[@t-esc='ml.location_id.display_name' or @t-esc='ml.location_id.name']"
             position="after"
         >
             <t t-if="o.company_id.location_name_report_style == 'short'">
