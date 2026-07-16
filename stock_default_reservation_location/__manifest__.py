@@ -21,7 +21,7 @@
 {
     "name": "Stock Default Reservation Location",
     "summary": "Reserve stock first from product default stock move location",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.1.0",
     "category": "Stock",
     "website": "https://github.com/tawasta/stock",
     "author": "Futural",
