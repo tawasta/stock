@@ -6,13 +6,13 @@ class StockMove(models.Model):
 
     location_id_short_name = fields.Char(
         related="location_id.name",
-        string="From (Short)",
+        string="Source Location (Short)",
         readonly=True,
         store=False,
     )
     location_dest_id_short_name = fields.Char(
         related="location_dest_id.name",
-        string="To (Short)",
+        string="Destination Location (Short)",
         readonly=True,
         store=False,
     )
