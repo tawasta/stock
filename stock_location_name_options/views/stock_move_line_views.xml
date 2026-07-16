@@ -67,6 +67,18 @@
                 />
             </field>
             <xpath
+                expr="//field[@name='quant_id' and @widget='pick_from']"
+                position="attributes"
+            >
+                <attribute name="optional">show</attribute>
+            </xpath>
+            <xpath
+                expr="//field[@name='location_dest_id' and @options]"
+                position="attributes"
+            >
+                <attribute name="optional">show</attribute>
+            </xpath>
+            <xpath
                 expr="//field[@name='location_dest_id' and @options]"
                 position="after"
             >
