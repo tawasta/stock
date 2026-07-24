@@ -4,9 +4,7 @@ from odoo import _, fields, models
 class StockLocation(models.Model):
     _inherit = "stock.location"
 
-    is_empty = fields.Boolean(
-        "Is Empty", compute="_compute_is_empty", search="_search_is_empty"
-    )
+    is_empty = fields.Boolean(compute="_compute_is_empty", search="_search_is_empty")
 
     def _compute_is_empty(self):
         groups = self.env["stock.quant"]._read_group(
