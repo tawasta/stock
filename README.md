@@ -24,7 +24,7 @@ addon | version | maintainers | summary
 [stock_inventory_adjustments_for_same_location](stock_inventory_adjustments_for_same_location/) | 17.0.1.0.0 |  | Multiple open adjustments are enabled for a same location
 [stock_inventory_count_sheet_sort_by_product](stock_inventory_count_sheet_sort_by_product/) | 17.0.1.0.0 |  | Inventory Count Sheet – sort quants by their product _order -attribute
 [stock_inventory_include_exhausted](stock_inventory_include_exhausted/) | 17.0.1.1.0 |  | Option to automatically add rows for exhausted products when doing inventory
-[stock_inventory_internal_use](stock_inventory_internal_use/) | 17.0.1.0.0 |  | Stock Inventory view for internal use
+[stock_inventory_internal_use](stock_inventory_internal_use/) | 17.0.1.0.1 |  | Stock Inventory view for internal use
 [stock_inventory_line_readonly_info](stock_inventory_line_readonly_info/) | 17.0.1.0.5 |  | Show old inventory lines as readonly
 [stock_inventory_quantity_history_stock_inventory_link](stock_inventory_quantity_history_stock_inventory_link/) | 17.0.1.0.1 |  | Show the new qty fields also in list view provided by the another OCA inventory module
 [stock_location_analytic_account](stock_location_analytic_account/) | 17.0.1.0.1 |  | Integrate stock location with analytic account
