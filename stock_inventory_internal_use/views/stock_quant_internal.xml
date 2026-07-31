@@ -140,6 +140,9 @@
         <field name="res_model">stock.quant</field>
         <field name="view_mode">tree,form</field>
         <field name="view_id" ref="view_inventory_internal_use_tree" />
+        <field
+            name="context"
+        >{'search_default_internal_loc':1, 'always_show_loc':1}</field>
     </record>
 
     <menuitem
