@@ -23,7 +23,7 @@
     "summary": (
         "Adds optional short-name columns for stock locations in all views and reports"
     ),
-    "version": "17.0.2.0.0",
+    "version": "17.0.2.0.1",
     "category": "Inventory",
     "website": "https://github.com/tawasta/stock",
     "author": "Futural",
