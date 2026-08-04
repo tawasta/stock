@@ -12,6 +12,7 @@
                 <attribute name="column_invisible">False</attribute>
                 <attribute name="optional">show</attribute>
                 <attribute name="readonly">1</attribute>
+                <attribute name="force_save">1</attribute>
             </xpath>
             <xpath
                 expr="//field[@name='move_ids_without_package']/tree/field[@name='location_id']"
@@ -27,6 +28,7 @@
                 <attribute name="column_invisible">False</attribute>
                 <attribute name="optional">show</attribute>
                 <attribute name="readonly">1</attribute>
+                <attribute name="force_save">1</attribute>
             </xpath>
             <xpath
                 expr="//field[@name='move_ids_without_package']/tree/field[@name='location_dest_id']"
