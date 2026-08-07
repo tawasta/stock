@@ -41,12 +41,6 @@
                             </t>
                         </div>
 
-                        <t t-if="doc.product_id.ean_code">
-                            <div class="o_sml_row o_sml_ean_text">
-                                <span t-field="doc.product_id.ean_code" />
-                            </div>
-                        </t>
-
                         <div class="o_sml_row o_sml_locations">
                             <div class="o_sml_location">
                                 <span class="o_sml_label">From:</span>
