@@ -35,7 +35,7 @@ msgstr "<span class=\"o_sml_label\">Mistä:</span>"
 #. module: stock_report_picking_print_custom_label
 #: model_terms:ir.ui.view,arch_db:stock_report_picking_print_custom_label.sml_label
 msgid "<span class=\"o_sml_label\">To:</span>"
-msgstr "<span class=\"o_sml_label\">Mihin:</span>"
+msgstr "<span class=\"o_sml_label\">Kohde:</span>"
 
 #. module: stock_report_picking_print_custom_label
 #: model_terms:ir.ui.view,arch_db:stock_report_picking_print_custom_label.sml_label
