@@ -1,0 +1,77 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_report_picking_print_custom_label
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20260803\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-05 12:41+0000\n"
+"PO-Revision-Date: 2026-08-05 12:41+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_report_picking_print_custom_label
+#: model:ir.actions.report,print_report_name:stock_report_picking_print_custom_label.action_report_stock_move_custom_label
+msgid ""
+"'Custom Labels - %s' % (object[:1].picking_id.name or "
+"object[:1].product_id.name or '')"
+msgstr "'Tuotelaput - %s' % (object[:1].picking_id.name or object[:1].product_id.name or '')"
+
+#. module: stock_report_picking_print_custom_label
+#: model_terms:ir.ui.view,arch_db:stock_report_picking_print_custom_label.sml_label
+msgid "<span class=\"o_sml_label\">Default:</span>"
+msgstr "<span class=\"o_sml_label\">Oletuspaikka:</span>"
+
+#. module: stock_report_picking_print_custom_label
+#: model_terms:ir.ui.view,arch_db:stock_report_picking_print_custom_label.sml_label
+msgid "<span class=\"o_sml_label\">From:</span>"
+msgstr "<span class=\"o_sml_label\">Mistä:</span>"
+
+#. module: stock_report_picking_print_custom_label
+#: model_terms:ir.ui.view,arch_db:stock_report_picking_print_custom_label.sml_label
+msgid "<span class=\"o_sml_label\">To:</span>"
+msgstr "<span class=\"o_sml_label\">Mihin:</span>"
+
+#. module: stock_report_picking_print_custom_label
+#: model_terms:ir.ui.view,arch_db:stock_report_picking_print_custom_label.sml_label
+msgid "<span class=\"o_sml_no_ean\">No EAN code</span>"
+msgstr "<span class=\"o_sml_no_ean\">Ei EAN-koodia</span>"
+
+#. module: stock_report_picking_print_custom_label
+#: model:ir.actions.report,name:stock_report_picking_print_custom_label.action_report_stock_move_custom_label
+msgid "Custom Label"
+msgstr "Tuotelappu"
+
+#. module: stock_report_picking_print_custom_label
+#: model_terms:ir.ui.view,arch_db:stock_report_picking_print_custom_label.view_picking_form_custom_labels
+msgid "Custom Labels"
+msgstr "Tuotelaput"
+
+#. module: stock_report_picking_print_custom_label
+#. odoo-python
+#: code:addons/stock_report_picking_print_custom_label/reports/stock_move_label_report.py:0
+#, python-format
+msgid "No stock move lines selected for printing."
+msgstr "Tulostettavia siirtoja ei ole valittu."
+
+#. module: stock_report_picking_print_custom_label
+#. odoo-python
+#: code:addons/stock_report_picking_print_custom_label/models/stock_picking.py:0
+#, python-format
+msgid "Nothing to print: the transfer has no product lines."
+msgstr "Ei tulostettavaa: siirrolla ei ole tuoterivejä."
+
+#. module: stock_report_picking_print_custom_label
+#: model:ir.model,name:stock_report_picking_print_custom_label.model_report_stock_report_picking_print_custom_label_sml_label
+msgid "Stock Move Custom Label"
+msgstr ""
+
+#. module: stock_report_picking_print_custom_label
+#: model:ir.model,name:stock_report_picking_print_custom_label.model_stock_picking
+msgid "Transfer"
+msgstr "Siirto"
