@@ -42,10 +42,12 @@
                         </div>
 
                         <div class="o_sml_row o_sml_locations">
+                            <!--
                             <div class="o_sml_location">
                                 <span class="o_sml_label">From:</span>
                                 <span t-field="doc.location_id.display_name" />
                             </div>
+                            -->
                             <div class="o_sml_location">
                                 <span class="o_sml_label">To:</span>
                                 <span t-field="doc.location_dest_id.display_name" />
