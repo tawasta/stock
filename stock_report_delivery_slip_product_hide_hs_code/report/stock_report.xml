@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template
+        id="report_delivery_document2"
+        inherit_id="stock_delivery.report_delivery_document2"
+    >
+
+        <!-- Replace the core's HS code check with a hardcoded 'False', removing
+         the HS code from multiple places on the print in one go -->
+        <xpath expr="//t[@t-set='has_hs_code']" position="attributes">
+            <attribute name="t-value">False</attribute>
+        </xpath>
+
+    </template>
+</odoo>

@@ -21,7 +21,7 @@
 {
     "name": "Stock Picking: Show Sale Order Partner on Delivery Slip Print",
     "summary": "Show the partner of the related sale on delivery slip print",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.2",
     "category": "Reporting",
     "website": "https://github.com/tawasta/stock",
     "author": "Futural",

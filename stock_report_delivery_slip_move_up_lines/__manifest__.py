@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Futural Oy
-#    Copyright 2023 Futural Oy (https://futural.fi)
+#    Copyright 2026 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    "name": "Show Volume field of Stock Pickings in tree view and picking prints",
-    "summary": "Picking's Volume is shown in list view and picking prints",
+    "name": "Delivery Slip – Move lines up a bit",
+    "summary": "Delivery Slip – Move lines up a bit",
     "version": "17.0.1.0.0",
     "category": "Stock",
     "website": "https://github.com/tawasta/stock",
@@ -29,12 +29,9 @@
     "application": False,
     "installable": True,
     "depends": [
-        "product",
-        "stock_dispatch_note_report_template",
-        "stock_picking_volume",
+        "stock",
     ],
     "data": [
-        "report/stock_report.xml",
-        "views/stock_picking.xml",
+        "report/delivery_slip.xml",
     ],
 }

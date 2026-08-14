@@ -15,7 +15,7 @@ addon | version | maintainers | summary
 [stock_auditlog_rules](stock_auditlog_rules/) | 17.0.1.1.0 |  | Adds audit log rules for stock.warehouse and stock.location
 [stock_batch_transfer_carrier_and_tracking_ref](stock_batch_transfer_carrier_and_tracking_ref/) | 17.0.1.1.1 |  | Adds Carrier and Tracking reference to batch transfer
 [stock_batch_transfer_contact_and_delivery_address](stock_batch_transfer_contact_and_delivery_address/) | 17.0.1.0.0 |  | Adds a default delivery address and contact to batch transfer
-[stock_default_reservation_location](stock_default_reservation_location/) | 17.0.1.0.0 |  | Reserve stock first from product default stock move location
+[stock_default_reservation_location](stock_default_reservation_location/) | 17.0.1.1.0 |  | Reserve stock first from product default stock move location
 [stock_delivery_report_custom_terms](stock_delivery_report_custom_terms/) | 17.0.1.0.0 |  | Stock Delivery Report Terms
 [stock_disable_invoice_shipping_on_delivery](stock_disable_invoice_shipping_on_delivery/) | 17.0.1.0.0 |  | Disable picking auto-generated delivery SO lines
 [stock_dispatch_note_report_template](stock_dispatch_note_report_template/) | 17.0.1.0.3 |  | Adds weights, dates and clickable print is shown as 'Dispatch Note'
@@ -24,15 +24,18 @@ addon | version | maintainers | summary
 [stock_inventory_adjustments_for_same_location](stock_inventory_adjustments_for_same_location/) | 17.0.1.0.0 |  | Multiple open adjustments are enabled for a same location
 [stock_inventory_count_sheet_sort_by_product](stock_inventory_count_sheet_sort_by_product/) | 17.0.1.0.0 |  | Inventory Count Sheet – sort quants by their product _order -attribute
 [stock_inventory_include_exhausted](stock_inventory_include_exhausted/) | 17.0.1.1.0 |  | Option to automatically add rows for exhausted products when doing inventory
+[stock_inventory_internal_use](stock_inventory_internal_use/) | 17.0.1.0.1 |  | Stock Inventory view for internal use
 [stock_inventory_line_readonly_info](stock_inventory_line_readonly_info/) | 17.0.1.0.5 |  | Show old inventory lines as readonly
 [stock_inventory_quantity_history_stock_inventory_link](stock_inventory_quantity_history_stock_inventory_link/) | 17.0.1.0.1 |  | Show the new qty fields also in list view provided by the another OCA inventory module
 [stock_location_analytic_account](stock_location_analytic_account/) | 17.0.1.0.1 |  | Integrate stock location with analytic account
 [stock_location_excess_mark](stock_location_excess_mark/) | 17.0.1.1.0 |  | Select a stock location and mark it as of excess type
+[stock_location_is_empty](stock_location_is_empty/) | 17.0.1.0.0 |  | Check and mark stock locations as Empty
+[stock_location_name_options](stock_location_name_options/) | 17.0.2.0.1 |  | Adds optional short-name columns for stock locations in all views and reports
 [stock_move_carrier_in_view_and_filter](stock_move_carrier_in_view_and_filter/) | 17.0.1.0.1 |  | Carrier info added to stock move list view and as a filter
 [stock_move_line_expiry_date_existing_lot](stock_move_line_expiry_date_existing_lot/) | 17.0.1.0.0 |  | Expiration Date of lot can be set when receiving a product
 [stock_move_pivot_disable_count_as_default](stock_move_pivot_disable_count_as_default/) | 17.0.1.0.0 |  | Disables the Count variable as default on stock move pivot.
 [stock_move_pivot_report_sh_product_tag](stock_move_pivot_report_sh_product_tag/) | 17.0.1.0.0 |  | Group by SH product tags in Stock Move pivot view
-[stock_move_product_default_location](stock_move_product_default_location/) | 17.0.1.2.1 |  | Move a product in a picking using its default location
+[stock_move_product_default_location](stock_move_product_default_location/) | 17.0.1.2.2 |  | Move a product in a picking using its default location
 [stock_move_recompute_state_scheduled](stock_move_recompute_state_scheduled/) | 17.0.1.0.0 |  | Scheduled action to recompute stock move statuses
 [stock_move_recompute_volume_scheduled](stock_move_recompute_volume_scheduled/) | 17.0.1.0.0 |  | Scheduled action to recompute stock move volumes
 [stock_move_search](stock_move_search/) | 17.0.1.0.0 |  | Additional Search options for Stock Move
@@ -75,7 +78,7 @@ addon | version | maintainers | summary
 [stock_picking_validate_button_no_refresh_after_report](stock_picking_validate_button_no_refresh_after_report/) | 17.0.2.1.2 |  | Do not hard refresh a page after Button validate has printed reports
 [stock_picking_view_vendor_product](stock_picking_view_vendor_product/) | 17.0.1.0.0 |  | Vendor Product Name and Code are added to Picking form view
 [stock_picking_volume_demand_qty](stock_picking_volume_demand_qty/) | 17.0.1.0.0 |  | Stock Picking Volume Demand Qty
-[stock_picking_volume_in_tree_and_prints](stock_picking_volume_in_tree_and_prints/) | 17.0.1.0.0 |  | Picking's Volume is shown in list view and picking prints
+[stock_picking_volume_in_prints](stock_picking_volume_in_prints/) | 17.0.2.0.0 |  | Picking's Volume is shown in picking prints
 [stock_product_qty_available_unreserved](stock_product_qty_available_unreserved/) | 17.0.1.0.1 |  | Add unreserved available (on hand - reserved)
 [stock_quant_list_view_increased_limit](stock_quant_list_view_increased_limit/) | 17.0.1.0.0 |  | Increase the number of shown lines to 300
 [stock_quant_list_view_product_tag](stock_quant_list_view_product_tag/) | 17.0.1.1.1 |  | Show product tags in stock quant tree view
@@ -87,11 +90,14 @@ addon | version | maintainers | summary
 [stock_report_customer_reference](stock_report_customer_reference/) | 17.0.1.0.1 |  | Stock Report Customer Reference
 [stock_report_customer_reference_under_address](stock_report_customer_reference_under_address/) | 17.0.1.0.2 |  | Customer Reference under address
 [stock_report_date_done](stock_report_date_done/) | 17.0.1.0.1 |  | Stock Picking Report Date of Transfer
+[stock_report_delivery_slip_move_up_lines](stock_report_delivery_slip_move_up_lines/) | 17.0.1.0.0 |  | Delivery Slip – Move lines up a bit
 [stock_report_delivery_slip_product_barcode](stock_report_delivery_slip_product_barcode/) | 17.0.1.0.0 |  | Show products' barcodes in numeric format
+[stock_report_delivery_slip_product_hide_hs_code](stock_report_delivery_slip_product_hide_hs_code/) | 17.0.1.0.0 |  | Don't show products' HS Codes
 [stock_report_delivery_slip_sale_order_customer_contact](stock_report_delivery_slip_sale_order_customer_contact/) | 17.0.1.0.0 |  | Show the customer contact of the related sale on delivery slip print
 [stock_report_delivery_slip_sale_order_customer_marking](stock_report_delivery_slip_sale_order_customer_marking/) | 17.0.1.0.0 |  | Show the customer marking of the related sale on delivery slip print
-[stock_report_delivery_slip_sale_order_partner](stock_report_delivery_slip_sale_order_partner/) | 17.0.1.0.0 |  | Show the partner of the related sale on delivery slip print
+[stock_report_delivery_slip_sale_order_partner](stock_report_delivery_slip_sale_order_partner/) | 17.0.1.0.2 |  | Show the partner of the related sale on delivery slip print
 [stock_report_delivery_slip_sale_order_sections](stock_report_delivery_slip_sale_order_sections/) | 17.0.1.0.0 |  | Show the related sale order's section and note lines on the delivery slip print, grouping delivered products under them
+[stock_report_delivery_slip_without_recipient](stock_report_delivery_slip_without_recipient/) | 17.0.1.0.0 |  | Adds a second delivery slip that hides all address info from PDF header
 [stock_report_element_sizes](stock_report_element_sizes/) | 17.0.1.0.3 |  | Stock Report element size changes
 [stock_report_enable_translation_by_partner](stock_report_enable_translation_by_partner/) | 17.0.1.0.0 |  | Use the language set for Delivery Address in Picking Operations PDF print
 [stock_report_force_left_align_headings](stock_report_force_left_align_headings/) | 17.0.1.0.0 |  | Adds separate toggles for reports to enforce th element alignment
