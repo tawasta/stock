@@ -24,13 +24,22 @@ class StockPicking(models.Model):
             )
 
             pending_headers = self.env["sale.order.line"]
+            in_header_run = False
             current_group = None
 
             for line in order.order_line.sorted("sequence"):
                 if line.display_type:
+                    if not in_header_run:
+                        # A new run of section/note lines: whatever was
+                        # pending before was never used by a product line
+                        # actually present in this delivery, so drop it.
+                        pending_headers = self.env["sale.order.line"]
                     pending_headers |= line
+                    in_header_run = True
                     current_group = None
                     continue
+
+                in_header_run = False
 
                 if product_counts[line.product_id.id] != 1:
                     # Repeated product: never trust sale_line_id enough to
