@@ -91,6 +91,7 @@ addon | version | maintainers | summary
 [stock_report_delivery_slip_sale_order_customer_contact](stock_report_delivery_slip_sale_order_customer_contact/) | 17.0.1.0.0 |  | Show the customer contact of the related sale on delivery slip print
 [stock_report_delivery_slip_sale_order_customer_marking](stock_report_delivery_slip_sale_order_customer_marking/) | 17.0.1.0.0 |  | Show the customer marking of the related sale on delivery slip print
 [stock_report_delivery_slip_sale_order_partner](stock_report_delivery_slip_sale_order_partner/) | 17.0.1.0.0 |  | Show the partner of the related sale on delivery slip print
+[stock_report_delivery_slip_sale_order_sections](stock_report_delivery_slip_sale_order_sections/) | 17.0.1.0.0 |  | Show the related sale order's section and note lines on the delivery slip print, grouping delivered products under them
 [stock_report_element_sizes](stock_report_element_sizes/) | 17.0.1.0.3 |  | Stock Report element size changes
 [stock_report_enable_translation_by_partner](stock_report_enable_translation_by_partner/) | 17.0.1.0.0 |  | Use the language set for Delivery Address in Picking Operations PDF print
 [stock_report_force_left_align_headings](stock_report_force_left_align_headings/) | 17.0.1.0.0 |  | Adds separate toggles for reports to enforce th element alignment
