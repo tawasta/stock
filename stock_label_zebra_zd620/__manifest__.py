@@ -20,8 +20,8 @@
 
 {
     "name": "Stock Label: Zebra ZD620",
-    "summary": "76x50mm ZPL label formats for products, deliveries and receipts",
-    "version": "19.0.1.0.0",
+    "summary": "76x50mm label formats for products, transfers and lots",
+    "version": "19.0.1.1.0",
     "category": "Stock",
     "website": "https://github.com/tawasta/stock",
     "author": "Futural",
@@ -36,5 +36,6 @@
     "data": [
         "report/label_zd620_product.xml",
         "report/label_zd620_transfer.xml",
+        "report/label_zd620_lot.xml",
     ],
 }

@@ -6,10 +6,10 @@
 Stock Label: Zebra ZD620
 =========================
 
-* Adds two 76mm x 50mm PDF label formats to the standard "Print Labels"
-  wizard (``product.label.layout``), for a Zebra ZD620 label printer, the
-  same way core's own "Dymo"/"2x7 with price" etc. formats work: a
-  dedicated ``report.paperformat`` (76x50mm)
+* Adds three 76mm x 50mm PDF label formats to the standard "Print Labels"
+  wizards (``product.label.layout`` and ``lot.label.layout``), for a Zebra
+  ZD620 label printer, the same way core's own "Dymo"/"2x7 with price"
+  etc. formats work: a dedicated ``report.paperformat`` (76x50mm)
 
 Configuration
 =============
@@ -21,6 +21,11 @@ Usage
   "ZD620 Product Label (76x50mm)".
 * From an outgoing or incoming transfer: Print > Labels, choose "ZD620
   Transfer Label (76x50mm)".
+* From a transfer with tracked lots/serials: Print > Labels > Lot/SN
+  Labels, choose "ZD620 Lot Label (76x50mm)".
+* From a Lot/Serial Number record directly: gear menu > Print >
+  "Lot/Serial Number (ZD620)", next to core's own "(PDF)"/"(ZPL)"
+  options.
 
 Known issues / Roadmap
 ======================
