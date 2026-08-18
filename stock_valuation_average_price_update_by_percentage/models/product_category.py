@@ -25,7 +25,7 @@ class ProductCategory(models.Model):
                     "Available quantity is 120 Units.\n"
                     "Purchased price is 35€ with 10 Units.\n\n"
                     "Then the new cost for a product is:\n"
-                    "(30€ * 120 + (35€ * 10) / (120 + 10))"
+                    "((30€ * 120 + (35€ * 10)) / (120 + 10))"
                     " * (1 + %(perc)s) = %(tot)s\n\n"
                     "The original cost would had been: %(orig_total)s",
                     perc=category.percentage_update,
