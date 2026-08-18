@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <record id="label_zd620_transfer" model="ir.actions.report">
+    <field name="name">Transfer Label (ZD620)</field>
+    <field name="model">stock.picking</field>
+    <field name="report_type">qweb-pdf</field>
+    <field name="report_name">stock_label_zebra_zd620.label_zd620_transfer_view</field>
+    <field name="report_file">stock_label_zebra_zd620.label_zd620_transfer_view</field>
+    <field
+      name="paperformat_id"
+      ref="stock_label_zebra_zd620.paperformat_zd620_label"
+    />
+    <field name="binding_model_id" eval="False" />
+    <field name="binding_type">report</field>
+  </record>
+
+  <template id="label_zd620_transfer_view">
+    <t t-call="web.html_container">
+      <style>
+        html, body { margin: 0; padding: 0; background-color: #FFD100; }
+      </style>
+      <t t-foreach="lines" t-as="line">
+        <div
+          class="page"
+          style="width:76mm;height:50mm;margin:0;padding:2mm;box-sizing:border-box;overflow:hidden;font-size:9px;background-color:#FFD100;color:#000000;font-family:Arial,Helvetica,sans-serif;display:flex;flex-direction:column;"
+        >
+          <div
+            style="border-bottom:0.3mm solid #000000;padding-bottom:0.5mm;font-weight:bold;"
+          >
+            <span t-out="company.name" />
+            <t t-if="line['is_outgoing']">
+              — SO: <span t-out="line['source_document_name']" />
+            </t>
+            <t t-else="">
+              — PO: <span t-out="line['source_document_name']" />
+            </t>
+          </div>
+          <div t-if="line['is_outgoing']" style="margin-top:0.5mm;">
+            <span t-out="line['customer_name']" />
+            <t t-if="line['customer_reference']"> / <span
+              t-out="line['customer_reference']"
+            /></t>
+          </div>
+          <div
+            t-if="line['barcode'] or line['default_code']"
+            style="text-align:center;margin-top:1.5mm;"
+          >
+            <img
+              t-att-src="env['ir.actions.report'].zd620_barcode_data_uri(line['barcode'] or line['default_code'])"
+              style="width:70mm;height:16mm;"
+            />
+          </div>
+          <div
+            t-if="line['default_code']"
+            style="font-size:18px;font-weight:bold;line-height:1.05;margin-top:1.5mm;text-align:center;"
+          >
+            <span t-out="line['default_code']" />
+          </div>
+          <div
+            style="font-size:11px;line-height:1.15;overflow:hidden;margin-top:1mm;text-align:center;flex-grow:1;"
+          >
+            <span t-out="line['product'].display_name" />
+          </div>
+          <div style="font-size:9px;border-top:0.2mm solid #000000;padding-top:0.5mm;">
+            <span t-out="line['quantity']" />
+            <span t-out="line['uom_name']" />
+            <t t-if="line['lot_name']"> — LOT: <span t-out="line['lot_name']" /></t>
+            <t t-if="line['is_outgoing']"> — LOC: <span
+              t-out="line['location_name']"
+            /></t>
+          </div>
+        </div>
+      </t>
+    </t>
+  </template>
+</odoo>

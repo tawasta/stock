@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <!-- report.paperformat's page_width/page_height are swapped when
+         orientation is "Landscape" (see report_paperformat.py
+         _compute_print_page_size, and how ir_actions_report builds the
+         wkhtmltopdf page size and orientation arguments from them).
+         Core's own Dymo label (product.paperformat_label_sheet_dymo)
+         follows the same convention: give the portrait numbers
+         (narrower as width) and let orientation="Landscape" swap them to
+         the actual wide 76x50mm result. -->
+  <record id="paperformat_zd620_label" model="report.paperformat">
+    <field name="name">ZD620 Label (76x50mm)</field>
+    <field name="format">custom</field>
+    <field name="page_width">50</field>
+    <field name="page_height">76</field>
+    <field name="orientation">Landscape</field>
+    <field name="margin_top">0</field>
+    <field name="margin_bottom">0</field>
+    <field name="margin_left">0</field>
+    <field name="margin_right">0</field>
+    <field name="disable_shrinking" eval="True" />
+    <field name="dpi">96</field>
+  </record>
+
+  <record id="label_zd620_product" model="ir.actions.report">
+    <field name="name">Product Label (ZD620)</field>
+    <field name="model">product.product</field>
+    <field name="report_type">qweb-pdf</field>
+    <field name="report_name">stock_label_zebra_zd620.label_zd620_product_view</field>
+    <field name="report_file">stock_label_zebra_zd620.label_zd620_product_view</field>
+    <field name="paperformat_id" ref="paperformat_zd620_label" />
+    <field name="print_report_name">'Product Labels - %s' % (object.name)</field>
+    <field name="binding_model_id" eval="False" />
+    <field name="binding_type">report</field>
+  </record>
+
+  <template id="label_zd620_product_view">
+    <t t-call="web.html_container">
+      <style>
+        html, body { margin: 0; padding: 0; background-color: #FFD100; }
+      </style>
+      <t t-foreach="quantity.items()" t-as="barcode_and_qty_by_product">
+        <t t-set="product" t-value="barcode_and_qty_by_product[0]" />
+        <t t-foreach="barcode_and_qty_by_product[1]" t-as="barcode_and_qty">
+          <t t-set="barcode" t-value="barcode_and_qty[0]" />
+          <t t-foreach="range(barcode_and_qty[1])" t-as="copy">
+            <div
+              class="page"
+              style="width:76mm;height:50mm;margin:0;padding:2mm;box-sizing:border-box;overflow:hidden;background-color:#FFD100;color:#000000;font-family:Arial,Helvetica,sans-serif;display:flex;flex-direction:column;"
+            >
+              <div
+                style="font-size:9px;font-weight:bold;border-bottom:0.3mm solid #000000;padding-bottom:0.5mm;"
+              >
+                <span t-out="company.name" />
+              </div>
+              <div t-if="barcode" style="text-align:center;margin-top:1.5mm;">
+                <img
+                  t-att-src="env['ir.actions.report'].zd620_barcode_data_uri(barcode)"
+                  style="width:70mm;height:19mm;"
+                />
+              </div>
+              <div
+                t-if="product.default_code"
+                style="font-size:21px;font-weight:bold;line-height:1.05;margin-top:1.5mm;text-align:center;"
+              >
+                <span t-field="product.default_code" />
+              </div>
+              <div
+                style="font-size:13px;line-height:1.15;overflow:hidden;margin-top:1mm;text-align:center;flex-grow:1;"
+              >
+                <span t-field="product.display_name" />
+              </div>
+            </div>
+          </t>
+        </t>
+      </t>
+    </t>
+  </template>
+</odoo>

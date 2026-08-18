@@ -1,0 +1,37 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_label_zebra_zd620
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-18 00:00+0000\n"
+"PO-Revision-Date: 2026-08-18 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: stock_label_zebra_zd620
+#: selection:product.label.layout,print_format:0
+msgid "ZD620 Product Label (76x50mm)"
+msgstr "ZD620 Product Label (76x50mm)"
+
+#. module: stock_label_zebra_zd620
+#: selection:product.label.layout,print_format:0
+msgid "ZD620 Transfer Label (76x50mm)"
+msgstr "ZD620 Transfer Label (76x50mm)"
+
+#. module: stock_label_zebra_zd620
+#: code:addons/stock_label_zebra_zd620/wizard/product_label_layout.py:0
+msgid "Select a transfer to print this label from."
+msgstr "Select a transfer to print this label from."
+
+#. module: stock_label_zebra_zd620
+#: selection:lot.label.layout,print_format:0
+msgid "ZD620 Lot Label (76x50mm)"
+msgstr "ZD620 Lot Label (76x50mm)"
