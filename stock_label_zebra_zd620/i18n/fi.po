@@ -19,19 +19,19 @@ msgstr ""
 #. module: stock_label_zebra_zd620
 #: selection:product.label.layout,print_format:0
 msgid "ZD620 Product Label (76x50mm)"
-msgstr ""
+msgstr "ZD620 Product Label (76x50mm)"
 
 #. module: stock_label_zebra_zd620
 #: selection:product.label.layout,print_format:0
 msgid "ZD620 Transfer Label (76x50mm)"
-msgstr ""
+msgstr "ZD620 Transfer Label (76x50mm)"
 
 #. module: stock_label_zebra_zd620
 #: code:addons/stock_label_zebra_zd620/wizard/product_label_layout.py:0
 msgid "Select a transfer to print this label from."
-msgstr ""
+msgstr "Select a transfer to print this label from."
 
 #. module: stock_label_zebra_zd620
 #: selection:lot.label.layout,print_format:0
 msgid "ZD620 Lot Label (76x50mm)"
-msgstr ""
+msgstr "ZD620 Lot Label (76x50mm)"
