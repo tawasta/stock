@@ -30,11 +30,11 @@ class ReportLabelZd620Transfer(models.AbstractModel):
             "uom_name": move_line.product_uom_id.name,
             "lot_name": lot_name if product.tracking != "none" else "",
             "source_document_name": source_document.name if source_document else "",
-            "customer_name": picking.partner_id.name if is_outgoing else "",
+            "customer_name": picking.partner_id.name or "",
             "customer_reference": (
-                getattr(source_document, "client_order_ref", "") or ""
-                if is_outgoing
-                else ""
+                getattr(source_document, "client_order_ref", "")
+                or getattr(source_document, "partner_ref", "")
+                or ""
             ),
             "location_name": move_line.location_id.name if is_outgoing else "",
         }

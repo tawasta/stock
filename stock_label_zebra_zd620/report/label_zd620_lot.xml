@@ -30,11 +30,11 @@
           style="width:76mm;height:50mm;margin:0;padding:2mm;box-sizing:border-box;overflow:hidden;background-color:#FFD100;color:#000000;font-family:Arial,Helvetica,sans-serif;display:flex;flex-direction:column;"
         >
           <div
-            style="font-size:9px;font-weight:bold;border-bottom:0.3mm solid #000000;padding-bottom:0.5mm;"
+            style="font-size:10px;font-weight:bold;border-bottom:0.3mm solid #000000;padding-bottom:0.5mm;"
           >
             <span t-out="company.name" />
           </div>
-          <div style="font-size:11px;margin-top:1mm;">
+          <div style="font-size:12px;margin-top:1mm;">
                         LOT: <span t-field="lot.name" style="font-weight:bold;" />
                     </div>
           <div
@@ -44,14 +44,14 @@
             <span t-field="lot.product_uom_id.name" style="font-size:15px;" />
           </div>
           <div
-            style="font-size:11px;line-height:1.15;overflow:hidden;margin-top:1mm;text-align:center;flex-grow:1;"
+            style="font-size:14px;line-height:1.2;overflow:hidden;margin-top:1mm;text-align:center;flex-grow:1;"
           >
             <span t-field="lot.product_id.display_name" />
           </div>
           <div t-if="lot.product_id.barcode" style="text-align:center;margin-top:1mm;">
             <img
               t-att-src="env['ir.actions.report'].zd620_barcode_data_uri(lot.product_id.barcode)"
-              style="width:68mm;height:15mm;"
+              style="width:60mm;height:9mm;"
             />
           </div>
         </div>
