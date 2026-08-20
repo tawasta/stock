@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <record id="search_product_lot_filter" model="ir.ui.view">
+    <field name="name">stock.lot.search.day.filter</field>
+    <field name="model">stock.lot</field>
+    <field name="inherit_id" ref="stock.search_product_lot_filter" />
+    <field name="arch" type="xml">
+      <filter name="creation_date" position="after">
+        <filter
+          string="Updated in 24 hours"
+          name="last_modified_time"
+          domain="[('last_modified_time', '=', True)]"
+        />
+      </filter>
+    </field>
+  </record>
+</odoo>
