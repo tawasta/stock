@@ -17,22 +17,22 @@
   <template id="label_zd620_transfer_view">
     <t t-call="web.html_container">
       <style>
-        html, body { margin: 0; padding: 0; background-color: #FFD100; }
+        html, body { margin: 0; padding: 0; background-color: #FFFFFF; }
       </style>
       <t t-foreach="lines" t-as="line">
         <div
           class="page"
-          style="width:76mm;height:50mm;margin:0;padding:2mm;box-sizing:border-box;overflow:hidden;font-size:11px;background-color:#FFD100;color:#000000;font-family:Arial,Helvetica,sans-serif;display:flex;flex-direction:column;"
+          style="width:76mm;height:50mm;margin:0;padding:2mm;box-sizing:border-box;overflow:hidden;font-size:11px;background-color:#FFFFFF;color:#000000;font-family:Arial,Helvetica,sans-serif;display:flex;flex-direction:column;"
         >
           <div
             style="border-bottom:0.3mm solid #000000;padding-bottom:0.5mm;font-weight:bold;font-size:12px;"
           >
             <span t-out="company.name" />
             <t t-if="line['is_outgoing']">
-              — SO: <span t-out="line['source_document_name']" />
+              - SO: <span t-out="line['source_document_name']" />
             </t>
             <t t-else="">
-              — PO: <span t-out="line['source_document_name']" />
+              - PO: <span t-out="line['source_document_name']" />
             </t>
           </div>
           <div
@@ -69,8 +69,8 @@
           >
             <span t-out="line['quantity']" />
             <span t-out="line['uom_name']" />
-            <t t-if="line['lot_name']"> — LOT: <span t-out="line['lot_name']" /></t>
-            <t t-if="line['is_outgoing']"> — LOC: <span
+            <t t-if="line['lot_name']"> - LOT: <span t-out="line['lot_name']" /></t>
+            <t t-if="line['is_outgoing']"> - LOC: <span
               t-out="line['location_name']"
             /></t>
           </div>
