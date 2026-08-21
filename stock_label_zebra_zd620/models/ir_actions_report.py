@@ -9,6 +9,27 @@ from odoo import models
 class IrActionsReport(models.Model):
     _inherit = "ir.actions.report"
 
+    def _build_wkhtmltopdf_args(self, paperformat_id, landscape, **kwargs):
+        """Force UTF-8 for the ZD620 labels.
+
+        wkhtmltopdf is supposed to detect the page's encoding from its own
+        <meta charset="utf-8"> tag, but on these labels that auto-detection
+        has been unreliable in practice (Finnish letters and the en dash
+        rendered as mojibake, e.g. "Ä" as "Ã„"), even though the source HTML
+        is correctly UTF-8 encoded. Passing --encoding explicitly sidesteps
+        the auto-detection entirely. Scoped to this module's own
+        paperformat only, so it doesn't change wkhtmltopdf's behavior for
+        any other report.
+        """
+        command_args = super()._build_wkhtmltopdf_args(
+            paperformat_id, landscape, **kwargs
+        )
+        if paperformat_id and paperformat_id == self.env.ref(
+            "stock_label_zebra_zd620.paperformat_zd620_label"
+        ):
+            command_args.extend(["--encoding", "utf-8"])
+        return command_args
+
     def zd620_barcode_data_uri(self, value, humanreadable=True):
         """Render a barcode the same way the core "barcode" QWeb widget
         does, but with its white background made transparent.
