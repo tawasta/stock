@@ -109,6 +109,7 @@ addon | version | maintainers | summary
 [stock_report_our_reference](stock_report_our_reference/) | 17.0.1.0.2 |  | Stock Picking and Delivery Slip Report Our Reference
 [stock_report_picking_all_moves](stock_report_picking_all_moves/) | 17.0.2.0.0 |  | Stock Picking PDF Report - Show all stock moves
 [stock_report_picking_customer_address](stock_report_picking_customer_address/) | 17.0.1.0.0 |  | Stock Report picking Customer Address details
+[stock_report_picking_default_location](stock_report_picking_default_location/) | 17.0.1.0.0 |  | Show informative Default Location of a product in Picking Operations
 [stock_report_picking_description_picking](stock_report_picking_description_picking/) | 17.0.1.0.0 |  | Adds Description column with description_picking to picking report
 [stock_report_picking_header_shrink](stock_report_picking_header_shrink/) | 17.0.1.0.0 |  | Decrease font size of stock picking print header section
 [stock_report_picking_hide_footer](stock_report_picking_hide_footer/) | 17.0.1.0.0 |  | Hide footer on Picking Operations
