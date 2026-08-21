@@ -5,14 +5,14 @@
         <!-- State != Done, heading and lines -->
         <xpath
             expr="//table[@name='stock_move_table']/thead//th[@name='th_sm_product']"
-            position="before"
+            position="after"
         >
             <th name="th_sm_default_location"><strong>Default location</strong></th>
         </xpath>
 
         <xpath
-            expr="//table[@name='stock_move_table']/tbody/tr/td[1]"
-            position="before"
+            expr="//table[@name='stock_move_table']//tbody//span[@t-field='move.product_id']/.."
+            position="after"
         >
             <td name="td_sm_default_location">
                 <span t-esc="move.product_id.default_stock_move_location_id.name" />
@@ -22,7 +22,7 @@
         <!-- State == Done, heading -->
         <xpath
             expr="//table[@name='stock_move_line_table']/thead//th[@name='th_sml_product']"
-            position="before"
+            position="after"
         >
             <th name="th_sml_default_location"><strong>Default location</strong></th>
         </xpath>
@@ -35,7 +35,10 @@
         id="stock_report_delivery_aggregated_move_lines"
         inherit_id="stock.stock_report_delivery_aggregated_move_lines"
     >
-        <xpath expr='//tr[@t-as="line"]/td[1]' position="before">
+        <xpath
+            expr="//tr[@t-as='line']/td[@name='move_line_aggregated_qty_ordered']"
+            position="before"
+        >
             <td>
                 <t t-if="aggregated_lines[line].get('default_location')">
                     <span t-esc="aggregated_lines[line]['default_location'].name" />

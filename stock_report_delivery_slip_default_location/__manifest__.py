@@ -21,7 +21,7 @@
 {
     "name": "Show Default Location in Delivery Slip",
     "summary": "Show informative Default Location of a product in Delivery Slip",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Stock",
     "website": "https://github.com/tawasta/stock",
     "author": "Futural",
