@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_picking" inherit_id="stock.report_picking">
+        <xpath expr="//th[@name='th_product']" position="after">
+            <th name="th_default_location"><strong>Default location</strong></th>
+        </xpath>
+
+        <xpath expr="//span[@t-field='ml.product_uom_id']/.." position="before">
+            <td id="move_default_location">
+                <span t-field="ml.product_id.default_stock_move_location_id.name" />
+            </td>
+        </xpath>
+    </template>
+</odoo>
