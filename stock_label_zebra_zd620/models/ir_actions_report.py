@@ -10,7 +10,7 @@ class IrActionsReport(models.Model):
     _inherit = "ir.actions.report"
 
     def _build_wkhtmltopdf_args(self, paperformat_id, landscape, **kwargs):
-        """Force UTF-8: wkhtmltopdf's charset auto-detection is unreliable on these labels."""
+        """Force UTF-8: wkhtmltopdf's charset auto-detection is unreliable here."""
         command_args = super()._build_wkhtmltopdf_args(
             paperformat_id, landscape, **kwargs
         )
