@@ -55,8 +55,8 @@
               </div>
               <div t-if="barcode" style="text-align:center;margin-top:1mm;">
                 <img
-                  t-att-src="env['ir.actions.report'].zd620_barcode_data_uri(barcode)"
-                  style="width:50mm;height:8mm;"
+                  t-att-src="env['ir.actions.report'].zd620_barcode_data_uri(barcode, width=450, height=60)"
+                  style="width:45mm;height:6mm;"
                 />
               </div>
               <div

@@ -30,7 +30,7 @@ class IrActionsReport(models.Model):
             command_args.extend(["--encoding", "utf-8"])
         return command_args
 
-    def zd620_barcode_data_uri(self, value, humanreadable=True):
+    def zd620_barcode_data_uri(self, value, humanreadable=True, width=450, height=60):
         """Render a barcode the same way the core "barcode" QWeb widget
         does, but with its white background made transparent.
 
@@ -40,11 +40,22 @@ class IrActionsReport(models.Model):
         transparency, so the white square would otherwise stay visible on
         the label's colored background. Making the PNG itself transparent
         works in any renderer.
+
+        ``width``/``height`` (px) must match the <img> tag's CSS aspect
+        ratio in the calling template: the core barcode() defaults
+        (600x100) don't match the labels' narrow boxes, which both
+        stretched the image and made the human-readable text (sized
+        relative to the given height) look oversized.
         """
         if not value:
             return ""
         png_bytes = self.barcode(
-            "auto", value, humanreadable=1 if humanreadable else 0, quiet=0
+            "auto",
+            value,
+            width=width,
+            height=height,
+            humanreadable=1 if humanreadable else 0,
+            quiet=0,
         )
         image = Image.open(BytesIO(png_bytes)).convert("RGBA")
         alpha = image.convert("L").point(lambda pixel: 0 if pixel > 200 else 255)

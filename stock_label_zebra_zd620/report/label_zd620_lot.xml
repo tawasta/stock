@@ -50,8 +50,8 @@
           </div>
           <div t-if="lot.product_id.barcode" style="text-align:center;margin-top:1mm;">
             <img
-              t-att-src="env['ir.actions.report'].zd620_barcode_data_uri(lot.product_id.barcode)"
-              style="width:50mm;height:7mm;"
+              t-att-src="env['ir.actions.report'].zd620_barcode_data_uri(lot.product_id.barcode, width=450, height=55)"
+              style="width:45mm;height:5.5mm;"
             />
           </div>
         </div>
