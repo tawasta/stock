@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-  <!-- binding_model_id makes this appear directly in the "Print" menu on
-         a stock.lot record, the same way core's own "Lot/Serial Number
-         (PDF)"/"(ZPL)" actions do (stock.action_report_lot_label /
-         stock.label_lot_template) -->
   <record id="label_zd620_lot" model="ir.actions.report">
     <field name="name">Lot/Serial Number (ZD620)</field>
     <field name="model">stock.lot</field>
@@ -50,9 +46,10 @@
           </div>
           <div t-if="lot.product_id.barcode" style="text-align:center;margin-top:1mm;">
             <img
-              t-att-src="env['ir.actions.report'].zd620_barcode_data_uri(lot.product_id.barcode, width=450, height=55)"
-              style="width:45mm;height:5.5mm;"
+              t-att-src="env['ir.actions.report'].zd620_barcode_data_uri(lot.product_id.barcode, humanreadable=False)"
+              style="width:42mm;height:7mm;"
             />
+            <div style="font-size:10px;" t-out="lot.product_id.barcode" />
           </div>
         </div>
       </t>

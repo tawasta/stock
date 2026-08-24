@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-  <!-- report.paperformat's page_width/page_height are swapped when
-         orientation is "Landscape" (see report_paperformat.py
-         _compute_print_page_size, and how ir_actions_report builds the
-         wkhtmltopdf page size and orientation arguments from them).
-         Core's own Dymo label (product.paperformat_label_sheet_dymo)
-         follows the same convention: give the portrait numbers
-         (narrower as width) and let orientation="Landscape" swap them to
-         the actual wide 76x50mm result. -->
   <record id="paperformat_zd620_label" model="report.paperformat">
     <field name="name">ZD620 Label (76x50mm)</field>
     <field name="format">custom</field>
@@ -55,9 +47,10 @@
               </div>
               <div t-if="barcode" style="text-align:center;margin-top:1mm;">
                 <img
-                  t-att-src="env['ir.actions.report'].zd620_barcode_data_uri(barcode, width=450, height=60)"
-                  style="width:45mm;height:6mm;"
+                  t-att-src="env['ir.actions.report'].zd620_barcode_data_uri(barcode, humanreadable=False)"
+                  style="width:42mm;height:7mm;"
                 />
+                <div style="font-size:10px;" t-out="barcode" />
               </div>
               <div
                 t-if="product.default_code"

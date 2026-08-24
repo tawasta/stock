@@ -10,17 +10,7 @@ class IrActionsReport(models.Model):
     _inherit = "ir.actions.report"
 
     def _build_wkhtmltopdf_args(self, paperformat_id, landscape, **kwargs):
-        """Force UTF-8 for the ZD620 labels.
-
-        wkhtmltopdf is supposed to detect the page's encoding from its own
-        <meta charset="utf-8"> tag, but on these labels that auto-detection
-        has been unreliable in practice (Finnish letters and the en dash
-        rendered as mojibake, e.g. "Ä" as "Ã„"), even though the source HTML
-        is correctly UTF-8 encoded. Passing --encoding explicitly sidesteps
-        the auto-detection entirely. Scoped to this module's own
-        paperformat only, so it doesn't change wkhtmltopdf's behavior for
-        any other report.
-        """
+        """Force UTF-8: wkhtmltopdf's charset auto-detection is unreliable on these labels."""
         command_args = super()._build_wkhtmltopdf_args(
             paperformat_id, landscape, **kwargs
         )
@@ -30,32 +20,12 @@ class IrActionsReport(models.Model):
             command_args.extend(["--encoding", "utf-8"])
         return command_args
 
-    def zd620_barcode_data_uri(self, value, humanreadable=True, width=450, height=60):
-        """Render a barcode the same way the core "barcode" QWeb widget
-        does, but with its white background made transparent.
-
-        The core widget always draws black bars on a white background
-        (there's no color option in ir.actions.report.barcode()), and
-        wkhtmltopdf doesn't support CSS mix-blend-mode to fake
-        transparency, so the white square would otherwise stay visible on
-        the label's colored background. Making the PNG itself transparent
-        works in any renderer.
-
-        ``width``/``height`` (px) must match the <img> tag's CSS aspect
-        ratio in the calling template: the core barcode() defaults
-        (600x100) don't match the labels' narrow boxes, which both
-        stretched the image and made the human-readable text (sized
-        relative to the given height) look oversized.
-        """
+    def zd620_barcode_data_uri(self, value, humanreadable=True):
+        """Same as core's barcode(), but with a transparent background."""
         if not value:
             return ""
         png_bytes = self.barcode(
-            "auto",
-            value,
-            width=width,
-            height=height,
-            humanreadable=1 if humanreadable else 0,
-            quiet=0,
+            "auto", value, humanreadable=1 if humanreadable else 0, quiet=0
         )
         image = Image.open(BytesIO(png_bytes)).convert("RGBA")
         alpha = image.convert("L").point(lambda pixel: 0 if pixel > 200 else 255)

@@ -49,8 +49,12 @@
             style="text-align:center;margin-top:1mm;"
           >
             <img
-              t-att-src="env['ir.actions.report'].zd620_barcode_data_uri(line['barcode'] or line['default_code'], width=450, height=55)"
-              style="width:45mm;height:5.5mm;"
+              t-att-src="env['ir.actions.report'].zd620_barcode_data_uri(line['barcode'] or line['default_code'], humanreadable=False)"
+              style="width:42mm;height:7mm;"
+            />
+            <div
+              style="font-size:10px;"
+              t-out="line['barcode'] or line['default_code']"
             />
           </div>
           <div
