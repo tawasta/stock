@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <template id="report_picking" inherit_id="stock.report_picking">
+    <xpath expr="//span[@t-out='format_number(move.quantity)']" position="attributes">
+      <attribute
+        name="t-options"
+      >{'widget': 'float', 'decimal_precision': 'Company Precision'}</attribute>
+    </xpath>
+    <xpath expr="//span[@t-out='format_number(line.quantity)']" position="attributes">
+      <attribute
+        name="t-options"
+      >{'widget': 'float', 'decimal_precision': 'Company Precision'}</attribute>
+    </xpath>
+  </template>
+</odoo>
