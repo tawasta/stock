@@ -59,12 +59,12 @@
           </div>
           <div
             t-if="line['default_code']"
-            style="font-size:19px;font-weight:bold;line-height:1.05;margin-top:1mm;text-align:center;"
+            style="font-size:18px;font-weight:bold;line-height:1.05;margin-top:1mm;text-align:center;"
           >
             <span t-out="line['default_code']" />
           </div>
           <div
-            style="font-size:14px;line-height:1.2;overflow:hidden;margin-top:1mm;text-align:center;flex-grow:1;"
+            style="font-size:13px;line-height:1.2;overflow:hidden;margin-top:1mm;text-align:center;flex-grow:1;"
           >
             <span t-out="line['product'].display_name" />
           </div>
