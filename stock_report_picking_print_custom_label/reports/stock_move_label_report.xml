@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Main report template: 7-row grid layout -->
+    <template id="sml_label">
+        <t t-call="web.basic_layout">
+            <div class="page">
+                <t t-foreach="docs" t-as="doc">
+                    <div class="o_stock_move_custom_label">
+                        <div class="o_sml_row o_sml_default_code">
+                            <span t-field="doc.product_id.default_code" />
+                        </div>
+
+                        <div class="o_sml_row o_sml_quantity">
+                            <span t-esc="qty_labels[doc.id]" />
+                            <span t-field="doc.product_uom" />
+                        </div>
+
+                        <div class="o_sml_row o_sml_product_name">
+                            <span t-field="doc.product_id.name" />
+                        </div>
+
+                        <div class="o_sml_row o_sml_barcode">
+                            <t t-if="doc.product_id.barcode">
+                                <div
+                                    class="o_sml_ean_barcode"
+                                    t-out="doc.product_id.barcode"
+                                    t-options="{
+                                        'widget': 'barcode',
+                                        'quiet': 0,
+                                        'symbology': 'Code128',
+                                        'img_style': 'width:260mm;height:35mm;'
+                                    }"
+                                />
+                                <div class="o_sml_barcode_text">
+                                    <span t-esc="doc.product_id.barcode" />
+                                </div>
+                            </t>
+                            <t t-else="">
+                                <span class="o_sml_no_ean">No barcode</span>
+                            </t>
+                        </div>
+
+                        <div class="o_sml_row o_sml_locations">
+                            <!--
+                            <div class="o_sml_location">
+                                <span class="o_sml_label">From:</span>
+                                <span t-field="doc.location_id.display_name" />
+                            </div>
+                            -->
+                            <div class="o_sml_location">
+                                <span class="o_sml_label">To:</span>
+                                <span t-field="doc.location_dest_id.display_name" />
+                            </div>
+                            <div class="o_sml_location">
+                                <span class="o_sml_label">Default:</span>
+                                <span
+                                    t-field="doc.product_id.default_stock_move_location_id.display_name"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="o_sml_row o_sml_date">
+                            <span t-esc="today.strftime('%d.%m.%Y')" />
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </t>
+    </template>
+
+    <!-- Paperformat: A4 landscape -->
+    <record id="paperformat_stock_move_custom_label" model="report.paperformat">
+        <field name="name">A4 Landscape - Stock Move Custom Label</field>
+        <field name="default" eval="False" />
+        <field name="format">A4</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">5</field>
+        <field name="margin_bottom">5</field>
+        <field name="margin_left">5</field>
+        <field name="margin_right">5</field>
+        <field name="disable_shrinking" eval="True" />
+        <field name="dpi">96</field>
+    </record>
+
+    <!-- Report action, triggered by the transfer form button -->
+    <record id="action_report_stock_move_custom_label" model="ir.actions.report">
+        <field name="name">Custom Label</field>
+        <field name="model">stock.move</field>
+        <field name="report_type">qweb-pdf</field>
+        <field
+            name="report_name"
+        >stock_report_picking_print_custom_label.sml_label</field>
+        <field
+            name="report_file"
+        >stock_report_picking_print_custom_label.sml_label</field>
+        <field
+            name="paperformat_id"
+            ref="stock_report_picking_print_custom_label.paperformat_stock_move_custom_label"
+        />
+        <field
+            name="print_report_name"
+        >'Custom Labels - %s' % (object[:1].picking_id.name or object[:1].product_id.name or '')</field>
+    </record>
+
+</odoo>
