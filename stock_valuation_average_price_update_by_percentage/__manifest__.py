@@ -21,7 +21,7 @@
 {
     "name": "Percentage update in stock valuation",
     "summary": "Set a factor by which stock valuation is updated with average price",
-    "version": "17.0.1.0.1",
+    "version": "17.0.1.0.2",
     "category": "Stock",
     "website": "https://github.com/tawasta/stock",
     "author": "Futural",
@@ -29,6 +29,7 @@
     "application": False,
     "installable": True,
     "depends": [
+        "mrp",
         "stock_account",
     ],
     "data": [
