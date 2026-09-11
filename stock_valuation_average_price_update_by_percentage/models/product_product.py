@@ -44,7 +44,13 @@ class StockMove(models.Model):
                 new_std_price = move._get_price_unit()
             else:
                 # Get the standard price
-                percentage = move.product_id.categ_id.percentage_update
+                is_production_order = move.production_id
+
+                if is_production_order:
+                    percentage = 0
+                else:
+                    percentage = move.product_id.categ_id.percentage_update
+
                 amount_unit = (
                     std_price_update.get((move.company_id.id, move.product_id.id))
                     or move.product_id.with_company(move.company_id).standard_price

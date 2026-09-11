@@ -12,6 +12,8 @@ when products are received.
 rule_tip -field gives an example how the new price would change with
 the set percentage.
 
+NOTE THIS! Manufacturing Orders are excluded from the percentage increment!
+
 Configuration
 =============
 Purchases need to be enable to use this module.
