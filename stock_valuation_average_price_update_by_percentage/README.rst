@@ -11,6 +11,8 @@ Percentage update in stock valuation
     Select a percentage on a product category to update price with this percentage
     when the average cost valuation is recomputed.
 
+    NOTE: Manufacturing orders are excluded from percentage addition!
+
     rule_tip -field gives an example how the new price would change with
     the set percentage.
 
