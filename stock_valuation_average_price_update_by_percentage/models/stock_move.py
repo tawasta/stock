@@ -67,7 +67,14 @@ def _set_value(self, correction_quantity=None):
             percentage = (
                 product.categ_id and product.categ_id.percentage_update or False
             )
-            if percentage and product.cost_method == "average":
+
+            is_production_order_group = bool(move.production_group_id)
+
+            if (
+                percentage
+                and product.cost_method == "average"
+                and not is_production_order_group
+            ):
                 move.value = (
                     move.product_id.standard_price
                     * move._get_valued_qty()
@@ -96,7 +103,9 @@ class StockMove(models.Model):
         moves = super()._action_done(cancel_backorder=cancel_backorder)
 
         # We get the products the same way Odoo normally does to avoid possible issues
-        moves_in = moves.filtered(lambda m: m.is_in or m.is_dropship)
+        moves_in = moves.filtered(
+            lambda m: (m.is_in or m.is_dropship) and not m.production_group_id
+        )
         products_to_recompute = set()
 
         for move in moves_in:
