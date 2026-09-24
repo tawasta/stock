@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <template id="deliveryslip_without_invoice_addr">
+    <t t-foreach="docs" t-as="o">
+      <t t-set="hide_commercial_partner" t-value="True" />
+      <t t-call="stock.report_delivery_document" t-lang="o._get_report_lang()" />
+    </t>
+  </template>
+
+  <template id="report_delivery_document" inherit_id="stock.report_delivery_document">
+    <xpath expr="//div[@name='customer_address']" position="attributes">
+      <attribute name="t-if" separator="and" add="not hide_commercial_partner" />
+    </xpath>
+
+    <xpath expr="//div[@name='partner_header']" position="attributes">
+      <attribute name="t-if" separator="and" add="not hide_commercial_partner" />
+    </xpath>
+  </template>
+</odoo>
