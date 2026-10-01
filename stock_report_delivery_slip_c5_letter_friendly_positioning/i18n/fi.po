@@ -1,0 +1,83 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_report_delivery_slip_c5_letter_friendly_positioning
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-01 10:00+0000\n"
+"PO-Revision-Date: 2026-10-01 10:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_report_delivery_slip_c5_letter_friendly_positioning
+#: model_terms:ir.ui.view,arch_db:stock_report_delivery_slip_c5_letter_friendly_positioning.res_config_settings_view_form
+msgid ""
+"Adjust as needed to get the print's address to align with the C5 letter's "
+"window."
+msgstr ""
+"Säädä tarvittaessa, jotta tulosteen osoite osuu C5-kirjekuoren ikkunaan."
+
+#. module: stock_report_delivery_slip_c5_letter_friendly_positioning
+#: model:ir.model.fields,help:stock_report_delivery_slip_c5_letter_friendly_positioning.field_res_config_settings__stock_report_delivery_slip_c5_vertical_offset
+msgid ""
+"Adjust as needed to get the print's address to align with the C5 letter's "
+"window. Positive values move the address down, negative values up."
+msgstr ""
+"Säädä tarvittaessa, jotta tulosteen osoite osuu C5-kirjekuoren ikkunaan. "
+"Positiiviset arvot siirtävät osoitetta alaspäin, negatiiviset ylöspäin."
+
+#. module: stock_report_delivery_slip_c5_letter_friendly_positioning
+#: model:ir.model.fields,help:stock_report_delivery_slip_c5_letter_friendly_positioning.field_res_config_settings__stock_report_delivery_slip_c5_horizontal_offset
+msgid ""
+"Adjust as needed to get the print's address to align with the C5 letter's "
+"window. Positive values move the address right, negative values left."
+msgstr ""
+"Säädä tarvittaessa, jotta tulosteen osoite osuu C5-kirjekuoren ikkunaan. "
+"Positiiviset arvot siirtävät osoitetta oikealle, negatiiviset vasemmalle."
+
+#. module: stock_report_delivery_slip_c5_letter_friendly_positioning
+#: model:ir.model,name:stock_report_delivery_slip_c5_letter_friendly_positioning.model_res_config_settings
+msgid "Config Settings"
+msgstr "Konfiguraatioasetukset"
+
+#. module: stock_report_delivery_slip_c5_letter_friendly_positioning
+#: model_terms:ir.ui.view,arch_db:stock_report_delivery_slip_c5_letter_friendly_positioning.res_config_settings_view_form
+msgid "Delivery Slip: C5 Letter Address Offset"
+msgstr "Lähetysluettelo: Osoitteen asemointi C5-kuorta varten"
+
+#. module: stock_report_delivery_slip_c5_letter_friendly_positioning
+#: model:ir.model.fields,field_description:stock_report_delivery_slip_c5_letter_friendly_positioning.field_res_config_settings__stock_report_delivery_slip_c5_horizontal_offset
+msgid "Delivery Slip: C5 Letter Horizontal Offset (mm)"
+msgstr "Lähetysluettelo: Osoitteen vaakasiirtymä C5-kuorta varten (mm)"
+
+#. module: stock_report_delivery_slip_c5_letter_friendly_positioning
+#: model:ir.model.fields,field_description:stock_report_delivery_slip_c5_letter_friendly_positioning.field_res_config_settings__stock_report_delivery_slip_c5_vertical_offset
+msgid "Delivery Slip: C5 Letter Vertical Offset (mm)"
+msgstr "Lähetysluettelo: Osoitteen pystysiirtymä C5-kuorta varten (mm)"
+
+#. module: stock_report_delivery_slip_c5_letter_friendly_positioning
+#: model:ir.model.fields,field_description:stock_report_delivery_slip_c5_letter_friendly_positioning.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: stock_report_delivery_slip_c5_letter_friendly_positioning
+#: model_terms:ir.ui.view,arch_db:stock_report_delivery_slip_c5_letter_friendly_positioning.res_config_settings_view_form
+msgid "Horizontal (mm)"
+msgstr "Vaakasuunta (mm)"
+
+#. module: stock_report_delivery_slip_c5_letter_friendly_positioning
+#: model:ir.model.fields,field_description:stock_report_delivery_slip_c5_letter_friendly_positioning.field_res_config_settings__id
+msgid "ID"
+msgstr "Tunniste (ID)"
+
+#. module: stock_report_delivery_slip_c5_letter_friendly_positioning
+#: model_terms:ir.ui.view,arch_db:stock_report_delivery_slip_c5_letter_friendly_positioning.res_config_settings_view_form
+msgid "Vertical (mm)"
+msgstr "Pystysuunta (mm)"
