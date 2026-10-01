@@ -1,1 +1,2 @@
 https://github.com/tawasta/web/archive/refs/heads/19.0.zip#subdirectory=web_report_sfs
+https://github.com/tawasta/web/archive/refs/heads/19.0.zip#subdirectory=web_report_c5_letter_friendly_positioning
