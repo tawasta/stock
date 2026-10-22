@@ -30,31 +30,29 @@ class StockMove(models.Model):
         self.sh_product_tag_ids = tags and tags[0].id or False
 
     def _cron_stock_move_sh_product_tags(self, batch):
-        lines = self.env["stock.move"].search([("id", "in", batch)])
-        for line in lines:
-            tags = line.product_id.sh_product_tag_ids
-            line.sh_product_tag_ids = tags and tags[0].id or False
+        moves = self.env["stock.move"].search([("id", "in", batch)])
+        for move in moves:
+            tags = move.product_id.sh_product_tag_ids
+            move.sh_product_tag_ids = tags and tags[0].id or False
         return batch, "Success"
+
+    def get_stock_moves_to_update_sh_tags(self):
+        products = self.env["product.product"].search(
+            [("sh_product_tag_ids", "!=", False)]
+        )
+        moves = self.env["stock.move"].search([("product_id", "in", products.ids)])
+
+        for start in range(0, len(moves), 50):
+            yield moves[start : start + 50]
 
     def cron_compute_sh_product_tag_ids(self):
         """Computes all Stock Move sh_product_tag_ids values"""
-        lines = (
-            self.env["stock.move"]
-            .search([])
-            .filtered(lambda t: t.product_id.sh_product_tag_ids)
-            .ids
-        )
+        moves = self.get_stock_moves_to_update_sh_tags()
 
-        batch_lines = list()
-        interval = 50
-
-        for x in range(0, len(lines), interval):
-            batch_lines.append(lines[x : x + interval])
-
-        for batch in batch_lines:
-            job_desc = _(f"Assign SH product tags to lines: {batch}")
+        for batch in moves:
+            job_desc = _(f"Assign SH product tags to stock moves: {batch.ids}")
             self.with_delay(description=job_desc)._cron_stock_move_sh_product_tags(
-                batch
+                batch.ids
             )
 
         _logger.info("Cron Compute SH product tags completed")
