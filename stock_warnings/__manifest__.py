@@ -22,7 +22,7 @@
     "name": "Stock Warnings",
     "summary": "Show the stock instructions of the partner as a popup on "
     "stock pickings",
-    "version": "19.0.1.0.0",
+    "version": "19.0.1.0.1",
     "category": "Inventory/Inventory",
     "website": "https://github.com/tawasta/stock",
     "author": "Futural",
@@ -32,5 +32,6 @@
     "depends": ["partner_warnings", "stock"],
     "data": [
         "views/res_partner.xml",
+        "views/stock_picking.xml",
     ],
 }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <record id="view_picking_form" model="ir.ui.view">
+    <field name="name">stock.picking.form.warning.message</field>
+    <field name="model">stock.picking</field>
+    <field name="inherit_id" ref="stock.view_picking_form" />
+    <field name="arch" type="xml">
+      <field name="partner_id" position="after">
+        <field name="picking_warning_text" invisible="1" />
+        <field name="partner_picking_warn_level" invisible="1" />
+        <div colspan="2">
+          <div
+            class="alert alert-warning col-12"
+            role="alert"
+            invisible="not picking_warning_text or (partner_picking_warn_level not in ('warning', 'popup_warning'))"
+          >
+            <field name="picking_warning_text" class="fw-bold" />
+          </div>
+        </div>
+      </field>
+
+      <xpath expr="//div[@invisible='not picking_warning_text']" position="attributes">
+        <attribute name="style">display: none;</attribute>
+      </xpath>
+    </field>
+  </record>
+</odoo>

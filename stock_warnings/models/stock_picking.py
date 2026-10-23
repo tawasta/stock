@@ -1,4 +1,4 @@
-from odoo import models
+from odoo import fields, models
 
 
 class StockPicking(models.Model):
@@ -6,3 +6,7 @@ class StockPicking(models.Model):
 
     _warning_message_field = "picking_warn_msg"
     _warning_level_field = "picking_warn_level"
+
+    partner_picking_warn_level = fields.Selection(
+        related="partner_id.picking_warn_level"
+    )
