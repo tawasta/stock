@@ -114,6 +114,7 @@ addon | version | maintainers | summary
 [stock_report_picking_header_shrink](stock_report_picking_header_shrink/) | 17.0.1.0.0 |  | Decrease font size of stock picking print header section
 [stock_report_picking_hide_footer](stock_report_picking_hide_footer/) | 17.0.1.0.0 |  | Hide footer on Picking Operations
 [stock_report_picking_hide_location_parent_hierarchy](stock_report_picking_hide_location_parent_hierarchy/) | 17.0.1.0.0 |  | Only show the location name, without parents' names
+[stock_report_picking_print_custom_label](stock_report_picking_print_custom_label/) | 17.0.1.6.0 |  | Print a custom A4 landscape label from stock move lines
 [stock_report_picking_product_receipt_description](stock_report_picking_product_receipt_description/) | 17.0.1.0.0 |  | Show 'Description for receipts' text on Picking list
 [stock_report_picking_sale_order_client_order_ref](stock_report_picking_sale_order_client_order_ref/) | 17.0.1.0.0 |  | Show the customer reference of the related sale on picking print
 [stock_report_picking_sale_order_customer_marking](stock_report_picking_sale_order_customer_marking/) | 17.0.1.0.0 |  | Show the customer marking of the related sale on picking print
