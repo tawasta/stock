@@ -27,6 +27,7 @@ addon | version | maintainers | summary
 [stock_inventory_internal_use](stock_inventory_internal_use/) | 17.0.1.0.1 |  | Stock Inventory view for internal use
 [stock_inventory_line_readonly_info](stock_inventory_line_readonly_info/) | 17.0.1.0.5 |  | Show old inventory lines as readonly
 [stock_inventory_quantity_history_stock_inventory_link](stock_inventory_quantity_history_stock_inventory_link/) | 17.0.1.0.1 |  | Show the new qty fields also in list view provided by the another OCA inventory module
+[stock_inventory_relocate_as_move_to_location](stock_inventory_relocate_as_move_to_location/) | 17.0.1.0.0 |  | Replace Relocate button in Stock Inventory list view with 'Move to location' action
 [stock_location_analytic_account](stock_location_analytic_account/) | 17.0.1.0.1 |  | Integrate stock location with analytic account
 [stock_location_excess_mark](stock_location_excess_mark/) | 17.0.1.1.0 |  | Select a stock location and mark it as of excess type
 [stock_location_is_empty](stock_location_is_empty/) | 17.0.1.0.0 |  | Check and mark stock locations as Empty
