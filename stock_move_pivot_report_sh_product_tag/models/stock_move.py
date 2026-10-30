@@ -29,12 +29,11 @@ class StockMove(models.Model):
         tags = self.product_id.sh_product_tag_ids
         self.sh_product_tag_ids = tags and tags[0].id or False
 
-    def _cron_stock_move_sh_product_tags(self, batch):
-        moves = self.env["stock.move"].search([("id", "in", batch)])
+    def _cron_stock_move_sh_product_tags(self, moves):
         for move in moves:
             tags = move.product_id.sh_product_tag_ids
             move.sh_product_tag_ids = tags and tags[0].id or False
-        return batch, "Success"
+        return moves, "Success"
 
     def get_stock_moves_to_update_sh_tags(self):
         products = self.env["product.product"].search(
@@ -52,7 +51,7 @@ class StockMove(models.Model):
         for batch in moves:
             job_desc = _(f"Assign SH product tags to stock moves: {batch.ids}")
             self.with_delay(description=job_desc)._cron_stock_move_sh_product_tags(
-                batch.ids
+                batch
             )
 
         _logger.info("Cron Compute SH product tags completed")
