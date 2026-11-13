@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+  <data noupdate="1">
+    <record id="sscc_sequence" model="ir.sequence">
+      <field name="name">SSCC Sequence</field>
+      <field name="code">stock.picking.sscc</field>
+      <field name="prefix" />
+      <field name="padding">9</field>
+      <!-- This is just some number for example. Change it
+            after the module has been isntalled! -->
+      <field name="number_next">111444777</field>
+      <field name="number_increment">1</field>
+      <field name="company_id" />
+    </record>
+  </data>
+</odoo>
