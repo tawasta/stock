@@ -4,7 +4,7 @@ from odoo import api, fields, models
 class StockPicking(models.Model):
     _inherit = "stock.picking"
 
-    sscc = fields.Char(copy=False, store=True)
+    sscc = fields.Char(string="SSCC", copy=False, store=True)
 
     def calculate_sscc_check_digit(self, gtin_identifier):
         total = 0
