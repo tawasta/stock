@@ -6,7 +6,7 @@ class StockPicking(models.Model):
 
     sscc = fields.Char(copy=False, store=True)
 
-    def calculate_ssc_check_digit(self, gtin_identifier):
+    def calculate_sscc_check_digit(self, gtin_identifier):
         total = 0
         multiply = 3
 
@@ -36,7 +36,7 @@ class StockPicking(models.Model):
 
             if extra_digit and company_prefix:
                 combined_sscc = f"{extra_digit}{company_prefix}{sscc_value}"
-                check_digit = self.calculate_ssc_check_digit(combined_sscc)
+                check_digit = self.calculate_sscc_check_digit(combined_sscc)
                 vals["sscc"] = f"{combined_sscc}{check_digit}"
 
         return super().create(vals_list)
