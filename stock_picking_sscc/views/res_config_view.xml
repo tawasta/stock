@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <record id="res_config_settings_view_form" model="ir.ui.view">
+    <field name="name">res.config.view.form.sscc</field>
+    <field name="model">res.config.settings</field>
+    <field name="inherit_id" ref="stock.res_config_settings_view_form" />
+    <field name="arch" type="xml">
+      <setting id="stock_text_confirmation" position="before">
+        <setting id="sscc_digit" help="Set SSCC digit (single) for stock picking.">
+          <field name="sscc_extension_digit" />
+        </setting>
+
+        <setting
+          id="sscc_prefix"
+          help="Set SSCC company prefix to be used in stock picking SSCC field"
+        >
+          <field name="sscc_company_prefix" />
+        </setting>
+      </setting>
+    </field>
+  </record>
+</odoo>
