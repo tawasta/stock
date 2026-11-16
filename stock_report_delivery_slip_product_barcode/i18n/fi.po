@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 19.0-20260908\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-13 12:27+0000\n"
-"PO-Revision-Date: 2026-11-13 12:27+0000\n"
+"POT-Creation-Date: 2026-11-16 07:20+0000\n"
+"PO-Revision-Date: 2026-11-16 07:20+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -27,9 +27,13 @@ msgstr "Asetukset"
 
 #. module: stock_report_delivery_slip_product_barcode
 #: model:ir.model.fields,field_description:stock_report_delivery_slip_product_barcode.field_res_config_settings__delivery_slip_product_barcodes
-#: model_terms:ir.ui.view,arch_db:stock_report_delivery_slip_product_barcode.res_config_settings_view_form
 msgid "Delivery Slip Product Barcodes"
 msgstr "Lähetysluettelon tuotteiden viivakoodit"
+
+#. module: stock_report_delivery_slip_product_barcode
+#: model_terms:ir.ui.view,arch_db:stock_report_delivery_slip_product_barcode.res_config_settings_view_form
+msgid "Delivery Slip Scannable Product Barcodes"
+msgstr "Skannattava viivakoodi lähetysluettelon riveille"
 
 #. module: stock_report_delivery_slip_product_barcode
 #: model:ir.model.fields,field_description:stock_report_delivery_slip_product_barcode.field_res_config_settings__display_name
@@ -38,15 +42,20 @@ msgid "Display Name"
 msgstr "Näyttönimi"
 
 #. module: stock_report_delivery_slip_product_barcode
-#: model_terms:ir.ui.view,arch_db:stock_report_delivery_slip_product_barcode.res_config_settings_view_form
-msgid "Display product barcodes on delivery slips"
-msgstr "Näytä tuotteiden viivakoodit lähetysluettelossa"
-
-#. module: stock_report_delivery_slip_product_barcode
 #: model:ir.model.fields,field_description:stock_report_delivery_slip_product_barcode.field_res_config_settings__id
 #: model:ir.model.fields,field_description:stock_report_delivery_slip_product_barcode.field_stock_move_line__id
 msgid "ID"
 msgstr "Tunnus"
+
+#. module: stock_report_delivery_slip_product_barcode
+#: model_terms:ir.ui.view,arch_db:stock_report_delivery_slip_product_barcode.res_config_settings_view_form
+msgid ""
+"If enabled, show product barcodes as barcodes in the delivery slip"
+"            print. If not enabled, just the numeric value of the barcode "
+"will be shown."
+msgstr ""
+"Jos valittu, näytetään viivakoodit lukulaitteen skannattavassa muodossa lähetysluettelossa. "
+"Ei valittuna lähetysluettelon riveillä näytetään vain numeerinen esitys viivakoodista."
 
 #. module: stock_report_delivery_slip_product_barcode
 #: model:ir.model,name:stock_report_delivery_slip_product_barcode.model_stock_move_line

@@ -8,8 +8,9 @@
       <xpath expr="//setting[@id='warning_info']" position="after">
         <setting
           id="delivery_slip_product_barcodes"
-          string="Delivery Slip Product Barcodes"
-          help="Display product barcodes on delivery slips"
+          string="Delivery Slip Scannable Product Barcodes"
+          help="If enabled, show product barcodes as barcodes in the delivery slip
+          print. If not enabled, just the numeric value of the barcode will be shown."
         >
           <field name="delivery_slip_product_barcodes" />
         </setting>
