@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <template id="report_delivery_document" inherit_id="stock.report_delivery_document">
+    <!-- State != Done, heading and lines -->
+    <xpath
+      expr="//table[@name='stock_move_table']/thead//th[@name='th_sm_product']"
+      position="before"
+    >
+      <th name="th_sm_barcode" class="text-center">
+        <strong>EAN</strong>
+      </th>
+    </xpath>
+
+    <xpath expr="//table[@name='stock_move_table']/tbody/tr/td[1]" position="before">
+      <t
+        t-if="env['ir.config_parameter'].sudo().get_param('stock_report_delivery_slip_product_barcodes.delivery_slip_product_barcodes') == 'True'"
+      >
+        <td name="td_sm_barcode" class="text-center">
+          <span
+            t-field="move.product_id.barcode"
+            t-options="{'widget': 'barcode',
+                                    'symbology': 'auto',
+                                    'width': 200,
+                                    'height': 46,
+                                    'humanreadable': 1}"
+          />
+        </td>
+      </t>
+      <t t-else="">
+        <td name="td_sm_barcode" class="text-center">
+          <span t-field="move.product_id.barcode" />
+        </td>
+      </t>
+    </xpath>
+
+    <!-- State == Done, heading -->
+    <xpath
+      expr="//table[@name='stock_move_line_table']/thead//th[@name='th_sml_product']"
+      position="before"
+    >
+      <th name="th_sml_barcode" class="text-center">
+        <strong>EAN</strong>
+      </th>
+    </xpath>
+  </template>
+
+  <!-- State == Done, lines -->
+  <template
+    id="stock_report_delivery_aggregated_move_lines"
+    inherit_id="stock.stock_report_delivery_aggregated_move_lines"
+  >
+    <xpath expr='//tr[@t-as="line"]/td[1]' position="before">
+      <t
+        t-if="env['ir.config_parameter'].sudo().get_param('stock_report_delivery_slip_product_barcodes.delivery_slip_product_barcodes') == 'True'"
+      >
+        <td name="td_sm_barcode" class="text-center">
+          <span
+            t-esc="aggregated_lines[line]['barcode']"
+            t-options="{'widget': 'barcode',
+                                    'symbology': 'auto',
+                                    'width': 200,
+                                    'height': 46,
+                                    'humanreadable': 1}"
+          />
+        </td>
+      </t>
+      <t t-else="">
+        <td name="td_sm_barcode" class="text-center">
+          <span t-esc="aggregated_lines[line]['barcode']" />
+        </td>
+      </t>
+    </xpath>
+  </template>
+</odoo>
