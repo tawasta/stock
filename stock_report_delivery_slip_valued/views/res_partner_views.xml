@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <!-- Prices are chosen at print time, so the partner setting has no effect -->
+  <record id="res_partner_view_form" model="ir.ui.view">
+    <field name="name">res.partner.view.form.delivery.slip.valued</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="stock_picking_report_valued.view_partner_valued_picking" />
+    <field name="arch" type="xml">
+      <field name="valued_picking" position="attributes">
+        <attribute name="invisible">1</attribute>
+      </field>
+    </field>
+  </record>
+</odoo>

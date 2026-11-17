@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <template id="report_deliveryslip_valued">
+    <t t-foreach="docs" t-as="o">
+      <t t-set="o" t-value="o.with_context(delivery_slip_valued=True)" />
+      <t t-call="stock.report_delivery_document" t-lang="o._get_report_lang()" />
+    </t>
+  </template>
+</odoo>
