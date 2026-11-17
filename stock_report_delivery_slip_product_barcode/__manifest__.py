@@ -21,14 +21,14 @@
 {
     "name": "Stock Picking: Product Barcodes on Delivery Slip Print's Lines",
     "summary": "Show products' barcodes in numeric format",
-    "version": "19.0.1.0.0",
+    "version": "19.0.1.0.1",
     "category": "Reporting",
     "website": "https://github.com/tawasta/stock",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["stock", "delivery"],
+    "depends": ["stock"],
     "data": [
         "report/stock_report.xml",
         "views/res_config_settings.xml",

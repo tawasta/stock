@@ -6,14 +6,15 @@
 Stock Picking: Product Barcodes on Delivery Slip Print's Lines
 ==============================================================
 
-* Show products' barcodes on Delivery Slip
+* Show products' barcodes on Delivery Slip lines, also when lot/serial
+  numbers are printed on the delivery slip
 
 Configuration
 =============
 
-* Configure the option in Settings > Warehouse > Delivery Slip Product Barcodes 
-  to choose whether to show the visual barcodes on the delivery slip print or 
-  just numeric EAN codes.
+* Configure the option in Settings > Inventory > Delivery Slip Scannable
+  Product Barcodes to choose whether to show the visual barcodes on the
+  delivery slip print or just numeric EAN codes.
 
 Usage
 =====
@@ -26,20 +27,23 @@ Known issues / Roadmap
 * Consider adding a configurable table heading text instead
   of just 'EAN'
 
-Credits
-=======
-
 Changelog
 =========
 
-* Added option to show product barcodes on delivery slip print's lines. During 
-  migration from v17 to v19.
+* 19.0.1.0.1: Fix missing barcode column on done delivery slips that print
+  lot/serial numbers. Remove the unneeded dependency on ``delivery``.
+* 19.0.1.0.0: Added option to show product barcodes on delivery slip print's
+  lines. During migration from v17 to v19.
+
+Credits
+=======
 
 Contributors
 ------------
 
 * Timo Talvitie <timo.talvitie@futural.fi>
 * Joonas Lahtinen <joonas.lahtinen@futural.fi>
+* Valtteri Lattu <valtteri.lattu@futural.fi>
 
 Maintainer
 ----------

@@ -50,9 +50,8 @@ msgstr "Tunnus"
 #. module: stock_report_delivery_slip_product_barcode
 #: model_terms:ir.ui.view,arch_db:stock_report_delivery_slip_product_barcode.res_config_settings_view_form
 msgid ""
-"If enabled, show product barcodes as barcodes in the delivery slip"
-"            print. If not enabled, just the numeric value of the barcode "
-"will be shown."
+"If enabled, show product barcodes as barcodes in the delivery slip print. "
+"If not enabled, just the numeric value of the barcode will be shown."
 msgstr ""
 "Jos valittu, näytetään viivakoodit lukulaitteen skannattavassa muodossa lähetysluettelossa. "
 "Ei valittuna lähetysluettelon riveillä näytetään vain numeerinen esitys viivakoodista."
