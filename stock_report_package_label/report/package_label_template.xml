@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+  <template id="package_label">
+    <t t-call="web.html_container">
+      <t t-foreach="docs" t-as="doc">
+        <t t-foreach="range(doc.number_of_packages)" t-as="num">
+          <t
+            t-call="stock_report_package_label.package_label_document"
+            t-lang="doc.partner_id.lang"
+          />
+        </t>
+      </t>
+    </t>
+  </template>
+
+  <template id="package_label_document">
+    <t t-call="web.basic_layout">
+      <t t-set="barcode_size" t-value="'width:110mm;height:26mm'" />
+      <div class="page">
+        <div style="text-align: center; vertical-align: middle; line-height: 30px;">
+                    <span t-field="doc.company_id.partner_id.name" />
+                    <br />
+                    <span t-field="doc.company_id.partner_id.street" />,
+                    <span t-field="doc.company_id.partner_id.country_id.code" /> -
+                    <span t-field="doc.company_id.partner_id.zip" />
+                    <span t-field="doc.company_id.partner_id.city" />
+                </div>
+
+        <br />
+        <div style="border:1px solid black;" />
+        <br />
+
+        <div style="text-align: left; vertical-align: middle; line-height: 30px;">
+                    <span t-field="doc.partner_id.name" />
+                    <br />
+                    <br />
+                    <span t-field="doc.partner_id.street" />,
+                    <span t-field="doc.partner_id.zip" />
+                    <span t-field="doc.partner_id.city" />
+                </div>
+        <br />
+
+        <div style="border:1px solid black;" />
+        <br />
+
+        <div style="text-align: left; vertical-align: middle; line-height: 30px;">
+          <span t-field="doc.partner_id.name" />
+          <br />
+          <span t-field="doc.partner_id.street" />
+          <br />
+          <span t-field="doc.partner_id.street2" />
+          <br />
+          <span t-field="doc.partner_id.zip" />
+          <span t-field="doc.partner_id.city" />
+        </div>
+
+        <div
+          id="note-container"
+          style="float: right; margin-right: 3em; vertical-align: middle; line-height: 20px;"
+        >
+          <span>Container</span>
+          <p>
+            <span t-esc="str(num + 1) + '/' + str(doc.number_of_packages)" />
+          </p>
+        </div>
+
+        <br />
+        <br />
+
+        <t t-set="client_ref_value" t-value="'(400)' + doc.sale_id.client_order_ref" />
+
+        <div style="margin:0px auto; width: 70% weight: 100%;">
+          <div class="col-12" style="float: center; pt-3;" name="client_ref">
+            <div
+              t-esc="client_ref_value"
+              t-options="{'widget': 'barcode', 'img_style': 'width:100%'}"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div style="text-align: center; vertical-align: middle; line-height: 30px;">
+            <span t-esc="client_ref_value" />
+          </div>
+        </div>
+
+        <t t-set="sscc_value" t-value="'(00)' + doc.sscc" />
+
+        <div class="row">
+          <div style="text-center pt-3" name="sscc_ref">
+            <div
+              t-esc="sscc_value"
+              t-options="{'widget': 'barcode', 'img_style': 'width:100%'}"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div style="text-align: center; vertical-align: middle; line-height: 30px;">
+            <span t-esc="sscc_value" />
+          </div>
+        </div>
+      </div>
+    </t>
+  </template>
+</odoo>
