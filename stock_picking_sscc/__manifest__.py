@@ -34,6 +34,7 @@
     "data": [
         "data/ir_sequence.xml",
         "views/res_config_view.xml",
+        "views/res_partner.xml",
         "views/stock_picking.xml",
     ],
 }

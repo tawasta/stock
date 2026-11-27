@@ -8,9 +8,13 @@ SSCC for stock picking
 
 ::
 
-    Assign SSCC value, Serial Shipping Container Code, to a created picking.
+    Prepare SSCC value, Serial Shipping Container Code, to for a picking.
     Its extension digit, GS1 company prefix, Serial number and check digit
     has been taken into account when assigning a new SSCC value.
+
+    Choose a contact to select "Use SSCC code in picking" field on it.
+    This can be used with stock_report_package_label module, if it has
+    been installed.
 
 Configuration
 =============
@@ -25,8 +29,8 @@ Usage
 =====
 ::
 
-    Create a new stock picking to see how the SSCC value has been assigned
-    to it.
+    Select a picking to use prepare_sscc_code function to prepare
+    SSCC code value for it.
 
 Known issues / Roadmap
 ======================
