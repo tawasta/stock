@@ -18,40 +18,48 @@
       <t t-set="barcode_size" t-value="'width:110mm;height:26mm'" />
       <div class="page">
         <div style="text-align: center; vertical-align: middle; line-height: 30px;">
-                    <span t-field="doc.company_id.partner_id.name" />
-                    <br />
-                    <span t-field="doc.company_id.partner_id.street" />,
-                    <span t-field="doc.company_id.partner_id.country_id.code" /> -
-                    <span t-field="doc.company_id.partner_id.zip" />
-                    <span t-field="doc.company_id.partner_id.city" />
-                </div>
+          <span t-esc="doc.company_id.partner_id.name" />
+          <br />
+          <t t-if="doc.company_id.partner_id.street">
+                <span t-esc="doc.company_id.partner_id.street" />,
+            </t>
+          <t t-if="doc.company_id.partner_id.country_id.code">
+                <span t-esc="doc.company_id.partner_id.country_id.code" /> -
+            </t>
+          <span t-esc="doc.company_id.partner_id.zip" />
+          <span t-esc="doc.company_id.partner_id.city" />
+        </div>
 
         <br />
         <div style="border:1px solid black;" />
         <br />
 
-        <div style="text-align: left; vertical-align: middle; line-height: 30px;">
-                    <span t-field="doc.partner_id.name" />
-                    <br />
-                    <br />
-                    <span t-field="doc.partner_id.street" />,
-                    <span t-field="doc.partner_id.zip" />
-                    <span t-field="doc.partner_id.city" />
-                </div>
-        <br />
+        <t t-if="doc.partner_id.package_label_address_id">
+          <div style="text-align: left; vertical-align: middle; line-height: 30px;">
+            <span t-esc="doc.partner_id.package_label_address_id.name" />
+            <br />
+            <br />
+            <t t-if="doc.partner_id.package_label_address_id.street">
+                    <span t-esc="doc.partner_id.package_label_address_id.street" />,
+                </t>
+            <span t-esc="doc.partner_id.package_label_address_id.zip" />
+            <span t-esc="doc.partner_id.package_label_address_id.city" />
+          </div>
+          <br />
+        </t>
 
         <div style="border:1px solid black;" />
         <br />
 
         <div style="text-align: left; vertical-align: middle; line-height: 30px;">
-          <span t-field="doc.partner_id.name" />
+          <span t-esc="doc.partner_id.name" />
           <br />
-          <span t-field="doc.partner_id.street" />
+          <span t-esc="doc.partner_id.street" />
           <br />
-          <span t-field="doc.partner_id.street2" />
+          <span t-esc="doc.partner_id.street2" />
           <br />
-          <span t-field="doc.partner_id.zip" />
-          <span t-field="doc.partner_id.city" />
+          <span t-esc="doc.partner_id.zip" />
+          <span t-esc="doc.partner_id.city" />
         </div>
 
         <div
@@ -67,37 +75,48 @@
         <br />
         <br />
 
-        <t t-set="client_ref_value" t-value="'(400)' + doc.sale_id.client_order_ref" />
+        <t
+          t-set="client_ref_value"
+          t-value="'(400)' + str(doc.sale_id.client_order_ref)"
+        />
 
         <div style="margin:0px auto; width: 70% weight: 100%;">
           <div class="col-12" style="float: center; pt-3;" name="client_ref">
-            <div
-              t-esc="client_ref_value"
-              t-options="{'widget': 'barcode', 'img_style': 'width:100%'}"
-            />
-          </div>
-        </div>
-        <div class="row">
-          <div style="text-align: center; vertical-align: middle; line-height: 30px;">
-            <span t-esc="client_ref_value" />
+            <t t-if="doc.sale_id.client_order_ref">
+              <div
+                t-esc="client_ref_value"
+                t-options="{'widget': 'barcode', 'img_style': 'width:100%'}"
+              />
+            </t>
           </div>
         </div>
 
-        <t t-set="sscc_value" t-value="'(00)' + doc.sscc" />
-
-        <div class="row">
-          <div style="text-center pt-3" name="sscc_ref">
-            <div
-              t-esc="sscc_value"
-              t-options="{'widget': 'barcode', 'img_style': 'width:100%'}"
-            />
-          </div>
-        </div>
         <div class="row">
           <div style="text-align: center; vertical-align: middle; line-height: 30px;">
-            <span t-esc="sscc_value" />
+            <t t-if="doc.sale_id.client_order_ref">
+              <span t-esc="client_ref_value" />
+            </t>
           </div>
         </div>
+
+        <br />
+        <t t-set="sscc_value" t-value="'(00)' + str(doc.sscc)" />
+
+        <t t-if="doc.sscc">
+          <div class="row">
+            <div style="text-center pt-3" name="sscc_ref">
+              <div
+                t-esc="sscc_value"
+                t-options="{'widget': 'barcode', 'img_style': 'width:100%'}"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div style="text-align: center; vertical-align: middle; line-height: 30px;">
+              <span t-esc="sscc_value" />
+            </div>
+          </div>
+        </t>
       </div>
     </t>
   </template>

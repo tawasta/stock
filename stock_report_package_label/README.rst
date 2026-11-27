@@ -12,6 +12,8 @@ Package Label customization
     from stock_picking_sscc module and Number of Packages from delivery_package_number
     module.
 
+    SSCC code is generated to a picking when its label is printed.
+
 Configuration
 =============
 ::

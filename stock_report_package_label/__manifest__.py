@@ -36,6 +36,7 @@
         "data/paperformat.xml",
         "report/package_label_template.xml",
         "report/package_label.xml",
+        "views/res_partner.xml",
         "views/stock_picking.xml",
     ],
 }
